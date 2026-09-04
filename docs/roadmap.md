@@ -1,18 +1,21 @@
 ---
 id: roadmap
-title: Development Roadmap to Closed Beta
+title: "Tantra Genesis: RE Roadmap"
 sidebar_label: Roadmap
 sidebar_position: 1
-slug: /
-description: Public roadmap for taking Kathana 2 from active development to a controlled closed beta test.
+slug: /roadmap
+displayed_sidebar: null
+hide_table_of_contents: true
+description: "Public development roadmap for Tantra Genesis: RE, powered by zEngine from Ashesh Development."
 toc_max_heading_level: 4
 ---
 
-# Development Roadmap to Closed Beta
+# Tantra Genesis: RE Roadmap
 
 <section className="roadmap-hero">
-  <div className="roadmap-hero__eyebrow">PUBLIC DEVELOPMENT ROADMAP · CLOSED BETA TRACK</div>
-  <p className="roadmap-hero__lead">A disciplined, evidence-led path from active development to a stable and supportable Kathana 2 closed beta.</p>
+  <div className="roadmap-hero__eyebrow">TANTRA GENESIS: RE · PUBLIC DEVELOPMENT ROADMAP</div>
+  <p className="roadmap-hero__lead">A disciplined, evidence-led path towards a stable and supportable closed beta.</p>
+  <p className="roadmap-hero__identity"><strong>zEngine</strong> is a new game engine developed by Ashesh Development for Tantra Genesis: RE.</p>
   <p className="roadmap-hero__copy">Progress is organised by dependency and demonstrated readiness—not promised dates. Every percentage is a rounded planning indicator, and every workstream advances only after its completion requirements are verified.</p>
   <div className="roadmap-hero__rule" aria-hidden="true"></div>
   <div className="roadmap-hero__meta">

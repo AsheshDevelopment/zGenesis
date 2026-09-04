@@ -1,8 +1,8 @@
 import type {Config} from '@docusaurus/types';
 
 const config: Config = {
-  title: 'zGenesis',
-  tagline: 'Kathana 2 development roadmap',
+  title: 'Tantra Genesis: RE',
+  tagline: 'Powered by zEngine from Ashesh Development',
   url: 'https://asheshdevelopment.github.io',
   baseUrl: '/zGenesis/',
   organizationName: 'AsheshDevelopment',
@@ -31,22 +31,36 @@ const config: Config = {
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',
-      disableSwitch: false,
-      respectPrefersColorScheme: true,
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'zGenesis',
+      title: 'Tantra Genesis: RE',
       items: [
-        {to: '/', label: 'Roadmap', position: 'left'},
-        {
-          href: 'https://github.com/AsheshDevelopment/zGenesis',
-          label: 'Repository',
-          position: 'right',
-        },
+        {to: '/', label: 'Home', position: 'right'},
+        {to: '/about', label: 'About', position: 'right'},
+        {to: '/roadmap', label: 'Roadmap', position: 'right'},
       ],
     },
     footer: {
       style: 'dark',
+      links: [
+        {
+          title: 'Explore',
+          items: [
+            {label: 'Home', to: '/'},
+            {label: 'About', to: '/about'},
+            {label: 'Roadmap', to: '/roadmap'},
+          ],
+        },
+        {
+          title: 'Project',
+          items: [
+            {label: 'Tantra Genesis: RE', to: '/'},
+            {label: 'Powered by zEngine', to: '/about'},
+          ],
+        },
+      ],
       copyright:
         'Copyleft © 2025–2026 Ashesh Development. All Rights Reversed.',
     },

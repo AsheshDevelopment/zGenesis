@@ -1,20 +1,22 @@
-# zGenesis Roadmap
+# Tantra Genesis: RE Website
 
-zGenesis is the public roadmap documentation for the Kathana 2 project. It
-describes planned development milestones, readiness requirements and the path
-to a controlled closed beta test.
+zGenesis is the public website for Tantra Genesis: RE, powered by zEngine—a new
+game engine developed by Ashesh Development. It introduces the project and
+presents the evidence-led path to a controlled closed beta test.
 
-The published roadmap contains only public planning documentation. It excludes
-private infrastructure information and original game assets.
+The published website contains only public project presentation and planning
+material. It excludes private infrastructure information.
 
-## Roadmap
+## Pages
 
-- [Development Roadmap to Closed Beta](docs/roadmap.md)
+- Home
+- About
+- [Roadmap](docs/roadmap.md)
 - Public site: <https://asheshdevelopment.github.io/zGenesis/>
 
 ## Ownership and licence
 
-The roadmap and its original documentation are proprietary to Ashesh
+The website and its original documentation are proprietary to Ashesh
 Development. See [LICENSE](LICENSE) for permitted use and restrictions.
 
 Original game names and assets remain the property of their respective owners
