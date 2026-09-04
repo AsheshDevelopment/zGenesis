@@ -46,6 +46,148 @@ Scope and ordering may change when original game behaviour is verified.
 | Planned | Required before or during closed beta. |
 | Deferred | Outside the first closed-beta scope. |
 
+## Interactive progress dashboard
+
+The percentages below summarise the verified planning tasks in each area. They
+are rounded indicators of current progress, not release dates. Select any main
+area to display its subtasks and individual progress.
+
+<div className="roadmap-overall">
+  <div className="roadmap-overall__top">
+    <span className="roadmap-overall__label">Overall closed-beta readiness</span>
+    <span className="roadmap-percent">45%</span>
+  </div>
+  <progress className="roadmap-progress" value="45" max="100" aria-label="Overall closed-beta readiness: 45 percent">45%</progress>
+</div>
+
+<div className="roadmap-dashboard">
+
+<details className="roadmap-area roadmap-ui" open>
+  <summary>
+    <div className="roadmap-area__title">
+      <span className="roadmap-area__name"><span className="roadmap-area__icon">◆</span> UI</span>
+      <span className="roadmap-percent">62%</span>
+    </div>
+    <progress className="roadmap-progress" value="62" max="100" aria-label="UI progress: 62 percent">62%</progress>
+  </summary>
+  <div className="roadmap-area__body">
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Intro, login and character screens</span><span className="roadmap-percent">90%</span></div><progress className="roadmap-progress" value="90" max="100" aria-label="Intro, login and character screens: 90 percent">90%</progress><div className="roadmap-subtask__note">Core screens are working; final visual and message review remains.</div></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Main heads-up display</span><span className="roadmap-percent">70%</span></div><progress className="roadmap-progress" value="70" max="100" aria-label="Main heads-up display: 70 percent">70%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Buttons, windows and controls</span><span className="roadmap-percent">65%</span></div><progress className="roadmap-progress" value="65" max="100" aria-label="Buttons, windows and controls: 65 percent">65%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Screen-size compatibility</span><span className="roadmap-percent">50%</span></div><progress className="roadmap-progress" value="50" max="100" aria-label="Screen-size compatibility: 50 percent">50%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Accessibility and readability</span><span className="roadmap-percent">35%</span></div><progress className="roadmap-progress" value="35" max="100" aria-label="Accessibility and readability: 35 percent">35%</progress></div>
+  </div>
+</details>
+
+<details className="roadmap-area roadmap-gameplay">
+  <summary>
+    <div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">✦</span> GAMEPLAY</span><span className="roadmap-percent">43%</span></div>
+    <progress className="roadmap-progress" value="43" max="100" aria-label="Gameplay progress: 43 percent">43%</progress>
+  </summary>
+  <div className="roadmap-area__body">
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Movement and collision</span><span className="roadmap-percent">75%</span></div><progress className="roadmap-progress" value="75" max="100" aria-label="Movement and collision: 75 percent">75%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Combat and targeting</span><span className="roadmap-percent">55%</span></div><progress className="roadmap-progress" value="55" max="100" aria-label="Combat and targeting: 55 percent">55%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Inventory and equipment</span><span className="roadmap-percent">45%</span></div><progress className="roadmap-progress" value="45" max="100" aria-label="Inventory and equipment: 45 percent">45%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">People and town services</span><span className="roadmap-percent">25%</span></div><progress className="roadmap-progress" value="25" max="100" aria-label="People and town services: 25 percent">25%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Quests and rewards</span><span className="roadmap-percent">15%</span></div><progress className="roadmap-progress" value="15" max="100" aria-label="Quests and rewards: 15 percent">15%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Character progression</span><span className="roadmap-percent">40%</span></div><progress className="roadmap-progress" value="40" max="100" aria-label="Character progression: 40 percent">40%</progress></div>
+  </div>
+</details>
+
+<details className="roadmap-area roadmap-network">
+  <summary>
+    <div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">◎</span> NETWORK</span><span className="roadmap-percent">35%</span></div>
+    <progress className="roadmap-progress" value="35" max="100" aria-label="Network progress: 35 percent">35%</progress>
+  </summary>
+  <div className="roadmap-area__body">
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Login and session stability</span><span className="roadmap-percent">75%</span></div><progress className="roadmap-progress" value="75" max="100" aria-label="Login and session stability: 75 percent">75%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Nearby-player and world synchronisation</span><span className="roadmap-percent">60%</span></div><progress className="roadmap-progress" value="60" max="100" aria-label="Nearby-player and world synchronisation: 60 percent">60%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Chat channels</span><span className="roadmap-percent">30%</span></div><progress className="roadmap-progress" value="30" max="100" aria-label="Chat channels: 30 percent">30%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Parties, friends and guild foundation</span><span className="roadmap-percent">15%</span></div><progress className="roadmap-progress" value="15" max="100" aria-label="Parties, friends and guild foundation: 15 percent">15%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Player trade</span><span className="roadmap-percent">10%</span></div><progress className="roadmap-progress" value="10" max="100" aria-label="Player trade: 10 percent">10%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Online security and abuse controls</span><span className="roadmap-percent">20%</span></div><progress className="roadmap-progress" value="20" max="100" aria-label="Online security and abuse controls: 20 percent">20%</progress></div>
+  </div>
+</details>
+
+<details className="roadmap-area roadmap-skills">
+  <summary>
+    <div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">✧</span> SKILLS</span><span className="roadmap-percent">38%</span></div>
+    <progress className="roadmap-progress" value="38" max="100" aria-label="Skills progress: 38 percent">38%</progress>
+  </summary>
+  <div className="roadmap-area__body">
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Starting skill catalogue</span><span className="roadmap-percent">70%</span></div><progress className="roadmap-progress" value="70" max="100" aria-label="Starting skill catalogue: 70 percent">70%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Learning and improvement</span><span className="roadmap-percent">40%</span></div><progress className="roadmap-progress" value="40" max="100" aria-label="Learning and improvement: 40 percent">40%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Costs and recovery times</span><span className="roadmap-percent">55%</span></div><progress className="roadmap-progress" value="55" max="100" aria-label="Costs and recovery times: 55 percent">55%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Target and distance rules</span><span className="roadmap-percent">30%</span></div><progress className="roadmap-progress" value="30" max="100" aria-label="Target and distance rules: 30 percent">30%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Temporary effects and conditions</span><span className="roadmap-percent">10%</span></div><progress className="roadmap-progress" value="10" max="100" aria-label="Temporary effects and conditions: 10 percent">10%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Skill windows and quickbar use</span><span className="roadmap-percent">25%</span></div><progress className="roadmap-progress" value="25" max="100" aria-label="Skill windows and quickbar use: 25 percent">25%</progress></div>
+  </div>
+</details>
+
+<details className="roadmap-area roadmap-animations">
+  <summary>
+    <div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">▶</span> ANIMATIONS</span><span className="roadmap-percent">61%</span></div>
+    <progress className="roadmap-progress" value="61" max="100" aria-label="Animations progress: 61 percent">61%</progress>
+  </summary>
+  <div className="roadmap-area__body">
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Tribe animations</span><span className="roadmap-percent">85%</span></div><progress className="roadmap-progress" value="85" max="100" aria-label="Tribe animations: 85 percent">85%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Hair and clothing attachment</span><span className="roadmap-percent">75%</span></div><progress className="roadmap-progress" value="75" max="100" aria-label="Hair and clothing attachment: 75 percent">75%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Movement animations</span><span className="roadmap-percent">60%</span></div><progress className="roadmap-progress" value="60" max="100" aria-label="Movement animations: 60 percent">60%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Combat animations</span><span className="roadmap-percent">45%</span></div><progress className="roadmap-progress" value="45" max="100" aria-label="Combat animations: 45 percent">45%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Defeat and recovery animations</span><span className="roadmap-percent">80%</span></div><progress className="roadmap-progress" value="80" max="100" aria-label="Defeat and recovery animations: 80 percent">80%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Monster animations</span><span className="roadmap-percent">35%</span></div><progress className="roadmap-progress" value="35" max="100" aria-label="Monster animations: 35 percent">35%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Town character animations</span><span className="roadmap-percent">40%</span></div><progress className="roadmap-progress" value="40" max="100" aria-label="Town character animations: 40 percent">40%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Distance detail transitions</span><span className="roadmap-percent">70%</span></div><progress className="roadmap-progress" value="70" max="100" aria-label="Distance detail transitions: 70 percent">70%</progress></div>
+  </div>
+</details>
+
+<details className="roadmap-area roadmap-world">
+  <summary>
+    <div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">⬡</span> WORLD &amp; MAPS</span><span className="roadmap-percent">53%</span></div>
+    <progress className="roadmap-progress" value="53" max="100" aria-label="World and maps progress: 53 percent">53%</progress>
+  </summary>
+  <div className="roadmap-area__body">
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Starting-region terrain</span><span className="roadmap-percent">85%</span></div><progress className="roadmap-progress" value="85" max="100" aria-label="Starting-region terrain: 85 percent">85%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">World collision</span><span className="roadmap-percent">75%</span></div><progress className="roadmap-progress" value="75" max="100" aria-label="World collision: 75 percent">75%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Buildings and placed objects</span><span className="roadmap-percent">80%</span></div><progress className="roadmap-progress" value="80" max="100" aria-label="Buildings and placed objects: 80 percent">80%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Water, sky, fog and lighting</span><span className="roadmap-percent">45%</span></div><progress className="roadmap-progress" value="45" max="100" aria-label="Water, sky, fog and lighting: 45 percent">45%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Region portals</span><span className="roadmap-percent">15%</span></div><progress className="roadmap-progress" value="15" max="100" aria-label="Region portals: 15 percent">15%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Additional beta regions</span><span className="roadmap-percent">20%</span></div><progress className="roadmap-progress" value="20" max="100" aria-label="Additional beta regions: 20 percent">20%</progress></div>
+  </div>
+</details>
+
+<details className="roadmap-area roadmap-audio">
+  <summary>
+    <div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">♪</span> AUDIO &amp; EFFECTS</span><span className="roadmap-percent">48%</span></div>
+    <progress className="roadmap-progress" value="48" max="100" aria-label="Audio and effects progress: 48 percent">48%</progress>
+  </summary>
+  <div className="roadmap-area__body">
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Intro music and audio</span><span className="roadmap-percent">80%</span></div><progress className="roadmap-progress" value="80" max="100" aria-label="Intro music and audio: 80 percent">80%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Interface sounds</span><span className="roadmap-percent">65%</span></div><progress className="roadmap-progress" value="65" max="100" aria-label="Interface sounds: 65 percent">65%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Movement and targeting feedback</span><span className="roadmap-percent">60%</span></div><progress className="roadmap-progress" value="60" max="100" aria-label="Movement and targeting feedback: 60 percent">60%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Combat sounds and effects</span><span className="roadmap-percent">30%</span></div><progress className="roadmap-progress" value="30" max="100" aria-label="Combat sounds and effects: 30 percent">30%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Environmental audio</span><span className="roadmap-percent">35%</span></div><progress className="roadmap-progress" value="35" max="100" aria-label="Environmental audio: 35 percent">35%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Quest and advancement effects</span><span className="roadmap-percent">20%</span></div><progress className="roadmap-progress" value="20" max="100" aria-label="Quest and advancement effects: 20 percent">20%</progress></div>
+  </div>
+</details>
+
+<details className="roadmap-area roadmap-beta">
+  <summary>
+    <div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">★</span> CLOSED BETA READINESS</span><span className="roadmap-percent">23%</span></div>
+    <progress className="roadmap-progress" value="23" max="100" aria-label="Closed beta readiness progress: 23 percent">23%</progress>
+  </summary>
+  <div className="roadmap-area__body">
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Repeatable release preparation</span><span className="roadmap-percent">65%</span></div><progress className="roadmap-progress" value="65" max="100" aria-label="Repeatable release preparation: 65 percent">65%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Account and service security</span><span className="roadmap-percent">25%</span></div><progress className="roadmap-progress" value="25" max="100" aria-label="Account and service security: 25 percent">25%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Backup and player recovery</span><span className="roadmap-percent">30%</span></div><progress className="roadmap-progress" value="30" max="100" aria-label="Backup and player recovery: 30 percent">30%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Extended stability testing</span><span className="roadmap-percent">10%</span></div><progress className="roadmap-progress" value="10" max="100" aria-label="Extended stability testing: 10 percent">10%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Tester guides and support</span><span className="roadmap-percent">10%</span></div><progress className="roadmap-progress" value="10" max="100" aria-label="Tester guides and support: 10 percent">10%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Invitation-wave operations</span><span className="roadmap-percent">0%</span></div><progress className="roadmap-progress" value="0" max="100" aria-label="Invitation-wave operations: 0 percent">0%</progress></div>
+  </div>
+</details>
+
+</div>
+
 ## Roadmap summary
 
 | Milestone | Status | Intended outcome |

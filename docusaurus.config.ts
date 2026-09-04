@@ -22,10 +22,18 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
         },
         blog: false,
+        theme: {
+          customCss: './src/css/custom.css',
+        },
       },
     ],
   ],
   themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       title: 'zGenesis',
       items: [

@@ -1,0 +1,181 @@
+:root {
+  --roadmap-surface: #f5f6f8;
+  --roadmap-surface-raised: #ffffff;
+  --roadmap-border: #d8dce5;
+  --roadmap-muted: #5b6475;
+  --roadmap-track: #dfe3eb;
+}
+
+[data-theme='dark'] {
+  --ifm-background-color: #0b0d12;
+  --ifm-background-surface-color: #131722;
+  --roadmap-surface: #11151f;
+  --roadmap-surface-raised: #171c28;
+  --roadmap-border: #2c3445;
+  --roadmap-muted: #aab3c5;
+  --roadmap-track: #292f3d;
+}
+
+.roadmap-overall {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border: 1px solid #7c5cff;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgb(124 92 255 / 18%), rgb(29 211 176 / 10%));
+  box-shadow: 0 12px 35px rgb(0 0 0 / 12%);
+}
+
+.roadmap-overall__top,
+.roadmap-area__title,
+.roadmap-subtask__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.roadmap-overall__label {
+  font-size: 1.2rem;
+  font-weight: 750;
+}
+
+.roadmap-percent {
+  flex: none;
+  font-variant-numeric: tabular-nums;
+  font-weight: 750;
+}
+
+.roadmap-dashboard {
+  display: grid;
+  gap: 0.85rem;
+  margin: 1.25rem 0 2rem;
+}
+
+.roadmap-area {
+  --roadmap-accent: #7c5cff;
+  overflow: hidden;
+  border: 1px solid var(--roadmap-border);
+  border-left: 5px solid var(--roadmap-accent);
+  border-radius: 14px;
+  background: var(--roadmap-surface);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 8%);
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.roadmap-area:hover {
+  border-color: var(--roadmap-accent);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgb(0 0 0 / 14%);
+}
+
+.roadmap-area[open] {
+  background: var(--roadmap-surface-raised);
+}
+
+.roadmap-area > summary {
+  padding: 1rem 1.1rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.roadmap-area > summary::-webkit-details-marker {
+  display: none;
+}
+
+.roadmap-area > summary::after {
+  display: block;
+  margin-top: 0.65rem;
+  color: var(--roadmap-muted);
+  content: 'Select to view subtasks';
+  font-size: 0.8rem;
+}
+
+.roadmap-area[open] > summary::after {
+  content: 'Select to hide subtasks';
+}
+
+.roadmap-area__name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.roadmap-area__icon {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--roadmap-accent) 20%, transparent);
+}
+
+.roadmap-area__body {
+  display: grid;
+  gap: 0.85rem;
+  padding: 0 1.1rem 1.15rem;
+  border-top: 1px solid var(--roadmap-border);
+}
+
+.roadmap-subtask {
+  padding-top: 0.9rem;
+}
+
+.roadmap-subtask__label {
+  font-weight: 650;
+}
+
+.roadmap-subtask__note {
+  margin-top: 0.25rem;
+  color: var(--roadmap-muted);
+  font-size: 0.82rem;
+}
+
+.roadmap-progress {
+  width: 100%;
+  height: 0.72rem;
+  margin-top: 0.65rem;
+  overflow: hidden;
+  border: 0;
+  border-radius: 999px;
+  background: var(--roadmap-track);
+  accent-color: var(--roadmap-accent);
+}
+
+.roadmap-progress::-webkit-progress-bar {
+  border-radius: 999px;
+  background: var(--roadmap-track);
+}
+
+.roadmap-progress::-webkit-progress-value {
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--roadmap-accent), color-mix(in srgb, var(--roadmap-accent) 65%, white));
+}
+
+.roadmap-progress::-moz-progress-bar {
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--roadmap-accent), color-mix(in srgb, var(--roadmap-accent) 65%, white));
+}
+
+.roadmap-ui { --roadmap-accent: #ff4fa3; }
+.roadmap-gameplay { --roadmap-accent: #ff9f43; }
+.roadmap-network { --roadmap-accent: #29b6f6; }
+.roadmap-skills { --roadmap-accent: #9b6cff; }
+.roadmap-animations { --roadmap-accent: #38d996; }
+.roadmap-world { --roadmap-accent: #e6c84f; }
+.roadmap-audio { --roadmap-accent: #ff647c; }
+.roadmap-beta { --roadmap-accent: #6f7cff; }
+
+@media (max-width: 600px) {
+  .roadmap-area__title,
+  .roadmap-subtask__top {
+    align-items: flex-start;
+  }
+
+  .roadmap-area__name {
+    font-size: 0.95rem;
+  }
+}
