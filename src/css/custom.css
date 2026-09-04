@@ -506,79 +506,7 @@
   border-color: var(--roadmap-border);
 }
 
-.roadmap-plan-grid {
-  display: grid;
-  gap: 0.8rem;
-  margin-top: 1.25rem;
-}
-
-.theme-doc-markdown .roadmap-plan {
-  --roadmap-accent: #7469ff;
-  --ifm-alert-background-color: var(--roadmap-surface);
-  --ifm-alert-border-color: var(--roadmap-border);
-  --ifm-alert-foreground-color: var(--roadmap-ink);
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  border: 1px solid var(--roadmap-border);
-  border-radius: var(--roadmap-radius);
-  background: var(--roadmap-surface);
-}
-
-.theme-doc-markdown .roadmap-plan[open] {
-  border-color: color-mix(in srgb, var(--roadmap-accent) 62%, var(--roadmap-border));
-  box-shadow: var(--roadmap-shadow);
-}
-
-.roadmap-plan > summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 1.1rem;
-  cursor: pointer;
-  list-style: none;
-}
-
-.roadmap-plan > summary::-webkit-details-marker,
-.theme-doc-markdown .roadmap-plan > summary::before {
-  display: none;
-}
-
-.roadmap-plan > summary span {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.roadmap-plan > summary b {
-  display: grid;
-  width: 2rem;
-  height: 2rem;
-  place-items: center;
-  border-radius: 7px;
-  color: var(--roadmap-accent);
-  background: color-mix(in srgb, var(--roadmap-accent) 11%, transparent);
-  font-size: 0.68rem;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: 0.06em;
-}
-
-.roadmap-plan > summary strong {
-  font-size: 0.93rem;
-  letter-spacing: 0.035em;
-  text-transform: uppercase;
-}
-
-.roadmap-plan > summary em {
-  color: var(--roadmap-muted);
-  font-size: 0.76rem;
-  font-style: normal;
-  font-variant-numeric: tabular-nums;
-  font-weight: 650;
-}
-
-.roadmap-plan__body {
+.roadmap-workstream-detail {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.75rem;
@@ -587,14 +515,27 @@
   background: var(--roadmap-surface-soft);
 }
 
-.roadmap-plan__body section {
+.roadmap-workstream-detail section {
+  position: relative;
+  min-width: 0;
   padding: 0.95rem;
   border: 1px solid var(--roadmap-border);
   border-radius: 9px;
   background: var(--roadmap-surface);
 }
 
-.roadmap-plan__body h4 {
+.roadmap-workstream-detail section::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3rem;
+  height: 2px;
+  border-radius: 9px 0 0;
+  background: var(--roadmap-accent);
+  content: '';
+}
+
+.roadmap-workstream-detail h3 {
   margin: 0 0 0.7rem;
   color: var(--roadmap-accent);
   font-size: 0.72rem;
@@ -602,33 +543,30 @@
   text-transform: uppercase;
 }
 
-.roadmap-plan__body ul {
+.roadmap-workstream-detail ul,
+.roadmap-workstream-detail ol {
   margin: 0;
   padding-left: 1.05rem;
 }
 
-.roadmap-plan__body li {
+.roadmap-workstream-detail li {
   margin: 0.4rem 0;
   color: var(--roadmap-muted);
   font-size: 0.76rem;
   line-height: 1.48;
 }
 
-.theme-doc-markdown .roadmap-plan.roadmap-ui { --roadmap-accent: #ec5fa5; }
-.theme-doc-markdown .roadmap-plan.roadmap-gameplay { --roadmap-accent: #f59e42; }
-.theme-doc-markdown .roadmap-plan.roadmap-network { --roadmap-accent: #3ea9f5; }
-.theme-doc-markdown .roadmap-plan.roadmap-skills { --roadmap-accent: #9b75f5; }
-.theme-doc-markdown .roadmap-plan.roadmap-animations { --roadmap-accent: #3bcf91; }
-.theme-doc-markdown .roadmap-plan.roadmap-world { --roadmap-accent: #d8b83f; }
-.theme-doc-markdown .roadmap-plan.roadmap-audio { --roadmap-accent: #ef687b; }
-.theme-doc-markdown .roadmap-plan.roadmap-beta { --roadmap-accent: #6575f2; }
+.roadmap-workstream-detail .roadmap-gate {
+  border-color: color-mix(in srgb, var(--roadmap-accent) 42%, var(--roadmap-border));
+  background: color-mix(in srgb, var(--roadmap-accent) 5%, var(--roadmap-surface));
+}
 
 @media (max-width: 760px) {
   .roadmap-hero__meta,
   .roadmap-overview,
   .roadmap-area__body,
   .roadmap-principles,
-  .roadmap-plan__body {
+  .roadmap-workstream-detail {
     grid-template-columns: 1fr;
   }
 
@@ -669,13 +607,4 @@
     gap: 0.65rem 0.9rem;
   }
 
-  .roadmap-plan > summary {
-    align-items: flex-start;
-    padding: 0.9rem;
-  }
-
-  .roadmap-plan > summary em {
-    max-width: 7.5rem;
-    text-align: right;
-  }
 }

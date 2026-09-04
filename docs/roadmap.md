@@ -72,6 +72,11 @@ dependencies and relative readiness easy to scan without implying a release date
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Screen-size compatibility</span><span className="roadmap-percent">50%</span></div><progress className="roadmap-progress" value="50" max="100" aria-label="Screen-size compatibility: 50 percent">50%</progress></div>
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Accessibility and readability</span><span className="roadmap-percent">35%</span></div><progress className="roadmap-progress" value="35" max="100" aria-label="Accessibility and readability: 35 percent">35%</progress></div>
   </div>
+  <div className="roadmap-workstream-detail">
+    <section><h3>Current baseline</h3><ul><li>Intro, login, server, channel and character flows are available.</li><li>The main display, chat area, quickbar and menu foundation are present.</li><li>Interface review records can identify missing or incorrect resources.</li></ul></section>
+    <section><h3>Remaining scope</h3><ul><li>Connect every displayed character, currency and progression value.</li><li>Complete buttons, text entry, slots, tabs, scrollbars and window dragging.</li><li>Finish shortcuts without interfering with active text entry.</li><li>Verify every required window at 800×600, 1024×768 and 1920×1080.</li><li>Complete font, colour, position, control-state and readability review.</li></ul></section>
+    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>Every visible closed-beta control is interactive.</li><li>Required windows pass review at all supported screen sizes.</li><li>Missing critical interface resources stop release preparation with a clear explanation.</li></ul></section>
+  </div>
 </details>
 
 <details className="roadmap-area roadmap-gameplay">
@@ -86,6 +91,11 @@ dependencies and relative readiness easy to scan without implying a release date
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">People and town services</span><span className="roadmap-percent">25%</span></div><progress className="roadmap-progress" value="25" max="100" aria-label="People and town services: 25 percent">25%</progress></div>
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Quests and rewards</span><span className="roadmap-percent">15%</span></div><progress className="roadmap-progress" value="15" max="100" aria-label="Quests and rewards: 15 percent">15%</progress></div>
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Character progression</span><span className="roadmap-percent">40%</span></div><progress className="roadmap-progress" value="40" max="100" aria-label="Character progression: 40 percent">40%</progress></div>
+  </div>
+  <div className="roadmap-workstream-detail">
+    <section><h3>Current baseline</h3><ul><li>Keyboard movement, click-to-move, camera control and collision are available.</li><li>Basic targeting, combat, defeat and recovery are available.</li><li>Character and position state can survive reconnecting.</li></ul></section>
+    <section><h3>Remaining scope</h3><ul><li>Complete creature detection, chase, attack, return, defeat and respawn behaviour.</li><li>Finish item pickup, use, movement, equipment, purchasing, selling and repair.</li><li>Deliver town conversations, merchants, storage and return-location services.</li><li>Complete quest offer, acceptance, tracking, objectives, rewards and persistence.</li><li>Protect item, currency, reward and progression changes from repetition or interruption.</li></ul></section>
+    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>A new character can finish a representative multi-step quest and retain its reward.</li><li>Invalid movement, combat, item and service requests are rejected.</li><li>Interrupted actions cannot duplicate or destroy progress.</li></ul></section>
   </div>
 </details>
 
@@ -102,6 +112,11 @@ dependencies and relative readiness easy to scan without implying a release date
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Player trade</span><span className="roadmap-percent">10%</span></div><progress className="roadmap-progress" value="10" max="100" aria-label="Player trade: 10 percent">10%</progress></div>
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Online security and abuse controls</span><span className="roadmap-percent">20%</span></div><progress className="roadmap-progress" value="20" max="100" aria-label="Online security and abuse controls: 20 percent">20%</progress></div>
   </div>
+  <div className="roadmap-workstream-detail">
+    <section><h3>Current baseline</h3><ul><li>Login, session restoration and nearby-world synchronisation have a working foundation.</li><li>Accepted movement and essential character state can be shared consistently.</li></ul></section>
+    <section><h3>Remaining scope</h3><ul><li>Complete nearby, general, private, party and guild communication.</li><li>Add party invitations, membership, leadership and relationship rules.</li><li>Add friends, guild membership, roles and permissions.</li><li>Complete safe two-sided player trade and cancellation paths.</li><li>Protect account communication and add rate, size and abuse controls.</li></ul></section>
+    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>Players receive only information intended for them.</li><li>Party and social state remains consistent through disconnects and region changes.</li><li>Repeated or interrupted trade cannot duplicate items or currency.</li></ul></section>
+  </div>
 </details>
 
 <details className="roadmap-area roadmap-skills">
@@ -116,6 +131,11 @@ dependencies and relative readiness easy to scan without implying a release date
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Target and distance rules</span><span className="roadmap-percent">30%</span></div><progress className="roadmap-progress" value="30" max="100" aria-label="Target and distance rules: 30 percent">30%</progress></div>
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Temporary effects and conditions</span><span className="roadmap-percent">10%</span></div><progress className="roadmap-progress" value="10" max="100" aria-label="Temporary effects and conditions: 10 percent">10%</progress></div>
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Skill windows and quickbar use</span><span className="roadmap-percent">25%</span></div><progress className="roadmap-progress" value="25" max="100" aria-label="Skill windows and quickbar use: 25 percent">25%</progress></div>
+  </div>
+  <div className="roadmap-workstream-detail">
+    <section><h3>Current baseline</h3><ul><li>The starting skill catalogue and basic resource, target and recovery rules are partially available.</li><li>Character growth values have an evidence-led foundation.</li></ul></section>
+    <section><h3>Remaining scope</h3><ul><li>Complete learning, improvement, selection and quickbar use.</li><li>Enforce target, distance, resource cost and recovery requirements.</li><li>Apply temporary effects, conditions, resistance and removal rules.</li><li>Complete level and chakra growth with verified boundary and rounding behaviour.</li><li>Present resulting health, resources and combat values accurately.</li></ul></section>
+    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>The bounded closed-beta skill set behaves consistently for valid and invalid targets.</li><li>Resource, timing and growth calculations pass boundary-value review.</li><li>Skill state survives reconnecting without free or repeated actions.</li></ul></section>
   </div>
 </details>
 
@@ -134,6 +154,11 @@ dependencies and relative readiness easy to scan without implying a release date
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Town character animations</span><span className="roadmap-percent">40%</span></div><progress className="roadmap-progress" value="40" max="100" aria-label="Town character animations: 40 percent">40%</progress></div>
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Distance detail transitions</span><span className="roadmap-percent">70%</span></div><progress className="roadmap-progress" value="70" max="100" aria-label="Distance detail transitions: 70 percent">70%</progress></div>
   </div>
+  <div className="roadmap-workstream-detail">
+    <section><h3>Current baseline</h3><ul><li>Playable-group idle presentation and key attachment layers are available.</li><li>Movement, defeat, recovery and distance-detail transitions have partial coverage.</li></ul></section>
+    <section><h3>Remaining scope</h3><ul><li>Verify hair, clothing, optional skirts and aprons for every playable group.</li><li>Complete locomotion and combat-state transitions.</li><li>Add hit reactions and synchronised defeat and recovery presentation.</li><li>Complete creature and town-character animation families.</li><li>Verify attachment, timing and distance-detail behaviour during gameplay.</li></ul></section>
+    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>Every beta character and creature uses the correct state and attachment set.</li><li>Transitions remain stable during movement, combat, defeat and reconnect.</li><li>Representative animation families pass repeatable visual comparison.</li></ul></section>
+  </div>
 </details>
 
 <details className="roadmap-area roadmap-world">
@@ -148,6 +173,11 @@ dependencies and relative readiness easy to scan without implying a release date
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Water, sky, fog and lighting</span><span className="roadmap-percent">45%</span></div><progress className="roadmap-progress" value="45" max="100" aria-label="Water, sky, fog and lighting: 45 percent">45%</progress></div>
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Region portals</span><span className="roadmap-percent">15%</span></div><progress className="roadmap-progress" value="15" max="100" aria-label="Region portals: 15 percent">15%</progress></div>
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Additional beta regions</span><span className="roadmap-percent">20%</span></div><progress className="roadmap-progress" value="20" max="100" aria-label="Additional beta regions: 20 percent">20%</progress></div>
+  </div>
+  <div className="roadmap-workstream-detail">
+    <section><h3>Current baseline</h3><ul><li>The starting region includes terrain, buildings, placed objects and local population.</li><li>Ground and obstacle collision support the current playable path.</li><li>Approved region transitions have a controlled foundation.</li></ul></section>
+    <section><h3>Remaining scope</h3><ul><li>Complete stacked and multi-level walkable-area handling.</li><li>Route players and creatures around verified obstacles.</li><li>Verify terrain detail, water, sky, weather, fog, lighting and environmental sound.</li><li>Validate entrances, exits, return points and every approved transition.</li><li>Keep each region's movement, population, identity and revision information together.</li></ul></section>
+    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>Characters and creatures cannot cross blocked boundaries.</li><li>Every active region has a passing terrain, object, collision and transition review.</li><li>Incomplete or mixed-region data cannot become active.</li></ul></section>
   </div>
 </details>
 
@@ -164,6 +194,11 @@ dependencies and relative readiness easy to scan without implying a release date
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Environmental audio</span><span className="roadmap-percent">35%</span></div><progress className="roadmap-progress" value="35" max="100" aria-label="Environmental audio: 35 percent">35%</progress></div>
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Quest and advancement effects</span><span className="roadmap-percent">20%</span></div><progress className="roadmap-progress" value="20" max="100" aria-label="Quest and advancement effects: 20 percent">20%</progress></div>
   </div>
+  <div className="roadmap-workstream-detail">
+    <section><h3>Current baseline</h3><ul><li>Intro, interface, movement and targeting feedback have partial coverage.</li><li>Representative effect presentation can be reviewed in context.</li></ul></section>
+    <section><h3>Remaining scope</h3><ul><li>Verify interface, movement, targeting, combat and environmental sounds.</li><li>Complete targeting, impact, critical, recovery, advancement and quest effects.</li><li>Check effect placement on characters, creatures and world objects.</li><li>Prevent missing or invalid effects from disrupting gameplay.</li><li>Record repeatable comparisons for every required effect family.</li></ul></section>
+    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>Required actions provide the correct audible and visual feedback.</li><li>Missing optional feedback degrades safely and is reported clearly.</li><li>Representative sound and effect families pass release review.</li></ul></section>
+  </div>
 </details>
 
 <details className="roadmap-area roadmap-beta">
@@ -179,6 +214,11 @@ dependencies and relative readiness easy to scan without implying a release date
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Tester guides and support</span><span className="roadmap-percent">10%</span></div><progress className="roadmap-progress" value="10" max="100" aria-label="Tester guides and support: 10 percent">10%</progress></div>
     <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Invitation-wave operations</span><span className="roadmap-percent">0%</span></div><progress className="roadmap-progress" value="0" max="100" aria-label="Invitation-wave operations: 0 percent">0%</progress></div>
   </div>
+  <div className="roadmap-workstream-detail">
+    <section><h3>Release preparation</h3><ul><li>Protect account communication, secrets and administrative boundaries.</li><li>Freeze and identify the beta player-data structure.</li><li>Test upgrades, rollback, backup, restoration and account recovery.</li><li>Produce identifiable packages with integrity verification and useful diagnostics.</li><li>Publish installation, controls, known-issue, privacy and tester-support guidance.</li></ul></section>
+    <section><h3>Test sequence</h3><ol><li><strong>Team qualification:</strong> clean installation, account journeys and recovery drills.</li><li><strong>Small invitation wave:</strong> installation, login, crashes and progression blockers.</li><li><strong>Gameplay wave:</strong> shared play, communication, trade, quests and transitions.</li><li><strong>Stability confirmation:</strong> feature freeze, complete checks, upgrade and rollback.</li></ol></section>
+    <section className="roadmap-gate"><h3>Entry gate</h3><ul><li>No known account bypass, duplication path or unrecoverable character-loss path.</li><li>Every active region and quest has passed release review.</li><li>Monitoring, backup, rollback and tester support are operational.</li><li>The release and its player-data revision are identifiable and recoverable.</li></ul></section>
+  </div>
 </details>
 
 </div>
@@ -192,87 +232,6 @@ dependencies and relative readiness easy to scan without implying a release date
   <article><span>04</span><div><strong>Careful content</strong><p>Original game assets are not published here. Testers must use an authorised local installation.</p></div></article>
   <article><span>05</span><div><strong>Evidence first</strong><p>A visible feature is not complete until its full interaction and recovery paths have been tested.</p></div></article>
   <article><span>06</span><div><strong>Bounded beta</strong><p>A complete smaller experience is validated before every historical zone and feature is expanded.</p></div></article>
-</div>
-
-## Detailed workstream plan
-
-The complete delivery plan is grouped by responsibility. Each workstream keeps
-its established baseline, remaining scope and release gate together.
-
-<div className="roadmap-plan-grid">
-
-<details className="roadmap-plan roadmap-ui" open>
-  <summary><span><b>01</b><strong>UI</strong></span><em>62% · In progress</em></summary>
-  <div className="roadmap-plan__body">
-    <section><h4>Current baseline</h4><ul><li>Intro, login, server, channel and character flows are available.</li><li>The main display, chat area, quickbar and menu foundation are present.</li><li>Interface review records can identify missing or incorrect resources.</li></ul></section>
-    <section><h4>Remaining scope</h4><ul><li>Connect every displayed character, currency and progression value.</li><li>Complete buttons, text entry, slots, tabs, scrollbars and window dragging.</li><li>Finish shortcuts without interfering with active text entry.</li><li>Verify every required window at 800×600, 1024×768 and 1920×1080.</li><li>Complete font, colour, position, control-state and readability review.</li></ul></section>
-    <section><h4>Completion gate</h4><ul><li>Every visible closed-beta control is interactive.</li><li>Required windows pass review at all supported screen sizes.</li><li>Missing critical interface resources stop release preparation with a clear explanation.</li></ul></section>
-  </div>
-</details>
-
-<details className="roadmap-plan roadmap-gameplay">
-  <summary><span><b>02</b><strong>Gameplay</strong></span><em>43% · In progress</em></summary>
-  <div className="roadmap-plan__body">
-    <section><h4>Current baseline</h4><ul><li>Keyboard movement, click-to-move, camera control and collision are available.</li><li>Basic targeting, combat, defeat and recovery are available.</li><li>Character and position state can survive reconnecting.</li></ul></section>
-    <section><h4>Remaining scope</h4><ul><li>Complete creature detection, chase, attack, return, defeat and respawn behaviour.</li><li>Finish item pickup, use, movement, equipment, purchasing, selling and repair.</li><li>Deliver town conversations, merchants, storage and return-location services.</li><li>Complete quest offer, acceptance, tracking, objectives, rewards and persistence.</li><li>Protect item, currency, reward and progression changes from repetition or interruption.</li></ul></section>
-    <section><h4>Completion gate</h4><ul><li>A new character can finish a representative multi-step quest and retain its reward.</li><li>Invalid movement, combat, item and service requests are rejected.</li><li>Interrupted actions cannot duplicate or destroy progress.</li></ul></section>
-  </div>
-</details>
-
-<details className="roadmap-plan roadmap-network">
-  <summary><span><b>03</b><strong>Network</strong></span><em>35% · In progress</em></summary>
-  <div className="roadmap-plan__body">
-    <section><h4>Current baseline</h4><ul><li>Login, session restoration and nearby-world synchronisation have a working foundation.</li><li>Accepted movement and essential character state can be shared consistently.</li></ul></section>
-    <section><h4>Remaining scope</h4><ul><li>Complete nearby, general, private, party and guild communication.</li><li>Add party invitations, membership, leadership and relationship rules.</li><li>Add friends, guild membership, roles and permissions.</li><li>Complete safe two-sided player trade and cancellation paths.</li><li>Protect account communication and add rate, size and abuse controls.</li></ul></section>
-    <section><h4>Completion gate</h4><ul><li>Players receive only information intended for them.</li><li>Party and social state remains consistent through disconnects and region changes.</li><li>Repeated or interrupted trade cannot duplicate items or currency.</li></ul></section>
-  </div>
-</details>
-
-<details className="roadmap-plan roadmap-skills">
-  <summary><span><b>04</b><strong>Skills</strong></span><em>38% · In progress</em></summary>
-  <div className="roadmap-plan__body">
-    <section><h4>Current baseline</h4><ul><li>The starting skill catalogue and basic resource, target and recovery rules are partially available.</li><li>Character growth values have an evidence-led foundation.</li></ul></section>
-    <section><h4>Remaining scope</h4><ul><li>Complete learning, improvement, selection and quickbar use.</li><li>Enforce target, distance, resource cost and recovery requirements.</li><li>Apply temporary effects, conditions, resistance and removal rules.</li><li>Complete level and chakra growth with verified boundary and rounding behaviour.</li><li>Present resulting health, resources and combat values accurately.</li></ul></section>
-    <section><h4>Completion gate</h4><ul><li>The bounded closed-beta skill set behaves consistently for valid and invalid targets.</li><li>Resource, timing and growth calculations pass boundary-value review.</li><li>Skill state survives reconnecting without free or repeated actions.</li></ul></section>
-  </div>
-</details>
-
-<details className="roadmap-plan roadmap-animations">
-  <summary><span><b>05</b><strong>Animations</strong></span><em>61% · In progress</em></summary>
-  <div className="roadmap-plan__body">
-    <section><h4>Current baseline</h4><ul><li>Playable-group idle presentation and key attachment layers are available.</li><li>Movement, defeat, recovery and distance-detail transitions have partial coverage.</li></ul></section>
-    <section><h4>Remaining scope</h4><ul><li>Verify hair, clothing, optional skirts and aprons for every playable group.</li><li>Complete locomotion and combat-state transitions.</li><li>Add hit reactions and synchronised defeat and recovery presentation.</li><li>Complete creature and town-character animation families.</li><li>Verify attachment, timing and distance-detail behaviour during gameplay.</li></ul></section>
-    <section><h4>Completion gate</h4><ul><li>Every beta character and creature uses the correct state and attachment set.</li><li>Transitions remain stable during movement, combat, defeat and reconnect.</li><li>Representative animation families pass repeatable visual comparison.</li></ul></section>
-  </div>
-</details>
-
-<details className="roadmap-plan roadmap-world">
-  <summary><span><b>06</b><strong>World &amp; Maps</strong></span><em>53% · In progress</em></summary>
-  <div className="roadmap-plan__body">
-    <section><h4>Current baseline</h4><ul><li>The starting region includes terrain, buildings, placed objects and local population.</li><li>Ground and obstacle collision support the current playable path.</li><li>Approved region transitions have a controlled foundation.</li></ul></section>
-    <section><h4>Remaining scope</h4><ul><li>Complete stacked and multi-level walkable-area handling.</li><li>Route players and creatures around verified obstacles.</li><li>Verify terrain detail, water, sky, weather, fog, lighting and environmental sound.</li><li>Validate entrances, exits, return points and every approved transition.</li><li>Keep each region's movement, population, identity and revision information together.</li></ul></section>
-    <section><h4>Completion gate</h4><ul><li>Characters and creatures cannot cross blocked boundaries.</li><li>Every active region has a passing terrain, object, collision and transition review.</li><li>Incomplete or mixed-region data cannot become active.</li></ul></section>
-  </div>
-</details>
-
-<details className="roadmap-plan roadmap-audio">
-  <summary><span><b>07</b><strong>Audio &amp; Effects</strong></span><em>48% · In progress</em></summary>
-  <div className="roadmap-plan__body">
-    <section><h4>Current baseline</h4><ul><li>Intro, interface, movement and targeting feedback have partial coverage.</li><li>Representative effect presentation can be reviewed in context.</li></ul></section>
-    <section><h4>Remaining scope</h4><ul><li>Verify interface, movement, targeting, combat and environmental sounds.</li><li>Complete targeting, impact, critical, recovery, advancement and quest effects.</li><li>Check effect placement on characters, creatures and world objects.</li><li>Prevent missing or invalid effects from disrupting gameplay.</li><li>Record repeatable comparisons for every required effect family.</li></ul></section>
-    <section><h4>Completion gate</h4><ul><li>Required actions provide the correct audible and visual feedback.</li><li>Missing optional feedback degrades safely and is reported clearly.</li><li>Representative sound and effect families pass release review.</li></ul></section>
-  </div>
-</details>
-
-<details className="roadmap-plan roadmap-beta">
-  <summary><span><b>08</b><strong>Closed Beta Readiness</strong></span><em>23% · Planned</em></summary>
-  <div className="roadmap-plan__body">
-    <section><h4>Release preparation</h4><ul><li>Protect account communication, secrets and administrative boundaries.</li><li>Freeze and identify the beta player-data structure.</li><li>Test upgrades, rollback, backup, restoration and account recovery.</li><li>Produce identifiable packages with integrity verification and useful diagnostics.</li><li>Publish installation, controls, known-issue, privacy and tester-support guidance.</li></ul></section>
-    <section><h4>Test sequence</h4><ul><li><strong>Team qualification:</strong> clean installation, account journeys and recovery drills.</li><li><strong>Small invitation wave:</strong> installation, login, crashes and progression blockers.</li><li><strong>Gameplay wave:</strong> shared play, communication, trade, quests and transitions.</li><li><strong>Stability confirmation:</strong> feature freeze, complete checks, upgrade and rollback.</li></ul></section>
-    <section><h4>Entry gate</h4><ul><li>No known account bypass, duplication path or unrecoverable character-loss path.</li><li>Every active region and quest has passed release review.</li><li>Monitoring, backup, rollback and tester support are operational.</li><li>The release and its player-data revision are identifiable and recoverable.</li></ul></section>
-  </div>
-</details>
-
 </div>
 
 ## Scope held beyond the first closed beta
