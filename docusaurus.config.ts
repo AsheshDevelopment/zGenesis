@@ -1,12 +1,13 @@
 import type {Config} from '@docusaurus/types';
 
 const config: Config = {
-  title: 'Tantra Genesis: RE',
-  tagline: 'Powered by zEngine from Ashesh Development',
-  url: 'https://asheshdevelopment.github.io',
-  baseUrl: '/zGenesis/',
-  organizationName: 'AsheshDevelopment',
-  projectName: 'zGenesis',
+  title: 'GENESIS',
+  tagline: 'Sanketa I : Kali Agamana',
+  favicon: 'img/genesis.ico',
+  url: 'https://localhost',
+  baseUrl: '/genesis/',
+  organizationName: 'GenesisProject',
+  projectName: 'genesis',
   onBrokenLinks: 'throw',
   markdown: {
     hooks: {
@@ -35,7 +36,7 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'Tantra Genesis: RE',
+      title: 'GENESIS',
       items: [
         {to: '/', label: 'Home', position: 'right'},
         {to: '/about', label: 'About', position: 'right'},
@@ -56,13 +57,13 @@ const config: Config = {
         {
           title: 'Project',
           items: [
-            {label: 'Tantra Genesis: RE', to: '/'},
-            {label: 'Powered by zEngine', to: '/about'},
+            {label: 'GENESIS', to: '/'},
+            {label: 'Sanketa I : Kali Agamana', to: '/about'},
           ],
         },
       ],
       copyright:
-        'Copyleft © 2025–2026 Ashesh Development. All Rights Reversed.',
+        'GENESIS · All Rights Reserved.',
     },
   },
 };

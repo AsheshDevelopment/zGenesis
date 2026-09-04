@@ -1,25 +1,25 @@
 ---
 id: roadmap
-title: "Tantra Genesis: RE Roadmap"
+title: "GENESIS Roadmap"
 sidebar_label: Roadmap
 sidebar_position: 1
 slug: /roadmap
 displayed_sidebar: null
 hide_table_of_contents: true
-description: "Public development roadmap for Tantra Genesis: RE, powered by zEngine from Ashesh Development."
+description: "The public development roadmap for GENESIS — Sanketa I : Kali Agamana."
 toc_max_heading_level: 4
 ---
 
-# Tantra Genesis: RE Roadmap
+# GENESIS Roadmap
 
 <section className="roadmap-hero">
-  <div className="roadmap-hero__eyebrow">TANTRA GENESIS: RE · PUBLIC DEVELOPMENT ROADMAP</div>
-  <p className="roadmap-hero__lead">A disciplined, evidence-led path towards a stable and supportable closed beta.</p>
-  <p className="roadmap-hero__identity"><strong>zEngine</strong> is a new game engine developed by Ashesh Development for Tantra Genesis: RE.</p>
-  <p className="roadmap-hero__copy">Progress is organised by dependency and demonstrated readiness—not promised dates. Every percentage is a rounded planning indicator, and every workstream advances only after its completion requirements are verified.</p>
+  <div className="roadmap-hero__eyebrow">SANKETA I : KALI AGAMANA · PUBLIC DEVELOPMENT ROADMAP</div>
+  <p className="roadmap-hero__lead">A source-led reconstruction of the classic experience, built into a new and maintainable engine.</p>
+  <p className="roadmap-hero__identity"><strong>GENESIS</strong> is currently in active playable-development.</p>
+  <p className="roadmap-hero__copy">Percentages reflect demonstrated project capability, remaining breadth and closed-beta risk. They are rounded planning indicators—not promised dates—and advance only when the relevant behaviour is implemented and verified.</p>
   <div className="roadmap-hero__rule" aria-hidden="true"></div>
   <div className="roadmap-hero__meta">
-    <span><strong>Current stage</strong> Playable starting experience</span>
+    <span><strong>Current stage</strong> Multi-system playable build</span>
     <span><strong>Release target</strong> Controlled closed beta</span>
     <span><strong>Update policy</strong> Evidence before completion</span>
   </div>
@@ -28,198 +28,209 @@ toc_max_heading_level: 4
 <section className="roadmap-overview" aria-label="Roadmap overview">
   <article className="roadmap-overall">
     <div className="roadmap-overall__top">
-      <div>
-        <span className="roadmap-card__kicker">PROGRAMME READINESS</span>
-        <span className="roadmap-overall__label">Overall progress</span>
-      </div>
-      <span className="roadmap-overall__value">45<span>%</span></span>
+      <div><span className="roadmap-card__kicker">PROGRAMME READINESS</span><span className="roadmap-overall__label">Overall progress</span></div>
+      <span className="roadmap-overall__value">58<span>%</span></span>
     </div>
-    <progress className="roadmap-progress" value="45" max="100" aria-label="Overall closed-beta readiness: 45 percent">45%</progress>
+    <progress className="roadmap-progress" value="58" max="100" aria-label="Overall closed-beta readiness: 58 percent">58%</progress>
     <div className="roadmap-scale" aria-hidden="true"><span>Development</span><span>Closed beta</span></div>
   </article>
   <div className="roadmap-facts">
-    <article className="roadmap-fact"><span className="roadmap-fact__value">08</span><span className="roadmap-fact__label">Workstreams</span></article>
-    <article className="roadmap-fact"><span className="roadmap-fact__value">01</span><span className="roadmap-fact__label">Foundation ready</span></article>
-    <article className="roadmap-fact roadmap-fact--active"><span className="roadmap-fact__value">07</span><span className="roadmap-fact__label">Active workstreams</span></article>
+    <article className="roadmap-fact"><span className="roadmap-fact__value">10</span><span className="roadmap-fact__label">Workstreams</span></article>
+    <article className="roadmap-fact"><span className="roadmap-fact__value">03</span><span className="roadmap-fact__label">Core phases verified</span></article>
+    <article className="roadmap-fact roadmap-fact--active"><span className="roadmap-fact__value">06</span><span className="roadmap-fact__label">Active workstreams</span></article>
     <article className="roadmap-fact"><span className="roadmap-fact__value">01</span><span className="roadmap-fact__label">Beta entry gate</span></article>
   </div>
 </section>
 
 <div className="roadmap-legend" aria-label="Status legend">
   <span className="roadmap-legend__title">STATUS</span>
-  <span><i className="roadmap-dot roadmap-dot--complete"></i>Complete</span>
-  <span><i className="roadmap-dot roadmap-dot--active"></i>In progress</span>
+  <span><i className="roadmap-dot roadmap-dot--complete"></i>Verified foundation</span>
+  <span><i className="roadmap-dot roadmap-dot--active"></i>Active development</span>
   <span><i className="roadmap-dot roadmap-dot--planned"></i>Planned</span>
-  <span><i className="roadmap-dot roadmap-dot--deferred"></i>Deferred</span>
+  <span><i className="roadmap-dot roadmap-dot--deferred"></i>Beyond first beta</span>
 </div>
 
 ## Workstream dashboard
 
-Select a workstream to reveal its detailed tasks. The ordered layout makes gaps,
-dependencies and relative readiness easy to scan without implying a release date.
+Select a workstream to reveal its source-aligned tasks, current evidence and
+closed-beta completion requirements.
 
 <div className="roadmap-dashboard">
 
 <details className="roadmap-area roadmap-ui" open>
-  <summary>
-    <div className="roadmap-area__title">
-      <span className="roadmap-area__name"><span className="roadmap-area__icon">◆</span> UI</span>
-      <span className="roadmap-percent">62%</span>
-    </div>
-    <progress className="roadmap-progress" value="62" max="100" aria-label="UI progress: 62 percent">62%</progress>
-  </summary>
+  <summary><div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">◆</span> UI</span><span className="roadmap-percent">74%</span></div><progress className="roadmap-progress" value="74" max="100" aria-label="UI progress: 74 percent">74%</progress></summary>
   <div className="roadmap-area__body">
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Intro, login and character screens</span><span className="roadmap-percent">90%</span></div><progress className="roadmap-progress" value="90" max="100" aria-label="Intro, login and character screens: 90 percent">90%</progress><div className="roadmap-subtask__note">Core screens are working; final visual and message review remains.</div></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Main heads-up display</span><span className="roadmap-percent">70%</span></div><progress className="roadmap-progress" value="70" max="100" aria-label="Main heads-up display: 70 percent">70%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Buttons, windows and controls</span><span className="roadmap-percent">65%</span></div><progress className="roadmap-progress" value="65" max="100" aria-label="Buttons, windows and controls: 65 percent">65%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Screen-size compatibility</span><span className="roadmap-percent">50%</span></div><progress className="roadmap-progress" value="50" max="100" aria-label="Screen-size compatibility: 50 percent">50%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Accessibility and readability</span><span className="roadmap-percent">35%</span></div><progress className="roadmap-progress" value="35" max="100" aria-label="Accessibility and readability: 35 percent">35%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Intro, login and character flow</span><span className="roadmap-percent">94%</span></div><progress className="roadmap-progress" value="94" max="100">94%</progress><div className="roadmap-subtask__note">The complete startup-to-world path, three-character presentation and character creation are operational.</div></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Main HUD layout and live values</span><span className="roadmap-percent">80%</span></div><progress className="roadmap-progress" value="80" max="100">80%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Windows, controls and hotkeys</span><span className="roadmap-percent">72%</span></div><progress className="roadmap-progress" value="72" max="100">72%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Inventory, storage, merchant and quest windows</span><span className="roadmap-percent">78%</span></div><progress className="roadmap-progress" value="78" max="100">78%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Source text, fonts, colours and messages</span><span className="roadmap-percent">84%</span></div><progress className="roadmap-progress" value="84" max="100">84%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Resolution and usability review</span><span className="roadmap-percent">48%</span></div><progress className="roadmap-progress" value="48" max="100">48%</progress></div>
   </div>
   <div className="roadmap-workstream-detail">
-    <section><h3>Current baseline</h3><ul><li>Intro, login, server, channel and character flows are available.</li><li>The main display, chat area, quickbar and menu foundation are present.</li><li>Interface review records can identify missing or incorrect resources.</li></ul></section>
-    <section><h3>Remaining scope</h3><ul><li>Connect every displayed character, currency and progression value.</li><li>Complete buttons, text entry, slots, tabs, scrollbars and window dragging.</li><li>Finish shortcuts without interfering with active text entry.</li><li>Verify every required window at 800×600, 1024×768 and 1920×1080.</li><li>Complete font, colour, position, control-state and readability review.</li></ul></section>
-    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>Every visible closed-beta control is interactive.</li><li>Required windows pass review at all supported screen sizes.</li><li>Missing critical interface resources stop release preparation with a clear explanation.</li></ul></section>
+    <section><h3>Current baseline</h3><ul><li>Startup, login, server selection, roster, character creation and loading use source-defined layouts and resources.</li><li>The gameplay HUD, quickbar, chat, target display and core windows are present and interactive.</li><li>Reviewed dialogs can be exported with their exact bitmap dependencies and missing-resource diagnostics.</li></ul></section>
+    <section><h3>Remaining scope</h3><ul><li>Finish every required window, tab, slot, scrollbar and context action.</li><li>Replace remaining reconstructed labels with verified game messages.</li><li>Complete focus-safe text entry and every gameplay shortcut.</li><li>Perform full visual and interaction review at all supported display sizes.</li></ul></section>
+    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>Every visible beta control performs its intended action.</li><li>Required dialogs pass bitmap, font, position, state and interaction review.</li><li>No critical missing resource or placeholder text remains.</li></ul></section>
   </div>
 </details>
 
 <details className="roadmap-area roadmap-gameplay">
-  <summary>
-    <div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">✦</span> GAMEPLAY</span><span className="roadmap-percent">43%</span></div>
-    <progress className="roadmap-progress" value="43" max="100" aria-label="Gameplay progress: 43 percent">43%</progress>
-  </summary>
+  <summary><div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">✦</span> GAMEPLAY</span><span className="roadmap-percent">69%</span></div><progress className="roadmap-progress" value="69" max="100" aria-label="Gameplay progress: 69 percent">69%</progress></summary>
   <div className="roadmap-area__body">
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Movement and collision</span><span className="roadmap-percent">75%</span></div><progress className="roadmap-progress" value="75" max="100" aria-label="Movement and collision: 75 percent">75%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Combat and targeting</span><span className="roadmap-percent">55%</span></div><progress className="roadmap-progress" value="55" max="100" aria-label="Combat and targeting: 55 percent">55%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Inventory and equipment</span><span className="roadmap-percent">45%</span></div><progress className="roadmap-progress" value="45" max="100" aria-label="Inventory and equipment: 45 percent">45%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">People and town services</span><span className="roadmap-percent">25%</span></div><progress className="roadmap-progress" value="25" max="100" aria-label="People and town services: 25 percent">25%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Quests and rewards</span><span className="roadmap-percent">15%</span></div><progress className="roadmap-progress" value="15" max="100" aria-label="Quests and rewards: 15 percent">15%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Character progression</span><span className="roadmap-percent">40%</span></div><progress className="roadmap-progress" value="40" max="100" aria-label="Character progression: 40 percent">40%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Movement, click routing and collision</span><span className="roadmap-percent">90%</span></div><progress className="roadmap-progress" value="90" max="100">90%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Targeting, player combat and recovery</span><span className="roadmap-percent">72%</span></div><progress className="roadmap-progress" value="72" max="100">72%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Inventory, equipment and currency</span><span className="roadmap-percent">76%</span></div><progress className="roadmap-progress" value="76" max="100">76%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">NPC dialogue and town services</span><span className="roadmap-percent">80%</span></div><progress className="roadmap-progress" value="80" max="100">80%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Mandara quest and reward slice</span><span className="roadmap-percent">82%</span></div><progress className="roadmap-progress" value="82" max="100">82%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Broader items, quests and progression</span><span className="roadmap-percent">35%</span></div><progress className="roadmap-progress" value="35" max="100">35%</progress></div>
   </div>
   <div className="roadmap-workstream-detail">
-    <section><h3>Current baseline</h3><ul><li>Keyboard movement, click-to-move, camera control and collision are available.</li><li>Basic targeting, combat, defeat and recovery are available.</li><li>Character and position state can survive reconnecting.</li></ul></section>
-    <section><h3>Remaining scope</h3><ul><li>Complete creature detection, chase, attack, return, defeat and respawn behaviour.</li><li>Finish item pickup, use, movement, equipment, purchasing, selling and repair.</li><li>Deliver town conversations, merchants, storage and return-location services.</li><li>Complete quest offer, acceptance, tracking, objectives, rewards and persistence.</li><li>Protect item, currency, reward and progression changes from repetition or interruption.</li></ul></section>
-    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>A new character can finish a representative multi-step quest and retain its reward.</li><li>Invalid movement, combat, item and service requests are rejected.</li><li>Interrupted actions cannot duplicate or destroy progress.</li></ul></section>
+    <section><h3>Current baseline</h3><ul><li>Server-authoritative movement, collision, route finding and region transfer are verified.</li><li>Merchant, storage, repair and return-location services validate the active NPC and distance.</li><li>The first multi-step Mandara quest persists objectives and grants its item and Prana rewards exactly once.</li></ul></section>
+    <section><h3>Remaining scope</h3><ul><li>Expand NPC roles and quest objective types beyond the first verified slice.</li><li>Complete item pickup, use, dropping, refinement, abrasion and appearance replication.</li><li>Finish level, chakra, caste, job and wider progression rules from source evidence.</li><li>Add safe-zone, player-conflict and group relationship rules.</li></ul></section>
+    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>The bounded beta journey can be completed and restored after reconnect.</li><li>Invalid movement, combat, item, NPC and reward requests are rejected.</li><li>Interrupted actions cannot duplicate or destroy progress.</li></ul></section>
   </div>
 </details>
 
 <details className="roadmap-area roadmap-network">
-  <summary>
-    <div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">◎</span> NETWORK</span><span className="roadmap-percent">35%</span></div>
-    <progress className="roadmap-progress" value="35" max="100" aria-label="Network progress: 35 percent">35%</progress>
-  </summary>
+  <summary><div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">◎</span> NETWORK &amp; SOCIAL</span><span className="roadmap-percent">50%</span></div><progress className="roadmap-progress" value="50" max="100" aria-label="Network and social progress: 50 percent">50%</progress></summary>
   <div className="roadmap-area__body">
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Login and session stability</span><span className="roadmap-percent">75%</span></div><progress className="roadmap-progress" value="75" max="100" aria-label="Login and session stability: 75 percent">75%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Nearby-player and world synchronisation</span><span className="roadmap-percent">60%</span></div><progress className="roadmap-progress" value="60" max="100" aria-label="Nearby-player and world synchronisation: 60 percent">60%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Chat channels</span><span className="roadmap-percent">30%</span></div><progress className="roadmap-progress" value="30" max="100" aria-label="Chat channels: 30 percent">30%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Parties, friends and guild foundation</span><span className="roadmap-percent">15%</span></div><progress className="roadmap-progress" value="15" max="100" aria-label="Parties, friends and guild foundation: 15 percent">15%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Player trade</span><span className="roadmap-percent">10%</span></div><progress className="roadmap-progress" value="10" max="100" aria-label="Player trade: 10 percent">10%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Online security and abuse controls</span><span className="roadmap-percent">20%</span></div><progress className="roadmap-progress" value="20" max="100" aria-label="Online security and abuse controls: 20 percent">20%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Login, sessions and reconnect</span><span className="roadmap-percent">80%</span></div><progress className="roadmap-progress" value="80" max="100">80%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Movement and nearby-world replication</span><span className="roadmap-percent">82%</span></div><progress className="roadmap-progress" value="82" max="100">82%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Authoritative gameplay transactions</span><span className="roadmap-percent">76%</span></div><progress className="roadmap-progress" value="76" max="100">76%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Chat channels and commands</span><span className="roadmap-percent">18%</span></div><progress className="roadmap-progress" value="18" max="100">18%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Party, friends and guilds</span><span className="roadmap-percent">12%</span></div><progress className="roadmap-progress" value="12" max="100">12%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Player trade</span><span className="roadmap-percent">10%</span></div><progress className="roadmap-progress" value="10" max="100">10%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Production security and operations</span><span className="roadmap-percent">22%</span></div><progress className="roadmap-progress" value="22" max="100">22%</progress></div>
   </div>
   <div className="roadmap-workstream-detail">
-    <section><h3>Current baseline</h3><ul><li>Login, session restoration and nearby-world synchronisation have a working foundation.</li><li>Accepted movement and essential character state can be shared consistently.</li></ul></section>
-    <section><h3>Remaining scope</h3><ul><li>Complete nearby, general, private, party and guild communication.</li><li>Add party invitations, membership, leadership and relationship rules.</li><li>Add friends, guild membership, roles and permissions.</li><li>Complete safe two-sided player trade and cancellation paths.</li><li>Protect account communication and add rate, size and abuse controls.</li></ul></section>
-    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>Players receive only information intended for them.</li><li>Party and social state remains consistent through disconnects and region changes.</li><li>Repeated or interrupted trade cannot duplicate items or currency.</li></ul></section>
+    <section><h3>Current baseline</h3><ul><li>Bounded sessions, character ownership, nearby-world updates and reconnect restoration are operational.</li><li>Movement, combat, inventory, NPC services and quest transactions are validated by server authority.</li><li>Region transfers replace the old nearby population and preserve the destination.</li></ul></section>
+    <section><h3>Remaining scope</h3><ul><li>Implement general, local, private, party and Ashram communication.</li><li>Complete party, friend, Ashram and player-trade lifecycles.</li><li>Add rate limiting, secure transport, secret management and abuse controls.</li><li>Run realistic multi-client, disconnect and sustained-load tests.</li></ul></section>
+    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>Players receive only information intended for them.</li><li>Social state remains consistent through disconnect and region changes.</li><li>Repeated or interrupted transactions cannot duplicate value.</li></ul></section>
   </div>
 </details>
 
 <details className="roadmap-area roadmap-skills">
-  <summary>
-    <div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">✧</span> SKILLS</span><span className="roadmap-percent">38%</span></div>
-    <progress className="roadmap-progress" value="38" max="100" aria-label="Skills progress: 38 percent">38%</progress>
-  </summary>
+  <summary><div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">✧</span> SKILLS &amp; COMBAT RULES</span><span className="roadmap-percent">59%</span></div><progress className="roadmap-progress" value="59" max="100" aria-label="Skills and combat rules progress: 59 percent">59%</progress></summary>
   <div className="roadmap-area__body">
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Starting skill catalogue</span><span className="roadmap-percent">70%</span></div><progress className="roadmap-progress" value="70" max="100" aria-label="Starting skill catalogue: 70 percent">70%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Learning and improvement</span><span className="roadmap-percent">40%</span></div><progress className="roadmap-progress" value="40" max="100" aria-label="Learning and improvement: 40 percent">40%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Costs and recovery times</span><span className="roadmap-percent">55%</span></div><progress className="roadmap-progress" value="55" max="100" aria-label="Costs and recovery times: 55 percent">55%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Target and distance rules</span><span className="roadmap-percent">30%</span></div><progress className="roadmap-progress" value="30" max="100" aria-label="Target and distance rules: 30 percent">30%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Temporary effects and conditions</span><span className="roadmap-percent">10%</span></div><progress className="roadmap-progress" value="10" max="100" aria-label="Temporary effects and conditions: 10 percent">10%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Skill windows and quickbar use</span><span className="roadmap-percent">25%</span></div><progress className="roadmap-progress" value="25" max="100" aria-label="Skill windows and quickbar use: 25 percent">25%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Source skill and item catalogues</span><span className="roadmap-percent">88%</span></div><progress className="roadmap-progress" value="88" max="100">88%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Costs, cooldowns and persistence</span><span className="roadmap-percent">80%</span></div><progress className="roadmap-progress" value="80" max="100">80%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Damage, defence and resistance formulae</span><span className="roadmap-percent">72%</span></div><progress className="roadmap-progress" value="72" max="100">72%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Player targeting and duel authority</span><span className="roadmap-percent">68%</span></div><progress className="roadmap-progress" value="68" max="100">68%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Monster combat and respawn</span><span className="roadmap-percent">58%</span></div><progress className="roadmap-progress" value="58" max="100">58%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Area, status and relationship targets</span><span className="roadmap-percent">24%</span></div><progress className="roadmap-progress" value="24" max="100">24%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Chakra-driven stat recalculation</span><span className="roadmap-percent">28%</span></div><progress className="roadmap-progress" value="28" max="100">28%</progress></div>
   </div>
   <div className="roadmap-workstream-detail">
-    <section><h3>Current baseline</h3><ul><li>The starting skill catalogue and basic resource, target and recovery rules are partially available.</li><li>Character growth values have an evidence-led foundation.</li></ul></section>
-    <section><h3>Remaining scope</h3><ul><li>Complete learning, improvement, selection and quickbar use.</li><li>Enforce target, distance, resource cost and recovery requirements.</li><li>Apply temporary effects, conditions, resistance and removal rules.</li><li>Complete level and chakra growth with verified boundary and rounding behaviour.</li><li>Present resulting health, resources and combat values accurately.</li></ul></section>
-    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>The bounded closed-beta skill set behaves consistently for valid and invalid targets.</li><li>Resource, timing and growth calculations pass boundary-value review.</li><li>Skill state survives reconnecting without free or repeated actions.</li></ul></section>
+    <section><h3>Current baseline</h3><ul><li>The full deployed player-skill catalogue and core item/monster data are readable.</li><li>Resource costs, cooldowns, direct damage channels, mitigation, lethal state and duel-authorised attacks are server-owned.</li><li>Skill, health and resource state persist across reconnects.</li></ul></section>
+    <section><h3>Remaining scope</h3><ul><li>Complete learn, improve, select, projectile and activation behaviour.</li><li>Bind persisted chakras and external setting coefficients to all derived statistics.</li><li>Add area, friendly, hostile, corpse, gate, shield, immunity and status-effect rules.</li><li>Connect every authoritative combat event to its animation, sound, effect and floating result.</li></ul></section>
+    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>The beta skill set behaves consistently for valid and invalid targets.</li><li>Formulae pass boundary, rounding and persistence tests.</li><li>Every accepted cast produces one authoritative result and matching presentation.</li></ul></section>
   </div>
 </details>
 
 <details className="roadmap-area roadmap-animations">
-  <summary>
-    <div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">▶</span> ANIMATIONS</span><span className="roadmap-percent">61%</span></div>
-    <progress className="roadmap-progress" value="61" max="100" aria-label="Animations progress: 61 percent">61%</progress>
-  </summary>
+  <summary><div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">▶</span> ANIMATIONS</span><span className="roadmap-percent">68%</span></div><progress className="roadmap-progress" value="68" max="100" aria-label="Animations progress: 68 percent">68%</progress></summary>
   <div className="roadmap-area__body">
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Tribe animations</span><span className="roadmap-percent">85%</span></div><progress className="roadmap-progress" value="85" max="100" aria-label="Tribe animations: 85 percent">85%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Hair and clothing attachment</span><span className="roadmap-percent">75%</span></div><progress className="roadmap-progress" value="75" max="100" aria-label="Hair and clothing attachment: 75 percent">75%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Movement animations</span><span className="roadmap-percent">60%</span></div><progress className="roadmap-progress" value="60" max="100" aria-label="Movement animations: 60 percent">60%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Combat animations</span><span className="roadmap-percent">45%</span></div><progress className="roadmap-progress" value="45" max="100" aria-label="Combat animations: 45 percent">45%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Defeat and recovery animations</span><span className="roadmap-percent">80%</span></div><progress className="roadmap-progress" value="80" max="100" aria-label="Defeat and recovery animations: 80 percent">80%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Monster animations</span><span className="roadmap-percent">35%</span></div><progress className="roadmap-progress" value="35" max="100" aria-label="Monster animations: 35 percent">35%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Town character animations</span><span className="roadmap-percent">40%</span></div><progress className="roadmap-progress" value="40" max="100" aria-label="Town character animations: 40 percent">40%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Distance detail transitions</span><span className="roadmap-percent">70%</span></div><progress className="roadmap-progress" value="70" max="100" aria-label="Distance detail transitions: 70 percent">70%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Eight playable-tribe skeletons and idle states</span><span className="roadmap-percent">90%</span></div><progress className="roadmap-progress" value="90" max="100">90%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Body, face, hair, skirt and apron synchronisation</span><span className="roadmap-percent">84%</span></div><progress className="roadmap-progress" value="84" max="100">84%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Walk, run, sit and movement-state transitions</span><span className="roadmap-percent">58%</span></div><progress className="roadmap-progress" value="58" max="100">58%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Attack, skill-cast and hit-reaction states</span><span className="roadmap-percent">38%</span></div><progress className="roadmap-progress" value="38" max="100">38%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Source death state and recovery transition</span><span className="roadmap-percent">90%</span></div><progress className="roadmap-progress" value="90" max="100">90%</progress><div className="roadmap-subtask__note">The source-defined death state is resolved for all tribes, plays once and holds its final pose until recovery is accepted.</div></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Service-NPC standard animation states</span><span className="roadmap-percent">62%</span></div><progress className="roadmap-progress" value="62" max="100">62%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Monster idle, chase, attack, death and respawn states</span><span className="roadmap-percent">46%</span></div><progress className="roadmap-progress" value="46" max="100">46%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Character-part LOD state consistency</span><span className="roadmap-percent">80%</span></div><progress className="roadmap-progress" value="80" max="100">80%</progress></div>
   </div>
   <div className="roadmap-workstream-detail">
-    <section><h3>Current baseline</h3><ul><li>Playable-group idle presentation and key attachment layers are available.</li><li>Movement, defeat, recovery and distance-detail transitions have partial coverage.</li></ul></section>
-    <section><h3>Remaining scope</h3><ul><li>Verify hair, clothing, optional skirts and aprons for every playable group.</li><li>Complete locomotion and combat-state transitions.</li><li>Add hit reactions and synchronised defeat and recovery presentation.</li><li>Complete creature and town-character animation families.</li><li>Verify attachment, timing and distance-detail behaviour during gameplay.</li></ul></section>
-    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>Every beta character and creature uses the correct state and attachment set.</li><li>Transitions remain stable during movement, combat, defeat and reconnect.</li><li>Representative animation families pass repeatable visual comparison.</li></ul></section>
+    <section><h3>Current baseline</h3><ul><li>All eight playable tribes use source skeleton, skin and idle-animation data.</li><li>Composite character parts share the same animation and distance-detail tier.</li><li>The source death state is verified across body, hair and apron parts for every tribe.</li></ul></section>
+    <section><h3>Remaining scope</h3><ul><li>Complete source state selection for walking, running, sitting, attacks and skills.</li><li>Add hit reactions and reliable transition timing.</li><li>Finish service-NPC and monster state families used by beta content.</li><li>Verify optional skirt and apron behaviour for tribes that define those parts.</li></ul></section>
+    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>Every beta actor selects the correct source animation state.</li><li>Composite parts remain synchronised through state and distance changes.</li><li>Movement, combat, death and recovery transitions pass repeatable visual review.</li></ul></section>
   </div>
 </details>
 
 <details className="roadmap-area roadmap-world">
-  <summary>
-    <div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">⬡</span> WORLD &amp; MAPS</span><span className="roadmap-percent">53%</span></div>
-    <progress className="roadmap-progress" value="53" max="100" aria-label="World and maps progress: 53 percent">53%</progress>
-  </summary>
+  <summary><div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">⬡</span> WORLD &amp; MAPS</span><span className="roadmap-percent">73%</span></div><progress className="roadmap-progress" value="73" max="100" aria-label="World and maps progress: 73 percent">73%</progress></summary>
   <div className="roadmap-area__body">
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Starting-region terrain</span><span className="roadmap-percent">85%</span></div><progress className="roadmap-progress" value="85" max="100" aria-label="Starting-region terrain: 85 percent">85%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">World collision</span><span className="roadmap-percent">75%</span></div><progress className="roadmap-progress" value="75" max="100" aria-label="World collision: 75 percent">75%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Buildings and placed objects</span><span className="roadmap-percent">80%</span></div><progress className="roadmap-progress" value="80" max="100" aria-label="Buildings and placed objects: 80 percent">80%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Water, sky, fog and lighting</span><span className="roadmap-percent">45%</span></div><progress className="roadmap-progress" value="45" max="100" aria-label="Water, sky, fog and lighting: 45 percent">45%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Region portals</span><span className="roadmap-percent">15%</span></div><progress className="roadmap-progress" value="15" max="100" aria-label="Region portals: 15 percent">15%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Additional beta regions</span><span className="roadmap-percent">20%</span></div><progress className="roadmap-progress" value="20" max="100" aria-label="Additional beta regions: 20 percent">20%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Mandara terrain and scenery</span><span className="roadmap-percent">92%</span></div><progress className="roadmap-progress" value="92" max="100">92%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Client and server collision authority</span><span className="roadmap-percent">90%</span></div><progress className="roadmap-progress" value="90" max="100">90%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Visibility streaming and object placement</span><span className="roadmap-percent">85%</span></div><progress className="roadmap-progress" value="85" max="100">85%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Portal-driven region transitions</span><span className="roadmap-percent">82%</span></div><progress className="roadmap-progress" value="82" max="100">82%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Terrain detail, sky, water, fog and lighting</span><span className="roadmap-percent">66%</span></div><progress className="roadmap-progress" value="66" max="100">66%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Verified multi-region activation</span><span className="roadmap-percent">45%</span></div><progress className="roadmap-progress" value="45" max="100">45%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Additional maps for GENESIS</span><span className="roadmap-percent">20%</span></div><progress className="roadmap-progress" value="20" max="100">20%</progress></div>
   </div>
   <div className="roadmap-workstream-detail">
-    <section><h3>Current baseline</h3><ul><li>The starting region includes terrain, buildings, placed objects and local population.</li><li>Ground and obstacle collision support the current playable path.</li><li>Approved region transitions have a controlled foundation.</li></ul></section>
-    <section><h3>Remaining scope</h3><ul><li>Complete stacked and multi-level walkable-area handling.</li><li>Route players and creatures around verified obstacles.</li><li>Verify terrain detail, water, sky, weather, fog, lighting and environmental sound.</li><li>Validate entrances, exits, return points and every approved transition.</li><li>Keep each region's movement, population, identity and revision information together.</li></ul></section>
-    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>Characters and creatures cannot cross blocked boundaries.</li><li>Every active region has a passing terrain, object, collision and transition review.</li><li>Incomplete or mixed-region data cannot become active.</li></ul></section>
+    <section><h3>Current baseline</h3><ul><li>Mandara terrain, collision, thousands of placed objects, detail shading and nearby-object streaming are operational.</li><li>Client prediction and server authority share the same movement rules, including multi-floor selection.</li><li>A verified two-region transition replaces scene and nearby-world state and survives reconnect.</li></ul></section>
+    <section><h3>Remaining scope</h3><ul><li>Activate and capture each approved region only after its complete data set passes validation.</li><li>Finish water, sky, minimap, environmental lighting and region audio fidelity.</li><li>Verify monster populations and navigation for each active region.</li><li>Create and test additional GENESIS maps after the classic beta route is stable.</li></ul></section>
+    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>Every beta region passes terrain, object, collision, population and transition review.</li><li>Characters, monsters and cameras cannot cross invalid world boundaries.</li><li>Incomplete or mixed-region data cannot be activated.</li></ul></section>
   </div>
 </details>
 
 <details className="roadmap-area roadmap-audio">
-  <summary>
-    <div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">♪</span> AUDIO &amp; EFFECTS</span><span className="roadmap-percent">48%</span></div>
-    <progress className="roadmap-progress" value="48" max="100" aria-label="Audio and effects progress: 48 percent">48%</progress>
-  </summary>
+  <summary><div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">♪</span> AUDIO &amp; EFFECTS</span><span className="roadmap-percent">65%</span></div><progress className="roadmap-progress" value="65" max="100" aria-label="Audio and effects progress: 65 percent">65%</progress></summary>
   <div className="roadmap-area__body">
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Intro music and audio</span><span className="roadmap-percent">80%</span></div><progress className="roadmap-progress" value="80" max="100" aria-label="Intro music and audio: 80 percent">80%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Interface sounds</span><span className="roadmap-percent">65%</span></div><progress className="roadmap-progress" value="65" max="100" aria-label="Interface sounds: 65 percent">65%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Movement and targeting feedback</span><span className="roadmap-percent">60%</span></div><progress className="roadmap-progress" value="60" max="100" aria-label="Movement and targeting feedback: 60 percent">60%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Combat sounds and effects</span><span className="roadmap-percent">30%</span></div><progress className="roadmap-progress" value="30" max="100" aria-label="Combat sounds and effects: 30 percent">30%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Environmental audio</span><span className="roadmap-percent">35%</span></div><progress className="roadmap-progress" value="35" max="100" aria-label="Environmental audio: 35 percent">35%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Quest and advancement effects</span><span className="roadmap-percent">20%</span></div><progress className="roadmap-progress" value="20" max="100" aria-label="Quest and advancement effects: 20 percent">20%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Intro music and video audio</span><span className="roadmap-percent">92%</span></div><progress className="roadmap-progress" value="92" max="100">92%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">UI control sounds</span><span className="roadmap-percent">82%</span></div><progress className="roadmap-progress" value="82" max="100">82%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Ground and actor targeting feedback</span><span className="roadmap-percent">86%</span></div><progress className="roadmap-progress" value="86" max="100">86%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Intro fire and particle rendering</span><span className="roadmap-percent">78%</span></div><progress className="roadmap-progress" value="78" max="100">78%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Combat, skill and impact feedback</span><span className="roadmap-percent">38%</span></div><progress className="roadmap-progress" value="38" max="100">38%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Map and ambient audio</span><span className="roadmap-percent">35%</span></div><progress className="roadmap-progress" value="35" max="100">35%</progress></div>
   </div>
   <div className="roadmap-workstream-detail">
-    <section><h3>Current baseline</h3><ul><li>Intro, interface, movement and targeting feedback have partial coverage.</li><li>Representative effect presentation can be reviewed in context.</li></ul></section>
-    <section><h3>Remaining scope</h3><ul><li>Verify interface, movement, targeting, combat and environmental sounds.</li><li>Complete targeting, impact, critical, recovery, advancement and quest effects.</li><li>Check effect placement on characters, creatures and world objects.</li><li>Prevent missing or invalid effects from disrupting gameplay.</li><li>Record repeatable comparisons for every required effect family.</li></ul></section>
-    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>Required actions provide the correct audible and visual feedback.</li><li>Missing optional feedback degrades safely and is reported clearly.</li><li>Representative sound and effect families pass release review.</li></ul></section>
+    <section><h3>Current baseline</h3><ul><li>Intro playback includes video, audio, skipping and looping background music.</li><li>Source UI clicks, ground targeting and actor targeting use distinct feedback.</li><li>Decoded flame and smoke emitters render at the source intro-world anchors.</li></ul></section>
+    <section><h3>Remaining scope</h3><ul><li>Bind attacks, skills, impacts, criticals, recovery and quest events to verified feedback.</li><li>Complete map ambience and volume behaviour.</li><li>Share one semantic effect definition between editing and runtime playback.</li><li>Add missing-resource, socket and lifecycle diagnostics.</li></ul></section>
+    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>Every required beta action has the correct audible and visual response.</li><li>Missing optional feedback degrades safely and is reported.</li><li>Representative effect families pass repeatable visual comparison.</li></ul></section>
+  </div>
+</details>
+
+<details className="roadmap-area roadmap-devkit">
+  <summary><div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">◇</span> DEVELOPER KIT</span><span className="roadmap-percent">81%</span></div><progress className="roadmap-progress" value="81" max="100" aria-label="Developer kit progress: 81 percent">81%</progress></summary>
+  <div className="roadmap-area__body">
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Zone terrain, collision and object authoring</span><span className="roadmap-percent">92%</span></div><progress className="roadmap-progress" value="92" max="100">92%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Water, environment and population authoring</span><span className="roadmap-percent">86%</span></div><progress className="roadmap-progress" value="86" max="100">86%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Particle preview and tuning</span><span className="roadmap-percent">84%</span></div><progress className="roadmap-progress" value="84" max="100">84%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">UI preview, review and approved-resource export</span><span className="roadmap-percent">88%</span></div><progress className="roadmap-progress" value="88" max="100">88%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Model, texture and package conversion</span><span className="roadmap-percent">78%</span></div><progress className="roadmap-progress" value="78" max="100">78%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Asset, map, package and shader validation</span><span className="roadmap-percent">90%</span></div><progress className="roadmap-progress" value="90" max="100">90%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Remaining map, effect and data document workflows</span><span className="roadmap-percent">48%</span></div><progress className="roadmap-progress" value="48" max="100">48%</progress></div>
+  </div>
+  <div className="roadmap-workstream-detail">
+    <section><h3>Current baseline</h3><ul><li>The zone kit can edit terrain, collision, placed objects, water, environmental regions and monster generation data.</li><li>Dedicated UI and effect editors support preview, inspection, review and human-readable document work.</li><li>Conversion, packaging, inspection and validation tools cover the principal game-resource families.</li></ul></section>
+    <section><h3>Remaining scope</h3><ul><li>Complete operational document workflows for every enabled map, effect and gameplay-data family.</li><li>Make editor and runtime effect definitions fully interchangeable.</li><li>Add safer transactional saving, recovery and end-to-end project packaging where still missing.</li><li>Finish integrated asset browsing and dependency repair flows.</li></ul></section>
+    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>Every enabled writer round-trips verified source fixtures and retains a recoverable backup.</li><li>Editor output passes the same validators used by the game.</li><li>A clean developer-kit build can create, inspect, validate and package beta content.</li></ul></section>
+  </div>
+</details>
+
+<details className="roadmap-area roadmap-extras">
+  <summary><div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">＋</span> EXTRAS &amp; COMPATIBILITY</span><span className="roadmap-percent">51%</span></div><progress className="roadmap-progress" value="51" max="100" aria-label="Extras and compatibility progress: 51 percent">51%</progress></summary>
+  <div className="roadmap-area__body">
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Single-player offline mode</span><span className="roadmap-percent">95%</span></div><progress className="roadmap-progress" value="95" max="100">95%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Localisation and country profiles</span><span className="roadmap-percent">82%</span></div><progress className="roadmap-progress" value="82" max="100">82%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Build, launcher and integrity checks</span><span className="roadmap-percent">86%</span></div><progress className="roadmap-progress" value="86" max="100">86%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Screenshots, controls and quality-of-life options</span><span className="roadmap-percent">55%</span></div><progress className="roadmap-progress" value="55" max="100">55%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Desktop platform qualification</span><span className="roadmap-percent">24%</span></div><progress className="roadmap-progress" value="24" max="100">24%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Mobile platform adaptation</span><span className="roadmap-percent">5%</span></div><progress className="roadmap-progress" value="5" max="100">5%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">New GENESIS maps and optional features</span><span className="roadmap-percent">12%</span></div><progress className="roadmap-progress" value="12" max="100">12%</progress></div>
+  </div>
+  <div className="roadmap-workstream-detail">
+    <section><h3>Current baseline</h3><ul><li>A local offline profile can run the authoritative game service and retain character progress.</li><li>The launcher, default configuration, executable identity and copied resource integrity are automated.</li><li>Multiple source language profiles and validated message substitution are available.</li></ul></section>
+    <section><h3>Remaining scope</h3><ul><li>Qualify the client and tools on the targeted desktop systems.</li><li>Design mobile input, layout, performance and distribution adaptations.</li><li>Complete convenience settings, screenshot handling and player-facing configuration.</li><li>Develop additional maps and optional features after the bounded classic route is stable.</li></ul></section>
+    <section className="roadmap-gate"><h3>Completion gate</h3><ul><li>Every advertised beta platform passes installation, startup, input and gameplay checks.</li><li>Offline and online profiles remain isolated and recoverable.</li><li>Optional features cannot delay or destabilise the core beta route.</li></ul></section>
   </div>
 </details>
 
 <details className="roadmap-area roadmap-beta">
-  <summary>
-    <div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">★</span> CLOSED BETA READINESS</span><span className="roadmap-percent">23%</span></div>
-    <progress className="roadmap-progress" value="23" max="100" aria-label="Closed beta readiness progress: 23 percent">23%</progress>
-  </summary>
+  <summary><div className="roadmap-area__title"><span className="roadmap-area__name"><span className="roadmap-area__icon">★</span> CLOSED BETA READINESS</span><span className="roadmap-percent">31%</span></div><progress className="roadmap-progress" value="31" max="100" aria-label="Closed beta readiness progress: 31 percent">31%</progress></summary>
   <div className="roadmap-area__body">
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Repeatable release preparation</span><span className="roadmap-percent">65%</span></div><progress className="roadmap-progress" value="65" max="100" aria-label="Repeatable release preparation: 65 percent">65%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Account and service security</span><span className="roadmap-percent">25%</span></div><progress className="roadmap-progress" value="25" max="100" aria-label="Account and service security: 25 percent">25%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Backup and player recovery</span><span className="roadmap-percent">30%</span></div><progress className="roadmap-progress" value="30" max="100" aria-label="Backup and player recovery: 30 percent">30%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Extended stability testing</span><span className="roadmap-percent">10%</span></div><progress className="roadmap-progress" value="10" max="100" aria-label="Extended stability testing: 10 percent">10%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Tester guides and support</span><span className="roadmap-percent">10%</span></div><progress className="roadmap-progress" value="10" max="100" aria-label="Tester guides and support: 10 percent">10%</progress></div>
-    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Invitation-wave operations</span><span className="roadmap-percent">0%</span></div><progress className="roadmap-progress" value="0" max="100" aria-label="Invitation-wave operations: 0 percent">0%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Repeatable builds and verification</span><span className="roadmap-percent">78%</span></div><progress className="roadmap-progress" value="78" max="100">78%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Account and service security</span><span className="roadmap-percent">25%</span></div><progress className="roadmap-progress" value="25" max="100">25%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Data migration, backup and recovery</span><span className="roadmap-percent">32%</span></div><progress className="roadmap-progress" value="32" max="100">32%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Extended stability and load testing</span><span className="roadmap-percent">18%</span></div><progress className="roadmap-progress" value="18" max="100">18%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Crash reporting and support diagnostics</span><span className="roadmap-percent">24%</span></div><progress className="roadmap-progress" value="24" max="100">24%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Tester guides and known-issue process</span><span className="roadmap-percent">12%</span></div><progress className="roadmap-progress" value="12" max="100">12%</progress></div>
+    <div className="roadmap-subtask"><div className="roadmap-subtask__top"><span className="roadmap-subtask__label">Invitation-wave operations</span><span className="roadmap-percent">0%</span></div><progress className="roadmap-progress" value="0" max="100">0%</progress></div>
   </div>
   <div className="roadmap-workstream-detail">
     <section><h3>Release preparation</h3><ul><li>Protect account communication, secrets and administrative boundaries.</li><li>Freeze and identify the beta player-data structure.</li><li>Test upgrades, rollback, backup, restoration and account recovery.</li><li>Produce identifiable packages with integrity verification and useful diagnostics.</li><li>Publish installation, controls, known-issue, privacy and tester-support guidance.</li></ul></section>
-    <section><h3>Test sequence</h3><ol><li><strong>Team qualification:</strong> clean installation, account journeys and recovery drills.</li><li><strong>Small invitation wave:</strong> installation, login, crashes and progression blockers.</li><li><strong>Gameplay wave:</strong> shared play, communication, trade, quests and transitions.</li><li><strong>Stability confirmation:</strong> feature freeze, complete checks, upgrade and rollback.</li></ol></section>
+    <section><h3>Test sequence</h3><ol><li><strong>Team qualification:</strong> clean installation, account journeys and recovery drills.</li><li><strong>Small invitation wave:</strong> installation, login, crashes and progression blockers.</li><li><strong>Gameplay wave:</strong> shared play, communication, services, quests and transitions.</li><li><strong>Stability confirmation:</strong> feature freeze, complete checks, upgrade and rollback.</li></ol></section>
     <section className="roadmap-gate"><h3>Entry gate</h3><ul><li>No known account bypass, duplication path or unrecoverable character-loss path.</li><li>Every active region and quest has passed release review.</li><li>Monitoring, backup, rollback and tester support are operational.</li><li>The release and its player-data revision are identifiable and recoverable.</li></ul></section>
   </div>
 </details>
@@ -229,28 +240,27 @@ dependencies and relative readiness easy to scan without implying a release date
 ## Delivery principles
 
 <div className="roadmap-principles">
-  <article><span>01</span><div><strong>Faithful experience</strong><p>Characters, controls, world behaviour, interfaces, combat and progression remain recognisable to returning K2 players.</p></div></article>
+  <article><span>01</span><div><strong>Source-faithful experience</strong><p>Characters, controls, world behaviour, interfaces, combat and progression are reconstructed from the available game evidence.</p></div></article>
   <article><span>02</span><div><strong>Authoritative rules</strong><p>Important actions are validated consistently so every player observes the same result.</p></div></article>
   <article><span>03</span><div><strong>Safe progress</strong><p>Character, item, currency and quest progress survives reconnects, maintenance and recoverable failures.</p></div></article>
   <article><span>04</span><div><strong>Careful content</strong><p>Original game assets are not published here. Testers must use an authorised local installation.</p></div></article>
   <article><span>05</span><div><strong>Evidence first</strong><p>A visible feature is not complete until its full interaction and recovery paths have been tested.</p></div></article>
-  <article><span>06</span><div><strong>Bounded beta</strong><p>A complete smaller experience is validated before every historical zone and feature is expanded.</p></div></article>
+  <article><span>06</span><div><strong>Bounded beta</strong><p>A complete smaller experience is validated before the historical catalogue and new GENESIS content expand.</p></div></article>
 </div>
 
 ## Scope held beyond the first closed beta
 
-The initial closed beta deliberately excludes the complete historical content
-catalogue, unrestricted public registration, large-scale guild warfare,
-premium billing, private player shops, the full mount and pet collection, and
-production-scale public discovery. Keeping these outside the first test protects
-the quality of the bounded player experience.
-
+The first closed beta deliberately excludes unrestricted public registration,
+production-scale discovery, the complete historical map and quest catalogue,
+large-scale Ashram warfare, premium billing, private shops, and the full mount
+and pet catalogue. New GENESIS regions, mobile releases and optional systems
+will expand only after the bounded beta route is stable.
 
 ## Public roadmap updates
 
 - Completed tasks require recorded test evidence.
 - Failed requirements remain visible until corrected.
-- New discoveries may change scope before implementation begins.
+- New source discoveries may change scope before implementation begins.
 - Updates will not expose private infrastructure, account details, internal
   implementation names or original asset contents.
 - Closed-beta dates will be announced only after the entry requirements are met.

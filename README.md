@@ -1,8 +1,8 @@
-# Tantra Genesis: RE Website
+# GENESIS Website
 
-zGenesis is the public website for Tantra Genesis: RE, powered by zEngine—a new
-game engine developed by Ashesh Development. It introduces the project and
-presents the evidence-led path to a controlled closed beta test.
+zGenesis is the public website for GENESIS and its first chapter,
+**Sanketa I : Kali Agamana**. It introduces the project and presents the
+evidence-led path to a controlled closed beta test.
 
 The published website contains only public project presentation and planning
 material. It excludes private infrastructure information.
@@ -12,12 +12,11 @@ material. It excludes private infrastructure information.
 - Home
 - About
 - [Roadmap](docs/roadmap.md)
-- Public site: <https://asheshdevelopment.github.io/zGenesis/>
 
 ## Ownership and licence
 
-The website and its original documentation are proprietary to Ashesh
-Development. See [LICENSE](LICENSE) for permitted use and restrictions.
+The website and its original documentation are proprietary. See
+[LICENSE](LICENSE) for permitted use and restrictions.
 
 Original game names and assets remain the property of their respective owners
 and are not distributed by this repository.

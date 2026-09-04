@@ -1,4 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'Genesis Calligraph';
+  src: url('../assets/fonts/genesis-title.ttf') format('truetype');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Sanketa Naru';
+  src: url('../assets/fonts/sanketa-narrative.ttf') format('truetype');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
 
 :root {
   color-scheme: dark;
@@ -12,8 +28,8 @@
   --ifm-color-primary-light: #e22e51;
   --ifm-color-primary-lighter: #e84b69;
   --ifm-font-color-base: #f8eedc;
-  --ifm-heading-font-family: 'Cinzel', serif;
-  --ifm-font-family-base: 'Cormorant Garamond', serif;
+  --ifm-heading-font-family: 'Libre Baskerville', serif;
+  --ifm-font-family-base: 'Inter', sans-serif;
   --ifm-navbar-height: 5rem;
   --roadmap-bg: #0b0807;
   --roadmap-surface: #15100e;
@@ -56,14 +72,15 @@ body {
 
 .navbar__title {
   color: var(--genesis-gold);
-  font-family: 'Cinzel', serif;
+  font-family: 'Genesis Calligraph', 'Libre Baskerville', serif;
+  font-weight: 400;
   font-size: 1rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .navbar__link {
-  font-family: 'Cinzel', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.76rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -80,7 +97,7 @@ body {
 
 .footer__title {
   color: var(--roadmap-ink);
-  font-family: 'Cinzel', serif;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .footer__link-item,
@@ -124,7 +141,7 @@ body {
 .game-kicker {
   margin: 0 0 0.8rem;
   color: var(--genesis-gold);
-  font-family: 'Cinzel', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -140,10 +157,33 @@ body {
   text-shadow: 0 3px 26px rgb(0 0 0 / 76%);
 }
 
+.game-hero h1 {
+  font-family: 'Genesis Calligraph', 'Libre Baskerville', serif;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.game-hero__chapter {
+  margin: 0.7rem 0 0;
+  color: var(--genesis-gold);
+  font-family: 'Sanketa Naru', 'Libre Baskerville', serif;
+  font-weight: 400;
+  font-size: clamp(1.05rem, 2.3vw, 1.65rem);
+  letter-spacing: 0.12em;
+  text-shadow: 0 2px 15px rgb(0 0 0 / 90%);
+}
+
+.game-page-hero .game-kicker {
+  font-family: 'Sanketa Naru', 'Libre Baskerville', serif;
+  font-weight: 400;
+}
+
 .game-hero__lead {
   max-width: 720px;
   margin: 1.25rem auto 0;
   color: #e8d9c5;
+  font-family: 'Sanketa Naru', 'Libre Baskerville', serif;
+  font-weight: 400;
   font-size: clamp(1.2rem, 2.4vw, 1.65rem);
   line-height: 1.5;
   text-shadow: 0 2px 15px rgb(0 0 0 / 90%);
@@ -165,7 +205,7 @@ body {
   padding: 0.75rem 1.6rem;
   border: 1px solid transparent;
   border-radius: 5px;
-  font-family: 'Cinzel', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -206,7 +246,7 @@ body {
   left: 50%;
   z-index: 1;
   color: var(--roadmap-muted);
-  font-family: 'Cinzel', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.62rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -264,7 +304,7 @@ body {
 
 .game-pillar-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -286,7 +326,7 @@ body {
   display: block;
   margin-bottom: 3.2rem;
   color: var(--genesis-red);
-  font-family: 'Cinzel', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.7rem;
   letter-spacing: 0.12em;
 }
@@ -375,7 +415,7 @@ body {
 
 .game-engine-card__label {
   color: var(--genesis-red);
-  font-family: 'Cinzel', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.65rem;
   letter-spacing: 0.18em;
 }
@@ -384,7 +424,7 @@ body {
   display: block;
   margin: 0.8rem 0;
   color: var(--genesis-gold);
-  font-family: 'Cinzel', serif;
+  font-family: 'Libre Baskerville', serif;
   font-size: 2.5rem;
 }
 
@@ -406,7 +446,7 @@ body {
 
 .game-principle > span {
   color: var(--genesis-red);
-  font-family: 'Cinzel', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.72rem;
   letter-spacing: 0.12em;
 }
@@ -430,6 +470,12 @@ body {
   .game-page-hero__emblem {
     inset: 0;
     opacity: 0.2;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1050px) {
+  .game-pillar-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -458,6 +504,8 @@ body {
 
 .theme-doc-markdown > h1 {
   margin-bottom: 1.25rem;
+  font-family: 'Genesis Calligraph', 'Libre Baskerville', serif;
+  font-weight: 400;
   font-size: clamp(2rem, 4vw, 3rem);
   letter-spacing: -0.045em;
 }
@@ -863,6 +911,8 @@ body {
 .theme-doc-markdown .roadmap-animations { --roadmap-accent: #e34b65; }
 .theme-doc-markdown .roadmap-world { --roadmap-accent: #d59a29; }
 .theme-doc-markdown .roadmap-audio { --roadmap-accent: #b9263e; }
+.theme-doc-markdown .roadmap-devkit { --roadmap-accent: #d4a93c; }
+.theme-doc-markdown .roadmap-extras { --roadmap-accent: #9f7aea; }
 .theme-doc-markdown .roadmap-beta { --roadmap-accent: #ffd24a; }
 
 .roadmap-principles {

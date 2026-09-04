@@ -6,38 +6,41 @@ import Layout from '@theme/Layout';
 const pillars = [
   {
     marker: 'I',
-    title: 'A world reborn',
-    copy: 'Return to a mythic realm shaped by ancient tribes, sacred powers and conflicts that demand courage and cooperation.',
+    title: 'Built from the ground up',
+    copy: 'GENESIS is a complete rewrite developed on zEngine as a new foundation for the entire experience.',
   },
   {
     marker: 'II',
-    title: 'Built for the journey',
-    copy: 'zEngine is being developed around the identity, atmosphere and moment-to-moment experience of Tantra Genesis: RE.',
+    title: 'Classic at its heart',
+    copy: 'The familiar gameplay, atmosphere and social adventure remain at the centre, supported by modern functions.',
   },
   {
     marker: 'III',
-    title: 'Progress in public',
-    copy: 'Follow each major workstream from active development through its evidence-based closed-beta completion gate.',
+    title: 'A stronger online world',
+    copy: 'New network handling and server improvements are designed to support a more stable, responsive journey.',
+  },
+  {
+    marker: 'IV',
+    title: 'Expanded everywhere',
+    copy: 'New maps will broaden the world, with Windows, Linux, macOS, iPhone and Android included in the platform vision.',
   },
 ];
 
 export default function Home(): ReactNode {
-  const genesisImage = useBaseUrl('/img/genesis-loading.bmp');
+  const genesisImage = useBaseUrl('/img/genesis-sanketa-background.jpg');
 
   return (
     <Layout
       title="Home"
-      description="Tantra Genesis: RE, powered by zEngine from Ashesh Development.">
+      description="GENESIS — Sanketa I : Kali Agamana.">
       <main className="game-site">
         <section className="game-hero" style={{backgroundImage: `url(${genesisImage})`}}>
           <div className="game-hero__veil" aria-hidden="true" />
           <div className="game-shell game-hero__content">
-            <p className="game-kicker">ASHESH DEVELOPMENT PRESENTS</p>
-            <h1>Tantra Genesis: RE</h1>
-            <p className="game-hero__lead">
-              The legend begins again on zEngine—a new engine developed by
-              Ashesh Development.
-            </p>
+            <p className="game-kicker">THE FIRST CHAPTER</p>
+            <h1>GENESIS</h1>
+            <p className="game-hero__chapter">Sanketa I : Kali Agamana</p>
+            <p className="game-hero__lead">The age of darkness approaches. A new legend begins.</p>
             <div className="game-actions">
               <Link className="game-button game-button--primary" to="/roadmap">
                 View the roadmap
@@ -55,11 +58,15 @@ export default function Home(): ReactNode {
         <section className="game-section game-section--raised" id="vision">
           <div className="game-shell">
             <header className="game-section__heading">
-              <p className="game-kicker">THE NEXT CHAPTER</p>
-              <h2>A faithful world. A new foundation.</h2>
+              <p className="game-kicker">A NEW WORLD BEGINS</p>
+              <h2>Bringing you GENESIS.</h2>
               <p>
-                The project preserves the recognisable spirit of Tantra while
-                building a stable, supportable foundation for its future.
+                From the developer who played a key part in making
+                Kathana&apos;s new engine possible comes a completely new
+                experience. Every system and line of code is being written from
+                the ground up on zEngine. Only classic game assets—such as
+                models and textures—are reused to preserve the world&apos;s
+                recognisable identity.
               </p>
             </header>
             <div className="game-pillar-grid">

@@ -4,19 +4,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 
 const principles = [
-  ['01', 'Faithful identity', 'Preserve the atmosphere, world and recognisable experience that define Tantra.'],
-  ['02', 'Evidence-led progress', 'Advance each area only when its visible result and completion requirements can be verified.'],
-  ['03', 'A durable foundation', 'Build zEngine as a stable base for a supportable game and a dependable closed beta.'],
-  ['04', 'A focused release', 'Prioritise a coherent starting experience before expanding the boundaries of the world.'],
+  ['01', 'Classic gameplay', 'Preserve the familiar movement, combat, progression, atmosphere and social experience.'],
+  ['02', 'Modern functions', 'Add modern quality-of-life features and a more dependable experience without losing its identity.'],
+  ['03', 'New online foundation', 'Introduce new network handling and server improvements for stability, responsiveness and growth.'],
+  ['04', 'A broader world', 'Build new maps and target Windows, Linux, macOS, iPhone and Android from one shared vision.'],
 ];
 
 export default function About(): ReactNode {
-  const genesisImage = useBaseUrl('/img/genesis-loading.bmp');
+  const genesisImage = useBaseUrl('/img/genesis-sanketa-background.jpg');
 
   return (
     <Layout
       title="About"
-      description="About Tantra Genesis: RE and the zEngine vision from Ashesh Development.">
+      description="About GENESIS and its first chapter, Sanketa I : Kali Agamana.">
       <main className="game-site game-inner-page">
         <section className="game-page-hero">
           <div
@@ -25,11 +25,12 @@ export default function About(): ReactNode {
             aria-hidden="true"
           />
           <div className="game-shell game-page-hero__content">
-            <p className="game-kicker">ABOUT THE PROJECT</p>
-            <h1>A legend reconstructed for a new era.</h1>
+            <p className="game-kicker">SANKETA I : KALI AGAMANA</p>
+            <h1>Bringing you a new legend.</h1>
             <p>
-              Tantra Genesis: RE is a focused revival built on zEngine, a new
-              game engine developed by Ashesh Development.
+              From the developer who played a key part in making
+              Kathana&apos;s new engine possible comes GENESIS—a completely new
+              journey written from the ground up on zEngine.
             </p>
           </div>
         </section>
@@ -40,22 +41,22 @@ export default function About(): ReactNode {
               <p className="game-kicker">THE VISION</p>
               <h2>Preserve the soul. Strengthen the foundation.</h2>
               <p>
-                The project is guided by the feel of the original world: its
-                tribes, environments, progression and social adventure. The aim
-                is not simply to reproduce individual screens, but to rebuild a
-                complete and dependable experience around them.
+                Every system and line of code behind GENESIS is new. Only
+                classic game assets—such as models and textures—are reused,
+                preserving a recognisable visual identity while the gameplay
+                foundation is rebuilt for a modern future.
               </p>
               <p>
-                Development begins with the path every player experiences—entry,
-                character creation, world arrival, movement, interaction and
-                combat—then expands through the systems required for a stable
-                closed beta.
+                The new foundation introduces modern functions, new network
+                handling, server improvements and additional maps. Its
+                cross-platform direction includes Windows, Linux, macOS,
+                iPhone (iOS) and Android.
               </p>
             </div>
             <aside className="game-engine-card">
-              <span className="game-engine-card__label">POWERED BY</span>
+              <span className="game-engine-card__label">THE NEW FOUNDATION</span>
               <strong>zEngine</strong>
-              <p>A new game engine developed by Ashesh Development.</p>
+              <p>A complete ground-up rewrite for a classic world with a modern future.</p>
             </aside>
           </div>
         </section>
