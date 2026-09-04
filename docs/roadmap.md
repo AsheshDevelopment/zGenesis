@@ -10,55 +10,50 @@ toc_max_heading_level: 4
 
 # Development Roadmap to Closed Beta
 
-This roadmap explains how Kathana 2 will progress from active development to a
-controlled closed beta test. It covers player-facing features, content
-readiness, quality standards, security, operations and tester support.
-
-:::info Roadmap policy
-
-This roadmap is ordered by dependency and readiness, not by promised dates.
-Milestones advance only after their completion requirements are demonstrated.
-Scope and ordering may change when original game behaviour is verified.
-
-:::
-
-## Guiding principles
-
-- **Faithful experience:** Characters, controls, world behaviour, interfaces,
-  combat and progression should remain recognisable to returning K2 players.
-- **Authoritative game rules:** Important actions are validated consistently so
-  that all players observe the same result.
-- **Safe player progress:** Character, item, currency and quest progress must
-  survive reconnects, maintenance and recoverable failures.
-- **Careful content handling:** Original game assets are not published with this
-  roadmap. Testers must use an authorised local installation.
-- **Evidence before completion:** A visible feature is not complete until its
-  full interaction and recovery paths have been tested.
-- **Bounded beta scope:** Closed beta will validate a complete smaller
-  experience before expanding to every historical zone and feature.
-
-## Status legend
-
-| Status | Meaning |
-| --- | --- |
-| Complete | The current development baseline provides the required foundation. |
-| In progress | A usable portion exists, but the milestone requirements are incomplete. |
-| Planned | Required before or during closed beta. |
-| Deferred | Outside the first closed-beta scope. |
-
-## Interactive progress dashboard
-
-The percentages below summarise the verified planning tasks in each area. They
-are rounded indicators of current progress, not release dates. Select any main
-area to display its subtasks and individual progress.
-
-<div className="roadmap-overall">
-  <div className="roadmap-overall__top">
-    <span className="roadmap-overall__label">Overall closed-beta readiness</span>
-    <span className="roadmap-percent">45%</span>
+<section className="roadmap-hero">
+  <div className="roadmap-hero__eyebrow">PUBLIC DEVELOPMENT ROADMAP · CLOSED BETA TRACK</div>
+  <p className="roadmap-hero__lead">A disciplined, evidence-led path from active development to a stable and supportable Kathana 2 closed beta.</p>
+  <p className="roadmap-hero__copy">Progress is organised by dependency and demonstrated readiness—not promised dates. Every percentage is a rounded planning indicator, and every workstream advances only after its completion requirements are verified.</p>
+  <div className="roadmap-hero__rule" aria-hidden="true"></div>
+  <div className="roadmap-hero__meta">
+    <span><strong>Current stage</strong> Playable starting experience</span>
+    <span><strong>Release target</strong> Controlled closed beta</span>
+    <span><strong>Update policy</strong> Evidence before completion</span>
   </div>
-  <progress className="roadmap-progress" value="45" max="100" aria-label="Overall closed-beta readiness: 45 percent">45%</progress>
+</section>
+
+<section className="roadmap-overview" aria-label="Roadmap overview">
+  <article className="roadmap-overall">
+    <div className="roadmap-overall__top">
+      <div>
+        <span className="roadmap-card__kicker">PROGRAMME READINESS</span>
+        <span className="roadmap-overall__label">Overall progress</span>
+      </div>
+      <span className="roadmap-overall__value">45<span>%</span></span>
+    </div>
+    <progress className="roadmap-progress" value="45" max="100" aria-label="Overall closed-beta readiness: 45 percent">45%</progress>
+    <div className="roadmap-scale" aria-hidden="true"><span>Development</span><span>Closed beta</span></div>
+  </article>
+  <div className="roadmap-facts">
+    <article className="roadmap-fact"><span className="roadmap-fact__value">08</span><span className="roadmap-fact__label">Workstreams</span></article>
+    <article className="roadmap-fact"><span className="roadmap-fact__value">01</span><span className="roadmap-fact__label">Foundation ready</span></article>
+    <article className="roadmap-fact roadmap-fact--active"><span className="roadmap-fact__value">07</span><span className="roadmap-fact__label">Active workstreams</span></article>
+    <article className="roadmap-fact"><span className="roadmap-fact__value">01</span><span className="roadmap-fact__label">Beta entry gate</span></article>
+  </div>
+</section>
+
+<div className="roadmap-legend" aria-label="Status legend">
+  <span className="roadmap-legend__title">STATUS</span>
+  <span><i className="roadmap-dot roadmap-dot--complete"></i>Complete</span>
+  <span><i className="roadmap-dot roadmap-dot--active"></i>In progress</span>
+  <span><i className="roadmap-dot roadmap-dot--planned"></i>Planned</span>
+  <span><i className="roadmap-dot roadmap-dot--deferred"></i>Deferred</span>
 </div>
+
+## Workstream dashboard
+
+Select a workstream to reveal its detailed tasks. The ordered layout makes gaps,
+dependencies and relative readiness easy to scan without implying a release date.
 
 <div className="roadmap-dashboard">
 
@@ -188,446 +183,106 @@ area to display its subtasks and individual progress.
 
 </div>
 
-## Roadmap summary
+## Delivery principles
+
+<div className="roadmap-principles">
+  <article><span>01</span><div><strong>Faithful experience</strong><p>Characters, controls, world behaviour, interfaces, combat and progression remain recognisable to returning K2 players.</p></div></article>
+  <article><span>02</span><div><strong>Authoritative rules</strong><p>Important actions are validated consistently so every player observes the same result.</p></div></article>
+  <article><span>03</span><div><strong>Safe progress</strong><p>Character, item, currency and quest progress survives reconnects, maintenance and recoverable failures.</p></div></article>
+  <article><span>04</span><div><strong>Careful content</strong><p>Original game assets are not published here. Testers must use an authorised local installation.</p></div></article>
+  <article><span>05</span><div><strong>Evidence first</strong><p>A visible feature is not complete until its full interaction and recovery paths have been tested.</p></div></article>
+  <article><span>06</span><div><strong>Bounded beta</strong><p>A complete smaller experience is validated before every historical zone and feature is expanded.</p></div></article>
+</div>
+
+## Detailed workstream plan
+
+The complete delivery plan is grouped by responsibility. Each workstream keeps
+its established baseline, remaining scope and release gate together.
+
+<div className="roadmap-plan-grid">
+
+<details className="roadmap-plan roadmap-ui" open>
+  <summary><span><b>01</b><strong>UI</strong></span><em>62% · In progress</em></summary>
+  <div className="roadmap-plan__body">
+    <section><h4>Current baseline</h4><ul><li>Intro, login, server, channel and character flows are available.</li><li>The main display, chat area, quickbar and menu foundation are present.</li><li>Interface review records can identify missing or incorrect resources.</li></ul></section>
+    <section><h4>Remaining scope</h4><ul><li>Connect every displayed character, currency and progression value.</li><li>Complete buttons, text entry, slots, tabs, scrollbars and window dragging.</li><li>Finish shortcuts without interfering with active text entry.</li><li>Verify every required window at 800×600, 1024×768 and 1920×1080.</li><li>Complete font, colour, position, control-state and readability review.</li></ul></section>
+    <section><h4>Completion gate</h4><ul><li>Every visible closed-beta control is interactive.</li><li>Required windows pass review at all supported screen sizes.</li><li>Missing critical interface resources stop release preparation with a clear explanation.</li></ul></section>
+  </div>
+</details>
+
+<details className="roadmap-plan roadmap-gameplay">
+  <summary><span><b>02</b><strong>Gameplay</strong></span><em>43% · In progress</em></summary>
+  <div className="roadmap-plan__body">
+    <section><h4>Current baseline</h4><ul><li>Keyboard movement, click-to-move, camera control and collision are available.</li><li>Basic targeting, combat, defeat and recovery are available.</li><li>Character and position state can survive reconnecting.</li></ul></section>
+    <section><h4>Remaining scope</h4><ul><li>Complete creature detection, chase, attack, return, defeat and respawn behaviour.</li><li>Finish item pickup, use, movement, equipment, purchasing, selling and repair.</li><li>Deliver town conversations, merchants, storage and return-location services.</li><li>Complete quest offer, acceptance, tracking, objectives, rewards and persistence.</li><li>Protect item, currency, reward and progression changes from repetition or interruption.</li></ul></section>
+    <section><h4>Completion gate</h4><ul><li>A new character can finish a representative multi-step quest and retain its reward.</li><li>Invalid movement, combat, item and service requests are rejected.</li><li>Interrupted actions cannot duplicate or destroy progress.</li></ul></section>
+  </div>
+</details>
+
+<details className="roadmap-plan roadmap-network">
+  <summary><span><b>03</b><strong>Network</strong></span><em>35% · In progress</em></summary>
+  <div className="roadmap-plan__body">
+    <section><h4>Current baseline</h4><ul><li>Login, session restoration and nearby-world synchronisation have a working foundation.</li><li>Accepted movement and essential character state can be shared consistently.</li></ul></section>
+    <section><h4>Remaining scope</h4><ul><li>Complete nearby, general, private, party and guild communication.</li><li>Add party invitations, membership, leadership and relationship rules.</li><li>Add friends, guild membership, roles and permissions.</li><li>Complete safe two-sided player trade and cancellation paths.</li><li>Protect account communication and add rate, size and abuse controls.</li></ul></section>
+    <section><h4>Completion gate</h4><ul><li>Players receive only information intended for them.</li><li>Party and social state remains consistent through disconnects and region changes.</li><li>Repeated or interrupted trade cannot duplicate items or currency.</li></ul></section>
+  </div>
+</details>
+
+<details className="roadmap-plan roadmap-skills">
+  <summary><span><b>04</b><strong>Skills</strong></span><em>38% · In progress</em></summary>
+  <div className="roadmap-plan__body">
+    <section><h4>Current baseline</h4><ul><li>The starting skill catalogue and basic resource, target and recovery rules are partially available.</li><li>Character growth values have an evidence-led foundation.</li></ul></section>
+    <section><h4>Remaining scope</h4><ul><li>Complete learning, improvement, selection and quickbar use.</li><li>Enforce target, distance, resource cost and recovery requirements.</li><li>Apply temporary effects, conditions, resistance and removal rules.</li><li>Complete level and chakra growth with verified boundary and rounding behaviour.</li><li>Present resulting health, resources and combat values accurately.</li></ul></section>
+    <section><h4>Completion gate</h4><ul><li>The bounded closed-beta skill set behaves consistently for valid and invalid targets.</li><li>Resource, timing and growth calculations pass boundary-value review.</li><li>Skill state survives reconnecting without free or repeated actions.</li></ul></section>
+  </div>
+</details>
+
+<details className="roadmap-plan roadmap-animations">
+  <summary><span><b>05</b><strong>Animations</strong></span><em>61% · In progress</em></summary>
+  <div className="roadmap-plan__body">
+    <section><h4>Current baseline</h4><ul><li>Playable-group idle presentation and key attachment layers are available.</li><li>Movement, defeat, recovery and distance-detail transitions have partial coverage.</li></ul></section>
+    <section><h4>Remaining scope</h4><ul><li>Verify hair, clothing, optional skirts and aprons for every playable group.</li><li>Complete locomotion and combat-state transitions.</li><li>Add hit reactions and synchronised defeat and recovery presentation.</li><li>Complete creature and town-character animation families.</li><li>Verify attachment, timing and distance-detail behaviour during gameplay.</li></ul></section>
+    <section><h4>Completion gate</h4><ul><li>Every beta character and creature uses the correct state and attachment set.</li><li>Transitions remain stable during movement, combat, defeat and reconnect.</li><li>Representative animation families pass repeatable visual comparison.</li></ul></section>
+  </div>
+</details>
+
+<details className="roadmap-plan roadmap-world">
+  <summary><span><b>06</b><strong>World &amp; Maps</strong></span><em>53% · In progress</em></summary>
+  <div className="roadmap-plan__body">
+    <section><h4>Current baseline</h4><ul><li>The starting region includes terrain, buildings, placed objects and local population.</li><li>Ground and obstacle collision support the current playable path.</li><li>Approved region transitions have a controlled foundation.</li></ul></section>
+    <section><h4>Remaining scope</h4><ul><li>Complete stacked and multi-level walkable-area handling.</li><li>Route players and creatures around verified obstacles.</li><li>Verify terrain detail, water, sky, weather, fog, lighting and environmental sound.</li><li>Validate entrances, exits, return points and every approved transition.</li><li>Keep each region's movement, population, identity and revision information together.</li></ul></section>
+    <section><h4>Completion gate</h4><ul><li>Characters and creatures cannot cross blocked boundaries.</li><li>Every active region has a passing terrain, object, collision and transition review.</li><li>Incomplete or mixed-region data cannot become active.</li></ul></section>
+  </div>
+</details>
+
+<details className="roadmap-plan roadmap-audio">
+  <summary><span><b>07</b><strong>Audio &amp; Effects</strong></span><em>48% · In progress</em></summary>
+  <div className="roadmap-plan__body">
+    <section><h4>Current baseline</h4><ul><li>Intro, interface, movement and targeting feedback have partial coverage.</li><li>Representative effect presentation can be reviewed in context.</li></ul></section>
+    <section><h4>Remaining scope</h4><ul><li>Verify interface, movement, targeting, combat and environmental sounds.</li><li>Complete targeting, impact, critical, recovery, advancement and quest effects.</li><li>Check effect placement on characters, creatures and world objects.</li><li>Prevent missing or invalid effects from disrupting gameplay.</li><li>Record repeatable comparisons for every required effect family.</li></ul></section>
+    <section><h4>Completion gate</h4><ul><li>Required actions provide the correct audible and visual feedback.</li><li>Missing optional feedback degrades safely and is reported clearly.</li><li>Representative sound and effect families pass release review.</li></ul></section>
+  </div>
+</details>
+
+<details className="roadmap-plan roadmap-beta">
+  <summary><span><b>08</b><strong>Closed Beta Readiness</strong></span><em>23% · Planned</em></summary>
+  <div className="roadmap-plan__body">
+    <section><h4>Release preparation</h4><ul><li>Protect account communication, secrets and administrative boundaries.</li><li>Freeze and identify the beta player-data structure.</li><li>Test upgrades, rollback, backup, restoration and account recovery.</li><li>Produce identifiable packages with integrity verification and useful diagnostics.</li><li>Publish installation, controls, known-issue, privacy and tester-support guidance.</li></ul></section>
+    <section><h4>Test sequence</h4><ul><li><strong>Team qualification:</strong> clean installation, account journeys and recovery drills.</li><li><strong>Small invitation wave:</strong> installation, login, crashes and progression blockers.</li><li><strong>Gameplay wave:</strong> shared play, communication, trade, quests and transitions.</li><li><strong>Stability confirmation:</strong> feature freeze, complete checks, upgrade and rollback.</li></ul></section>
+    <section><h4>Entry gate</h4><ul><li>No known account bypass, duplication path or unrecoverable character-loss path.</li><li>Every active region and quest has passed release review.</li><li>Monitoring, backup, rollback and tester support are operational.</li><li>The release and its player-data revision are identifiable and recoverable.</li></ul></section>
+  </div>
+</details>
+
+</div>
+
+## Scope held beyond the first closed beta
+
+The initial closed beta deliberately excludes the complete historical content
+catalogue, unrestricted public registration, large-scale guild warfare,
+premium billing, private player shops, the full mount and pet collection, and
+production-scale public discovery. Keeping these outside the first test protects
+the quality of the bounded player experience.
 
-| Milestone | Status | Intended outcome |
-| --- | --- | --- |
-| 1. Development foundation | Complete | Stable foundation for the client, world service and content tools. |
-| 2. Playable starting experience | In progress | Reliable journey from launch to a playable starting region. |
-| 3. Core adventure loop | Planned | Explore, fight, earn rewards, use services and complete quests. |
-| 4. Multiplayer community | Planned | Chat, parties, friends, guild foundation and safe player trade. |
-| 5. Content readiness | Planned | Validated zones, encounters, interfaces, audio and effects. |
-| 6. Pre-beta hardening | Planned | Secure, recoverable and supportable test service. |
-| 7. Closed beta | Planned | Invite-only validation of the complete bounded experience. |
-
----
-
-## Milestone 1 — Development foundation
-
-**Status:** Complete
-
-### Purpose
-
-Establish the systems needed to present the game, preserve player state, load
-original K2 content safely and support repeatable testing.
-
-### Completed foundation
-
-- [x] Separate game client, world service and content-tool responsibilities.
-- [x] Window, display, input, audio and three-dimensional presentation basics.
-- [x] Safe loading for the currently required character, world, interface,
-  animation, audio and effect content.
-- [x] Local account and character persistence for development testing.
-- [x] Repeatable checks for content integrity and development builds.
-- [x] Tools for inspecting maps, interfaces, effects and packaged content.
-- [x] Original game assets kept outside public project history.
-
-### Completion requirements
-
-- The development build starts through a documented process.
-- Invalid or incomplete content is rejected with a useful explanation.
-- Client presentation, world rules and persistent data remain separate.
-- Repeated builds produce identifiable and testable results.
-
----
-
-## Milestone 2 — Playable starting experience
-
-**Status:** In progress
-
-### Purpose
-
-Deliver a dependable path from launching the game through account and character
-selection into a playable starting region.
-
-### Available today
-
-- [x] Introductory presentation and loading screens.
-- [x] Login, server selection and expandable channel selection.
-- [x] Character list, character creation, appearance choices and deletion flow.
-- [x] Three visible character positions with mouse selection.
-- [x] Starting-region terrain, buildings, characters and local population.
-- [x] Keyboard movement, click-to-move and camera controls.
-- [x] Ground and obstacle collision checks.
-- [x] Basic target selection, combat, death and recovery.
-- [x] Initial heads-up display, chat area, quickbar and menu interaction.
-- [x] Character and position restoration after reconnecting.
-
-### Remaining starting-experience work
-
-#### World movement
-
-- [ ] Apply every verified movement, combat and special-area rule consistently.
-- [ ] Handle stacked or multi-level walkable areas correctly.
-- [ ] Route characters and creatures around obstacles instead of stopping or
-  jumping back to an earlier position.
-- [ ] Complete safe transitions between approved regions.
-- [ ] Prevent incomplete regions from becoming available accidentally.
-
-#### Interface and controls
-
-- [ ] Connect every displayed health, resource, currency and progression value
-  to current character state.
-- [ ] Finish buttons, text entry, slots, tabs, scrollbars, dragging and control
-  feedback required by the starting experience.
-- [ ] Complete keyboard shortcuts without interfering with text entry.
-- [ ] Verify interface placement at 800×600, 1024×768 and 1920×1080.
-- [ ] Complete interface, movement, targeting and environmental sound behaviour.
-
-#### Visual quality
-
-- [ ] Complete camera framing and ground-obstruction behaviour.
-- [ ] Verify character hair, clothing layers, optional skirts or aprons and
-  distance detail changes for all playable groups.
-- [ ] Verify terrain detail, transparency, water, sky, fog and lighting.
-- [ ] Record repeatable visual comparisons for Intro, character selection and
-  the starting region.
-
-### Milestone 2 completion requirements
-
-- A new player can reach the world without manual repair or developer action.
-- Reconnecting restores the exact saved character and valid world position.
-- Characters and creatures cannot cross blocked world boundaries.
-- Failed region loading returns safely without corrupting progress.
-- Every visible control required by the starting experience is interactive.
-- The same packaged build passes launch-to-world testing on supported displays.
-
----
-
-## Milestone 3 — Core adventure loop
-
-**Status:** Planned
-
-### Purpose
-
-Turn the starting region into a complete role-playing loop: explore, fight,
-receive rewards, use town services, improve a character and complete a quest.
-
-### Movement and world activity
-
-- [ ] Add reliable routes around blocked terrain and placed obstacles.
-- [ ] Recalculate routes when a target moves or the path changes.
-- [ ] Keep nearby players, creatures, people and dropped items synchronised.
-- [ ] Handle entry, departure, death, reconnect and region change cleanly.
-- [ ] Reject impossible movement and position changes.
-
-### Creatures and combat
-
-- [ ] Complete idle, detection, chase, attack, return, death and respawn
-  behaviour.
-- [ ] Apply verified attack, defence, resistance and damage calculations.
-- [ ] Support the attack and support types required by the first quest set.
-- [ ] Award experience, currency and items consistently.
-- [ ] Present hits, critical results, defeat and recovery with matching motion,
-  sound and visual feedback.
-- [ ] Prevent defeated or disconnected characters from continuing invalid actions.
-
-### Inventory and equipment
-
-- [ ] Pick up, use, drop, move, equip and remove items.
-- [ ] Display current equipment on the character where appropriate.
-- [ ] Support purchasing, selling, repair and durability for the first services.
-- [ ] Protect item and currency changes from interruption or repetition.
-- [ ] Restore the exact inventory and equipment after reconnecting.
-
-### Skills and character growth
-
-- [ ] Learn, improve, select and use the required starting skills.
-- [ ] Enforce resource cost, distance, target and recovery-time requirements.
-- [ ] Apply level and chakra growth from verified values.
-- [ ] Display resulting health, resources and combat values correctly.
-- [ ] Verify boundary values and rounding for every active calculation.
-
-### People and town services
-
-- [ ] Present conversations and player choices in the correct order.
-- [ ] Make conversation availability depend on current character progress.
-- [ ] Validate that the player is near the selected person.
-- [ ] Deliver the required merchant, storage and return-location services.
-- [ ] Close interactions safely when the player moves, disconnects or changes
-  region.
-
-### Quests
-
-- [ ] Offer, accept, track, complete, fail and repeat quests where appropriate.
-- [ ] Support conversation, defeat, collection and travel objectives required by
-  the first quest chain.
-- [ ] Show clear progress and completion messages.
-- [ ] Award quest rewards exactly once.
-- [ ] Preserve quest progress through reconnect and maintenance.
-
-### Milestone 3 completion requirements
-
-- A new character can complete a representative multi-step quest from first
-  conversation to a permanently saved reward.
-- Interrupting any quest, combat or item action cannot duplicate rewards.
-- Creatures navigate around a known obstacle without teleporting.
-- Invalid movement, combat, item and service requests are rejected.
-- Character, inventory, skill and quest progress survives a service restart.
-
----
-
-## Milestone 4 — Multiplayer community
-
-**Status:** Planned
-
-### Purpose
-
-Support the player-to-player activity needed to evaluate Kathana 2 as a shared
-online world.
-
-### Communication
-
-- [ ] Add nearby, general, private, party and guild conversations.
-- [ ] Support familiar communication commands and private-message replies.
-- [ ] Enforce membership, distance and message-length rules.
-- [ ] Add sensible message-rate limits and ignore controls.
-- [ ] Provide clear feedback when a message cannot be delivered.
-
-### Parties
-
-- [ ] Invite, accept, reject, leave and remove members.
-- [ ] Transfer leadership safely.
-- [ ] Display relevant member information.
-- [ ] Apply party relationships to support actions and reward sharing.
-- [ ] Preserve consistent membership through death, region change and disconnect.
-
-### Friends and guild foundation
-
-- [ ] Send, accept and remove friend relationships.
-- [ ] Display available friend presence information.
-- [ ] Create the membership, role and permission foundation needed by guilds.
-- [ ] Display guild identity and provide guild conversation.
-- [ ] Defer large guild battles until the core community features are stable.
-
-### Player trade
-
-- [ ] Request, accept, reject, confirm and cancel a trade.
-- [ ] Prevent offered items or currency from changing unexpectedly.
-- [ ] Recheck both players before completing the exchange.
-- [ ] Complete both sides together or cancel both sides safely.
-- [ ] Cancel safely on excessive distance, death, region change or disconnect.
-
-### Milestone 4 completion requirements
-
-- Multiple players receive only the communication intended for them.
-- Party state remains correct when a leader disconnects or changes region.
-- Repeated or interrupted trade cannot duplicate or destroy items or currency.
-- Unauthorised friendship, guild and trade actions do not change player state.
-
----
-
-## Milestone 5 — Content readiness
-
-**Status:** Planned
-
-### Purpose
-
-Prepare the maps, population, interfaces, audio and visual effects required by
-the first closed-beta experience.
-
-### Regions and environments
-
-- [ ] Verify terrain, buildings, collision, water, sky, weather, lighting and
-  environmental sound for every approved region.
-- [ ] Verify entrances, exits, return points and region transitions.
-- [ ] Check all visible objects for correct position, scale, texture and detail.
-- [ ] Keep each region's movement and population information together during
-  review and release.
-- [ ] Record a content identity and revision for every released region.
-
-### Population and encounters
-
-- [ ] Verify every person and creature reference used by the beta regions.
-- [ ] Check spawn boundaries, walkable ground and population limits.
-- [ ] Review creature level, behaviour, rewards and respawn timing.
-- [ ] Reject incomplete or mixed-region population data.
-- [ ] Verify the complete first quest chain against the released population.
-
-### Interfaces
-
-- [ ] Review every interface required by the beta at supported screen sizes.
-- [ ] Verify images, text, font appearance, colour, position and control states.
-- [ ] Test text entry, links, scrollbars, buttons, tabs, slots and window dragging.
-- [ ] Record pass/fail results and reasons for every reviewed window.
-- [ ] Report missing interface resources clearly instead of displaying silent
-  substitutes.
-
-### Audio and visual effects
-
-- [ ] Verify interface, movement, targeting, combat and environmental sounds.
-- [ ] Verify targeting, impact, critical, recovery, advancement and quest effects.
-- [ ] Check effect placement on characters, creatures and world objects.
-- [ ] Prevent missing or invalid effects from disrupting gameplay.
-- [ ] Record visual comparisons for representative effect families.
-
-### Content readiness requirements
-
-- Every closed-beta region has a passing content review.
-- Required interfaces work at all supported screen sizes.
-- Required quest people, creatures, items and locations resolve correctly.
-- Missing critical content stops release preparation with a clear explanation.
-- Public review summaries do not include or redistribute original asset data.
-
----
-
-## Milestone 6 — Pre-beta hardening
-
-**Status:** Planned
-
-### Purpose
-
-Prepare the bounded game experience for invited testers, where failures must be
-recoverable and supportable without direct developer supervision.
-
-### Account and communication security
-
-- [ ] Protect account communication in transit.
-- [ ] Limit repeated failed login attempts and obvious automated abuse.
-- [ ] Keep account secrets out of logs and distributed files.
-- [ ] Reject incompatible, oversized or malformed requests safely.
-- [ ] Review account, movement, inventory, trade and administrative boundaries.
-
-### Progress protection
-
-- [ ] Freeze and identify the closed-beta player-data structure.
-- [ ] Test upgrade, rollback, backup and restoration procedures.
-- [ ] Check character, item, currency, skill, quest and social-data consistency.
-- [ ] Recover test accounts and characters from a prepared backup.
-- [ ] Document when beta progress may be reset and how testers will be notified.
-
-### Stability and capacity
-
-- [ ] Run extended tests covering world activity, population, combat, saving and
-  reconnecting.
-- [ ] Measure response time, world-update stability, memory use and data-saving
-  time under representative load.
-- [ ] Set practical limits for visible population and visual complexity.
-- [ ] Test display changes, focus loss, interrupted communication and restart.
-- [ ] Remove release-blocking warnings and unresolved critical errors.
-
-### Distribution and recovery
-
-- [ ] Produce identifiable, repeatable beta packages.
-- [ ] Verify distributed file integrity before launch.
-- [ ] Reject incompatible client and service versions clearly.
-- [ ] Provide safe repair for project-owned files.
-- [ ] Collect useful diagnostics without passwords or original asset contents.
-
-### Tester support
-
-- [ ] Publish installation, account, controls and known-issues guides.
-- [ ] Define issue severity and reporting templates.
-- [ ] Prepare account reset, character recovery and service rollback procedures.
-- [ ] Define tester conduct, moderation and escalation rules.
-- [ ] Publish privacy and diagnostic-data notices.
-
-### Pre-beta completion requirements
-
-- No known release-blocking security or player-data integrity issue.
-- All automated and packaged gameplay checks pass from a clean release candidate.
-- Backup and restoration drills recover test accounts and characters.
-- Extended multiplayer testing shows no unbounded resource growth or permanent
-  world-state disagreement.
-- Launch-to-world, reconnect, quest, party and trade journeys pass.
-- Beta scope, limitations and tester support are publicly documented.
-
----
-
-## Milestone 7 — Closed beta
-
-**Status:** Planned
-
-### Purpose
-
-Validate the complete bounded Kathana 2 experience with invited players before
-considering a larger test or broader content scope.
-
-### Minimum closed-beta experience
-
-- Launch, login, server/channel and character lifecycle.
-- A validated starting region and only explicitly approved connected regions.
-- Movement, camera, collision and safe region transitions.
-- Representative town services and a complete multi-step quest chain.
-- Creatures, combat, defeat, recovery, rewards and character growth.
-- Inventory, equipment, a bounded skill set and quickbars.
-- Communication, parties, friends, guild foundation and player trade.
-- Reviewed interfaces, audio and representative visual effects.
-- Persistent character, inventory, skill, quest and social progress.
-
-### CBT-0 — Team qualification
-
-- [ ] Test clean installation on supported Windows configurations.
-- [ ] Test fresh accounts, new characters and returning characters.
-- [ ] Exercise recovery procedures using test-only progress.
-- [ ] Confirm monitoring and support readiness before external invitations.
-
-### CBT-1 — Small invitation wave
-
-- [ ] Invite a small controlled group.
-- [ ] Prioritise installation, login, crashes, connection quality and progression
-  blockers.
-- [ ] Review reports during every active test window.
-- [ ] Pause invitations immediately for security, duplication or character-loss
-  defects.
-
-### CBT-2 — Gameplay and concurrency wave
-
-- [ ] Increase participation only after first-wave blockers are resolved.
-- [ ] Focus on party play, communication, trade, shared quest progress,
-  population behaviour and region transitions.
-- [ ] Test announced maintenance, restart, backup and recovery.
-- [ ] Compare actual activity with the prepared capacity limits.
-
-### CBT-3 — Stability confirmation
-
-- [ ] Freeze new features except approved blocker corrections.
-- [ ] Repeat complete gameplay and content checks for every release candidate.
-- [ ] Confirm upgrade and rollback from the previous beta release.
-- [ ] Publish resolved issues, known limitations and the next-stage decision.
-
-### Closed-beta entry requirements
-
-- [ ] All pre-beta completion requirements are satisfied.
-- [ ] No known item or currency duplication path.
-- [ ] No known unrecoverable character-loss path.
-- [ ] No known account-access or administrative bypass.
-- [ ] Every active region and quest has passed release review.
-- [ ] Incompatible versions are rejected with a clear explanation.
-- [ ] Monitoring, backup, rollback and tester support are operational.
-- [ ] Tester terms, privacy information and asset requirements are published.
-- [ ] The beta release and its player-data revision are identifiable and
-  recoverable.
-
-### Closed-beta success criteria
-
-The closed beta succeeds when evidence shows that:
-
-- invited players can install, enter the world and retain progress reliably;
-- the shared game world remains consistent across reconnects and maintenance;
-- core multiplayer features work without duplication or information leakage;
-- content and interface defects can be reproduced and corrected predictably;
-- measured capacity supports the intended next test group;
-- remaining defects are understood and prioritised without requiring the core
-  project foundation to be replaced.
-
----
-
-## Deferred beyond the first closed beta
-
-Unless required by the approved beta experience, the first closed beta does not
-need:
-
-- every historical region, quest, creature, item or skill;
-- unrestricted public account registration;
-- large-scale guild battles and siege activities;
-- premium billing or cash-store services;
-- private player shops;
-- the complete historical collection of mounts and pets;
-- production-scale public server discovery.
-
-Keeping these features outside the first test protects the quality of the core
-experience and shortens the path to useful player feedback.
 
 ## Public roadmap updates
 
