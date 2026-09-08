@@ -494,12 +494,18 @@
         padding: 110px 0;
       }
       .reserved-card,
-      .task-gate,
-      .task-board {
+      .task-gate {
         max-width: 820px;
         padding: 34px;
         border: 1px solid var(--border);
         background: rgba(24, 24, 24, 0.82);
+        backdrop-filter: blur(12px);
+      }
+      .task-board {
+        width: 100%;
+        padding: 34px clamp(22px, 4vw, 46px);
+        border: 1px solid var(--border);
+        background: rgba(24, 24, 24, 0.88);
         backdrop-filter: blur(12px);
       }
       .reserved-card h1,
@@ -540,42 +546,45 @@
         color: var(--subtask);
         font-size: 12px;
       }
-      .task-list {
+      .task-board-head {
         display: grid;
-        gap: 1px;
-        margin: 28px 0 0;
-        border: 1px solid var(--border);
-        background: var(--border);
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 32px;
+        align-items: end;
+        padding-bottom: 28px;
+        border-bottom: 1px solid var(--border);
       }
-      .task-item {
-        display: grid;
-        grid-template-columns: auto 1fr auto;
-        gap: 14px;
-        align-items: start;
-        padding: 17px 18px;
-        background: #181818;
-        cursor: pointer;
+      .task-board-head h1 {
+        margin-bottom: 8px;
       }
-      .task-item input {
-        width: 17px;
-        height: 17px;
-        margin-top: 3px;
-        accent-color: var(--primary);
+      .task-board-head p {
+        max-width: 680px;
+        margin: 0;
       }
-      .task-item strong,
-      .task-item small {
+      .task-overall {
+        min-width: 150px;
+        text-align: right;
+      }
+      .task-overall strong {
         display: block;
-      }
-      .task-item small {
-        margin-top: 3px;
-        color: var(--muted-fg);
-      }
-      .task-item em {
         color: var(--primary);
+        font-size: 40px;
+        line-height: 1;
+      }
+      .task-overall span {
+        color: var(--muted-fg);
         font-size: 10px;
-        font-style: normal;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
+      }
+      .task-progress-list .workstream:last-child {
+        border-bottom: 0;
+      }
+      .task-progress-list .workstream-content {
+        padding-bottom: 34px;
+      }
+      .task-progress-list .subtasks {
+        margin-top: 2px;
       }
       .task-actions {
         display: flex;
@@ -665,11 +674,12 @@
         .password-form {
           grid-template-columns: 1fr;
         }
-        .task-item {
-          grid-template-columns: auto 1fr;
+        .task-board-head {
+          grid-template-columns: 1fr;
+          gap: 18px;
         }
-        .task-item em {
-          grid-column: 2;
+        .task-overall {
+          text-align: left;
         }
       }
       @media (prefers-reduced-motion: reduce) {
@@ -786,9 +796,9 @@
                   <div class="workstream-title-row">
                     <span class="workstream-title"
                       ><b class="symbol">◆</b>UI</span
-                    ><span class="workstream-pct">80%</span>
+                    ><span class="workstream-pct">84%</span>
                   </div>
-                  <div class="bar"><i style="--p: 80%"></i></div>
+                  <div class="bar"><i style="--p: 84%"></i></div>
                 </div>
                 <span class="expand-mark" aria-hidden="true"></span>
               </summary>
@@ -808,16 +818,16 @@
                   <div class="subtask">
                     <div class="subtask-head">
                       <span>Main HUD layout and live values</span
-                      ><strong>86%</strong>
+                      ><strong>88%</strong>
                     </div>
-                    <div class="bar bar-small"><i style="--p: 86%"></i></div>
+                    <div class="bar bar-small"><i style="--p: 88%"></i></div>
                   </div>
                   <div class="subtask">
                     <div class="subtask-head">
                       <span>Windows, controls and hotkeys</span
-                      ><strong>84%</strong>
+                      ><strong>88%</strong>
                     </div>
-                    <div class="bar bar-small"><i style="--p: 84%"></i></div>
+                    <div class="bar bar-small"><i style="--p: 88%"></i></div>
                   </div>
                   <div class="subtask">
                     <div class="subtask-head">
@@ -835,10 +845,15 @@
                   </div>
                   <div class="subtask">
                     <div class="subtask-head">
-                      <span>Resolution and usability review</span
-                      ><strong>58%</strong>
+                      <span>Resolution, live settings and usability</span
+                      ><strong>72%</strong>
                     </div>
-                    <div class="bar bar-small"><i style="--p: 58%"></i></div>
+                    <div class="bar bar-small"><i style="--p: 72%"></i></div>
+                    <p class="note">
+                      Display mode, resolution, quality, VSync, fog,
+                      brightness, shadows, effect scope and sound now apply
+                      while the game is running and persist across restarts.
+                    </p>
                   </div>
                 </div>
                 <div class="detail-grid">
@@ -2244,21 +2259,27 @@
               <p id="gate-error" class="gate-error" role="alert"></p>
             </div>
             <div id="task-board" class="task-board" hidden>
-              <div class="section-kicker">Recommended development order</div>
-              <h1>Tasks</h1>
-              <p>Completion toggles are stored only in this browser and do not change the public roadmap.</p>
-              <div class="task-list">
-                <label class="task-item"><input type="checkbox" data-task="phase4" checked /><span><strong>Communication, exchange and social authority</strong><small>Chat, atomic trading, parties, friends and Ashram authority.</small></span><em>Completed</em></label>
-                <label class="task-item"><input type="checkbox" data-task="items" checked /><span><strong>Core item transactions</strong><small>Persistent inventory, merchant, equipment and currency operations.</small></span><em>Completed</em></label>
-                <label class="task-item"><input type="checkbox" data-task="skills" /><span><strong>Finish skills and targeting</strong><small>Area, friendly, hostile, corpse and gate targets with authoritative effects.</small></span><em>Recommended</em></label>
-                <label class="task-item"><input type="checkbox" data-task="progression" /><span><strong>Complete character progression</strong><small>Level, chakra, caste, job, Trimurti, death penalties and recovery rules.</small></span><em>Next</em></label>
-                <label class="task-item"><input type="checkbox" data-task="ui" /><span><strong>Complete interactive game UI</strong><small>Bind every dialog, control, slot, scrollbar, drag action and focused edit box.</small></span><em>Active</em></label>
-                <label class="task-item"><input type="checkbox" data-task="world" /><span><strong>World presentation parity</strong><small>Validate water, sky, lighting, detail textures, LOD attachments, audio and camera collision per zone.</small></span><em>Recommended</em></label>
-                <label class="task-item"><input type="checkbox" data-task="fx" /><span><strong>Unify FX authoring and runtime</strong><small>Use one semantic effect catalogue across the editor, attachments and gameplay events.</small></span><em>Planned</em></label>
-                <label class="task-item"><input type="checkbox" data-task="operations" /><span><strong>Production service readiness</strong><small>MariaDB parity, transport security, rate controls, backups, rollback and integrity procedures.</small></span><em>Before beta</em></label>
-                <label class="task-item"><input type="checkbox" data-task="beta" /><span><strong>Closed-beta verification</strong><small>Packaged builds, reconnects, multi-client interaction, zone traversal, soak tests and published limitations.</small></span><em>Final gate</em></label>
+              <header class="task-board-head">
+                <div>
+                  <div class="section-kicker">Development workstreams</div>
+                  <h1>Tasks</h1>
+                  <p>
+                    Progress is based on implemented and verified project
+                    evidence. Select a workstream to review its subtasks and
+                    individual completion levels.
+                  </p>
+                </div>
+                <div class="task-overall" aria-label="Overall progress 71 percent">
+                  <strong>71%</strong>
+                  <span>Overall progress</span>
+                </div>
+              </header>
+              <div id="task-progress-list" class="task-progress-list">
               </div>
-              <div class="task-actions"><span id="task-count"></span><button id="lock-tasks" class="text-button" type="button">Lock tasks</button></div>
+              <div class="task-actions">
+                <span>10 workstreams · evidence reviewed 09 September 2026</span>
+                <button id="lock-tasks" class="text-button" type="button">Lock tasks</button>
+              </div>
             </div>
           </div>
         </section>
@@ -2329,25 +2350,18 @@
         const board = document.getElementById("task-board");
         const form = document.getElementById("password-form");
         const error = document.getElementById("gate-error");
-        const checks = [...document.querySelectorAll("[data-task]")];
-        const updateCount = () => {
-          const complete = checks.filter((item) => item.checked).length;
-          document.getElementById("task-count").textContent = `${complete} of ${checks.length} marked complete in this browser`;
-        };
-        checks.forEach((item) => {
-          const saved = localStorage.getItem(`genesis-task-${item.dataset.task}`);
-          if (saved !== null) item.checked = saved === "1";
-          item.addEventListener("change", () => {
-            localStorage.setItem(`genesis-task-${item.dataset.task}`, item.checked ? "1" : "0");
-            updateCount();
-          });
+        const taskProgressList = document.getElementById("task-progress-list");
+        document.querySelectorAll("#page-main .workstream").forEach((workstream) => {
+          const task = workstream.cloneNode(true);
+          task.querySelector(".detail-grid")?.remove();
+          task.removeAttribute("open");
+          taskProgressList.appendChild(task);
         });
         function unlock() {
           error.textContent = "";
           gate.hidden = true;
           board.hidden = false;
           sessionStorage.setItem("genesis-tasks-unlocked", "1");
-          updateCount();
         }
         form.addEventListener("submit", (event) => {
           event.preventDefault();
