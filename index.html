@@ -808,10 +808,10 @@
           <div class="wrap">
             <div class="section-kicker">Programme readiness</div>
             <div class="overall">
-              <div class="overall-number">60<small>%</small></div>
+              <div class="overall-number">66<small>%</small></div>
               <div class="overall-copy">
                 <h2>Overall progress</h2>
-                <div class="bar"><i style="--p: 60%"></i></div>
+                <div class="bar"><i style="--p: 66%"></i></div>
                 <div class="scale">
                   <span>Development</span><span>Closed beta</span>
                 </div>
@@ -2323,15 +2323,15 @@
                     individual completion levels.
                   </p>
                 </div>
-                <div class="task-overall" aria-label="Overall progress 60 percent">
-                  <strong>60%</strong>
+                <div class="task-overall" aria-label="Overall progress 66 percent">
+                  <strong>66%</strong>
                   <span>Overall progress</span>
                 </div>
               </header>
               <div id="task-progress-list" class="task-progress-list">
               </div>
               <div class="task-actions">
-                <span>12 workstreams · evidence reviewed 09 September 2026</span>
+                <span>12 workstreams · evidence reviewed 21 September 2026</span>
                 <button id="lock-tasks" class="text-button" type="button">Lock tasks</button>
               </div>
             </div>
@@ -2365,7 +2365,7 @@
               </header>
               <div id="changelog-list" class="changelog-list"></div>
               <div class="task-actions">
-                <span>Updated 09 September 2026</span>
+                <span>Updated 21 September 2026</span>
                 <button id="lock-changelogs" class="text-button" type="button">Lock changelogs</button>
               </div>
             </div>
@@ -2388,83 +2388,83 @@
 
         const roadmap = [
           {
-            title: "Playable Core Loop", progress: 76, priority: "P0",
+            title: "Playable Core Loop", progress: 87, priority: "P0",
             subtasks: [
-              ["Launcher and deployment", 85, "Clean-machine validation and recovery remain."],
-              ["Login, server and channel selection", 82, "Capacity, timeout and reconnect presentation remain."],
+              ["Launcher and deployment", 85, "Add clean-machine validation, recovery and release-safe configuration."],
+              ["Login, server and channel selection", 90, "Complete timeout presentation and independent channel-health reporting."],
               ["Character creation and roster", 82, "Complete appearance combinations and confirmation tests."],
-              ["Loading and world entry", 80, "Add cancellation, errors and repeated-transition proof."],
-              ["Play-session loop", 70, "Complete pickup, death consequences and representative play."],
-              ["Logout and recovery", 55, "Add duplicate-login and crash-safe session recovery."]
+              ["Loading and world entry", 80, "Add cancellation, error states and repeated-transition proof."],
+              ["Play-session loop", 96, "Complete the continuous 45-minute packaged gameplay session."],
+              ["Logout and recovery", 72, "Add crash-safe reconciliation and abrupt transport-loss evidence."]
             ]
           },
           {
-            title: "Server Runtime and Channels", progress: 55, priority: "P0",
+            title: "Server Runtime and Channels", progress: 77, priority: "P0",
             subtasks: [
-              ["Authoritative sessions", 72, "Separate network intake from world-state ownership."],
-              ["Fixed-rate simulation", 38, "Use one configured deterministic rate for every active zone."],
-              ["Independent channels", 30, "Add capacity, health, lifecycle and failure isolation."],
-              ["Zone ownership", 48, "Give each active zone bounded commands and a supervised owner."],
-              ["Backpressure and rate limits", 25, "Connect bounded queues and slow-client policy to live traffic."],
-              ["Area-of-interest replication", 68, "Add delta updates, budgets and dense-scene load evidence."],
-              ["Cross-zone transfer", 67, "Add atomic hand-off, rollback and reconnect-in-transfer."],
-              ["Administration", 58, "Add authenticated lifecycle controls, audit and health reporting."]
+              ["Authoritative sessions", 74, "Finish separating parsing, validation, simulation and persistence ownership."],
+              ["Fixed-rate simulation", 70, "Complete timed-service ownership, catch-up and overload policy."],
+              ["Independent channels", 90, "Add bounded restart escalation and packaged recovery drills."],
+              ["Zone ownership", 97, "Add sustained slow-database and packaged operator-failure tests."],
+              ["Backpressure and rate limits", 72, "Add distributed, per-action and sustained abuse controls."],
+              ["Area-of-interest replication", 71, "Add deltas, per-tick budgets and dense-encounter soak evidence."],
+              ["Cross-zone transfer", 82, "Complete cooldown, multi-destination and transaction coverage."],
+              ["Administration", 93, "Add authenticated remote access, durable audit history and packaged drills."]
             ]
           },
           {
-            title: "World, Movement and Zones", progress: 68, priority: "P0",
+            title: "World, Movement and Zones", progress: 70, priority: "P0",
             subtasks: [
-              ["Movement feel", 82, "Tune acceleration, turning, animation and reconciliation."],
+              ["Movement feel", 96, "Complete manual parity capture and abnormal-frame-time testing."],
               ["Collision", 78, "Complete edge, slope, actor and malformed-data tests."],
               ["Camera", 76, "Add scenery occlusion and verify all view modes."],
-              ["Coordinate consistency", 72, "Unify map, water, effect, spawn and server transforms."],
+              ["Coordinate consistency", 74, "Unify and test remaining axis, origin and handedness conversions."],
               ["Zone qualification", 46, "Resolve and validate remaining map packages incrementally."],
-              ["Portal and spawn safety", 58, "Validate every arrival and provide rollback."],
-              ["Monster navigation", 58, "Improve pursuit, local avoidance and stuck recovery."]
+              ["Portal and spawn safety", 74, "Qualify all arrivals and complete rollback coverage."],
+              ["Monster navigation", 74, "Complete crowded-spawn and long pursuit-return soak evidence."]
             ]
           },
           {
-            title: "UI, Input and Accessibility", progress: 67, priority: "P0",
+            title: "UI, Input and Accessibility", progress: 87, priority: "P0",
             subtasks: [
-              ["Source UI resolution", 82, "Remove remaining missing-image and fallback cases."],
-              ["Intro interaction", 84, "Finish mouse-only and keyboard-focus regression passes."],
-              ["Main heads-up display", 72, "Complete scrollbars, tooltips, drag-and-drop and alignment."],
-              ["Gameplay dialogs", 58, "Replace placeholders and connect every visible control."],
-              ["Hotkeys and focus", 74, "Centralize bindings and protect text/modal input contexts."],
-              ["Live options", 86, "Add display-loss recovery and broader hardware validation."],
-              ["Accessibility and language", 30, "Add scaling, navigation and readability validation."]
+              ["Source UI resolution", 94, "Keep wider non-core diagnostics actionable."],
+              ["Intro interaction", 88, "Complete packaged audio and appearance-combination review."],
+              ["Main heads-up display", 92, "Retain populated multiplayer states for release review."],
+              ["Gameplay dialogs", 87, "Complete lower-priority service and social breadth."],
+              ["Hotkeys and focus", 86, "Complete the packaged keyboard-only pass and configurable bindings."],
+              ["Live options", 97, "Complete broader graphics and display validation."],
+              ["Accessibility and language", 30, "Add scaling, keyboard traversal and readability validation."]
             ]
           },
           {
-            title: "Combat, Skills and Progression", progress: 64, priority: "P0",
+            title: "Combat, Skills and Progression", progress: 75, priority: "P0",
             subtasks: [
-              ["Character statistics", 78, "Complete level, equipment and status recalculation fixtures."],
-              ["Basic combat", 76, "Validate latency, range, miss, critical and interruption cases."],
-              ["Skill execution", 68, "Expand the authoritative skill and targeting set."],
+              ["Character statistics", 84, "Complete wider level, equipment and status parity fixtures."],
+              ["Basic combat", 89, "Add packaged latency, evade, critical and interruption validation."],
+              ["Skill execution", 84, "Complete specialised effects and dense group-combat evidence."],
               ["Status effects", 62, "Complete stacking, dispel, immunity and cleanup rules."],
-              ["Equipment influence", 56, "Complete stat, requirement, durability and visual effects."],
-              ["Level and rewards", 52, "Complete grants, caps, penalties and ownership."],
+              ["Equipment influence", 76, "Complete requirements, break states and transaction rollback."],
+              ["Level and rewards", 64, "Complete advanced drops, currency sinks and parity fixtures."],
               ["Competitive combat", 32, "Deferred until the cooperative core is stable."]
             ]
           },
           {
-            title: "Items, Economy and Social", progress: 72, priority: "P0 / P1",
+            title: "Items, Economy and Social", progress: 74, priority: "P0 / P1",
             subtasks: [
-              ["Inventory and equipment", 76, "Complete usability, stack rules, visuals and rollback."],
-              ["Pickup and drops", 54, "Add visible ownership, range, expiry and contention."],
+              ["Inventory and equipment", 84, "Complete packaged usability, limits and rollback."],
+              ["Pickup and drops", 83, "Add packaged contention evidence and advanced drop slots."],
               ["Player exchange", 82, "Finish feedback, invalidation and production transactions."],
               ["Chat", 88, "Complete moderation, rate limits and retention handling."],
               ["Party", 72, "Finish lifecycle, rewards, reconnect and interface coverage."],
               ["Friends", 70, "Complete presence, blocking, limits and offline behaviour."],
               ["Guild", 64, "Complete roles, applications, notices and auditability."],
-              ["Merchant economy", 38, "Implement buy, sell, repair, storage and exploit tests."]
+              ["Merchant economy", 58, "Complete storage, pricing, feedback and exploit tests."]
             ]
           },
           {
-            title: "Rendering, Audio and Effects", progress: 61, priority: "P1",
+            title: "Rendering, Audio and FX", progress: 63, priority: "P1",
             subtasks: [
-              ["Terrain and scenery", 78, "Complete visual parity and invalid-resource recovery."],
-              ["Characters and creatures", 70, "Resolve remaining meshes, attachments and combinations."],
+              ["Terrain and scenery", 80, "Complete visual parity and invalid-resource recovery."],
+              ["Characters and creatures", 78, "Resolve remaining meshes, attachments and combinations."],
               ["Detail and visibility", 72, "Add measured budgets and stress-scene evidence."],
               ["Atmosphere and shadows", 64, "Complete scene comparisons and quality options."],
               ["Audio", 58, "Finish event mapping, mixing, attenuation and device recovery."],
@@ -2474,26 +2474,26 @@
             ]
           },
           {
-            title: "NPCs, Quests and Content", progress: 42, priority: "P2",
+            title: "NPCs, Quests and Content", progress: 56, priority: "P1 / P2",
             subtasks: [
               ["NPC presentation", 66, "Finish models, names, facing, schedules and services."],
-              ["NPC services", 48, "Add representative dialogue, merchant, storage and training."],
-              ["Quest engine", 46, "Generalize objectives, branches, prerequisites and rewards."],
+              ["NPC services", 78, "Complete packaged feedback, trainer rules and exploit testing."],
+              ["Quest engine", 58, "Generalize conditions, branches, prerequisites and rewards."],
               ["Quest content", 18, "Expand after the playable core is stable."],
               ["Additional regions", 38, "Release each region only after complete validation."]
             ]
           },
           {
-            title: "Persistence, Security and Operations", progress: 46, priority: "P0",
+            title: "Persistence, Security and Operations", progress: 67, priority: "P0",
             subtasks: [
-              ["Development database", 82, "Add migration discipline and recovery tests."],
-              ["Production gameplay database", 24, "Implement full transactional feature parity."],
-              ["Schema upgrades", 48, "Add ordered upgrades, compatibility and rollback policy."],
-              ["Authentication and sessions", 52, "Add production secrets, expiry, lockout and audit."],
-              ["Transaction boundaries", 44, "Keep multi-system commits atomic and outside world ticks."],
-              ["Observability", 36, "Add logs, metrics, traces, dashboards and alerts."],
-              ["Backup and recovery", 18, "Define and rehearse restore and retention policy."],
-              ["Deployment", 38, "Add validated profiles, service lifecycle and crash restart."]
+              ["Development database", 84, "Add corruption and recovery validation."],
+              ["Production gameplay database", 97, "Complete sustained-load evidence."],
+              ["Schema upgrades", 78, "Add rollback policy and older-release upgrade coverage."],
+              ["Authentication and sessions", 84, "Add distributed leases, key rotation and telemetry."],
+              ["Transaction boundaries", 78, "Complete crash-durable recovery and cancellation policy."],
+              ["Observability", 46, "Add structured logs, traces, dashboards and alerts."],
+              ["Backup and recovery", 42, "Automate off-host retention and timed restore drills."],
+              ["Deployment", 50, "Add hardened profiles, secret injection and service supervision."]
             ]
           },
           {
@@ -2505,31 +2505,31 @@
               ["Format support", 78, "Expand malformed-input tests and remove duplicate boundaries."],
               ["Conversion and packaging", 66, "Add deterministic end-to-end fixtures."],
               ["Validation and diagnostics", 62, "Consolidate machine-readable release gates."],
-              ["Server Manager", 54, "Connect secure channel/zone lifecycle, health and shutdown."],
+              ["Server Manager", 93, "Add authenticated remote access, audit history and packaged drills."],
               ["Build and storage", 78, "Add reproducibility, cache policy and disk-budget checks."]
             ]
           },
           {
-            title: "Website and Account Portal", progress: 78, priority: "P1",
+            title: "Website and Account Portal", progress: 81, priority: "P1",
             subtasks: [
               ["Public information", 90, "Complete production content and deployment review."],
-              ["Account lifecycle", 86, "Finish mail-provider, abuse and security validation."],
-              ["Closed-beta enrollment", 82, "Prove production login enforcement end to end."],
+              ["Account lifecycle", 90, "Finish mail-provider, abuse and security validation."],
+              ["Closed-beta enrollment", 92, "Complete revocation and cohort-operation testing."],
               ["Profiles and rankings", 80, "Validate freshness and privacy boundaries."],
               ["Community and support", 76, "Complete staffing and retention procedures."],
-              ["Administration", 72, "Complete authorization and destructive-action safeguards."],
+              ["Administration", 78, "Complete authorization and destructive-action safeguards."],
               ["Production hosting", 58, "Add hardened hosting, secrets, monitoring and recovery."]
             ]
           },
           {
-            title: "Quality and Closed Beta", progress: 30, priority: "P0",
+            title: "Quality and Closed Beta", progress: 32, priority: "P0",
             subtasks: [
-              ["Automated correctness", 72, "Add cross-system, database, simulation and protocol tests."],
-              ["Packaged manual matrix", 36, "Standardize intro, interface, combat and persistence runs."],
-              ["Multi-client testing", 35, "Cover social, combat, regions, reconnect and channel isolation."],
-              ["Performance and soak", 18, "Define budgets and run long-session client/server tests."],
-              ["Failure recovery", 16, "Exercise crashes, packet loss, outages and interrupted actions."],
-              ["Security review", 12, "Complete threats, dependencies, input and authorization review."],
+              ["Automated correctness", 75, "Add wider cross-system, simulation and protocol coverage."],
+              ["Packaged manual matrix", 60, "Complete portal, failure and long-session visual scenarios."],
+              ["Multi-client testing", 68, "Complete the 45-minute and channel-isolation sessions."],
+              ["Performance and soak", 68, "Retain 45-minute, four-hour and 25/75-client evidence."],
+              ["Failure recovery", 56, "Add packet loss, crash and interrupted-action soak scenarios."],
+              ["Security review", 22, "Complete threats, dependencies, secrets and authorization review."],
               ["Beta operations", 12, "Rehearse distribution, support, incidents, rollback and recovery."]
             ]
           }
@@ -2538,17 +2538,17 @@
         const changelogs = [
           {
             version: "Current development",
-            date: "09 September 2026",
+            date: "21 September 2026",
             changes: [
-              "Graphics settings now apply immediately and persist without restarting.",
-              "Movement, visual detail switching, visibility reuse, fog and contact shadows were improved.",
-              "The development task register was rebuilt from a full client, server, tools and content audit.",
-              "The public Roadmap now shows only main workstreams; detailed subtasks remain on this protected Tasks page."
+              "The local server manager now starts, verifies, restarts, drains and stops the complete development service stack.",
+              "Secure client connection testing now covers encrypted transport and exact application-version negotiation before login.",
+              "The representative starter path now includes dialogue, merchant, repair, storage, training and one persistent quest chain.",
+              "The public Roadmap and protected Tasks page now reflect the 21 September implementation and validation audit."
             ]
           },
           {
             version: "World and gameplay",
-            date: "September 2026",
+            date: "21 September 2026",
             changes: [
               "Authoritative collision, monster populations, navigation, combat, recovery and cross-region transfer were expanded.",
               "Character statistics, resources, skills, effects, rewards and equipment behaviour gained source-backed validation.",
@@ -2557,7 +2557,7 @@
           },
           {
             version: "Editors and content pipeline",
-            date: "September 2026",
+            date: "21 September 2026",
             changes: [
               "The Map Editor gained multi-region inspection, water, collision, object, animation and effect workflows.",
               "The Effects Editor gained multi-emitter import, texture resolution, preview and portable export.",
