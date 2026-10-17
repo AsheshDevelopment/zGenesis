@@ -2462,15 +2462,15 @@
             ]
           },
           {
-            title: "Rendering, Audio and FX", progress: 64, priority: "P1",
+            title: "Rendering, Audio and FX", progress: 68, priority: "P1",
             subtasks: [
               ["Terrain and scenery", 80, "Complete visual parity and invalid-resource recovery."],
               ["Characters and creatures", 82, "Resolve remaining meshes, attachments and combinations."],
               ["Detail and visibility", 72, "Add measured budgets and stress-scene evidence."],
               ["Atmosphere and shadows", 67, "Complete source-scene comparisons on varied terrain."],
               ["Audio", 64, "Finish audible review, mixing, attenuation and device recovery."],
-              ["Native effects", 58, "Complete attachments, timing, blending and parity."],
-              ["Particle interchange", 50, "Complete axis fixtures, coverage and round trips."],
+              ["Native effects", 64, "Type-1 emitter timing, motion and card scale now use confirmed native fields; complete attachments, blending and parity."],
+              ["Particle interchange", 60, "Complete axis fixtures, feature coverage and runtime/editor round trips."],
               ["Platform graphics validation", 25, "Validate additional targets after the Windows beta gate."]
             ]
           },
@@ -2537,6 +2537,15 @@
         ];
 
         const changelogs = [
+          {
+            version: "Source-authored TFX particle runtime",
+            date: "17 October 2026",
+            changes: [
+              "Client type-1 TFX nodes now decode confirmed burst, interval, lifetime, spread, direction, speed, acceleration, damping, blend and card-scale fields.",
+              "Runtime particles use deterministic authored spawn timing, directional motion, acceleration, local rotation and scalar/colour curves instead of a fixed smoke/fire trajectory.",
+              "Native blend enum, socket-follow attachment semantics and visual comparison across every effect family remain open fidelity gates."
+            ]
+          },
           {
             version: "Partial-frame transport recovery",
             date: "17 October 2026",
