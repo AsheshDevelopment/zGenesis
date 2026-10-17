@@ -808,10 +808,10 @@
           <div class="wrap">
             <div class="section-kicker">Programme readiness</div>
             <div class="overall">
-            <div class="overall-number">74<small>%</small></div>
+            <div class="overall-number">75<small>%</small></div>
               <div class="overall-copy">
                 <h2>Overall progress</h2>
-                <div class="bar"><i style="--p: 74%"></i></div>
+                <div class="bar"><i style="--p: 75%"></i></div>
                 <div class="scale">
                   <span>Development</span><span>Closed beta</span>
                 </div>
@@ -843,7 +843,7 @@
               <p>
                 Main workstreams and current progress only. Detailed tasks and
                 subtasks are maintained on the protected Tasks page.
-                <br /><strong>Last evidence audit: 17 October 2026 · 74% overall.</strong>
+                <br /><strong>Last evidence audit: 17 October 2026 · 75% overall.</strong>
               </p>
             </header>
             <details class="workstream">
@@ -2324,15 +2324,15 @@
                     individual completion levels.
                   </p>
                 </div>
-                <div class="task-overall" aria-label="Overall progress 74 percent">
-                  <strong>74%</strong>
+                <div class="task-overall" aria-label="Overall progress 75 percent">
+                  <strong>75%</strong>
                   <span>Overall progress</span>
                 </div>
               </header>
               <div id="task-progress-list" class="task-progress-list">
               </div>
               <div class="task-actions">
-                <span>12 workstreams · evidence reviewed 28 September 2026</span>
+                <span>12 workstreams · evidence reviewed 17 October 2026</span>
                 <button id="lock-tasks" class="text-button" type="button">Lock tasks</button>
               </div>
             </div>
@@ -2491,7 +2491,7 @@
               ["Production gameplay database", 98, "Complete sustained-load evidence."],
               ["Schema upgrades", 82, "Add rollback policy, seed separation and older-release upgrade coverage."],
               ["Authentication and sessions", 84, "Add distributed leases, key rotation and telemetry."],
-              ["Transaction boundaries", 90, "Abrupt MariaDB process-kill recovery, tracked monster action cancellation and persisted reward cancellation pass; complete deferred-command rejection recovery."],
+              ["Transaction boundaries", 92, "Abrupt MariaDB process-kill recovery, tracked monster action cancellation, persisted reward cancellation and bounded-queue rejection recovery pass; add interrupted transaction soak coverage."],
               ["Observability", 46, "Add structured logs, traces, dashboards and alerts."],
               ["Backup and recovery", 42, "Automate off-host retention and timed restore drills."],
               ["Deployment", 50, "Add hardened profiles, secret injection and service supervision."]
@@ -2525,11 +2525,11 @@
           {
             title: "Quality and Closed Beta", progress: 39, priority: "P0",
             subtasks: [
-              ["Automated correctness", 75, "Add wider cross-system, simulation and protocol coverage."],
+              ["Automated correctness", 79, "The server library gate passes 375 tests with 14 MariaDB-dependent tests ignored; add wider cross-system, simulation and protocol coverage."],
               ["Packaged manual matrix", 76, "Complete two-window human visual judgement and wider failure scenarios."],
               ["Multi-client testing", 87, "Complete two-window human review; the 75-client single-channel gate now passes with 75 machine-readable session traffic records."],
               ["Performance and soak", 85, "The first four-hour MariaDB attribution attempt held 20 ms tick p95 and zero queue-wait p95 but lost client startup coverage; the load deadline is now 30 seconds and a full rerun remains open."],
-              ["Failure recovery", 69, "Abrupt MariaDB crash recovery, tracked monster action cancellation and durable reward retention now pass; add deferred-command rejection, packet loss, packaged zone failure/channel drain and interrupted-action soak scenarios."],
+              ["Failure recovery", 70, "Abrupt MariaDB crash recovery, tracked monster action cancellation, durable reward retention and bounded-queue rejection recovery now pass; add packet loss, packaged zone failure/channel drain and interrupted-action soak scenarios."],
               ["Security review", 22, "Complete threats, dependencies, secrets and authorization review."],
               ["Beta operations", 12, "Rehearse distribution, support, incidents, rollback and recovery."]
             ]
@@ -2537,6 +2537,15 @@
         ];
 
         const changelogs = [
+          {
+            version: "Deferred reward recovery",
+            date: "17 October 2026",
+            changes: [
+              "A bounded-queue regression now proves rejected monster reward commands restore their retry deadline and retain the same event in the durable outbox.",
+              "The tracked monster combat regression waits for queue completion before asserting the complete published lifecycle.",
+              "The server library gate passes 375 tests with 14 MariaDB-dependent tests intentionally ignored, and warnings-denied Clippy passes for the server and load harness."
+            ]
+          },
           {
             version: "Current development",
             date: "28 September 2026",
