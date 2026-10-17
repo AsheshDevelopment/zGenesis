@@ -808,10 +808,10 @@
           <div class="wrap">
             <div class="section-kicker">Programme readiness</div>
             <div class="overall">
-            <div class="overall-number">75<small>%</small></div>
+            <div class="overall-number">76<small>%</small></div>
               <div class="overall-copy">
                 <h2>Overall progress</h2>
-                <div class="bar"><i style="--p: 75%"></i></div>
+                <div class="bar"><i style="--p: 76%"></i></div>
                 <div class="scale">
                   <span>Development</span><span>Closed beta</span>
                 </div>
@@ -843,7 +843,7 @@
               <p>
                 Main workstreams and current progress only. Detailed tasks and
                 subtasks are maintained on the protected Tasks page.
-                <br /><strong>Last evidence audit: 17 October 2026 · 75% overall.</strong>
+                <br /><strong>Last evidence audit: 17 October 2026 · 76% overall.</strong>
               </p>
             </header>
             <details class="workstream">
@@ -2324,8 +2324,8 @@
                     individual completion levels.
                   </p>
                 </div>
-                <div class="task-overall" aria-label="Overall progress 75 percent">
-                  <strong>75%</strong>
+                <div class="task-overall" aria-label="Overall progress 76 percent">
+                  <strong>76%</strong>
                   <span>Overall progress</span>
                 </div>
               </header>
@@ -2406,7 +2406,7 @@
               ["Fixed-rate simulation", 70, "Complete timed-service ownership, catch-up and overload policy."],
               ["Independent channels", 94, "Add bounded restart escalation and a visual packaged operator drill."],
               ["Zone ownership", 97, "Add sustained slow-database and packaged operator-failure tests."],
-              ["Backpressure and rate limits", 72, "Add distributed, per-action and sustained abuse controls."],
+              ["Backpressure and rate limits", 74, "Truncated-frame cleanup now has a bounded read deadline; add distributed, per-action and sustained abuse controls."],
               ["Area-of-interest replication", 73, "Add deltas and despawn guarantees; the 75-client single-channel tick budget now passes and dense snapshots fit the shared frame limit."],
               ["Cross-zone transfer", 85, "Complete cooldown, multi-destination and transaction coverage."],
               ["Administration", 95, "Add authenticated remote access, durable audit history and a visual packaged drill."]
@@ -2525,11 +2525,11 @@
           {
             title: "Quality and Closed Beta", progress: 39, priority: "P0",
             subtasks: [
-              ["Automated correctness", 79, "The server library gate passes 375 tests with 14 MariaDB-dependent tests ignored; add wider cross-system, simulation and protocol coverage."],
+              ["Automated correctness", 80, "The server library gate passes 376 tests with 14 MariaDB-dependent tests ignored; add wider cross-system, simulation and protocol coverage."],
               ["Packaged manual matrix", 76, "Complete two-window human visual judgement and wider failure scenarios."],
               ["Multi-client testing", 87, "Complete two-window human review; the 75-client single-channel gate now passes with 75 machine-readable session traffic records."],
               ["Performance and soak", 85, "The first four-hour MariaDB attribution attempt held 20 ms tick p95 and zero queue-wait p95 but lost client startup coverage; the load deadline is now 30 seconds and a full rerun remains open."],
-              ["Failure recovery", 70, "Abrupt MariaDB crash recovery, tracked monster action cancellation, durable reward retention and bounded-queue rejection recovery now pass; add packet loss, packaged zone failure/channel drain and interrupted-action soak scenarios."],
+              ["Failure recovery", 71, "Abrupt MariaDB crash recovery, tracked monster action cancellation, durable reward retention, bounded-queue rejection recovery and partial-frame cleanup now pass; add sustained packet-loss/reconnect, packaged zone failure/channel drain and interrupted-action soak scenarios."],
               ["Security review", 22, "Complete threats, dependencies, secrets and authorization review."],
               ["Beta operations", 12, "Rehearse distribution, support, incidents, rollback and recovery."]
             ]
@@ -2537,6 +2537,15 @@
         ];
 
         const changelogs = [
+          {
+            version: "Partial-frame transport recovery",
+            date: "17 October 2026",
+            changes: [
+              "Sessions now bound recovery when a packet loss leaves a partial frame buffered, while idle authenticated sessions remain connected.",
+              "A duplex regression proves truncated-request cleanup and zero active connection leakage.",
+              "The server library gate passes 376 tests with 14 MariaDB-dependent tests intentionally ignored."
+            ]
+          },
           {
             version: "Deferred reward recovery",
             date: "17 October 2026",
