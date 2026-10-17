@@ -2416,7 +2416,7 @@
             title: "World, Movement and Zones", progress: 72, priority: "P0",
             subtasks: [
               ["Movement feel", 96, "Complete manual parity capture and abnormal-frame-time testing."],
-              ["Collision", 84, "Complete malformed-cell testing and packaged edge traversal."],
+              ["Collision", 87, "The malformed-cell corpus passes without parser panics; complete a clean full-duration packaged edge traversal."],
               ["Camera", 84, "Verify every view mode and complete close-obstruction review."],
               ["Coordinate consistency", 74, "Unify and test remaining axis, origin and handedness conversions."],
               ["Zone qualification", 46, "Resolve and validate remaining map packages incrementally."],
@@ -2440,9 +2440,9 @@
             title: "Combat, Skills and Progression", progress: 80, priority: "P0",
             subtasks: [
               ["Character statistics", 84, "Complete wider level, equipment and status parity fixtures."],
-              ["Basic combat", 91, "Add packaged latency, evade, critical and interruption validation."],
+              ["Basic combat", 95, "Add packaged latency, evade, critical and interruption validation."],
               ["Skill execution", 84, "Complete specialised effects and dense group-combat evidence."],
-              ["Status effects", 80, "Complete specialised immunity and mixed-effect validation."],
+              ["Status effects", 88, "Focused immunity, stun/sleep/blind, shield, reflection, recovery and Spirit Link parity passes; complete mixed-effect presentation review."],
               ["Equipment influence", 80, "Complete requirements and broader transaction rollback fixtures."],
               ["Level and rewards", 75, "Complete advanced drops, currency sinks and parity fixtures."],
               ["Competitive combat", 32, "Deferred until the cooperative core is stable."]
@@ -2462,15 +2462,15 @@
             ]
           },
           {
-            title: "Rendering, Audio and FX", progress: 68, priority: "P1",
+            title: "Rendering, Audio and FX", progress: 73, priority: "P1",
             subtasks: [
               ["Terrain and scenery", 80, "Complete visual parity and invalid-resource recovery."],
-              ["Characters and creatures", 82, "Resolve remaining meshes, attachments and combinations."],
+              ["Characters and creatures", 90, "Resolve remaining meshes, attachments and combinations."],
               ["Detail and visibility", 72, "Add measured budgets and stress-scene evidence."],
               ["Atmosphere and shadows", 67, "Complete source-scene comparisons on varied terrain."],
               ["Audio", 64, "Finish audible review, mixing, attenuation and device recovery."],
-              ["Native effects", 64, "Type-1 emitter timing, motion and card scale now use confirmed native fields; complete attachments, blending and parity."],
-              ["Particle interchange", 60, "Complete axis fixtures, feature coverage and runtime/editor round trips."],
+              ["Native effects", 74, "Type-1 emitter timing, motion and card scale now use confirmed native fields; complete attachments, blending and parity."],
+              ["Particle interchange", 68, "Complete axis fixtures, feature coverage and runtime/editor round trips."],
               ["Platform graphics validation", 25, "Validate additional targets after the Windows beta gate."]
             ]
           },
@@ -2537,6 +2537,15 @@
         ];
 
         const changelogs = [
+          {
+            version: "GPU animation and parity capture",
+            date: "18 October 2026",
+            changes: [
+              "World actors now use compact GPU bone palettes for source weighted skinning while CPU state selection, TAB sampling, transitions and sockets remain source-owned.",
+              "The bounded collision corpus, specialised status parity tests and Type-1 additive/socket runtime paths now pass their focused gates.",
+              "The package capture rendered both actors, monsters and mapped TFX without a WGPU validation error; a clean full-duration two-window run remains open after automation login timeout."
+            ]
+          },
           {
             version: "Source-authored TFX particle runtime",
             date: "17 October 2026",
