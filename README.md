@@ -19,7 +19,7 @@ Roadmap percentages and task details mirror the authoritative project progress
 record. Update both together and refresh the evidence-review date whenever a
 verified implementation checkpoint changes the public status.
 
-The current published snapshot was evidence-reviewed on 18 October 2026. It
+The current published snapshot was evidence-reviewed on 19 October 2026. It
 contains 12 workstreams at 72% aggregate progress; the public Roadmap exposes
 only those main workstreams, while the protected Tasks view contains the
 matching implementation subtasks and remaining acceptance work.
