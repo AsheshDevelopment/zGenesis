@@ -4,11 +4,11 @@
   "sources": {
     "ogre_plan": {
       "path": "documentation/client/planning/HTLAUNCHER_CLIENT_IMPLEMENTATION_PLAN.md",
-      "sha256": "7e5bf9b5f792270575d1bc820aa1a94e3f0d024f0b37be19ecd16e7d16d4ac63"
+      "sha256": "18e9f5d222cde7b1e8667723c438cd5b226d19e2930fc8c3ab92e211c64ef9b6"
     },
     "ogre_progress": {
       "path": "documentation/client/PROGRESS.md",
-      "sha256": "35662f4a39c1447fc6530b4df6193014bdb89d63ad13489250c03d4b0938cbef"
+      "sha256": "289d380a774c97646cd215572d70773e617ffa607ba9698ba6dfbac34bc3dafa"
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",

@@ -378,7 +378,16 @@ window.TANTRA_ROADMAP = {
               "id": "P05-T05",
               "done": false,
               "text": "Close building, narrow-passage, blocked-destination, actor-obstruction and camera-clipping acceptance along the remaining Mandara route.",
-              "children": []
+              "children": [
+                {
+                  "done": true,
+                  "text": "Prepare focused saved-field SDL input/camera/movement capture and persisted"
+                },
+                {
+                  "done": false,
+                  "text": "Run the current executable once after explicit authorization and review"
+                }
+              ]
             },
             {
               "id": "P05-T06",
@@ -973,12 +982,17 @@ window.TANTRA_ROADMAP = {
         "Native command emotes, skill tooltips and animation-impact damage implemented"
       ],
       "next": [
-        "Accept the corrected build and usable Mandara camera/collision framing",
+        "After launch authorization, run the prepared saved-field route once and review framing/audio",
         "Finish item phases, advanced skills, monster AI and combat progression",
         "Complete quests, travel and real C++ server multiplayer",
         "Accept environment fidelity, loading performance and every zone"
       ],
       "changes": [
+        {
+          "date": "2026-10-26",
+          "title": "Focused saved-roster route prepared",
+          "text": "Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed."
+        },
         {
           "date": "2026-10-26",
           "title": "Accepted item-use feedback",
@@ -2768,11 +2782,11 @@ window.TANTRA_ROADMAP = {
   "sources": {
     "ogre_plan": {
       "path": "documentation/client/planning/HTLAUNCHER_CLIENT_IMPLEMENTATION_PLAN.md",
-      "sha256": "7e5bf9b5f792270575d1bc820aa1a94e3f0d024f0b37be19ecd16e7d16d4ac63"
+      "sha256": "18e9f5d222cde7b1e8667723c438cd5b226d19e2930fc8c3ab92e211c64ef9b6"
     },
     "ogre_progress": {
       "path": "documentation/client/PROGRESS.md",
-      "sha256": "35662f4a39c1447fc6530b4df6193014bdb89d63ad13489250c03d4b0938cbef"
+      "sha256": "289d380a774c97646cd215572d70773e617ffa607ba9698ba6dfbac34bc3dafa"
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",

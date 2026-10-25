@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-26",
+  "scope": "Focused saved-roster route implementation and CPU preparation only",
+  "broad_goal_status": "paused",
+  "launch_authorization": "unanswered",
+  "launches": {
+    "game": 0,
+    "renderer": 0,
+    "server": 0,
+    "audio_device": 0
+  },
+  "runtime_acceptance": "not_run",
+  "visual_audio_review": "pending",
+  "phase_gates_closed": 0,
+  "executable_sha256": "b58c31fba0a6a2011f274150f88f55475bef0e6792f5ef560c20b495cb40eacd",
+  "output": "C:\\_GitHub\\tantra-dev-main\\_remake\\build-migration\\mandara-acceptance-20261026-item-use1",
+  "preparation": {
+    "executable_sha256": "b58c31fba0a6a2011f274150f88f55475bef0e6792f5ef560c20b495cb40eacd",
+    "runtime_processes": 0,
+    "scenario": "saved-field",
+    "group": 1,
+    "roster_edits": false,
+    "launch_authorization": "separate user go-ahead required"
+  },
+  "cpu": {
+    "audit_tests": 6,
+    "audit_tests_passed": true,
+    "negative_unrun_audit": "rejected_without_process_or_PASS",
+    "production_route": {
+      "cell": [
+        395,
+        220
+      ],
+      "warehouse_cell": [
+        412,
+        116
+      ],
+      "native_service_range_verified": true,
+      "stale_global_cell_rejected": true,
+      "save_point_route_points": 3,
+      "route_points": 5,
+      "raw_waypoint_y": 0,
+      "sampled_click_y": 65.5789,
+      "blocked_npc_cell": true,
+      "path": [
+        [
+          4102.5,
+          64.8705,
+          8322.5
+        ],
+        [
+          4102.5,
+          62.1152,
+          8352.5
+        ],
+        [
+          4112.5,
+          59.1073,
+          8562.5
+        ],
+        [
+          4122.5,
+          61.7062,
+          8602.5
+        ],
+        [
+          4122.5,
+          48.4651,
+          9022.5
+        ]
+      ],
+      "panels": [
+        {
+          "id": 204,
+          "rect": [
+            744,
+            0,
+            280,
+            465
+          ]
+        },
+        {
+          "id": 222,
+          "rect": [
+            327,
+            124,
+            370,
+            520
+          ]
+        }
+      ]
+    }
+  },
+  "packages": {
+    "files_each": 1731,
+    "bytes_each": 704460225,
+    "both_static_checks": "pass",
+    "title_and_relocation_runtime": "not_run"
+  },
+  "preservation": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "hpk_count": 148,
+      "userdata_files": 0,
+      "protected_hashes_unchanged": true,
+      "launcher_sha256": "b58c31fba0a6a2011f274150f88f55475bef0e6792f5ef560c20b495cb40eacd"
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "hpk_count": 148,
+      "userdata_files": 49,
+      "protected_hashes_unchanged": true,
+      "launcher_sha256": "b58c31fba0a6a2011f274150f88f55475bef0e6792f5ef560c20b495cb40eacd"
+    }
+  },
+  "tools": {
+    "tools/verify-saved-field.py": "4535d6c9bbfda23f490ebe769df9bf36ad4e654a98f2fc19f5aebc311d1efda9",
+    "tools/test-verify-saved-field.py": "04b6e482f7565268d26f84d74510a9688927c41722f9120b5306e32cd8e7ae8d",
+    "src/app/SdlSavedFieldProbe.cpp": "37a433617bb7fb3cd53ae085989c5aca05f0c3621a040381ccf70868a2349e62"
+  },
+  "logs": {
+    "cpu-audit-tests.log": "18f4ba4a2781b647738b1b4d6cedfefb4a8cdd37c0126f22aa12588aeadd545e",
+    "preflight-build.log": "421a21b86f452e38afbd0fe43096a0e65d766feee505ad2e00052e06fca24272",
+    "cpu-route.log": "3c75b1aec1dbfae6047116655a1df8e77f09409be26bbe8075a8a3154159dcc4",
+    "build-stage.log": "a0fcb7bfd8b21673a47c9cc3eaf9eb72bb1a61b228633f3a3c2a152020a7f07c",
+    "stage-user.log": "15e58e990719f7e66a7b876dc5aecfcaab2c608c8757e71661601a4949be12f2",
+    "preparation.log": "b6d3eb2378cce8ea283d5157e4de1fc1c33675eccf50e16fecd8b64654eaac96",
+    "audit-unrun-refusal.log": "a0ca88301d2945c80e5af49cebc9173376b725e52e7d357aec1f3b5d763b3eae",
+    "static-workspace.log": "27e799f008e46a79d324231f03408161f2415e87f33bd41bf0952c8c7d4fd536",
+    "static-user.log": "27e799f008e46a79d324231f03408161f2415e87f33bd41bf0952c8c7d4fd536"
+  },
+  "remaining": [
+    "Separate explicit launch authorization",
+    "One offline group-1 saved-field process and strict post-exit audit",
+    "Human rendered/audio review and wider collision acceptance",
+    "Native authored .tbo collision parity and all full client gates"
+  ]
+}

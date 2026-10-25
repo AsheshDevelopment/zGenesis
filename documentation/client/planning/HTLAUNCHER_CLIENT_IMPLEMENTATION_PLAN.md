@@ -11,7 +11,9 @@ exited normally, but its strict diagnostic gate failed on multipart FX records.
 The confirmed parser defect is corrected and CPU-verified; the corrected build
 is staged without another game launch. Camera framing/obstruction and corrected-
 build acceptance remain open. No controlled performance benchmark was made.
-The full client is **not complete** and its implementation goal remains active.
+The full client is **not complete** and its broader implementation goal is paused.
+The focused [saved-roster route](../guides/SAVED_ROSTER_FIELD_ACCEPTANCE.md) is
+prepared and CPU-checked; the separate launch question remains unanswered.
 
 Status notation:
 
@@ -327,6 +329,10 @@ Owned implementation: `WorldNavigation.h`, `OfflineWorldGameplay.*`,
 - [x] **P05-T04** — Actor 2008 multi-detail reader correction and targeted settled-world runtime evidence.
 - [ ] **P05-T05** — Close building, narrow-passage, blocked-destination, actor-obstruction and
   camera-clipping acceptance along the remaining Mandara route.
+  - [x] Prepare focused saved-field SDL input/camera/movement capture and persisted
+    state audit; pass CPU rejection tests and the production route preflight.
+  - [ ] Run the current executable once after explicit authorization and review
+    usable viewport/collision/audio evidence. Services already passed are not repeated.
 - [ ] **P05-T06** — Obtain/verify absent authored Mandara `.tbo` collision inputs, or retain an
   explicit collision-fidelity limit; triangle/grid fallback is not native parity.
 - [ ] **P05-T07** — Complete actor animation/control transitions, bounds, all attachments and

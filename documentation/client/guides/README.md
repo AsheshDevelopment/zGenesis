@@ -1,5 +1,7 @@
 # Current client guides
 
+- [Focused saved-roster field acceptance: prepared, runtime pending](SAVED_ROSTER_FIELD_ACCEPTANCE.md).
+
 Use current progress and the phased plan for task status; historical test hashes retain their original scope.
 
 [Documentation home](../README.md) | [Current progress](../PROGRESS.md)

@@ -1,5 +1,24 @@
 # Tantra Online client progress
 
+## 2026-10-26 - focused saved-roster acceptance preparation
+
+The broader client goal is paused; the separate launch question remains
+unanswered. This checkpoint completes route preparation, not runtime acceptance.
+
+- [x] Add saved-field SDL selection/progression, quick-slot use, native camera
+  reset/orbit and ordinary ground-click route without repeating passed services.
+- [x] Record actual movement, viewport framing, captures and failure context;
+  add post-exit native-character/cargo/quick-slot/profile/diagnostic auditing.
+- [x] Pass six CPU auditor tests and the production Mandara route preflight;
+  rebuild/overwrite both clients and verify package/protected-file preservation.
+- [ ] Authorize and execute one offline group-1 saved-roster attempt.
+- [ ] Accept current-build diagnostics, rendered camera/collision and audible use.
+
+[Continuation commands and limits](guides/SAVED_ROSTER_FIELD_ACCEPTANCE.md) |
+[CPU/build evidence](evidence/saved-field-route-20261026.json).
+All 14 client phase gates remain open; no new top-level task is checked.
+
+
 ## 2026-10-26 - accepted item-use sound feedback
 
 - [x] Extract native use sound 33010 from the active result handler and resolve

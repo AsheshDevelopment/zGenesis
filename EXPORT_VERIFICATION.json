@@ -3,7 +3,7 @@
   "source_data": "passed",
   "rendered_content": "actual JavaScript renderer with CPU DOM adapter; passed",
   "export_file_hashes": {
-    "count": 295,
+    "count": 297,
     "result": "matched"
   },
   "http": [
@@ -15,7 +15,7 @@
     {
       "path": "/genesis/snapshot.json",
       "status": 200,
-      "sha256": "14cda2fbdce3da7bd42189668c49b7b198e8330ccdcd9dfd76859a77b4ec705a"
+      "sha256": "b63f2f1268d0f94949846f027ce89d3c38bc24636271b2ef7246f217ec8212aa"
     },
     {
       "path": "/genesis/assets/tantra-world.png",
@@ -55,7 +55,7 @@
     {
       "path": "/genesis/assets/roadmap-data.js?v=20261026-2",
       "status": 200,
-      "sha256": "bdda25453336af1b1f33ba547ab7c58d4b3b58f1a9dddcd2999701ec80966273"
+      "sha256": "2649de7b6e0ae654143ef31698dabceb4bd19cc2fccbece4269e37aebaabf0c3"
     },
     {
       "path": "/genesis/assets/roadmap.js?v=20261026-2",
@@ -65,12 +65,12 @@
     {
       "path": "/genesis/documentation/client/planning/HTLAUNCHER_CLIENT_IMPLEMENTATION_PLAN.md",
       "status": 200,
-      "sha256": "7e5bf9b5f792270575d1bc820aa1a94e3f0d024f0b37be19ecd16e7d16d4ac63"
+      "sha256": "18e9f5d222cde7b1e8667723c438cd5b226d19e2930fc8c3ab92e211c64ef9b6"
     },
     {
       "path": "/genesis/documentation/client/PROGRESS.md",
       "status": 200,
-      "sha256": "35662f4a39c1447fc6530b4df6193014bdb89d63ad13489250c03d4b0938cbef"
+      "sha256": "289d380a774c97646cd215572d70773e617ffa607ba9698ba6dfbac34bc3dafa"
     },
     {
       "path": "/genesis/reference/bgfx/IMPLEMENTATION_PLAN.md",
@@ -148,6 +148,6 @@
     "browser_visual_acceptance": "not run"
   },
   "game_launches": 0,
-  "export_manifest_sha256": "e500a01301bf7b95c2cb22d46f743929502557072737588b5049775a31e3252b",
-  "source_head": "6b9c8b4cc5b98ff2661eb00162824ad907eaf98f"
+  "export_manifest_sha256": "c927557b708c0cecb21f904ace32bdb3c8bf8de4e6672ed4140688bb81e5caa0",
+  "source_head": "2247cfc6905300f1b7e50c6a8283309930df14f7"
 }
