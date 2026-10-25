@@ -16,7 +16,7 @@ No game feature is marked complete by exporting this website.
 
 ## Latest source checkpoints
 
-- **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Repeat-use consumable stat buffs. Supported repeat items now use source 59-second toggles, remaining-count FX and exact-key depletion/cancellation. Five focused CPU checks and both staged clients pass; rendered and mixed item-phase acceptance remains open.
+- **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Accepted item-use feedback. Original use sound 33010 now follows durable ordinary, timed and repeat consumption. Feedback/SQLite and packed-WAV checks pass; source item model FX remains disabled and audible/game acceptance remains open.
 - **Tantra-B**: 75/245 named tasks checked; 3/10 gates recorded. Latest: Ordinary services and revival. The bgfx progress record closes its C06 minimum service gate, including paid repair/reload and native death/revival. Full combat/FX coverage remains open.
 
 These are separate source checklists, not release-completion percentages.

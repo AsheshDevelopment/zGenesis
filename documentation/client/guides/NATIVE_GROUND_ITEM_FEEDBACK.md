@@ -1,4 +1,4 @@
-# Native ground-item result feedback
+# Native ground-item and use-result feedback
 
 Accepted offline pickup/drop operations now publish a normalised result after
 SQLite save and status collection. MainUI consumes each result once. Failed saves
@@ -73,3 +73,51 @@ uses the public item-result API. Build/package evidence is recorded separately.
 [Evidence](../evidence/native-ground-feedback-20261026.json) |
 [Ground-item authority](NATIVE_GROUND_ITEMS.md) |
 [Current progress](../PROGRESS.md).
+
+## Accepted item-use feedback
+
+The 2026-10-26 continuation connects the active native item-use cue **33010**,
+resolved by ClientRes.txl to **use_drink_31289.wav**. The native
+`HTItemControl.cpp::HT_vNetWork_SCP_RESP_Item_Use_Result` calls
+`HT_hrPlaySound(33010, 1)`. It is centred UI feedback and shares the existing
+effects-volume control with drop-result sounds; camera distance does not mute it.
+
+The sound follows the accepted inventory-change queue after SQLite save and
+status collection. Its source record must lose exactly one item, including the
+last item being cleared. Ordinary potions, timed buffs and repeat uses share this
+path. Moves, drops, stack operations, unchanged/replaced records, malformed keys,
+rejected requests and failed saves cannot produce an accepted-use cue. Each queue
+drain consumes the event once. A quick-slot UI-profile save warning does not undo
+the accepted item transaction or suppress its result sound.
+
+Source references under
+`C:\_GitHub\tantra-dev-main\_references\Tantra\HTlauncher`:
+
+- `HTItemControl.cpp`: active use-result sound and local stack handling.
+- `HTNetWorkHandle.cpp`: ordinary/use-broadcast routing.
+- `HTMainCharacter.cpp::HT_vMainChar_SCP_SetItemEffect` and
+  `HTOtherObjectSystem.cpp::HT_vOtherObjectSystem_SetItemEffect`: the item-specific
+  SFX calls are commented out in this supplied version. Their separate buff-state
+  and skill presentation paths retain their own implementation/acceptance scope.
+
+`_remake/tools/generate-native-skill-feedback.py` now extracts/hashes the cue ID
+and checks the source model-FX callbacks. Generation stops for review if those
+native SFX calls become enabled. It normalises the `HTvoid` spelling for method
+parsing. CMake tracks the handler and both callbacks as generation dependencies.
+`_remake/src/client/NativeSkillFeedback.cpp::nativeItemUseSound` validates accepted
+consumption, and `src/app/tantra_remake_main.cpp` submits the shared UI sound.
+
+- [x] Pass 164 feedback assertions, including accepted/final-stack/repeat use,
+  rejected and malformed records, original sound lookup and RIFF/WAVE validation.
+- [x] Verify accepted ordinary/timed/repeat cues and empty/rejected drains in the
+  isolated character/SQLite fixture, including real failed-save teardown.
+- [x] Read the 11,324-byte WAV directly from the final ItemSound.hpk for a CPU
+  payload check. The temporary extracted sample stays in ignored test output;
+  production uses the pack unchanged.
+- [x] Build/stage both release clients and verify static packages plus protected
+  native packs/private profiles.
+- [ ] Accept actual playback, volume controls and current Mandara FX/camera in-game.
+- [ ] Complete remaining item families, wire replies and full client phase gates.
+
+[Use-sound evidence](../evidence/native-item-use-feedback-20261026.json).
+No game, renderer, server or audio device was launched for these checks.

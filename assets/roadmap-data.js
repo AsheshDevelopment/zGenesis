@@ -482,6 +482,10 @@ window.TANTRA_ROADMAP = {
                   "text": "Add supported repeat-use stat consumables, source cadence/cancellation,"
                 },
                 {
+                  "done": true,
+                  "text": "Connect source ordinary/timed/repeat-use sound 33010 to durable accepted"
+                },
+                {
                   "done": false,
                   "text": "Accept rendered drop/pickup paths and finish ownership/release, decay,"
                 }
@@ -975,6 +979,11 @@ window.TANTRA_ROADMAP = {
         "Accept environment fidelity, loading performance and every zone"
       ],
       "changes": [
+        {
+          "date": "2026-10-26",
+          "title": "Accepted item-use feedback",
+          "text": "Original use sound 33010 now follows durable ordinary, timed and repeat consumption. Feedback/SQLite and packed-WAV checks pass; source item model FX remains disabled and audible/game acceptance remains open."
+        },
         {
           "date": "2026-10-26",
           "title": "Repeat-use consumable stat buffs",
@@ -2759,11 +2768,11 @@ window.TANTRA_ROADMAP = {
   "sources": {
     "ogre_plan": {
       "path": "documentation/client/planning/HTLAUNCHER_CLIENT_IMPLEMENTATION_PLAN.md",
-      "sha256": "95e96a245a4cf5b6d0266d740bbe95e7b99539bbed38404ee42b3735aadfcf8c"
+      "sha256": "7e5bf9b5f792270575d1bc820aa1a94e3f0d024f0b37be19ecd16e7d16d4ac63"
     },
     "ogre_progress": {
       "path": "documentation/client/PROGRESS.md",
-      "sha256": "dabf62d99c3002de4e88af516a232264260adb00906aebca1ce30259fd025e4f"
+      "sha256": "35662f4a39c1447fc6530b4df6193014bdb89d63ad13489250c03d4b0938cbef"
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",

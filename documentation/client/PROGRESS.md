@@ -1,5 +1,22 @@
 # Tantra Online client progress
 
+## 2026-10-26 - accepted item-use sound feedback
+
+- [x] Extract native use sound 33010 from the active result handler and resolve
+  the original use_drink_31289.wav resource through ItemSound.hpk.
+- [x] Play one centred UI cue for each accepted ordinary/timed/repeat consumption;
+  retain no cue for rejected requests, duplicate drains or failed saves.
+- [x] Preserve the source's commented-out item model-FX callbacks; add input
+  dependencies and a generation guard for future enabled source SFX calls.
+- [x] Pass feedback/SQLite CPU checks (164 feedback assertions), verify the
+  packaged WAV payload, rebuild/overwrite both clients and pass static packages.
+- [x] Preserve all 148 HPKs per output and the user's 49 private userdata files.
+- [ ] Accept audible feedback/volume and current Mandara presentation in-game;
+  remaining item services and all full client phase gates stay open.
+
+[Implementation and original references](guides/NATIVE_GROUND_ITEM_FEEDBACK.md#accepted-item-use-feedback).
+
+
 ## 2026-10-26 - repeat-use stat consumables
 
 - [x] Connect native 59-second repeat scheduling, toggle cancellation and

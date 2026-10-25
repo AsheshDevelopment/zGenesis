@@ -7,7 +7,7 @@ Use current progress and the phased plan for task status; historical test hashes
 - [Native repeat-use stat consumables](NATIVE_REPEAT_CONSUMABLES.md)
 - [Native ordinary timed consumables](NATIVE_TIMED_CONSUMABLES.md)
 - [Native quick-slot item lifecycle](NATIVE_QUICK_SLOT_ITEM_LIFECYCLE.md)
-- [Native pickup/drop messages and sounds](NATIVE_GROUND_ITEM_FEEDBACK.md)
+- [Native pickup/drop/use feedback and sounds](NATIVE_GROUND_ITEM_FEEDBACK.md)
 - [Manual ground drops and pickup stacking](NATIVE_GROUND_ITEMS.md)
 - [Native ordinary item cooldowns](NATIVE_ITEM_COOLDOWNS.md)
 - [Native skill tooltip requirements and effects](NATIVE_SKILL_TOOLTIP_PARITY.md)

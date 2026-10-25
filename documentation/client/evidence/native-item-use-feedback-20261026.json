@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-26",
+  "goal_status": "active_incomplete",
+  "scope": "Native accepted item-use UI sound and source-disabled model-FX fidelity",
+  "launches": {
+    "game": 0,
+    "renderer": 0,
+    "server": 0,
+    "audio_device": 0
+  },
+  "cpu": {
+    "passed": [
+      "native_skill_feedback",
+      "offline_character_persistence"
+    ],
+    "feedback_assertions": 164,
+    "sound_id": 33010,
+    "accepted_cases": [
+      "ordinary remaining stack",
+      "ordinary final item",
+      "timed buff",
+      "repeat use"
+    ],
+    "rejections": "No cue from failed persistence, empty/duplicate drains, non-use operations, unchanged/replaced records or malformed keys",
+    "model_fx": "Native main/other item-specific SFX calls are commented out; generator guards against enabled native SFX calls"
+  },
+  "resource": {
+    "sound_id": 33010,
+    "entry": "use_drink_31289.wav",
+    "bytes": 11324,
+    "sha256": "6e9342c78e72d2fbe5745de9c775aef69502c7dc7d3b9e6a5f87065e5806b781",
+    "archive": "_client/resource/sound/ItemSound.hpk",
+    "original_loose_payload_match": "not_present",
+    "scratch_only": true,
+    "audio_device_opened": false,
+    "both_client_archives_identical": true
+  },
+  "build": {
+    "initial_generator": "failed: extraction helper did not recognise native HTvoid return type",
+    "correction": "Normalise HTvoid for selected method parsing; original source stays unchanged",
+    "final_release": "passed",
+    "configuration": "Release x64",
+    "sha256": "5bb92371f82325b5845121dd2b7188cc89ce8972d93171d212af11f9e159b63a",
+    "files_each": 1731,
+    "payload_bytes_each": 704446913,
+    "static_verification": "both packages passed; runtime/title/relocation not run"
+  },
+  "preservation": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "hpk_unchanged": 148,
+      "protected_files_unchanged": 148,
+      "launcher_sha256": "5bb92371f82325b5845121dd2b7188cc89ce8972d93171d212af11f9e159b63a"
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "hpk_unchanged": 148,
+      "protected_files_unchanged": 197,
+      "launcher_sha256": "5bb92371f82325b5845121dd2b7188cc89ce8972d93171d212af11f9e159b63a"
+    }
+  },
+  "native_reference_hashes": {
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTItemControl.cpp": "51fa0f6689cc7fea57d2e3d4fc7b42e999e86e22bd0aa77718107ee66121aa8c",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTNetWorkHandle.cpp": "1a88f659062f1fcebc0e624546aacebe6249c13fea94583dc9c9e8d798adf561",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTMainCharacter.cpp": "6e7b5ee760a729fbc8afad3b4aa59a61ed394e51ba9e3f601037c2fa6226e08d",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTOtherObjectSystem.cpp": "a00be6c1be8b5d574756f60fa0651d5580a73b7dba86e02042cb45aca49b0510"
+  },
+  "logs": {
+    ".migration-local\\native-item-use-feedback-20261026\\build-stage.log": "a1bb19adfe499eb18e004263e7c41fe046ddd369289fa5455df43bcc0fd3d13c",
+    ".migration-local\\native-item-use-feedback-20261026\\cpu-build.log": "b360ccc752ca284d08f493894b7cce935dd7bcfe2cb8b37e4e682316b6955776",
+    ".migration-local\\native-item-use-feedback-20261026\\cpu-tests.log": "27b07c308e9d33b8cdab048642050303647ae6477a7eef05d0b24765092d6ae3",
+    ".migration-local\\native-item-use-feedback-20261026\\hpk-resource.log": "106e0e5d837d541735e06ba85178a109d37d66c7251ae01110b97ae4437a597e",
+    ".migration-local\\native-item-use-feedback-20261026\\stage-user.log": "8a51e1e9794cade0d7b94acc773af0c7b42a386347e0dfc52703d4d469c6498a",
+    ".migration-local\\native-item-use-feedback-20261026\\static-user.log": "27e799f008e46a79d324231f03408161f2415e87f33bd41bf0952c8c7d4fd536",
+    ".migration-local\\native-item-use-feedback-20261026\\static-workspace.log": "27e799f008e46a79d324231f03408161f2415e87f33bd41bf0952c8c7d4fd536"
+  },
+  "remaining": [
+    "Audible playback/volume and current Mandara presentation acceptance",
+    "Other item services, online use-result transport and full client phase gates"
+  ]
+}

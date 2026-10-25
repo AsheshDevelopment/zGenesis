@@ -383,6 +383,10 @@ Owned implementation: `OfflineInventoryRules.h`, `OfflineNpcServices.*`,
   - [x] Add supported repeat-use stat consumables, source cadence/cancellation,
     no-rebinding on depletion and accepted-key timer snapshots. See the
     [repeat-use checkpoint](../guides/NATIVE_REPEAT_CONSUMABLES.md).
+  - [x] Connect source ordinary/timed/repeat-use sound 33010 to durable accepted
+    consumption; verify original packed WAV and silent rejected/duplicate drains.
+    The supplied item-specific model-FX callbacks remain commented out. See the
+    [accepted-use checkpoint](../guides/NATIVE_GROUND_ITEM_FEEDBACK.md#accepted-item-use-feedback).
   - [ ] Accept rendered drop/pickup paths and finish ownership/release, decay,
     remaining item-result families and continuous/charged-item phases.
 - [ ] **P06-T07** — Connect the same UI/request/result flow to C++ server authority and verify
