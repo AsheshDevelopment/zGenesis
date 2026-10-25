@@ -9,7 +9,9 @@ Keep .nojekyll so Jekyll does not parse legacy-encoded reference Markdown.
 
 Verified: see EXPORT_VERIFICATION.json for the actual exported-file checks.
 Failed: browser connection setup could not load its required module.
-Remaining: real browser layout and existing production-deployment acceptance.
+Verified: Pages run 40243215012 succeeded; seven live URLs match exported bytes.
+See PAGES_DEPLOYMENT.json for the accepted commit and HTTP hashes.
+Remaining: real browser layout acceptance.
 
 ## Latest source checkpoints
 

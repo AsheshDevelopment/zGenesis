@@ -3,7 +3,7 @@
   "source_data": "passed",
   "rendered_content": "actual JavaScript renderer with CPU DOM adapter; passed",
   "export_file_hashes": {
-    "count": 293,
+    "count": 294,
     "result": "matched"
   },
   "http": [
@@ -90,8 +90,64 @@
     "Tantra-B / bgfx / ZFLauncher"
   ],
   "browser_visual_acceptance": "not run; browser connection bootstrap rejected its required module",
-  "production_deployment": "not verified by Git publication",
+  "production_deployment": {
+    "run": {
+      "id": 40243215012,
+      "conclusion": "success",
+      "head_sha": "fc506a7df762644015e3c1f592882cf395a414eb",
+      "html_url": "https://github.com/AsheshDevelopment/zGenesis/actions/runs/40243215012"
+    },
+    "http": [
+      {
+        "url": "https://asheshdevelopment.github.io/zGenesis/",
+        "status": 200,
+        "sha256": "b43cd97062da11089477dfba2a2691a3d2ade2d7bc50b69aad7fdb765bccaa8c",
+        "local_bytes": "matched"
+      },
+      {
+        "url": "https://asheshdevelopment.github.io/zGenesis/assets/roadmap.css",
+        "status": 200,
+        "sha256": "70c57f412687dc3036befa0f82b79d63ae6767463ee3efb36c577a23b68a3e35",
+        "local_bytes": "matched"
+      },
+      {
+        "url": "https://asheshdevelopment.github.io/zGenesis/assets/roadmap.js",
+        "status": 200,
+        "sha256": "e7d916f6d5c6d7e3ca17332ce476bf69f3a414d6bfa70f5e8c08e7b961ed365c",
+        "local_bytes": "matched"
+      },
+      {
+        "url": "https://asheshdevelopment.github.io/zGenesis/assets/roadmap-data.js",
+        "status": 200,
+        "sha256": "a097736ee284edd58426cccf39cc164afd981c124eac3fe8423680438517404e",
+        "local_bytes": "matched"
+      },
+      {
+        "url": "https://asheshdevelopment.github.io/zGenesis/snapshot.json",
+        "status": 200,
+        "sha256": "ef5b7d6c989cba1f8d07df1ce9f9cd138992176a7d3d789e14be9eac87739ffa",
+        "local_bytes": "matched"
+      },
+      {
+        "url": "https://asheshdevelopment.github.io/zGenesis/documentation/client/PROGRESS.md",
+        "status": 200,
+        "sha256": "dabf62d99c3002de4e88af516a232264260adb00906aebca1ce30259fd025e4f",
+        "local_bytes": "matched"
+      },
+      {
+        "url": "https://asheshdevelopment.github.io/zGenesis/reference/bgfx/IMPLEMENTATION_PLAN.md",
+        "status": 200,
+        "sha256": "cbb6ee487dba47c750452abf5a77eb1f80c2afee0d03e78e76f68ace88238b9b",
+        "local_bytes": "matched"
+      }
+    ],
+    "date": "2026-10-26",
+    "url": "https://asheshdevelopment.github.io/zGenesis/",
+    "cause": "Jekyll failed on preserved legacy Markdown encoding",
+    "correction": "Tracked .nojekyll in the published root and exporter",
+    "browser_visual_acceptance": "not run"
+  },
   "game_launches": 0,
-  "export_manifest_sha256": "8bfb0975c11653e12d6e80d4efd14eb23a2b39b18f9401e337f80e50231f2196",
-  "source_head": "81bede9e023b34719e96513252ca4c7e07796782"
+  "export_manifest_sha256": "25adabfa1a8c1e904499c6280585f430a57c8475c299e549053714fc29e4bc8d",
+  "source_head": "015ac5f64d53e32bfe8502ea6b007f0df1d2637b"
 }

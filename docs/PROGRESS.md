@@ -9,7 +9,7 @@ Version: 1.0.0. Reviewed: 2026-10-26.
 - [x] Provide source/data and rendered-content CPU verification tools.
 - [x] Preserve .nojekyll for direct static GitHub Pages publication.
 - [ ] Accept desktop/mobile layout in a real browser.
-- [ ] Verify the existing production website deployment after Git publication.
+- [x] Verify production deployment fc506a7 / run 40243215012; see PAGES_DEPLOYMENT.json.
 
 Verification results are recorded in EXPORT_VERIFICATION.json after checks.
 No game feature is marked complete by exporting this website.
