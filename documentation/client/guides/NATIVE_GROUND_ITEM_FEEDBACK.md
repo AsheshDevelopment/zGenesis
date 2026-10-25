@@ -60,8 +60,10 @@ Runtime reference: `C:\_GitHub\TantraSrc\TantraClient\system\HTMessage.txl`,
 - [x] Rebuild/stage both clients; both static packages pass, with 148 HPKs each
   and all 49 private profile files in the user client unchanged.
 - [ ] Accept visible messages and audible clips/volume changes in-game.
-- [ ] Finish other item lifecycle/result families, native quick-slot deletion,
-  continuous/charged effects, money overflow, ownership, decay and online replies.
+- [x] Connect ordinary item quick-slot deletion/remapping; see the subsequent
+  [lifecycle checkpoint](NATIVE_QUICK_SLOT_ITEM_LIFECYCLE.md) for scoped evidence.
+- [ ] Finish other item lifecycle/result families, continuous/charged effects,
+  money overflow, ownership, decay and online replies.
 - [ ] Complete corrected FX/camera acceptance and all remaining client phase gates.
 
 No game, renderer, server or audio device was launched during these CPU checks.

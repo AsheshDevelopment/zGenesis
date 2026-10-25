@@ -3,7 +3,7 @@
   "source_data": "passed",
   "rendered_content": "actual JavaScript renderer with CPU DOM adapter; passed",
   "export_file_hashes": {
-    "count": 286,
+    "count": 288,
     "result": "matched"
   },
   "http": [
@@ -15,7 +15,7 @@
     {
       "path": "/genesis/snapshot.json",
       "status": 200,
-      "sha256": "dc13fb15dd3a1d81a3c9f74dd0fd4744202e0bcb0d412fb4fad4748ba8eb7472"
+      "sha256": "d0a1a5fc16bae237823aa1281e6aba46728ffe8951836f5edd04dcdc724b9c0f"
     },
     {
       "path": "/genesis/assets/tantra-world.png",
@@ -55,7 +55,7 @@
     {
       "path": "/genesis/assets/roadmap-data.js?v=20261026-2",
       "status": 200,
-      "sha256": "3f80e7ba487c95fe6a40dc7bdf407b4873fb4e1d2f064b01e85a50db545fb4d7"
+      "sha256": "2126d8ba04b803f1332b177fc9168e8f3fe7584452b9cb5310cb77483ea16a55"
     },
     {
       "path": "/genesis/assets/roadmap.js?v=20261026-2",
@@ -65,12 +65,12 @@
     {
       "path": "/genesis/documentation/client/planning/HTLAUNCHER_CLIENT_IMPLEMENTATION_PLAN.md",
       "status": 200,
-      "sha256": "8b37f04425b6eecbeca311492ba114b08984bb1db18df84951e2c7612b0b96e6"
+      "sha256": "75cf24311298ffc2cfdb5a78f4551d725be0793609d3aa205dc2070b2cd334fc"
     },
     {
       "path": "/genesis/documentation/client/PROGRESS.md",
       "status": 200,
-      "sha256": "840c54bd60476f6b554aa97b4e1b1662c53005fed579964f8ffac059eefba97b"
+      "sha256": "ec05bf12655c330a31b47484af6f65aac19b6a15b68c88f9b242ad04c4dbcbf0"
     },
     {
       "path": "/genesis/reference/bgfx/IMPLEMENTATION_PLAN.md",
@@ -92,6 +92,6 @@
   "browser_visual_acceptance": "not run; browser connection bootstrap rejected its required module",
   "production_deployment": "not verified by Git publication",
   "game_launches": 0,
-  "export_manifest_sha256": "ebdc9f6f75b759301dc3704e5dcd04ff160ba8e227e1da410899b83ffb7c32ae",
-  "source_head": "3ff33ffea741e011d40d10bbb6a137bbf9e81969"
+  "export_manifest_sha256": "fb8dc74e164826feb539df1f2418c0c12cd7a0e61b2b3503a109cc081f29e3d1",
+  "source_head": "2109eace0a3bd4f4d0d5d25e04b724d68afe786d"
 }

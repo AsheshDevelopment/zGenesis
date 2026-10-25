@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-26",
+  "goal_status": "active_incomplete",
+  "scope": "Native ordinary-item quick-slot keys, replacement order and accepted offline inventory lifecycle",
+  "launches": {
+    "game": 0,
+    "renderer": 0,
+    "server": 0,
+    "audio_device": 0
+  },
+  "cpu": {
+    "passed": [
+      "native_quick_slot_items",
+      "native_progression_actions",
+      "offline_character_persistence"
+    ],
+    "focused_assertions": 53,
+    "pages": 5,
+    "profile_bytes": 400,
+    "native_replacement_order": "inventory then equipment then cargo, ascending creation with head insertion; moves retain node order",
+    "occupied_swap": "simultaneous before-image correction",
+    "failed_profile_write": "old bytes unchanged, accepted in-memory state retained, retry passes",
+    "accepted_authority_snapshot": "post-save; rejected operations and disconnected sessions emit none"
+  },
+  "build": {
+    "initial_cpu": "failed: C++20 erase helpers unavailable in C++17 target",
+    "correction": "C++17 erase/remove idiom",
+    "final_release": "passed",
+    "configuration": "Release x64",
+    "sha256": "c6efcd4ac14ce25be8b407d82d912ba072985fa81399047a19f5e34f11e9cf99",
+    "files_each": 1731,
+    "payload_bytes_each": 704435649,
+    "static_verification": "both packages passed; runtime/title/relocation not run"
+  },
+  "preservation": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "hpk_unchanged": 148,
+      "protected_files_unchanged": 148,
+      "launcher_sha256": "c6efcd4ac14ce25be8b407d82d912ba072985fa81399047a19f5e34f11e9cf99"
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "hpk_unchanged": 148,
+      "protected_files_unchanged": 197,
+      "launcher_sha256": "c6efcd4ac14ce25be8b407d82d912ba072985fa81399047a19f5e34f11e9cf99"
+    }
+  },
+  "native_reference_hashes": {
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTQuickSlot.cpp": "178a169b121b7897e3c038f022a76be73d1df9f0921acde476b6d8eabafc4d14",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTItemSystem.cpp": "741b0706a80d9046748d70d8f46f6fd67f2591e747605341399d3ee7aaec4147",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTItemControl.cpp": "51fa0f6689cc7fea57d2e3d4fc7b42e999e86e22bd0aa77718107ee66121aa8c",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTNetWorkHandle.cpp": "1a88f659062f1fcebc0e624546aacebe6249c13fea94583dc9c9e8d798adf561"
+  },
+  "logs": {
+    ".migration-local\\native-quick-slot-items-20261026\\build-stage.log": "e776b9ef3532234986719be98ee0c5e5a61cdc53cd816cd036db076379ade889",
+    ".migration-local\\native-quick-slot-items-20261026\\cpu-build-final.log": "13cc635c864edbeb0316a15d725c5fdec995cbfd0661b8cd6d57e1e8fd8581c1",
+    ".migration-local\\native-quick-slot-items-20261026\\cpu-build-model.log": "33b901f89063bb95d887d1f4e158e81d77945880c7333d64a521dda127244ed5",
+    ".migration-local\\native-quick-slot-items-20261026\\cpu-build.log": "cd316543bf04dbcac7a9fbdb67cc8ff17970a40c3006f408546ab0503895af59",
+    ".migration-local\\native-quick-slot-items-20261026\\cpu-test-initial.log": "74748d19cb63e59b15f48d4fd32098393b5d7458c34fe75396d8a8cb07358b1e",
+    ".migration-local\\native-quick-slot-items-20261026\\cpu-tests-final.log": "67dca393c20e8abead712e9fa34b92c047adfec763ce17d3c1e4d846da08d8cf",
+    ".migration-local\\native-quick-slot-items-20261026\\stage-user.log": "a80893a70cabbf0463c9f04578f6f28aa62f145feede6bd1e55e3d86f7a63838",
+    ".migration-local\\native-quick-slot-items-20261026\\static-user.log": "27e799f008e46a79d324231f03408161f2415e87f33bd41bf0952c8c7d4fd536",
+    ".migration-local\\native-quick-slot-items-20261026\\static-workspace.log": "27e799f008e46a79d324231f03408161f2415e87f33bd41bf0952c8c7d4fd536"
+  },
+  "remaining": [
+    "Rendered quick-bar icons/counts and input acceptance",
+    "Charged/continuous items and other skill/refinement item-cost results",
+    "Online wire results, loot ownership and decay",
+    "Corrected FX/camera and full phased client acceptance"
+  ]
+}

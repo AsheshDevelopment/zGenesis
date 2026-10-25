@@ -258,6 +258,11 @@ Owned implementation: `NativeMainHud.*`, `NativeMainUi.*`,
     SQLite status reload; keep the original bonus column.
 - [x] **P04-T05** — Five-page 400-byte quick-slot files, item/learned-skill registration,
   native key modes, orientation and ordinary potion execution.
+  - [x] Track exact saved item keys and native replacement order; update five
+    pages on accepted depletion/move/swap/stack/sale/drop/cargo changes and retry
+    failed profile saves. See the
+    [item lifecycle checkpoint](../guides/NATIVE_QUICK_SLOT_ITEM_LIFECYCLE.md).
+  - [ ] Accept quick-bar visuals/input and finish specialized item-result paths.
 - [ ] **P04-T06** — Complete active-skill and command execution. Quick slots reach timed
   self buffs and direct unit/ground-area skills using native preparation, client
   timing/attack markers and authority costs/cooldown/damage. Source-generated
@@ -361,6 +366,9 @@ Owned implementation: `OfflineInventoryRules.h`, `OfflineNpcServices.*`,
   - [x] Connect typed accepted/partial/rejected ground-item feedback, native
     item/Rupiah history and accepted-drop sounds. See the
     [result checkpoint](../guides/NATIVE_GROUND_ITEM_FEEDBACK.md).
+  - [x] Update ordinary item quick-slot keys from accepted authority snapshots;
+    retain source replacement order and saved 400-byte profiles. See the
+    [quick-slot lifecycle checkpoint](../guides/NATIVE_QUICK_SLOT_ITEM_LIFECYCLE.md).
   - [ ] Accept rendered drop/pickup paths and finish ownership/release, decay,
     remaining item-result families and continuous/charged-item phases.
 - [ ] **P06-T07** — Connect the same UI/request/result flow to C++ server authority and verify

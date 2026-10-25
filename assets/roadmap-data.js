@@ -258,7 +258,16 @@ window.TANTRA_ROADMAP = {
               "id": "P04-T05",
               "done": true,
               "text": "Five-page 400-byte quick-slot files, item/learned-skill registration, native key modes, orientation and ordinary potion execution.",
-              "children": []
+              "children": [
+                {
+                  "done": true,
+                  "text": "Track exact saved item keys and native replacement order; update five"
+                },
+                {
+                  "done": false,
+                  "text": "Accept quick-bar visuals/input and finish specialized item-result paths."
+                }
+              ]
             },
             {
               "id": "P04-T06",
@@ -442,6 +451,10 @@ window.TANTRA_ROADMAP = {
                 {
                   "done": true,
                   "text": "Connect typed accepted/partial/rejected ground-item feedback, native"
+                },
+                {
+                  "done": true,
+                  "text": "Update ordinary item quick-slot keys from accepted authority snapshots;"
                 },
                 {
                   "done": false,
@@ -937,6 +950,11 @@ window.TANTRA_ROADMAP = {
         "Accept environment fidelity, loading performance and every zone"
       ],
       "changes": [
+        {
+          "date": "2026-10-26",
+          "title": "Native item quick-slot lifecycle",
+          "text": "Exact inventory keys and native linked-list replacement now follow accepted moves, swaps, stack consumption and removal. Three focused CPU checks and both staged clients pass; rendered and specialized item-result acceptance remains open."
+        },
         {
           "date": "2026-10-26",
           "title": "Native ground-item feedback",
@@ -2706,11 +2724,11 @@ window.TANTRA_ROADMAP = {
   "sources": {
     "ogre_plan": {
       "path": "documentation/client/planning/HTLAUNCHER_CLIENT_IMPLEMENTATION_PLAN.md",
-      "sha256": "8b37f04425b6eecbeca311492ba114b08984bb1db18df84951e2c7612b0b96e6"
+      "sha256": "75cf24311298ffc2cfdb5a78f4551d725be0793609d3aa205dc2070b2cd334fc"
     },
     "ogre_progress": {
       "path": "documentation/client/PROGRESS.md",
-      "sha256": "840c54bd60476f6b554aa97b4e1b1662c53005fed579964f8ffac059eefba97b"
+      "sha256": "ec05bf12655c330a31b47484af6f65aac19b6a15b68c88f9b242ad04c4dbcbf0"
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",

@@ -1,5 +1,22 @@
 # Tantra Online client progress
 
+## 2026-10-26 - native quick-slot item lifecycle
+
+- [x] Activate/display the exact saved inventory key and validate it at CHAR_INIT.
+- [x] Follow source linked-list replacement order across five pages; handle
+  depletion, moves/swaps, split/merge, sale/drop and cargo removal.
+- [x] Queue inventory snapshots after accepted persistence; reject stale/failed
+  operations without publishing accepted changes.
+- [x] Preserve accepted bindings after a profile write failure and retry; verify
+  400-byte reload, source order and lifecycle with 53 focused CPU assertions.
+- [x] Pass progression/SQLite regressions, rebuild/overwrite both clients and
+  pass static packages with HPKs and private profiles unchanged.
+- [ ] Accept rendered quick bars/input and finish other item-cost, charged/
+  continuous, online and full client phase gates.
+
+[Implementation and original references](guides/NATIVE_QUICK_SLOT_ITEM_LIFECYCLE.md).
+
+
 ## 2026-10-26 - native pickup/drop result feedback
 
 - [x] Publish typed offline pickup/drop replies only after durable acceptance;
