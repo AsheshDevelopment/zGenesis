@@ -67,8 +67,10 @@ and multiplayer ownership/release semantics remain separate required work.
 - [ ] Accept drag/confirm/cancel, equipment appearance and warehouse drops in-game.
   The current CPU persistence scenario exercises inventory; other rendered paths
   do not inherit that acceptance.
-- [ ] Complete native pickup/drop sounds, full result messages, quest/Kala-core
-  services, ownership/release, decay scheduling, money overflow and online transport.
+- [x] Connect native pickup/drop result text and accepted-drop sounds; see the
+  [feedback checkpoint](NATIVE_GROUND_ITEM_FEEDBACK.md) for CPU evidence and limits.
+- [ ] Accept the feedback in-game; finish quest/Kala-core services, ownership/
+  release, decay scheduling, money overflow and online transport.
 - [ ] Complete continuous/charged items and all remaining client phase gates.
 
 No game, renderer, server or audio device was launched for these checks.

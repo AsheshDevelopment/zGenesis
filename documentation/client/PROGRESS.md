@@ -1,5 +1,22 @@
 # Tantra Online client progress
 
+## 2026-10-26 - native pickup/drop result feedback
+
+- [x] Publish typed offline pickup/drop replies only after durable acceptance;
+  clear pending results on session teardown and rejected persistence.
+- [x] Format native item/Rupiah/partial and six error-message mappings with
+  original item-history colour 8 and translated parameter metadata.
+- [x] Use accepted-drop equip sounds from the original item resource records;
+  retain the native pickup handler's separate history behaviour.
+- [x] Pass three focused CPU checks: 145 feedback assertions, world gameplay
+  and isolated character/SQLite persistence, without launching a client.
+- [x] Rebuild/stage the corrected release in both clients; static package checks
+  pass and all native packs/private profiles are unchanged.
+- [ ] Accept the HUD/audio in-game and finish remaining item/online lifecycle.
+
+[Implementation and original references](guides/NATIVE_GROUND_ITEM_FEEDBACK.md).
+
+
 ## 2026-10-26 - manual drops and native pickup stacking
 
 - [x] Connect drag-to-world confirmation to offline inventory/equipment/cargo

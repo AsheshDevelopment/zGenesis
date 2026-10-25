@@ -440,6 +440,10 @@ window.TANTRA_ROADMAP = {
                   "text": "Connect manual item confirmation and offline drop requests, durable-save"
                 },
                 {
+                  "done": true,
+                  "text": "Connect typed accepted/partial/rejected ground-item feedback, native"
+                },
+                {
                   "done": false,
                   "text": "Accept rendered drop/pickup paths and finish ownership/release, decay,"
                 }
@@ -933,6 +937,11 @@ window.TANTRA_ROADMAP = {
         "Accept environment fidelity, loading performance and every zone"
       ],
       "changes": [
+        {
+          "date": "2026-10-26",
+          "title": "Native ground-item feedback",
+          "text": "Accepted pickup/drop replies now drive original item/Rupiah messages, source history colour and accepted-drop sound IDs. CPU checks pass; rendered and audible acceptance remains open."
+        },
         {
           "date": "2026-10-26",
           "title": "Ground items and pickup stacking",
@@ -2697,11 +2706,11 @@ window.TANTRA_ROADMAP = {
   "sources": {
     "ogre_plan": {
       "path": "documentation/client/planning/HTLAUNCHER_CLIENT_IMPLEMENTATION_PLAN.md",
-      "sha256": "7ede8731d23f53a1184014c9a32dc4c22307082d20b9abfd8d763278b6121695"
+      "sha256": "8b37f04425b6eecbeca311492ba114b08984bb1db18df84951e2c7612b0b96e6"
     },
     "ogre_progress": {
       "path": "documentation/client/PROGRESS.md",
-      "sha256": "bbcb2a149f3e5eabbf9f26f733dda2438be3393acdbd9b42f390a2491cbc6fb9"
+      "sha256": "840c54bd60476f6b554aa97b4e1b1662c53005fed579964f8ffac059eefba97b"
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",

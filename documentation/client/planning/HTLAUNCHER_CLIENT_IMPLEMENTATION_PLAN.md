@@ -358,8 +358,11 @@ Owned implementation: `OfflineInventoryRules.h`, `OfflineNpcServices.*`,
   - [x] Connect manual item confirmation and offline drop requests, durable-save
     ordering and native partial pickup stacking. See the
     [ground-item checkpoint](../guides/NATIVE_GROUND_ITEMS.md).
+  - [x] Connect typed accepted/partial/rejected ground-item feedback, native
+    item/Rupiah history and accepted-drop sounds. See the
+    [result checkpoint](../guides/NATIVE_GROUND_ITEM_FEEDBACK.md).
   - [ ] Accept rendered drop/pickup paths and finish ownership/release, decay,
-    full result audio/messages and continuous/charged-item phases.
+    remaining item-result families and continuous/charged-item phases.
 - [ ] **P06-T07** — Connect the same UI/request/result flow to C++ server authority and verify
   rejection/rollback on stale revisions, insufficient funds/capacity and disconnect.
 

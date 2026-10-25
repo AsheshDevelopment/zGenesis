@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-26",
+  "goal_status": "active_incomplete",
+  "scope": "Native offline pickup/drop reply feedback, history and accepted-drop item sounds",
+  "launches": {
+    "game": 0,
+    "renderer": 0,
+    "server": 0,
+    "audio_device": 0
+  },
+  "cpu": {
+    "passed": [
+      "native_skill_feedback",
+      "offline_character_persistence",
+      "offline_world_gameplay"
+    ],
+    "feedback_checks": 145,
+    "native_item_message": 2013,
+    "native_money_message": 1065,
+    "native_rejection_messages": [
+      2002,
+      2011,
+      2003,
+      2001,
+      2012,
+      2020
+    ],
+    "item_history_color_index": 8,
+    "rgba": [
+      0.96,
+      0.58,
+      0.11,
+      1
+    ],
+    "item_equip_sound_offset": 156,
+    "item_record_sizes": [
+      188,
+      200
+    ],
+    "wave_resource_checks": 3,
+    "queue_and_save_rejection": "passed; no accepted result survives failed persistence",
+    "malformed_format_resource_and_percent_name": "passed"
+  },
+  "build": {
+    "initial_release": "failed: direct call to private MainHUD history API",
+    "correction": "Public MainHudPresentation::itemResult now owns history submission and message catalog access",
+    "final_release": "passed",
+    "configuration": "Release x64",
+    "sha256": "5a5de995f68b8cd1a659e70296ab614f4f75fd5c0d29752a442258c3b1496552",
+    "files_each": 1731,
+    "payload_bytes_each": 704424385,
+    "static_verification": "both packages passed; runtime/title/relocation not run"
+  },
+  "preservation": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "hpk_unchanged": 148,
+      "protected_files_unchanged": 148,
+      "launcher_sha256": "5a5de995f68b8cd1a659e70296ab614f4f75fd5c0d29752a442258c3b1496552"
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "hpk_unchanged": 148,
+      "protected_files_unchanged": 197,
+      "launcher_sha256": "5a5de995f68b8cd1a659e70296ab614f4f75fd5c0d29752a442258c3b1496552"
+    }
+  },
+  "native_reference_hashes": {
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTItemControl.cpp": "51fa0f6689cc7fea57d2e3d4fc7b42e999e86e22bd0aa77718107ee66121aa8c",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTInfoLoad.cpp": "f0dcf92ec4cc0b75564ca4e0366a58fc1fb858297fdc7e0c539faf1e83b9f0e8",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTextern.cpp": "43388604f292dc615d0fe6bb8cf2f38b24d6b360bb75ef2907d35d210679f43d",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTMessageDef.h": "304a965dbdd5b19af8472efce60ad4d710b636d7a574d72a5f4ee63649324a00",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTResMgr.h": "2587864224a08ffadd4c9480d9078f01004c8375985ec2ea673aeb1521e420ef",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTResMgr.cpp": "a72a1ab02a20adc35a185d9f9325e77a56b5a0ff316c11989bbd37200b5ffa21",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTEngineHandler.cpp": "dec2f71e6b25091e54c7742d8d85a00b4c4658865cfaff61b0d12f4836bf5500",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTEngineHandler.h": "c2a1ad115741159fc37c4fe1df14a8bd920943c47d3468b17a615bd5d966191b"
+  },
+  "logs": {
+    ".migration-local\\native-ground-feedback-20261026\\build-stage-final.log": "ae709ac533ffc67824343467be9d30ccfa80c255cd4f28e1819173f2f0970c61",
+    ".migration-local\\native-ground-feedback-20261026\\build-stage.log": "2c1e3462083ca8ed9392135f38d54fac35978459f0785bc4c34e370e782716c8",
+    ".migration-local\\native-ground-feedback-20261026\\cpu-build-corrected.log": "2c9f1bd9dc22c931008c9379eaef1a4671fa08d9a5b3353e5602010ef6220319",
+    ".migration-local\\native-ground-feedback-20261026\\cpu-build-final.log": "0867c17cf29c92b2f73e37c058a93f8738897146953954d5422072c1c5fcf849",
+    ".migration-local\\native-ground-feedback-20261026\\cpu-build.log": "3ea5ad59838e5df5ad3d6714a8d5d63e52fead4e82e6d0645fbd4be1e8331bfa",
+    ".migration-local\\native-ground-feedback-20261026\\cpu-tests.log": "284c57d766fea8e19a45a014ad2391d371aededc4150f3ba92684e25bb1cc99d",
+    ".migration-local\\native-ground-feedback-20261026\\stage-user.log": "2ca4bf4ab3dc88fc69f1665a4fa9af18cb294fb35cf1e6ae679e674f2e34a86d",
+    ".migration-local\\native-ground-feedback-20261026\\static-user.log": "27e799f008e46a79d324231f03408161f2415e87f33bd41bf0952c8c7d4fd536",
+    ".migration-local\\native-ground-feedback-20261026\\static-workspace.log": "27e799f008e46a79d324231f03408161f2415e87f33bd41bf0952c8c7d4fd536"
+  },
+  "remaining": [
+    "Rendered messages and audible sound/volume acceptance",
+    "Other item-result/lifecycle families and native quick-slot deletion",
+    "Ownership/release authority, decay, money overflow and online replies",
+    "Corrected FX/camera and full phased client acceptance"
+  ]
+}

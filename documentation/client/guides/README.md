@@ -4,6 +4,7 @@ Use current progress and the phased plan for task status; historical test hashes
 
 [Documentation home](../README.md) | [Current progress](../PROGRESS.md)
 
+- [Native pickup/drop messages and sounds](NATIVE_GROUND_ITEM_FEEDBACK.md)
 - [Manual ground drops and pickup stacking](NATIVE_GROUND_ITEMS.md)
 - [Native ordinary item cooldowns](NATIVE_ITEM_COOLDOWNS.md)
 - [Native skill tooltip requirements and effects](NATIVE_SKILL_TOOLTIP_PARITY.md)

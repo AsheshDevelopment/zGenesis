@@ -3,69 +3,84 @@
   "source_data": "passed",
   "rendered_content": "actual JavaScript renderer with CPU DOM adapter; passed",
   "export_file_hashes": {
-    "count": 284,
+    "count": 286,
     "result": "matched"
   },
   "http": [
     {
       "path": "/genesis/index.html",
-      "status": 200
+      "status": 200,
+      "sha256": "b43cd97062da11089477dfba2a2691a3d2ade2d7bc50b69aad7fdb765bccaa8c"
     },
     {
       "path": "/genesis/snapshot.json",
-      "status": 200
+      "status": 200,
+      "sha256": "dc13fb15dd3a1d81a3c9f74dd0fd4744202e0bcb0d412fb4fad4748ba8eb7472"
     },
     {
       "path": "/genesis/assets/tantra-world.png",
-      "status": 200
+      "status": 200,
+      "sha256": "d18d11bb61ffac973237ed43f648019d487a16d4d24b3cbd68823a802e886b4e"
     },
     {
       "path": "/genesis/design-reference.json",
-      "status": 200
+      "status": 200,
+      "sha256": "3f2fb672e733d9c8bae1e3624c463c41a05d7e59950f5085090935ce2578ee88"
     },
     {
       "path": "/genesis/documentation/README.md",
-      "status": 200
+      "status": 200,
+      "sha256": "b1c7ea0514195d05878ab443e7adff32ba4a8e528ad64707d114793e3d6063ae"
     },
     {
       "path": "/genesis/documentation/server/IMPLEMENTATION_PROGRESS.md",
-      "status": 200
+      "status": 200,
+      "sha256": "d2f281fdf064c0c038be6c9ae45a119aa47a4af1c44507897ace9bc422445c8f"
     },
     {
       "path": "/genesis/documentation/client/planning/ZONE01_ZONE10_MAP_ALIGNMENT.md",
-      "status": 200
+      "status": 200,
+      "sha256": "fc7efb247371ffc447cb4d21535d915af88db04475a90bf8893ef8f2c6ed62d9"
     },
     {
       "path": "/genesis/assets/tantra.ico",
-      "status": 200
+      "status": 200,
+      "sha256": "a098b0ed46d2e46546ebed2bf0ca59a8ed43389e9be938080490c139c0205ef7"
     },
     {
       "path": "/genesis/assets/roadmap.css?v=20261026-2",
-      "status": 200
+      "status": 200,
+      "sha256": "70c57f412687dc3036befa0f82b79d63ae6767463ee3efb36c577a23b68a3e35"
     },
     {
       "path": "/genesis/assets/roadmap-data.js?v=20261026-2",
-      "status": 200
+      "status": 200,
+      "sha256": "3f80e7ba487c95fe6a40dc7bdf407b4873fb4e1d2f064b01e85a50db545fb4d7"
     },
     {
       "path": "/genesis/assets/roadmap.js?v=20261026-2",
-      "status": 200
+      "status": 200,
+      "sha256": "e7d916f6d5c6d7e3ca17332ce476bf69f3a414d6bfa70f5e8c08e7b961ed365c"
     },
     {
       "path": "/genesis/documentation/client/planning/HTLAUNCHER_CLIENT_IMPLEMENTATION_PLAN.md",
-      "status": 200
+      "status": 200,
+      "sha256": "8b37f04425b6eecbeca311492ba114b08984bb1db18df84951e2c7612b0b96e6"
     },
     {
       "path": "/genesis/documentation/client/PROGRESS.md",
-      "status": 200
+      "status": 200,
+      "sha256": "840c54bd60476f6b554aa97b4e1b1662c53005fed579964f8ffac059eefba97b"
     },
     {
       "path": "/genesis/reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "status": 200
+      "status": 200,
+      "sha256": "cbb6ee487dba47c750452abf5a77eb1f80c2afee0d03e78e76f68ace88238b9b"
     },
     {
       "path": "/genesis/reference/bgfx/PROGRESS.md",
-      "status": 200
+      "status": 200,
+      "sha256": "514c53bb4de03d669d4b8cca25471a290a0ff46343a4bc4f7bdb6c2c50acd2ce"
     }
   ],
   "temporary_http_server": "stopped",
@@ -76,5 +91,7 @@
   ],
   "browser_visual_acceptance": "not run; browser connection bootstrap rejected its required module",
   "production_deployment": "not verified by Git publication",
-  "game_launches": 0
+  "game_launches": 0,
+  "export_manifest_sha256": "ebdc9f6f75b759301dc3704e5dcd04ff160ba8e227e1da410899b83ffb7c32ae",
+  "source_head": "3ff33ffea741e011d40d10bbb6a137bbf9e81969"
 }
