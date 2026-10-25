@@ -1,5 +1,24 @@
 # Tantra Online client progress
 
+## 2026-10-26 - repeat-use stat consumables
+
+- [x] Connect native 59-second repeat scheduling, toggle cancellation and
+  remaining-count square FX to accepted item keys on both quick bars.
+- [x] Follow moves/swaps/merges, pause while dead and remove transient repeat
+  state on depletion, sale/drop, loss of binding/capacity or profile reload.
+- [x] Preserve no-rebinding for depleted repeat stacks, independent authority
+  cooldowns and the original 400-byte saved profile; deduplicate page bindings.
+- [x] Pass five focused CPU tests: 63 repeat and 187 timed-item assertions,
+  ordinary quick slots/feedback and SQLite accepted/failed-save checks. The
+  authored supported timed-buff inventory now contains 37 records.
+- [x] Rebuild/overwrite both clients; static packages and protected-file hashes
+  pass. No game, renderer, server or audio device was launched.
+- [ ] Accept presentation in-game and finish unsupported effects, mixed-phase,
+  entitlement, action cancellation/refund and online item services.
+
+[Implementation and original references](guides/NATIVE_REPEAT_CONSUMABLES.md).
+
+
 ## 2026-10-26 - ordinary timed consumable buffs
 
 - [x] Connect supported pure OnAffect items to the native live status callback;

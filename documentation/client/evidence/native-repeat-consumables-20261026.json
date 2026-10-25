@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-26",
+  "goal_status": "active_incomplete",
+  "scope": "Supported pure OnAffect repeat-use stat consumables and exact-key quick-slot lifecycle",
+  "launches": {
+    "game": 0,
+    "renderer": 0,
+    "server": 0,
+    "audio_device": 0
+  },
+  "cpu": {
+    "passed": [
+      "native_repeat_items",
+      "native_timed_consumables",
+      "native_quick_slot_items",
+      "native_skill_feedback",
+      "offline_character_persistence"
+    ],
+    "assertions": {
+      "repeat_items": 63,
+      "timed_consumables": 187,
+      "ordinary_quick_slot_items": 53,
+      "feedback": 145
+    },
+    "tribes": 8,
+    "matching_timed_records": 37,
+    "native_repeat_item": 6804,
+    "cadence_ms": 59000,
+    "cadence_boundary": "strictly after deadline",
+    "visual_duration": "59000 * (remaining count + 1)",
+    "key_lifecycle": "moves, simultaneous occupied swaps, split/merge, cargo, removal and no rebind on depletion",
+    "corrections": "deduplicated keys across pages, keyed stack visuals, bounded wrap-safe cadence and no catch-up burst",
+    "sqlite": "accepted timestamp/consumption; rejected reuse emits no change; real repeat-item save abort conserves saved inventory and disconnects"
+  },
+  "build": {
+    "initial_release": "failed: failWorld helper outside scope; staging did not start",
+    "correction": "existing failOperation handler and null-authority guard",
+    "final_release": "passed",
+    "configuration": "Release x64",
+    "sha256": "427c527d7b5dbc734e76885c1e4812b1230d3eb4a1274d6b1be7a4542c09d3aa",
+    "files_each": 1731,
+    "payload_bytes_each": 704445377,
+    "static_verification": "both packages passed; runtime/title/relocation not run"
+  },
+  "preservation": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "hpk_unchanged": 148,
+      "protected_files_unchanged": 148,
+      "launcher_sha256": "427c527d7b5dbc734e76885c1e4812b1230d3eb4a1274d6b1be7a4542c09d3aa"
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "hpk_unchanged": 148,
+      "protected_files_unchanged": 197,
+      "launcher_sha256": "427c527d7b5dbc734e76885c1e4812b1230d3eb4a1274d6b1be7a4542c09d3aa"
+    }
+  },
+  "native_reference_hashes": {
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTQuickSlot.cpp": "178a169b121b7897e3c038f022a76be73d1df9f0921acde476b6d8eabafc4d14",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTClientParamMgr.h": "f62d8bd0c93b522f78d4ed6606b58e2722bd9bf063d8130c59ceae377251605b",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\CMob2.cpp": "50cd5a0bbe8d5287d44ced2bd893013f33c8c472b09982890db11caee3c65e8b"
+  },
+  "logs": {
+    ".migration-local\\native-repeat-consumables-20261026\\build-stage-initial.log": "6aaf1efccce78f7e52b72b65b8604cad5afdb393dc3c499c51925d762de5c6c3",
+    ".migration-local\\native-repeat-consumables-20261026\\build-stage.log": "7e2966690e3c33544167e7557479353a9af4bc7bd63bb1cde0d0067d240255a4",
+    ".migration-local\\native-repeat-consumables-20261026\\cpu-build-final.log": "43687dabb16a8d1ba0e52add84fbe8b97a882c03c0b5531708da1714a6a70569",
+    ".migration-local\\native-repeat-consumables-20261026\\cpu-build.log": "f2b49962a117029c66d0c8610e9e81a8ce66d19bbdfb3d9f0dce58abcbb12bc9",
+    ".migration-local\\native-repeat-consumables-20261026\\cpu-tests-final.log": "90676b7822bcbe71b7c64c7e3c91a6379dbee0929f502f07286ce5a7052afc6d",
+    ".migration-local\\native-repeat-consumables-20261026\\cpu-tests.log": "e4aa6cea2bf2350bf7dd9e6efd3e8351faebf492872fe9cf7617455738836c7f",
+    ".migration-local\\native-repeat-consumables-20261026\\stage-user.log": "de51afd05032c759c0431079f4581725ecd432a02f01e30503adca1b495d395f",
+    ".migration-local\\native-repeat-consumables-20261026\\static-user.log": "27e799f008e46a79d324231f03408161f2415e87f33bd41bf0952c8c7d4fd536",
+    ".migration-local\\native-repeat-consumables-20261026\\static-workspace.log": "27e799f008e46a79d324231f03408161f2415e87f33bd41bf0952c8c7d4fd536"
+  },
+  "remaining": [
+    "Rendered toggling, both quick bars and buff/FX/audio acceptance",
+    "Unsupported repeat effects, mixed/action phases and entitlement purchases",
+    "Action cancellation/refunds, item-cost skills and online result flows",
+    "Corrected Mandara FX/camera and full phased client acceptance"
+  ]
+}

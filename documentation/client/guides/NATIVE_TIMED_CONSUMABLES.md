@@ -2,8 +2,10 @@
 
 Ordinary self-use items with supported positive-duration stat effects now execute
 through the live offline status authority. This extends ordinary instant HP/TP
-potions; it does not enable the distinct repeat-use, entitlement, resurrection or
-portal phases. Ten supplied item records match this supported family.
+potions. The initial checkpoint covered ten ordinary records. The subsequent
+[repeat-use checkpoint](NATIVE_REPEAT_CONSUMABLES.md) extends this to 37 supported
+timed records in total. Entitlement, resurrection, portal and mixed phases retain
+their separate services and acceptance requirements.
 
 ## Implemented
 
@@ -38,7 +40,7 @@ Native source root: `C:\_GitHub\tantra-dev-main\_references\Tantra`.
 - `zone/CMob2.cpp`: native `AddEffect`, `CheckAffections` and effect replacement,
   with `zone/CMob.cpp` stat recalculation, compiled by the existing stat core.
 - `HTlauncher/HTQuickSlot.cpp`: distinct repeat-use toggles and 59-second cadence.
-  Those items remain gated, including IDs 6801-6950.
+  Supported stat buffs in IDs 6801-6950 now use that repeat-use checkpoint; other phases remain gated.
 - `C:\_GitHub\TantraSrc\TantraClient\system\TantraParam.tpa`: source item
   parameters, exported to `_remake/derived-assets/gameplay-parameters/Item.tsv`
   by the existing provenance-preserving data pipeline.
@@ -65,8 +67,10 @@ Owned implementation root: `C:\_GitHub\tantra-dev-main\_remake`.
   userdata files in `C:\_GitHub\TantraSrc\_client`.
 - [ ] Accept native stat updates, quick bars, buff presentation, expiry and any
   associated resource FX/audio in-game. No game/device process was launched.
-- [ ] Implement repeat-use toggle/cancellation/59-second scheduling, mixed-phase
-  items, purchased entitlements, item-cost skills and other item-result families.
+- [x] Add supported repeat-use toggle/cancellation/59-second scheduling; see the
+  subsequent [checkpoint](NATIVE_REPEAT_CONSUMABLES.md) for current evidence.
+- [ ] Finish unsupported/mixed-phase items, purchased entitlements, item-cost
+  skills and other item-result families.
 - [ ] Complete online results, corrected Mandara FX/camera acceptance and all
   remaining full client phase gates. P06-T06 remains open.
 

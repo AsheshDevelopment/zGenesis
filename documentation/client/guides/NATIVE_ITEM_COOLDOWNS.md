@@ -46,8 +46,10 @@ presentation entries are discarded. No native assets are rewritten.
 - [x] Verify both packages statically; preserve 148 HPKs in each output and all
   49 private profile files in the user's client.
 - [ ] Accept the visible animation, page changes and repeated item input in-game.
-- [ ] Implement continuous/charged-item phases, their original 59-second cadence,
-  full depletion/rebinding behavior and other specialized item effects.
+- [x] Add supported repeat-use stat buffs, original 59-second cadence and
+  depletion/cancellation semantics; see the later
+  [repeat-use checkpoint](NATIVE_REPEAT_CONSUMABLES.md).
+- [ ] Finish unsupported charged/mixed phases and specialised item effects.
 - [ ] Complete online item-result transport and the remaining client phases.
 
 The native-data fixture used catalog item **7001**, family **1**, with a

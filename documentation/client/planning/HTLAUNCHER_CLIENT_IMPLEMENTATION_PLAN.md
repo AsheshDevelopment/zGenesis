@@ -144,7 +144,7 @@ messages are search anchors; line numbers may change as implementation proceeds.
 | `Tantra\HTlauncher\TNNetworkManager.cpp`: `RequestSkillCastUnitSkill`, `RequestSkillCastAreaSkill`; `HTQuickSlot.cpp`: `HT_vActionskill` | Quick slots reach timed self buffs and direct unit/ground-area action sequences; impact authority is implemented | Finish specialized projectiles, remaining authority/effect/command/result paths and visual acceptance |
 | `Tantra\zone\CMob.cpp`: damage and continuous-effect rules | `_remake\src\compatibility\HtPcStatProjection.cpp` throws for periodic damage without combat authority/attacker context | Add recipients, attribution, damage/death lifecycle and periodic-effect integration |
 | `Tantra\HTlauncher\HTPortal.cpp`, world transition handlers and native portal/regen requests | `_remake\src\client\OfflineCharacterChannel.cpp` rejects nonzero position/portal/target CHAR_INIT variants | Implement valid handoff/re-entry and destination-failure paths before enabling those requests |
-| Native consumable/charge/cancel rules in `Tantra\zone\CMob2.cpp` | `_remake\src\client\OfflineConsumables.cpp::useItem` supports instant HP/TP recovery and ten authored pure OnAffect stat-buff records; other phases/costs remain gated | Implement remaining supported item families with native consumption/cancellation order |
+| Native consumable/charge/cancel rules in `Tantra\zone\CMob2.cpp` | `_remake\src\client\OfflineConsumables.cpp::useItem` supports instant recovery and 37 authored pure OnAffect stat-buff records, including guarded repeat-use scheduling; other phases/costs remain gated | Implement remaining supported item families with native consumption/cancellation order |
 | Original resource identities and lifetime behavior | `CharacterResourceCache` now retains shared immutable resources; actors and LOD records reuse handles, with isolated native track bindings | Explicit character invalidation exists; map/collision sharing, budgets and background loading remain open |
 
 Historical HPK evidence retains its original scope. The current continuation
@@ -295,8 +295,11 @@ Owned implementation: `NativeMainHud.*`, `NativeMainUi.*`,
   - [x] Connect ordinary item cooldowns, native square FX and silent quick-slot
     blocking on both bars/pages using accepted authority deadlines. See the
     [item cooldown checkpoint](../guides/NATIVE_ITEM_COOLDOWNS.md).
-  - [ ] Complete continuous/charged-item timers and full item-result lifecycle;
-    accept ordinary item visuals and input in-game.
+  - [x] Connect supported repeat-use stat items to native 59-second toggling,
+    exact-key remaining-count FX and depletion/cancellation. See the
+    [repeat-item checkpoint](../guides/NATIVE_REPEAT_CONSUMABLES.md).
+  - [ ] Complete other charged/mixed item phases and full item-result lifecycle;
+    accept ordinary and repeat-use visuals/input in-game.
   - [ ] Resolve missing source FX records and accept tooltip wrapping/localization
     and hover updates in an authorized offline run.
 - [ ] **P04-T08** — Finish unconnected quest, guild, party, trade and advanced-service dialog content.
@@ -349,9 +352,10 @@ Owned implementation: `OfflineInventoryRules.h`, `OfflineNpcServices.*`,
   native slot/tribe rules, stat recalculation and represented equipment appearance.
 - [x] **P06-T02** — Ordinary instant HP/TP consumables and item-type cooldowns.
   - [x] Connect supported ordinary timed stat-buff items to native replacement,
-    expiry and accepted SQLite consumption; ten authored records match. See
+    expiry and accepted SQLite consumption; 37 authored timed records now match. See
     [timed consumables](../guides/NATIVE_TIMED_CONSUMABLES.md).
-  - [ ] Accept timed-item presentation and finish repeat-use/mixed-phase items.
+  - [x] Add repeat-use stat-item toggle, cadence and transient key lifecycle.
+  - [ ] Accept timed/repeat-item presentation and finish unsupported mixed phases.
 - [x] **P06-T03** — Native dialogue, merchant buy/sell, repair, personal item/Rupiah warehouse
   and save-point code with authenticated transactional persistence.
 - [x] **P06-T04** — Earlier offline runtime evidence for repair, buying/selling and potion use.
@@ -376,6 +380,9 @@ Owned implementation: `OfflineInventoryRules.h`, `OfflineNpcServices.*`,
   - [x] Connect ordinary timed stat buffs through source OnTakeAffections and
     durable accepted inventory events; verify native replacement/expiry and
     failed-save conservation. [Timed-item checkpoint](../guides/NATIVE_TIMED_CONSUMABLES.md).
+  - [x] Add supported repeat-use stat consumables, source cadence/cancellation,
+    no-rebinding on depletion and accepted-key timer snapshots. See the
+    [repeat-use checkpoint](../guides/NATIVE_REPEAT_CONSUMABLES.md).
   - [ ] Accept rendered drop/pickup paths and finish ownership/release, decay,
     remaining item-result families and continuous/charged-item phases.
 - [ ] **P06-T07** — Connect the same UI/request/result flow to C++ server authority and verify

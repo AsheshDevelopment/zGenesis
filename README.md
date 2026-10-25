@@ -38,3 +38,11 @@ opened; no game, renderer or audio device was launched for website checks.
 
 Publishing the Git repository does not itself prove deployment to the production
 website. Preserve the destination website's deployment configuration.
+
+## GitHub Pages
+
+Publish branch `main`, folder `/ (root)`. Keep the generated `.nojekyll` file:
+the HTML/CSS/JavaScript is ready to serve, and bundled reference Markdown must
+retain its original bytes. Jekyll otherwise attempts to render these documents
+and fails on legacy encodings. The repository project URL is case-sensitive:
+https://asheshdevelopment.github.io/zGenesis/

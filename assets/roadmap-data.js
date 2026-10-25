@@ -310,8 +310,12 @@ window.TANTRA_ROADMAP = {
                   "text": "Connect ordinary item cooldowns, native square FX and silent quick-slot"
                 },
                 {
+                  "done": true,
+                  "text": "Connect supported repeat-use stat items to native 59-second toggling,"
+                },
+                {
                   "done": false,
-                  "text": "Complete continuous/charged-item timers and full item-result lifecycle;"
+                  "text": "Complete other charged/mixed item phases and full item-result lifecycle;"
                 },
                 {
                   "done": false,
@@ -425,8 +429,12 @@ window.TANTRA_ROADMAP = {
                   "text": "Connect supported ordinary timed stat-buff items to native replacement,"
                 },
                 {
+                  "done": true,
+                  "text": "Add repeat-use stat-item toggle, cadence and transient key lifecycle."
+                },
+                {
                   "done": false,
-                  "text": "Accept timed-item presentation and finish repeat-use/mixed-phase items."
+                  "text": "Accept timed/repeat-item presentation and finish unsupported mixed phases."
                 }
               ]
             },
@@ -468,6 +476,10 @@ window.TANTRA_ROADMAP = {
                 {
                   "done": true,
                   "text": "Connect ordinary timed stat buffs through source OnTakeAffections and"
+                },
+                {
+                  "done": true,
+                  "text": "Add supported repeat-use stat consumables, source cadence/cancellation,"
                 },
                 {
                   "done": false,
@@ -963,6 +975,11 @@ window.TANTRA_ROADMAP = {
         "Accept environment fidelity, loading performance and every zone"
       ],
       "changes": [
+        {
+          "date": "2026-10-26",
+          "title": "Repeat-use consumable stat buffs",
+          "text": "Supported repeat items now use source 59-second toggles, remaining-count FX and exact-key depletion/cancellation. Five focused CPU checks and both staged clients pass; rendered and mixed item-phase acceptance remains open."
+        },
         {
           "date": "2026-10-26",
           "title": "Ordinary timed consumable buffs",
@@ -2742,11 +2759,11 @@ window.TANTRA_ROADMAP = {
   "sources": {
     "ogre_plan": {
       "path": "documentation/client/planning/HTLAUNCHER_CLIENT_IMPLEMENTATION_PLAN.md",
-      "sha256": "4b58f381f2328008edcdcdac3f4f00a13c2fd2644c0018e99e69a6b89324c543"
+      "sha256": "95e96a245a4cf5b6d0266d740bbe95e7b99539bbed38404ee42b3735aadfcf8c"
     },
     "ogre_progress": {
       "path": "documentation/client/PROGRESS.md",
-      "sha256": "519111332b9319637f6e1f5766d0582c4111b51472562fcfa56ede5cacaf9017"
+      "sha256": "dabf62d99c3002de4e88af516a232264260adb00906aebca1ce30259fd025e4f"
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
