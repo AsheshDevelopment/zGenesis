@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-10-24T17:40:35.610115+00:00",
+  "preexisting_missing_targets": 2,
+  "new_missing_links": [],
+  "client_file_links_missing": 0,
+  "client_anchor_links_missing": 0,
+  "phase_count": 14,
+  "unique_phase_tasks": 102,
+  "zone_checklists": 10,
+  "package_script_syntax_checked": true,
+  "paused_server_source_hashes_unchanged": true
+}

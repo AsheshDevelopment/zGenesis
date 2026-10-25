@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-25",
+  "status": "built_staged_visual_acceptance_pending",
+  "installed": [
+    {
+      "root": "C:\\_GitHub\\tantra-dev-main\\_client",
+      "executable_sha256": "445c60fd9f24b0337be1d39832f373891eb89c65094ff6392fc69b7fec53f16d",
+      "protected_files_unchanged": 148,
+      "hpk_files_unchanged": 148,
+      "package_static_verified": true
+    },
+    {
+      "root": "C:\\_GitHub\\TantraSrc\\_client",
+      "executable_sha256": "445c60fd9f24b0337be1d39832f373891eb89c65094ff6392fc69b7fec53f16d",
+      "protected_files_unchanged": 195,
+      "hpk_files_unchanged": 148,
+      "package_static_verified": true
+    }
+  ],
+  "cpu_scene_checks": 9111,
+  "shader_compile_passed": true,
+  "texture": "TGR_2100111.tga",
+  "texture_rgb_energy": 354304,
+  "old_alpha_attenuated_rgb_energy": 204368,
+  "target_shader": "TantraRemake/FxTargetGlowPS",
+  "target_blending": "ONE / ONE",
+  "ordinary_fx_shader_preserved": true,
+  "game_launched": false,
+  "renderer_launched": false,
+  "audio_device_started": false,
+  "commit_created": false,
+  "push_performed": false,
+  "logs": "C:\\_GitHub\\tantra-dev-main\\.migration-local\\target-brightness-20261025"
+}

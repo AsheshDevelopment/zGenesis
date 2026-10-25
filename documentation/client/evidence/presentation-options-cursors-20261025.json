@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-25",
+  "build": "Release x64 OGRE Classic 14.6.1 D3D11 SDL3",
+  "sha256": "eeaf7cf9b00df7f1fabd5aa936fbd3e4ab2a04d15d90a4744c037cb65ff74c14",
+  "outputs": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "launcher_sha256": "eeaf7cf9b00df7f1fabd5aa936fbd3e4ab2a04d15d90a4744c037cb65ff74c14",
+      "hpk_unchanged": 148,
+      "userdata_unchanged": 0
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "launcher_sha256": "eeaf7cf9b00df7f1fabd5aa936fbd3e4ab2a04d15d90a4744c037cb65ff74c14",
+      "hpk_unchanged": 148,
+      "userdata_unchanged": 44
+    }
+  },
+  "files_per_output": 1731,
+  "bytes_per_output": 704264641,
+  "implemented": [
+    "pre-texture diffuse/emissive saturation",
+    "bounded and 3x3 filtered modulative shadow receiver",
+    "anisotropic original world texture sampling",
+    "native attached model +PI parent yaw and authored Euler",
+    "live music/effect group gain for current and future sounds",
+    "native Interface.sys audio/name/speech option save/restore and Apply/OK save",
+    "player world name and current-frame label camera",
+    "291 TPA English NPC names in world/target/dialog headings",
+    "status character/God/Tribe/Job/Caste/Ashram label population",
+    "original CUR/ANI cursor loading and active offline context routing",
+    "ray bounds rejection and empty-loot picking avoidance"
+  ],
+  "tpa_profile": {
+    "item_record_bytes": 276,
+    "source_header_bytes": 272,
+    "opaque_tail_bytes": 4,
+    "npc_record_bytes": 260,
+    "english_npc_names": 291,
+    "verified_item_5802_range_bonus": 1
+  },
+  "cpu": {
+    "presentation_checks": 5759,
+    "tribes": 8,
+    "caste_states": 18,
+    "god_states": 4,
+    "cursor_ids": 23,
+    "unique_original_cursor_files": 22,
+    "ui_checks": 685,
+    "ui_panels": 31,
+    "ui_widgets": 1288,
+    "ui_textures": 119,
+    "skill_resource_checks": 95,
+    "combat_checks": 10055,
+    "scene_checks": 1022,
+    "field_day_night_placements": 55,
+    "node_warnings_in_fixtures": 0,
+    "shader_checks": "actual lighting/alpha/terrain/socket/sky and filtered shadow pixel shader compile; existing stage linkage and prior regression rejection",
+    "staged_resource_fixture": "passed"
+  },
+  "native_model_evidence": {
+    "dll_sha256": "b818b89edbc9f8e49bb1b79200371740eaa157dabac23bbf1e2d52e40ff99941",
+    "parent_euler_rva": "108D8..108FB",
+    "pi_constant_rva": "64984",
+    "pi_float": 3.1415927410125732,
+    "method": "read-only pefile/capstone; DLL never executed"
+  },
+  "static_package": "both outputs passed original layout, x64/imports and icon checks",
+  "runtime": "no game, renderer, server or audio device launched; visual/audio result unverified",
+  "screenshots": [
+    "C:\\Users\\Ashesh\\Pictures\\Screenshots\\Screenshot 2026-10-25 180732.png",
+    "C:\\Users\\Ashesh\\Pictures\\Screenshots\\Screenshot 2026-10-25 180704.png",
+    "C:\\Users\\Ashesh\\Pictures\\Screenshots\\Screenshot 2026-10-25 180623.png",
+    "C:\\Users\\Ashesh\\Pictures\\Screenshots\\Screenshot 2026-10-25 180453.png"
+  ],
+  "remaining": [
+    "authorized visual/audio/cursor acceptance",
+    "full FX graph/blend and exact original rendering parity",
+    "PBR/cascaded-depth-shadow modernization",
+    "multiplayer-only cursor states and guild-name snapshot integration"
+  ],
+  "broader_goal": "paused; no acceptance gate closed",
+  "git": "local uncommitted work; no push requested",
+  "local_logs": "C:\\_GitHub\\tantra-dev-main\\.migration-local\\visual-ui-20261025"
+}

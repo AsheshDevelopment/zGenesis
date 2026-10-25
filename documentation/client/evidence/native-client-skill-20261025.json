@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-25",
+  "scope": "Direct native quickslot unit/ground-area action sequence; full action families, presentation and client remain incomplete",
+  "implemented": [
+    "canonical client TPA level-one timing reader",
+    "native FX PC types 1/2/3 and complete nine-sheet catalog",
+    "sex/weapon/back animation group selection",
+    "native requested-play-time scaling in the model clock",
+    "bounded native attack/Attack substring marker selection before final timing key",
+    "native one-shot interval attack signal",
+    "strict ready/casting/apply sequence and native missing-animation/short-apply fallback",
+    "direct unit and ground-area quickslot input routes",
+    "free preparation echo and final impact through offline authority",
+    "strict client area enumeration",
+    "body/hair/apron animation bindings and state restoration",
+    "manifest closure for canonical TPA/FX PC/reachable action and weapon animation dependencies",
+    "preserve rigid socket attachments during animation changes"
+  ],
+  "binary_profile": {
+    "dll": "C:\\_GitHub\\TantraSrc\\TantraClient\\HT3DHeaven.dll",
+    "sha256": "b818b89edbc9f8e49bb1b79200371740eaa157dabac23bbf1e2d52e40ff99941",
+    "retiming_rva": "0xACDD",
+    "attack_resource_scan_rva": "0x2DDB1",
+    "attack_signal_rva": "0xB0D5",
+    "inspection": "read-only; DLL not loaded/executed",
+    "proof": "C:\\_GitHub\\tantra-dev-main\\docs\\client\\evidence\\native-action-skill-engine-20261025.txt",
+    "proof_sha256": "dac42113df056aaa222786df8c1e7763db608fb3cfe50b9bc451f19f9d38aab6"
+  },
+  "cpu": {
+    "client_sequence_assertions": 60,
+    "staged_root_resource_assertions": 60,
+    "impact_route_assertions": 112,
+    "self_skill_authority_regression_assertions": 115,
+    "native_playback_blend": "passed recorded CPU regressions",
+    "intro_fx_catalog": "passed eight-sheet regression",
+    "authority_profile": "C:\\_GitHub\\tantra-dev-main\\_remake\\build-migration\\skill-impact-profiles\\skill-impact-179828745887900",
+    "group": 1,
+    "zone": 1,
+    "account": "ashesh",
+    "sqlite": {
+      "quick_check": "ok",
+      "foreign_key_errors": 0,
+      "characters": 1
+    },
+    "game_windows_created": 0
+  },
+  "build": {
+    "configuration": "Release",
+    "x64": true,
+    "launcher": "C:\\_GitHub\\tantra-dev-main\\_client\\HTLauncher.exe",
+    "sha256": "b232635b70ed156adef2655fd0a96bb1409bdeeeea65c45c47d0aed3e98e6e70",
+    "bytes": 3440128,
+    "manifest_files": 1629,
+    "payload_bytes": 676085082,
+    "asset_closure_entries": 2461,
+    "new_used_asset_entries": 114,
+    "static_verification": "FINAL_CLIENT_VERIFIED files=1629 original_layout=verified x64=verified imports=resolved icon_frames=9 icon_payload=exact title=not-run relocation=not-run",
+    "game_launches_this_checkpoint": 0
+  },
+  "corrected_checks": {
+    "area_fixture": "Changed the client area-query centre from player feet to the living actor picked by the route. A strict native area may validly contain no actors.",
+    "staging": "First staged-root resource probe found missing system/TantraParam.tpa. Added it to the owned dependency manifest, rebuilt/restaged and reran the staged-root probe."
+  },
+  "preservation": {
+    "hpk_checked_unchanged": 148,
+    "normal_userdata_absent": true,
+    "legacy": {
+      "hpk_checked_unchanged": 148,
+      "normal_userdata_absent": true,
+      "source_executable": {
+        "path": "C:\\_GitHub\\TantraSrc\\TantraClient\\HTLauncher.exe",
+        "sha256": "03d4587c4f87eeb71eb8be288b765836ccf8a1f11d49760d48239c6496c73903"
+      },
+      "previous_executable": {
+        "path": "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe",
+        "sha256": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34"
+      },
+      "private_save": {
+        "path": "C:\\_GitHub\\TantraSrc\\_client\\userdata\\offline\\tantra.sqlite3",
+        "sha256": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f"
+      }
+    }
+  },
+  "source_sha256": {
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTMainCharacter.cpp": "6e7b5ee760a729fbc8afad3b4aa59a61ed394e51ba9e3f601037c2fa6226e08d",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTAttackManager.cpp": "2b5b3797426c13ef9773dc4a1ed4c6774b505483676348f664fb41db6789cafd",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTClientParamMgr.h": "f62d8bd0c93b522f78d4ed6606b58e2722bd9bf063d8130c59ceae377251605b",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTClientParamMgr.cpp": "3956fd1d711ee2b546f52d89eb38c4cb5061a41add1cbfe19c77f9fd5003e6f5",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTFXResMgr.h": "2e95e60ccfa3a502884cf39c08c4981366b0810975a2974a8dc9cfedd5f45fd2",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTFXResMgr.cpp": "5bfa02f8cc9ffe91601a486ca2c5a11c3d84d8e65a52460e43cb1d7477dbe717",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTEngineHandler.cpp": "dec2f71e6b25091e54c7742d8d85a00b4c4658865cfaff61b0d12f4836bf5500",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTOtherObjectSystem.cpp": "a00be6c1be8b5d574756f60fa0651d5580a73b7dba86e02042cb45aca49b0510"
+  },
+  "canonical_inputs": {
+    "C:\\_GitHub\\TantraSrc\\TantraClient\\system\\TantraParam.tpa": "89bb70532f888044f4e66b25aa75e3e55d1329e392e874b13dd45ae3408d16ea",
+    "C:\\_GitHub\\TantraSrc\\TantraClient\\resource\\fx\\fxPC.txl": "2d9ac2d42b23febf24be1186414ea0447a94045b0b01215a9eeef24ba7fe4c3c",
+    "C:\\_GitHub\\TantraSrc\\TantraClient\\resource\\object\\PC\\Ani\\PC_DEV_SKL_SND1.tab": "dea650ca8883ed41bd27413b4cfb2fb81cee6822186fc2e09604e0ec65b5d3ef",
+    "C:\\_GitHub\\TantraSrc\\TantraClient\\resource\\object\\PC\\Ani\\PC_DEV_SKL_ANR3_03.tab": "fae582741dfbf754a9b0b1c57daec080f6f63113bc1ab4b02d17640ceafaab16"
+  },
+  "logs": {
+    "client-skill-tests.log": "1f1d1a02a9e7ef4ab32bde7e05a79eb9b7ba76775c088cacf1f395c56b751edb",
+    "client-skill-final-tests.log": "778125df5ae4b1871f2c150eaa11b5dd20dd4135f2355798c7658666dabe75be",
+    "client-skill-route-tests.log": "4e88773461a29fdf3d1eefae62c5c3e93c7517335a756d7f56c9727999ff402e",
+    "client-skill-intro-fx-regression.log": "a69976a1ad002f3c2226090ba2a645056d626e0c76957a4eaa383999f0327f21",
+    "client-skill-staged-resources.log": "2b7cf7c017e9649d0820fd1cd9e28034a2d2a0192026311495480126a3028825",
+    "client-skill-client-build-stage.log": "3850b840f678e970cdfb181381066423be2361d79b83720e63a81aa5ab3c3c94",
+    "client-skill-client-static.log": "0b28a8f07bd2f787bed132c537b5b674348831cf86208842bb419b88f5b7ef8f"
+  },
+  "remaining": [
+    "rendered direct skill and socket/input acceptance",
+    "follow/projectile, short combo, unit splash, piercing and multiple/dual attack paths",
+    "source approach/range hysteresis",
+    "complete cancellation/reticle and missed-marker/failure retry behavior",
+    "weapon-back reattachment, native sound and TFX",
+    "cooldown and native error/ACK/history presentation",
+    "remaining skill costs/effects and native world recipients",
+    "multiplayer/AI/quest/travel/environment/loading and the full 14-phase plan"
+  ],
+  "git": "Local uncommitted continuation; no new push. Server, original references and SDL3 unchanged."
+}

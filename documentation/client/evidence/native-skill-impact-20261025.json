@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-25",
+  "scope": "Native final unit/area impact authority; targeted quickslot animation/projectile submission and full client remain incomplete",
+  "implemented": [
+    "authenticated final 0x3240/0x3250 native hit requests",
+    "authority-owned damage/HP/skill-level fields",
+    "native learned-skill/cost/cooldown and range/action-speed variations",
+    "TCM first-floor height loading",
+    "compiled original CalDistance and IsPathCleared",
+    "native normal-zone clan relations and cell gates",
+    "unit range misses and area filtering",
+    "per-target damage success/armor/resistance/HP",
+    "secondary area splash damage at 50 percent",
+    "first-slot native weapon wear",
+    "existing offline solo rewards/loot and SQLite final state"
+  ],
+  "source_examples": {
+    "3307": {
+      "authored_range": 15,
+      "loaded_range": 17,
+      "impact_range_with_pc_correction": 23,
+      "level_1_tp": 75
+    },
+    "3324": {
+      "authored_area": 4,
+      "loaded_area": 6,
+      "tested_level": 3,
+      "level_3_tp": 72,
+      "result_record_bytes": 456
+    },
+    "3325": "Follow descriptor validated; no projectile timing acceptance"
+  },
+  "cpu": {
+    "impact_assertions": 97,
+    "self_skill_authority_regression_assertions": 115,
+    "combat_regression_assertions": 33,
+    "world_gameplay": "passed existing CPU fixture",
+    "impact_profile": "C:\\_GitHub\\tantra-dev-main\\_remake\\build-migration\\skill-impact-profiles\\skill-impact-178579087235900",
+    "group": 1,
+    "zone": 1,
+    "account": "ashesh",
+    "character_seed": "level 80 Deva, Mental 100, original learned prerequisite chains",
+    "sqlite": {
+      "quick_check": "ok",
+      "foreign_key_errors": 0,
+      "characters": 1,
+      "final_vitals_prana_skills_checked_by_cpp": true
+    },
+    "fixture_corrections": [
+      "native path sample-cell expectation",
+      "levelled fixture TP budget",
+      "native parameter-loader +2 range/AOE values",
+      "CastInstant1 is a supported direct phase",
+      "cell-distance monster cluster for area acceptance"
+    ],
+    "game_windows_created": 0
+  },
+  "build": {
+    "configuration": "Release",
+    "x64": true,
+    "launcher": "C:\\_GitHub\\tantra-dev-main\\_client\\HTLauncher.exe",
+    "sha256": "e9409c754d351197d774fcde8012fd8d1507f1ee75d39d22abba1681cd0bd526",
+    "bytes": 3416064,
+    "manifest_files": 1515,
+    "payload_bytes": 669726962,
+    "static_verification": "FINAL_CLIENT_VERIFIED files=1515 original_layout=verified x64=verified imports=resolved icon_frames=9 icon_payload=exact title=not-run relocation=not-run",
+    "game_launches_this_checkpoint": 0
+  },
+  "preservation": {
+    "hpk_checked_unchanged": 148,
+    "normal_userdata_absent": true,
+    "source_executable": {
+      "path": "C:\\_GitHub\\TantraSrc\\TantraClient\\HTLauncher.exe",
+      "sha256": "03d4587c4f87eeb71eb8be288b765836ccf8a1f11d49760d48239c6496c73903"
+    },
+    "previous_executable": {
+      "path": "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe",
+      "sha256": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34"
+    },
+    "private_save": {
+      "path": "C:\\_GitHub\\TantraSrc\\_client\\userdata\\offline\\tantra.sqlite3",
+      "sha256": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f"
+    }
+  },
+  "source_sha256": {
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\CMob2.cpp": "50cd5a0bbe8d5287d44ced2bd893013f33c8c472b09982890db11caee3c65e8b",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\CMOB.CPP": "3421c51069c245603784168aa8ea2c276798d480b9749d8e9124734ad0715a46",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\GetFunc.cpp": "eae98b7130fef718777ef716746b1916280a7a4a97eeb730efdc0f1ee2537cad",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\Basedef.cpp": "9f245bc03104e868189065d272b93ca9b9669827b93829dcffc6ec6e7074d0ce",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\HTParamMgr.cpp": "e8574693579ed3ed3da0d4438e3c8ac53228f600886ac58c4811fb8e4328ee11",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\Basedef.h": "06d0028f615afcc34c0f8aa18d9dfe8af5c9a748ca5144b01dff8d8d0941ed22",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTMainCharacter.cpp": "6e7b5ee760a729fbc8afad3b4aa59a61ed394e51ba9e3f601037c2fa6226e08d",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTAttackManager.cpp": "2b5b3797426c13ef9773dc4a1ed4c6774b505483676348f664fb41db6789cafd"
+  },
+  "logs": {
+    "impact-tests.log": "d68a901df81c65e5aa2dedfe6067a34df0f073284bdcfef72a2fca409a1cf768",
+    "impact-accepted-cpu.log": "ead3cfc21cb851bde6e8b0aa1f67612a45f4cfefee77a6440d81ba4241de4ff5",
+    "impact-profile-tests.log": "d4d42b4a2d34b50bcb2def2c9e53530e365deed3333762ba6f2a641dbcfadb48",
+    "impact-client-build-stage.log": "c03643f2a930fa191c835e38018c732d1bcf03da7273eb6066c16ec821a96216",
+    "impact-client-static.log": "549cd8853719cf0dddf07795d347443f8eb448d2690dd015dd6630d9adbcbd1a"
+  },
+  "remaining": [
+    "animation hit-point and ground-area quickslot submission",
+    "source preparation/casting/apply/cancel state machine",
+    "follow projectiles/TFX/sound/cooldown presentation",
+    "unit splash/piercing/multiple strikes/dual hits",
+    "item/arrow costs and remaining instant/affection phases",
+    "periodic/link/shield/PvP and world recipient callbacks",
+    "complete cast-history/error mapping/notification and reward ownership parity",
+    "rendered runtime and performance acceptance",
+    "remaining 14-phase client plan"
+  ],
+  "git": "Local uncommitted continuation; no new push. Server, original references and SDL3 remain unchanged."
+}

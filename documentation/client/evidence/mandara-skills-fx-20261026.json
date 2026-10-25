@@ -1,0 +1,592 @@
+{
+  "date": "2026-10-26",
+  "task": "Mandara portals/altar/field effects and skill UI/animation/FX",
+  "source_root": "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra",
+  "game_launched": false,
+  "renderer_launched": false,
+  "audio_device_started": false,
+  "runtime_acceptance": "pending",
+  "broader_goal": "remains paused",
+  "commit_push": "Subsequent user request authorizes publication to main; see Git history and publication checkpoint.",
+  "launcher_sha256": "bceb3abb96a35ea16bdb4bff5637cdd35822542f8e996fad564c046c9abdb651",
+  "clients": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": "bceb3abb96a35ea16bdb4bff5637cdd35822542f8e996fad564c046c9abdb651",
+    "C:\\_GitHub\\TantraSrc\\_client": "bceb3abb96a35ea16bdb4bff5637cdd35822542f8e996fad564c046c9abdb651"
+  },
+  "preservation": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "existing_files": 148,
+      "hpk_files": 148,
+      "changed": []
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "existing_files": 197,
+      "hpk_files": 148,
+      "changed": []
+    }
+  },
+  "mandara_placements": [
+    {
+      "placement": 58,
+      "object": "r01_Stru_ava_main_04.tmb",
+      "day": 1400021,
+      "night": 1400021,
+      "effect": "Env_Smoke02",
+      "nodes": 2,
+      "node_summary": "t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 59,
+      "object": "r01_Stru_ava_main_04.tmb",
+      "day": 1400021,
+      "night": 1400021,
+      "effect": "Env_Smoke02",
+      "nodes": 2,
+      "node_summary": "t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 519,
+      "object": "r01_Stru_man_refountain_02.tmb",
+      "day": 1400011,
+      "night": 1400011,
+      "effect": "Env_Water01",
+      "nodes": 5,
+      "node_summary": "t4p0:0: t1p0:0: t6p0:0: t4p0:0: t4p0:0:"
+    },
+    {
+      "placement": 576,
+      "object": "r01_Stru_firestick1_01.tmb",
+      "day": 1400018,
+      "night": 1400018,
+      "effect": "Env_FireTorch1",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 577,
+      "object": "r01_Stru_firestick1_01.tmb",
+      "day": 1400018,
+      "night": 1400018,
+      "effect": "Env_FireTorch1",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 578,
+      "object": "r01_Stru_firestick1_01.tmb",
+      "day": 1400018,
+      "night": 1400018,
+      "effect": "Env_FireTorch1",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 579,
+      "object": "r01_Stru_firestick1_01.tmb",
+      "day": 1400018,
+      "night": 1400018,
+      "effect": "Env_FireTorch1",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 580,
+      "object": "r01_Stru_firestick2_01.tmb",
+      "day": 1400019,
+      "night": 1400019,
+      "effect": "Env_FireTorch2",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 581,
+      "object": "r01_Stru_firestick2_01.tmb",
+      "day": 1400019,
+      "night": 1400019,
+      "effect": "Env_FireTorch2",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 582,
+      "object": "r01_Stru_firestick2_01.tmb",
+      "day": 1400019,
+      "night": 1400019,
+      "effect": "Env_FireTorch2",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 583,
+      "object": "r01_Stru_firestick2_01.tmb",
+      "day": 1400019,
+      "night": 1400019,
+      "effect": "Env_FireTorch2",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 584,
+      "object": "r01_Stru_firestick2_01.tmb",
+      "day": 1400019,
+      "night": 1400019,
+      "effect": "Env_FireTorch2",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 585,
+      "object": "r01_Stru_firestick2_01.tmb",
+      "day": 1400019,
+      "night": 1400019,
+      "effect": "Env_FireTorch2",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 586,
+      "object": "r01_Stru_firestick2_01.tmb",
+      "day": 1400019,
+      "night": 1400019,
+      "effect": "Env_FireTorch2",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 587,
+      "object": "r01_Stru_firestick2_01.tmb",
+      "day": 1400019,
+      "night": 1400019,
+      "effect": "Env_FireTorch2",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 588,
+      "object": "r01_Stru_firestick2_01.tmb",
+      "day": 1400019,
+      "night": 1400019,
+      "effect": "Env_FireTorch2",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 589,
+      "object": "r01_Stru_firestick2_01.tmb",
+      "day": 1400019,
+      "night": 1400019,
+      "effect": "Env_FireTorch2",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 590,
+      "object": "r01_Stru_firestick2_01.tmb",
+      "day": 1400019,
+      "night": 1400019,
+      "effect": "Env_FireTorch2",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 591,
+      "object": "r01_Stru_firestick2_01.tmb",
+      "day": 1400019,
+      "night": 1400019,
+      "effect": "Env_FireTorch2",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 674,
+      "object": "r01_Stru_man_firepot.tmb",
+      "day": 1400006,
+      "night": 1400006,
+      "effect": "Env_Fire04",
+      "nodes": 3,
+      "node_summary": "t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 781,
+      "object": "r01_Stru_firestick4_01.tmb",
+      "day": 1400020,
+      "night": 1400020,
+      "effect": "Env_FireTorch3",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 820,
+      "object": "r01_Stru_portal_07.tmb",
+      "day": 1400017,
+      "night": 1400017,
+      "effect": "Env_Port03",
+      "nodes": 6,
+      "node_summary": "t4p0:0: t2p0:0: t1p0:0: t4p0:0: t6p0:0: t4p0:0:"
+    },
+    {
+      "placement": 973,
+      "object": "pop_Env_firepit2_01.tmb",
+      "day": 1400003,
+      "night": 1400003,
+      "effect": "Env_Fire01",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t6p0:0: t1p0:0:"
+    },
+    {
+      "placement": 974,
+      "object": "pop_Env_firepit2_01.tmb",
+      "day": 1400003,
+      "night": 1400003,
+      "effect": "Env_Fire01",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t6p0:0: t1p0:0:"
+    },
+    {
+      "placement": 1097,
+      "object": "pop_Stru_fight_gate_01.tmb",
+      "day": 1400009,
+      "night": 1400009,
+      "effect": "Env_Port02",
+      "nodes": 3,
+      "node_summary": "t2p0:0: t2p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1102,
+      "object": "r01_Stru_firestick3_01.tmb",
+      "day": 1400020,
+      "night": 1400020,
+      "effect": "Env_FireTorch3",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1103,
+      "object": "r01_Stru_firestick3_01.tmb",
+      "day": 1400020,
+      "night": 1400020,
+      "effect": "Env_FireTorch3",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1104,
+      "object": "r01_Stru_firestick3_01.tmb",
+      "day": 1400020,
+      "night": 1400020,
+      "effect": "Env_FireTorch3",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1105,
+      "object": "r01_Stru_firestick3_01.tmb",
+      "day": 1400020,
+      "night": 1400020,
+      "effect": "Env_FireTorch3",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t1p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1129,
+      "object": "pop_Env_firepit1_01.tmb",
+      "day": 1400003,
+      "night": 1400003,
+      "effect": "Env_Fire01",
+      "nodes": 4,
+      "node_summary": "t1p0:0: t1p0:0: t6p0:0: t1p0:0:"
+    },
+    {
+      "placement": 1364,
+      "object": "pop_Str_sham_in_transfer.tmb",
+      "day": 1400017,
+      "night": 1400017,
+      "effect": "Env_Port03",
+      "nodes": 6,
+      "node_summary": "t4p0:0: t2p0:0: t1p0:0: t4p0:0: t6p0:0: t4p0:0:"
+    },
+    {
+      "placement": 1365,
+      "object": "pop_Str_sham_in_transfer.tmb",
+      "day": 1400017,
+      "night": 1400017,
+      "effect": "Env_Port03",
+      "nodes": 6,
+      "node_summary": "t4p0:0: t2p0:0: t1p0:0: t4p0:0: t6p0:0: t4p0:0:"
+    },
+    {
+      "placement": 1377,
+      "object": "r01_Env_skeleton4.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1378,
+      "object": "r01_Env_skeleton4.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1379,
+      "object": "r01_Env_skeleton4.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1380,
+      "object": "r01_Env_skeleton4.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1381,
+      "object": "r01_Env_skeleton4.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1382,
+      "object": "r01_Env_skeleton1.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1383,
+      "object": "r01_Env_skeleton1.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1384,
+      "object": "r01_Env_skeleton1.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1385,
+      "object": "r01_Env_skeleton1.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1386,
+      "object": "r01_Env_skeleton1.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1387,
+      "object": "r01_Env_skeleton1.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1388,
+      "object": "r01_Env_skeleton1.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1389,
+      "object": "r01_Env_skeleton2.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1390,
+      "object": "r01_Env_skeleton2.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1391,
+      "object": "r01_Env_skeleton2.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1392,
+      "object": "r01_Env_skeleton2.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1393,
+      "object": "r01_Env_skeleton2.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1394,
+      "object": "r01_Env_skeleton2.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1395,
+      "object": "r01_Env_skeleton2.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1398,
+      "object": "r01_Env_skeleton3.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 1436,
+      "object": "r01_Env_skeleton5.tmb",
+      "day": 1400007,
+      "night": 1400007,
+      "effect": "Env_Fly01",
+      "nodes": 2,
+      "node_summary": "t4p0:0: t6p0:0:"
+    },
+    {
+      "placement": 6135,
+      "object": "r01_S_refinery2_01.tmb",
+      "day": 1400023,
+      "night": 1400023,
+      "effect": "ALTER_FX",
+      "nodes": 3,
+      "node_summary": "t2p0:0: t4p0:0: t4p0:0:"
+    },
+    {
+      "placement": 6358,
+      "object": "r01_Stru_man_melting_01.tmb",
+      "day": 1400026,
+      "night": 1400026,
+      "effect": "Env_Furnace",
+      "nodes": 4,
+      "node_summary": "t2p0:0: t2p0:0: t4p0:0: t4p0:0:"
+    }
+  ],
+  "skill_fx_asset_summary": "SKILL_FX_ASSETS lanes=615 unique_bindings=247 missing_source_bindings=32 missing_definitions=3 empty_definitions=0 documents=5 parent_graph=model_to_particle_verified",
+  "source_fx_gaps": [
+    "SKILL_FX_MISSING_BINDING skill=3007 stage=2 id=1000006",
+    "SKILL_FX_MISSING_BINDING skill=3026 stage=2 id=1000106",
+    "SKILL_FX_MISSING_BINDING skill=3026 stage=3 id=1000111",
+    "SKILL_FX_MISSING_BINDING skill=3027 stage=2 id=1000126",
+    "SKILL_FX_MISSING_BINDING skill=3029 stage=3 id=1000176",
+    "SKILL_FX_MISSING_BINDING skill=3043 stage=3 id=1000256",
+    "SKILL_FX_MISSING_BINDING skill=3061 stage=3 id=1000276",
+    "SKILL_FX_MISSING_BINDING skill=3103 stage=3 id=1000316",
+    "SKILL_FX_MISSING_BINDING skill=3115 stage=3 id=1000371",
+    "SKILL_FX_MISSING_BINDING skill=3124 stage=2 id=1000386",
+    "SKILL_FX_MISSING_BINDING skill=3124 stage=3 id=1000391",
+    "SKILL_FX_MISSING_BINDING skill=3126 stage=3 id=1000411",
+    "SKILL_FX_MISSING_BINDING skill=3127 stage=3 id=1000431",
+    "SKILL_FX_MISSING_BINDING skill=3128 stage=2 id=1000446",
+    "SKILL_FX_MISSING_BINDING skill=3132 stage=3 id=1000531",
+    "SKILL_FX_MISSING_BINDING skill=3161 stage=3 id=1000631",
+    "SKILL_FX_MISSING_BINDING skill=3162 stage=2 id=1000646",
+    "SKILL_FX_MISSING_BINDING skill=3163 stage=2 id=1000666",
+    "SKILL_FX_MISSING_BINDING skill=3218 stage=3 id=1000971",
+    "SKILL_FX_MISSING_BINDING skill=3219 stage=3 id=1000991",
+    "SKILL_FX_MISSING_BINDING skill=3222 stage=3 id=1000751",
+    "SKILL_FX_MISSING_BINDING skill=3223 stage=3 id=1000771",
+    "SKILL_FX_MISSING_BINDING skill=3224 stage=3 id=1000791",
+    "SKILL_FX_MISSING_DEFINITION skill=3226 stage=0 id=1000821 document=fxPCRaceDevGar.tfx effect=PDG101_CST01",
+    "SKILL_FX_MISSING_BINDING skill=3227 stage=3 id=1000851",
+    "SKILL_FX_MISSING_BINDING skill=3230 stage=3 id=1000911",
+    "SKILL_FX_MISSING_BINDING skill=3244 stage=3 id=1001011",
+    "SKILL_FX_MISSING_BINDING skill=3261 stage=3 id=1001031",
+    "SKILL_FX_MISSING_BINDING skill=3262 stage=3 id=1001051",
+    "SKILL_FX_MISSING_DEFINITION skill=3303 stage=2 id=1001086 document=fxPCRaceDevGar.tfx effect=PDG102_ATV",
+    "SKILL_FX_MISSING_BINDING skill=3304 stage=0 id=1001504",
+    "SKILL_FX_MISSING_BINDING skill=3309 stage=3 id=1001171",
+    "SKILL_FX_MISSING_BINDING skill=3315 stage=3 id=1001211",
+    "SKILL_FX_MISSING_DEFINITION skill=3326 stage=2 id=1001366 document=fxPCRaceDevGar.tfx effect=PDG102_ATV",
+    "SKILL_FX_MISSING_BINDING skill=3343 stage=3 id=1001471"
+  ],
+  "cpu_checks": {
+    "native_client_skill": "passed; 984 tribe visual profiles and unique animation file loading",
+    "native_main_ui_interaction": "passed",
+    "native_skill_authority": "passed; isolated profiles",
+    "native_skill_impact": "passed; isolated profiles",
+    "native_skill_feedback": "passed",
+    "world_combat_presentation": "passed",
+    "native_world_presentation": "passed",
+    "world_scene_fidelity": "passed after distinguishing source asset gaps; 13440 assertions"
+  },
+  "local_logs": ".migration-local\\mandara-skills-fx-20261026",
+  "remaining": "See guides/MANDARA_FIELD_AND_SKILL_FX.md; source gaps, specialized skills, tooltip parity, parent orientation, early dispels and visual acceptance remain open.",
+  "package_checks": {
+    "workspace": "passed --skip-runtime",
+    "user_client": "passed --skip-runtime",
+    "manifest_files_per_client": 1731,
+    "bytes_per_client": 704375745
+  },
+  "existing_optional_icon_gaps": [
+    23828,
+    23829,
+    23830
+  ],
+  "implementation_commits": {
+    "_remake": "46271f3821733b217a2a75f5b048e6020aaa2757",
+    "_client": "205593526ddd2b8daf6ac4ba424dad6b7b8ebdc0",
+    "_server": "b4a4ed607e726c3c59261cc5bae482689af8b906",
+    "_references": "eb248ef50bd2d0f5ec1bf0a59d904d62eacd63dc"
+  }
+}

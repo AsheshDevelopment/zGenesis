@@ -1,0 +1,123 @@
+Read-only inspection. Original executable/DLLs are never executed.
+
+HTLauncher.exe SHA256=03d4587c4f87eeb71eb8be288b765836ccf8a1f11d49760d48239c6496c73903
+
+Intro resource load explicitly selects UI sprite type 6
+0x1001ADFF: lea eax, [esi + 0x1466]
+0x1001AE05: push eax
+0x1001AE06: push eax
+0x1001AE07: push 6
+0x1001AE09: lea eax, [ebp - 0x210]
+0x1001AE0F: push eax
+0x1001AE10: mov ecx, esi
+0x1001AE12: call 0x100146b6
+
+HT3DHeaven.dll SHA256=b818b89edbc9f8e49bb1b79200371740eaa157dabac23bbf1e2d52e40ff99941
+
+Factory type-6 branch constructs UI sprite
+0x20008E1D: push 0x320
+0x20008E22: call 0x200505f0
+0x20008E27: pop ecx
+0x20008E28: mov dword ptr [ebp - 0x14], eax
+0x20008E2B: test eax, eax
+0x20008E2D: mov dword ptr [ebp - 4], 3
+0x20008E34: je 0x20008e3f
+0x20008E36: mov ecx, eax
+0x20008E38: call 0x20016c8c
+0x20008E3D: jmp 0x20008e41
+0x20008E3F: xor eax, eax
+0x20008E41: or dword ptr [ebp - 4], 0xffffffff
+0x20008E45: mov esi, eax
+0x20008E47: mov dword ptr [eax + 0x30c], 6
+0x20008E51: jmp 0x2000908e
+
+UI sprite texture load supplies mode 2
+0x20016D02: mov ecx, dword ptr [0x20078120]
+0x20016D08: mov edx, dword ptr [ecx]
+0x20016D0A: lea edi, [esi + 0x31c]
+0x20016D10: push edi
+0x20016D11: lea edi, [esi + 0x318]
+0x20016D17: push edi
+0x20016D18: push 2
+0x20016D1A: push eax
+0x20016D1B: add esi, 0x314
+0x20016D21: push esi
+0x20016D22: mov byte ptr [ebp - 4], 1
+0x20016D26: call dword ptr [edx + 0x24c]
+
+Packed texture load forwards the native mode to renderer +74
+0x200094CD: mov ecx, dword ptr [esi + 4]
+0x200094D0: push eax
+0x200094D1: push dword ptr [ebp + 0x10]
+0x200094D4: lea eax, [ebp - 0x3c]
+0x200094D7: push eax
+0x200094D8: push dword ptr [ebp + 0xc]
+0x200094DB: lea eax, [ebp + 8]
+0x200094DE: push eax
+0x200094DF: call dword ptr [ebx + 0x74]
+
+HTDirect3D.dll SHA256=f6fcff9ceb96461f58ecc97d06b821e78f685f4707b59aa738a77d7786c0431a
+
+Memory mode 2 selects exact FF0000F0 key, one mip, two filter-4 requests
+0x3000A347: mov eax, dword ptr [esp + 0x64]
+0x3000A34B: mov ecx, dword ptr [esp + 0x60]
+0x3000A34F: lea edx, [esp + 0x58]
+0x3000A353: push edx
+0x3000A354: push 0
+0x3000A356: push esi
+0x3000A357: mov edx, dword ptr [edi + 0x2d5e4]
+0x3000A35D: push 0xff0000f0
+0x3000A362: push 4
+0x3000A364: push 4
+0x3000A366: push 1
+0x3000A368: push 0
+0x3000A36A: push 0
+0x3000A36C: push 1
+0x3000A36E: push ebx
+0x3000A36F: push ebp
+0x3000A370: push eax
+0x3000A371: push ecx
+0x3000A372: push edx
+0x3000A373: call 0x3000c080
+
+File mode 2 uses the same key and one mip
+0x3000A47B: mov ecx, dword ptr [esp + 0x54]
+0x3000A47F: lea edx, [esp + 0x58]
+0x3000A483: push edx
+0x3000A484: push 0
+0x3000A486: push esi
+0x3000A487: push 0xff0000f0
+0x3000A48C: push 4
+0x3000A48E: push 4
+0x3000A490: push 1
+0x3000A492: push 0
+0x3000A494: push 0
+0x3000A496: push 1
+0x3000A498: push ebx
+0x3000A499: push ebp
+0x3000A49A: call 0x30093680
+0x3000A49F: push eax
+0x3000A4A0: mov eax, dword ptr [edi + 0x2d5e4]
+0x3000A4A6: push eax
+0x3000A4A7: jmp 0x3000a454
+
+HTSound.dll SHA256=ced708ab4674a7fded2849df219fd98f1e46c910939e895f4c33c357b52db820
+
+2D sample starts on supplied pool handle: same left/right volume and finite loop request
+0x40001139: mov eax, dword ptr [esp + 0x10]
+0x4000113D: push eax
+0x4000113E: push eax
+0x4000113F: push esi
+0x40001140: call dword ptr [0x4000c1ac]
+0x40001146: mov eax, dword ptr [esp + 0xc]
+0x4000114A: push eax
+0x4000114B: push esi
+0x4000114C: call dword ptr [0x4000c1b0]
+0x40001152: push esi
+0x40001153: call dword ptr [0x4000c1b4]
+0x40001159: xor eax, eax
+0x4000115B: pop esi
+
+Native source: HTLoading.cpp 45-60 loads UI before sound/BGM. HTEngineHandler.cpp 3215-3220 loads ETCSound.hpk as 2D samples. Intro Cancel/OK request sound 33523 once; checkbox does not request a sound. Native Cancel sets its flag; HTIntroManager.cpp 940-945 cleans up next update and returns RETURNTYPE_EXIT_INTRO. HTLauncher.cpp 153-157 deletes the intro manager and exits the outer loop. There is no confirmation dialog on this path.
+
+All five selected BMPs are 24-bit BI_RGB. The adapter changes only the exact native RGB (0,0,240) key to transparent black, preserving all other RGB values as opaque. D3DX ColorKey documentation corroborates transparent-black replacement; this does not prove all D3DX8 conversion/filter/raster or Miles acoustic parity.

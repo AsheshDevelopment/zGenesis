@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-25",
+  "scope": "Native safe-zone carry, logged impact texture-name failure, and offline monster routes",
+  "launcher_sha256": "d48b68b472ade879777e622046d23f182489068d39cc2f7330153c4b2a8cfd10",
+  "build": "Release x64 OGRE SDL3",
+  "staged_files_each": 1699,
+  "staged_bytes_each": 678234740,
+  "dependency_closure_files": 2537,
+  "preservation": {
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "launcher_sha256": "d48b68b472ade879777e622046d23f182489068d39cc2f7330153c4b2a8cfd10",
+      "userdata_unchanged": 44,
+      "packs_unchanged": 148
+    },
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "launcher_sha256": "d48b68b472ade879777e622046d23f182489068d39cc2f7330153c4b2a8cfd10",
+      "userdata_unchanged": 0,
+      "packs_unchanged": 148
+    }
+  },
+  "cpu_fixtures": {
+    "native_pc_carry_sockets": {
+      "result": "passed",
+      "checks": 224,
+      "tribes": 8,
+      "weapon_types": 12,
+      "equipped_parts": 41,
+      "successful_socket_matrices": 78,
+      "absent_authored_carry_sockets": 4
+    },
+    "world_combat_presentation": {
+      "result": "passed",
+      "checks": 4284,
+      "weapon_profiles": 13,
+      "real_hpk_resource_namespace_required": true
+    },
+    "offline_monster_navigation": {
+      "result": "passed",
+      "checks": 16911,
+      "actors_moved": 55,
+      "walking_frames": 16138,
+      "maximum_route_attempts_per_tick": 2,
+      "sparse_node_budget": 256,
+      "soft_planning_budget_microseconds": 2500,
+      "fixed_route": "passed",
+      "action_lock": "passed",
+      "obstacle_detour": "passed",
+      "actor_collision": "passed"
+    },
+    "offline_world_gameplay": "passed"
+  },
+  "staged_fixtures": [
+    "native_pc_carry_sockets",
+    "world_combat_presentation",
+    "offline_monster_navigation"
+  ],
+  "static_verification": "passed_both_outputs",
+  "live_game_renderer_server_launches": 0,
+  "audio_output_device": "not started",
+  "visual_acceptance": "pending",
+  "broader_goal": "paused",
+  "full_plan_completed_tasks": 45,
+  "full_plan_tasks": 102,
+  "committed": false,
+  "logs": [
+    ".migration-local/safezone-last-build.log",
+    ".migration-local/safezone-client-build-stage.log",
+    ".migration-local/safezone-navigation-acceptance.log",
+    ".migration-local/safezone-navigation-details.log",
+    ".migration-local/safezone-staged-cpu.log",
+    ".migration-local/safezone-final-static.log",
+    ".migration-local/safezone-legacy-static.log",
+    ".migration-local/safezone-navigation-20261025/preservation.json"
+  ],
+  "remaining": [
+    "Live weapon/impact/navigation acceptance",
+    "Other FX node types and complete skill/projectile lifecycle",
+    "Native collision/TBO parity",
+    "Full monster AI probabilities, formations and server network/scheduler parity",
+    "Missing monster 2718 catalog/assets and absent tribe/model carry sockets"
+  ]
+}

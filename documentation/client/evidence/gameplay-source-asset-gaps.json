@@ -1,0 +1,154 @@
+{
+  "type": "static reference audit, no client launch",
+  "binary_catalog": "C:\\_GitHub\\TantraSrc\\TantraClient\\system\\ClientRes.txl",
+  "binary_sha256": "ae7ede33a5c1e0690fb0ab3fe1b79ba04a2bc3f98b06ad4ab795435bc68e9aba",
+  "xml_reference": "B:\\__TANTRA\\TantraDataScripts\\Global\\ClientRes.xml",
+  "xml_sha256": "835007c2f84c0bfcb6b05494052c0e49f022ab6c6a564bd92df0153713728a08",
+  "unresolved_actor_ids": {
+    "monster": 2718,
+    "npc": 1457
+  },
+  "xml_actor_records": {
+    "monster": {
+      "ID": "2718",
+      "Name": "\uc0dd\uc0b0\uc2dc\uc2a4\ud0ec\uc6a9\uad11\uc11d1",
+      "Comment": "\uad11\uc11d1",
+      "NumMesh": "1",
+      "BasicModel": "12229",
+      "Mesh1": "12229",
+      "Mesh2": "0",
+      "Mesh3": "0",
+      "Mesh4": "0",
+      "Mesh5": "0",
+      "Tex1": "13308",
+      "Tex2": "0",
+      "Tex3": "0",
+      "Tex4": "0",
+      "Tex5": "0",
+      "ItemR": "0",
+      "ItemRTex": "0",
+      "ItemL": "0",
+      "ItemLTex": "0",
+      "STD": "0",
+      "IDL": "0",
+      "WLK": "0",
+      "RUN": "0",
+      "ATK1": "0",
+      "ATK2": "0",
+      "HIT": "0",
+      "DIE": "0",
+      "Material_ID": "9991",
+      "MonFXID": "61229",
+      "Scale": "100",
+      "R": "0",
+      "G": "0",
+      "B": "0"
+    },
+    "npc": {
+      "ID": "1457",
+      "Region": "\ub9cc\ub2e4\ub77c\ub9c8\uc744",
+      "Name": "\uad50\uc5ed\uad00 \ubd80\ubc18",
+      "TMD": "11053",
+      "STD": "51823",
+      "MOV": "51824",
+      "IDLE": "51822",
+      "Material_ID": "9991",
+      "StateSoundID": "0",
+      "ClickSoundID": "31314",
+      "IdleFX": "0",
+      "MOVSound": "0"
+    }
+  },
+  "missing_actor_files": [
+    "resource/object/Monster/Mesh/W_Monster1.tmb",
+    "resource/object/Monster/MonsterTex/W_Monster1.dds",
+    "resource/object/NPC/Mesh/NPC_mandara_trader_R.tmb"
+  ],
+  "missing_skill_icons": [
+    {
+      "id": 23520,
+      "reference_file": "ICON_SKILL_100lv_02.bmp",
+      "loose_file_present": false
+    },
+    {
+      "id": 23521,
+      "reference_file": "ICON_SKILL_100lv_03.bmp",
+      "loose_file_present": false
+    },
+    {
+      "id": 23522,
+      "reference_file": "ICON_SKILL_100lv_04.bmp",
+      "loose_file_present": false
+    },
+    {
+      "id": 23523,
+      "reference_file": "ICON_SKILL_100lv_05.bmp",
+      "loose_file_present": false
+    },
+    {
+      "id": 23524,
+      "reference_file": "ICON_SKILL_100lv_06.bmp",
+      "loose_file_present": false
+    },
+    {
+      "id": 23525,
+      "reference_file": "ICON_SKILL_100lv_07.bmp",
+      "loose_file_present": false
+    },
+    {
+      "id": 23526,
+      "reference_file": "ICON_SKILL_100lv_08.bmp",
+      "loose_file_present": false
+    },
+    {
+      "id": 23822,
+      "reference_file": "ICON_SKILL_AV_AKHILA_ruj.BMP",
+      "loose_file_present": false
+    },
+    {
+      "id": 23823,
+      "reference_file": "ICON_SKILL_P_sthiratA.BMP",
+      "loose_file_present": false
+    },
+    {
+      "id": 23824,
+      "reference_file": "ICON_SKILL_AV_antarya.BMP",
+      "loose_file_present": false
+    },
+    {
+      "id": 23825,
+      "reference_file": "ICON_SKILL_AV_antaryavirati.BMP",
+      "loose_file_present": false
+    },
+    {
+      "id": 23826,
+      "reference_file": "ICON_SKILL_AV_tan.BMP",
+      "loose_file_present": false
+    },
+    {
+      "id": 23827,
+      "reference_file": "ICON_SKILL_AV_vAraNa.BMP",
+      "loose_file_present": false
+    },
+    {
+      "id": 23828,
+      "reference_file": "ICON_SKILL_AO_agnimaNi.BMP",
+      "loose_file_present": false
+    },
+    {
+      "id": 23829,
+      "reference_file": "ICON_SKILL_AO_pravara.BMP",
+      "loose_file_present": false
+    },
+    {
+      "id": 23830,
+      "reference_file": "ICON_SKILL_AO_rogazama.BMP",
+      "loose_file_present": false
+    }
+  ],
+  "archive_checks": "hpk_probe found no 100lv/rogazama entries in MAIN_SKILL.hpk and no W_Monster1 in MonsterTex.hpk",
+  "skill_archive_matches": {
+    "MAIN_SKILL.hpk": [],
+    "MAINUI.hpk": []
+  }
+}

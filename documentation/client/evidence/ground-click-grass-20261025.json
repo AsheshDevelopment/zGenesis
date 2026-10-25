@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-25",
+  "status": "built_staged_runtime_visual_acceptance_pending",
+  "installed": [
+    {
+      "root": "C:\\_GitHub\\tantra-dev-main\\_client",
+      "executable_sha256": "edac1811389f4124a946923157b4079cf8ac781f37b83b85b406a76c93ead25e",
+      "protected_files_unchanged": 148,
+      "hpk_files_unchanged": 148,
+      "package_static_verified": true
+    },
+    {
+      "root": "C:\\_GitHub\\TantraSrc\\_client",
+      "executable_sha256": "edac1811389f4124a946923157b4079cf8ac781f37b83b85b406a76c93ead25e",
+      "protected_files_unchanged": 195,
+      "hpk_files_unchanged": 148,
+      "package_static_verified": true
+    }
+  ],
+  "video": {
+    "path": "C:\\Users\\Ashesh\\Videos\\Recording 2026-10-25 224806.mp4",
+    "duration_seconds": 3.466633,
+    "width": 1020,
+    "height": 806,
+    "fps": 30
+  },
+  "ground_fx": {
+    "walkable": 1010009,
+    "blocked": 1010012,
+    "click_sound": 33525,
+    "loop_stops_with_movement": true
+  },
+  "grass": {
+    "previous_bias": [
+      -1,
+      -1
+    ],
+    "corrected_bias": [
+      1,
+      1
+    ],
+    "native_grass_textures_audited": 12,
+    "compressed_textures_in_current_map": 0,
+    "compressed_bc1_coverage_fixture_passed": true
+  },
+  "cpu_scene_checks": 9144,
+  "cpu_render_checks": 455,
+  "game_launched": false,
+  "renderer_launched": false,
+  "audio_device_started": false,
+  "commit_created": false,
+  "push_performed": false,
+  "notes": [
+    "Original user profile remained live during investigation; preservation comparison uses a fresh closed-client snapshot immediately before staging.",
+    "Initial CPU audit incorrectly assumed current map grass is compressed. Corrected audit confirms uncompressed DDS and separately tests compressed coverage support.",
+    "Grass depth-bias sign is confirmed against the supplied OGRE D3D11 source; actual moving-frame acceptance is pending."
+  ],
+  "logs": "C:\\_GitHub\\tantra-dev-main\\.migration-local\\ground-fx-grass-20261025"
+}

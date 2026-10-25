@@ -1,0 +1,130 @@
+{
+  "executable_sha256": "d455267a293231f464015306819a1eb4c6f98f542ed0e7949ac2b22ea663e82d",
+  "scenarios": [
+    {
+      "scenario": "create",
+      "exit_code": 0,
+      "characters": 1,
+      "deletion_backups": 0,
+      "load_steps": 10
+    }
+  ],
+  "captures": [
+    {
+      "file": "create-create.png",
+      "bytes": 1146671,
+      "sha256": "3419e9adce95e320cb74c1cb3f086d62e20ef0d02c58eefe819f06e1c1609bf2"
+    },
+    {
+      "file": "create-dialog-204.png",
+      "bytes": 983982,
+      "sha256": "f9e2a3c157a021566b6cc70635a1823fbac4ff4985ac77f8d2e37a63224ba811"
+    },
+    {
+      "file": "create-dialog-212.png",
+      "bytes": 979997,
+      "sha256": "c3d5593452fea614c43d89c509799fe024c1abf4e5aff4692f3a887da60a6984"
+    },
+    {
+      "file": "create-dialog-213.png",
+      "bytes": 993650,
+      "sha256": "876d9f2608dff09919dec390ccf71d77797f614e74b4b9cefd27be38db997b88"
+    },
+    {
+      "file": "create-dialog-235.png",
+      "bytes": 963051,
+      "sha256": "5f6dbdfa1a069b60b66c6880263e59d1cd42edec62c2982b12ea329838ba11e7"
+    },
+    {
+      "file": "create-dialog-237.png",
+      "bytes": 963529,
+      "sha256": "0994489f102af2e58cdd0a3a1ea9a77bc5f753ef9519b0848118b7c06569bafe"
+    },
+    {
+      "file": "create-dialog-238.png",
+      "bytes": 959722,
+      "sha256": "425075d7fec47402cb2ccdf23b5c01321d5b9d4076c7f2c5dc61beaee5c1c62c"
+    },
+    {
+      "file": "create-dialog-239.png",
+      "bytes": 969478,
+      "sha256": "5d298db011963ede7c4d55c80d09054cac431d579a6a939cb82edfae5fa34b44"
+    },
+    {
+      "file": "create-dialog-dragged.png",
+      "bytes": 969760,
+      "sha256": "33746b073c0a5ea679c780c8fc49f00326f7ad4403183d6a1ce49577a81801f8"
+    },
+    {
+      "file": "create-hud-compact.png",
+      "bytes": 920014,
+      "sha256": "5bb4da8ad013e350429bceaee40ac3744c59bd1e1207f5c7bb1cd80c1a1e5fdc"
+    },
+    {
+      "file": "create-hud-restored.png",
+      "bytes": 920770,
+      "sha256": "cf3b473deee3e337c0ec6a866638ae88ee7db0d474d5e40d938eea194a7340dc"
+    },
+    {
+      "file": "create-info.png",
+      "bytes": 1384929,
+      "sha256": "3349c08440811762c2071641ae9f608053731ef9659bd0213e8860fdb167b3b6"
+    },
+    {
+      "file": "create-inventory-moved.png",
+      "bytes": 983635,
+      "sha256": "b3c0b8e4d62b8090c8aa8cc358f0e87585570d6700f4650416d3bb229511d6e9"
+    },
+    {
+      "file": "create-mandara.png",
+      "bytes": 1387656,
+      "sha256": "3ee629e324388b56ca9f361cea71c78c5d21040cf747f3a66c0db2d8add871e0"
+    },
+    {
+      "file": "create-mandara1st-world.png",
+      "bytes": 920577,
+      "sha256": "9cb753a4f7324e80838f95343010b0c59500f3b7cbffe657393a8c5215bcbab5"
+    },
+    {
+      "file": "create-native-loading.png",
+      "bytes": 1389380,
+      "sha256": "14ee7f46421e6111a7f669d0a06435074ab642daf1ee39161639fd2014aac3d8"
+    },
+    {
+      "file": "create-select.png",
+      "bytes": 1418840,
+      "sha256": "04e215788e64bc7429967d5b601ee717775e426ea0be09a5709f9b9d2b169444"
+    },
+    {
+      "file": "create-weapon-equipped.png",
+      "bytes": 981604,
+      "sha256": "afe2225eb3824c81df0f33055914b2faad06372ca014739e7e1d2ed62a368fab"
+    },
+    {
+      "file": "create-world-walked.png",
+      "bytes": 921644,
+      "sha256": "9b94cd033f80d15710465b9302b9cb691879275a5726c4d3b303c0f31efa8c5d"
+    }
+  ],
+  "world_entry": "offline Mandara with native population, SDL world walking and inventory transfer; advanced gameplay remains pending",
+  "native_face_height_camera": "model bounds and native face camera applied",
+  "main_camera_startup": "native source oracle; render gate after 11 camera updates; GPU camera verified",
+  "main_hud": "13 source panels; SDL3 dialog toggles, shortcuts, drag, skill tab, close, escape and native layout save verified",
+  "native_status_authority": "authored Global coefficients/parameters and selected zone settings; post-CHAR_INIT computed status reaches HUD; gameplay remains incomplete",
+  "frame_statistics": "live OGRE counters; visible upper-left GPU sprite; FPS sampled from real elapsed time",
+  "quality": "HIGH default with original CFG values; native map fog and actual realtime character caster/receiver GPU passes verified",
+  "intro_alpha": "original d01_uniq_04_TGA.dds and d01_uniq_06_TGA.dds use alpha-aware native rigid materials",
+  "full_equipment_preview": "pending",
+  "font_pixel_parity": "unproven",
+  "test_mode": "offline",
+  "test_account": "ashesh",
+  "runtime_server_address": "127.0.0.1",
+  "mandara_routes": [
+    1
+  ],
+  "over_population_fixture": null,
+  "mandara_alignment": "native 513x513 vertex grid, direct terrain Z, 6503 original placements and independently checked terrain/object-floor spawn",
+  "compressed_tail_mips": "OGRE 14.6.1 D3D11 omits final two levels; uploaded prefix checked",
+  "qa_user_data_parent": "C:\\_GitHub\\TantraSrc\\_client\\userdata",
+  "normal_user_files_unchanged": true
+}

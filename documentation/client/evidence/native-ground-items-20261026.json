@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-26",
+  "goal_status": "active_incomplete",
+  "scope": "Native manual item confirmation, offline ground publication and partial pickup stacking",
+  "launches": {
+    "game": 0,
+    "renderer": 0,
+    "server": 0,
+    "audio_device": 0
+  },
+  "cpu": {
+    "passed": [
+      "native_main_ui_interaction",
+      "offline_character_persistence",
+      "offline_world_gameplay"
+    ],
+    "main_ui_checks": 688,
+    "native_stack": {
+      "catalog": 7001,
+      "maximum": 20
+    },
+    "sqlite_drop_pickup": "verified from native MOB blob",
+    "sqlite_rejected_update": "saved inventory unchanged; session disconnected",
+    "persistence_scope": "inventory; cargo/equipment code and rendered acceptance remain open",
+    "partial_merge": "retain ground remainder before empty-slot pickup",
+    "request_cooldown_ms": 1000,
+    "uint32_wrap": "passed"
+  },
+  "build": {
+    "configuration": "Release x64",
+    "compiled_sha256": "65311ca71900a32f6c1b37d948e66088392e79a8f03a5eaece7a2ae1c630287c",
+    "manifest_files_each": 1731,
+    "bytes_each": 704419265,
+    "static_verification": "both passed; runtime not run"
+  },
+  "preservation": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "hpk_unchanged": 148,
+      "protected_files_unchanged": 148,
+      "launcher_sha256": "65311ca71900a32f6c1b37d948e66088392e79a8f03a5eaece7a2ae1c630287c"
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "hpk_unchanged": 148,
+      "protected_files_unchanged": 197,
+      "launcher_sha256": "65311ca71900a32f6c1b37d948e66088392e79a8f03a5eaece7a2ae1c630287c"
+    }
+  },
+  "source_references": {
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\server.cpp": "6639ca68a1e18c121e1e8a60fd2c7bbdd8f07b1d73540f645509e58ad9b6da7a",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\Basedef.h": "06d0028f615afcc34c0f8aa18d9dfe8af5c9a748ca5144b01dff8d8d0941ed22",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTItemControl.cpp": "51fa0f6689cc7fea57d2e3d4fc7b42e999e86e22bd0aa77718107ee66121aa8c",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTEquipInventory.cpp": "1bb0ec8339bac2dc063974f868a6944d6cf684cb2efdef6b8dcad35cdb7ed752",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTInterface.cpp": "ec0c0942971f74bcc50f3ad3d79ec17a4dfac28b79ce5cdebde112bc9cf43844",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTMessageDef.h": "304a965dbdd5b19af8472efce60ad4d710b636d7a574d72a5f4ee63649324a00"
+  },
+  "logs": {
+    ".migration-local\\native-ground-items-20261026\\build-stage.log": "9aa9ebe0c8a24db398b6e80bc92c6dffa09c5076f8524a505c39d306ba33b86a",
+    ".migration-local\\native-ground-items-20261026\\cpu-build-corrected.log": "7416034b99096dbccedb928f3b647483b344d3693d2f5b3f99f26c5c8318a0a0",
+    ".migration-local\\native-ground-items-20261026\\cpu-build-final.log": "8bab18fca99739ef7f9486c48646fcc88dc5a5faa9aedcac3aedeb269b17eb33",
+    ".migration-local\\native-ground-items-20261026\\cpu-build.log": "984aea36fbbb1578eae86d0ddc95d3f6a7c99f8001c8aa089ddd282406335048",
+    ".migration-local\\native-ground-items-20261026\\cpu-tests-final.log": "1de7935434e7e83d1b21576bee237ef39d1251e7b9abb724d384977e6136a002",
+    ".migration-local\\native-ground-items-20261026\\cpu-tests.log": "86f057184382ac2538bee4be7fa46f1a3a80c926133944d229dccb4d0d521e25",
+    ".migration-local\\native-ground-items-20261026\\stage-user.log": "8ea936f128ff6c50ab6f3b69fedbce4a6db58eb2d99d37b3fc61027b3b9668d2",
+    ".migration-local\\native-ground-items-20261026\\static-user.log": "27e799f008e46a79d324231f03408161f2415e87f33bd41bf0952c8c7d4fd536",
+    ".migration-local\\native-ground-items-20261026\\static-workspace.log": "27e799f008e46a79d324231f03408161f2415e87f33bd41bf0952c8c7d4fd536"
+  },
+  "remaining": [
+    "Rendered drag/confirmation/cancellation and equipment/cargo acceptance",
+    "Pickup/drop audio and full native result messages",
+    "Ownership/release, decay, specialized items and online authority",
+    "Full phased client plan"
+  ]
+}

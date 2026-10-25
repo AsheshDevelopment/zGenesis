@@ -1,0 +1,95 @@
+{
+  "artifact_sha256": "bde257be542e6e564a2c6c7db08de556644eb6f5e0d9434cbc1e99aa9bdef50c",
+  "runtime_processes": 1,
+  "world_group": 1,
+  "route": 1,
+  "result": "partial acceptance; scripted camera/waypoint projection failed",
+  "exit_code": 8,
+  "confirmed": {
+    "CHAR_INIT_to_Mandara": true,
+    "Chakra_UI": true,
+    "learning_UI": true,
+    "quick_item_SQL": true,
+    "repair_UI": true,
+    "purchase_and_sale_captures": true,
+    "movement_SQL": true
+  },
+  "not_reached": [
+    "warehouse UI item/currency transfers",
+    "save-point UI persistence",
+    "clean success exit"
+  ],
+  "errors": [
+    {
+      "severity": "error",
+      "code": "WORLD_RUNTIME_FAILED",
+      "message": "Next town navigation point is not visible through the normal camera",
+      "source": "SDL3 world scenario"
+    },
+    {
+      "severity": "error",
+      "code": "INTRO_CHARACTER_RUNTIME_FAILED",
+      "message": "scenario=closure real SDL3 native UI, rendered load gates, triangle selection and SQLite responses",
+      "source": "SdlCharacterProbe"
+    }
+  ],
+  "SQLite": {
+    "name": "MandaraNpc",
+    "level": 2,
+    "cell": [
+      395,
+      220
+    ],
+    "chakra": [
+      19,
+      12,
+      10,
+      10
+    ],
+    "learned_slots": [
+      [
+        4,
+        1
+      ]
+    ],
+    "money": 99797,
+    "inventory0_index": 1,
+    "inventory0_durability": 4500,
+    "potion19_count": 1,
+    "cargo": [
+      {
+        "money": 0,
+        "revision": 2
+      }
+    ]
+  },
+  "normal_profile": {
+    "path": "C:\\_GitHub\\TantraSrc\\_client\\userdata",
+    "files_with_timestamp_after_session_start": [],
+    "before_after_hash_comparison": "not recorded: original harness asserted before serializing this evidence; future harness now writes both snapshots before acceptance assertions"
+  },
+  "captures": [
+    "closure-buy-confirm.png",
+    "closure-chakra-spent.png",
+    "closure-delete-cancel.png",
+    "closure-delete-result.png",
+    "closure-face-camera.png",
+    "closure-hair-camera.png",
+    "closure-merchant.png",
+    "closure-middle-slot-info.png",
+    "closure-native-loading.png",
+    "closure-npc-dialogue.png",
+    "closure-purchased.png",
+    "closure-quantity.png",
+    "closure-quickslot-registered.png",
+    "closure-quickslot-used.png",
+    "closure-repair-mode.png",
+    "closure-repaired.png",
+    "closure-sale-confirm.png",
+    "closure-skill-learned.png",
+    "closure-sold.png",
+    "closure-three-slots.png",
+    "closure-world-entry.png"
+  ],
+  "rerun": false
+}

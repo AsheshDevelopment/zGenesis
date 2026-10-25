@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-25",
+  "build": "Release x64 OGRE 14.6.1 D3D11 SDL3",
+  "sha256": "bccd039c3141ad69db9abf0ab9647f6a2776111187653ed3f4876d98308fc88c",
+  "outputs": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "launcher_sha256": "bccd039c3141ad69db9abf0ab9647f6a2776111187653ed3f4876d98308fc88c",
+      "hpk_unchanged": 148,
+      "userdata_unchanged": 0
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "launcher_sha256": "bccd039c3141ad69db9abf0ab9647f6a2776111187653ed3f4876d98308fc88c",
+      "hpk_unchanged": 148,
+      "userdata_unchanged": 44
+    }
+  },
+  "files_per_output": 1709,
+  "bytes_per_output": 703579915,
+  "implementation": [
+    "shared field/target/combat TFX runtime",
+    "particle templates 0-5 and native incremental Euler drawing",
+    "type-2 billboard adapter and animated type-4 models",
+    "type-5 attached-actor point lights",
+    "type-6 sound active/visibility transitions",
+    "type-7 scalar camera jitter",
+    "HTSpec per-family visibility and priority rules",
+    "map CHARACTERLIGHT; original TMB and map material terms",
+    "owner-aware skinned FX cleanup; cached bounded local lights"
+  ],
+  "cpu": {
+    "particle_modes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "particle_rotation": "native axes and per-update cadence; finite validation passed",
+    "combat_checks": 10055,
+    "pc_fx_bindings": 905,
+    "weapon_profiles": 13,
+    "combat_draw_uploads": 51,
+    "combat_sprites": 19741,
+    "fx_wave_samples": 13,
+    "player_wave_samples": 24,
+    "monster_animation_clips": 8,
+    "jitter": "passed actual catalog IDs 1010015/1010016 and distance gate",
+    "dynamic_light_updates": 179,
+    "scene_checks": 1022,
+    "mandara_placements": 55,
+    "field_day_night": "passed",
+    "scene_draw_uploads": 229,
+    "scene_sprites": 18313,
+    "scene_node_warnings": 0,
+    "combat_node_warnings": 0,
+    "scene_texture_materials": 10,
+    "scene_repeating_uv_vertices": 1734,
+    "staged_quality": "HIGH, per-family values verified",
+    "shader_compile_link": "world textured, alpha, terrain variants, socket, sky, clouds, stars, sun/moon, flare; former normal/UV signature regression rejected",
+    "counts_scope": "CPU fixture coverage; upload/sprite counts depend on frame-creation budget timing and are not FPS measurements"
+  },
+  "native_evidence": {
+    "dll": "C:\\_GitHub\\TantraSrc\\TantraClient\\HT3DHeaven.dll",
+    "sha256": "b818b89edbc9f8e49bb1b79200371740eaa157dabac23bbf1e2d52e40ff99941",
+    "collector": "_remake/tools/inspect-native-particles.py",
+    "execution": "read-only pefile/capstone; DLL never executed"
+  },
+  "static_package": "both outputs passed original layout, x64/import resolution and exact icon payload",
+  "runtime": "no game, renderer, server or audio device launched",
+  "git": "local uncommitted changes; no push requested",
+  "broader_goal": "paused; 45/102 acceptance gates unchanged",
+  "remaining": [
+    "visual/audio offline acceptance",
+    "full parent/socket and moving-emitter graph",
+    "all billboard orientation/UV-scroll/blend and model Euler variants",
+    "non-point FX light types and exact native per-object selection",
+    "whole-engine RNG/raster parity and exhaustive skill/projectile routes",
+    "full water/TME/weather/grass, exact sky/stars/flares/shadow and dynamic-loading parity",
+    "transient mesh-material cache reuse/eviction and long-session resource acceptance"
+  ],
+  "local_logs": "C:\\_GitHub\\tantra-dev-main\\.migration-local\\fx-native-20261025",
+  "build_log": ".migration-local\\fx-native-20261025\\final-owner-build.log"
+}

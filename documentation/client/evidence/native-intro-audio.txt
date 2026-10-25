@@ -1,0 +1,21 @@
+HTSound.dll SHA256=ced708ab4674a7fded2849df219fd98f1e46c910939e895f4c33c357b52db820
+Read-only inspection; original DLL is never executed.
+Native source HTLoading.cpp:45-60 starts stream sound and calls PlayIntroBGM before logo presentation.
+HTEngineHandler.cpp:11974-11996 consumes rand()%2, selects 30015 in both branches, then requests PlaySound(id,2).
+Wrapper forwards the provided loop count unchanged to AIL_set_stream_loop_count, then supplies the stream volume to both channels.
+0x40003441: mov esi, dword ptr [esp + 8]
+0x40003445: test esi, esi
+0x40003447: jne 0x40003452
+0x40003449: mov eax, 0x80004005
+0x4000344E: pop esi
+0x4000344F: ret 0xc
+0x40003452: mov eax, dword ptr [esp + 0xc]
+0x40003456: push eax
+0x40003457: push esi
+0x40003458: call dword ptr [0x4000c104]
+0x4000345E: mov eax, dword ptr [esp + 0x10]
+0x40003462: push eax
+0x40003463: push eax
+0x40003464: push esi
+0x40003465: call dword ptr [0x4000c134]
+This proves forwarding and call order; it does not prove complete Miles/MCI acoustic, latency or mixing parity.

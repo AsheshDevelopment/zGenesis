@@ -1,0 +1,1075 @@
+{
+  "date": "2026-10-23",
+  "result": "incomplete; single runtime attempt stopped at warehouse NPC visibility",
+  "runtime": {
+    "executable_sha256": "c7826a8d664c4a73f14b8d2e145052592fff1d6eeb8d4d0232cd35e6875c40a4",
+    "started_unix": 1792751810.1678965,
+    "runtime_processes": 1,
+    "world_group": 1,
+    "server_zone": 1,
+    "scenario": "saved-services",
+    "normal_profile": "C:\\_GitHub\\TantraSrc\\_client\\userdata",
+    "exit_code": 8,
+    "exception": null,
+    "diagnostics_fresh": true,
+    "normal_profile_unchanged": true
+  },
+  "failure": {
+    "world_phase": 6,
+    "frames": 885,
+    "position": [
+      3942.47,
+      68.1691,
+      9262.47
+    ],
+    "camera_valid": true,
+    "eye": [
+      3.94425,
+      0.0882737,
+      9.26384
+    ],
+    "target": [
+      3.76606,
+      -0.886186,
+      9.12718
+    ]
+  },
+  "before": {
+    "roster": [
+      {
+        "slot": 0,
+        "name": "MandaraNpc",
+        "group": 1,
+        "cell": [
+          395,
+          220
+        ],
+        "save_cell": [
+          497,
+          194
+        ],
+        "zone": 1,
+        "save_zone": 1,
+        "chakra": [
+          19,
+          12,
+          10,
+          10
+        ],
+        "skills": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "money": 99797,
+        "items": {
+          "0": {
+            "index": 1,
+            "count": 1,
+            "bytes": "01009411000000000100000000000000"
+          },
+          "19": {
+            "index": 3001,
+            "count": 1,
+            "bytes": "b90b0000000000000100000000000000"
+          },
+          "20": {
+            "index": 0,
+            "count": 0,
+            "bytes": "00000000000000000000000000000000"
+          }
+        }
+      },
+      {
+        "slot": 1,
+        "name": "SecondSlot",
+        "group": 1,
+        "cell": [
+          391,
+          248
+        ],
+        "save_cell": [
+          499,
+          190
+        ],
+        "zone": 1,
+        "save_zone": 1,
+        "chakra": [
+          19,
+          10,
+          11,
+          10
+        ],
+        "skills": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "money": 100000,
+        "items": {
+          "0": {
+            "index": 26,
+            "count": 1,
+            "bytes": "1a00100e000000000100000000000000"
+          },
+          "19": {
+            "index": 0,
+            "count": 0,
+            "bytes": "00000000000000000000000000000000"
+          },
+          "20": {
+            "index": 0,
+            "count": 0,
+            "bytes": "00000000000000000000000000000000"
+          }
+        }
+      }
+    ],
+    "cargo": {
+      "money": 0,
+      "revision": 2,
+      "item119": {
+        "index": 0,
+        "count": 0,
+        "bytes": "00000000000000000000000000000000"
+      }
+    }
+  },
+  "after": {
+    "roster": [
+      {
+        "slot": 0,
+        "name": "MandaraNpc",
+        "group": 1,
+        "cell": [
+          394,
+          97
+        ],
+        "save_cell": [
+          497,
+          194
+        ],
+        "zone": 1,
+        "save_zone": 1,
+        "chakra": [
+          19,
+          12,
+          10,
+          10
+        ],
+        "skills": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "money": 99797,
+        "items": {
+          "0": {
+            "index": 1,
+            "count": 1,
+            "bytes": "01009411000000000100000000000000"
+          },
+          "19": {
+            "index": 3001,
+            "count": 1,
+            "bytes": "b90b0000000000000100000000000000"
+          },
+          "20": {
+            "index": 0,
+            "count": 0,
+            "bytes": "00000000000000000000000000000000"
+          }
+        }
+      },
+      {
+        "slot": 1,
+        "name": "SecondSlot",
+        "group": 1,
+        "cell": [
+          391,
+          248
+        ],
+        "save_cell": [
+          499,
+          190
+        ],
+        "zone": 1,
+        "save_zone": 1,
+        "chakra": [
+          19,
+          10,
+          11,
+          10
+        ],
+        "skills": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "money": 100000,
+        "items": {
+          "0": {
+            "index": 26,
+            "count": 1,
+            "bytes": "1a00100e000000000100000000000000"
+          },
+          "19": {
+            "index": 0,
+            "count": 0,
+            "bytes": "00000000000000000000000000000000"
+          },
+          "20": {
+            "index": 0,
+            "count": 0,
+            "bytes": "00000000000000000000000000000000"
+          }
+        }
+      }
+    ],
+    "cargo": {
+      "money": 0,
+      "revision": 2,
+      "item119": {
+        "index": 0,
+        "count": 0,
+        "bytes": "00000000000000000000000000000000"
+      }
+    }
+  },
+  "post_exit_checks": {
+    "source_checkpoint_hash_unchanged": true,
+    "normal_profile_hashes_unchanged": true,
+    "normal_profile_file_count": 46,
+    "sqlite_quick_check": "ok",
+    "inventory_all_72_slots_unchanged": true,
+    "cargo_payload_unchanged": true,
+    "unselected_character_unchanged": true,
+    "quick_slots_sha256_unchanged": true,
+    "normal_profile_still_unchanged_after_staging": true
+  },
+  "inventory": {
+    "occupied_slots": 2,
+    "total_item_count": 2,
+    "slots": [
+      {
+        "slot": 0,
+        "index": 1,
+        "count": 1
+      },
+      {
+        "slot": 19,
+        "index": 3001,
+        "count": 1
+      }
+    ]
+  },
+  "cargo": {
+    "occupied_slots": 0,
+    "total_item_count": 0,
+    "slots": []
+  },
+  "movement": {
+    "accepted_ground_clicks": 49,
+    "all_checked_clear_segments": true,
+    "phases": [
+      6
+    ]
+  },
+  "normal_profile_before": {
+    "offline\\tantra.sqlite3": "8748b43a709161c4acf171739cf3f6f9f7fc1d35def9ace69d13f3e7e63edcea",
+    "offline\\tantra.sqlite3-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "offline\\tantra.sqlite3-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "system\\SaveID.bin": "4c026dca53567521dad4c27ab8585c4c5ae4c47f136df3a4e59f2103c8ca0b9e",
+    "resource\\UI\\Interface.sys": "82b8faaf7ab32bb99494c84a2f25c137627ac18cb4c31ac173ca593a8f8e4968",
+    "cache\\main-ui\\BMP_TIMER_0.TGA": "cda5fd615835919509a0c25b6294ace6c48d790a44d0ec2f5c95684df39e2d39",
+    "cache\\main-ui\\MAIN_HUD_TEXTURES.tsv": "07758fadd276e70b360814706d6cb3b7e3aa2332a5b928859826b3c6a09412b4",
+    "cache\\main-ui\\STAMP.TGA": "691930ea69bb399d40d28b596bd58b585848d1e0f6b94565fac3b9d1eb717170",
+    "cache\\main-ui\\TRADE_O.TGA": "6ea1313a778079c4d5dd50dd211eca956a4453148ae34ce641df0f03324aedb6",
+    "cache\\main-ui\\UI_Box51_11X38.bmp": "f3226d8e709f7487028d545a7d73c1b79a5b00266465de9a123cf13ed42bf8fa",
+    "cache\\main-ui\\UI_Box74_38X40.bmp": "b689661d8070b1b88085f347f91dd8436df5caeee555d10cab4fba308e92bfa4",
+    "cache\\main-ui\\UI_Button26_D_24X37.bmp": "47b49b5b2243a0b6bffa022d8a9ac71562ed1697196d7150d5355974bae0be42",
+    "cache\\main-ui\\UI_Button26_N_24X37.bmp": "99f3374426d696e857a54159e4cc4f6623e4a3c27e15d7847b070421c71e677b",
+    "cache\\main-ui\\UI_Button26_O_24X37.bmp": "75382dd67216b7cea6bace39329a830f6c780d5f66f2d841367ce1bb4258ccee",
+    "cache\\main-ui\\UI_Button31_D_32X32.bmp": "778902a00972503bf32683eb83d2b50302c307be2046b6a7ead7695da24c9d06",
+    "cache\\main-ui\\UI_Button31_N_32X32.bmp": "1f3eb5b5fd3b848584cbce67ed95bf09e7c6fb7cf3a5ec2d79d420f3c662c350",
+    "cache\\main-ui\\UI_Button31_O_32X32.bmp": "d65c03cbf5b390595b2e162f4d3d19d7fa411063275ea493d44eac0ed173b753",
+    "cache\\main-ui\\UI_Button32_D_32X32.bmp": "71535ae16e419ddc8bcdd1e7a59a07242475d3c7a165ddea97fb68eac12e26b8",
+    "cache\\main-ui\\UI_Button32_N_32X32.bmp": "0286107f8c0b89483da569750bcaf417959d3be18cd4a89f1b4461ad3205c893",
+    "cache\\main-ui\\UI_Button32_O_32X32.bmp": "beda2935d197d4a539f60a1d2ae2a1621185e20256a60f8d1f681462fc43a3d8",
+    "cache\\main-ui\\UI_Button33_D_32X32.bmp": "e20c76d4205534ac758eaba6b0cb27eb7d8b47c8ca75de12664fb9a3a7440cba",
+    "cache\\main-ui\\UI_Button33_N_32X32.bmp": "c525c08236721c88c7205b9fb0ff9f5522ff443c1a4f89b46a9f45be99f4bc7d",
+    "cache\\main-ui\\UI_Button33_O_32X32.bmp": "b05641a3807b26170ca569aed31042413a00908362013902367c70e72b8e8c14",
+    "cache\\main-ui\\UI_Button34_D_32X32.bmp": "3ac844b954466b3de298720e353b21af73a53175559640539a05ac5191f62749",
+    "cache\\main-ui\\UI_Button34_N_32X32.bmp": "95ecbe416c2419ac17e88673c5d3ccc69cb753289d1983c8f7ec6cbcaa6c7f76",
+    "cache\\main-ui\\UI_Button34_O_32X32.bmp": "ff28eef43641ba8ec85f3e406c977c349c1cf801cc6301ff8937bf91a7191d12",
+    "cache\\main-ui\\UI_Button35_D_32X32.bmp": "1cd605f701d982575dbfa161f23f49e054d999242670ab8151cb78b444086cde",
+    "cache\\main-ui\\UI_Button35_N_32X32.bmp": "2c0fe0c50bb6fac369ee83e6d0ab9318a25d9846630c01801ca2e81bef456779",
+    "cache\\main-ui\\UI_Button35_O_32X32.bmp": "10de75b78d094e0a4e6ba3deab8d52ee01df12965b32da2aa316b7a4cf01b3dd",
+    "cache\\main-ui\\UI_Button36_D_32X32.bmp": "086d81bfc780746bde3bc649116b3cf8b6832524505a9b78d8620aee9f840848",
+    "cache\\main-ui\\UI_Button36_N_32X32.bmp": "42f7db0569545cdde05a864300ba0c2386135966636554a17d93f18cab484c9c",
+    "cache\\main-ui\\UI_Button36_O_32X32.bmp": "06b5c943a2559ff63b38d8d9221069f580ab5a936eab9cb905000d28b0d4709b",
+    "cache\\main-ui\\UI_Button37_D_32X32.bmp": "3c06076a3c44b340a72d708c8a9efd7cbdb87a07acc583e1d2e907474610861a",
+    "cache\\main-ui\\UI_Button37_N_32X32.bmp": "d69a94add75bd19d34e68a4596c9252d7d0e4bfb8fcc54056ab60c55ec82dfff",
+    "cache\\main-ui\\UI_Button37_O_32X32.bmp": "a63abc5a5a98421af6e24d95e9d04c3be0d6a291560b2e46a260ebeedc3d6a8b",
+    "cache\\main-ui\\UI_Button38_D_32X32.bmp": "b1fbd83db67b476d8aedd5b65ce477fe5b8598eea50efbad00868aa4ac696f32",
+    "cache\\main-ui\\UI_Button38_N_32X32.bmp": "007930d4ee175a0acf425501085e7349584aea6dc97ff9088800cdf999fc2368",
+    "cache\\main-ui\\UI_Button38_O_32X32.bmp": "0a3b078d7c6135fc7581610b48a0ef277144ad55666f2cca2f5cda7fc9fdee22",
+    "cache\\main-ui\\UI_Ex01_400X16.bmp": "b1164969cefbb8e9304aba3cb1c32690f1924d8f2c978cacc1df76d8f6a83640",
+    "cache\\main-ui\\UI_Ex02_400X16.bmp": "207668eab2545844ef72a46ad747b371c789366d2f450949114b7bb4da2ad376",
+    "cache\\main-ui\\UI_HeightLine01_3x32.bmp": "f66a274eda96729d0e3600a28d899b0a508d1adfb48bf6610904d66021aabfae",
+    "cache\\main-ui\\UI_ProgressBar01_150X5.bmp": "db300277673922f5a2fc661d9267f70aa4023118099b7cfaf3e868799db6d17e",
+    "cache\\main-ui\\UI_ProgressBar04_164X15.bmp": "02245820818384403c2ccc9d996272fc343922bc6e4da1d6eec0e848be54e23e",
+    "cache\\main-ui\\UI_ProgressBar05_164X15.bmp": "0ddb0f32b38ab21b2fe0aa8377ee2f3e4ea26b607cc126a1e1930e409362ae72",
+    "cache\\main-ui\\UI_WidthLine01_96x3.bmp": "88594a322859980d4bb3f93b73080796785c33f41fd1afa8721cc7885875ced7",
+    "cache\\main-ui\\UI_WidthLine03_1X3.bmp": "93ef8b07625a6261fada0be84c089e6d596170e37f48ac802b9824169868558d"
+  },
+  "normal_profile_after": {
+    "offline\\tantra.sqlite3": "8748b43a709161c4acf171739cf3f6f9f7fc1d35def9ace69d13f3e7e63edcea",
+    "offline\\tantra.sqlite3-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "offline\\tantra.sqlite3-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "system\\SaveID.bin": "4c026dca53567521dad4c27ab8585c4c5ae4c47f136df3a4e59f2103c8ca0b9e",
+    "resource\\UI\\Interface.sys": "82b8faaf7ab32bb99494c84a2f25c137627ac18cb4c31ac173ca593a8f8e4968",
+    "cache\\main-ui\\BMP_TIMER_0.TGA": "cda5fd615835919509a0c25b6294ace6c48d790a44d0ec2f5c95684df39e2d39",
+    "cache\\main-ui\\MAIN_HUD_TEXTURES.tsv": "07758fadd276e70b360814706d6cb3b7e3aa2332a5b928859826b3c6a09412b4",
+    "cache\\main-ui\\STAMP.TGA": "691930ea69bb399d40d28b596bd58b585848d1e0f6b94565fac3b9d1eb717170",
+    "cache\\main-ui\\TRADE_O.TGA": "6ea1313a778079c4d5dd50dd211eca956a4453148ae34ce641df0f03324aedb6",
+    "cache\\main-ui\\UI_Box51_11X38.bmp": "f3226d8e709f7487028d545a7d73c1b79a5b00266465de9a123cf13ed42bf8fa",
+    "cache\\main-ui\\UI_Box74_38X40.bmp": "b689661d8070b1b88085f347f91dd8436df5caeee555d10cab4fba308e92bfa4",
+    "cache\\main-ui\\UI_Button26_D_24X37.bmp": "47b49b5b2243a0b6bffa022d8a9ac71562ed1697196d7150d5355974bae0be42",
+    "cache\\main-ui\\UI_Button26_N_24X37.bmp": "99f3374426d696e857a54159e4cc4f6623e4a3c27e15d7847b070421c71e677b",
+    "cache\\main-ui\\UI_Button26_O_24X37.bmp": "75382dd67216b7cea6bace39329a830f6c780d5f66f2d841367ce1bb4258ccee",
+    "cache\\main-ui\\UI_Button31_D_32X32.bmp": "778902a00972503bf32683eb83d2b50302c307be2046b6a7ead7695da24c9d06",
+    "cache\\main-ui\\UI_Button31_N_32X32.bmp": "1f3eb5b5fd3b848584cbce67ed95bf09e7c6fb7cf3a5ec2d79d420f3c662c350",
+    "cache\\main-ui\\UI_Button31_O_32X32.bmp": "d65c03cbf5b390595b2e162f4d3d19d7fa411063275ea493d44eac0ed173b753",
+    "cache\\main-ui\\UI_Button32_D_32X32.bmp": "71535ae16e419ddc8bcdd1e7a59a07242475d3c7a165ddea97fb68eac12e26b8",
+    "cache\\main-ui\\UI_Button32_N_32X32.bmp": "0286107f8c0b89483da569750bcaf417959d3be18cd4a89f1b4461ad3205c893",
+    "cache\\main-ui\\UI_Button32_O_32X32.bmp": "beda2935d197d4a539f60a1d2ae2a1621185e20256a60f8d1f681462fc43a3d8",
+    "cache\\main-ui\\UI_Button33_D_32X32.bmp": "e20c76d4205534ac758eaba6b0cb27eb7d8b47c8ca75de12664fb9a3a7440cba",
+    "cache\\main-ui\\UI_Button33_N_32X32.bmp": "c525c08236721c88c7205b9fb0ff9f5522ff443c1a4f89b46a9f45be99f4bc7d",
+    "cache\\main-ui\\UI_Button33_O_32X32.bmp": "b05641a3807b26170ca569aed31042413a00908362013902367c70e72b8e8c14",
+    "cache\\main-ui\\UI_Button34_D_32X32.bmp": "3ac844b954466b3de298720e353b21af73a53175559640539a05ac5191f62749",
+    "cache\\main-ui\\UI_Button34_N_32X32.bmp": "95ecbe416c2419ac17e88673c5d3ccc69cb753289d1983c8f7ec6cbcaa6c7f76",
+    "cache\\main-ui\\UI_Button34_O_32X32.bmp": "ff28eef43641ba8ec85f3e406c977c349c1cf801cc6301ff8937bf91a7191d12",
+    "cache\\main-ui\\UI_Button35_D_32X32.bmp": "1cd605f701d982575dbfa161f23f49e054d999242670ab8151cb78b444086cde",
+    "cache\\main-ui\\UI_Button35_N_32X32.bmp": "2c0fe0c50bb6fac369ee83e6d0ab9318a25d9846630c01801ca2e81bef456779",
+    "cache\\main-ui\\UI_Button35_O_32X32.bmp": "10de75b78d094e0a4e6ba3deab8d52ee01df12965b32da2aa316b7a4cf01b3dd",
+    "cache\\main-ui\\UI_Button36_D_32X32.bmp": "086d81bfc780746bde3bc649116b3cf8b6832524505a9b78d8620aee9f840848",
+    "cache\\main-ui\\UI_Button36_N_32X32.bmp": "42f7db0569545cdde05a864300ba0c2386135966636554a17d93f18cab484c9c",
+    "cache\\main-ui\\UI_Button36_O_32X32.bmp": "06b5c943a2559ff63b38d8d9221069f580ab5a936eab9cb905000d28b0d4709b",
+    "cache\\main-ui\\UI_Button37_D_32X32.bmp": "3c06076a3c44b340a72d708c8a9efd7cbdb87a07acc583e1d2e907474610861a",
+    "cache\\main-ui\\UI_Button37_N_32X32.bmp": "d69a94add75bd19d34e68a4596c9252d7d0e4bfb8fcc54056ab60c55ec82dfff",
+    "cache\\main-ui\\UI_Button37_O_32X32.bmp": "a63abc5a5a98421af6e24d95e9d04c3be0d6a291560b2e46a260ebeedc3d6a8b",
+    "cache\\main-ui\\UI_Button38_D_32X32.bmp": "b1fbd83db67b476d8aedd5b65ce477fe5b8598eea50efbad00868aa4ac696f32",
+    "cache\\main-ui\\UI_Button38_N_32X32.bmp": "007930d4ee175a0acf425501085e7349584aea6dc97ff9088800cdf999fc2368",
+    "cache\\main-ui\\UI_Button38_O_32X32.bmp": "0a3b078d7c6135fc7581610b48a0ef277144ad55666f2cca2f5cda7fc9fdee22",
+    "cache\\main-ui\\UI_Ex01_400X16.bmp": "b1164969cefbb8e9304aba3cb1c32690f1924d8f2c978cacc1df76d8f6a83640",
+    "cache\\main-ui\\UI_Ex02_400X16.bmp": "207668eab2545844ef72a46ad747b371c789366d2f450949114b7bb4da2ad376",
+    "cache\\main-ui\\UI_HeightLine01_3x32.bmp": "f66a274eda96729d0e3600a28d899b0a508d1adfb48bf6610904d66021aabfae",
+    "cache\\main-ui\\UI_ProgressBar01_150X5.bmp": "db300277673922f5a2fc661d9267f70aa4023118099b7cfaf3e868799db6d17e",
+    "cache\\main-ui\\UI_ProgressBar04_164X15.bmp": "02245820818384403c2ccc9d996272fc343922bc6e4da1d6eec0e848be54e23e",
+    "cache\\main-ui\\UI_ProgressBar05_164X15.bmp": "0ddb0f32b38ab21b2fe0aa8377ee2f3e4ea26b607cc126a1e1930e409362ae72",
+    "cache\\main-ui\\UI_WidthLine01_96x3.bmp": "88594a322859980d4bb3f93b73080796785c33f41fd1afa8721cc7885875ced7",
+    "cache\\main-ui\\UI_WidthLine03_1X3.bmp": "93ef8b07625a6261fada0be84c089e6d596170e37f48ac802b9824169868558d"
+  },
+  "captures": [
+    {
+      "file": "closure-camera-orbit.png",
+      "sha256": "7aa733e0168cee40161bb14067606ebff96bf19277fd47e9f9a187b367a8b4c5"
+    },
+    {
+      "file": "closure-camera-reset.png",
+      "sha256": "0f15413ebbdeffcb590907a0ac52b7a4430d8e4e0505097c16f5ff760b4aa7e9"
+    },
+    {
+      "file": "closure-navigation-camera.png",
+      "sha256": "aaa8e53da8423c946fc7acdd3fe503c8b517603ab9368494dc1e0a82f59db7a1"
+    },
+    {
+      "file": "closure-npc-camera.png",
+      "sha256": "2eb645cb034e976067eddfe01e4c80cfc0210171cf48ac91c5367e0d5cb7510c"
+    },
+    {
+      "file": "closure-restored-skill.png",
+      "sha256": "5b8b7858b93ca0ad303ed85845d215d649678966d5d7741b4855aa0f4f006b8e"
+    },
+    {
+      "file": "closure-restored-world.png",
+      "sha256": "a434c130016cae9b34ab64b92f8833979f02f7516607730d229d330b350bc02f"
+    },
+    {
+      "file": "saved-services-failure.png",
+      "sha256": "2eb645cb034e976067eddfe01e4c80cfc0210171cf48ac91c5367e0d5cb7510c"
+    },
+    {
+      "file": "saved-services-native-loading.png",
+      "sha256": "692ea37b4601fbe00920e1b0657a6a723751f30a3bf0d3a43efd3f2faff16aaa"
+    },
+    {
+      "file": "saved-services-saved-character.png",
+      "sha256": "134595ba3b88003272797ced2a1b915c7b0e4c1c32d2d96222e3e3fa88943abd"
+    }
+  ],
+  "runtime_output": "C:\\_GitHub\\TantraSrc\\_remake\\build-ogre-sdl\\mandara-goal1-20261023",
+  "cpu_investigation": {
+    "waypoint_raw_y": 0,
+    "sampled_y": 65.576,
+    "grass_texture_reference": "pop_Env_grass1.tga",
+    "native_resolved_texture": "pop_Env_grass1_TGA.dds",
+    "grass_filter_fix": "NativeMapAssets.cpp uses resolved native texture name before cutout exclusion",
+    "before_samples": [
+      {
+        "position": [
+          3952.5,
+          65.4277,
+          8032.5
+        ],
+        "orbits": 0,
+        "angle": 5.3,
+        "native_distance": 94.6501,
+        "clipped_distance": 0,
+        "box_fraction": 1,
+        "triangle_fraction": 0,
+        "triangle": 281378,
+        "mesh": "pop_Env_grass7.tmb",
+        "authored_collision": false,
+        "triangle_vertices": [
+          [
+            3951.24,
+            58.2313,
+            8018.53
+          ],
+          [
+            3953.97,
+            73.6269,
+            8033.46
+          ],
+          [
+            3937.24,
+            73.6269,
+            8012.74
+          ]
+        ]
+      },
+      {
+        "position": [
+          3952.5,
+          65.4277,
+          8032.5
+        ],
+        "orbits": 8,
+        "angle": 6.08,
+        "native_distance": 89.8775,
+        "clipped_distance": 0,
+        "box_fraction": 1,
+        "triangle_fraction": 0,
+        "triangle": 281378,
+        "mesh": "pop_Env_grass7.tmb",
+        "authored_collision": false,
+        "triangle_vertices": [
+          [
+            3951.24,
+            58.2313,
+            8018.53
+          ],
+          [
+            3953.97,
+            73.6269,
+            8033.46
+          ],
+          [
+            3937.24,
+            73.6269,
+            8012.74
+          ]
+        ]
+      },
+      {
+        "position": [
+          3942.47,
+          68.1691,
+          9262.47
+        ],
+        "orbits": 0,
+        "angle": 5.3,
+        "native_distance": 94.6501,
+        "clipped_distance": 1.04943,
+        "box_fraction": 1,
+        "triangle_fraction": 0.0216496,
+        "triangle": 20435,
+        "mesh": "r01_Stru_man_wall1.tmb",
+        "authored_collision": false,
+        "triangle_vertices": [
+          [
+            3940.67,
+            72.3163,
+            9266.67
+          ],
+          [
+            3940.67,
+            92.9663,
+            9225.33
+          ],
+          [
+            3940.67,
+            92.9663,
+            9266.67
+          ]
+        ]
+      },
+      {
+        "position": [
+          3942.47,
+          68.1691,
+          9262.47
+        ],
+        "orbits": 8,
+        "angle": 6.08,
+        "native_distance": 89.8775,
+        "clipped_distance": 10.7369,
+        "box_fraction": 1,
+        "triangle_fraction": 0.130588,
+        "triangle": 20401,
+        "mesh": "r01_Stru_man_wall1.tmb",
+        "authored_collision": false,
+        "triangle_vertices": [
+          [
+            3943.6,
+            92.9663,
+            9269.6
+          ],
+          [
+            3896.4,
+            92.9663,
+            9222.4
+          ],
+          [
+            3943.6,
+            92.9663,
+            9222.4
+          ]
+        ]
+      }
+    ],
+    "after_samples": [
+      {
+        "position": [
+          3952.5,
+          65.4277,
+          8032.5
+        ],
+        "orbits": 0,
+        "angle": 5.3,
+        "native_distance": 94.6501,
+        "clipped_distance": 53.6477,
+        "box_fraction": 1,
+        "triangle_fraction": 0.577366,
+        "triangle": 41219,
+        "mesh": "r01_Stru_man_house3_01.tmb",
+        "authored_collision": false,
+        "triangle_vertices": [
+          [
+            3967.01,
+            104.077,
+            8082.52
+          ],
+          [
+            3933.77,
+            104.078,
+            8082.52
+          ],
+          [
+            3933.77,
+            114.078,
+            8082.52
+          ]
+        ]
+      },
+      {
+        "position": [
+          3952.5,
+          65.4277,
+          8032.5
+        ],
+        "orbits": 8,
+        "angle": 6.08,
+        "native_distance": 89.8775,
+        "clipped_distance": 89.8775,
+        "box_fraction": 1,
+        "triangle_fraction": 1,
+        "triangle": 0
+      },
+      {
+        "position": [
+          3942.47,
+          68.1691,
+          9262.47
+        ],
+        "orbits": 0,
+        "angle": 5.3,
+        "native_distance": 94.6501,
+        "clipped_distance": 1.04943,
+        "box_fraction": 1,
+        "triangle_fraction": 0.0216496,
+        "triangle": 20253,
+        "mesh": "r01_Stru_man_wall1.tmb",
+        "authored_collision": false,
+        "triangle_vertices": [
+          [
+            3940.67,
+            72.3163,
+            9266.67
+          ],
+          [
+            3940.67,
+            92.9663,
+            9225.33
+          ],
+          [
+            3940.67,
+            92.9663,
+            9266.67
+          ]
+        ]
+      },
+      {
+        "position": [
+          3942.47,
+          68.1691,
+          9262.47
+        ],
+        "orbits": 8,
+        "angle": 6.08,
+        "native_distance": 89.8775,
+        "clipped_distance": 10.7369,
+        "box_fraction": 1,
+        "triangle_fraction": 0.130588,
+        "triangle": 20219,
+        "mesh": "r01_Stru_man_wall1.tmb",
+        "authored_collision": false,
+        "triangle_vertices": [
+          [
+            3943.6,
+            92.9663,
+            9269.6
+          ],
+          [
+            3896.4,
+            92.9663,
+            9222.4
+          ],
+          [
+            3943.6,
+            92.9663,
+            9222.4
+          ]
+        ]
+      }
+    ],
+    "grass_filter_regression": "passed",
+    "wall_obstruction": "still open; not solved by the grass fix"
+  },
+  "new_build": {
+    "sha256": "126e1e9d84fc51f4482bc1c7bd51c07b20d8e5f9cd9ffa13e1ef0d7a3d602a6f",
+    "runtime_launched": false,
+    "staged_sha256": "126e1e9d84fc51f4482bc1c7bd51c07b20d8e5f9cd9ffa13e1ef0d7a3d602a6f",
+    "static_final_client_check": "passed; x64, imports, exact icon, original layout, 4355 owned files",
+    "owned_distribution_bytes": 258493635
+  },
+  "pending": [
+    "usable camera/obstruction route and warehouse NPC selection",
+    "warehouse item deposit/withdrawal",
+    "Rupiah deposit/withdrawal",
+    "save-point confirmation and persisted new saved cells",
+    "clean successful acceptance exit"
+  ],
+  "native_collision_parity": false,
+  "committed": false
+}

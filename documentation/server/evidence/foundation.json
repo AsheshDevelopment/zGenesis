@@ -1,0 +1,141 @@
+{
+  "checked_at": "2026-10-23T22:04:13.945040+00:00",
+  "scope": "C++ Win32 management foundation",
+  "whole_plan_complete": false,
+  "game_ready": false,
+  "zones": [
+    {
+      "zone_id": 1,
+      "game_port": 3001,
+      "admin_port": 13001,
+      "hashes_verified": 5,
+      "runtime_repairs": []
+    },
+    {
+      "zone_id": 2,
+      "game_port": 3002,
+      "admin_port": 13002,
+      "hashes_verified": 5,
+      "runtime_repairs": []
+    },
+    {
+      "zone_id": 3,
+      "game_port": 3003,
+      "admin_port": 13003,
+      "hashes_verified": 5,
+      "runtime_repairs": []
+    },
+    {
+      "zone_id": 4,
+      "game_port": 3004,
+      "admin_port": 13004,
+      "hashes_verified": 5,
+      "runtime_repairs": []
+    },
+    {
+      "zone_id": 5,
+      "game_port": 3005,
+      "admin_port": 13005,
+      "hashes_verified": 5,
+      "runtime_repairs": []
+    },
+    {
+      "zone_id": 6,
+      "game_port": 3006,
+      "admin_port": 13006,
+      "hashes_verified": 5,
+      "runtime_repairs": []
+    },
+    {
+      "zone_id": 7,
+      "game_port": 3007,
+      "admin_port": 13007,
+      "hashes_verified": 5,
+      "runtime_repairs": []
+    },
+    {
+      "zone_id": 8,
+      "game_port": 3008,
+      "admin_port": 13008,
+      "hashes_verified": 5,
+      "runtime_repairs": [
+        "Removed known stray leading 2 before [Item]; original retained"
+      ]
+    },
+    {
+      "zone_id": 9,
+      "game_port": 3009,
+      "admin_port": 13009,
+      "hashes_verified": 5,
+      "runtime_repairs": []
+    },
+    {
+      "zone_id": 10,
+      "game_port": 3010,
+      "admin_port": 13010,
+      "hashes_verified": 5,
+      "runtime_repairs": []
+    }
+  ],
+  "binaries": [
+    {
+      "name": "TantraServerManager.exe",
+      "machine": "x64",
+      "sha256": "e38f5fca5ae3176fb3f43f2686dc9cba0fe5eece2de67c9d0fd1b043f2818082",
+      "bytes": 1874432
+    },
+    {
+      "name": "TantraZone.exe",
+      "machine": "x64",
+      "sha256": "540aeda3cc16f7ed4bfc189cd7723a72997562968623efee79eca1136e88b607",
+      "bytes": 1735168
+    },
+    {
+      "name": "TantraService.exe",
+      "machine": "x64",
+      "sha256": "13c6cd3db041bd5f180b2db0d1f9e98c8ea558811747603c166263b4c7693391",
+      "bytes": 1628160
+    }
+  ],
+  "icon_sha256": "5c984d2639e9d75a3bbd0ba3114f2e713db6ff3dd316d42e40ab08cbbeff6a50",
+  "embedded_icon_payload_verified": true,
+  "common_controls_v6_and_dpi_manifest_verified": true,
+  "ui": {
+    "backend": "Win32 Common Controls v6",
+    "dpi": 96,
+    "game_ready": false,
+    "height": 811,
+    "icon_resource": true,
+    "rows": 15,
+    "width": 1264,
+    "window_title": "Tantra Server Manager",
+    "worker_start_requested": false,
+    "zone_rows": 10
+  },
+  "normal_client_hashes_unchanged": {
+    "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34",
+    "C:\\_GitHub\\TantraSrc\\_client\\userdata\\offline\\tantra.sqlite3": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f"
+  },
+  "rust_runtime_required": false,
+  "tests": {
+    "core": "passed",
+    "single_service_lifecycle": "passed"
+  },
+  "test_logs": {
+    "checks.log": {
+      "sha256": "46bbf7dd99c5a0903b15e264cafa8738186864709e259fa1d4e985b13b79d1ab",
+      "result": "passed"
+    },
+    "release-checks.log": {
+      "sha256": "1d1993f2abecf9b60647825b3667f8c4c23c0d3a834b5b2e62b2e452f5a31122",
+      "result": "passed"
+    },
+    "release-lifecycle.log": {
+      "sha256": "b63cf8ebbbe5178808f73228ae134c0d6ae58e6d24cf409a869237b87351799f",
+      "result": "passed"
+    }
+  },
+  "dependency_licenses_packaged": true,
+  "zone_gameplay_acceptance": "not run; no zone/client process launched",
+  "remaining": "M2-M6 and unverified management/GUI failure paths"
+}

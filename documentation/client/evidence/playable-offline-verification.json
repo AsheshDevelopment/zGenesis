@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-23",
+  "runtime_processes": 1,
+  "world_group": 1,
+  "mandara_route": 1,
+  "runtime_executable_sha256": "C2033305AB882C33C5D5B555104B882BF3D88F5D2A73716B27CB935A05455137",
+  "exit_code": 3765269347,
+  "exception": "0xE06D7363",
+  "diagnostics_stale": true,
+  "runtime_world_verified": false,
+  "runtime_intro_verified": false,
+  "runtime_captures": 0,
+  "failure": "OGRE duplicate ManualObject during loading of both original INTRO TMD files; the reader now accepts the second file, exposing the shared TantraRemakeTmd0 naming bug",
+  "dump": "C:\\_GitHub\\TantraSrc\\_remake\\build-ogre-sdl\\offline-playable-runtime-20261023\\runtime-TantraRemakeCrash-20261023-103242.dmp",
+  "final_build_runtime_verified": false,
+  "runtime_retry_performed": false,
+  "cpu_checks": {
+    "native_main_ui_interaction": "passed, 20 panels",
+    "native_lighting_hlsl_compile": "passed, composed diffuse/ambient/fog/alpha/terrain shaders, compiler only",
+    "offline_world_gameplay": "passed, movement/combat/rewards/pickup/level update/time boundary",
+    "intro_model_height": "passed, 8 tribes and 200 face/hair cases",
+    "native_intro_character_controls": "passed",
+    "offline_character_persistence": "passed, schema upgrades v1/v2/v3 to v4",
+    "mandara_closure": "passed with isolated fixture, 8 tribe assemblies, routing/sphere sweeps, repair, cargo CAS rollback, consumables and Prana rules",
+    "native_tmd_scene_names": "passed, 2 original INTRO files and 3 distinct OGRE scene objects; no renderer, window or channel"
+  },
+  "limits": [
+    "No second HTLauncher process was launched",
+    "The historical HUD/world error rows in diagnostics.tsv are stale, not evidence of this attempt",
+    "No rendered world, service GUI transaction, camera acceptance or save-point persistence was reached in this run"
+  ],
+  "routing_reached": false,
+  "startup_collision_fixed": true,
+  "normal_persistent_files_current_hashes": {
+    "userdata\\offline\\tantra.sqlite3": "515A8180CD954BEB154880BB734D97AC7BF0C7BC1F05C3C85F7BD1CF9231AF9A",
+    "userdata\\system\\SaveID.bin": "4C026DCA53567521DAD4C27AB8585C4C5AE4C47F136DF3A4E59F2103C8CA0B9E"
+  },
+  "normal_persistent_files_match_prior_checkpoint": true,
+  "final_executable_sha256": "2269A8096BA356EC1D43791EA73636AB1A4C57EC03441D3FE16211EF40793B0F",
+  "build_package_stage_hashes_match": true,
+  "build_configuration": "Release x64 OGRE SDL3",
+  "staged_files": 4176,
+  "staged_bytes": 257525207,
+  "static_final_client_verification": "FINAL_CLIENT_VERIFIED files=4176 original_layout=verified x64=verified imports=resolved icon_frames=9 icon_payload=exact title=not-run relocation=not-run",
+  "startup_fix": "Resource/submesh-scoped TMD object and material names; caught initial scene-creation failures; top-level startup exception diagnostics; cleared stale diagnostics; prelaunch verifier marker",
+  "logs": [
+    "implementation-fixture.log",
+    "implementation-checks.log",
+    "implementation-persistence-checks.log",
+    "implementation-startup-fix-check.log",
+    "implementation-lighting-check.log",
+    "implementation-final-build.log",
+    "implementation-final-stage.log",
+    "implementation-static-client.log",
+    "implementation-runtime.log",
+    "implementation-crash-analysis.log"
+  ],
+  "logs_root": "_remake/build-ogre-sdl"
+}

@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-25",
+  "scope": "Owned skill ACK vitals, authority cooldowns, source square FX and native unit-result/system history; full client remains incomplete",
+  "cpu": {
+    "feedback_checks": 84,
+    "staged_feedback_checks": 84,
+    "authority_route_checks": 138,
+    "main_ui_checks": 426,
+    "profile": "C:\\_GitHub\\tantra-dev-main\\_remake\\build-migration\\skill-impact-profiles\\skill-impact-182297978827100",
+    "group": 1,
+    "zone": 1,
+    "account": "ashesh",
+    "sqlite_quick_check": "ok",
+    "foreign_key_errors": 0,
+    "renderer_launches": 0
+  },
+  "build": {
+    "launcher": "C:\\_GitHub\\tantra-dev-main\\_client\\HTLauncher.exe",
+    "sha256": "d863658ebcbf0e3a598fc0485d01bcbd74ac1e5ebda976770ef8d65255c0cbf9",
+    "configuration": "Release x64",
+    "manifest_files": 1629,
+    "payload_bytes": 676123994,
+    "asset_closure_entries": 2462,
+    "static_verification": "FINAL_CLIENT_VERIFIED files=1629 original_layout=verified x64=verified imports=resolved icon_frames=9 icon_payload=exact title=not-run relocation=not-run",
+    "game_launches": 0
+  },
+  "source_references": {
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTInterface.cpp": "ec0c0942971f74bcc50f3ad3d79ec17a4dfac28b79ce5cdebde112bc9cf43844",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTMainCharacter.cpp": "6e7b5ee760a729fbc8afad3b4aa59a61ed394e51ba9e3f601037c2fa6226e08d",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTQuickSlot.cpp": "178a169b121b7897e3c038f022a76be73d1df9f0921acde476b6d8eabafc4d14",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTChatting.cpp": "a3d0ffb7006a90b701e3b0105fbc49a09c3699e181b743c4037ac55452199088",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTChatting.h": "875cb2665ea418ba1191cef1214b8e631397ebaf5b89e3c2d44103917e26d68d",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTInfoLoad.cpp": "f0dcf92ec4cc0b75564ca4e0366a58fc1fb858297fdc7e0c539faf1e83b9f0e8",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTextern.cpp": "43388604f292dc615d0fe6bb8cf2f38b24d6b360bb75ef2907d35d210679f43d",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTMessageDef.h": "304a965dbdd5b19af8472efce60ad4d710b636d7a574d72a5f4ee63649324a00",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTClientParamMgr.h": "f62d8bd0c93b522f78d4ed6606b58e2722bd9bf063d8130c59ceae377251605b"
+  },
+  "canonical_tga": {
+    "path": "C:\\_GitHub\\TantraSrc\\TantraClient\\resource\\UI\\MAINUI\\BMP_TIMER_0.TGA",
+    "sha256": "cda5fd615835919509a0c25b6294ace6c48d790a44d0ec2f5c95684df39e2d39",
+    "type": 2,
+    "width": 32,
+    "height": 32,
+    "bits": 32,
+    "alpha": 199,
+    "alpha_pixel_count": 1024
+  },
+  "preservation": {
+    "packs_unchanged": 148,
+    "normal_userdata_absent": true,
+    "legacy": {
+      "original_executable": {
+        "path": "C:\\_GitHub\\TantraSrc\\TantraClient\\HTLauncher.exe",
+        "sha256": "03d4587c4f87eeb71eb8be288b765836ccf8a1f11d49760d48239c6496c73903"
+      },
+      "previous_executable": {
+        "path": "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe",
+        "sha256": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34"
+      },
+      "private_save": {
+        "path": "C:\\_GitHub\\TantraSrc\\_client\\userdata\\offline\\tantra.sqlite3",
+        "sha256": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f"
+      }
+    }
+  },
+  "corrections": [
+    "Feedback fixture uses the native character-message table for ID 1108.",
+    "UI source asset 23661 is a 32-bit TGA; added alpha/RLE/origin-aware MainUI image loading.",
+    "Canonical texture has alpha 199 on all pixels; removed an incorrect transparent-pixel assumption.",
+    "UI regression now checks the requested HPK-first rule and uses fresh isolated output."
+  ],
+  "defined_adaptations": [
+    "Cooldown visual follows authority skill-book deadlines in the authority clock domain.",
+    "Short-duration frame division and 32-bit clock wrap use defined bounds.",
+    "History uses the existing GDI locale/font adapter at native width 380; original D3D8 glyph parity remains unverified."
+  ],
+  "remaining": [
+    "Rendered skill/UI/history acceptance",
+    "Full chat input, tabs, scrolling and log controls",
+    "Item/continuous cooldowns, full rejection/prerequisite/tooltip paths",
+    "Floating hit counts, critical TFX, projectiles, audio and holstering",
+    "Full 14-phase client implementation plan"
+  ],
+  "plan": {
+    "done": 45,
+    "total": 102,
+    "task_percentage": 44.1,
+    "changes": "local and uncommitted"
+  },
+  "logs": {
+    "skill-feedback-initial-cpu.log": "b4c2847ed6370b735a3442ed71a27b463d9a0d091ce8ec9edf1429696136beef",
+    "skill-feedback-cpu.log": "5e20c3263a24cc019d2e8103de9193a41aa8d71c6c51b46bef728bd872bc25c5",
+    "skill-feedback-final-cpu.log": "9db9928bc5fdcece6c76b7e2657ef9fb24b5c8eab77b9e4393337262d9eacf22",
+    "skill-feedback-final-feedback-cpu.log": "fe67a9c38ad7d9c43642d0c6f849dddaeb4e3200e8fe54f2d5d0f4ad5b8f5221",
+    "skill-feedback-build-stage.log": "76e6021e123afb79ac68eae90810b19ecf0d6699759a3ad96845f1d3bba74bf8",
+    "skill-feedback-static.log": "0b28a8f07bd2f787bed132c537b5b674348831cf86208842bb419b88f5b7ef8f",
+    "skill-feedback-staged-resources.log": "93c520f92dbd0a98293d4a7450717bfffa82f7f233707c724d2b07fc3b96e1be"
+  }
+}

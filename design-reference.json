@@ -1,0 +1,17 @@
+{
+  "reference": "C:\\Users\\Ashesh\\Downloads\\zGenesis-main\\zGenesis-main\\index.html",
+  "sha256": "5a6bfb55888418232261a00ab9babaf2b88f60494c8669563fb40ca7915d4b5c",
+  "adapted": [
+    "Charcoal/coral palette and source spacing",
+    "1160px content width, 72px header and large editorial hero",
+    "Overall percentage, thin gradient bars and four statistics",
+    "Expandable workstream rows, task checkboxes and nested subtasks"
+  ],
+  "branding": "Tantra Online, Tantra-O and Tantra-B; no inherited GENESIS product text or access gate",
+  "background": {
+    "source": "C:\\Users\\Ashesh\\Pictures\\Screenshots\\Screenshot 2026-10-25 232751.png",
+    "sha256": "d18d11bb61ffac973237ed43f648019d487a16d4d24b3cbd68823a802e886b4e",
+    "use": "User-provided original-game reference capture under a dark overlay"
+  },
+  "browser_visual_acceptance": "not_run; browser connection bootstrap rejected node:process import"
+}

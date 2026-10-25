@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-25",
+  "implementation_root": "C:\\_GitHub\\tantra-dev-main\\_remake",
+  "status": "built_and_staged_visual_acceptance_pending",
+  "installed": [
+    {
+      "root": "C:\\_GitHub\\tantra-dev-main\\_client",
+      "executable_sha256": "99f921e1792093c7106fc059c68e795023e2a77c33aac5bc500752ac51d56e7a",
+      "existing_hpk_files_unchanged": 148,
+      "existing_userdata_files_unchanged": 0,
+      "additional_userdata_files_preserved": [],
+      "package_static_verified": true
+    },
+    {
+      "root": "C:\\_GitHub\\TantraSrc\\_client",
+      "executable_sha256": "99f921e1792093c7106fc059c68e795023e2a77c33aac5bc500752ac51d56e7a",
+      "existing_hpk_files_unchanged": 148,
+      "existing_userdata_files_unchanged": 46,
+      "additional_userdata_files_preserved": [
+        "userdata\\zflauncher\\offline\\tantra.sqlite3",
+        "userdata\\zflauncher\\resource\\UI\\Interface.sys",
+        "userdata\\zflauncher\\system\\SaveID.bin"
+      ],
+      "package_static_verified": true
+    }
+  ],
+  "cpu_scene_checks": 9098,
+  "cpu_combat_presentation_passed": true,
+  "authored_effects": {
+    "spawn": {
+      "id": 1010001,
+      "duration_seconds": 2,
+      "nodes": 8
+    },
+    "skill_learn_upgrade": {
+      "id": 1010002,
+      "duration_seconds": 2.5,
+      "nodes": 11
+    },
+    "chakra_levelup": {
+      "id": 1010003,
+      "duration_seconds": 2.2,
+      "nodes": 12
+    },
+    "monster_select": 1010011,
+    "monster_attack": 1010031,
+    "loot_select": 1010021
+  },
+  "screenshots_inspected": [
+    "212909",
+    "213201",
+    "213147",
+    "213139",
+    "213124",
+    "213026",
+    "212940",
+    "212927",
+    "212920"
+  ],
+  "game_launched": false,
+  "renderer_launched": false,
+  "audio_device_started": false,
+  "commit_created": false,
+  "push_performed": false,
+  "notes": [
+    "Initial launcher compile found an SDL window handle and local size-variable error; corrected before successful final build.",
+    "Initial combat CPU fixture could not load SDL DLL (0xc0000135); passed with packaged runtime directory on test process PATH.",
+    "All pre-existing protected files match baseline. Three additional namespaced zflauncher userdata files appeared during the task; they were retained untouched.",
+    "Selected monster name is yellow to match supplied Kathana screenshots; original HTMonsterSystem source uses white.",
+    "Full node/socket hierarchy parity for unrelated TFX families remains outside this acceptance claim."
+  ],
+  "local_logs": "C:\\_GitHub\\tantra-dev-main\\.migration-local\\selection-feedback-20261025"
+}

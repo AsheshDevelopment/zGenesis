@@ -1,0 +1,115 @@
+{
+  "checked_at": "2026-10-23T20:23:25.240226+00:00",
+  "whole_goal_complete": false,
+  "component": "Initial Mandara NPC generation, occupancy and native appearance publication",
+  "runtime_connected": true,
+  "game_ready": false,
+  "npc_movement_combat_death_respawn_implemented": false,
+  "actor_cpu_tests_passed": 4,
+  "native_npc_appearance_cases": 23,
+  "mixed_pc_npc_routes": 14,
+  "initial_generation_cpu_tests_passed": 1,
+  "source_initial_spawns_compared": 1702,
+  "source_ticks_compared": 256,
+  "final_seed1_state": 939570764,
+  "final_seed1_draws": 585101,
+  "group_profile_coverage": "No authored Zone01 groups; general group acceptance remains open",
+  "source_comparison_scope": "Original GenerateMob and scheduler with source-derived NPC Init; initially-ready wait predicate; verified empty Mandara Pop; boss audit output omitted. Not complete common CMob Init, death/respawn or original binary equivalence.",
+  "fixture_sha256": {
+    "native-initial-generation.json": "8d2994eb132cb7ec8ba6f03dc8118828e9452c4978f9ac35a96b5e986d5a8d27",
+    "native-npc-actors.json": "4c68879ddd86402dc25d65327f051ad15b4a60cb7962a23af2296ab57c474458"
+  },
+  "socket_attempt": {
+    "status": "Failed final harness revision assertion; not a passing whole-route socket gate",
+    "capture": "test-output\\native-population-1792786542-43524",
+    "zone_pid": 30856,
+    "zone_processes": 1,
+    "channel": 1,
+    "logical_tcp_peers": 1,
+    "native_npc_appearance_assertion": "passed",
+    "npc_retry_assertion": "passed",
+    "occupied_target_not_entered_assertion": "passed",
+    "npc_retry_after_movement_assertion": "passed",
+    "zone_logged_spawned_total": 199,
+    "timer_deliveries_with_spawns": 5,
+    "saved_revision": 3,
+    "saved_current_cell": [
+      513,
+      335
+    ],
+    "saved_generation_cell": [
+      523,
+      349
+    ],
+    "sessions_after_exit": 0,
+    "zone_owners_after_exit": 0,
+    "shutdown_clean": true,
+    "reason": "Expected revision 4 copied from a different route with one extra Chakra save. This route has seed save, entry save and movement save, ending at 3.",
+    "movement_reply_destination_retained": false,
+    "reply_sql_position_equality_after_failure": "not independently verified",
+    "corrected_harness_built_without_execution": true,
+    "automatic_retry_started": false,
+    "game_client_launched": false
+  },
+  "source_files_unchanged": {
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\CMob.cpp": "3421c51069c245603784168aa8ea2c276798d480b9749d8e9124734ad0715a46",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\server.cpp": "6639ca68a1e18c121e1e8a60fd2c7bbdd8f07b1d73540f645509e58ad9b6da7a",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\Basedef.h": "06d0028f615afcc34c0f8aa18d9dfe8af5c9a748ca5144b01dff8d8d0941ed22",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\HTParamMgr.cpp": "e8574693579ed3ed3da0d4438e3c8ac53228f600886ac58c4811fb8e4328ee11",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\HTUtilLib.lib": "b9ea532bd1a263065d9684a5fc6f97a05aef81b5c3c0ffc44fa9816e51e40259",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\HTServerSetting.cpp": "4415768a055b2d2bae74fec568a3c0ed313e68302bf793307e0163a9c7f5f5e9",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\GetFunc.cpp": "eae98b7130fef718777ef716746b1916280a7a4a97eeb730efdc0f1ee2537cad",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\Basedef.cpp": "9f245bc03104e868189065d272b93ca9b9669827b93829dcffc6ec6e7074d0ce",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\CMOB.CPP": "3421c51069c245603784168aa8ea2c276798d480b9749d8e9124734ad0715a46",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\SendFunc.cpp": "1db3811218dfafd279df8ce67742df816745a67298e0c50147d2d71a04a501d2"
+  },
+  "zone_source_hashes_match_imported_dataset": {
+    "GenerationArea.idx": "67494f868d7b96a335c7cf49a53f6d19a4873da2f941268ab2a1370f8c32f13d",
+    "MapData.tcm": "b82dbade3898f6576014832c607bd628c68d7976704394bf95c021211787b61e",
+    "NPCGener.txt": "0ce999a87789cafd74a0ce3995f1a63f52fd0151599a1cfe79189c38ae7b6da5",
+    "Data/Settings.ini": "f59216b863829baa355a9f66727b0df35af93a4beca1137a2e1d6ca2c43110a6",
+    "Data/WorldSettings.ini": "a8479867b50a89d896a8044708236363d7e08c96820c7e4a554780fa4b0db6b5"
+  },
+  "normal_client_files_unchanged": {
+    "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34",
+    "C:\\_GitHub\\TantraSrc\\_client\\userdata\\offline\\tantra.sqlite3": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f"
+  },
+  "binaries_current": [
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-server-manager.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "24bd600334ca87c432ec6c922e96ac80e7060644e328152497a1d7c0a66c439b"
+    },
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-zone.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "011a0ef718fbcd6aab2e98ad9c50e1734fec81140e68154acc6de550de78c128"
+    },
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-service.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "0249313adc036a2c08df3a4e9bd0d795c506e244d74fee8d87c24837c45ad1be"
+    }
+  ],
+  "manager_icon_evidence": "docs/evidence/server-manager-icon.json",
+  "checks": [
+    "4 actor CPU tests passed",
+    "1 initial generation CPU test passed",
+    "Clippy services/zone/manager all-targets warnings denied passed",
+    "workspace Debug x64 build and packaging passed",
+    "corrected socket harness linked with --no-run; not rerun",
+    "cargo fmt --check passed",
+    "git diff --check _server passed"
+  ],
+  "socket_gate_complete": false,
+  "game_client_launched": false,
+  "pending": [
+    "Corrected single-zone socket gate remains unexecuted",
+    "NPC movement/aggro/skill world actions and general AI callbacks",
+    "NPC death, respawn, reward/loot lifecycle",
+    "Static NPC gameplay services and remaining six-area goal requirements"
+  ]
+}

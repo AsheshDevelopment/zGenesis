@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-25",
+  "scope": "P04-T06 and P07-T03 continuation; full client goal remains incomplete",
+  "implemented": [
+    "native unit/area codecs",
+    "authenticated self-targeted timed stat casting",
+    "ready plus 100ms preparation",
+    "native resource cost and cooldown fragments",
+    "native timed stat effects and expiry",
+    "quick-slot request dispatch",
+    "movement/death/revival preparation cancellation",
+    "current session generation checks",
+    "Karma/allowed-level setting plumbing",
+    "single-consumption notification batches"
+  ],
+  "wire": {
+    "cases": 8,
+    "source_declarations_agree": true,
+    "unit_bytes": 96,
+    "area_bytes": 456,
+    "target_stride": 24,
+    "target_offset": 72,
+    "alignment": 8,
+    "message_ids": [
+      "0x3240",
+      "0x3250"
+    ],
+    "test": "native_skill_wire"
+  },
+  "authority": {
+    "checks": 99,
+    "test": "native_skill_authority",
+    "fixture_directory": "C:\\_GitHub\\tantra-dev-main\\_remake\\build-migration\\skill-profiles\\skill-authority-174875785061200",
+    "mode": "CPU-only, no renderer/window/server process",
+    "group": 1,
+    "zone": 1,
+    "account": "ashesh",
+    "skill": 3110,
+    "prerequisites": [
+      3101,
+      3102
+    ],
+    "tp_cost": 7,
+    "ready_ms": 200,
+    "ready_grace_ms": 100,
+    "timed_effects": 4,
+    "effect_duration_ms": 180000,
+    "base_cooldown_ms": 60000,
+    "corrected_cooldown_ms": 48000,
+    "cost_saving_cases": [
+      -10,
+      3,
+      50,
+      200
+    ],
+    "expiry_before_cost_checked": true,
+    "sqlite": {
+      "quick_check": "ok",
+      "foreign_key_errors": 0,
+      "characters": 1,
+      "saved_vitals_and_skills_checked_by_cpp": true
+    }
+  },
+  "regressions": {
+    "passed": 4,
+    "tests": [
+      "native_progression_actions",
+      "native_world_entry_context",
+      "native_entry_effects",
+      "native_effect_ticking"
+    ],
+    "scope": "Existing initialization/progression/effect behavior; does not establish active damage or visual parity"
+  },
+  "build": {
+    "configuration": "Release",
+    "architecture": "x64",
+    "executable": "C:\\_GitHub\\tantra-dev-main\\_client\\HTLauncher.exe",
+    "sha256": "1ba09f4fd25ef27255b80d4087af6b5268d132f6d612d477f2cacc49866f6afc",
+    "bytes": 3365888,
+    "manifest_files": 1515,
+    "manifest_payload_bytes": 669674584,
+    "static_verification": "FINAL_CLIENT_VERIFIED files=1515 original_layout=verified x64=verified imports=resolved icon_frames=9 icon_payload=exact title=not-run relocation=not-run",
+    "runtime_launched": false
+  },
+  "preservation": {
+    "hpk_files_checked": 148,
+    "hpk_changes": [],
+    "normal_userdata_files_before": 0,
+    "normal_userdata_files_after": 0,
+    "normal_userdata_unchanged": true,
+    "original_native_client": {
+      "path": "C:\\_GitHub\\TantraSrc\\TantraClient\\HTLauncher.exe",
+      "sha256": "03d4587c4f87eeb71eb8be288b765836ccf8a1f11d49760d48239c6496c73903",
+      "unchanged": true
+    },
+    "previous_client": {
+      "path": "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe",
+      "sha256": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34",
+      "unchanged": true
+    },
+    "previous_private_save": {
+      "path": "C:\\_GitHub\\TantraSrc\\_client\\userdata\\offline\\tantra.sqlite3",
+      "sha256": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f",
+      "unchanged": true
+    }
+  },
+  "source_hashes": {
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\Basedef.h": "06d0028f615afcc34c0f8aa18d9dfe8af5c9a748ca5144b01dff8d8d0941ed22",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\Basedef.h": "b6954bb781fb4836518192e8b010a54fd21f340f7e076e4bfa9eae3d0097073c",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\CMob2.cpp": "50cd5a0bbe8d5287d44ced2bd893013f33c8c472b09982890db11caee3c65e8b",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\CMOB.CPP": "3421c51069c245603784168aa8ea2c276798d480b9749d8e9124734ad0715a46",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\server.cpp": "6639ca68a1e18c121e1e8a60fd2c7bbdd8f07b1d73540f645509e58ad9b6da7a",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTMainCharacter.cpp": "6e7b5ee760a729fbc8afad3b4aa59a61ed394e51ba9e3f601037c2fa6226e08d"
+  },
+  "remaining": [
+    "unit/area recipients and native damage/hit/critical pipeline",
+    "instant heals and item/arrow costs",
+    "periodic damage/healing attribution",
+    "full cancellation/error mapping",
+    "motions, TFX, projectiles, audio, icons and cooldown overlays",
+    "temporary-effect persistence/re-entry rules",
+    "online C++ authority integration",
+    "rendered Mandara acceptance pending prior retry question"
+  ],
+  "local_evidence_logs": {
+    "skill-final-cpu-tests.log": "eaadbdfecf4f5a16bb57ee9ecf2210803a63ca6a9ae7b59d4dd923c6a90e9980",
+    "skill-regression-tests.log": "bda6cb164560cfc2269e625c46b8978476f65f4c552e05de1267344f5daed19b",
+    "skill-final-client-build-stage.log": "d69f003363ba062a4043875ce4cf73295611b1f088de0868f776d53eebbf6780",
+    "skill-final-client-static.log": "549cd8853719cf0dddf07795d347443f8eb448d2690dd015dd6630d9adbcbd1a"
+  },
+  "prior_runtime_attempts": 1,
+  "new_game_launches_this_checkpoint": 0,
+  "publication": "These continuation changes remain local after the earlier requested push; not newly committed or pushed."
+}

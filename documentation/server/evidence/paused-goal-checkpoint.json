@@ -1,0 +1,161 @@
+{
+  "recorded_at": "2026-10-24T17:09:40.045773+00:00",
+  "goal_status": "paused",
+  "whole_plan_complete": false,
+  "game_ready": false,
+  "current_test_process_stopped": true,
+  "debug_interrupted_by_user_pause": true,
+  "debug_remaining": [
+    "player_damage_wear",
+    "player_damage_roll",
+    "player_damage_roll_failure"
+  ],
+  "source_hashes": {
+    "src/zone/world.cpp": "297e61f2a579b44c8e0a9b78e6cec9ba111952e834f08060126b263348b010b2",
+    "src/zone/npc_damage.cpp": "7ab692bf81ff45e29b9d943acd90bb04e00f48c525062e926ed61556a04de302",
+    "include/tantra/world.h": "eb6803b670eaeb794e42043e08774d828cbe4a98c94e57e444c7550c10a18c63",
+    "include/tantra/population.h": "8882b37c8d1db02dd23133c8afaf4c29e248436e60164182589f607e14cecf0f",
+    "src/rules/compatibility/HtPcStatProjection.h": "c8ca4ea13b5ba610db9003e4f8e3c35c716b8430138ab1a98a45edf81787cdc8",
+    "src/rules/compatibility/HtPcStatProjection.cpp": "1e7e3e48e37d642f2a8760ff0f432f4aca3f28da3bac62f880924e4beb23b0dd",
+    "src/rules/resources/NativeGameplayParameters.cpp": "0f12a6c7ad9d02c836f06cedd5a5e12679eeabb7aa4fe91317ae55e22422d589",
+    "src/rules/PROVENANCE.json": "064564ca3f578e4aaab3c42b98e176010dbabaf0900f43b4ed087e06d7b97679",
+    "tools/rules/generate-native-pc-stat-core.py": "96264bf07423075e219705baf40d54d1bab4e0dfc2f910ffc8c6d3ea8e1485fe",
+    "tools/rules/generate-native-equipment-durability.py": "488d6f4c1c49921cf026f62b36f701526bf360d615b8f336be219ea06d24f41e",
+    "cmake/NativeRules.cmake": "4a4125f8e64b825abbcb56b2a3202c2829aa38723578b5307a98070142e0ede6",
+    "cmake/World.cmake": "92380368f0ac82107d7527438935311f0384e4ec6e0af5cfccc3eb5b1e424cfa",
+    "tests/player_damage_tests.cpp": "320d1effe19273ead882879b1d0304d5d0b723c148c1307f96aba926a86b9c1d"
+  },
+  "logs": {
+    "equipment-wear-release-all-cpu.log": {
+      "sha256": "c0b80b67e1cd465fa61c0f0efd77c85def208fc3118fe23bfb2ef0a7aedb2bc8",
+      "passed_tests": [
+        "core",
+        "store_credentials",
+        "store_transactions",
+        "store_ownership",
+        "store_recovery",
+        "store_migration",
+        "store_backup",
+        "store_restore",
+        "login_cpu",
+        "native_probability",
+        "native_status",
+        "native_npc_initialization",
+        "player_damage_core",
+        "player_damage_authority",
+        "player_damage_failure",
+        "player_damage_wear",
+        "player_damage_roll",
+        "player_damage_roll_failure",
+        "damage_roll_rng",
+        "damage_roll_edges",
+        "damage_roll_authority",
+        "native_damage_tables",
+        "native_damage_mitigation",
+        "native_damage_shields",
+        "native_damage_authority",
+        "npc_battle_targets",
+        "npc_battle_decisions",
+        "npc_battle_pursuit",
+        "npc_battle_skills",
+        "npc_battle_world",
+        "npc_escape_paths",
+        "npc_escape_timed",
+        "npc_escape_effects_warp",
+        "npc_peace_recovery",
+        "npc_peace_order",
+        "npc_peace_detection",
+        "npc_peace_effects",
+        "npc_peace_fence",
+        "npc_world_wire",
+        "npc_world_speech",
+        "npc_world_control",
+        "npc_world_movement",
+        "npc_world_callbacks",
+        "npc_threat_memory",
+        "npc_threat_lifecycle",
+        "npc_threat_under_attack",
+        "npc_threat_groups",
+        "npc_threat_ai_order",
+        "npc_navigation",
+        "npc_detection",
+        "npc_motion",
+        "npc_owner",
+        "npc_service_rules",
+        "npc_service_authority",
+        "inventory_rules",
+        "inventory_session",
+        "inventory_authority",
+        "world_map",
+        "world_movement",
+        "world_actors",
+        "native_ai_dispatch",
+        "population_parser",
+        "population_spatial",
+        "population_routes",
+        "population_prepare",
+        "population_generation",
+        "population_propagated",
+        "world_entry_codec",
+        "world_entry_authority"
+      ],
+      "has_complete_pass_summary": true
+    },
+    "equipment-wear-debug-cpu.log": {
+      "sha256": "70c887377d26b94d9726dd03a6d96d5961ac1fd775bf75880a644fb6e1a46e90",
+      "passed_tests": [
+        "player_damage_core",
+        "player_damage_authority",
+        "player_damage_failure"
+      ],
+      "has_complete_pass_summary": false
+    },
+    "equipment-wear-debug-build.log": {
+      "sha256": "f5953117adfe11f154ce137c52368699b113dd4e516105b18aad57741bd3d626",
+      "passed_tests": [],
+      "has_complete_pass_summary": false
+    },
+    "equipment-wear-build.log": {
+      "sha256": "7577631920adb9e9d64cd46df81262502550c1f08f6c7ba7bfa168b94de88b90",
+      "passed_tests": [],
+      "has_complete_pass_summary": false
+    }
+  },
+  "build_artifacts": {
+    "build/Debug/TantraServerManager.exe": "0c7ce49e3a8cf464eed1ec89000ad47c176594e877d99e902f7bb615244d2cfe",
+    "build/Debug/TantraService.exe": "fcd75839085d67a18f5bd0df4b3135c1db007675c586a0da35ce3cbabfb08657",
+    "build/Debug/TantraZone.exe": "7d6a81096faf0e68439d60d5e2b445d39aeff696a97119a668fbe9066e3a8f90",
+    "build/Debug/TantraPlayerDamageTests.exe": "a7c5b3ba6898e75220b68edfd772d5814ae0ba1d64cec8ee8e1ef59c2291f9ed",
+    "build/Release/TantraServerManager.exe": "f61f6339c4d8d8a8b52e2719ecc1cd61e7629e984dbe9e30dd63eb6be66dbbbf",
+    "build/Release/TantraService.exe": "e460be9cef6eb6e9fb11ba1b7bd9edf1c43bdd44fd67d1d84b87778f48bf4be8",
+    "build/Release/TantraZone.exe": "11dc2e13e84db97526825de8ead384b74fc537c65b734d9908fdc2940a744e0a",
+    "build/Release/TantraPlayerDamageTests.exe": "f21c69dcb5e199e04f911dc539644991a72644068b6f21f0c181cd88fbcae1d0"
+  },
+  "packaged_artifacts": {
+    "TantraServerManager.exe": {
+      "sha256": "f61f6339c4d8d8a8b52e2719ecc1cd61e7629e984dbe9e30dd63eb6be66dbbbf",
+      "matches_release": true
+    },
+    "TantraService.exe": {
+      "sha256": "e460be9cef6eb6e9fb11ba1b7bd9edf1c43bdd44fd67d1d84b87778f48bf4be8",
+      "matches_release": true
+    },
+    "TantraZone.exe": {
+      "sha256": "b23a354f690f5757ba08bca15098c4bbba80d564dee93e43fb5ba5c7ac6ce2e2",
+      "matches_release": false
+    }
+  },
+  "canonical_client": {
+    "_client/HTLauncher.exe": {
+      "sha256": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34",
+      "matches_recorded_baseline": true
+    },
+    "_client/userdata/offline/tantra.sqlite3": {
+      "sha256": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f",
+      "matches_recorded_baseline": true
+    }
+  },
+  "new_wear_evidence_generated": false,
+  "corrected_tcp_retry_verified": false,
+  "automatic_game_retry_allowed": false
+}

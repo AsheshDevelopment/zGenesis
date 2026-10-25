@@ -1,0 +1,576 @@
+HT3DHeaven.dll SHA256=b818b89edbc9f8e49bb1b79200371740eaa157dabac23bbf1e2d52e40ff99941
+Read-only inspection; native DLL is never executed.
+Dispatch table RVA=0x63588 slot=0x16C -> 0x20001F0C
+Dispatch table RVA=0x67840 slot=0x7C -> 0x20025BE1
+Dispatch table RVA=0x63C18 slot=0x2C -> 0x2000B001
+
+Manager forwards animation, sound and loop count to skinned object
+0x20001F0C: push ebp
+0x20001F0D: mov ebp, esp
+0x20001F0F: mov eax, dword ptr [ecx]
+0x20001F11: lea edx, [ebp + 8]
+0x20001F14: push edx
+0x20001F15: push dword ptr [ebp + 8]
+0x20001F18: call dword ptr [eax + 0x2a4]
+0x20001F1E: test eax, eax
+0x20001F20: je 0x20001f29
+0x20001F22: mov eax, 0x80004005
+0x20001F27: jmp 0x20001f43
+0x20001F29: push dword ptr [ebp + 0x14]
+0x20001F2C: mov ecx, dword ptr [ebp + 8]
+0x20001F2F: push dword ptr [ebp + 0x10]
+0x20001F32: mov eax, dword ptr [ecx]
+0x20001F34: push dword ptr [ebp + 0xc]
+0x20001F37: call dword ptr [eax + 0x7c]
+0x20001F3A: neg eax
+0x20001F3C: sbb eax, eax
+0x20001F3E: and eax, 0x80004005
+0x20001F43: pop ebp
+
+Skinned start passes zero play-time override into model clock
+0x20025BE1: push ebp
+0x20025BE2: mov ebp, esp
+0x20025BE4: sub esp, 0x10
+0x20025BE7: push esi
+0x20025BE8: fldz 
+0x20025BEA: push edi
+0x20025BEB: mov esi, ecx
+0x20025BED: mov ecx, dword ptr [esi + 8]
+0x20025BF0: mov eax, dword ptr [ecx]
+0x20025BF2: push ecx
+0x20025BF3: fstp dword ptr [esp]
+0x20025BF6: push dword ptr [ebp + 0x10]
+0x20025BF9: push dword ptr [ebp + 8]
+0x20025BFC: call dword ptr [eax + 0x2c]
+
+StartAnimation resets state, loop counter and elapsed time
+0x2000B001: push esi
+0x2000B002: push edi
+0x2000B003: mov edi, dword ptr [esp + 0xc]
+0x2000B007: mov esi, ecx
+0x2000B009: mov ecx, dword ptr [0x20078120]
+0x2000B00F: push edi
+0x2000B010: call 0x20006ecf
+0x2000B015: test eax, eax
+0x2000B017: je 0x2000b06c
+0x2000B019: mov ecx, dword ptr [esp + 0x10]
+0x2000B01D: fldz 
+0x2000B01F: or dword ptr [esi + 0xd8], 0xffffffff
+0x2000B026: fstp dword ptr [esi + 0xe0]
+0x2000B02C: and dword ptr [esi + 0xdc], 0
+0x2000B033: fldz 
+0x2000B035: and dword ptr [esi + 0xe8], 0
+0x2000B03C: fstp dword ptr [esi + 0x38]
+0x2000B03F: mov dword ptr [esi + 0xe4], ecx
+0x2000B045: mov ecx, dword ptr [esp + 0x14]
+0x2000B049: mov dword ptr [esi + 0xd0], 1
+0x2000B053: mov dword ptr [esi + 0xd4], edi
+0x2000B059: mov dword ptr [esi + 0xf4], ecx
+0x2000B05F: movzx eax, word ptr [eax + 0x34c]
+0x2000B066: mov dword ptr [esi + 0xfc], eax
+0x2000B06C: pop edi
+0x2000B06D: pop esi
+
+Positive elapsed steps no greater than 30 seconds reach playback
+0x2000AC65: push ebp
+0x2000AC66: mov ebp, esp
+0x2000AC68: push ecx
+0x2000AC69: fld dword ptr [ebp + 8]
+0x2000AC6C: push ebx
+0x2000AC6D: fcomp dword ptr [0x20063aa4]
+0x2000AC73: push esi
+0x2000AC74: push edi
+0x2000AC75: mov esi, ecx
+0x2000AC77: fnstsw ax
+0x2000AC79: test ah, 0x41
+0x2000AC7C: je 0x2000aff5
+0x2000AC82: fld dword ptr [ebp + 8]
+0x2000AC85: fcomp dword ptr [0x20063454]
+0x2000AC8B: fnstsw ax
+0x2000AC8D: test ah, 5
+0x2000AC90: jnp 0x2000aff5
+
+Positive requested play time scales authored elapsed only in playing state
+0x2000ACDD: fld dword ptr [esi + 0xf4]
+0x2000ACE3: fcomp dword ptr [0x20063454]
+0x2000ACE9: fnstsw ax
+0x2000ACEB: test ah, 0x41
+0x2000ACEE: jne 0x2000ad06
+0x2000ACF0: cmp dword ptr [esi + 0xd0], 1
+0x2000ACF7: jne 0x2000ad06
+0x2000ACF9: fstp st(0)
+0x2000ACFB: fld st(0)
+0x2000ACFD: fdiv dword ptr [esi + 0xf4]
+0x2000AD03: fmul dword ptr [ebp + 8]
+
+Animation resource selects first attack/Attack substring before final key
+0x2002DDB1: mov eax, dword ptr [esi + 0x31c]
+0x2002DDB7: push edi
+0x2002DDB8: xor edi, edi
+0x2002DDBA: dec eax
+0x2002DDBB: je 0x2002de0c
+0x2002DDBD: mov eax, dword ptr [esi + 0x324]
+0x2002DDC3: mov eax, dword ptr [eax + edi*8 + 4]
+0x2002DDC7: test eax, eax
+0x2002DDC9: je 0x2002ddf7
+0x2002DDCB: push 0x20069214
+0x2002DDD0: push eax
+0x2002DDD1: call 0x20051fbc
+0x2002DDD6: test eax, eax
+0x2002DDD8: pop ecx
+0x2002DDD9: pop ecx
+0x2002DDDA: jne 0x2002de05
+0x2002DDDC: mov eax, dword ptr [esi + 0x324]
+0x2002DDE2: mov eax, dword ptr [eax + edi*8 + 4]
+0x2002DDE6: push 0x2006920c
+0x2002DDEB: push eax
+0x2002DDEC: call 0x20051fbc
+0x2002DDF1: test eax, eax
+0x2002DDF3: pop ecx
+0x2002DDF4: pop ecx
+0x2002DDF5: jne 0x2002de05
+0x2002DDF7: mov eax, dword ptr [esi + 0x31c]
+0x2002DDFD: inc edi
+0x2002DDFE: dec eax
+0x2002DDFF: cmp edi, eax
+0x2002DE01: jb 0x2002ddbd
+0x2002DE03: jmp 0x2002de0c
+0x2002DE05: mov word ptr [esi + 0x34c], di
+
+Attack signal consumes once after interval reaches marker in playing state
+0x2000B0D5: mov edx, dword ptr [ecx + 0xfc]
+0x2000B0DB: test edx, edx
+0x2000B0DD: jl 0x2000b101
+0x2000B0DF: lea eax, [ecx + 0xf8]
+0x2000B0E5: cmp byte ptr [eax], 0
+0x2000B0E8: jne 0x2000b101
+0x2000B0EA: cmp dword ptr [ecx + 0xdc], edx
+0x2000B0F0: jl 0x2000b101
+0x2000B0F2: cmp dword ptr [ecx + 0xd0], 1
+0x2000B0F9: jne 0x2000b101
+0x2000B0FB: mov byte ptr [eax], 1
+0x2000B0FE: mov al, 1
+0x2000B100: ret 
+0x2000B101: xor al, al
+0x2000B103: ret 
+
+Model interval lookup: first timestamp strictly greater than elapsed
+0x2000AC2E: mov edx, dword ptr [ecx + 0x31c]
+0x2000AC34: push esi
+0x2000AC35: xor esi, esi
+0x2000AC37: inc esi
+0x2000AC38: cmp edx, esi
+0x2000AC3A: jbe 0x2000ac5a
+0x2000AC3C: mov ecx, dword ptr [ecx + 0x320]
+0x2000AC42: add ecx, 4
+0x2000AC45: fld dword ptr [ecx]
+0x2000AC47: fcomp dword ptr [esp + 8]
+0x2000AC4B: fnstsw ax
+0x2000AC4D: test ah, 0x41
+0x2000AC50: je 0x2000ac60
+0x2000AC52: inc esi
+0x2000AC53: add ecx, 4
+0x2000AC56: cmp esi, edx
+0x2000AC58: jb 0x2000ac45
+0x2000AC5A: xor eax, eax
+0x2000AC5C: pop esi
+0x2000AC5D: ret 4
+0x2000AC60: lea eax, [esi - 1]
+0x2000AC63: jmp 0x2000ac5c
+
+Playback reads final authored timestamp as duration
+0x2000ACCA: mov eax, dword ptr [edi + 0x31c]
+0x2000ACD0: mov ecx, dword ptr [edi + 0x320]
+0x2000ACD6: fld dword ptr [ecx + eax*4 - 4]
+0x2000ACDA: fld dword ptr [ebp + 8]
+0x2000ACDD: fld dword ptr [esi + 0xf4]
+0x2000ACE3: fcomp dword ptr [0x20063454]
+0x2000ACE9: fnstsw ax
+0x2000ACEB: test ah, 0x41
+0x2000ACEE: jne 0x2000ad06
+0x2000ACF0: cmp dword ptr [esi + 0xd0], 1
+0x2000ACF7: jne 0x2000ad06
+0x2000ACF9: fstp st(0)
+0x2000ACFB: fld st(0)
+0x2000ACFD: fdiv dword ptr [esi + 0xf4]
+0x2000AD03: fmul dword ptr [ebp + 8]
+
+Playback interpolant uses adjacent authored timestamps
+0x2000AD9F: call 0x2000ac2e
+0x2000ADA4: mov dword ptr [esi + 0xdc], eax
+0x2000ADAA: mov ecx, dword ptr [edi + 0x320]
+0x2000ADB0: mov edi, dword ptr [edi + 0x31c]
+0x2000ADB6: lea ebx, [edi - 1]
+0x2000ADB9: cmp eax, ebx
+0x2000ADBB: lea edx, [ecx + eax*4]
+0x2000ADBE: fld dword ptr [edx]
+0x2000ADC0: jge 0x2000adc7
+0x2000ADC2: fld dword ptr [edx + 4]
+0x2000ADC5: jmp 0x2000adcb
+0x2000ADC7: fld dword ptr [ecx + edi*4 - 4]
+0x2000ADCB: fcom st(1)
+0x2000ADCD: fnstsw ax
+0x2000ADCF: test ah, 0x44
+0x2000ADD2: jnp 0x2000adee
+0x2000ADD4: fld dword ptr [ebp - 4]
+0x2000ADD7: fsub st(2)
+0x2000ADD9: fld st(1)
+0x2000ADDB: fsub st(3)
+0x2000ADDD: fdivp st(1)
+0x2000ADDF: fstp dword ptr [esi + 0xe0]
+0x2000ADE5: fstp st(0)
+0x2000ADE7: fstp st(0)
+0x2000ADE9: jmp 0x2000ae9d
+0x2000ADEE: fstp st(0)
+0x2000ADF0: fstp st(0)
+0x2000ADF2: fldz 
+0x2000ADF4: fstp dword ptr [esi + 0xe0]
+0x2000ADFA: jmp 0x2000ae9d
+
+Finite-loop counter and STOP path
+0x2000ADFF: mov ecx, dword ptr [esi + 0xe4]
+0x2000AE05: lea eax, [esi + 0xe8]
+0x2000AE0B: inc dword ptr [eax]
+0x2000AE0D: cmp ecx, -1
+0x2000AE10: mov eax, dword ptr [eax]
+0x2000AE12: je 0x2000ae2b
+0x2000AE14: cmp ecx, eax
+0x2000AE16: jg 0x2000ae2b
+0x2000AE18: fstp st(0)
+0x2000AE1A: mov dword ptr [esi + 0xd0], ebx
+0x2000AE20: mov byte ptr [esi + 0xf8], bl
+0x2000AE26: jmp 0x2000aff1
+0x2000AE2B: fld dword ptr [ebp - 4]
+0x2000AE2E: push ecx
+0x2000AE2F: fsub st(1)
+0x2000AE31: mov ecx, edi
+0x2000AE33: fst dword ptr [ebp - 4]
+0x2000AE36: fstp st(1)
+0x2000AE38: fst dword ptr [esi + 0x38]
+0x2000AE3B: fstp dword ptr [esp]
+0x2000AE3E: call 0x2000ac2e
+0x2000AE43: mov dword ptr [esi + 0xdc], eax
+
+Skinned STOP rendering forces old-key interpolation to one
+0x20023DBE: mov eax, dword ptr [esi + 0x5c]
+0x20023DC1: mov ecx, dword ptr [esi + 8]
+0x20023DC4: mov ebx, dword ptr [eax]
+0x20023DC6: mov eax, dword ptr [ecx]
+0x20023DC8: push 0
+0x20023DCA: call dword ptr [eax + 0x14]
+0x20023DCD: mov ecx, dword ptr [esi + 0x5c]
+0x20023DD0: push eax
+0x20023DD1: push edi
+0x20023DD2: call dword ptr [ebx + 0x104]
+0x20023DD8: fldz 
+0x20023DDA: mov ecx, dword ptr [esi + 0x5c]
+0x20023DDD: mov eax, dword ptr [ecx]
+0x20023DDF: push 0
+0x20023DE1: sub esp, 0xc
+0x20023DE4: fstp dword ptr [esp + 8]
+0x20023DE8: fldz 
+0x20023DEA: fstp dword ptr [esp + 4]
+0x20023DEE: fld1 
+0x20023DF0: fstp dword ptr [esp]
+0x20023DF3: call dword ptr [eax + 0x100]
+
+ChangeAnimation enters blend state while retaining old key phase
+0x2000B071: push esi
+0x2000B072: push edi
+0x2000B073: mov edi, dword ptr [esp + 0xc]
+0x2000B077: mov esi, ecx
+0x2000B079: mov ecx, dword ptr [0x20078120]
+0x2000B07F: push edi
+0x2000B080: call 0x20006ecf
+0x2000B085: test eax, eax
+0x2000B087: je 0x2000b0d0
+0x2000B089: mov ecx, dword ptr [esp + 0x10]
+0x2000B08D: fldz 
+0x2000B08F: and dword ptr [esi + 0xe8], 0
+0x2000B096: fstp dword ptr [esi + 0x38]
+0x2000B099: mov dword ptr [esi + 0xe4], ecx
+0x2000B09F: mov ecx, dword ptr [esp + 0x14]
+0x2000B0A3: mov dword ptr [esi + 0xec], ecx
+0x2000B0A9: mov ecx, dword ptr [esp + 0x18]
+0x2000B0AD: mov dword ptr [esi + 0xd0], 4
+0x2000B0B7: mov dword ptr [esi + 0xd8], edi
+0x2000B0BD: mov dword ptr [esi + 0xf4], ecx
+0x2000B0C3: movzx eax, word ptr [eax + 0x34c]
+0x2000B0CA: mov dword ptr [esi + 0xfc], eax
+0x2000B0D0: pop edi
+0x2000B0D1: pop esi
+
+Blend completion starts the target before its rejected negative elapsed call
+0x2000AD19: jne 0x2000ad7c
+0x2000AD1B: fstp st(0)
+0x2000AD1D: fld dword ptr [ebp - 4]
+0x2000AD20: fcomp dword ptr [esi + 0xec]
+0x2000AD26: fnstsw ax
+0x2000AD28: test ah, 0x41
+0x2000AD2B: jp 0x2000ad38
+0x2000AD2D: fld dword ptr [ebp - 4]
+0x2000AD30: fdiv dword ptr [esi + 0xec]
+0x2000AD36: jmp 0x2000ad71
+0x2000AD38: fld dword ptr [esi + 0xf4]
+0x2000AD3E: mov eax, dword ptr [esi]
+0x2000AD40: push ecx
+0x2000AD41: fstp dword ptr [esp]
+0x2000AD44: push dword ptr [esi + 0xe4]
+0x2000AD4A: mov ecx, esi
+0x2000AD4C: push dword ptr [esi + 0xd8]
+0x2000AD52: call dword ptr [eax + 0x2c]
+0x2000AD55: fld dword ptr [esi + 0x38]
+0x2000AD58: fsub dword ptr [esi + 0xec]
+0x2000AD5E: mov eax, dword ptr [esi]
+0x2000AD60: push ecx
+0x2000AD61: mov ecx, esi
+0x2000AD63: fstp dword ptr [esp]
+0x2000AD66: call dword ptr [eax + 0x28]
+0x2000AD69: fldz 
+0x2000AD6B: mov byte ptr [esi + 0xf8], bl
+0x2000AD71: fstp dword ptr [esi + 0xf0]
+0x2000AD77: jmp 0x2000aff1
+
+Pose setup loads old adjacent keys and target key zero
+0x20038016: push ebp
+0x20038017: mov ebp, esp
+0x20038019: cmp dword ptr [ebp + 8], 0
+0x2003801D: push esi
+0x2003801E: mov esi, ecx
+0x20038020: je 0x2003805c
+0x20038022: mov ecx, dword ptr [esi + 0x314]
+0x20038028: push edi
+0x20038029: mov edi, dword ptr [ebp + 0xc]
+0x2003802C: push edi
+0x2003802D: push dword ptr [ebp + 8]
+0x20038030: call 0x2002eddf
+0x20038035: mov ecx, dword ptr [esi + 0x314]
+0x2003803B: inc edi
+0x2003803C: push edi
+0x2003803D: push dword ptr [ebp + 8]
+0x20038040: call 0x2002ee52
+0x20038045: cmp dword ptr [ebp + 0x10], 0
+0x20038049: pop edi
+0x2003804A: je 0x2003805c
+0x2003804C: mov ecx, dword ptr [esi + 0x314]
+0x20038052: push 0
+0x20038054: push dword ptr [ebp + 0x10]
+0x20038057: call 0x2002eed4
+0x2003805C: pop esi
+0x2003805D: pop ebp
+
+Local pose interpolates rotations spherically and positions linearly
+0x2002EACE: fld dword ptr [ebp + 0x68]
+0x2002EAD1: push ecx
+0x2002EAD2: fstp dword ptr [esp]
+0x2002EAD5: lea eax, [ebx + 0x104]
+0x2002EADB: push eax
+0x2002EADC: lea eax, [ebx + 0xe8]
+0x2002EAE2: push eax
+0x2002EAE3: lea eax, [ebp + 0x20]
+0x2002EAE6: push eax
+0x2002EAE7: call 0x2004199f
+0x2002EAEC: cmp byte ptr [ebp + 0x70], 0
+0x2002EAF0: jne 0x2002eb15
+0x2002EAF2: fld dword ptr [ebp + 0x68]
+0x2002EAF5: push ecx
+0x2002EAF6: fstp dword ptr [esp]
+0x2002EAF9: lea eax, [ebx + 0xf8]
+0x2002EAFF: push eax
+0x2002EB00: lea eax, [ebx + 0xdc]
+0x2002EB06: push eax
+0x2002EB07: lea eax, [ebp + 0x50]
+0x2002EB0A: push eax
+0x2002EB0B: call 0x2002e683
+0x2002EB10: add esp, 0x10
+0x2002EB13: jmp 0x2002eb4d
+0x2002EB15: mov eax, dword ptr [ebx + 4]
+0x2002EB18: push 0x20069234
+0x2002EB1D: push eax
+0x2002EB1E: call 0x20051fbc
+0x2002EB23: test eax, eax
+0x2002EB25: pop ecx
+0x2002EB26: pop ecx
+0x2002EB27: jne 0x2002eaf2
+0x2002EB29: fld dword ptr [ebx + 0xb8]
+0x2002EB2F: mov eax, dword ptr [ebx + 0xa8]
+0x2002EB35: fstp dword ptr [ebp + 0x44]
+0x2002EB38: fld dword ptr [ebx + 0xc8]
+0x2002EB3E: mov dword ptr [ebp + 0x40], eax
+0x2002EB41: fstp dword ptr [ebp + 0x48]
+0x2002EB44: lea esi, [ebp + 0x40]
+0x2002EB47: lea edi, [ebp + 0x50]
+0x2002EB4A: movsd dword ptr es:[edi], dword ptr [esi]
+0x2002EB4B: movsd dword ptr es:[edi], dword ptr [esi]
+0x2002EB4C: movsd dword ptr es:[edi], dword ptr [esi]
+0x2002EB4D: fld dword ptr [ebp + 0x6c]
+0x2002EB50: fcomp dword ptr [0x20063454]
+0x2002EB56: fnstsw ax
+0x2002EB58: test ah, 0x41
+0x2002EB5B: jne 0x2002ebd6
+0x2002EB5D: fld dword ptr [ebp + 0x6c]
+0x2002EB60: push ecx
+0x2002EB61: fstp dword ptr [esp]
+0x2002EB64: lea eax, [ebx + 0x120]
+0x2002EB6A: push eax
+0x2002EB6B: lea eax, [ebp + 0x20]
+0x2002EB6E: push eax
+0x2002EB6F: lea eax, [ebp + 0x20]
+0x2002EB72: push eax
+0x2002EB73: call 0x2004199f
+0x2002EB78: cmp byte ptr [ebp + 0x70], 0
+0x2002EB7C: jne 0x2002eb9e
+0x2002EB7E: fld dword ptr [ebp + 0x6c]
+0x2002EB81: push ecx
+0x2002EB82: fstp dword ptr [esp]
+0x2002EB85: lea eax, [ebx + 0x114]
+0x2002EB8B: push eax
+0x2002EB8C: lea eax, [ebp + 0x50]
+0x2002EB8F: push eax
+0x2002EB90: lea eax, [ebp + 0x50]
+0x2002EB93: push eax
+0x2002EB94: call 0x2002e683
+0x2002EB99: add esp, 0x10
+0x2002EB9C: jmp 0x2002ebd6
+0x2002EB9E: mov eax, dword ptr [ebx + 4]
+0x2002EBA1: push 0x20069234
+0x2002EBA6: push eax
+0x2002EBA7: call 0x20051fbc
+0x2002EBAC: test eax, eax
+0x2002EBAE: pop ecx
+0x2002EBAF: pop ecx
+0x2002EBB0: jne 0x2002eb7e
+0x2002EBB2: fld dword ptr [ebx + 0xb8]
+0x2002EBB8: mov eax, dword ptr [ebx + 0xa8]
+0x2002EBBE: fstp dword ptr [ebp + 0x44]
+0x2002EBC1: fld dword ptr [ebx + 0xc8]
+0x2002EBC7: mov dword ptr [ebp + 0x40], eax
+0x2002EBCA: fstp dword ptr [ebp + 0x48]
+0x2002EBCD: lea esi, [ebp + 0x40]
+0x2002EBD0: lea edi, [ebp + 0x50]
+0x2002EBD3: movsd dword ptr es:[edi], dword ptr [esi]
+0x2002EBD4: movsd dword ptr es:[edi], dword ptr [esi]
+0x2002EBD5: movsd dword ptr es:[edi], dword ptr [esi]
+
+Quaternion interpolation dispatch
+0x2004199F: jmp dword ptr [0x200751cc]
+
+Scalar spherical interpolation: hemisphere, angular weights, epsilon branch
+0x200419A5: push ebp
+0x200419A6: mov ebp, esp
+0x200419A8: push ecx
+0x200419A9: mov ecx, dword ptr [ebp + 0xc]
+0x200419AC: fld1 
+0x200419AE: fsub dword ptr [ebp + 0x14]
+0x200419B1: mov edx, dword ptr [ebp + 0x10]
+0x200419B4: fld dword ptr [ecx]
+0x200419B6: fmul dword ptr [edx]
+0x200419B8: fld dword ptr [edx + 8]
+0x200419BB: fmul dword ptr [ecx + 8]
+0x200419BE: faddp st(1)
+0x200419C0: fld dword ptr [edx + 4]
+0x200419C3: fmul dword ptr [ecx + 4]
+0x200419C6: faddp st(1)
+0x200419C8: fld dword ptr [edx + 0xc]
+0x200419CB: fmul dword ptr [ecx + 0xc]
+0x200419CE: faddp st(1)
+0x200419D0: fcom dword ptr [0x20063454]
+0x200419D6: fnstsw ax
+0x200419D8: test ah, 1
+0x200419DB: jne 0x200419e4
+0x200419DD: fld1 
+0x200419DF: fstp dword ptr [ebp + 0xc]
+0x200419E2: jmp 0x200419eb
+0x200419E4: mov dword ptr [ebp + 0xc], 0xbf800000
+0x200419EB: fld dword ptr [ebp + 0xc]
+0x200419EE: fmul st(1)
+0x200419F0: fst dword ptr [ebp + 0x10]
+0x200419F3: fstp st(1)
+0x200419F5: fld1 
+0x200419F7: fsub st(1)
+0x200419F9: fcomp dword ptr [0x200698b0]
+0x200419FF: fnstsw ax
+0x20041A01: test ah, 0x41
+0x20041A04: jne 0x20041a40
+0x20041A06: fld st(0)
+0x20041A08: fmul st(1)
+0x20041A0A: fsubr dword ptr [0x20063458]
+0x20041A10: fsqrt 
+0x20041A12: fstp st(1)
+0x20041A14: fld st(0)
+0x20041A16: fld dword ptr [ebp + 0x10]
+0x20041A19: fpatan 
+0x20041A1B: fstp dword ptr [ebp + 0x10]
+0x20041A1E: fld1 
+0x20041A20: fdiv st(1)
+0x20041A22: fstp dword ptr [ebp - 4]
+0x20041A25: fstp st(0)
+0x20041A27: fld dword ptr [ebp + 0x10]
+0x20041A2A: fmul st(1)
+0x20041A2C: fsin 
+0x20041A2E: fstp st(1)
+0x20041A30: fmul dword ptr [ebp - 4]
+0x20041A33: fld dword ptr [ebp + 0x10]
+0x20041A36: fmul dword ptr [ebp + 0x14]
+0x20041A39: fsin 
+0x20041A3B: fmul dword ptr [ebp - 4]
+0x20041A3E: jmp 0x20041a45
+0x20041A40: fstp st(0)
+0x20041A42: fld dword ptr [ebp + 0x14]
+0x20041A45: fmul dword ptr [ebp + 0xc]
+0x20041A48: mov eax, dword ptr [ebp + 8]
+0x20041A4B: fld st(1)
+0x20041A4D: fmul dword ptr [ecx]
+0x20041A4F: fld st(1)
+0x20041A51: fmul dword ptr [edx]
+0x20041A53: faddp st(1)
+0x20041A55: fstp dword ptr [eax]
+0x20041A57: fld st(0)
+0x20041A59: fmul dword ptr [edx + 4]
+0x20041A5C: fld st(2)
+0x20041A5E: fmul dword ptr [ecx + 4]
+0x20041A61: faddp st(1)
+0x20041A63: fstp dword ptr [eax + 4]
+0x20041A66: fld st(0)
+0x20041A68: fmul dword ptr [edx + 8]
+0x20041A6B: fld st(2)
+0x20041A6D: fmul dword ptr [ecx + 8]
+0x20041A70: faddp st(1)
+0x20041A72: fstp dword ptr [eax + 8]
+0x20041A75: fmul dword ptr [edx + 0xc]
+0x20041A78: fld st(1)
+0x20041A7A: fmul dword ptr [ecx + 0xc]
+0x20041A7D: faddp st(1)
+0x20041A7F: fstp dword ptr [eax + 0xc]
+0x20041A82: fstp st(0)
+0x20041A84: leave 
+Quaternion dispatch has optimized variants; scalar formula evidence does not establish universal x87/SSE bit parity.
+
+Clip comparison uses strict greater-than via x87 condition parity
+0x2000AD7C: fldz 
+0x2000AD7E: fcomp dword ptr [ebp - 4]
+0x2000AD81: fnstsw ax
+0x2000AD83: test ah, 0x41
+0x2000AD86: jp 0x2000adff
+0x2000AD88: fld dword ptr [ebp - 4]
+0x2000AD8B: fcomp st(1)
+0x2000AD8D: fnstsw ax
+0x2000AD8F: test ah, 0x41
+0x2000AD92: jp 0x2000adff
+0x2000AD94: fstp st(0)
+0x2000AD96: push ecx
+0x2000AD97: fld dword ptr [ebp - 4]
+0x2000AD9A: mov ecx, edi
+0x2000AD9C: fstp dword ptr [esp]
+For ordered x87 comparison, AH masked by 0x41 is 1 for less, 0x40 for equal, 0 for greater. Only greater has even parity; JP takes the loop/blend completion branch only for greater, not equality.
+
+Monster/Ani/MON_Tiger_WLK.tab: SHA256=3f638a7f9c05993e7f2ef633c41adc2fd4f3203e17e672222ec34c7d45b733f1; controls=50; keys=46; footer=46; duration=1.515151978
+Authored timestamps: 0.000000000, 0.033333000, 0.066666998, 0.101010002, 0.134342998, 0.167677000, 0.202020004, 0.235354006, 0.268687010, 0.303030014, 0.336364001, 0.369697005, 0.404040009, 0.437373996, 0.470706999, 0.505051017, 0.538384020, 0.571717024, 0.606060982, 0.639393985, 0.672726989, 0.707071006, 0.740404010, 0.773737013, 0.808080971, 0.841413975, 0.874747992, 0.909090996, 0.942423999, 0.975758016, 1.010100961, 1.043434978, 1.076768041, 1.111111045, 1.144444942, 1.177778006, 1.212121010, 1.245455027, 1.278787971, 1.313130975, 1.346464992, 1.379798055, 1.414142013, 1.447474957, 1.480808020, 1.515151978
+
+Monster/Ani/MON_Tiger_RUN.tab: SHA256=d1661ec7630ab780d8ec3b5abf0c8aeb364bada340abf156ea66cdf1781e1b2d; controls=50; keys=27; footer=26; duration=0.841413975
+Authored timestamps: 0.000000000, 0.033333000, 0.066666998, 0.101010002, 0.134342998, 0.167677000, 0.202020004, 0.235354006, 0.268687010, 0.303030014, 0.336364001, 0.369697005, 0.404040009, 0.437373996, 0.470706999, 0.505051017, 0.538384020, 0.571717024, 0.606060982, 0.639393985, 0.672726989, 0.707071006, 0.740404010, 0.773737013, 0.808080971, 0.841413975, 0.841413975
+
+PC/Ani/PC_ASU_IDL.tab: SHA256=248d1c3272000fc7488955c5747022b76f71bcd6c53eec98d7eca8d2e0caac4c; controls=58; keys=37; footer=137; duration=4.545454979
+Authored timestamps: 0.000000000, 0.167677000, 0.268687010, 0.336364001, 0.470706999, 0.505051017, 0.538384020, 0.571717024, 0.672726989, 0.707071006, 0.740404010, 0.773737013, 0.841413975, 1.010100961, 1.177778006, 1.346464992, 1.515151978, 1.682827950, 2.020201921, 2.187879086, 2.356565952, 2.525253057, 2.692929983, 2.861615896, 3.030303001, 3.197979927, 3.366667032, 3.434344053, 3.535353899, 3.703031063, 3.871716976, 3.905050993, 4.040403843, 4.141415119, 4.275757790, 4.376768112, 4.545454979
+
+This proves timestamp-based duration and interval selection for this binary profile; it establishes scalar quaternion math and selected blend/STOP control flow, but not skinning, optimized numerical bit parity or complete blend integration.

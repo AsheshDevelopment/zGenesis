@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-25",
+  "scope": "Native combat math and existing offline melee integration; full client goal remains active/incomplete",
+  "implemented": [
+    "generated original OnDefense/OnTakeDamage/DealDamage/set_JudgeCombat/PlayDice and shield methods",
+    "source basic critical fragment",
+    "per-defender native decks and dodge/damage clocks",
+    "authored four-family combat table binding",
+    "native Monster sMuscle dodge-speed export",
+    "source CalDamage/CastInstant1 API for learned skills",
+    "staff settings binding",
+    "production authority combat clock",
+    "existing melee caller uses source producer"
+  ],
+  "cpu": {
+    "combat_rule_checks": 33,
+    "test": "native_combat_rules",
+    "checks_cover": [
+      "fixed armor/defense/resistance/critical vectors",
+      "non-basic critical reset",
+      "HP saturation and immunity",
+      "independent defender dodge intervals",
+      "fixed success bypass",
+      "invalid native handles/PvP/effect-context rejection",
+      "RNG rollback on rejected arithmetic",
+      "actual authored table binding",
+      "learned-skill Chakra damage scaling"
+    ],
+    "gameplay": {
+      "test": "offline_world_gameplay",
+      "result": "passed",
+      "population": 1718,
+      "scope": "CPU movement/collision, inventory, melee, rewards, death, respawn, revival and noon/night configuration; no renderer"
+    },
+    "self_cast_regression": {
+      "test": "native_skill_authority",
+      "assertions": 99,
+      "result": "passed",
+      "scope": "Earlier pass in this checkpoint before final native handle/clock guard edit; self-cast code unchanged"
+    }
+  },
+  "build": {
+    "configuration": "Release",
+    "x64": true,
+    "launcher": "C:\\_GitHub\\tantra-dev-main\\_client\\HTLauncher.exe",
+    "sha256": "31673f673416abf335c2436d5999169c60702d6b5848d802c0bfc3ba2a97ba49",
+    "bytes": 3387392,
+    "manifest_files": 1515,
+    "payload_bytes": 669698290,
+    "static_verification": "FINAL_CLIENT_VERIFIED files=1515 original_layout=verified x64=verified imports=resolved icon_frames=9 icon_payload=exact title=not-run relocation=not-run",
+    "runtime_launched": false
+  },
+  "data": {
+    "monster_rows": 1087,
+    "dodge_speed_field": "sMuscle",
+    "monster_sha256": "0138b96d4c7e79f861b3927481a800a13a2152737e1a482547ea127fb94639bf",
+    "zone_profile_check": "unchanged",
+    "zone_profile_sha256": "0e054a23b565de5b9b2dc4b74166cd03f2edbd95fd153abbc0261c88654bcd91",
+    "hpk_files_verified_unchanged": 148
+  },
+  "preservation": {
+    "normal_new_workspace_userdata_absent": true,
+    "native_client": {
+      "path": "C:\\_GitHub\\TantraSrc\\TantraClient\\HTLauncher.exe",
+      "sha256": "03d4587c4f87eeb71eb8be288b765836ccf8a1f11d49760d48239c6496c73903",
+      "unchanged": true
+    },
+    "previous_distribution": {
+      "path": "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe",
+      "sha256": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34",
+      "unchanged": true
+    },
+    "private_save": {
+      "path": "C:\\_GitHub\\TantraSrc\\_client\\userdata\\offline\\tantra.sqlite3",
+      "sha256": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f",
+      "unchanged": true
+    }
+  },
+  "source_sha256": {
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\CMOB.CPP": "3421c51069c245603784168aa8ea2c276798d480b9749d8e9124734ad0715a46",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\CMob2.cpp": "50cd5a0bbe8d5287d44ced2bd893013f33c8c472b09982890db11caee3c65e8b",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\server.cpp": "6639ca68a1e18c121e1e8a60fd2c7bbdd8f07b1d73540f645509e58ad9b6da7a",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\Basedef.h": "06d0028f615afcc34c0f8aa18d9dfe8af5c9a748ca5144b01dff8d8d0941ed22",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\HTParamMgr.cpp": "e8574693579ed3ed3da0d4438e3c8ac53228f600886ac58c4811fb8e4328ee11"
+  },
+  "remaining": [
+    "complete target/unit/area cast and client action-skill sequence",
+    "source equipment wear and break recalculation/notifications",
+    "complete attacker-memory/reward ownership and party recipients",
+    "NPC full initialization/passive/skill/AI lifecycle",
+    "live shield/dispels/link callbacks and periodic attribution",
+    "PvP relation/challenge/guild/zone services",
+    "skill motions, TFX, projectiles, sounds and cooldown overlays",
+    "global service RNG-call-order trace",
+    "rendered Mandara acceptance"
+  ],
+  "explicit_limits": {
+    "equipment_wear": "producer returns intents; melee caller does not yet apply them",
+    "attacker_memory": "producer returns intents; caller only applies bounded engagement",
+    "party_notifications": "producer captures frames; multiplayer delivery remains pending",
+    "npc_stats": "existing bounded authored profile; not full CMob::Init parity",
+    "unsupported_contexts": "rejected before actor/RNG commit",
+    "performance": "not benchmarked"
+  },
+  "checklist": {
+    "checked": 45,
+    "total": 102,
+    "percent": 44.1,
+    "meaning": "task-count completion, not weighted effort or release readiness"
+  },
+  "logs": {
+    "native-combat-final-tests.log": "4a58f4caf66b9c5952532e26d77cd6b8cd946c3f23bfe4ee8c50c93970ebd167",
+    "native-combat-tests.log": "6971f6751e8e1b39c11bf1452cca2791e817334070b38b75164bb6b12fbfb5da",
+    "combat-client-build-stage.log": "39fdc8553b2a5f3bff706051a3358b69d24a9cee778e0ff9f00d43d311395eae",
+    "combat-client-static.log": "549cd8853719cf0dddf07795d347443f8eb448d2690dd015dd6630d9adbcbd1a",
+    "combat-zone-lock-check.log": "8ffa4c819e1c92037d62626443e618b760c8eea46effa6a413989fd7c9c419ae"
+  },
+  "new_game_launches": 0,
+  "git": "Local uncommitted client/remake/docs continuation after the earlier requested push; server/references/SDL3 unchanged."
+}

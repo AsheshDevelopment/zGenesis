@@ -1,0 +1,80 @@
+{
+  "version": "1.0.0",
+  "source_data": "passed",
+  "rendered_content": "actual JavaScript renderer with CPU DOM adapter; passed",
+  "export_file_hashes": {
+    "count": 284,
+    "result": "matched"
+  },
+  "http": [
+    {
+      "path": "/genesis/index.html",
+      "status": 200
+    },
+    {
+      "path": "/genesis/snapshot.json",
+      "status": 200
+    },
+    {
+      "path": "/genesis/assets/tantra-world.png",
+      "status": 200
+    },
+    {
+      "path": "/genesis/design-reference.json",
+      "status": 200
+    },
+    {
+      "path": "/genesis/documentation/README.md",
+      "status": 200
+    },
+    {
+      "path": "/genesis/documentation/server/IMPLEMENTATION_PROGRESS.md",
+      "status": 200
+    },
+    {
+      "path": "/genesis/documentation/client/planning/ZONE01_ZONE10_MAP_ALIGNMENT.md",
+      "status": 200
+    },
+    {
+      "path": "/genesis/assets/tantra.ico",
+      "status": 200
+    },
+    {
+      "path": "/genesis/assets/roadmap.css?v=20261026-2",
+      "status": 200
+    },
+    {
+      "path": "/genesis/assets/roadmap-data.js?v=20261026-2",
+      "status": 200
+    },
+    {
+      "path": "/genesis/assets/roadmap.js?v=20261026-2",
+      "status": 200
+    },
+    {
+      "path": "/genesis/documentation/client/planning/HTLAUNCHER_CLIENT_IMPLEMENTATION_PLAN.md",
+      "status": 200
+    },
+    {
+      "path": "/genesis/documentation/client/PROGRESS.md",
+      "status": 200
+    },
+    {
+      "path": "/genesis/reference/bgfx/IMPLEMENTATION_PLAN.md",
+      "status": 200
+    },
+    {
+      "path": "/genesis/reference/bgfx/PROGRESS.md",
+      "status": 200
+    }
+  ],
+  "temporary_http_server": "stopped",
+  "default_page": "Tantra-O",
+  "project_pages": [
+    "Tantra-O / OGRE / HTLauncher",
+    "Tantra-B / bgfx / ZFLauncher"
+  ],
+  "browser_visual_acceptance": "not run; browser connection bootstrap rejected its required module",
+  "production_deployment": "not verified by Git publication",
+  "game_launches": 0
+}

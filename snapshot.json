@@ -1,0 +1,43 @@
+{
+  "reviewed": "2026-10-26",
+  "method": "Checked named top-level tasks / named top-level tasks. Nested subtasks and acceptance gates are displayed but excluded from the percentage. Different project checklists are not a cross-renderer comparison or release-readiness estimate.",
+  "sources": {
+    "ogre_plan": {
+      "path": "documentation/client/planning/HTLAUNCHER_CLIENT_IMPLEMENTATION_PLAN.md",
+      "sha256": "7ede8731d23f53a1184014c9a32dc4c22307082d20b9abfd8d763278b6121695"
+    },
+    "ogre_progress": {
+      "path": "documentation/client/PROGRESS.md",
+      "sha256": "bbcb2a149f3e5eabbf9f26f733dda2438be3393acdbd9b42f390a2491cbc6fb9"
+    },
+    "bgfx_plan": {
+      "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
+      "sha256": "cbb6ee487dba47c750452abf5a77eb1f80c2afee0d03e78e76f68ace88238b9b"
+    },
+    "bgfx_progress": {
+      "path": "reference/bgfx/PROGRESS.md",
+      "sha256": "514c53bb4de03d669d4b8cca25471a290a0ff46343a4bc4f7bdb6c2c50acd2ce"
+    }
+  },
+  "reference": {
+    "repository": "https://github.com/AsheshDevelopment/zGenesis",
+    "file_sha": "d72de49e3bf103e8ebceeb0d1ec2b2a537575364",
+    "adapted": "Static hash navigation, dark editorial layout, progress bars, task accordions and changelog structure. No GENESIS product content or password digest is reused."
+  },
+  "projects": [
+    {
+      "id": "tantra-o",
+      "done": 46,
+      "total": 102,
+      "percent": 45,
+      "accepted": 0
+    },
+    {
+      "id": "tantra-b",
+      "done": 75,
+      "total": 245,
+      "percent": 31,
+      "accepted": 3
+    }
+  ]
+}

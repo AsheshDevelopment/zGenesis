@@ -1,0 +1,139 @@
+{
+  "installation": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Kathana",
+  "method": "Read-only filesystem/PE/string/shader inspection; no process launch, archive extraction, decryption, hooking or benchmark",
+  "machine": "0x8664",
+  "pe_timestamp_utc": "2026-10-02T19:02:42+00:00",
+  "installed_file_version": "4.0.1.6",
+  "historical_log_version": "4.0.1.2",
+  "files": {
+    "KathanaGame.exe": {
+      "bytes": 8445080,
+      "modified_local": "2026-10-16T02:31:48.941450",
+      "sha256": "a728452056663555bf7149462e4f2e31519c67cbe5509c72359ac6c196e95242"
+    },
+    "KathanaLauncher.exe": {
+      "bytes": 3975920,
+      "modified_local": "2026-08-15T17:36:12.903396",
+      "sha256": "903e7aba292448d68976597efe3f0dc6f5cc66ef1889e3c1efcaf3eaf4e614d1"
+    },
+    "data.pak": {
+      "bytes": 1059823388,
+      "modified_local": "2026-10-16T02:31:48.939788"
+    },
+    "Kathana.txt": {
+      "bytes": 23037,
+      "modified_local": "2026-09-09T05:20:04.012669",
+      "sha256": "1188406ba340b85df5bbbecb96010c38d334727edb35a8fce1b07ae3b33a4ed1"
+    },
+    "userdata/engine.cfg": {
+      "bytes": 1480,
+      "modified_local": "2026-08-15T17:37:40.285517",
+      "sha256": "14ccdb99cc3b6f2416fccc0fbe302def10ddc6e565a2d317104dd4d11414aac8",
+      "magic": "KTCF",
+      "version": 1,
+      "declared_payload_bytes": 1464
+    },
+    "userdata/settings.cfg": {
+      "bytes": 8225,
+      "modified_local": "2026-09-09T05:20:03.714925",
+      "sha256": "1e68932009d1037e66e53102bc2e5c74293d0b49c3c030822750c9baadb6581e",
+      "magic": "KTCF",
+      "version": 1,
+      "declared_payload_bytes": 8209
+    }
+  },
+  "binary_evidence": {
+    "KT::Sdl3": {
+      "file_offset": "0x5ee398",
+      "rva": "0x5ef398"
+    },
+    ".?AVBgfxRenderBackend@KT@@": {
+      "file_offset": "0x77f9a0",
+      "rva": "0x7815a0"
+    },
+    "Unable to load data.pak!": {
+      "file_offset": "0x5edfb8",
+      "rva": "0x5eefb8"
+    },
+    "LZ4 decompression failed": {
+      "file_offset": "0x612960",
+      "rva": "0x613960"
+    },
+    "Zstd not available": {
+      "file_offset": "0x612980",
+      "rva": "0x613980"
+    },
+    "vs_kt_instanced.bin": {
+      "file_offset": "0x61f910",
+      "rva": "0x620910"
+    },
+    "vs_kt_skinned.bin": {
+      "file_offset": "0x61f8f8",
+      "rva": "0x6208f8"
+    },
+    "s_bonePalette": {
+      "file_offset": "0x61f788",
+      "rva": "0x620788"
+    },
+    "u_boneMatrices": {
+      "file_offset": "0x61f6d0",
+      "rva": "0x6206d0"
+    },
+    "s_lightData": {
+      "file_offset": "0x61f718",
+      "rva": "0x620718"
+    },
+    "u_materialAmbient": {
+      "file_offset": "0x61f538",
+      "rva": "0x620538"
+    },
+    "u_materialEmissive": {
+      "file_offset": "0x61f550",
+      "rva": "0x620550"
+    },
+    "u_lightAtten": {
+      "file_offset": "0x61f680",
+      "rva": "0x620680"
+    },
+    "u_lightSpot": {
+      "file_offset": "0x61f690",
+      "rva": "0x620690"
+    },
+    "u_shadowViewProj": {
+      "file_offset": "0x61f6e0",
+      "rva": "0x6206e0"
+    },
+    "fs_kt_water.bin": {
+      "file_offset": "0x61f8e8",
+      "rva": "0x6208e8"
+    },
+    "fs_kt_msdf.bin": {
+      "file_offset": "0x61f9d0",
+      "rva": "0x6209d0"
+    },
+    "FPS: %.2f": {
+      "file_offset": "0x619fe0",
+      "rva": "0x61afe0"
+    }
+  },
+  "historical_render_log": [
+    "[2026-09-09 05:17:59] [WindowManager] [INFO] Configuration loaded",
+    "[2026-09-09 05:18:00] [WindowManager] [INFO] KT::Sdl3 window created: 1600x900 windowed",
+    "[2026-09-09 05:18:02] [RenderPreflight] [INFO] D3D11 preflight OK: adapter=NVIDIA GeForce RTX 4050 Laptop GPU vendor=0x10DE device=0x28A1 featureLevel=11.0",
+    "[2026-09-09 05:18:02] [RenderTelemetry] [INFO] Render startup: backend=opengl compat=auto profile=modern adapter=NVIDIA GeForce RTX 4050 Laptop GPU vendor=0x10DE device=0x28A1 featureLevel=11.0 requestedMsaa=4 effectiveMsaa=4 bonepalette=auto lighttexture=auto rtshadow=auto",
+    "[2026-09-09 05:18:03] [RenderTelemetry] [INFO] bgfx caps: renderer=OpenGL 2.1 homogeneousDepth=1 originBottomLeft=1 maxTextureSize=32768 maxViews=256 maxFrameBuffers=128 maxFBAttachments=8",
+    "[2026-09-09 05:18:04] [RenderBackend] [INFO] reset: reason=anisotropy size=1600x900 flags=0x00000120 enabled=1",
+    "[2026-09-09 05:18:06] [WindowManager] [INFO] Initialization Success",
+    "[2026-09-09 05:18:46] [WindowManager] [INFO] Main Loop Started",
+    "[2026-09-09 05:19:58] [RenderGuard] [WARNING] Shadow map invalidated for session: reason=msaa reset",
+    "[2026-09-09 05:20:03] [WindowManager] [INFO] Finalization Started",
+    "[2026-09-09 05:20:03] [WindowManager] [INFO] Settings Saved",
+    "[2026-09-09 05:20:04] [WindowManager] [INFO] Resources Cleaned",
+    "[2026-09-09 05:20:04] [WindowManager] [INFO] Globals Cleaned"
+  ],
+  "limits": [
+    "Archive index, precise per-entry codecs, cache policy and IO scheduling not established",
+    "Compiled paths do not establish activation for every object or current settings",
+    "FPS and visual comparisons not independently measured"
+  ]
+}

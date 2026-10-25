@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-25",
+  "scope": "Mandara textures, lighting, sky, selection, TPA names, facing, audio, BGM and authored field FX",
+  "goal_status": "broader goal remains paused; no acceptance gate closed",
+  "build": {
+    "configuration": "Release x64",
+    "built": true,
+    "launcher_sha256": "c622b870ac0581e8e53c77afc9032f386fdfcadaf16dc7a859d2b74a4d8cde91",
+    "outputs": {
+      "C:\\_GitHub\\tantra-dev-main\\_client": {
+        "launcher_sha256": "c622b870ac0581e8e53c77afc9032f386fdfcadaf16dc7a859d2b74a4d8cde91",
+        "userdata_unchanged": 0,
+        "hpk_unchanged": 148
+      },
+      "C:\\_GitHub\\TantraSrc\\_client": {
+        "launcher_sha256": "c622b870ac0581e8e53c77afc9032f386fdfcadaf16dc7a859d2b74a4d8cde91",
+        "userdata_unchanged": 44,
+        "hpk_unchanged": 148
+      }
+    },
+    "files_per_output": 1709,
+    "bytes_per_output": 703502091,
+    "asset_closure": 2549
+  },
+  "checks": {
+    "scene_resources": {
+      "status": "passed",
+      "checks": 688,
+      "resource_root": "C:\\_GitHub\\tantra-dev-main\\_client",
+      "monster_2008_name": "Aprah Varaha Raja",
+      "field_placements": 55,
+      "cpu_model_particle_uploads": 156,
+      "particle_sprites": 2814,
+      "distinct_unsupported_layer_warnings": 12
+    },
+    "brahman_tree": {
+      "textures_resolved": 10,
+      "repeating_uv_vertices": 1734,
+      "uv_min": -5.19197,
+      "uv_max": 6.00097,
+      "asset": "resource/object/Mandara1stObjTmb/r01_Env_man_brahmatree.tmb"
+    },
+    "combat_presentation": {
+      "status": "passed",
+      "checks": 4284,
+      "weapon_profiles": 13,
+      "player_sound_samples": 24,
+      "effect_sound_samples": 13,
+      "monster_animation_clips": 8
+    },
+    "offline_gameplay": {
+      "status": "passed",
+      "new_assertion": "attacking monster yaw faces player",
+      "regressions": [
+        "movement",
+        "collision",
+        "inventory",
+        "combat death/revival",
+        "world time"
+      ]
+    },
+    "hlsl": {
+      "status": "passed",
+      "scope": "CPU compilation and optimized VS/PS signature checks for world/alpha/terrain/sky/cloud/star/celestial/flare; expected former normal-signature regression rejected"
+    },
+    "static_packages": {
+      "status": "passed for both outputs",
+      "checks": [
+        "file hashes",
+        "x64",
+        "resolved imports",
+        "original layout",
+        "exact icon payload"
+      ]
+    }
+  },
+  "source_references": [
+    "_references/Tantra/HTlauncher/HTEngineHandler.cpp:5424",
+    "_references/Tantra/HTlauncher/HTEngineHandler.cpp:9074",
+    "_references/Tantra/HTlauncher/HTEngineHandler.cpp:6530",
+    "_references/Tantra/HTlauncher/HTEngineHandler.cpp:7320",
+    "_references/Tantra/HTlauncher/HTOtherObject.cpp:124",
+    "_references/Tantra/HTlauncher/HTOtherObject.cpp:1690",
+    "_references/Tantra/HTlauncher/HTMapInfo.cpp:31"
+  ],
+  "runtime": {
+    "game_launched": false,
+    "renderer_launched": false,
+    "audio_device_started": false,
+    "visual_and_audible_acceptance": "unverified"
+  },
+  "remaining": [
+    "mode-1 particle nodes",
+    "type-2 billboard nodes",
+    "native target bounds sentinel/parent/Euler parity",
+    "character spotlight",
+    "water/TME and full weather/sky parity",
+    "audible spatial audio and stream transition acceptance"
+  ],
+  "git": "local uncommitted changes; no push requested for this task"
+}

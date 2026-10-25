@@ -1,0 +1,15 @@
+{
+  "frames": 120,
+  "median_frame_ms": 16.2386,
+  "p95_frame_ms": 22.9177,
+  "average_fps": 59.4473,
+  "stationary_hud_geometry_uploads": 0,
+  "quality": "HIGH",
+  "executable_sha256": "7a94f471cf826a9e57e42214858791828b568f3b23b6d7e0629f947cf862002e",
+  "runtime_processes": 1,
+  "channel": 1,
+  "adapter": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "normal_save_hashes_unchanged": true,
+  "ui_and_inventory_acceptance": "passed",
+  "baseline_comparison": "No controlled prior-build FPS benchmark"
+}

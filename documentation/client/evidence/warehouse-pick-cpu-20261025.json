@@ -1,0 +1,142 @@
+{
+  "scope": "CPU sampled stand poses at retained camera; original click/pose unrecorded; no client launched",
+  "npc_position": [
+    4122.5,
+    48.9183235,
+    9072.5
+  ],
+  "samples": [
+    {
+      "seconds": 0,
+      "triangles": 998,
+      "candidate": [
+        0.478515625,
+        0.9921875
+      ],
+      "pixel": [
+        490,
+        762
+      ],
+      "candidate_found": true,
+      "over_ui": true,
+      "triangle_in_front": true,
+      "filtered_pixel": [
+        527,
+        751
+      ],
+      "filtered_found": true,
+      "filtered_over_ui": false
+    },
+    {
+      "seconds": 0.5,
+      "triangles": 998,
+      "candidate": [
+        0.478515625,
+        0.9921875
+      ],
+      "pixel": [
+        490,
+        762
+      ],
+      "candidate_found": true,
+      "over_ui": true,
+      "triangle_in_front": true,
+      "filtered_pixel": [
+        499,
+        746
+      ],
+      "filtered_found": true,
+      "filtered_over_ui": false
+    },
+    {
+      "seconds": 1,
+      "triangles": 998,
+      "candidate": [
+        0.478515625,
+        0.990885437
+      ],
+      "pixel": [
+        490,
+        761
+      ],
+      "candidate_found": true,
+      "over_ui": true,
+      "triangle_in_front": true,
+      "filtered_pixel": [
+        499,
+        746
+      ],
+      "filtered_found": true,
+      "filtered_over_ui": false
+    },
+    {
+      "seconds": 2,
+      "triangles": 998,
+      "candidate": [
+        0.478515625,
+        0.993489563
+      ],
+      "pixel": [
+        490,
+        763
+      ],
+      "candidate_found": true,
+      "over_ui": true,
+      "triangle_in_front": true,
+      "filtered_pixel": [
+        527,
+        751
+      ],
+      "filtered_found": true,
+      "filtered_over_ui": false
+    },
+    {
+      "seconds": 4,
+      "triangles": 998,
+      "candidate": [
+        0.478515625,
+        0.994791687
+      ],
+      "pixel": [
+        490,
+        764
+      ],
+      "candidate_found": true,
+      "over_ui": true,
+      "triangle_in_front": true,
+      "filtered_pixel": [
+        499,
+        748
+      ],
+      "filtered_found": true,
+      "filtered_over_ui": false
+    },
+    {
+      "seconds": 8,
+      "triangles": 998,
+      "candidate": [
+        0.478515625,
+        0.99609375
+      ],
+      "pixel": [
+        490,
+        765
+      ],
+      "candidate_found": true,
+      "over_ui": true,
+      "triangle_in_front": true,
+      "filtered_pixel": [
+        499,
+        750
+      ],
+      "filtered_found": true,
+      "filtered_over_ui": false
+    }
+  ],
+  "retained_camera_file": "_remake/build-migration/mandara-client-resume-20261025/FAILURE_CONTEXT.json",
+  "conclusion": "Original helper selects UI-blocked pixels in all six sampled poses. Filtered search finds UI-clear triangle hits in all six; original click frame was not recorded and runtime remains unverified.",
+  "filter_policy": "NativeMainUi.overUi plus nearest actor validation via production pickCharacter; shared screenTrianglePick checks finite/front/viewport bounds.",
+  "release_build": "passed, integrated and staged",
+  "runtime_launched": false,
+  "staged_executable_sha256": "d7206303997651fc63515af40bb78b02deec477fab78c30592963b201dab681c"
+}

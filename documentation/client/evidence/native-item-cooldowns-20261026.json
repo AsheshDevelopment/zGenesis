@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-26",
+  "goal_status": "active_incomplete",
+  "scope": "Ordinary instant recovery item authority timing and native quick-slot cooldown presentation",
+  "game_launches": 0,
+  "renderer_launches": 0,
+  "audio_device_launches": 0,
+  "cpu": {
+    "passed": [
+      "native_skill_feedback",
+      "mandara_closure",
+      "offline_world_gameplay"
+    ],
+    "feedback_checks": 98,
+    "native_item": 7001,
+    "family": 1,
+    "duration_ms": 1500,
+    "authority_expiry": "accept at equality",
+    "quickslot_expiry": "strictly later",
+    "simulation_clock_independent": true,
+    "uint32_wrap": "passed",
+    "late_observation_duplicate_bindings": "passed"
+  },
+  "release_build": {
+    "configuration": "Release x64",
+    "compiled_artifact_sha256": "dfd0c8db6df5f2158ca981491589e05f9f5bca20082f3edd0ec69ab1475d6d2a",
+    "staging_outputs": 2,
+    "manifest_files_each": 1731,
+    "payload_bytes_each": 704410049,
+    "static_verification": "passed; title/relocation/runtime not run"
+  },
+  "preservation": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "hpk": 148,
+      "userdata": 0,
+      "unchanged": 148
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "hpk": 148,
+      "userdata": 49,
+      "unchanged": 197
+    },
+    "launchers": {
+      "C:\\_GitHub\\tantra-dev-main\\_client\\HTLauncher.exe": "dfd0c8db6df5f2158ca981491589e05f9f5bca20082f3edd0ec69ab1475d6d2a",
+      "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe": "dfd0c8db6df5f2158ca981491589e05f9f5bca20082f3edd0ec69ab1475d6d2a"
+    }
+  },
+  "runtime_acceptance": false,
+  "source_references": {
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\CMob2.cpp": "50cd5a0bbe8d5287d44ced2bd893013f33c8c472b09982890db11caee3c65e8b",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\Basedef.h": "06d0028f615afcc34c0f8aa18d9dfe8af5c9a748ca5144b01dff8d8d0941ed22",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTQuickSlot.cpp": "178a169b121b7897e3c038f022a76be73d1df9f0921acde476b6d8eabafc4d14",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTInterface.cpp": "ec0c0942971f74bcc50f3ad3d79ec17a4dfac28b79ce5cdebde112bc9cf43844"
+  },
+  "defined_corrections": [
+    "Item HUD interval follows the accepted authority deadline rather than the original quick-slot assignment typo applying Mind skill reduction to items.",
+    "Use bounded signed 32-bit deadline comparison for clock wrap; do not guess a local animation clock."
+  ],
+  "remaining": [
+    "Rendered ordinary item FX and repeated input acceptance",
+    "Continuous/charged-item 59-second phases and full depletion/rebinding lifecycle",
+    "Online item-result transport",
+    "Corrected FX diagnostics and usable camera/collision runtime acceptance",
+    "Full 14-phase client plan"
+  ],
+  "evidence_logs": {
+    ".migration-local\\native-item-cooldowns-20261026\\build-stage.log": "05fb7a76444ef48cf408e47fd4d58d9b6750a0271d7aa83b8f0ad2ecce8bb535",
+    ".migration-local\\native-item-cooldowns-20261026\\cpu-build-final.log": "089fd57b25a95d33879ae2fc1b5d21be0cfbce6acf45c39b27e73e6d739b099b",
+    ".migration-local\\native-item-cooldowns-20261026\\cpu-build.log": "126822119d7ce0ad9d6a38072eb8683bfd2214b1db85d87ccbd33898a1039da2",
+    ".migration-local\\native-item-cooldowns-20261026\\cpu-tests-final.log": "3288c7d3c7d764132fa72d62700042058c04d655e0602953ae72a9f8503eca68",
+    ".migration-local\\native-item-cooldowns-20261026\\cpu-tests.log": "4986f2e709e3d7d650d6703f55c45a52ca29e385b0bbbc655edfe66a7b5fa72f",
+    ".migration-local\\native-item-cooldowns-20261026\\stage-user.log": "32d16e7e0e665e2a16feed17ab0332c54fc012b0fde6181f6640f127f278ad71",
+    ".migration-local\\native-item-cooldowns-20261026\\stage-workspace.log": "f0937234d1cb8e576c3083ecc78bca298b38aeec3232cc270721552df994a665",
+    ".migration-local\\native-item-cooldowns-20261026\\static-user.log": "27e799f008e46a79d324231f03408161f2415e87f33bd41bf0952c8c7d4fd536",
+    ".migration-local\\native-item-cooldowns-20261026\\static-workspace.log": "27e799f008e46a79d324231f03408161f2415e87f33bd41bf0952c8c7d4fd536"
+  },
+  "protected_baseline_sha256": "d401b5cc838121fc23031427fd3bf5447917f7158c41490a970a90c9586faebf"
+}

@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-26",
+  "issue": "Basic HP damage was applied at swing start; only cosmetic feedback waited for the marker.",
+  "fix": "Queue rendered offline attacks by attacker/target/revision and resolve authority damage only after the actual animation marker.",
+  "native_references": [
+    "HTlauncher/HTMainCharacter.cpp: m_vMainChar_AnmPointCheck, HT_vMainChar_AttackAnmAttackPoint",
+    "HTlauncher/HTMonster.cpp: HT_vMonster_AttackPointCheck"
+  ],
+  "tests": {
+    "offline_world_gameplay": "passed; actual TAB markers, no pre-hit HP/wear/reward/loot, duplicate/stale/STOP/skill cancellation, monster damage marker",
+    "world_actor_loading": "passed; revision and marker/STOP callback",
+    "native_client_skill": "passed",
+    "native_skill_impact": "passed"
+  },
+  "marker_fixture": "ANIMATION_AUTHORITY_IMPACT_VERIFIED pc_clip=PC_COM_ATK_GLOVE_02.tab pc_marker=26 frames_before_hit=92 monster_marker=11 stale_duplicate_stop=verified hp_loot_rewards=marker_only renderer=not_launched",
+  "build": "Release x64 HTLauncher rebuilt and staged in both outputs",
+  "launcher_sha256": "2866bd7103737d5b46343a60f1d9fcc81da9877bb7806f7a0093486818e271de",
+  "clients": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": "2866bd7103737d5b46343a60f1d9fcc81da9877bb7806f7a0093486818e271de",
+    "C:\\_GitHub\\TantraSrc\\_client": "2866bd7103737d5b46343a60f1d9fcc81da9877bb7806f7a0093486818e271de"
+  },
+  "preservation": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "checked": 148,
+      "hpk": 148,
+      "changed": []
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "checked": 197,
+      "hpk": 148,
+      "changed": []
+    }
+  },
+  "package_checks": "Both --skip-runtime checks passed; 1731 manifest files each, 704379841 bytes",
+  "game_launched": false,
+  "renderer_launched": false,
+  "audio_device_started": false,
+  "visual_acceptance": "pending",
+  "broader_goal": "remains paused",
+  "headless_scope": "Existing non-rendered simulation fixture mode retained; rendered gameplay enables marker tracking before input.",
+  "skill_scope": "Existing skill marker/projectile paths and native missing-animation or <=200ms exceptions preserved.",
+  "local_logs": ".migration-local\\attack-marker-authority-20261026"
+}

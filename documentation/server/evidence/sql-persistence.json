@@ -1,0 +1,120 @@
+{
+  "checked_at": "2026-10-24T10:53:06.467174+00:00",
+  "scope": "C++ SQLDMN persistence/ownership and Win32 operator components",
+  "whole_plan_complete": false,
+  "game_ready": false,
+  "storage_schema_version": 4,
+  "native_initial_mob_cases": 9,
+  "cpu_suites": 7,
+  "logs": {
+    "store-checks.log": {
+      "sha256": "21a7dbb3e9646d0d99c4921570b355ecdb13bd095a9f11955be07ce17b36deca",
+      "passed": [
+        "store_credentials",
+        "store_transactions",
+        "store_ownership",
+        "store_recovery",
+        "store_migration",
+        "store_backup"
+      ]
+    },
+    "sql-release-checks.log": {
+      "sha256": "6277ed5bce74259165d0fa78b31832f1e9d6589bbd5ce35a29d2715e1cbb74f4",
+      "passed": [
+        "store_credentials",
+        "store_transactions",
+        "store_ownership",
+        "store_recovery",
+        "store_migration",
+        "store_backup",
+        "store_restore"
+      ]
+    },
+    "sql-parity-checks.log": {
+      "sha256": "6824822f7ee63b970a59ad90374a923fcbbd26e15323a501a0593651486861f4",
+      "passed": [
+        "store_credentials",
+        "store_transactions",
+        "store_migration"
+      ]
+    },
+    "sql-final-runtime.log": {
+      "sha256": "544d7835ac9f1a2e245e97b61acd37f599c47e379376f2341d696c3fa95bf76b",
+      "passed": [
+        "sql_rpc"
+      ]
+    },
+    "restore-checks.log": {
+      "sha256": "455d7f1f637132521c8acd39b97b1ba73bda0d1fd6c1a9a134dca337ef79b59f",
+      "passed": [
+        "store_restore"
+      ]
+    }
+  },
+  "cli": {
+    "passed": true,
+    "binary_sha256": "ed9e44752102f16aaa55d7b099661a5e398906007dc88d2bac04c0f141f1ed7f",
+    "output": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-sql-cli-fduu_bnd",
+    "provision_duplicate_rejected": true,
+    "backup_source_preserved": true,
+    "restore_fenced_sessions": 1,
+    "pre_restore_copy_verified": true,
+    "listeners_started": 0
+  },
+  "binaries": [
+    {
+      "name": "TantraServerManager.exe",
+      "sha256": "4897125bbd356670b94c14042f572320d356ab89fc674f97fe4a3240200da362",
+      "machine": "x64",
+      "configuration": "Release"
+    },
+    {
+      "name": "TantraService.exe",
+      "sha256": "ed9e44752102f16aaa55d7b099661a5e398906007dc88d2bac04c0f141f1ed7f",
+      "machine": "x64",
+      "configuration": "Release"
+    },
+    {
+      "name": "TantraZone.exe",
+      "sha256": "f05d211c530fd0635aef9fadced687462cce8b278fdd4aa0cd93b481a2d157d6",
+      "machine": "x64",
+      "configuration": "Release"
+    }
+  ],
+  "connected_ui": {
+    "account_dialog_resource": true,
+    "admin_document_ready": true,
+    "backend": "Win32 Common Controls v6",
+    "dpi": 96,
+    "game_ready": false,
+    "height": 850,
+    "icon_resource": true,
+    "page": "Accounts",
+    "rows": 1,
+    "width": 1280,
+    "window_title": "Tantra Server Manager",
+    "worker_start_requested": false,
+    "zone_rows": 0
+  },
+  "connected_runtime": {
+    "output": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-sql-rpc-8c3223d8f749",
+    "authoritative_accounts": 1,
+    "authoritative_characters": 1,
+    "client_processes_started": 0,
+    "passed": true,
+    "remaining_sessions": 0,
+    "service_processes_started": 1,
+    "zone_processes_started": 0
+  },
+  "normal_client_hashes_unchanged": {
+    "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34",
+    "C:\\_GitHub\\TantraSrc\\_client\\userdata\\offline\\tantra.sqlite3": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f"
+  },
+  "rust_runtime_required": false,
+  "remaining": [
+    "Native DBSRV/login transport",
+    "Live zone/OGRE authority integration",
+    "Full account dialog/database/restore GUI acceptance",
+    "Gameplay and remaining M3-M6 gates"
+  ]
+}

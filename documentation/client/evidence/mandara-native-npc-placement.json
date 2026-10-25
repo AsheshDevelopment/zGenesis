@@ -1,0 +1,296 @@
+{
+  "date": "2026-10-23",
+  "status": "CPU/static passed; awaiting one newly authorized runtime attempt",
+  "runtime_processes_since_failed_attempt": 0,
+  "current_staged_sha256": "43b4a011d0930dc98497375caeb22684839f7310a642a6f6c28dc1b194720827",
+  "current_build_runtime_launched": false,
+  "files": 4357,
+  "bytes": 258524854,
+  "normal_profile_unchanged": true,
+  "normal_profile_file_count": 46,
+  "normal_profile_hashes": {
+    "offline\\tantra.sqlite3": "8748b43a709161c4acf171739cf3f6f9f7fc1d35def9ace69d13f3e7e63edcea",
+    "offline\\tantra.sqlite3-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "offline\\tantra.sqlite3-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "system\\SaveID.bin": "4c026dca53567521dad4c27ab8585c4c5ae4c47f136df3a4e59f2103c8ca0b9e",
+    "resource\\UI\\Interface.sys": "82b8faaf7ab32bb99494c84a2f25c137627ac18cb4c31ac173ca593a8f8e4968",
+    "cache\\main-ui\\BMP_TIMER_0.TGA": "cda5fd615835919509a0c25b6294ace6c48d790a44d0ec2f5c95684df39e2d39",
+    "cache\\main-ui\\MAIN_HUD_TEXTURES.tsv": "07758fadd276e70b360814706d6cb3b7e3aa2332a5b928859826b3c6a09412b4",
+    "cache\\main-ui\\STAMP.TGA": "691930ea69bb399d40d28b596bd58b585848d1e0f6b94565fac3b9d1eb717170",
+    "cache\\main-ui\\TRADE_O.TGA": "6ea1313a778079c4d5dd50dd211eca956a4453148ae34ce641df0f03324aedb6",
+    "cache\\main-ui\\UI_Box51_11X38.bmp": "f3226d8e709f7487028d545a7d73c1b79a5b00266465de9a123cf13ed42bf8fa",
+    "cache\\main-ui\\UI_Box74_38X40.bmp": "b689661d8070b1b88085f347f91dd8436df5caeee555d10cab4fba308e92bfa4",
+    "cache\\main-ui\\UI_Button26_D_24X37.bmp": "47b49b5b2243a0b6bffa022d8a9ac71562ed1697196d7150d5355974bae0be42",
+    "cache\\main-ui\\UI_Button26_N_24X37.bmp": "99f3374426d696e857a54159e4cc4f6623e4a3c27e15d7847b070421c71e677b",
+    "cache\\main-ui\\UI_Button26_O_24X37.bmp": "75382dd67216b7cea6bace39329a830f6c780d5f66f2d841367ce1bb4258ccee",
+    "cache\\main-ui\\UI_Button31_D_32X32.bmp": "778902a00972503bf32683eb83d2b50302c307be2046b6a7ead7695da24c9d06",
+    "cache\\main-ui\\UI_Button31_N_32X32.bmp": "1f3eb5b5fd3b848584cbce67ed95bf09e7c6fb7cf3a5ec2d79d420f3c662c350",
+    "cache\\main-ui\\UI_Button31_O_32X32.bmp": "d65c03cbf5b390595b2e162f4d3d19d7fa411063275ea493d44eac0ed173b753",
+    "cache\\main-ui\\UI_Button32_D_32X32.bmp": "71535ae16e419ddc8bcdd1e7a59a07242475d3c7a165ddea97fb68eac12e26b8",
+    "cache\\main-ui\\UI_Button32_N_32X32.bmp": "0286107f8c0b89483da569750bcaf417959d3be18cd4a89f1b4461ad3205c893",
+    "cache\\main-ui\\UI_Button32_O_32X32.bmp": "beda2935d197d4a539f60a1d2ae2a1621185e20256a60f8d1f681462fc43a3d8",
+    "cache\\main-ui\\UI_Button33_D_32X32.bmp": "e20c76d4205534ac758eaba6b0cb27eb7d8b47c8ca75de12664fb9a3a7440cba",
+    "cache\\main-ui\\UI_Button33_N_32X32.bmp": "c525c08236721c88c7205b9fb0ff9f5522ff443c1a4f89b46a9f45be99f4bc7d",
+    "cache\\main-ui\\UI_Button33_O_32X32.bmp": "b05641a3807b26170ca569aed31042413a00908362013902367c70e72b8e8c14",
+    "cache\\main-ui\\UI_Button34_D_32X32.bmp": "3ac844b954466b3de298720e353b21af73a53175559640539a05ac5191f62749",
+    "cache\\main-ui\\UI_Button34_N_32X32.bmp": "95ecbe416c2419ac17e88673c5d3ccc69cb753289d1983c8f7ec6cbcaa6c7f76",
+    "cache\\main-ui\\UI_Button34_O_32X32.bmp": "ff28eef43641ba8ec85f3e406c977c349c1cf801cc6301ff8937bf91a7191d12",
+    "cache\\main-ui\\UI_Button35_D_32X32.bmp": "1cd605f701d982575dbfa161f23f49e054d999242670ab8151cb78b444086cde",
+    "cache\\main-ui\\UI_Button35_N_32X32.bmp": "2c0fe0c50bb6fac369ee83e6d0ab9318a25d9846630c01801ca2e81bef456779",
+    "cache\\main-ui\\UI_Button35_O_32X32.bmp": "10de75b78d094e0a4e6ba3deab8d52ee01df12965b32da2aa316b7a4cf01b3dd",
+    "cache\\main-ui\\UI_Button36_D_32X32.bmp": "086d81bfc780746bde3bc649116b3cf8b6832524505a9b78d8620aee9f840848",
+    "cache\\main-ui\\UI_Button36_N_32X32.bmp": "42f7db0569545cdde05a864300ba0c2386135966636554a17d93f18cab484c9c",
+    "cache\\main-ui\\UI_Button36_O_32X32.bmp": "06b5c943a2559ff63b38d8d9221069f580ab5a936eab9cb905000d28b0d4709b",
+    "cache\\main-ui\\UI_Button37_D_32X32.bmp": "3c06076a3c44b340a72d708c8a9efd7cbdb87a07acc583e1d2e907474610861a",
+    "cache\\main-ui\\UI_Button37_N_32X32.bmp": "d69a94add75bd19d34e68a4596c9252d7d0e4bfb8fcc54056ab60c55ec82dfff",
+    "cache\\main-ui\\UI_Button37_O_32X32.bmp": "a63abc5a5a98421af6e24d95e9d04c3be0d6a291560b2e46a260ebeedc3d6a8b",
+    "cache\\main-ui\\UI_Button38_D_32X32.bmp": "b1fbd83db67b476d8aedd5b65ce477fe5b8598eea50efbad00868aa4ac696f32",
+    "cache\\main-ui\\UI_Button38_N_32X32.bmp": "007930d4ee175a0acf425501085e7349584aea6dc97ff9088800cdf999fc2368",
+    "cache\\main-ui\\UI_Button38_O_32X32.bmp": "0a3b078d7c6135fc7581610b48a0ef277144ad55666f2cca2f5cda7fc9fdee22",
+    "cache\\main-ui\\UI_Ex01_400X16.bmp": "b1164969cefbb8e9304aba3cb1c32690f1924d8f2c978cacc1df76d8f6a83640",
+    "cache\\main-ui\\UI_Ex02_400X16.bmp": "207668eab2545844ef72a46ad747b371c789366d2f450949114b7bb4da2ad376",
+    "cache\\main-ui\\UI_HeightLine01_3x32.bmp": "f66a274eda96729d0e3600a28d899b0a508d1adfb48bf6610904d66021aabfae",
+    "cache\\main-ui\\UI_ProgressBar01_150X5.bmp": "db300277673922f5a2fc661d9267f70aa4023118099b7cfaf3e868799db6d17e",
+    "cache\\main-ui\\UI_ProgressBar04_164X15.bmp": "02245820818384403c2ccc9d996272fc343922bc6e4da1d6eec0e848be54e23e",
+    "cache\\main-ui\\UI_ProgressBar05_164X15.bmp": "0ddb0f32b38ab21b2fe0aa8377ee2f3e4ea26b607cc126a1e1930e409362ae72",
+    "cache\\main-ui\\UI_WidthLine01_96x3.bmp": "88594a322859980d4bb3f93b73080796785c33f41fd1afa8721cc7885875ced7",
+    "cache\\main-ui\\UI_WidthLine03_1X3.bmp": "93ef8b07625a6261fada0be84c089e6d596170e37f48ac802b9824169868558d"
+  },
+  "canonical_source": {
+    "source": "C:\\_GitHub\\TantraSrc\\TantraClient\\system\\TantraParam.tpa",
+    "sha256": "89bb70532f888044f4e66b25aa75e3e55d1329e392e874b13dd45ae3408d16ea",
+    "schema_source": "C:\\_GitHub\\TantraSrc\\Tantra\\HTlauncher\\HTClientParamMgr.h",
+    "schema_sha256": "f62d8bd0c93b522f78d4ed6606b58e2722bd9bf063d8130c59ceae377251605b",
+    "scope": "bounded native client load order through NPC; remaining sections not decoded",
+    "npc_count": 291,
+    "selected_npcs": {
+      "1104": {
+        "name": "Priest Vananta",
+        "zone": 1,
+        "cell": [
+          668,
+          174
+        ],
+        "size": 1
+      },
+      "1105": {
+        "name": "Tradesman Buvan",
+        "zone": 1,
+        "cell": [
+          412,
+          116
+        ],
+        "size": 1
+      },
+      "1120": {
+        "name": "Memory Maiden",
+        "zone": 1,
+        "cell": [
+          491,
+          176
+        ],
+        "size": 1
+      }
+    },
+    "item_layout": {
+      "header_size": 272,
+      "file_record_size": 276,
+      "unparsed_tail_bytes": 4
+    },
+    "export_sha256": "f6b58f2f5939b45fd014c7723a9ac729e43a10010da7eeefeee3a04816fcd429"
+  },
+  "shared_position_differences": 65,
+  "selected_differences": [
+    {
+      "id": 1104,
+      "authored_global": {
+        "zone": 1,
+        "cell": [
+          512,
+          76
+        ]
+      },
+      "native_client": {
+        "name": "Priest Vananta",
+        "zone": 1,
+        "cell": [
+          668,
+          174
+        ],
+        "size": 1
+      }
+    },
+    {
+      "id": 1105,
+      "authored_global": {
+        "zone": 1,
+        "cell": [
+          390,
+          94
+        ]
+      },
+      "native_client": {
+        "name": "Tradesman Buvan",
+        "zone": 1,
+        "cell": [
+          412,
+          116
+        ],
+        "size": 1
+      }
+    },
+    {
+      "id": 1120,
+      "authored_global": {
+        "zone": 1,
+        "cell": [
+          506,
+          233
+        ]
+      },
+      "native_client": {
+        "name": "Memory Maiden",
+        "zone": 1,
+        "cell": [
+          491,
+          176
+        ],
+        "size": 1
+      }
+    }
+  ],
+  "runtime_profile": "native client NPC enumeration/placement; existing Global stock/item/service data retained; deployed server parity unproven",
+  "route": {
+    "cell": [
+      395,
+      220
+    ],
+    "warehouse_cell": [
+      412,
+      116
+    ],
+    "native_service_range_verified": true,
+    "stale_global_cell_rejected": true,
+    "save_point_route_points": 3,
+    "route_points": 5,
+    "raw_waypoint_y": 0,
+    "sampled_click_y": 65.5789,
+    "blocked_npc_cell": true,
+    "path": [
+      [
+        4102.5,
+        64.8705,
+        8322.5
+      ],
+      [
+        4102.5,
+        62.1152,
+        8352.5
+      ],
+      [
+        4112.5,
+        59.1073,
+        8562.5
+      ],
+      [
+        4122.5,
+        61.7062,
+        8602.5
+      ],
+      [
+        4122.5,
+        48.4651,
+        9022.5
+      ]
+    ],
+    "panels": [
+      {
+        "id": 204,
+        "rect": [
+          744,
+          0,
+          280,
+          465
+        ]
+      },
+      {
+        "id": 222,
+        "rect": [
+          327,
+          124,
+          370,
+          520
+        ]
+      }
+    ]
+  },
+  "camera_comparison": {
+    "method": "CPU native camera; NPC height samples, frustum and static ray; not a rendered triangle-pick acceptance",
+    "old_global_positions": {
+      "tested_views": 1152,
+      "in_frustum_samples": 431,
+      "unoccluded_samples": 0,
+      "reachable_clear_approaches": 0
+    },
+    "native_client_positions": {
+      "endpoint_visible_samples": 59,
+      "endpoint_tested_views": 128,
+      "best_endpoint_view": {
+        "position": [
+          4122.5,
+          48.4651,
+          9022.5
+        ],
+        "yaw": 1.5708,
+        "pitch": 4.8,
+        "eye": [
+          4222.12,
+          57.215,
+          9022.5
+        ],
+        "look_distance": 99.6297,
+        "in_frustum": true,
+        "sample_visible": true,
+        "screen": [
+          0.944786,
+          0.574268
+        ],
+        "depth": 99.5285
+      },
+      "reachable_clear_approach_entries": 78,
+      "distinct_reachable_clear_approach_cells": 77
+    }
+  },
+  "cpu_services": "MANDARA_CLOSURE_VERIFIED routing=detour_unreachable_sweep npc=dialogue_shop_save stale_dead_range_gold_capacity=verified",
+  "parser_negative_checks": [
+    {
+      "case": "wrong_item_stride",
+      "rejected": true,
+      "last_error": "AssertionError: ('HTItemParam', 268106, 0, (1664,))"
+    },
+    {
+      "case": "truncated_npc_section",
+      "rejected": true,
+      "last_error": "FileNotFoundError: [Errno 2] No such file or directory: '_remake\\\\build-ogre-sdl\\\\mandara-goal1-native-placement-cpu-20261023\\\\parser-negative\\\\system\\\\TantraParam.tpa'"
+    }
+  ],
+  "static_client_verification": "passed; x64, imports, exact icon, original layout, 4357 owned files",
+  "cpu_output": "C:\\_GitHub\\TantraSrc\\_remake\\build-ogre-sdl\\mandara-goal1-native-placement-cpu-20261023",
+  "prepared_runtime_output": "C:\\_GitHub\\TantraSrc\\_remake\\build-ogre-sdl\\mandara-goal1-native-placement-runtime-20261023",
+  "remaining": [
+    "rendered selection/CHAR_INIT/Mandara under new placement profile",
+    "camera reset/orbit and movement/obstruction on remaining route",
+    "warehouse item and Rupiah deposit/withdrawal",
+    "save-point confirmation and post-exit SQLite",
+    "normal-profile hashes after authorized runtime"
+  ],
+  "committed": false,
+  "population_preflight": {
+    "models": 39,
+    "animation_bindings": 227,
+    "missing_monster_catalog": [
+      2718
+    ],
+    "global_npc_1457": "not enumerated by canonical client profile; separate Global mismatch remains unresolved"
+  }
+}

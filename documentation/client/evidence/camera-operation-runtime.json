@@ -1,0 +1,43 @@
+{
+  "executable_sha256": "d42320f213d3c057634185d20e884996ff4c1acafe10af9309a39e57338cf16f",
+  "runtime_processes": 1,
+  "world_group": 4,
+  "mandara_route": 1,
+  "saved_cell": [
+    490,
+    309
+  ],
+  "source": "read-only backup of existing offline roster",
+  "checks": [
+    "face framing",
+    "hair framing",
+    "cancel creation",
+    "select saved character",
+    "Mandara entry",
+    "30 settled world frames",
+    "clean exit"
+  ],
+  "normal_save_sha256_unchanged": "8af871c5a11a83766c0cfa8127c38409409c4d589d684833adb75f18d9355245",
+  "captures": [
+    {
+      "file": "saved-roster-face-camera.png",
+      "sha256": "1fd7b0bcc6af15b641a363d1f23b0dca0f5bff26dbf695bf85dfc5cf3be7d977"
+    },
+    {
+      "file": "saved-roster-hair-camera.png",
+      "sha256": "552cf2029480ae2f672c6a3e6446e1802fc6fa9c35de219b9adca8bad193d1a0"
+    },
+    {
+      "file": "saved-roster-native-loading.png",
+      "sha256": "bca480eb1816f96eda61ea3b9bea934f8e981feb3da57f4146ffc67c7e709d9c"
+    },
+    {
+      "file": "saved-roster-saved-character-info.png",
+      "sha256": "5d03fb76c1acb7147b99042375a45716c06b2fc4b3d228438de491975b086dab"
+    },
+    {
+      "file": "saved-roster-world.png",
+      "sha256": "42d70df7568b198fdcaf5890190a62307f39504c2a47c94164be61d8008a84fc"
+    }
+  ]
+}

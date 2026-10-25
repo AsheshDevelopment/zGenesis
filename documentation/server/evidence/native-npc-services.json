@@ -1,0 +1,359 @@
+{
+  "checked_at": "2026-10-24T12:36:17.355669+00:00",
+  "whole_plan_complete": false,
+  "game_ready": false,
+  "cpu_checks": {
+    "npc-service-release-all-cpu.log": {
+      "sha256": "0cbc92a4084f882c4e1fbff6ce13fa9d06c892da0ce645866a10ae06ab178b2b",
+      "passed": [
+        "core",
+        "store_credentials",
+        "store_transactions",
+        "store_ownership",
+        "store_recovery",
+        "store_migration",
+        "store_backup",
+        "store_restore",
+        "login_cpu",
+        "native_probability",
+        "native_status",
+        "native_npc_initialization",
+        "npc_service_rules",
+        "npc_service_authority",
+        "inventory_rules",
+        "inventory_session",
+        "inventory_authority",
+        "world_map",
+        "world_movement",
+        "world_actors",
+        "native_ai_dispatch",
+        "population_parser",
+        "population_spatial",
+        "population_routes",
+        "population_prepare",
+        "population_generation",
+        "population_propagated",
+        "world_entry_codec",
+        "world_entry_authority"
+      ]
+    },
+    "npc-service-debug-cpu.log": {
+      "sha256": "5d3d8ced781a4d238e207d62afbbf09d6c8531f2e25001e3583b5bafef0d9d04",
+      "passed": [
+        "store_transactions",
+        "store_ownership",
+        "store_recovery",
+        "native_status",
+        "npc_service_rules",
+        "npc_service_authority",
+        "inventory_authority",
+        "world_entry_authority"
+      ]
+    }
+  },
+  "profile": {
+    "source": "B:\\__TANTRA\\TantraDataScripts\\Global\\TantraParam.xml",
+    "source_sha256": "1295cbfe56eda35218a7d7d707ec81021ac975e462da6112543882cabb0164e5",
+    "profile": "authored Global; no claim of deployed/client table equality",
+    "addressing": "physical DOM cell order, native atoi; ss:Index ignored",
+    "tables": {
+      "NPC": {
+        "rows": 372,
+        "columns": [
+          "ID",
+          "byteSize",
+          "byteZone",
+          "sPosX",
+          "sPosZ",
+          "idItem0",
+          "idItem1",
+          "idItem2",
+          "idItem3",
+          "idItem4",
+          "idItem5",
+          "idItem6",
+          "idItem7",
+          "idItem8",
+          "idItem9",
+          "idItem10",
+          "idItem11",
+          "idItem12",
+          "idItem13",
+          "idItem14",
+          "idItem15",
+          "idItem16",
+          "idItem17",
+          "idItem18",
+          "idItem19",
+          "idItem20",
+          "idItem21",
+          "idItem22",
+          "idItem23",
+          "idItem24",
+          "idItem25",
+          "idItem26",
+          "idItem27",
+          "idItem28",
+          "idItem29",
+          "idItem30",
+          "idItem31",
+          "idItem32",
+          "idItem33",
+          "idItem34",
+          "idItem35",
+          "idItem36",
+          "idItem37",
+          "idItem38",
+          "idItem39",
+          "idItem40",
+          "idItem41",
+          "idItem42",
+          "idItem43",
+          "idItem44",
+          "idItem45",
+          "idItem46",
+          "idItem47",
+          "idItem48",
+          "idItem49"
+        ],
+        "sha256": "df09f261e11685a413ce58e78f8f1ca76a3945c8699f95780f64a98edc04804a"
+      },
+      "Portal": {
+        "rows": 164,
+        "columns": [
+          "ID",
+          "dwServerID",
+          "dwZoneLevel",
+          "sStartX",
+          "sStartZ",
+          "sEndX",
+          "sEndZ",
+          "iGoPortal1",
+          "iGoPortal2",
+          "iGoPortal3",
+          "iGoPortal4",
+          "iGoPortal5",
+          "dwFee1",
+          "dwFee2",
+          "dwFee3",
+          "dwFee4",
+          "dwFee5",
+          "dwLevel1",
+          "dwLevel2",
+          "dwLevel3",
+          "dwLevel4",
+          "dwLevel5"
+        ],
+        "sha256": "a6354212f15136c148138ed4f633e3691ba0cc93bb7e94d5c5ab05798f30fe95"
+      },
+      "Item": {
+        "rows": 2759,
+        "columns": [
+          "ID",
+          "iRupiah",
+          "iSellRupiah",
+          "iCash",
+          "sMaxDurability",
+          "byteMaxCount",
+          "sTimeLimit"
+        ],
+        "sha256": "8f170b70e6fde33711ffa30fcb1f80abb0171fdc622d1a33fd6ea13cdda0b985"
+      }
+    },
+    "native_sources": {
+      "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\HTParamMgr.cpp": "e8574693579ed3ed3da0d4438e3c8ac53228f600886ac58c4811fb8e4328ee11",
+      "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\Basedef.h": "06d0028f615afcc34c0f8aa18d9dfe8af5c9a748ca5144b01dff8d8d0941ed22",
+      "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\server.cpp": "6639ca68a1e18c121e1e8a60fd2c7bbdd8f07b1d73540f645509e58ad9b6da7a",
+      "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\GetFunc.cpp": "eae98b7130fef718777ef716746b1916280a7a4a97eeb730efdc0f1ee2537cad",
+      "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\CMOB.CPP": "3421c51069c245603784168aa8ea2c276798d480b9749d8e9124734ad0715a46"
+    }
+  },
+  "generated_sha256": "89fe8ca6bdf5c5c57d2bbb0209895856c6de17a4402efc335c6899a51d27d815",
+  "owned_sources": {
+    "include/tantra/npc_services.h": "6b33aea3723553ff48ea494e0c74337255e15887af2d78696eee5ea3a30a77d0",
+    "src/zone/npc_services.cpp": "5c208df0e3ad80232427aeee3c8c95591ba3abad5b1df917bef19064b0cf2498",
+    "src/zone/world.cpp": "d64a91235e9b5711515afa3d57929db282302aeb927a0bf2597917eaf6af2649",
+    "src/persistence/store.cpp": "d89c53c16d9fb7ccd6f4569fa63de09b1545ffc73204606c0511005e4ec62c46",
+    "tests/npc_service_tests.cpp": "06f9b427771f5daf7bcc4d4b6c7683ec3ae2977ca1898030bfb30e5da161c382",
+    "tools/stage-npc-services.py": "e8da1a3d82d447111f2995da4644e7b541d3d1b28cbf73c1831be04795a32aa8",
+    "tools/rules/generate-native-npc-services.py": "ebe6b2ceabb852065852b561ac0a8362445f251a7f3d632eb09619c18f3abcf6"
+  },
+  "rule_provenance": {
+    "scope": "Source-backed C++ rules and authored inputs; explicit owned live-server adaptations recorded per file; no Rust ABI",
+    "files": {
+      "compatibility/HtPcStatProjection.h": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\src\\compatibility\\HtPcStatProjection.h",
+        "sha256": "a3e37ec0e37256ee69e25aeaf9848418c36f77a9af546b3666d4f7b3324dd108",
+        "source_sha256": "5fc25d703da35182c595ae4757ec5341eaca8b8e1bfc935d3b1ef6bc12230c83",
+        "adaptations": [
+          "Add updateInventory preserving actor FSM, position and active effects with native per-handler recomputation/UI flags",
+          "Add read-only worldMode inspection for authority state verification",
+          "Add updateSavePoint to retain committed save metadata through subsequent native status snapshots"
+        ]
+      },
+      "compatibility/HtPcStatProjection.cpp": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\src\\compatibility\\HtPcStatProjection.cpp",
+        "sha256": "91845b5606cf590e841667c381a9a4c187a7a4626dae28134f59cad1d39e8957",
+        "source_sha256": "8ceb15169f5173f631332c4a08427c0acd5f205db533dad502e0d602cab97af4",
+        "adaptations": [
+          "Add updateInventory preserving actor FSM, position and active effects with native per-handler recomputation/UI flags",
+          "Add read-only worldMode inspection for authority state verification",
+          "Add updateSavePoint to retain committed save metadata through subsequent native status snapshots"
+        ]
+      },
+      "compatibility/HtCharacterVitals.h": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\src\\compatibility\\HtCharacterVitals.h",
+        "sha256": "64911f14201bfaa5be309c244c741fb14bf9e1deb5310d0767856883bcd7ece1"
+      },
+      "compatibility/HtCharacterVitals.cpp": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\src\\compatibility\\HtCharacterVitals.cpp",
+        "sha256": "820404141236f12e18755ea4540a1d1e137f71002d191b5a0adc6afa005ee3c0"
+      },
+      "compatibility/HtNativeProbability.h": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\src\\compatibility\\HtNativeProbability.h",
+        "sha256": "5f7584410657d1aef6af7f3ed4dbaf41d30ce590231b50cd70fa7338d44aab2f"
+      },
+      "compatibility/HtNativeProbability.cpp": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\src\\compatibility\\HtNativeProbability.cpp",
+        "sha256": "8217c12d5bc850df63562fd89b26abdf438b6e02d8cc703516818765711cdb70"
+      },
+      "resources/NativeCharacterStatTables.h": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\src\\resources\\NativeCharacterStatTables.h",
+        "sha256": "89b2058478dccfc8621974c0a51823a9d4ca4859509c52b46d034d7b63e67982"
+      },
+      "resources/NativeCharacterStatTables.cpp": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\src\\resources\\NativeCharacterStatTables.cpp",
+        "sha256": "eb4bcc99a5b2916748a32c6cdcfbf731cba613ae0837e6a45edd6e0e65e16ebd"
+      },
+      "resources/NativeGameplayParameters.h": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\src\\resources\\NativeGameplayParameters.h",
+        "sha256": "db2d138d2ea71ca890476cde6b7d5533aa2f2cd92b389f6d0df5bf9ca8727de1"
+      },
+      "resources/NativeGameplayParameters.cpp": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\src\\resources\\NativeGameplayParameters.cpp",
+        "sha256": "e4c4856aedd1d6838775a3309e3d10874b45cfa22cf21bca88bd135a7e0403ce"
+      },
+      "resources/NativeWorldSettings.h": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\src\\resources\\NativeWorldSettings.h",
+        "sha256": "9744e2c1efa58679010140762b2264f801d19e2d18ca0d27efbfa14dad8957a6"
+      },
+      "resources/NativeWorldSettings.cpp": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\src\\resources\\NativeWorldSettings.cpp",
+        "sha256": "12ca2e1710c539e43616e7a973e0d6e354078f3972c7350833b7b2caa9721107"
+      },
+      "../../tools/rules/generate-native-pc-stat-core.py": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\tools\\generate-native-pc-stat-core.py",
+        "sha256": "9b13bf96c8a201f17eec56f8cd391785404666df11ee0becc7206bfa93048e86"
+      },
+      "../../tools/rules/generate-native-probability.py": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\tools\\generate-native-probability.py",
+        "sha256": "18407f96d61eba7c66204e0f1658ecb31e4786e3b0ea31305cefe416893a78a2"
+      },
+      "../../data/rules/character-stats/Coefficient.tsv": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\derived-assets\\character-stats\\Coefficient.tsv",
+        "sha256": "e3266aedea147191c343d543010da69c4606325a31df7b14a896a6d1ad0c428b"
+      },
+      "../../data/rules/character-stats/EffectTolerance.tsv": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\derived-assets\\character-stats\\EffectTolerance.tsv",
+        "sha256": "c4428feee97b62655d780ab1f9e26e7051ac55788f282b9d3f51eb0f3a21607b"
+      },
+      "../../data/rules/character-stats/LevelUp.tsv": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\derived-assets\\character-stats\\LevelUp.tsv",
+        "sha256": "58aad9cb49143138ea11a2a99f83f9628f5527e37ca68c3e15381ca288771dbc"
+      },
+      "../../data/rules/character-stats/PROVENANCE.json": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\derived-assets\\character-stats\\PROVENANCE.json",
+        "sha256": "5234b3bee4fecdce2d7c2252fd00d6b45a89cab6e9ffb3d6aa7d386a9f5062a6"
+      },
+      "../../data/rules/gameplay-parameters/Item.tsv": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\derived-assets\\gameplay-parameters\\Item.tsv",
+        "sha256": "734be078b91eaa1d3cd8d52f20155636d2eafa9f6beb72456c0c63bac158010e"
+      },
+      "../../data/rules/gameplay-parameters/MonsterSkill.tsv": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\derived-assets\\gameplay-parameters\\MonsterSkill.tsv",
+        "sha256": "18429c42e50d5f84650b83a4b3f9abba8d73fc131f1f787a3e05c024dcfe59d4"
+      },
+      "../../data/rules/gameplay-parameters/PCSkill.tsv": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\derived-assets\\gameplay-parameters\\PCSkill.tsv",
+        "sha256": "c8fcd83fb5a025b2db4bbb3bc51765aae079dafb62bc2e6505bdcae71f673355"
+      },
+      "../../data/rules/gameplay-parameters/PROVENANCE.json": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\derived-assets\\gameplay-parameters\\PROVENANCE.json",
+        "sha256": "b4517322f747f5fce5e61632d94165b55ef5c19d6d3f9b573b206c9c901d07fd"
+      },
+      "resources/NativeMonsterParameters.h": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\src\\resources\\NativeMonsterParameters.h",
+        "sha256": "e0454c845e371aba78ab2f00d5f199b309d46ab21dbb0660e74ad077a9c263d6"
+      },
+      "resources/NativeMonsterParameters.cpp": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\src\\resources\\NativeMonsterParameters.cpp",
+        "sha256": "cc9fde2cf8f31d475d9443d0638febf4be4096fad7bfc08c87e9a20135eb4f7e"
+      },
+      "../../tools/rules/generate-native-monster-template.py": {
+        "source": "C:\\_GitHub\\TantraSrc\\_remake\\tools\\generate-native-monster-template.py",
+        "sha256": "8a3a8df57e8b5408bfbc1cce39c8d04ee6a98643fd21e3932c02f3bad08a4743"
+      },
+      "../../data/rules/world-gameplay/Monster.tsv": {
+        "source": "C:\\_GitHub\\TantraSrc\\_server\\derived-assets\\native-world\\Monster.tsv",
+        "sha256": "b56112fc8a0ca6343938992226ede8728d6d2c90807de88db34d5b4edac26185"
+      },
+      "../../data/rules/world-gameplay/PROVENANCE.json": {
+        "source": "C:\\_GitHub\\TantraSrc\\_server\\derived-assets\\native-world\\PROVENANCE.json",
+        "sha256": "062ee2903cd1e35fc801ced4f74b639b05f4f13309f77e1d48b88de05763ea94"
+      },
+      "../../data/rules/ai/ai.json": {
+        "source": "C:\\_GitHub\\TantraSrc\\_server\\derived-assets\\native-ai\\ai.json",
+        "sha256": "d2f201cc3df39b9652bd330995c54529776930da0b990dc82f7d2e4d2c5c759e"
+      },
+      "../../data/rules/ai/PROVENANCE.json": {
+        "source": "C:\\_GitHub\\TantraSrc\\_server\\derived-assets\\native-ai\\PROVENANCE.json",
+        "sha256": "36c887e22b47f8682fe7687e9e9ee65a13e0b9f1a6fadfadc67cb85ddb003a1e"
+      }
+    }
+  },
+  "packaged_release": {
+    "TantraServerManager.exe": "f61f6339c4d8d8a8b52e2719ecc1cd61e7629e984dbe9e30dd63eb6be66dbbbf",
+    "TantraService.exe": "e460be9cef6eb6e9fb11ba1b7bd9edf1c43bdd44fd67d1d84b87778f48bf4be8",
+    "TantraZone.exe": "aca1908df887e64e36a108074ea9613679cee1cb66fdbb0452a3cba0e7170c4b"
+  },
+  "cpu_authority_route": {
+    "output": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-npc-services-f74e90a14946",
+    "result": {
+      "cargo_revision": 4,
+      "cargo_sale_repair": true,
+      "character_revision": 8,
+      "failed_commit_fenced": true,
+      "merchant_buy": true,
+      "money": 9576,
+      "native_repair_order": true,
+      "native_sale_order": true,
+      "passed": true,
+      "rejected_service_deltas": 5,
+      "save_point": true,
+      "save_x": 391,
+      "save_z": 252,
+      "store_summary": {
+        "account_cargo": 1,
+        "accounts": 1,
+        "characters": 1,
+        "handoffs": 0,
+        "schema_version": 4,
+        "sessions": 0,
+        "zone_owners": 0
+      },
+      "worker_processes_started": 0
+    },
+    "sqlite_integrity": "ok",
+    "item_counts": {
+      "2": 1
+    },
+    "database_sha256": "190acea0337cd6f42fc8430cd5b10f9cceb880865cfa3d6d3107e06c852e2a8d"
+  },
+  "corrected_tcp_route_verified": false,
+  "graphical_acceptance": false,
+  "remaining": [
+    "Approved fresh TCP route and OGRE online NPC/dialogue/warehouse acceptance",
+    "Cash/limited shops, quest/event/class/transport services and ITMSRV authority",
+    "Remaining M4-M6 implementation and acceptance gates"
+  ]
+}

@@ -1,0 +1,133 @@
+HT3DHeaven.dll SHA256=b818b89edbc9f8e49bb1b79200371740eaa157dabac23bbf1e2d52e40ff99941
+Read-only; original code is not executed.
+Default flare texture order and sizes/axis positions: RVA 1C6B9..1C878.
+No claim of exact native star RNG, flicker or flare attenuation parity.
+Constant RVA 66D70 = 128.0
+Constant RVA 66D68 = 32.0
+Constant RVA 66D64 = 64.0
+2001C6B9 fld dword ptr [0x20066d70]
+2001C6BF mov dword ptr [ebx + 0x5c], eax
+2001C6C2 mov eax, dword ptr [ebx + 0x4c]
+2001C6C5 mov dword ptr [ebx + 0x1c], 0x3f000000
+2001C6CC fst dword ptr [eax]
+2001C6CE mov eax, dword ptr [ebx + 0x4c]
+2001C6D1 fst dword ptr [eax + 4]
+2001C6D4 mov eax, dword ptr [ebx + 0x4c]
+2001C6D7 fld dword ptr [0x20066d68]
+2001C6DD pop ecx
+2001C6DE fst dword ptr [eax + 8]
+2001C6E1 mov eax, dword ptr [ebx + 0x4c]
+2001C6E4 fst dword ptr [eax + 0xc]
+2001C6E7 mov eax, dword ptr [ebx + 0x4c]
+2001C6EA fld dword ptr [0x20066d64]
+2001C6F0 pop ecx
+2001C6F1 fst dword ptr [eax + 0x10]
+2001C6F4 mov eax, dword ptr [ebx + 0x4c]
+2001C6F7 fst dword ptr [eax + 0x14]
+2001C6FA mov eax, dword ptr [ebx + 0x4c]
+2001C6FD fst dword ptr [eax + 0x18]
+2001C700 mov eax, dword ptr [ebx + 0x4c]
+2001C703 fst dword ptr [eax + 0x1c]
+2001C706 mov eax, dword ptr [ebx + 0x4c]
+2001C709 fld st(1)
+2001C70B push 0x20066d58
+2001C710 fstp dword ptr [eax + 0x20]
+2001C713 mov eax, dword ptr [ebx + 0x4c]
+2001C716 fld st(1)
+2001C718 fstp dword ptr [eax + 0x24]
+2001C71B mov eax, dword ptr [ebx + 0x4c]
+2001C71E fst dword ptr [eax + 0x28]
+2001C721 mov eax, dword ptr [ebx + 0x4c]
+2001C724 fst dword ptr [eax + 0x2c]
+2001C727 mov eax, dword ptr [ebx + 0x4c]
+2001C72A fld st(1)
+2001C72C fstp dword ptr [eax + 0x30]
+2001C72F mov eax, dword ptr [ebx + 0x4c]
+2001C732 fld st(1)
+2001C734 fstp dword ptr [eax + 0x34]
+2001C737 mov eax, dword ptr [ebx + 0x4c]
+2001C73A fld st(1)
+2001C73C fstp dword ptr [eax + 0x38]
+2001C73F mov eax, dword ptr [ebx + 0x4c]
+2001C742 fld st(1)
+2001C744 fstp dword ptr [eax + 0x3c]
+2001C747 mov eax, dword ptr [ebx + 0x4c]
+2001C74A fst dword ptr [eax + 0x40]
+2001C74D mov eax, dword ptr [ebx + 0x4c]
+2001C750 fstp dword ptr [eax + 0x44]
+2001C753 mov eax, dword ptr [ebx + 0x4c]
+2001C756 fstp st(0)
+2001C758 fst dword ptr [eax + 0x48]
+2001C75B mov eax, dword ptr [ebx + 0x4c]
+2001C75E fstp dword ptr [eax + 0x4c]
+2001C761 mov ecx, dword ptr [ebx + 0x50]
+2001C764 call 0x2004e080
+2001C769 mov ecx, dword ptr [ebx + 0x50]
+2001C76C push 0x20066d4c
+2001C771 add ecx, 0x100
+2001C777 call 0x2004e080
+2001C77C mov ecx, dword ptr [ebx + 0x50]
+2001C77F push 0x20066d40
+2001C784 add ecx, 0x200
+2001C78A call 0x2004e080
+2001C78F mov ecx, dword ptr [ebx + 0x50]
+2001C792 push 0x20066d34
+2001C797 add ecx, 0x300
+2001C79D call 0x2004e080
+2001C7A2 push 0x20066d28
+2001C7A7 mov ecx, dword ptr [ebx + 0x50]
+2001C7AA add ecx, 0x400
+2001C7B0 call 0x2004e080
+2001C7B5 mov ecx, dword ptr [ebx + 0x50]
+2001C7B8 push 0x20066d1c
+2001C7BD add ecx, 0x500
+2001C7C3 call 0x2004e080
+2001C7C8 mov ecx, dword ptr [ebx + 0x50]
+2001C7CB push 0x20066d10
+2001C7D0 add ecx, 0x600
+2001C7D6 call 0x2004e080
+2001C7DB mov ecx, dword ptr [ebx + 0x50]
+2001C7DE push 0x20066d04
+2001C7E3 add ecx, 0x700
+2001C7E9 call 0x2004e080
+2001C7EE mov ecx, dword ptr [ebx + 0x50]
+2001C7F1 push 0x20066cf8
+2001C7F6 add ecx, 0x800
+2001C7FC call 0x2004e080
+2001C801 mov ecx, dword ptr [ebx + 0x50]
+2001C804 push 0x20066cec
+2001C809 add ecx, 0x900
+2001C80F call 0x2004e080
+2001C814 fldz 
+2001C816 mov eax, dword ptr [ebx + 0x5c]
+2001C819 fstp dword ptr [eax]
+2001C81B mov eax, dword ptr [ebx + 0x5c]
+2001C81E fld1 
+2001C820 mov dword ptr [eax + 4], 0x3f333333
+2001C827 mov eax, dword ptr [ebx + 0x5c]
+2001C82A mov dword ptr [eax + 8], 0x3f666666
+2001C831 mov eax, dword ptr [ebx + 0x5c]
+2001C834 mov dword ptr [eax + 0xc], 0x3f733333
+2001C83B mov eax, dword ptr [ebx + 0x5c]
+2001C83E fstp dword ptr [eax + 0x10]
+2001C841 mov eax, dword ptr [ebx + 0x5c]
+2001C844 fld dword ptr [0x200646fc]
+2001C84A mov dword ptr [eax + 0x14], 0x3f8ccccd
+2001C851 mov eax, dword ptr [ebx + 0x5c]
+2001C854 mov dword ptr [eax + 0x18], 0x3fb33333
+2001C85B mov eax, dword ptr [ebx + 0x5c]
+2001C85E mov dword ptr [eax + 0x1c], 0x3fc3d70a
+2001C865 mov eax, dword ptr [ebx + 0x5c]
+2001C868 mov dword ptr [eax + 0x20], 0x3fcccccd
+2001C86F mov eax, dword ptr [ebx + 0x5c]
+2001C872 mov dword ptr [eax + 0x24], 0x3fd9999a
+Texture RVA 66D58: Flare0.tga
+Texture RVA 66D4C: Flare1.tga
+Texture RVA 66D40: Flare2.tga
+Texture RVA 66D34: Flare25.tga
+Texture RVA 66D28: Flare3.tga
+Texture RVA 66D1C: Flare35.tga
+Texture RVA 66D10: Flare36.tga
+Texture RVA 66D04: Flare37.tga
+Texture RVA 66CF8: Flare4.tga
+Texture RVA 66CEC: Flare5.tga

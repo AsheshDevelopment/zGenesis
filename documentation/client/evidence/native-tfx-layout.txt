@@ -1,0 +1,255 @@
+HT3DHeaven.dll SHA256=b818b89edbc9f8e49bb1b79200371740eaa157dabac23bbf1e2d52e40ff99941
+Read-only inspection; native engine is not executed.
+
+Effect header read is 0x88 bytes
+0x2000BCF1: mov ecx, dword ptr [ebp + 8]
+0x2000BCF4: push 0x88
+0x2000BCF9: lea eax, [ebp - 0xe4]
+0x2000BCFF: push eax
+0x2000BD00: call 0x2004ffb0
+
+Node has a separate DWORD type then 0x40 common bytes
+0x2000BDA0: mov ecx, dword ptr [ebp + 8]
+0x2000BDA3: push 4
+0x2000BDA5: lea eax, [ebp - 0x1c]
+0x2000BDA8: push eax
+0x2000BDA9: call 0x2004ffb0
+0x2000BDAE: lea ecx, [ebp - 0x5c]
+0x2000BDB1: call 0x2000bbd2
+0x2000BDB6: mov ecx, dword ptr [ebp + 8]
+0x2000BDB9: push 0x40
+0x2000BDBB: lea eax, [ebp - 0x5c]
+0x2000BDBE: push eax
+0x2000BDBF: call 0x2004ffb0
+
+Common start/end, ID, lane and attachment fields are copied into native nodes
+0x2000BDC4: mov ecx, dword ptr [ebp - 0x1c]
+0x2000BDC7: mov eax, dword ptr [esi + 0xc]
+0x2000BDCA: mov dword ptr [edi + eax], ecx
+0x2000BDCD: mov eax, dword ptr [esi + 0xc]
+0x2000BDD0: mov cl, byte ptr [ebp - 0x4c]
+0x2000BDD3: mov byte ptr [eax + edi + 0x14], cl
+0x2000BDD7: fld dword ptr [ebp - 0x54]
+0x2000BDDA: mov eax, dword ptr [esi + 0xc]
+0x2000BDDD: fstp dword ptr [eax + edi + 0xc]
+0x2000BDE1: mov eax, dword ptr [esi + 0xc]
+0x2000BDE4: fld dword ptr [ebp - 0x58]
+0x2000BDE7: fstp dword ptr [eax + edi + 8]
+0x2000BDEB: mov eax, dword ptr [esi + 0xc]
+0x2000BDEE: mov ecx, dword ptr [ebp - 0x5c]
+0x2000BDF1: mov dword ptr [eax + edi + 4], ecx
+0x2000BDF5: mov eax, dword ptr [esi + 0xc]
+0x2000BDF8: mov ecx, dword ptr [ebp - 0x48]
+0x2000BDFB: mov dword ptr [eax + edi + 0x18], ecx
+0x2000BDFF: mov eax, dword ptr [esi + 0xc]
+0x2000BE02: mov ecx, dword ptr [ebp - 0x50]
+0x2000BE05: mov dword ptr [eax + edi + 0x10], ecx
+0x2000BE09: mov eax, dword ptr [esi + 0xc]
+0x2000BE0C: add eax, edi
+0x2000BE0E: cmp dword ptr [eax + 0x18], 0
+0x2000BE12: jle 0x2000be58
+0x2000BE14: push 0x100
+0x2000BE19: mov byte ptr [eax + 0x14], 1
+0x2000BE1D: call 0x200505f0
+0x2000BE22: pop ecx
+0x2000BE23: mov dword ptr [ebp - 0x14], eax
+0x2000BE26: test eax, eax
+0x2000BE28: mov dword ptr [ebp - 4], 1
+0x2000BE2F: je 0x2000be3a
+0x2000BE31: mov ecx, eax
+0x2000BE33: call 0x2004e1d0
+0x2000BE38: jmp 0x2000be3c
+0x2000BE3A: xor eax, eax
+0x2000BE3C: mov ecx, dword ptr [esi + 0xc]
+0x2000BE3F: mov dword ptr [ecx + edi + 0x1c], eax
+0x2000BE43: lea eax, [ebp - 0x44]
+0x2000BE46: push eax
+0x2000BE47: mov eax, dword ptr [esi + 0xc]
+0x2000BE4A: mov ecx, dword ptr [eax + edi + 0x1c]
+0x2000BE4E: mov dword ptr [ebp - 4], ebx
+0x2000BE51: call 0x2004e080
+0x2000BE56: jmp 0x2000be5c
+0x2000BE58: and byte ptr [eax + 0x14], 0
+
+Dispatch supports 1,2,4,5,6,7; no type-3 allocation branch
+0x2000BE5C: mov eax, dword ptr [ebp - 0x1c]
+0x2000BE5F: dec eax
+0x2000BE60: je 0x2000bf2d
+0x2000BE66: dec eax
+0x2000BE67: je 0x2000bf0b
+0x2000BE6D: dec eax
+0x2000BE6E: dec eax
+0x2000BE6F: je 0x2000bee9
+0x2000BE71: dec eax
+0x2000BE72: je 0x2000beca
+0x2000BE74: dec eax
+0x2000BE75: je 0x2000bea4
+0x2000BE77: dec eax
+0x2000BE78: jne 0x2000bf80
+0x2000BE7E: push 0xc
+0x2000BE80: call 0x200505f0
+0x2000BE85: pop ecx
+0x2000BE86: mov dword ptr [ebp - 0x14], eax
+0x2000BE89: test eax, eax
+0x2000BE8B: mov dword ptr [ebp - 4], 6
+0x2000BE92: je 0x2000bf4f
+0x2000BE98: mov ecx, eax
+0x2000BE9A: call 0x2000ce4d
+0x2000BE9F: jmp 0x2000bf51
+0x2000BEA4: push 0x18
+0x2000BEA6: call 0x200505f0
+0x2000BEAB: pop ecx
+0x2000BEAC: mov dword ptr [ebp - 0x14], eax
+0x2000BEAF: test eax, eax
+0x2000BEB1: mov dword ptr [ebp - 4], 5
+0x2000BEB8: je 0x2000bf4f
+0x2000BEBE: mov ecx, eax
+0x2000BEC0: call 0x2000cdbe
+0x2000BEC5: jmp 0x2000bf51
+0x2000BECA: push 0x58
+0x2000BECC: call 0x200505f0
+0x2000BED1: pop ecx
+0x2000BED2: mov dword ptr [ebp - 0x14], eax
+0x2000BED5: test eax, eax
+0x2000BED7: mov dword ptr [ebp - 4], 7
+0x2000BEDE: je 0x2000bf4f
+0x2000BEE0: mov ecx, eax
+0x2000BEE2: call 0x2000e01b
+0x2000BEE7: jmp 0x2000bf51
+0x2000BEE9: push 0xc8
+0x2000BEEE: call 0x200505f0
+0x2000BEF3: pop ecx
+0x2000BEF4: mov dword ptr [ebp - 0x14], eax
+0x2000BEF7: test eax, eax
+0x2000BEF9: mov dword ptr [ebp - 4], 4
+0x2000BF00: je 0x2000bf4f
+0x2000BF02: mov ecx, eax
+0x2000BF04: call 0x2000db48
+0x2000BF09: jmp 0x2000bf51
+0x2000BF0B: push 0xe4
+0x2000BF10: call 0x200505f0
+0x2000BF15: pop ecx
+0x2000BF16: mov dword ptr [ebp - 0x14], eax
+0x2000BF19: test eax, eax
+0x2000BF1B: mov dword ptr [ebp - 4], 3
+0x2000BF22: je 0x2000bf4f
+0x2000BF24: mov ecx, eax
+0x2000BF26: call 0x2000d762
+0x2000BF2B: jmp 0x2000bf51
+0x2000BF2D: push 0x11c
+0x2000BF32: call 0x200505f0
+0x2000BF37: pop ecx
+0x2000BF38: mov dword ptr [ebp - 0x14], eax
+0x2000BF3B: test eax, eax
+0x2000BF3D: mov dword ptr [ebp - 4], 2
+0x2000BF44: je 0x2000bf4f
+0x2000BF46: mov ecx, eax
+0x2000BF48: call 0x2000d37c
+0x2000BF4D: jmp 0x2000bf51
+0x2000BF4F: xor eax, eax
+0x2000BF51: mov ecx, dword ptr [esi + 0xc]
+0x2000BF54: push dword ptr [ebp + 8]
+0x2000BF57: mov dword ptr [ecx + edi + 0x24], eax
+0x2000BF5B: mov eax, dword ptr [esi + 0xc]
+
+Particle raw payload is 0x110 bytes
+0x2000D3BF: push esi
+0x2000D3C0: push edi
+0x2000D3C1: mov esi, ecx
+0x2000D3C3: mov ecx, dword ptr [ebp + 8]
+0x2000D3C6: push 0x110
+0x2000D3CB: lea eax, [esi + 4]
+0x2000D3CE: xor edi, edi
+0x2000D3D0: push eax
+0x2000D3D1: mov dword ptr [ebp - 0x18], edi
+0x2000D3D4: call 0x2004ffb0
+
+Particle curve-count getters read the final two payload DWORDs
+0x2000C9F2: mov eax, dword ptr [ecx + 0x10c]
+0x2000C9F8: mov ecx, dword ptr [esp + 4]
+0x2000C9FC: mov dword ptr [ecx], eax
+0x2000C9FE: ret 4
+0x2000CA01: mov eax, dword ptr [ecx + 0x110]
+0x2000CA07: mov ecx, dword ptr [esp + 4]
+0x2000CA0B: mov dword ptr [ecx], eax
+0x2000CA0D: ret 4
+
+Particle scalar/color keys are separate 8-byte records
+0x2000D47F: xor edi, edi
+0x2000D481: cmp dword ptr [ebp - 0x10], edi
+0x2000D484: pop ebx
+0x2000D485: jle 0x2000d4ac
+0x2000D487: mov eax, dword ptr [esi + 0x114]
+0x2000D48D: mov ecx, dword ptr [ebp + 8]
+0x2000D490: push 8
+0x2000D492: lea eax, [eax + edi*8]
+0x2000D495: push eax
+0x2000D496: call 0x2004ffb0
+0x2000D49B: test al, al
+0x2000D49D: je 0x2000d4a6
+0x2000D49F: mov dword ptr [ebp - 0x18], 0x80004005
+0x2000D4A6: inc edi
+0x2000D4A7: cmp edi, dword ptr [ebp - 0x10]
+0x2000D4AA: jl 0x2000d487
+0x2000D4AC: xor edi, edi
+0x2000D4AE: cmp dword ptr [ebp - 0x14], edi
+0x2000D4B1: jle 0x2000d4d8
+0x2000D4B3: mov eax, dword ptr [esi + 0x118]
+0x2000D4B9: mov ecx, dword ptr [ebp + 8]
+0x2000D4BC: push 8
+0x2000D4BE: lea eax, [eax + edi*8]
+0x2000D4C1: push eax
+0x2000D4C2: call 0x2004ffb0
+0x2000D4C7: test al, al
+0x2000D4C9: jne 0x2000d4d2
+0x2000D4CB: mov dword ptr [ebp - 0x18], 0x80004005
+0x2000D4D2: inc edi
+0x2000D4D3: cmp edi, dword ptr [ebp - 0x14]
+0x2000D4D6: jl 0x2000d4b3
+
+Billboard payload is 0xD8 bytes
+0x2000D7A9: mov ecx, dword ptr [ebp + 8]
+0x2000D7AC: push 0xd8
+0x2000D7B1: lea eax, [esi + 4]
+0x2000D7B4: xor edi, edi
+0x2000D7B6: push eax
+0x2000D7B7: mov dword ptr [ebp - 0x18], edi
+0x2000D7BA: call 0x2004ffb0
+
+Animated-model payload is 0xBC bytes
+0x2000DB8F: mov ecx, dword ptr [ebp + 8]
+0x2000DB92: push 0xbc
+0x2000DB97: lea eax, [esi + 4]
+0x2000DB9A: xor edi, edi
+0x2000DB9C: push eax
+0x2000DB9D: mov dword ptr [ebp - 0x18], edi
+0x2000DBA0: call 0x2004ffb0
+
+Light payload is 0x4C bytes
+0x2000E062: mov ecx, dword ptr [ebp + 8]
+0x2000E065: push 0x4c
+0x2000E067: lea eax, [esi + 4]
+0x2000E06A: xor edi, edi
+0x2000E06C: push eax
+0x2000E06D: mov dword ptr [ebp - 0x18], edi
+0x2000E070: call 0x2004ffb0
+
+Sound payload is 0x14 bytes
+0x2000CDF0: push esi
+0x2000CDF1: add ecx, 4
+0x2000CDF4: push 0x14
+0x2000CDF6: push ecx
+0x2000CDF7: mov ecx, dword ptr [esp + 0x10]
+0x2000CDFB: xor esi, esi
+0x2000CDFD: call 0x2004ffb0
+
+Jitter payload is 4 bytes
+0x2000DF78: push edi
+0x2000DF79: mov esi, ecx
+0x2000DF7B: mov ecx, dword ptr [ebp + 8]
+0x2000DF7E: push 4
+0x2000DF80: lea eax, [esi + 4]
+0x2000DF83: push eax
+0x2000DF84: call 0x2004ffb0
+
+This establishes serialized records and dispatch; particle spawning, integration, interpolation, blending and native FX-manager runtime parity are not established by this report.

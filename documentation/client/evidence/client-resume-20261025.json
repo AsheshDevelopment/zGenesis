@@ -1,0 +1,185 @@
+{
+  "date": "2026-10-25",
+  "scope": "Client continuation; full client goal remains active/incomplete",
+  "runtime": {
+    "attempts": 1,
+    "mode": "offline",
+    "world_group": 1,
+    "zone": 1,
+    "account": "ashesh",
+    "selected_character": "MandaraNpc",
+    "tested_executable_sha256": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34",
+    "process": {
+      "exit_code": 8,
+      "exception": null,
+      "runtime_processes": 1,
+      "world_group": 1,
+      "diagnostics_fresh": true,
+      "normal_profile_unchanged": true
+    },
+    "failure": "Warehouse NPC dialogue assertion at QA phase 10; no native crash established",
+    "failure_context": {
+      "world_phase": 10,
+      "frames": 593,
+      "position": [
+        4122.52,
+        48.4648,
+        9022.47
+      ],
+      "camera_valid": true,
+      "eye": [
+        4.12252,
+        0.103902,
+        9.1057
+      ],
+      "target": [
+        4.12252,
+        -0.372354,
+        8.22639
+      ]
+    },
+    "observed": [
+      "saved selection -> point-02 -> CHAR_INIT -> HPK-backed Mandara",
+      "restored Chakra/skill/potion quick binding",
+      "native camera reset/orbit events",
+      "collision-checked movement to corrected warehouse approach"
+    ],
+    "not_accepted": [
+      "warehouse dialogue and item/money transactions",
+      "save-point confirmation",
+      "full camera/collision parity"
+    ],
+    "integrity": "ok",
+    "inventory_72_slots_unchanged": true,
+    "cargo_120_slots_money_revision_unchanged": true,
+    "unselected_characters_unchanged": true,
+    "start_cell": [
+      395,
+      220
+    ],
+    "end_cell": [
+      412,
+      121
+    ],
+    "ground_clicks": 70,
+    "source_checkpoint_sha256_unchanged": true,
+    "captures": [
+      {
+        "file": "closure-camera-orbit.png",
+        "sha256": "b3f0facfc179548c9e02fe68df9545601e59adfdf5530aa193372ee2b7f83680"
+      },
+      {
+        "file": "closure-camera-reset.png",
+        "sha256": "d4a8caab93e73b36485d9498cb799ada29d21e46068a076183c7d740c0d396e6"
+      },
+      {
+        "file": "closure-navigation-camera.png",
+        "sha256": "5120a367cb0bdda027a8d259432008ebc0b3564fe9d6d218d3cf6f5d4f74d9bc"
+      },
+      {
+        "file": "closure-npc-camera.png",
+        "sha256": "27e884d246bd56a5a1089124f9a0f33af7f5ce59691d56e80a694f6e4ad3a632"
+      },
+      {
+        "file": "closure-restored-skill.png",
+        "sha256": "21a628ff237963af657792d4b96814390504a4ecd75f7f4dd328db6c6907b54e"
+      },
+      {
+        "file": "closure-restored-world.png",
+        "sha256": "0af156e5073aa3486f62e693db8c99db64c552e11fc0ac15bcac689aa5caf4c8"
+      },
+      {
+        "file": "closure-walked-town.png",
+        "sha256": "d9f21d90ddae84a23aadff8750f34a4254c19aa5b7a9063aafe8c38e705d6472"
+      },
+      {
+        "file": "saved-services-failure.png",
+        "sha256": "bc49f043c85b134a0f882b36a4fd445e5caa5196a6b3f361b5cdc1481f7b50f4"
+      },
+      {
+        "file": "saved-services-native-loading.png",
+        "sha256": "7e03b1743a6cc3bab0f1e9fbab4312c6e4b6ff53f87024707240f085eec20cb5"
+      },
+      {
+        "file": "saved-services-saved-character.png",
+        "sha256": "89f68307a4eb51e81cdcfd63e8a1eb19b0d5c8d99cceb47f4e523c7b7c45b832"
+      }
+    ],
+    "retained_directory": "C:\\_GitHub\\tantra-dev-main\\_remake\\build-migration\\mandara-client-resume-20261025",
+    "automatic_relaunch": false,
+    "cpu_follow_up": "Native profile/range preflight passes; exact click point was not logged by the tested executable, so its rejection cause is unproven. New QA logs candidate point/UI overlap/nearest actor and rejects obstructed candidates before queued SDL clicks."
+  },
+  "cache": {
+    "implemented": "shared immutable ordinary misses, native LOD records and isolated skeleton/animation bindings; explicit invalidation and safe live ownership",
+    "release_build": "passed",
+    "cpu_tests": {
+      "passed": 4,
+      "failed": 0,
+      "seconds": 1.32,
+      "names": [
+        "native_character_retained_preloads",
+        "native_animation_slerp",
+        "native_authored_bind_skinning",
+        "native_change_animation_blend"
+      ]
+    },
+    "runtime_acceptance": false,
+    "performance_measurement": false,
+    "remaining": [
+      "map/collision sharing",
+      "memory budgets",
+      "in-flight coalescing",
+      "background decoding",
+      "bounded GPU uploads"
+    ]
+  },
+  "zone_profile_lock": {
+    "zones": 10,
+    "client_map_range": [
+      40001,
+      40010
+    ],
+    "sha256": "0e054a23b565de5b9b2dc4b74166cd03f2edbd95fd153abbc0261c88654bcd91",
+    "unchanged_check": "passed",
+    "supplied_pack_bindings_present": 50,
+    "zone10": {
+      "configuration": "MAP_NewKruma.cfg",
+      "folder": "resource/map/Jina4th"
+    },
+    "playability_accepted": false
+  },
+  "server_changes": false,
+  "git": "not committed/pushed by this continuation",
+  "staged_build": {
+    "executable": "C:\\_GitHub\\tantra-dev-main\\_client\\HTLauncher.exe",
+    "sha256": "d7206303997651fc63515af40bb78b02deec477fab78c30592963b201dab681c",
+    "bytes": 3349504,
+    "matches_built_executable": true,
+    "manifest_files": 1515,
+    "manifest_bytes": 669658200,
+    "native_packs": 148,
+    "native_pack_hashes_unchanged": true,
+    "static_verification": "passed; x64, imports, original paths, exact 9-frame icon",
+    "runtime_launched": false,
+    "title_relocation_acceptance": "not run",
+    "includes": [
+      "shared character resources",
+      "filtered NPC triangle candidate search",
+      "DDS metadata correction",
+      "bounded high-material cave mesh loading",
+      "native map texture roots"
+    ]
+  },
+  "packaging_fixes": [
+    "Tracked development plugin configuration replaces ignored runtime fallback",
+    "PowerShell 5.1 compatible relative-pack paths with validated destination prefix",
+    "Final staging rejects writes below migrated original-reference root"
+  ],
+  "original_workspace": {
+    "canonical_client_and_private_save_hashes_unchanged": true,
+    "source_checkpoint_unchanged": true
+  },
+  "warehouse_cpu_replay": "warehouse-pick-cpu-20261025.json",
+  "zone_preflight": "zone-core-preflight-20261025.json",
+  "resource_reader_regressions": "resource-reader-boundaries-20261025.json"
+}

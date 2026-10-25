@@ -1,0 +1,84 @@
+{
+  "checked_at": "2026-10-23T19:48:06.312022+00:00",
+  "component": "Source-ordered route preparation, native NPC Init and occupied placement before Think(Pop)",
+  "whole_goal_complete": false,
+  "live_actor_publication": false,
+  "pop_callbacks": false,
+  "game_ready": false,
+  "new_cpu_tests_passed": 2,
+  "existing_population_integration_tests_passed": 3,
+  "compiled_route_cases": 1021,
+  "composed_cpp_rust_cases": 3404,
+  "reserved_handles": 1702,
+  "seeds": [
+    1,
+    123
+  ],
+  "all_composed_cases_have_placement": true,
+  "fixture_sha256": {
+    "fixtures\\native-population-route.json": "d4c6549ef14c387fa8942c4f3bf92c7c08bff37c385f9e78b32c9e6085190e3a",
+    "fixtures\\native-spawn-pre-pop.json": "a7e42023da40d6ac5b4deb5abb344de5f96e0c618fac3165e0445074881265b8"
+  },
+  "packaged_validator": {
+    "game_ready": false,
+    "initialized": 1702,
+    "live_actor_publication": false,
+    "placed": 1702,
+    "placement_failed": 0,
+    "pop_callbacks": false,
+    "random_draws": 585107,
+    "random_state": 3702199242,
+    "scope": "ordered route, NPC Init, placement before Pop"
+  },
+  "source_files_unchanged": {
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\CMob.cpp": "3421c51069c245603784168aa8ea2c276798d480b9749d8e9124734ad0715a46",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\server.cpp": "6639ca68a1e18c121e1e8a60fd2c7bbdd8f07b1d73540f645509e58ad9b6da7a",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\Basedef.h": "06d0028f615afcc34c0f8aa18d9dfe8af5c9a748ca5144b01dff8d8d0941ed22",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\HTParamMgr.cpp": "e8574693579ed3ed3da0d4438e3c8ac53228f600886ac58c4811fb8e4328ee11",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\HTUtilLib.lib": "b9ea532bd1a263065d9684a5fc6f97a05aef81b5c3c0ffc44fa9816e51e40259"
+  },
+  "normal_client_files_unchanged": {
+    "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34",
+    "C:\\_GitHub\\TantraSrc\\_client\\userdata\\offline\\tantra.sqlite3": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f"
+  },
+  "binaries_current": [
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-server-manager.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "c053d4bba808d5a8e9acf1d2ad1ed84d1c7bbd3476bf9d86def6c8f15c7e0995"
+    },
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-zone.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "252d3be128a0561bcde09e30f24962db7f3697bfcca896da6436c12d493e1bef"
+    },
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-service.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "aaf62a02f10b417f9c2a0f2bb85204d11c5a46114fc72f376609142225bdba92"
+    }
+  ],
+  "checks": [
+    "2 new route/composed integration tests passed",
+    "3 existing population integration tests passed",
+    "cargo fmt --all",
+    "Clippy tantra-services all-targets with warnings denied passed",
+    "workspace Debug x64 build passed",
+    "packaged validate-generation passed; no listener",
+    "direct C++ selected source comparisons passed"
+  ],
+  "comparison_boundary": "Compiled GenerateMob segment branch, source-derived NPC Init with documented damage-index correction and poison-column carry, original PickFreeMobGrid. Deterministic reserved-handle walk omits live scheduling/Pop; not original whole-server or binary parity.",
+  "zone_processes_started": 0,
+  "game_client_launched": false,
+  "socket_tests_rerun": false,
+  "pending": [
+    "Source AI/action/speech tables and Pop behavior including shared RNG effects",
+    "Generator ready/alive/dead lifecycle and single zone clock",
+    "Native NPC actor publication and occupancy commit",
+    "Authority combat, cast/effects/rewards/loot",
+    "Remaining six-area checklist requirements"
+  ]
+}

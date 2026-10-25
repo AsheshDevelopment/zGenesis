@@ -1,0 +1,114 @@
+{
+  "executable_sha256": "da180c638a77f17bff11f5a6f04d390f1f5981d9c185b5baac7cbe4c11729788",
+  "runtime_processes": 1,
+  "server_world_group": 1,
+  "mandara_route": 1,
+  "account": "ashesh",
+  "runtime_result": "Normal client returned success and emitted INTRO_CHARACTER_RUNTIME_VERIFIED; post-run temporary SQLite cleanup failed, then the QA connection-close bug was corrected. Client was not rerun.",
+  "controls": "E selects; R attacks; Z toggles walking; native item dragging",
+  "death": "Actual monster damage; original mode-4 message; R/Space/Enter/Escape rejected; mouse OK accepted; saved cell restored; status hp=10/50,tp=6/30",
+  "captures": [
+    {
+      "file": "native-controls-death.png",
+      "sha256": "8e6de0801f8595b970fe62c762f981d547fc7f7a5a645179dff6cd5a9af47de3",
+      "bytes": 1290261
+    },
+    {
+      "file": "native-controls-dialog-204.png",
+      "sha256": "814fbcaafa9f6085538a275aa0a10716a212bab6b126313473d862285652dd33",
+      "bytes": 1281740
+    },
+    {
+      "file": "native-controls-dialog-212.png",
+      "sha256": "06fb94ffe1bdd5fd665d9d00078c97b507df11d1ee5331f438a721e5c278e782",
+      "bytes": 1282807
+    },
+    {
+      "file": "native-controls-dialog-213.png",
+      "sha256": "caa24ba3d464bc6152bb7ae4dfbfcf45fca665c53bc2a3055e995b38ca308889",
+      "bytes": 1298250
+    },
+    {
+      "file": "native-controls-dialog-235.png",
+      "sha256": "fbf70d4e3b5a57dc2debfef70db88f56b17da3b9a101b2f3c180625abbba6173",
+      "bytes": 1276329
+    },
+    {
+      "file": "native-controls-dialog-237.png",
+      "sha256": "77a9ce089542f1beeac395796c414274e3eb0d2c06ccf62b3282982fa1c49620",
+      "bytes": 1280248
+    },
+    {
+      "file": "native-controls-dialog-238.png",
+      "sha256": "b8e03d4297cc61035135e72f707278355950a7e54bb37608c2f6106f57e39db0",
+      "bytes": 1280465
+    },
+    {
+      "file": "native-controls-dialog-239.png",
+      "sha256": "f37a6fc02e2cad3902a44eebe7c427c072f20d3865b9820f12f69f468e0ec5f5",
+      "bytes": 1278229
+    },
+    {
+      "file": "native-controls-dialog-dragged.png",
+      "sha256": "705f66f783867ecaf7920dbb3f3b06c3a676d23cff5d1b47f8021863afd4b02a",
+      "bytes": 1277216
+    },
+    {
+      "file": "native-controls-hud-compact.png",
+      "sha256": "6143121ca7589b38b8578a23ed06b54f5b219a8c8d97ddc7875c179a24507b66",
+      "bytes": 1282336
+    },
+    {
+      "file": "native-controls-hud-restored.png",
+      "sha256": "6cf4f0b4e639cb09642d24eef1fecb70c2310ef70b5a3faa87f8b531a8c0ba9e",
+      "bytes": 1256285
+    },
+    {
+      "file": "native-controls-inventory-moved.png",
+      "sha256": "08c2f0f0938a0c2f75b7688e517b40315d0bbdd3e78c8383bfaa2ac94ff6f28c",
+      "bytes": 1267049
+    },
+    {
+      "file": "native-controls-mandara1st-world.png",
+      "sha256": "fcd46aa0672cd2cdd6437041f1fde34abcecb6da2e4223abe49c2aaf90373d4d",
+      "bytes": 1281866
+    },
+    {
+      "file": "native-controls-native-loading.png",
+      "sha256": "e087c2921b43a97310da417980499d47d37930f4dd48c547e95934bf3eeeb7d0",
+      "bytes": 1389128
+    },
+    {
+      "file": "native-controls-resurrected.png",
+      "sha256": "ac63c8c769d43b6064a2397b120ccddcbba998f9272c9ce576bc4053e64495de",
+      "bytes": 1255830
+    },
+    {
+      "file": "native-controls-weapon-equipped.png",
+      "sha256": "357cea7e7b8e0a370b2672e8b7b1d610f38d35033503efdfa6c5fdabe2097c9b",
+      "bytes": 1265502
+    },
+    {
+      "file": "native-controls-world-walked.png",
+      "sha256": "1900dda923be618c814697a9300b66e2d2498a636240341422055fa93627c59c",
+      "bytes": 1228065
+    }
+  ],
+  "normal_saves": {
+    "userdata\\offline\\tantra.sqlite3": {
+      "sha256": "515a8180cd954beb154880bb734d97ac7bf0c7bc1f05c3c85f7bd1cf9231af9a",
+      "last_write": "2026-10-23T06:37:51.418673"
+    },
+    "userdata\\system\\SaveID.bin": {
+      "sha256": "4c026dca53567521dad4c27ab8585c4c5ae4c47f136df3a4e59f2103c8ca0b9e",
+      "last_write": "2026-10-23T06:35:37.823337"
+    }
+  },
+  "verification": "Recovered from the completed single runtime diagnostic/captures and remaining isolated SQLite fixture; no second runtime process.",
+  "limits": [
+    "Other channels were not tested.",
+    "Resurrection items/healer skills, fortress/castle branches and complete death penalties remain incomplete."
+  ],
+  "final_executable_sha256": "b39f4b0256bf11f8ed51f7ecd9f14611aed46b1fafe3c0363f8bc4e5cc2cf739",
+  "post_runtime_change": "Recovery calls existing native htPercent for round-half-away-from-zero on odd totals; rebuilt/staged; no second game run."
+}

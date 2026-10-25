@@ -1,0 +1,171 @@
+HT3DHeaven.dll SHA256=b818b89edbc9f8e49bb1b79200371740eaa157dabac23bbf1e2d52e40ff99941
+Read-only inspection; DLL never executed.
+
+Material array uses 0x44-byte records
+0x20032382: lea eax, [ebp - 0x18]
+0x20032385: push eax
+0x20032386: mov ecx, ebx
+0x20032388: call 0x20050010
+0x2003238D: mov eax, dword ptr [ebp - 0x18]
+0x20032390: mov dword ptr [esi + 0x2c], eax
+0x20032393: imul eax, eax, 0x44
+0x20032396: push eax
+0x20032397: call 0x20050694
+0x2003239C: cmp dword ptr [esi + 0x2c], edi
+0x2003239F: pop ecx
+0x200323A0: mov dword ptr [esi + 0x30], eax
+0x200323A3: mov dword ptr [ebp - 0x14], edi
+0x200323A6: jbe 0x200324bd
+
+Read final material float at +0x40, advance 0x44
+0x2003249A: mov eax, dword ptr [esi + 0x30]
+0x2003249D: lea eax, [edi + eax + 0x40]
+0x200324A1: push eax
+0x200324A2: mov ecx, ebx
+0x200324A4: call 0x20050010
+0x200324A9: inc dword ptr [ebp - 0x14]
+0x200324AC: mov eax, dword ptr [ebp - 0x14]
+0x200324AF: add edi, 0x44
+0x200324B2: cmp eax, dword ptr [esi + 0x2c]
+0x200324B5: jb 0x200323ac
+
+Read total triangles then one count per material
+0x200324BD: lea eax, [ebp - 0x18]
+0x200324C0: push eax
+0x200324C1: mov ecx, ebx
+0x200324C3: call 0x20050010
+0x200324C8: mov eax, dword ptr [ebp - 0x18]
+0x200324CB: mov dword ptr [esi + 0x14], eax
+0x200324CE: mov eax, dword ptr [esi + 0x2c]
+0x200324D1: shl eax, 1
+0x200324D3: push eax
+0x200324D4: call 0x20050694
+0x200324D9: cmp dword ptr [esi + 0x2c], edi
+0x200324DC: pop ecx
+0x200324DD: mov dword ptr [esi + 0x24], eax
+0x200324E0: mov dword ptr [ebp - 0x14], edi
+0x200324E3: jbe 0x20032507
+0x200324E5: lea eax, [ebp - 0x18]
+0x200324E8: push eax
+0x200324E9: mov ecx, ebx
+0x200324EB: call 0x20050010
+0x200324F0: mov eax, dword ptr [ebp - 0x14]
+0x200324F3: mov ecx, dword ptr [esi + 0x24]
+0x200324F6: mov dx, word ptr [ebp - 0x18]
+0x200324FA: mov word ptr [ecx + eax*2], dx
+0x200324FE: inc eax
+0x200324FF: cmp eax, dword ptr [esi + 0x2c]
+0x20032502: mov dword ptr [ebp - 0x14], eax
+0x20032505: jb 0x200324e5
+
+Read grouped triangle indices after the count table
+0x2003254C: and dword ptr [ebp - 0x14], 0
+0x20032550: cmp dword ptr [esi + 0x2c], 0
+0x20032554: jbe 0x200325eb
+0x2003255A: mov eax, dword ptr [esi + 0x24]
+0x2003255D: mov ecx, dword ptr [ebp - 0x14]
+0x20032560: movzx eax, word ptr [eax + ecx*2]
+0x20032564: xor edi, edi
+0x20032566: lea eax, [eax + eax*2]
+0x20032569: test eax, eax
+0x2003256B: mov dword ptr [ebp - 0x1c], edi
+0x2003256E: jle 0x200325dc
+0x20032570: lea eax, [ebp - 0x18]
+0x20032573: push eax
+0x20032574: mov ecx, ebx
+0x20032576: call 0x20050010
+0x2003257B: mov eax, dword ptr [esi + 0x28]
+0x2003257E: mov ecx, dword ptr [ebp - 0x14]
+0x20032581: mov eax, dword ptr [eax + ecx*4]
+0x20032584: mov cx, word ptr [ebp - 0x18]
+0x20032588: mov word ptr [eax + edi*2], cx
+0x2003258C: lea eax, [ebp - 0x18]
+0x2003258F: push eax
+0x20032590: mov ecx, ebx
+0x20032592: call 0x20050010
+0x20032597: mov eax, dword ptr [esi + 0x28]
+0x2003259A: mov ecx, dword ptr [ebp - 0x14]
+0x2003259D: mov eax, dword ptr [eax + ecx*4]
+0x200325A0: mov cx, word ptr [ebp - 0x18]
+0x200325A4: mov word ptr [eax + edi*2 + 2], cx
+0x200325A9: lea eax, [ebp - 0x18]
+0x200325AC: push eax
+0x200325AD: mov ecx, ebx
+0x200325AF: call 0x20050010
+0x200325B4: mov ecx, dword ptr [esi + 0x28]
+0x200325B7: mov eax, dword ptr [ebp - 0x14]
+0x200325BA: mov ecx, dword ptr [ecx + eax*4]
+0x200325BD: mov dx, word ptr [ebp - 0x18]
+0x200325C1: add dword ptr [ebp - 0x1c], 3
+0x200325C5: mov word ptr [ecx + edi*2 + 4], dx
+0x200325CA: mov ecx, dword ptr [esi + 0x24]
+0x200325CD: movzx eax, word ptr [ecx + eax*2]
+0x200325D1: movzx edi, word ptr [ebp - 0x1c]
+0x200325D5: lea eax, [eax + eax*2]
+0x200325D8: cmp edi, eax
+0x200325DA: jl 0x20032570
+0x200325DC: inc dword ptr [ebp - 0x14]
+0x200325DF: mov eax, dword ptr [ebp - 0x14]
+0x200325E2: cmp eax, dword ptr [esi + 0x2c]
+0x200325E5: jb 0x2003255a
+
+Read 256-byte texture names then apply extension rewrite
+0x2003264B: push 0x100
+0x20032650: lea ecx, [ebp - 0x22c]
+0x20032656: call 0x2004e130
+0x2003265B: push eax
+0x2003265C: mov ecx, ebx
+0x2003265E: call 0x2004ffb0
+0x20032663: lea eax, [ebp - 0x22c]
+0x20032669: push eax
+0x2003266A: lea ecx, [ebp - 0x12c]
+0x20032670: call 0x2004e1e0
+0x20032675: lea ecx, [ebp - 0x12c]
+0x2003267B: mov byte ptr [ebp - 4], 4
+0x2003267F: call 0x2004e290
+0x20032684: push 0x20063d98
+0x20032689: lea ecx, [ebp - 0x12c]
+0x2003268F: call 0x2004e5f0
+0x20032694: test al, al
+0x20032696: lea ecx, [ebp - 0x12c]
+0x2003269C: push 0
+0x2003269E: je 0x200326d3
+0x200326A0: call 0x2004e560
+0x200326A5: push 0
+0x200326A7: lea ecx, [ebp - 0x12c]
+0x200326AD: call 0x2004e560
+0x200326B2: push 0
+0x200326B4: lea ecx, [ebp - 0x12c]
+0x200326BA: call 0x2004e560
+0x200326BF: push 0
+0x200326C1: lea ecx, [ebp - 0x12c]
+0x200326C7: call 0x2004e560
+0x200326CC: push 0x2006936c
+0x200326D1: jmp 0x200326f7
+0x200326D3: call 0x2004e560
+0x200326D8: push 0
+0x200326DA: lea ecx, [ebp - 0x12c]
+0x200326E0: call 0x2004e560
+0x200326E5: push 0
+0x200326E7: lea ecx, [ebp - 0x12c]
+0x200326ED: call 0x2004e560
+0x200326F2: push 0x20069368
+0x200326F7: lea ecx, [ebp - 0x12c]
+0x200326FD: call 0x2004e370
+0x20032702: lea ecx, [ebp - 0x12c]
+0x20032708: call 0x2004e130
+0x2003270D: push eax
+0x2003270E: mov eax, dword ptr [esi + 0x40]
+0x20032711: lea ecx, [eax + edi*8]
+0x20032714: call 0x2002d500
+0x20032719: lea ecx, [ebp - 0x12c]
+0x2003271F: mov byte ptr [ebp - 4], 2
+0x20032723: call 0x2004dfa0
+0x20032728: inc edi
+0x20032729: cmp edi, dword ptr [esi + 0x2c]
+0x2003272C: jb 0x2003264b
+String RVA=0x63D98: tga
+String RVA=0x6936C: _TGA.dds
+String RVA=0x69368: dds
+
+Layout: material count; count*17 floats; total triangles; count triangle counts; grouped u32 indices; count*256-byte texture names. Native stores indices/counts as u16 after reading u32.

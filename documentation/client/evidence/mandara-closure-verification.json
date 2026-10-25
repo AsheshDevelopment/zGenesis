@@ -1,0 +1,87 @@
+{
+  "final_executable_sha256": "47405e614992d5000b9113344b74ad7e01953061a7f48690b8e3bed2fc8be7b7",
+  "final_runtime_verified": false,
+  "runtime_processes": 1,
+  "world_group": 1,
+  "mandara_route": 1,
+  "runtime_executable_sha256": "02fe519c88d92bfce34b73c61d711df44470e81ea09a02c4fb0c27e9f25e6260",
+  "runtime_exit_code": 8,
+  "runtime_result": "INTRO cases passed; handled world-entry failure during MainUI creation before CHAR_INIT",
+  "runtime_checks_passed": [
+    "three occupied rendered slots",
+    "full-roster create rejection",
+    "delete cancellation",
+    "empty delete proof rejection",
+    "slot 2 deletion",
+    "face/hair framing and creation cancellation",
+    "slot 1 information cancellation",
+    "village cancellation",
+    "point-02 world authentication",
+    "Mandara terrain/6503 placements/sky load"
+  ],
+  "failure_and_fix": {
+    "cause": "17 windows exceeded the renderer 16-bit priority limit: 1+4096*16 = 65537",
+    "fix": "Compress distinct source local layers and window ranks without changing their ordering",
+    "regression": "native_main_ui_interaction verifies all window priorities and every pair of window ranks",
+    "runtime_rerun": false
+  },
+  "component_checks": [
+    "native cell detours/unreachable/same-cell routes",
+    "actual merchant-to-save-NPC approach path",
+    "372625 transformed camera triangles",
+    "NPC dialogue/buy/sell/save authority",
+    "dead/range/stale/funds/capacity restrictions",
+    "eight tribes and 200 face/hair camera cases",
+    "world movement/combat/item lifecycle",
+    "SQLite persistence/ownership",
+    "original INTRO controls",
+    "MainUI and 16-bit queue order regression"
+  ],
+  "package": {
+    "files": 4173,
+    "bytes": 257367290,
+    "inventory_import_icon_verification": true
+  },
+  "normal_files_unchanged": {
+    "userdata/offline/tantra.sqlite3": "515a8180cd954beb154880bb734d97ac7bf0c7bc1f05c3c85f7bd1cf9231af9a",
+    "userdata/system/SaveID.bin": "4c026dca53567521dad4c27ab8585c4c5ae4c47f136df3a4e59f2103c8ca0b9e"
+  },
+  "not_verified": [
+    "final-build Mandara render and NPC UI runtime",
+    "prolonged play",
+    "native crash fault injection",
+    "Debug",
+    "other channels",
+    "full suite"
+  ],
+  "captures": [
+    {
+      "file": "closure-delete-cancel.png",
+      "sha256": "90d914610947b4c3e0ba2cf1bd4dadb8c151cefec4064fc859dcb7b72ca65e58"
+    },
+    {
+      "file": "closure-delete-result.png",
+      "sha256": "405076315074a52d932afa426c59a3ce47c87613c0159ff3ae40ca724b2eab5f"
+    },
+    {
+      "file": "closure-face-camera.png",
+      "sha256": "fa9a15d609d5479c3ce4caca7355494c25fe817192ff9d1a26f1a7ea4f983ab6"
+    },
+    {
+      "file": "closure-hair-camera.png",
+      "sha256": "fee3e5c92a036ba99a0373eccd8faeec9c5ee76144194862cd90516cd16dce58"
+    },
+    {
+      "file": "closure-middle-slot-info.png",
+      "sha256": "6ccfec86134a94b7607e139f582cfc0fa7b1c6ce555663ed7839b74c33711f14"
+    },
+    {
+      "file": "closure-native-loading.png",
+      "sha256": "1ceeece150a673e06822a01b29cd7ae6811bf07b5658a9fc00919ca0d1f259dd"
+    },
+    {
+      "file": "closure-three-slots.png",
+      "sha256": "588080319273e36306f03a25f748e8289d2bb31e05644b3770eb423cfdd957e6"
+    }
+  ]
+}

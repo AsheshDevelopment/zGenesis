@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-26",
+  "game_launches": 0,
+  "goal_status": "active_incomplete",
+  "release_build": "passed",
+  "cpu_checks": [
+    "native_progression_actions",
+    "native_world_hotkeys",
+    "native_main_ui_interaction",
+    "native_skill_feedback"
+  ],
+  "package_checks": "both passed with --skip-runtime",
+  "launchers": {
+    "C:\\_GitHub\\tantra-dev-main\\_client\\HTLauncher.exe": "a702f7ad400d3d9cb62900fe19389cd8e9597e20dc76968e50378b98721e2fdd",
+    "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe": "a702f7ad400d3d9cb62900fe19389cd8e9597e20dc76968e50378b98721e2fdd"
+  },
+  "protected_files_unchanged": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": 148,
+    "C:\\_GitHub\\TantraSrc\\_client": 197
+  },
+  "commands_saved": 19,
+  "commands_executable": [
+    1,
+    2,
+    3,
+    4,
+    6
+  ],
+  "runtime_acceptance": false,
+  "remaining": [
+    "other command presentation and authority services",
+    "camera/collision and corrected FX runtime acceptance",
+    "remaining phased client plan"
+  ]
+}

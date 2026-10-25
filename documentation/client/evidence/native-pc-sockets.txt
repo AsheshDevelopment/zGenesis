@@ -1,0 +1,217 @@
+HT3DHeaven.dll SHA256=b818b89edbc9f8e49bb1b79200371740eaa157dabac23bbf1e2d52e40ff99941
+Read-only; no legacy code is executed.
+
+After the validated skeleton: ten float words, then socket count
+0x20039B58: lea eax, [esi + 0x334]
+0x20039B5E: push eax
+0x20039B5F: lea ecx, [ebp - 0x238]
+0x20039B65: call 0x20050010
+0x20039B6A: lea eax, [esi + 0x338]
+0x20039B70: push eax
+0x20039B71: lea ecx, [ebp - 0x238]
+0x20039B77: call 0x20050010
+0x20039B7C: lea eax, [esi + 0x33c]
+0x20039B82: push eax
+0x20039B83: lea ecx, [ebp - 0x238]
+0x20039B89: call 0x20050010
+0x20039B8E: lea eax, [esi + 0x340]
+0x20039B94: push eax
+0x20039B95: lea ecx, [ebp - 0x238]
+0x20039B9B: call 0x20050010
+0x20039BA0: lea eax, [esi + 0x344]
+0x20039BA6: push eax
+0x20039BA7: lea ecx, [ebp - 0x238]
+0x20039BAD: call 0x20050010
+0x20039BB2: lea eax, [esi + 0x348]
+0x20039BB8: push eax
+0x20039BB9: lea ecx, [ebp - 0x238]
+0x20039BBF: call 0x20050010
+0x20039BC4: lea eax, [esi + 0x34c]
+0x20039BCA: push eax
+0x20039BCB: lea ecx, [ebp - 0x238]
+0x20039BD1: call 0x20050010
+0x20039BD6: lea eax, [esi + 0x350]
+0x20039BDC: push eax
+0x20039BDD: lea ecx, [ebp - 0x238]
+0x20039BE3: call 0x20050010
+0x20039BE8: lea eax, [esi + 0x354]
+0x20039BEE: push eax
+0x20039BEF: lea ecx, [ebp - 0x238]
+0x20039BF5: call 0x20050010
+0x20039BFA: lea eax, [esi + 0x358]
+0x20039C00: push eax
+0x20039C01: lea ecx, [ebp - 0x238]
+0x20039C07: call 0x20050010
+0x20039C0C: lea eax, [ebp - 0x14]
+0x20039C0F: push eax
+0x20039C10: lea ecx, [ebp - 0x238]
+0x20039C16: call 0x20050010
+0x20039C1B: mov eax, dword ptr [ebp - 0x14]
+0x20039C1E: cmp eax, edi
+0x20039C20: mov dword ptr [esi + 0x330], eax
+
+Socket table allocates 0x6C-byte runtime records and calls the loader
+0x20039C28: mov ebx, eax
+0x20039C2A: imul eax, eax, 0x6c
+0x20039C2D: add eax, 4
+0x20039C30: push eax
+0x20039C31: call 0x20050694
+0x20039C36: pop ecx
+0x20039C37: mov dword ptr [ebp + 8], eax
+0x20039C3A: cmp eax, edi
+0x20039C3C: mov byte ptr [ebp - 4], 3
+0x20039C40: je 0x20039c5a
+0x20039C42: push 0x20030ce1
+0x20039C47: push 0x20030c7d
+0x20039C4C: push ebx
+0x20039C4D: lea edi, [eax + 4]
+0x20039C50: push 0x6c
+0x20039C52: push edi
+0x20039C53: mov dword ptr [eax], ebx
+0x20039C55: call 0x20051aaa
+0x20039C5A: and byte ptr [ebp - 4], 0
+0x20039C5E: mov dword ptr [esi + 0x32c], edi
+0x20039C64: xor edi, edi
+0x20039C66: cmp dword ptr [esi + 0x330], edi
+0x20039C6C: jbe 0x20039c90
+0x20039C6E: xor ebx, ebx
+0x20039C70: mov ecx, dword ptr [esi + 0x32c]
+0x20039C76: lea eax, [ebp - 0x238]
+0x20039C7C: push eax
+0x20039C7D: add ecx, ebx
+0x20039C7F: call 0x20031149
+0x20039C84: inc edi
+0x20039C85: add ebx, 0x6c
+0x20039C88: cmp edi, dword ptr [esi + 0x330]
+0x20039C8E: jb 0x20039c70
+
+Serialized socket: two 256-byte names, 3 position and 4 quaternion floats
+0x20031178: mov ebx, 0x100
+0x2003117D: push ebx
+0x2003117E: lea ecx, [ebp - 0x110]
+0x20031184: call 0x2004e130
+0x20031189: mov edi, dword ptr [ebp + 8]
+0x2003118C: push eax
+0x2003118D: mov ecx, edi
+0x2003118F: call 0x2004ffb0
+0x20031194: lea ecx, [ebp - 0x110]
+0x2003119A: call 0x2004e130
+0x2003119F: push eax
+0x200311A0: mov ecx, esi
+0x200311A2: call 0x2002d500
+0x200311A7: push ebx
+0x200311A8: lea ecx, [ebp - 0x110]
+0x200311AE: call 0x2004e130
+0x200311B3: push eax
+0x200311B4: mov ecx, edi
+0x200311B6: call 0x2004ffb0
+0x200311BB: lea ecx, [ebp - 0x110]
+0x200311C1: call 0x2004e130
+0x200311C6: push eax
+0x200311C7: lea ecx, [esi + 8]
+0x200311CA: call 0x2002d500
+0x200311CF: lea ebx, [esi + 0x50]
+0x200311D2: push ebx
+0x200311D3: mov ecx, edi
+0x200311D5: call 0x20050010
+0x200311DA: lea eax, [esi + 0x54]
+0x200311DD: push eax
+0x200311DE: mov ecx, edi
+0x200311E0: call 0x20050010
+0x200311E5: lea eax, [esi + 0x58]
+0x200311E8: push eax
+0x200311E9: mov ecx, edi
+0x200311EB: call 0x20050010
+0x200311F0: lea eax, [esi + 0x5c]
+0x200311F3: push eax
+0x200311F4: mov ecx, edi
+0x200311F6: call 0x20050010
+0x200311FB: lea eax, [esi + 0x60]
+0x200311FE: push eax
+0x200311FF: mov ecx, edi
+0x20031201: call 0x20050010
+0x20031206: lea eax, [esi + 0x64]
+0x20031209: push eax
+0x2003120A: mov ecx, edi
+0x2003120C: call 0x20050010
+0x20031211: lea eax, [esi + 0x68]
+0x20031214: push eax
+0x20031215: mov ecx, edi
+0x20031217: call 0x20050010
+0x2003121C: push ebx
+0x2003121D: lea eax, [esi + 0x5c]
+0x20031220: push eax
+0x20031221: xor eax, eax
+0x20031223: push eax
+0x20031224: push eax
+0x20031225: push eax
+0x20031226: push eax
+0x20031227: add esi, 0x10
+0x2003122A: push esi
+0x2003122B: call 0x20041124
+
+Socket lookup resolves the parent bone separately from the socket name
+0x2003813A: mov eax, dword ptr [esi + 0x32c]
+0x20038140: imul ebx, ebx, 0x6c
+0x20038143: push edi
+0x20038144: add eax, ebx
+0x20038146: push 0x10
+0x20038148: lea esi, [eax + 0x10]
+0x2003814B: pop ecx
+0x2003814C: lea edi, [ebp - 0xd4]
+0x20038152: rep movsd dword ptr es:[edi], dword ptr [esi]
+0x20038154: push dword ptr [eax + 0xc]
+0x20038157: mov eax, dword ptr [ebp + 0x6c]
+0x2003815A: mov ecx, dword ptr [eax + 0x314]
+0x20038160: call 0x2002ed7a
+0x20038165: push 0x10
+0x20038167: lea esi, [eax + 8]
+0x2003816A: mov eax, dword ptr [ebp + 0x6c]
+0x2003816D: pop ecx
+0x2003816E: lea edi, [ebp - 0x54]
+0x20038171: rep movsd dword ptr es:[edi], dword ptr [esi]
+0x20038173: mov ecx, dword ptr [eax + 0x32c]
+0x20038179: push dword ptr [ecx + ebx + 0xc]
+0x2003817D: mov ecx, dword ptr [eax + 0x314]
+0x20038183: call 0x2002ed7a
+0x20038188: push 0x10
+0x2003818A: lea esi, [eax + 0x48]
+0x2003818D: pop ecx
+0x2003818E: lea eax, [ebp + 0x2c]
+0x20038191: push eax
+0x20038192: lea eax, [ebp + 0x2c]
+0x20038195: lea edi, [ebp + 0x2c]
+0x20038198: push eax
+0x20038199: rep movsd dword ptr es:[edi], dword ptr [esi]
+0x2003819B: call 0x2004057b
+
+Row form: socketLocal * transposedFileBind * skinMatrix
+0x200381A0: lea eax, [ebp + 0x2c]
+0x200381A3: push eax
+0x200381A4: lea eax, [ebp - 0xd4]
+0x200381AA: push eax
+0x200381AB: lea eax, [ebp - 0x14]
+0x200381AE: push eax
+0x200381AF: call 0x20040332
+0x200381B4: push 0x10
+0x200381B6: pop ecx
+0x200381B7: lea eax, [ebp - 0x54]
+0x200381BA: push eax
+0x200381BB: lea eax, [ebp - 0x94]
+0x200381C1: push eax
+0x200381C2: lea eax, [ebp - 0x114]
+0x200381C8: lea esi, [ebp - 0x14]
+0x200381CB: lea edi, [ebp - 0x94]
+0x200381D1: push eax
+0x200381D2: rep movsd dword ptr es:[edi], dword ptr [esi]
+0x200381D4: call 0x20040332
+0x200381D9: mov edi, dword ptr [ebp + 0x7c]
+0x200381DC: push 0x10
+0x200381DE: pop ecx
+0x200381DF: lea esi, [ebp - 0x114]
+0x200381E5: rep movsd dword ptr es:[edi], dword ptr [esi]
+0x200381E7: pop edi
+
+Together with inspect-native-skinning.py: skinRow=inverse(transpose(fileBind))*animatedWorldRow.
+Equivalent column form: animatedWorld * socketLocal. Instance position/yaw/scale applies afterwards.
+This establishes scalar socket transforms for this profile, not full equipment/physics/visual parity.

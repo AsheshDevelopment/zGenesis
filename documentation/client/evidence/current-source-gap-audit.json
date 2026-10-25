@@ -1,0 +1,368 @@
+{
+  "reviewed_at": "2026-10-23T22:54:04",
+  "mode": "static source/worktree and existing-record review; no build/test/client/server launch this turn",
+  "scope": "19 gameplay domains plus 8 dedicated-service/transport/operations entries; representative active-handler audit, not a complete native function census",
+  "source_selection": {
+    "project": "Tantra/zone/ZONESRV.vcproj",
+    "cpp_file_references": [
+      "CGuild.cpp",
+      "CItem.cpp",
+      "CMob.cpp",
+      "CMob2.cpp",
+      "CNPCGene.cpp",
+      "Config.cpp",
+      "CSeqGenerator.cpp",
+      "CUser.cpp",
+      "DrawInfo.cpp",
+      "GetFunc.cpp",
+      "HTRankSystem.cpp",
+      "HTRankSystem_OLD.cpp",
+      "imple.cpp",
+      "LimitedStore.cpp",
+      "LoadSetting.cpp",
+      "Quest.cpp",
+      "RentalStore.cpp",
+      "SendFunc.cpp",
+      "Server.cpp",
+      "TFPercentMixer.cpp",
+      "TNArena.cpp",
+      "TNDebug.cpp",
+      "TNDeck.cpp",
+      "TNDeck100.cpp",
+      "TNDeck1000.cpp",
+      "TNDeck10000.cpp",
+      "TNInfluenceMap.cpp",
+      "TNKalaSystem.cpp",
+      "TNMagicLamp.cpp",
+      "TNPointBar.cpp",
+      "TNRate.cpp",
+      "TNRate10000.cpp",
+      "TNScheduler.cpp",
+      "TNSiege.cpp",
+      "Yut.cpp",
+      "Basedef.cpp",
+      "CPSock.cpp",
+      "MD5Checksum.cpp",
+      "HTMemoryManager.cpp",
+      "HTParamMgr.cpp",
+      "HTServerSetting.cpp",
+      "GameEvent.cpp",
+      "Gamers.cpp",
+      "IWantIt.cpp",
+      "MicroSound.cpp"
+    ],
+    "preprocessor_branches": "not exhaustively resolved; do not combine alternate variants by assumption"
+  },
+  "reviewed_code_sha256": [
+    {
+      "path": "Tantra/zone/ZONESRV.vcproj",
+      "sha256": "8a481d45faa1eef4811092b071e58352e674a0fcc78412a2c7a29ddc641eb3bc"
+    },
+    {
+      "path": "Tantra/zone/server.cpp",
+      "sha256": "6639ca68a1e18c121e1e8a60fd2c7bbdd8f07b1d73540f645509e58ad9b6da7a"
+    },
+    {
+      "path": "Tantra/zone/CMob.cpp",
+      "sha256": "3421c51069c245603784168aa8ea2c276798d480b9749d8e9124734ad0715a46"
+    },
+    {
+      "path": "Tantra/zone/CMob2.cpp",
+      "sha256": "50cd5a0bbe8d5287d44ced2bd893013f33c8c472b09982890db11caee3c65e8b"
+    },
+    {
+      "path": "Tantra/zone/CNPCGene.cpp",
+      "sha256": "17b775a730c6636579feb1dc9238af13cd6d13cfb62a8f5c2129a42618188b3d"
+    },
+    {
+      "path": "Tantra/zone/Quest.cpp",
+      "sha256": "ee6b4ad74aacf155ea69cd248440ad4eecb8440fa3c02c4f155e46f1404c90b7"
+    },
+    {
+      "path": "Tantra/zone/CGuild.cpp",
+      "sha256": "0edd12c2a951b2243278ca11461b41d22ecf3e156587fd631528bfd9052a2527"
+    },
+    {
+      "path": "Tantra/zone/RentalStore.cpp",
+      "sha256": "6efb6c61603e0412b134c14dee290d38bbae6a16a2c9c18647a44319d6e07aca"
+    },
+    {
+      "path": "Tantra/zone/TNArena.cpp",
+      "sha256": "544470ea3332a7c1a561a1e307536744ba3124851bd84617f41d13d86dfa2f4f"
+    },
+    {
+      "path": "Tantra/zone/TNSiege.cpp",
+      "sha256": "bbe32b241be8289e1e522b2deff69d5afd8d587e5de0f9b35fc763a6006634f1"
+    },
+    {
+      "path": "Tantra/zone/GameEvent.cpp",
+      "sha256": "3b89c59ac67a41f26f84d18c1bee69d4e17e8484bd7cb81d55fbff7412646881"
+    },
+    {
+      "path": "Tantra/HTlauncher/HTInterface.cpp",
+      "sha256": "ec0c0942971f74bcc50f3ad3d79ec17a4dfac28b79ce5cdebde112bc9cf43844"
+    },
+    {
+      "path": "Tantra/HTlauncher/HTQuickSlot.cpp",
+      "sha256": "178a169b121b7897e3c038f022a76be73d1df9f0921acde476b6d8eabafc4d14"
+    },
+    {
+      "path": "Tantra/HTlauncher/HTNPCScriptMgr.cpp",
+      "sha256": "22be3cbdb635049f80f51b9f7bfa95d8f43659d3dda70840d9618189330a1cf0"
+    },
+    {
+      "path": "Tantra/HTlauncher/HTNPCControl.cpp",
+      "sha256": "3e9cc0784f8b523e6e11dd5ef59534b1132d9524488808fad50f223543fc0faa"
+    },
+    {
+      "path": "Tantra/DBSRV/Server.cpp",
+      "sha256": "041be52bd220e933e54423d9e9b9e98539cf4a2e5b9286cc9108bb5355b62961"
+    },
+    {
+      "path": "Tantra/SQLDAEMON/Server.cpp",
+      "sha256": "1f75378cc909c552598954e1b41b4531c2521f11509d1b35d1449f819cea027f"
+    },
+    {
+      "path": "_remake/src/client/OfflineCharacterChannel.h",
+      "sha256": "696841b80bb03293aaa6186fb70c430fbe1584a131ca3a3e897c2378d61067d3"
+    },
+    {
+      "path": "_remake/src/client/OfflineCharacterChannel.cpp",
+      "sha256": "70c4632ac87f1c89ed9451add81e6574eb8ed72fc0d6acf4f417b8fc6991b771"
+    },
+    {
+      "path": "_remake/src/client/OfflineWorldGameplay.h",
+      "sha256": "d279b5a2b1a170bd8e0a9d6c1647a232ecc7792b4a8fbe2047121c88af8eed6f"
+    },
+    {
+      "path": "_remake/src/client/OfflineWorldGameplay.cpp",
+      "sha256": "eb8c44aef93d03eb12013323cab07eab5f3b72420e3d5864e189809814fa2024"
+    },
+    {
+      "path": "_remake/src/client/OfflineWorldStatus.h",
+      "sha256": "c6aaf2f0ee68789efd668982458f9a21549c99c85c9bb45973542ccee33d703f"
+    },
+    {
+      "path": "_remake/src/client/OfflineNpcServices.cpp",
+      "sha256": "3a520483882ef7742a55d47450371b1e7ddaf6c43570cab0fdb581ade7de2188"
+    },
+    {
+      "path": "_remake/src/client/NativeQuickSlots.h",
+      "sha256": "698c7f49e1b7a72bdb0b474418110a7140786c503cd785266630bd3128338c18"
+    },
+    {
+      "path": "_remake/src/compatibility/HtPcStatProjection.cpp",
+      "sha256": "6390b5ef9c4d5c0d8422a87cae963301b3e17b5b302c9686536e2eb21fd8cb5e"
+    },
+    {
+      "path": "_remake/src/app/tantra_remake_main.cpp",
+      "sha256": "3a98026a0826b92b6b2232162198e7ee8c92322cae3c41d51c17208ceaa8ac01"
+    },
+    {
+      "path": "_remake/src/resources/NativeWorldPopulation.cpp",
+      "sha256": "34c948c18e8febf4612623f757387ad6184d0c6cd7ea63efff3d1a603b4207db"
+    },
+    {
+      "path": "_server/crates/zone/src/main.rs",
+      "sha256": "72980dba77c93ffb5116415583bc22a45ed00929f8d906213224ed562cb6ccb7"
+    },
+    {
+      "path": "_server/crates/server-core/src/lib.rs",
+      "sha256": "5212d49c33984797a8a4a134310e807ba57fba1d3821e00ed4da08c4ada9ce8b"
+    },
+    {
+      "path": "_server/crates/manager/src/main.rs",
+      "sha256": "c310bd19a10714b10011435f8af7aef860996db2c85a9bf0d8f82a85810c6387"
+    },
+    {
+      "path": "_server/Cargo.toml",
+      "sha256": "c64cb03050e5aa5dd2417445c69743d993b5e1b5efb2e47cb2b8977e47cd2c29"
+    }
+  ],
+  "features": [
+    {
+      "id": "G01",
+      "status": "implemented in offline C++; not ported to Rust",
+      "system": "Chakra spending"
+    },
+    {
+      "id": "G02",
+      "status": "implemented in offline C++; not ported to Rust",
+      "system": "skill learning/progression; full upgrade/UI matrix unverified"
+    },
+    {
+      "id": "G03",
+      "classification": "G03 \u2014 Partial",
+      "native_or_current_evidence": "`N/HTlauncher/HTQuickSlot.cpp`: `HT_vIconSave/Load`, `HT_vActionskill`, cooldown/actions; `HTSkillInventory.cpp`",
+      "remaining_work": "Bindings and item actions exist. Add skill/command dispatch, native cooldowns, tooltips, tree prerequisites/arrows and rejection feedback. Preserve the 400-byte file and native IDs."
+    },
+    {
+      "id": "G04",
+      "classification": "G04 \u2014 Missing: active skills",
+      "native_or_current_evidence": "`N/zone/server.cpp:3814,3858`: `CSP_CAST_UNIT_SKILL`, `CSP_CAST_AREA_SKILL`; `CMob2.cpp:93`: `CastSkill`; `UseSkill`, `CastInstant1/2/3`",
+      "remaining_work": "Implement target/range/LOS, costs, cast/ready/apply phases, cooldowns, interrupts and area/projectile outcomes. Connect native motions/TFX to authoritative results. Current `C/app/tantra_remake_main.cpp:999` explicitly rejects skill bindings."
+    },
+    {
+      "id": "G05",
+      "classification": "G05 \u2014 Partial: full combat effects",
+      "native_or_current_evidence": "`N/zone/CMob.cpp:5745,9805`: `OnTakeDamage`, `ProcessContinuousEffect`; `CMob2.cpp:3534`: `OnTakeAffections`, plus instant/affection handlers",
+      "remaining_work": "Existing status/effect context is not full combat integration. Add periodic damage/heal recipients, attacker/death attribution, controls, immunity, dispels, shields/links/absorption. `C/compatibility/HtPcStatProjection.cpp:182` rejects periodic damage without combat/attacker context."
+    },
+    {
+      "id": "G06",
+      "classification": "G06 \u2014 Partial: AI and generators",
+      "native_or_current_evidence": "`N/zone/CMob.cpp`: `BattleProcessor` (1092), target selection (1300/2335), `Think` (8392); `CMob2.cpp`; `CNPCGene.cpp`",
+      "remaining_work": "Current population uses bounded initial counts and generator segment 0. Combat uses a basic provoked chase/attack and the first authored monster skill's damage template. Restore aggression/target/skill selection, leash/return/help/flee states, cadence/replenishment, routes and formations."
+    },
+    {
+      "id": "G07",
+      "classification": "G07 \u2014 Partial: rewards and ground items",
+      "native_or_current_evidence": "`N/zone/server.cpp`: item get/drop (6334/6629), `ProcessDecayItem` (15991), `SharePrana` (19061)",
+      "remaining_work": "Solo progression, ordinary money bags and eight direct drop decks exist. Complete reward groups/modifiers, pickup stack merging, ownership/party rights, manual drop and decay. Current `defeated()` sets lifetime zero and retains drops until pickup/teardown."
+    },
+    {
+      "id": "G08",
+      "classification": "G08 \u2014 Partial: general item use",
+      "native_or_current_evidence": "`N/zone/CMob2.cpp:5760`: `UseItem`, charge/cancel handlers",
+      "remaining_work": "Current `C/client/OfflineWorldGameplay.cpp::useItem` supports ordinary instant HP/TP recovery and rejects other costs/phases/effects. Add charged/timed/continuous items and supported travel/revival/summoning items in native consumption/cancellation order."
+    },
+    {
+      "id": "G09",
+      "classification": "G09 \u2014 Missing: quests/tasks/journal",
+      "native_or_current_evidence": "`N/zone/Quest.cpp`: `QUEST_OnEvent` (356), `QUEST_OnDialog` (6720), `QUEST_OnTask` (7408), `SendQuestHistory` (7667); `HTInterface.cpp::CHTUIQuestWindow`",
+      "remaining_work": "Add prerequisites, acceptance/progress/failure/completion, triggers, choices, exactly-once rewards and persistent history/journal. Quest bytes in CHAR_INIT do not implement this."
+    },
+    {
+      "id": "G10",
+      "classification": "G10 \u2014 Partial: advanced NPC services",
+      "native_or_current_evidence": "`N/HTlauncher/HTNPCScriptMgr.cpp:2196`: `HT_bCheckCondition`; `HTNPCControl.cpp`: client-event dispatch; native server callbacks",
+      "remaining_work": "`OfflineNpcServices::enter` only handles a small condition subset, limited quest markers and basic supported events. Implement enabled tribe/job/Trimuriti/quest/request-result conditions, religion/class advancement, contributions/ranks and other source-backed callbacks."
+    },
+    {
+      "id": "G11",
+      "classification": "G11 \u2014 Missing: refinement/dismantling",
+      "native_or_current_evidence": "`N/HTlauncher/HTInterface.cpp:5713`: `CHTUIRefineWindow`; `HTNPCControl.cpp`; `N/zone/server.cpp:17915`: `RefiningItem`",
+      "remaining_work": "Add native eligibility, materials/currency, slot locks, probability/RNG decks, success/failure/destruction, rollback and original result UI. Existing repair is a different, already implemented service."
+    },
+    {
+      "id": "G12",
+      "classification": "G12 \u2014 Missing: travel/handoff",
+      "native_or_current_evidence": "`N/zone/server.cpp:4821`: portal request, teleport/move-zone handlers; client world transition handlers",
+      "remaining_work": "Entry is not travel. Current `OfflineCharacterChannel.cpp:85` rejects nonzero position/portal/target variants. Implement portals, NPC transport and supported items, ownership transfer, save/unload/load/re-entry sequence and failed destination recovery."
+    },
+    {
+      "id": "G13",
+      "classification": "G13 \u2014 Partial: complete death/revival",
+      "native_or_current_evidence": "`N/zone/server.cpp:3214`: regen request; `CMob2.cpp:6114`: `Regen`; `HTGameSystem.cpp` death handling",
+      "remaining_work": "Same-zone save/town recovery, original death UI and bounded Prana loss exist. Complete revival items/healers, another saved zone, supported fortress/special-zone branches and full penalty/effect rules. Current `revive()` rejects handoff to another non-alias zone."
+    },
+    {
+      "id": "G14",
+      "classification": "G14 \u2014 Partial: maps and commands",
+      "native_or_current_evidence": "`N/HTlauncher/HTMiniMap.cpp`, `HTCommand.cpp`, `HTInterfaceCheck.cpp`",
+      "remaining_work": "Complete minimap/large-map markers and controls, supported sitting/rest/recovery, contextual commands/target restrictions and command quick slots. Some original command bodies are empty; trace active behavior before implementing."
+    },
+    {
+      "id": "G15",
+      "classification": "G15 \u2014 Missing: multiplayer chat",
+      "native_or_current_evidence": "`N/HTlauncher/HTChatting.cpp`, `HTChatNetWorkHandle.cpp`, `TNChatNetworkManager.cpp`; `N/zone/server.cpp:8053,8077`",
+      "remaining_work": "Add text/IME input, recipient/range/channel rules, local/whisper/party/guild routing and reconnect handling. A chat panel or local echo is not a multiplayer chat service."
+    },
+    {
+      "id": "G16",
+      "classification": "G16 \u2014 Missing: party and player trade",
+      "native_or_current_evidence": "`N/HTlauncher/HTParty.cpp`, `HTExchange.cpp`; `N/zone/server.cpp::ExchangeTrade` (18204), `SharePrana`",
+      "remaining_work": "Add invitations/membership/leadership/reward rights and two-sided offer/lock/confirm/cancel. Require transactional transfer and rollback on stale sessions, disconnects and repeated messages."
+    },
+    {
+      "id": "G17",
+      "classification": "G17 \u2014 Missing: guild/Ashram and rental economy",
+      "native_or_current_evidence": "`N/zone/CGuild.cpp`, `RentalStore.cpp`; `N/HTlauncher/HTGuild.cpp`, `HTRentalStore.cpp`",
+      "remaining_work": "Add roles, membership, permissions, emblems/shared cargo and enabled listings/purchases/expiry/proceeds. Personal cargo is not guild cargo. These systems need multiple principals and durable ownership."
+    },
+    {
+      "id": "G18",
+      "classification": "G18 \u2014 Missing: PvP/arena/siege/events",
+      "native_or_current_evidence": "`N/zone/TNArena.cpp`, `TNSiege.cpp`, `GameEvent.cpp`, server hostility/PK rules",
+      "remaining_work": "Implement enabled hostility/safe-zone, karma, death/reward and scheduled event state. The PK UI toggle alone does not implement authority. Resolve country/configuration/disabled-event branches before porting."
+    },
+    {
+      "id": "G19",
+      "classification": "G19 \u2014 Missing: summons/companions",
+      "native_or_current_evidence": "`N/zone/CMob2.cpp:7156`: `Summon`, related owner/distance/command handling",
+      "remaining_work": "Add ownership, lifetime, allegiance, follow/control, skill interactions and cleanup/persistence. Ordinary spawned monsters do not provide owned summons."
+    },
+    {
+      "id": "S01",
+      "classification": "S01 \u2014 Client game protocol/session transport",
+      "native_or_current_evidence": "`C/client/OfflineCharacterChannel.h` explicitly describes in-process authority with no TCP compatibility implied. `R/crates/zone/src/main.rs` handles only admin status/shutdown and reports `game_ready=false`, `game_listener_bound=false`.",
+      "remaining_work": "Native framing/version/handshake/result sequencing, login/roster/CHAR_INIT and authenticated world actions/replication over localhost; disconnect/reconnect and unknown-message rejection. Existing admin JSON is a separate protocol."
+    },
+    {
+      "id": "S02",
+      "classification": "S02 \u2014 SQLDMN",
+      "native_or_current_evidence": "`R/services/SQLDMN/service.toml` is planned; only operational per-zone SQLite exists. Native reference: `N/SQLDAEMON/Server.cpp` account save jobs/SQL operations.",
+      "remaining_work": "Sole shared SQLite writer, versioned schemas/migrations, atomic character/inventory/cargo transactions, revisions/idempotency and backup/recovery. Do not use the client's live offline DB as the server database."
+    },
+    {
+      "id": "S03",
+      "classification": "S03 \u2014 DBSRV",
+      "native_or_current_evidence": "Planned profile, no Rust account/character service. Native reference: `N/DBSRV/Server.cpp`.",
+      "remaining_work": "Account/roster/session coordination, character ownership/leases, create/select/delete and persistence requests; compatibility with the selected native login sequence."
+    },
+    {
+      "id": "S04",
+      "classification": "S04 \u2014 MSGSRV",
+      "native_or_current_evidence": "Planned GUI/profile; deployment reference `E:\\Global-server\\MSGSRV`.",
+      "remaining_work": "Trace the actual native routing contract, then implement cross-zone/social messages with recipients, ordering, backpressure and disconnect cleanup."
+    },
+    {
+      "id": "S05",
+      "classification": "S05 \u2014 CHATSRV",
+      "native_or_current_evidence": "Planned GUI/profile; deployment reference `E:\\Global-server\\CHATSRV`.",
+      "remaining_work": "Establish its exact split from MSGSRV, then implement supported chat delivery/filtering and lifecycle. Folder presence does not prove complete source availability."
+    },
+    {
+      "id": "S06",
+      "classification": "S06 \u2014 ITMSRV",
+      "native_or_current_evidence": "Planned GUI/profile; deployment reference `E:\\Global-server\\ITMSRV`.",
+      "remaining_work": "Establish its exact native operations before assigning responsibilities; implement required item identity/transaction/delivery behavior with durable duplicate prevention. Do not assume every inventory operation belongs here."
+    },
+    {
+      "id": "S07",
+      "classification": "S07 \u2014 Game ZONESRV",
+      "native_or_current_evidence": "Rust worker owns an admin listener, heartbeat and process-run history, not a world simulation.",
+      "remaining_work": "Port authoritative map/entity/status/movement/combat/NPC systems and their client-facing event flow. Ten valid imported folders are not ten playable Rust zones."
+    },
+    {
+      "id": "S08",
+      "classification": "S08 \u2014 Complete operations/scaling",
+      "native_or_current_evidence": "Zone Start/Stop Server, process ownership, local status, import and settings controls exist. Shared Start buttons are intentionally disabled.",
+      "remaining_work": "Add real shared backends to dependency-aware startup/stop, readiness, restart/backoff, accounts/database management, backups, recovery and measured capacity. Remote administration/clustering is not implemented."
+    }
+  ],
+  "inspected_binaries_sha256": {
+    "_client/HTLauncher.exe": "43b4a011d0930dc98497375caeb22684839f7310a642a6f6c28dc1b194720827",
+    "_server/bin/tantra-zone.exe": "28a314f79b6e29af8cee9dd9116db41ce56aac15979e9b99ccd85f89230f050f",
+    "_server/bin/tantra-server-manager.exe": "252fef30b6eae83f380139aaa0a61483a8c783462428c96b87bb310a18f8d84c"
+  },
+  "client_latest_recorded_runtime": "partial; warehouse NPC visibility / clipped camera, QA exit 8",
+  "current_client_runtime_verified": false,
+  "rust_gameplay_ready": false,
+  "rust_existing_validation_scope": "Rust management/zone-worker foundation; not a complete Tantra game server",
+  "rust_start_stop_records_present": true,
+  "canonical_loose_asset_existence": {
+    "resource/object/Monster/Mesh/W_Monster1.tmb": false,
+    "resource/object/Monster/MonsterTex/W_Monster1.dds": false,
+    "resource/object/NPC/Mesh/NPC_mandara_trader_R.tmb": false
+  },
+  "previous_missing_skill_icon_count": 16,
+  "asset_archive_search_repeated": false,
+  "plan_sha256": "b2b92c7362e13ec3c30b96ed372e24ec73754b75c1855a8e1daa09c1d86a2e1b",
+  "excluded_claims": [
+    "no whole-project completion percentage",
+    "no fresh runtime or performance result",
+    "no complete original function census",
+    "no deployed data revision equivalence"
+  ]
+}

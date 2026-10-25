@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-25",
+  "scope": "Repository migration and CPU/build checks; gameplay goal stays paused",
+  "release_builds": {
+    "server": {
+      "configure": "cmake --preset windows-x64",
+      "build": "cmake --build build --config Release --parallel 4",
+      "result": "passed",
+      "artifacts": {
+        "TantraServerManager.exe": {
+          "bytes": 1940992,
+          "sha256": "9bb2889bb790a6271e01bf95cdc48936e8ecebd8aba9dd660be8f2c173276cc1"
+        },
+        "TantraZone.exe": {
+          "bytes": 2958336,
+          "sha256": "564da53b95537e08ecf8c4c90ae2f7f5a21d02f5b54b3010cc7402f1704fcc56"
+        },
+        "TantraService.exe": {
+          "bytes": 2308096,
+          "sha256": "b3af9fcde0181b84231c85fe95ab97ad0e147553cb5aa571d2862091e88bc2c7"
+        }
+      }
+    },
+    "client": {
+      "configure": "cmake -S _remake -B _remake/build-migration -A x64 -DOGRE_DIR=C:/_GitHub/TantraSrc/_remake/ogre-rts-install/CMake -DTANTRA_CLIENT_ROOT=C:/_GitHub/TantraSrc/TantraClient -DTANTRA_USE_SDL3=ON -DTANTRA_BUILD_OGRE_BACKEND=ON",
+      "build": "cmake --build _remake/build-migration --config Release --target tantra_remake final_client_assets --parallel 4",
+      "result": "passed",
+      "artifacts": {
+        "tantra_remake.exe": {
+          "bytes": 3341312,
+          "sha256": "c1033d4b8c2edfcd43f3e10e064ed3c3cceffe4a8478b2bd603399440e1bfca9"
+        },
+        "final_client_assets.exe": {
+          "bytes": 567296,
+          "sha256": "6a23e5595bfbdca6ef43492d00441971dfbed183d69f5ab605a386e30e9def5b"
+        }
+      }
+    }
+  },
+  "server_cpu": {
+    "command": "ctest --test-dir build -C Release -LE runtime --output-on-failure",
+    "passed": 69,
+    "failed": 0,
+    "seconds": 41.9
+  },
+  "syntax": {
+    "python_tools": 89,
+    "python_result": "passed",
+    "powershell_result": "passed"
+  },
+  "primary_documentation_links": "passed",
+  "staged_inventory": {
+    "_client": 1519,
+    "_server": 420,
+    "_remake": 407,
+    "_references": 540
+  },
+  "binary_storage": "Git LFS for binary asset datasets; no ordinary staged blob over 100 MiB",
+  "preservation": {
+    "source_files_checked": 3378,
+    "source_changes": [],
+    "source_head_unchanged": true,
+    "source_status_unchanged": true,
+    "reference_and_client_files_checked": 2053,
+    "import_changes": [],
+    "canonical_client_sha256": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34",
+    "original_private_save_sha256": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f"
+  },
+  "runtime_launched": false,
+  "limitations": [
+    "No gameplay acceptance or Debug acceptance was completed by migration.",
+    "The published _client executable is the previous preserved runtime; the fresh source build was not staged or launched.",
+    "Original asset/data/OGRE inputs remain external; see BUILD_AND_INPUTS.md."
+  ],
+  "logs": "Local configure/build/CTest logs remain in ignored .migration-local; this report records results and hashes."
+}

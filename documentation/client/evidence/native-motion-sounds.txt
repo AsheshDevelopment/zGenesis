@@ -1,0 +1,153 @@
+Read-only inspection; original DLLs are never executed.
+
+HT3DHeaven.dll SHA256=b818b89edbc9f8e49bb1b79200371740eaa157dabac23bbf1e2d52e40ff99941
+
+Skinned StartAnimation plays once immediately only for nonzero sound ID
+0x20025C6B: xor edi, edi
+0x20025C6D: cmp dword ptr [ebp + 0xc], edi
+0x20025C70: pop ebx
+0x20025C71: je 0x20025ca2
+0x20025C73: mov ecx, dword ptr [0x20078120]
+0x20025C79: mov eax, dword ptr [ecx]
+0x20025C7B: lea edx, [ebp - 0x10]
+0x20025C7E: push edx
+0x20025C7F: mov edx, dword ptr [esi + 8]
+0x20025C82: add edx, 4
+0x20025C85: push edx
+0x20025C86: call dword ptr [eax + 0x18c]
+0x20025C8C: mov ecx, dword ptr [0x20078120]
+0x20025C92: mov eax, dword ptr [ecx]
+0x20025C94: push edi
+0x20025C95: push edi
+0x20025C96: lea edx, [ebp - 0x10]
+0x20025C99: push edx
+0x20025C9A: push 1
+0x20025C9C: push dword ptr [ebp + 0xc]
+0x20025C9F: call dword ptr [eax + 0x74]
+
+ChangeAnimation first stops the owner's previous indefinite sound handle
+0x20023439: lea edi, [esi + 0x254]
+0x2002343F: mov eax, dword ptr [edi]
+0x20023441: test eax, eax
+0x20023443: jbe 0x20023454
+0x20023445: mov ecx, dword ptr [0x20078120]
+0x2002344B: mov edx, dword ptr [ecx]
+0x2002344D: push eax
+0x2002344E: call dword ptr [edx + 0x7c]
+0x20023451: and dword ptr [edi], 0
+
+Finite ChangeAnimation immediately forwards its loop count and camera-relative position
+0x20023454: cmp dword ptr [ebp + 0xc], 0
+0x20023458: je 0x200234b4
+0x2002345A: mov ecx, dword ptr [0x20078120]
+0x20023460: mov eax, dword ptr [ecx]
+0x20023462: lea edx, [ebp - 0xc]
+0x20023465: push edx
+0x20023466: mov edx, dword ptr [esi + 8]
+0x20023469: add edx, 4
+0x2002346C: push edx
+0x2002346D: call dword ptr [eax + 0x18c]
+0x20023473: cmp dword ptr [ebp + 0x10], -1
+0x20023477: jne 0x2002349b
+0x20023479: lea eax, [ebp - 0xc]
+0x2002347C: push eax
+0x2002347D: call 0x2000210c
+0x20023482: fcomp dword ptr [0x2012813c]
+0x20023488: pop ecx
+0x20023489: fnstsw ax
+0x2002348B: test ah, 5
+0x2002348E: jp 0x200234b4
+0x20023490: push 0
+0x20023492: push edi
+0x20023493: lea edx, [ebp - 0xc]
+0x20023496: push edx
+0x20023497: push 0
+0x20023499: jmp 0x200234a6
+0x2002349B: push 0
+0x2002349D: push 0
+0x2002349F: lea edx, [ebp - 0xc]
+0x200234A2: push edx
+0x200234A3: push dword ptr [ebp + 0x10]
+0x200234A6: mov ecx, dword ptr [0x20078120]
+0x200234AC: push dword ptr [ebp + 0xc]
+0x200234AF: mov eax, dword ptr [ecx]
+0x200234B1: call dword ptr [eax + 0x74]
+
+Offset subtracts listener position before inverse camera rotation
+0x20002872: mov eax, dword ptr [ebp + 8]
+0x20002875: fld dword ptr [eax]
+0x20002877: lea esi, [ebp - 0x28]
+0x2000287A: fsub dword ptr [ebp - 0x1c]
+0x2000287D: lea edi, [ebp - 0x10]
+0x20002880: fstp dword ptr [ebp - 0x28]
+0x20002883: fld dword ptr [eax + 4]
+0x20002886: fsub dword ptr [ebp - 0x18]
+0x20002889: fstp dword ptr [ebp - 0x24]
+0x2000288C: fld dword ptr [eax + 8]
+0x2000288F: lea eax, [ebp - 0x68]
+0x20002892: fsub dword ptr [ebp - 0x14]
+0x20002895: push eax
+0x20002896: lea eax, [ebp - 0x10]
+0x20002899: push eax
+0x2000289A: fstp dword ptr [ebp - 0x20]
+0x2000289D: movsd dword ptr es:[edi], dword ptr [esi]
+0x2000289E: movsd dword ptr es:[edi], dword ptr [esi]
+0x2000289F: lea eax, [ebp - 0x10]
+0x200028A2: push eax
+0x200028A3: movsd dword ptr es:[edi], dword ptr [esi]
+0x200028A4: call 0x2003fd2d
+0x200028A9: mov edi, dword ptr [ebp + 0xc]
+0x200028AC: lea esi, [ebp - 0x10]
+0x200028AF: movsd dword ptr es:[edi], dword ptr [esi]
+0x200028B0: movsd dword ptr es:[edi], dword ptr [esi]
+0x200028B1: movsd dword ptr es:[edi], dword ptr [esi]
+0x200028B2: xor eax, eax
+0x200028B4: pop edi
+
+HTSound.dll SHA256=ced708ab4674a7fded2849df219fd98f1e46c910939e895f4c33c357b52db820
+Import 0x4000C188: _AIL_set_3D_sample_distances@12
+Import 0x4000C18C: _AIL_set_3D_sample_volume@8
+Import 0x4000C190: _AIL_set_3D_sample_loop_count@8
+Import 0x4000C194: _AIL_set_3D_position@16
+Import 0x4000C198: _AIL_start_3D_sample@4
+
+Resource default maximum distance is 200
+0x4000167B: mov dword ptr [esi + 0x428], 0x43480000
+
+3D sample setup forwards minimum 20, resource maximum, volume, loops and position then starts
+0x40001584: mov ecx, dword ptr [edi + 0x428]
+0x4000158A: push 0x41a00000
+0x4000158F: push ecx
+0x40001590: push esi
+0x40001591: call dword ptr [0x4000c188]
+0x40001597: mov edx, dword ptr [esp + 0x14]
+0x4000159B: push edx
+0x4000159C: push esi
+0x4000159D: call dword ptr [0x4000c18c]
+0x400015A3: mov eax, dword ptr [esp + 0x10]
+0x400015A7: push eax
+0x400015A8: push esi
+0x400015A9: call dword ptr [0x4000c190]
+0x400015AF: mov eax, dword ptr [esp + 0x18]
+0x400015B3: mov ecx, dword ptr [eax + 8]
+0x400015B6: mov edx, dword ptr [eax + 4]
+0x400015B9: mov eax, dword ptr [eax]
+0x400015BB: push ecx
+0x400015BC: push edx
+0x400015BD: push eax
+0x400015BE: push esi
+0x400015BF: call dword ptr [0x4000c194]
+0x400015C5: push esi
+0x400015C6: call dword ptr [0x4000c198]
+0x400015CC: pop edi
+0x400015CD: xor eax, eax
+0x400015CF: pop esi
+
+Manager default stream/sample volumes are 0.5
+0x4000330A: mov eax, 0x3f000000
+0x4000330F: mov dword ptr [esi + 0x41dc], eax
+0x40003315: mov dword ptr [esi + 0x41e0], eax
+
+Launcher source: HTEngineHandler.cpp 4121-4182 initializes all monster StartAnimation sound IDs to zero. Ordinary ChangeAnimation uses Monster.fx -> FXMon and HT_dwGetMonsterSoundID (13103 onward); ATK2 consumes rand()%2 when attack sound 2 is nonzero. ChangeMonsterAttackAnimation (12022 onward) always consumes rand()%2. Sound selection occurs before the model animation call, and native sample play is immediate within that call, not delayed to an animation key or blend promotion.
+
+The x64 adapter preserves selected finite request semantics, original archive/IDs and spatial parameter inputs. SDL3 decodes the original IMA ADPCM WAVs and DirectSound3D processes spatial output. This does not establish Miles decoder, rolloff, reverb, volume, latency or acoustic bit parity, or all infinite/moving sample behavior.

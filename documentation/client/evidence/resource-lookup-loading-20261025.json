@@ -1,0 +1,120 @@
+{
+  "recorded_utc": "2026-10-24T23:51:41.517578+00:00",
+  "scope": "Repair loading after character selection; broader goal remains paused",
+  "reported_run": {
+    "observed_pid": 17848,
+    "path": "C:/_GitHub/TantraSrc/_client/HTLauncher.exe",
+    "deployed_sha256": "3ebc43ae3569b554f246cfe394451716edad592ab70ffb0e3d9adf5d26b5056d",
+    "journal": "Initial monster uploads continued with roughly 2-3 seconds between BEGIN/END timestamps",
+    "stack": "Attach failed with Win32 error 87 after the process ended; no valid live stack"
+  },
+  "fix": [
+    "Exact resource lookup first, cached case-insensitive fallback per root set",
+    "Indexed archive merging preserving prior ordering and metadata precedence",
+    "Root addition/shutdown invalidate fallback index",
+    "Actor upload END journal includes elapsed_ms"
+  ],
+  "catalog_sample": {
+    "scope": "One local CPU namespace sample on deployed root; not game loading or FPS",
+    "files_before": 12394,
+    "files_after": 12394,
+    "ordered_names_fnv64_before": 22220098663267164,
+    "ordered_names_fnv64_after": 22220098663267164,
+    "list_us_before": 99837,
+    "list_us_after": 6713,
+    "info_us_before": 111962,
+    "info_us_after": 10882,
+    "repeated_misses": 51,
+    "fallback_enumerations": 1
+  },
+  "cpu": {
+    "native_resource_lookup": {
+      "passed": true,
+      "checks": 39251,
+      "files": 12396,
+      "root": "canonical client",
+      "graphics_device": false
+    },
+    "world_actor_loading": {
+      "passed": true,
+      "checks": 167
+    },
+    "native_main_camera_source_order": {
+      "passed": true,
+      "cases": 1440
+    },
+    "native_hpk_runtime": {
+      "passed": true,
+      "archives": 148,
+      "entries": 12379,
+      "sampled_payloads": 293,
+      "ui_images": 142,
+      "wav_decodes": 53,
+      "mandara_payloads": 723,
+      "models": 323,
+      "alpha_textures": 40,
+      "graphics_device": false,
+      "audio_device": false
+    }
+  },
+  "release": {
+    "configuration": "Release x64",
+    "sha256": "93557e0c86ec2fe57e26059c636fb98c016e44c9f813cfb562e667008785da70",
+    "bytes": 3494912,
+    "outputs": [
+      "C:/_GitHub/tantra-dev-main/_client",
+      "C:/_GitHub/TantraSrc/_client"
+    ],
+    "build_stage_bytes_equal": true,
+    "files": 1629,
+    "manifest_bytes": 676139866,
+    "closure_files": 2462,
+    "static_checks": "passed for both outputs --skip-runtime",
+    "new_game_or_renderer_started": false
+  },
+  "legacy_output_preservation": {
+    "userdata_files": 44,
+    "packs": 148,
+    "all_unchanged": true,
+    "launcher_sha256": "93557e0c86ec2fe57e26059c636fb98c016e44c9f813cfb562e667008785da70"
+  },
+  "unfinished_item_work": {
+    "state": "shelved, not deployed",
+    "files_preserved": 11,
+    "location": ".migration-local/item-feedback-wip-20261025",
+    "restore_check": "git apply --ignore-whitespace --check passed",
+    "pending": "Resolve failing item-7001 TPA serialization/layout check before resuming"
+  },
+  "remaining": [
+    "Current-build offline loading/movement/camera acceptance",
+    "Actual frame-time/upload/loading measurements",
+    "Remaining Mandara services route and full client plan"
+  ],
+  "logs": {
+    ".migration-local/resource-lookup-baseline.log": {
+      "sha256": "83cd7947fef395fb93a18e4eec29083e338d9512d28be9b133941a0b613a448d"
+    },
+    ".migration-local/resource-lookup-fixed.log": {
+      "sha256": "bb99709dffa3f7fb59b727ef055a0e39480e3fa1e9013a0507b2a2f01f60e0b5"
+    },
+    ".migration-local/loading-fix-cpu.log": {
+      "sha256": "fa002b68e6b878b55be92ced4e4acd90fad0c3403fe212a18ff2c0d310839c79"
+    },
+    ".migration-local/loading-fix-hpk.log": {
+      "sha256": "72fa2ae486b649361f000d0529fd1cd3044e84d176c1024b3b6cbc91ab5dace9"
+    },
+    ".migration-local/loading-fix-client-build.log": {
+      "sha256": "a7488b2fc4f2bf49eda2964d631a51ffdfddf7493e42dad13f1b462b0ef48832"
+    },
+    ".migration-local/loading-fix-legacy-stage.log": {
+      "sha256": "d2d721e76a37e2240d4dce2c0e3b809318f73eeaaff6feecccfcc890dd6f5322"
+    },
+    ".migration-local/loading-fix-static.log": {
+      "sha256": "0b28a8f07bd2f787bed132c537b5b674348831cf86208842bb419b88f5b7ef8f"
+    },
+    ".migration-local/loading-fix-legacy-static.log": {
+      "sha256": "0b28a8f07bd2f787bed132c537b5b674348831cf86208842bb419b88f5b7ef8f"
+    }
+  },
+  "git_state": "Changes local and uncommitted"
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-25",
+  "implementation": "active native player hotkey routes; service-dependent actions retain offline limits",
+  "build": "Release x64",
+  "sha256": "5bf2220245eb77c1dd2e9bbfa8c435b9e7774e1caaebdb720ad509bbb74d3551",
+  "outputs": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "launcher_sha256": "5bf2220245eb77c1dd2e9bbfa8c435b9e7774e1caaebdb720ad509bbb74d3551",
+      "userdata_unchanged": 0,
+      "hpk_unchanged": 148
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "launcher_sha256": "5bf2220245eb77c1dd2e9bbfa8c435b9e7774e1caaebdb720ad509bbb74d3551",
+      "userdata_unchanged": 44,
+      "hpk_unchanged": 148
+    }
+  },
+  "files_per_output": 1709,
+  "bytes_per_output": 703563531,
+  "cpu": {
+    "native_world_hotkeys_checks": 424,
+    "native_ui_checks": 681,
+    "panels": 31,
+    "textures": 119,
+    "gameplay": "passed; keyboard speed/collision/release, sit/stand states, animation lock and existing gameplay regressions"
+  },
+  "runtime": "no game, renderer or audio device launched",
+  "git": "local uncommitted changes",
+  "broader_goal": "paused; acceptance gates unchanged",
+  "remaining": [
+    "visual input/IME acceptance",
+    "multiplayer delivery and party actors",
+    "full minimap overlay/art and native speech rendering",
+    "disabled broadcast/developer services"
+  ]
+}

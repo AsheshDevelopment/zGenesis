@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-26",
+  "status": "built_staged_runtime_visual_acceptance_pending",
+  "installed": [
+    {
+      "root": "C:\\_GitHub\\tantra-dev-main\\_client",
+      "executable_sha256": "f61624a25631b4fb94a7c7a3975b3d7d527cf618ba66738613b6c7995ac10a4c",
+      "protected_files_unchanged": 148,
+      "hpk_files_unchanged": 148,
+      "package_static_verified": true
+    },
+    {
+      "root": "C:\\_GitHub\\TantraSrc\\_client",
+      "executable_sha256": "f61624a25631b4fb94a7c7a3975b3d7d527cf618ba66738613b6c7995ac10a4c",
+      "protected_files_unchanged": 197,
+      "hpk_files_unchanged": 148,
+      "package_static_verified": true
+    }
+  ],
+  "projection": {
+    "terrain": "native THM triangles, source 20-unit grid and b-c diagonal",
+    "object_floor": "native TCC floor where available",
+    "height_offset_source_units": 0.15,
+    "depth_test": true,
+    "texture_uv": "continuous original authored sprite footprint",
+    "maximum_terrain_cells": 1024,
+    "cache": "per node footprint, invalidated by animated size/position or group replacement"
+  },
+  "cpu_scene_checks": 11054,
+  "cpu_cases": [
+    "ridges",
+    "slopes",
+    "native grid diagonals",
+    "map boundaries",
+    "footprint area",
+    "UV limits",
+    "actual Mandara FX path"
+  ],
+  "game_launched": false,
+  "renderer_launched": false,
+  "audio_device_started": false,
+  "commit_created": false,
+  "push_performed": false,
+  "limitations": [
+    "Visual acceptance on the reported slope is pending.",
+    "Not a general projector onto arbitrary placed-model triangle surfaces or discontinuous stair faces."
+  ],
+  "logs": "C:\\_GitHub\\tantra-dev-main\\.migration-local\\terrain-ground-decal-20261026"
+}

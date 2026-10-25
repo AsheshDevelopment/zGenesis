@@ -1,0 +1,90 @@
+{
+  "executable_sha256": "a7e9c23edff75ecbd06b9ab19c09c7fd78cc45196f0b03a0fa81c0a5dbab9535",
+  "runtime_processes": 1,
+  "scenario": "create",
+  "offline": true,
+  "world_group": 1,
+  "mandara_route": 1,
+  "client_exit_code": 0,
+  "runtime_verified": true,
+  "error_diagnostics": 0,
+  "wrapper_result": "Failed after successful client exit at obsolete schema 3 assertion; corrected to schema 4 without rerun; later database assertions unverified",
+  "captures": [
+    {
+      "file": "create-create.png",
+      "sha256": "0121844026b054054f4603bb3b8101aecd6b90a7a6e518967af17668e3c5b973"
+    },
+    {
+      "file": "create-dialog-204.png",
+      "sha256": "279f08e8cc9f104c1b77a8e98145912a1b7de77c3d42d7e20bfb7a4df532d05a"
+    },
+    {
+      "file": "create-dialog-212.png",
+      "sha256": "327e23a500d95dbf15a976691634b3789bbae205070c942d3b7ba4eba508e53b"
+    },
+    {
+      "file": "create-dialog-213.png",
+      "sha256": "9f0f0095a562f3da7e8fd77356a73a7f4e37d55cf7ffb659350eccc8636433d6"
+    },
+    {
+      "file": "create-dialog-235.png",
+      "sha256": "460b40f9de180c32e894c48ad2f7ba0759686d76af89958460394aedc23fba17"
+    },
+    {
+      "file": "create-dialog-237.png",
+      "sha256": "d68d663f0cf46308fe0f9ea91b1d43980e30f7bb9cb9e52958e9b38e3c42cddc"
+    },
+    {
+      "file": "create-dialog-238.png",
+      "sha256": "024a828e12702779fd48896815f7a7ff36a333b0ed9651430a695cde571db483"
+    },
+    {
+      "file": "create-dialog-239.png",
+      "sha256": "c640d8d8d719f9b3201896e00cff507d4e5b76eb0502b7ea6b1aad7527e5cefc"
+    },
+    {
+      "file": "create-dialog-dragged.png",
+      "sha256": "134e658cff9089a9be719d548ca06fbc9fd25dceb6a4331b2eee4bd2f330b452"
+    },
+    {
+      "file": "create-hud-compact.png",
+      "sha256": "b0babc8c5481ba4a37c2b8628a69d358fc9148130c74932a4fefdf2536738a83"
+    },
+    {
+      "file": "create-hud-restored.png",
+      "sha256": "cfb7fa0330d20941e888127c703cdbe6e66072c55252bf00dc101a5db226730b"
+    },
+    {
+      "file": "create-info.png",
+      "sha256": "e7fbf8ab57b4f11bc67c049b80eed7f45edc837629a4564126ce53cd67906e75"
+    },
+    {
+      "file": "create-inventory-moved.png",
+      "sha256": "a4e82797aad23e048b082a750ad3349fbe3c6fcbc956fbf95dc6a9ebe0939b87"
+    },
+    {
+      "file": "create-mandara.png",
+      "sha256": "8322f1ccde15f5b0beb9cb93d779c2485a263fec58d18b0d4bcd78296288d6fc"
+    },
+    {
+      "file": "create-mandara1st-world.png",
+      "sha256": "5941da07ee7a03b3ebad8865943c85366b2bc1bada91f2bdb720a7cb8ddba2b9"
+    },
+    {
+      "file": "create-native-loading.png",
+      "sha256": "6992ba3712fc76eb6eb015e073986dd87f5e6d0a42df81c1db876994c4475a22"
+    },
+    {
+      "file": "create-select.png",
+      "sha256": "59ca54276b4cae41874389abc5f622c2d832eb0cb48dec508b09c15c10eda1e3"
+    },
+    {
+      "file": "create-weapon-equipped.png",
+      "sha256": "97e6443fedb5cbaf20f99b7028003a372450ecac75da95011c6dc4fa766f75e8"
+    },
+    {
+      "file": "create-world-walked.png",
+      "sha256": "a35b1802290c1f4c19e83aeef80592437831b0cb5ca73f6aff7ba14519672c52"
+    }
+  ]
+}

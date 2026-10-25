@@ -1,0 +1,111 @@
+{
+  "checked_at": "2026-10-23T19:01:21.494262+00:00",
+  "component": "Native PC appearance, grid routing, bounded queues and actor retries",
+  "all_six_goal_areas_complete": false,
+  "game_ready": false,
+  "game_client_launched": false,
+  "cpu_tests_passed": 3,
+  "native_appearance_cases": 8,
+  "native_grid_cases": 14,
+  "fixture_sha256": "95cda2a6771482406471658805c22ad2f486d3f1578630ab93711ab2bb88262d",
+  "native_source_sha256": {
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\Basedef.h": "06d0028f615afcc34c0f8aa18d9dfe8af5c9a748ca5144b01dff8d8d0941ed22",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\GetFunc.cpp": "eae98b7130fef718777ef716746b1916280a7a4a97eeb730efdc0f1ee2537cad",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\SendFunc.cpp": "1db3811218dfafd279df8ce67742df816745a67298e0c50147d2d71a04a501d2",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\Basedef.cpp": "9f245bc03104e868189065d272b93ca9b9669827b93829dcffc6ec6e7074d0ce",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\CMob.cpp": "3421c51069c245603784168aa8ea2c276798d480b9749d8e9124734ad0715a46",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\server.cpp": "6639ca68a1e18c121e1e8a60fd2c7bbdd8f07b1d73540f645509e58ad9b6da7a"
+  },
+  "socket_acceptance_path": "C:\\_GitHub\\TantraSrc\\_server\\test-output\\native-actors-1792781924-43688\\acceptance.json",
+  "socket_acceptance": {
+    "channel": 1,
+    "game_client_launched": false,
+    "game_ready": false,
+    "logical_tcp_peers": 2,
+    "moved_cell": [
+      492,
+      180
+    ],
+    "movement_header_tick_preserved": true,
+    "native_actor_retry": "passed",
+    "native_chakra_owner_ui": "passed",
+    "native_disconnect_remove": "passed",
+    "native_nearby_status": "CPU routing verified; no native event emitted on this TCP route",
+    "native_pc_create": "passed",
+    "native_peer_movement": "passed",
+    "persisted_revision": 4,
+    "service_binary_sha256": "5e6f84b700d940ef671cf9240a3a7aede001c17515fc98abceccd44d04c4a9e8",
+    "sessions_after_exit": 0,
+    "source_dataset_unchanged": true,
+    "spawn_cells": [
+      [
+        490,
+        180
+      ],
+      [
+        491,
+        180
+      ]
+    ],
+    "stale_actor_retry_remove": "passed",
+    "zone_binary_sha256": "a8a457c8a8a8a712d7767102439bff410511ffb5532f8e444c79a9500d8bdcfc",
+    "zone_owners_after_exit": 0,
+    "zone_pid": 23228,
+    "zone_processes": 1
+  },
+  "failed_capture_retained": "C:\\_GitHub\\TantraSrc\\_server\\test-output\\native-actors-1792781826-14880",
+  "failed_capture_cause": "Harness incorrectly awaited a Chakra nearby-status event; selected native IncChakra emits owner UI only. Corrected before next headless run.",
+  "binaries_current": [
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-server-manager.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "7c8c346e60fa727b34cc436411ab4a147c7ef5ea88d9567d9eb2fe991775aa06"
+    },
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-zone.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "9450f8b9eb642c30e445e5679dde30f667c16a69d64981976226f1dd8c31b12d"
+    },
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-service.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "0ea8869133af9555090490bc97f7ec5ea662e6aa0f16cf9d1b6707cc49ec2785"
+    }
+  ],
+  "binaries_exact_socket_tested": {
+    "tantra-zone.exe": "a8a457c8a8a8a712d7767102439bff410511ffb5532f8e444c79a9500d8bdcfc",
+    "tantra-service.exe": "5e6f84b700d940ef671cf9240a3a7aede001c17515fc98abceccd44d04c4a9e8"
+  },
+  "socket_test_matches_current_artifact_bytes": false,
+  "post_socket_change": "Equivalent spiral stop comparison changed from len >= 2*half+1 to len > 2*half for Clippy; CPU source parity rerun, all binaries rebuilt. Socket route not repeated.",
+  "client_files_unchanged": {
+    "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34",
+    "C:\\_GitHub\\TantraSrc\\_client\\userdata\\offline\\tantra.sqlite3": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f"
+  },
+  "checks": {
+    "cpu_parity": "passed",
+    "socket_route": "passed before equivalent lint expression cleanup",
+    "clippy_all_targets": "passed",
+    "workspace_build": "passed",
+    "staged_bin_matches_target": "passed",
+    "client_profile_and_launcher_hashes": "unchanged"
+  },
+  "logs": [
+    "target/actor-tests.log",
+    "target/actor-socket-test.log",
+    "target/actor-socket-test-corrected.log",
+    "target/actor-clippy.log",
+    "target/actor-server-build.log"
+  ],
+  "pending": [
+    "NPC/monster generation and actor simulation",
+    "Active skills/combat/loot",
+    "Quests/refinement/advanced NPC services",
+    "Live travel/resurrection",
+    "Chat/party/trade/guild/PvP/events",
+    "Online frontend and remaining INTRO/collision/environment/loading acceptance"
+  ]
+}

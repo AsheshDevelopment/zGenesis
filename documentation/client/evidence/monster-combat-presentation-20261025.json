@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-25",
+  "scope": "Monster animation dispatch, native mode-2 attack particles/audio and full-animation movement locking",
+  "launcher_sha256": "e67b591ace75b9fb8fdfa6cce545e8ee036d3c3e21fd000cb0e428d932ec2a4e",
+  "configuration": "Release x64 OGRE SDL3",
+  "outputs": [
+    "C:\\_GitHub\\tantra-dev-main\\_client",
+    "C:\\_GitHub\\TantraSrc\\_client"
+  ],
+  "staged_files_each": 1699,
+  "staged_bytes_each": 678220404,
+  "dependency_closure_files": 2537,
+  "preservation": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "launcher_sha256": "e67b591ace75b9fb8fdfa6cce545e8ee036d3c3e21fd000cb0e428d932ec2a4e",
+      "packs_unchanged": 148,
+      "userdata_unchanged": 0
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "launcher_sha256": "e67b591ace75b9fb8fdfa6cce545e8ee036d3c3e21fd000cb0e428d932ec2a4e",
+      "packs_unchanged": 148,
+      "userdata_unchanged": 44
+    }
+  },
+  "cpu": {
+    "combat_checks": 4283,
+    "nonempty_pc_fx_bindings": 905,
+    "weapon_profiles": 13,
+    "particle_draws_created_and_released": 26,
+    "submitted_sprites": 18273,
+    "fx_wav_requests_decoded": 13,
+    "distinct_player_attack_samples_decoded": 24,
+    "actual_monster_2008_clips_sampled": 8,
+    "actor_checks": 195,
+    "map_skill_override": "passed",
+    "missing_idle_fallback": "passed",
+    "state_revision_collision": "passed",
+    "ground_movement_lock": "passed",
+    "skill_stop_gate": "passed",
+    "intro_native_particle_math": "passed",
+    "intro_type8_catalog_regression": "passed",
+    "staged_combat_fixture": "passed"
+  },
+  "population_audit": {
+    "result": "failed_known_missing_catalog",
+    "models_sampled": 39,
+    "animation_bindings_sampled": 227,
+    "missing_monster": 2718
+  },
+  "static_verification": "passed_both_outputs_original_layout_x64_imports_icon",
+  "renderer": "CPU double only",
+  "audio": "WAV decoding only; no audio device opened",
+  "new_game_renderer_server_launches": 0,
+  "committed": false,
+  "broader_goal": "paused",
+  "full_plan_completed_tasks": 45,
+  "full_plan_tasks": 102,
+  "native_engine_evidence": {
+    "file": "C:\\_GitHub\\TantraSrc\\TantraClient\\HT3DHeaven.dll",
+    "sha256": "b818b89edbc9f8e49bb1b79200371740eaa157dabac23bbf1e2d52e40ff99941",
+    "execution": "not executed; read-only disassembly checked by inspect-native-particles.py"
+  },
+  "remaining": [
+    "Monster 2718 catalog/assets",
+    "Billboard layers in five normal-hit effects",
+    "Other particle modes and rotations; model/light/jitter nodes",
+    "Per-FX sound range/gain and complete skill/projectile/attachment lifecycle",
+    "Fuller source-backed patrol/AI decisions",
+    "Rendered and audible acceptance"
+  ],
+  "basic_damage_timing": "Existing offline authority timing retained; this change defers visual basic-hit feedback to its animation marker.",
+  "movement_policy": "Full-animation lock requested by the user, deliberately stricter than native early-cast cancellation paths.",
+  "logs": [
+    ".migration-local/combat-final-build.log",
+    ".migration-local/combat-final-cpu.log",
+    ".migration-local/combat-cpu.log",
+    ".migration-local/combat-population-cpu.log",
+    ".migration-local/combat-staged-cpu.log",
+    ".migration-local/combat-final-static.log",
+    ".migration-local/combat-legacy-static.log",
+    ".migration-local/combat-presentation-20261025/preservation.json"
+  ]
+}

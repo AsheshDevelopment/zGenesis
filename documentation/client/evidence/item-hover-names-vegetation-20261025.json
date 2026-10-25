@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-25",
+  "build": "Release x64 OGRE Classic 14.6.1 D3D11 SDL3",
+  "sha256": "adfcb556265452d5093fad5d3ab97f901738b695819cce1811b5dd617be413b9",
+  "outputs": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "launcher_sha256": "adfcb556265452d5093fad5d3ab97f901738b695819cce1811b5dd617be413b9",
+      "hpk_unchanged": 148,
+      "userdata_unchanged": 0
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "launcher_sha256": "adfcb556265452d5093fad5d3ab97f901738b695819cce1811b5dd617be413b9",
+      "hpk_unchanged": 148,
+      "userdata_unchanged": 44
+    }
+  },
+  "files_per_output": 1731,
+  "bytes_per_output": 704298945,
+  "cpu": {
+    "tooltip_and_world_presentation_checks": 5829,
+    "native_world_presentation": "passed after correcting missing plain-damage message route",
+    "world_texture_alpha": "passed",
+    "native_main_ui_interaction": "passed"
+  },
+  "implemented": [
+    "item-slot tooltip lifecycle and core native TPA/message composition",
+    "player model-height +3 and compact name canvas",
+    "NPC +25/yellow and monster height +5/white",
+    "native orange dialogue label RGB and resize retention",
+    "depth-writing static vegetation cutout policy"
+  ],
+  "limits": [
+    "refined/sub-refined/contextual effect tooltip parity incomplete; supported effect numbers are base TPA values",
+    "ground-item/complete skill/control tooltips separate",
+    "pixels and performance unverified"
+  ],
+  "runtime": "no game/renderer/server/audio-device process launched",
+  "broader_goal": "paused; no visual acceptance gate closed",
+  "git": "no commit/push requested",
+  "local_logs": "C:\\_GitHub\\tantra-dev-main\\.migration-local\\hover-labels-20261025",
+  "static_package": "Both outputs passed: 1731 files, x64, imports resolved, original layout, exact nine-frame icon; runtime skipped."
+}

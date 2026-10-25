@@ -1,0 +1,100 @@
+{
+  "checked_at": "2026-10-23T19:16:12.553267+00:00",
+  "component": "Native generator data, reservation/schedule, influence and free-cell placement",
+  "all_goal_areas_complete": false,
+  "npc_actor_simulation_ready": false,
+  "source_profile": "authored Global; not a claim of deployed server table parity",
+  "raw_source_xml": {
+    "path": "B:\\__TANTRA\\TantraDataScripts\\Global\\TantraParam.xml",
+    "sha256": "1295cbfe56eda35218a7d7d707ec81021ac975e462da6112543882cabb0164e5",
+    "unchanged": true
+  },
+  "raw_settings_xml": {
+    "source": "B:\\__TANTRA\\TantraDataScripts\\Global\\HTSSetting-global.xml",
+    "sha256": "fb4a4fd6510b3ca8030f1f7d552f893185b13bdf736091a9ac4c20641f5f98dd"
+  },
+  "imported_monster_rows": 1087,
+  "monster_columns": 92,
+  "staged_files": {
+    "Monster.tsv": "b56112fc8a0ca6343938992226ede8728d6d2c90807de88db34d5b4edac26185",
+    "PROVENANCE.json": "062ee2903cd1e35fc801ced4f74b639b05f4f13309f77e1d48b88de05763ea94"
+  },
+  "runtime_cli_summary": {
+    "generators": 508,
+    "influence_fingerprint": 472219098147025299,
+    "native_templates": 964,
+    "next_free_handle": 2719,
+    "npc_actor_simulation_ready": false,
+    "reserved_monsters": 1702
+  },
+  "cpu_tests_passed": 4,
+  "native_generator_records": 508,
+  "native_candidate_queries": 9,
+  "native_placement_cases": 20,
+  "native_detect_offsets": 440,
+  "native_source_unchanged": {
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\CNPCGene.cpp": "17b775a730c6636579feb1dc9238af13cd6d13cfb62a8f5c2129a42618188b3d",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\CNPCGene.h": "3c16d6df40b3f4dac58730d229a61ffc21768a3ecac0019a5ecfbd4c19024463",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\server.cpp": "6639ca68a1e18c121e1e8a60fd2c7bbdd8f07b1d73540f645509e58ad9b6da7a",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\TNInfluenceMap.cpp": "324aa845b8cc064ee7bfb813c3fa5e9b2433c37942a3840becb47c24bf43eb26",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\GetFunc.cpp": "eae98b7130fef718777ef716746b1916280a7a4a97eeb730efdc0f1ee2537cad",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\Basedef.cpp": "9f245bc03104e868189065d272b93ca9b9669827b93829dcffc6ec6e7074d0ce"
+  },
+  "fixture_sha256": "b0a83063310d4ce95ede7601384e5a887bac14572927eec5a4e5cef47800b4ee",
+  "reference_scope": "Actual CNPC parser/verification/rebuild/registration, native timer loop, influence functions, PickFreeMobGrid and offset array. ReadMob valid-ID shim isolates data parsing; NPC Init/skills/AI and RNG not represented as verified.",
+  "client_files_unchanged": {
+    "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34",
+    "C:\\_GitHub\\TantraSrc\\_client\\userdata\\offline\\tantra.sqlite3": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f"
+  },
+  "default_client_import_regression": {
+    "tables": 6,
+    "comparison": "byte identical to existing _remake/derived-assets/world-gameplay payloads",
+    "log": "target/population-default-import.log"
+  },
+  "binaries_current": [
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-server-manager.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "c3b6443e82226cb0933125b1fee998845867284d95daa8c76ac53f0358958fcd"
+    },
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-zone.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "866cd591cb00185903942b09aa6ba52266460eb03e81c5518e0be59dba0a8752"
+    },
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-service.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "9b9eb4d79a63fe123a9a5465c4bf0733a85de596cbe73fce8b6520193f114591"
+    }
+  ],
+  "checks": {
+    "unit_offset_test": "passed (1)",
+    "population_integration_cpu_tests": "passed (3)",
+    "packaged_import_stage_validate": "passed",
+    "workspace_debug_x64_build": "passed",
+    "clippy_services_all_targets": "passed",
+    "powershell_syntax": "passed",
+    "formatting": "passed"
+  },
+  "zone_processes_started": 0,
+  "game_client_launched": false,
+  "socket_acceptance_rerun": false,
+  "pending": [
+    "Native NPC Init/LoadSkills/Pop callbacks and RNG parity",
+    "Zone-owned population clock and actor publication",
+    "Monster AI/combat/death/respawn/loot",
+    "Other open items in IMPLEMENTATION_PROGRESS.md"
+  ],
+  "logs": [
+    "target/population-tests.log",
+    "target/population-integration-tests.log",
+    "target/population-clippy.log",
+    "target/population-build.log",
+    "target/population-staging.log",
+    "target/population-default-import.log"
+  ]
+}

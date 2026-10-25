@@ -1,0 +1,134 @@
+{
+  "checked_at": "2026-10-24T13:40:41.967535+00:00",
+  "whole_plan_complete": false,
+  "game_ready": false,
+  "cpu_only": true,
+  "worker_processes_started": 0,
+  "cpu_checks": {
+    "npc-threat-release-all-cpu.log": {
+      "sha256": "13c8797268b7393326bf07fc613dab35ee6e5b25bd629d4a2d56ddbaeaa344ba",
+      "passed": [
+        "core",
+        "store_credentials",
+        "store_transactions",
+        "store_ownership",
+        "store_recovery",
+        "store_migration",
+        "store_backup",
+        "store_restore",
+        "login_cpu",
+        "native_probability",
+        "native_status",
+        "native_npc_initialization",
+        "npc_threat_memory",
+        "npc_threat_lifecycle",
+        "npc_threat_under_attack",
+        "npc_threat_groups",
+        "npc_threat_ai_order",
+        "npc_navigation",
+        "npc_detection",
+        "npc_motion",
+        "npc_owner",
+        "npc_service_rules",
+        "npc_service_authority",
+        "inventory_rules",
+        "inventory_session",
+        "inventory_authority",
+        "world_map",
+        "world_movement",
+        "world_actors",
+        "native_ai_dispatch",
+        "population_parser",
+        "population_spatial",
+        "population_routes",
+        "population_prepare",
+        "population_generation",
+        "population_propagated",
+        "world_entry_codec",
+        "world_entry_authority"
+      ]
+    },
+    "npc-threat-debug-cpu.log": {
+      "sha256": "37c62704e2c01419c8f7facd33e85e8d6c2175974462dc16ddcc7f0b852760e4",
+      "passed": [
+        "npc_threat_memory",
+        "npc_threat_lifecycle",
+        "npc_threat_under_attack",
+        "npc_threat_groups",
+        "npc_threat_ai_order",
+        "native_ai_dispatch",
+        "population_generation",
+        "world_entry_authority"
+      ]
+    }
+  },
+  "direct_source_functions": [
+    "IsDead",
+    "OnUnderAttack",
+    "MemorizeAttacker",
+    "ForgetAttacker",
+    "ClearAttacker",
+    "SortAttackers",
+    "get_Attacker",
+    "ClearAggressiveScore",
+    "CallOthers"
+  ],
+  "native_source_hashes": {
+    "CMob.cpp": "3421c51069c245603784168aa8ea2c276798d480b9749d8e9124734ad0715a46",
+    "CMob.h": "2d6636489974ecc188eeed5426ccea8eabd6c065ae3961214846dff9a2be9b83",
+    "Basedef.h": "06d0028f615afcc34c0f8aa18d9dfe8af5c9a748ca5144b01dff8d8d0941ed22"
+  },
+  "generated_sha256": "d4e3fd33a8f71d6ab152371bdb7b5c9a3ce49caff0c58dbc8382f85c521db958",
+  "owned_sources": {
+    "include/tantra/npc_threat.h": "e2e1fc84a0472da97eac0309dfb7f427b22357869bff372e7bb072789a5921ad",
+    "src/zone/npc_threat.cpp": "c31eed751c5881ee82f19751a9385d482797ae340c52a04b9c8a785f46bae7cb",
+    "include/tantra/population.h": "9e0fb289f753a43d07d1fedfbf30d80be4b1aaefcdfb5ee2c28a61837a6559c5",
+    "src/zone/population.cpp": "4e59a3c486987a9187d416063a5ab0e1950f0933dbd474eb4e88df00811e4fa1",
+    "tests/npc_threat_tests.cpp": "a31f4717f98d1642193c253b1ea28d09b5b0707571d1edeaa82ec85b0a4dde97",
+    "tests/population_tests.cpp": "e68e69f6ee2022e8cb4874372389fa13e7f4ce332b46a535a51722dc9ed449cc",
+    "tools/rules/generate-native-npc-threat.py": "6ad12d4dd66eea658aec672c13300eec277089c43de43a6c5316ce5af9fe828e",
+    "cmake/World.cmake": "6cefd151e669e229deb43e08671ab8e69e22bc61e7bca58aa51d5a5092611aff"
+  },
+  "fixtures": {
+    "native-initial-generation.json": {
+      "source": "C:\\_GitHub\\TantraSrc\\_server\\fixtures\\native-initial-generation.json",
+      "sha256": "6275b9a336656a47c36c6207f68eea91e6e0070761399281ea3e8a5addbc2289"
+    },
+    "native-initial-generation-propagated.json": {
+      "source": "C:\\_GitHub\\TantraSrc\\_server\\fixtures\\native-initial-generation-propagated.json",
+      "sha256": "8d2994eb132cb7ec8ba6f03dc8118828e9452c4978f9ac35a96b5e986d5a8d27"
+    }
+  },
+  "packaged_release": {
+    "TantraServerManager.exe": "f61f6339c4d8d8a8b52e2719ecc1cd61e7629e984dbe9e30dd63eb6be66dbbbf",
+    "TantraService.exe": "e460be9cef6eb6e9fb11ba1b7bd9edf1c43bdd44fd67d1d84b87778f48bf4be8",
+    "TantraZone.exe": "a224e0190a37f5bc1336fc1ebab30eb4a21b644b8f85265ddbaf92ef2f00e80b"
+  },
+  "verified": {
+    "memory_slots": 16,
+    "first_detection_memory_ms": 20000,
+    "refresh_memory_ms": 60000,
+    "under_attack_callback_order": true,
+    "reciprocal_targets": true,
+    "native_party_attribution": true,
+    "native_guard_help_link": true,
+    "immediate_ai_callback_effects": true,
+    "callback_and_operation_lifetimes": true,
+    "generated_npc_bindings": 1702,
+    "generation_modes": [
+      "native-startup",
+      "explicit-propagation"
+    ],
+    "generation_rng_unchanged": true,
+    "population_cleanup": true
+  },
+  "periodic_world_ai_enabled": false,
+  "tcp_verified": false,
+  "graphical_acceptance": false,
+  "remaining": [
+    "Live PC/mode/party binding and status/motion synchronization",
+    "Full ProcessMonster sequence and world effect resolvers",
+    "Combat, skills, effects, rewards, loot, death/respawn and connected acceptance",
+    "Remaining plan gates M0-M6"
+  ]
+}

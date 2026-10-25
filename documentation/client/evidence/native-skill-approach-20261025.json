@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-25",
+  "scope": "Source-generated direct unit/ground-area skill approach and stopped-marker recovery; full client and full native attack families remain incomplete",
+  "implemented": [
+    "original AttackRangeCheck body and AttackMove direction fragment",
+    "integer native range and planar distance",
+    "learned-level client range, passive 3302, named totem 5802 and monster size/2",
+    "toward/retreat/settled hysteresis before free preparation",
+    "planning to target centre without bypassing actor sweeps",
+    "release owned approach movement on cancellation/rejection/death",
+    "source walk/run animation selection while approaching",
+    "stopped animation cancels an unfired impact without resource/cooldown cost and permits retry"
+  ],
+  "cpu": {
+    "client_assertions": 94,
+    "staged_root_assertions": 94,
+    "authority_route_assertions": 128,
+    "approach_ticks": 2,
+    "authority_profile": "C:\\_GitHub\\tantra-dev-main\\_remake\\build-migration\\skill-impact-profiles\\skill-impact-181296659144900",
+    "group": 1,
+    "zone": 1,
+    "account": "ashesh",
+    "sqlite": {
+      "quick_check": "ok",
+      "foreign_key_errors": 0,
+      "characters": 1
+    },
+    "game_windows_created": 0
+  },
+  "build": {
+    "configuration": "Release x64",
+    "launcher": "C:\\_GitHub\\tantra-dev-main\\_client\\HTLauncher.exe",
+    "sha256": "5267f3e39aa5e77f8ef2b5f54eb58a142f7e451b17a8eb24af56a24b751baacd",
+    "bytes": 3446784,
+    "manifest_files": 1629,
+    "payload_bytes": 676091738,
+    "asset_closure_entries": 2461,
+    "static_verification": "FINAL_CLIENT_VERIFIED files=1629 original_layout=verified x64=verified imports=resolved icon_frames=9 icon_payload=exact title=not-run relocation=not-run",
+    "game_launches": 0
+  },
+  "preservation": {
+    "hpk_unchanged": 148,
+    "normal_userdata_absent": true,
+    "legacy": {
+      "original_executable": {
+        "path": "C:\\_GitHub\\TantraSrc\\TantraClient\\HTLauncher.exe",
+        "sha256": "03d4587c4f87eeb71eb8be288b765836ccf8a1f11d49760d48239c6496c73903"
+      },
+      "previous_executable": {
+        "path": "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe",
+        "sha256": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34"
+      },
+      "private_save": {
+        "path": "C:\\_GitHub\\TantraSrc\\_client\\userdata\\offline\\tantra.sqlite3",
+        "sha256": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f"
+      }
+    }
+  },
+  "source_sha256": {
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTMainCharacter.cpp": "6e7b5ee760a729fbc8afad3b4aa59a61ed394e51ba9e3f601037c2fa6226e08d",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTMainCharacter.h": "158afe8c6b591575fddb14979cb7d965eb06055ae820c5e716de2d467887c66f",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTextern.cpp": "43388604f292dc615d0fe6bb8cf2f38b24d6b360bb75ef2907d35d210679f43d",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTClientParamMgr.h": "f62d8bd0c93b522f78d4ed6606b58e2722bd9bf063d8130c59ceae377251605b",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTClientParamMgr.cpp": "3956fd1d711ee2b546f52d89eb38c4cb5061a41add1cbfe19c77f9fd5003e6f5",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTSkillSystem.cpp": "a606465e24b22043d24522bc8ccbc03d6414ce09ec6a0ca4d237afd4c2a65858",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTItemSystem.cpp": "741b0706a80d9046748d70d8f46f6fd67f2591e747605341399d3ee7aaec4147",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTControlDef.h": "25043f990477dea8f1675a3071297d1906ccdb62c79e595050f250e87a2a7be0"
+  },
+  "canonical_inputs": {
+    "C:\\_GitHub\\TantraSrc\\TantraClient\\system\\TantraParam.tpa": "89bb70532f888044f4e66b25aa75e3e55d1329e392e874b13dd45ae3408d16ea",
+    "C:\\_GitHub\\TantraSrc\\TantraClient\\resource\\fx\\fxPC.txl": "2d9ac2d42b23febf24be1186414ea0447a94045b0b01215a9eeef24ba7fe4c3c"
+  },
+  "logs": {
+    "skill-approach-cpu.log": "b88eb0a9d39b150e0681fee98dc89331aa72102d4d24be12a04e76200128142b",
+    "skill-approach-final-cpu.log": "e9356d6c0655e2e3594a3e5e312464e75ef6e6e9573752f6c6ecf5240e522617",
+    "skill-approach-client-cpu.log": "6063f09870a04a905e3cd5b88ca1337607b6dc2b8d5873ccb449de4b1109e8c6",
+    "skill-approach-impact-cpu.log": "ce1644aea3366aae424e4b7661c4b1ef522451ed1fcab8c497f436086d481ef7",
+    "skill-approach-staged-resources.log": "a7329021c232f462fa02eb116b98de6afca8518461cd844bd6c4aa2a0cff81ef",
+    "skill-approach-final-build-stage.log": "b58f81296888d81b6ae298ab5d87657c0d995dc7a3f14feebc82180283029b6f",
+    "skill-approach-static.log": "0b28a8f07bd2f787bed132c537b5b674348831cf86208842bb419b88f5b7ef8f"
+  },
+  "corrections": {
+    "range_type": "Source declaration is HTint despite the by prefix; corrected before acceptance.",
+    "resource_fixture": "Canonical TPA monster 2001 has size 1; 1001 and the named totem 5802 are absent. The optional bonus remains zero, as the original failed lookup does.",
+    "stop_fixture": "Native playback tick returns false on STOP; corrected the fixture assertion, retained stopped-marker recovery."
+  },
+  "limits": [
+    "range-one contact uses bounded CPU actor query rather than original engine model collision",
+    "stopped-marker cancellation is an explicit remake recovery, not claimed as an original source branch",
+    "bow/ammunition, SHORT 3114 and other attack-manager paths remain distinct",
+    "crowded/narrow route and rendered approach/retreat/animation acceptance pending",
+    "full cursor/cancel/reticle matrix, weapon holstering, TFX/audio, cooldown/result/history UI pending",
+    "full client 14-phase plan incomplete"
+  ],
+  "plan": {
+    "checked": 45,
+    "total": 102,
+    "percentage_by_task_count": 44.1,
+    "open_tasks": [
+      "P04-T06",
+      "P07-T03",
+      "P07-T04"
+    ],
+    "changes": "local and uncommitted"
+  }
+}

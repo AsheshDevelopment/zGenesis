@@ -1,0 +1,86 @@
+{
+  "checked_at": "2026-10-23T19:39:26.615134+00:00",
+  "component": "Rust-owned source-derived native NPC initialization and skill/rate/deck state",
+  "whole_goal_complete": false,
+  "live_actor_publication": false,
+  "game_ready": false,
+  "cpp_arithmetic_hosted_by_rust": true,
+  "npc_cpu_tests_passed": 3,
+  "npc_cpp_rust_comparison_cases": 46,
+  "monster_types": 23,
+  "pc_regression_tests_passed": 1,
+  "pc_comparison_cases": 24,
+  "template_count": 964,
+  "packaged_validator": {
+    "game_ready": false,
+    "initialized_monster_types": 23,
+    "live_actor_publication": false,
+    "native_npc_initialization": "verified",
+    "random_draws": 7327,
+    "random_state": 2789112886
+  },
+  "fixture_sha256": "04df8f8c43f0e79d0777f7fe334b87145b959cbb531af574d2fbeeaac5a1709e",
+  "source_files_unchanged": {
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\CMob.cpp": "3421c51069c245603784168aa8ea2c276798d480b9749d8e9124734ad0715a46",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\server.cpp": "6639ca68a1e18c121e1e8a60fd2c7bbdd8f07b1d73540f645509e58ad9b6da7a",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\Basedef.h": "06d0028f615afcc34c0f8aa18d9dfe8af5c9a748ca5144b01dff8d8d0941ed22",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\HTParamMgr.cpp": "e8574693579ed3ed3da0d4438e3c8ac53228f600886ac58c4811fb8e4328ee11",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\HTUtilLib.lib": "b9ea532bd1a263065d9684a5fc6f97a05aef81b5c3c0ffc44fa9816e51e40259"
+  },
+  "normal_client_files_unchanged": {
+    "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34",
+    "C:\\_GitHub\\TantraSrc\\_client\\userdata\\offline\\tantra.sqlite3": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f"
+  },
+  "explicit_source_semantics": {
+    "poison": "Native iPosisonResist column is missing in authored XML; ordered HT_LOADCELL retains preceding lightning iTemp, matching the original integer reader failure path.",
+    "damage_index": "Corrected generated NPC UpdateDamage from sID+500 (41504 for monster 2001, outside 7000 entries) to LoadSkills internal iIndex (4004). Original source unchanged; undefined legacy access is not claimed as parity.",
+    "reward_boundary": "Template loader stops before native reward/rate-deck initialization; reward boot RNG and loot remain pending."
+  },
+  "ownership": "NPC sessions own stable heap state, pin immutable common tables, copy only touched skills and are Send but not Sync; cross-thread/drop-template lifetime test passed.",
+  "cpp_reference_scope": "Direct source-derived C++ component outside Rust ABI with the same documented damage-index correction; not an original full-server executable comparison.",
+  "binaries_current": [
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-server-manager.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "f20448a0977cf6383647bbe5e7d77941a01aee5c468bc9d94b92370ebcb36c57"
+    },
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-zone.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "8dea95f4062c8173976257c0d90dd9c3a73edb62901a0b691316907de2aa7d41"
+    },
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-service.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "c779dd62cef71409222aba6d4b93b9b3e5d8160862a7990454f206533d3954da"
+    }
+  ],
+  "checks": {
+    "npc_and_pc_cpu_tests": "passed",
+    "clippy_native_rules_services_all_targets": "passed",
+    "workspace_debug_x64": "passed",
+    "packaged_validate_npc_init": "passed",
+    "client_launcher_and_database": "unchanged"
+  },
+  "zone_processes_started": 0,
+  "game_client_launched": false,
+  "socket_tests_rerun": false,
+  "failure_capture": "target/npc-reference-legacy-index-failure.log",
+  "logs": [
+    "target/npc-rules-tests.log",
+    "target/npc-clippy.log",
+    "target/npc-build.log",
+    "target/npc-packaged-validation.log",
+    "target/npc-reference-build.log"
+  ],
+  "pending": [
+    "Complete segment/init/Pop RNG order",
+    "Zone-owned population clock",
+    "NPC actor appearance and occupancy publication",
+    "NPC AI/combat/death/respawn/loot",
+    "Other unchecked items in IMPLEMENTATION_PROGRESS.md"
+  ]
+}

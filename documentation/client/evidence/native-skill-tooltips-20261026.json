@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-26",
+  "goal_status": "active_incomplete",
+  "game_launches": 0,
+  "cpu_checks": [
+    "native_client_skill",
+    "native_skill_authority",
+    "native_world_presentation"
+  ],
+  "tooltip_profiles": 1303,
+  "effect_rows": 1703,
+  "max_logical_rows": 32,
+  "client_skill_checks": 19501,
+  "visual_binding_profiles": 984,
+  "native_effect_cases": 119,
+  "formatter_generated_sha256": "75f07e1acf64a26cc108f78384ecec9309abf68bf8e62faf2dad634a70a7e96b",
+  "release_build": "passed",
+  "static_packages": {
+    "outputs": 2,
+    "files_each": 1731,
+    "passed": true
+  },
+  "protected_files_unchanged": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": 148,
+    "C:\\_GitHub\\TantraSrc\\_client": 197
+  },
+  "launchers": {
+    "C:\\_GitHub\\tantra-dev-main\\_client\\HTLauncher.exe": "dba90d427a0bc2c7dfc5a3af6ded4eecc4a5fe469291c35dc057295dc77bea6f",
+    "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe": "dba90d427a0bc2c7dfc5a3af6ded4eecc4a5fe469291c35dc057295dc77bea6f"
+  },
+  "runtime_acceptance": false,
+  "defined_corrections": [
+    "Zero-divisor heal/recover records omitted safely",
+    "Message parameter 535/536 function context initialized deterministically",
+    "Resource messages expanded without variadic printf"
+  ],
+  "remaining": [
+    "In-game wrapping/localization/hover acceptance",
+    "Missing native skill FX/icons",
+    "Camera/collision and corrected FX runtime acceptance",
+    "Remaining phased client implementation"
+  ]
+}

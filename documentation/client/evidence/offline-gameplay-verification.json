@@ -1,0 +1,385 @@
+{
+  "date": "2026-10-23",
+  "executable_sha256": "b5bf9490d2e427f6e27048ebb9012b17a98841c92a17998561eb039111b68899",
+  "configuration": "Release x64 OGRE14.6.1 SDL3 D3D11",
+  "focused_ctest_passed": 6,
+  "focused_ctest_log": "_remake/build-ogre-sdl/gameplay-final-tests.log",
+  "runtime_proof": "_remake/build-ogre-sdl/gameplay-acceptance-final/VERIFIED.json",
+  "runtime_scenarios": [
+    {
+      "scenario": "create",
+      "exit_code": 0,
+      "characters": 1,
+      "deletion_backups": 0,
+      "load_steps": 10
+    },
+    {
+      "scenario": "village2",
+      "exit_code": 0,
+      "characters": 1,
+      "deletion_backups": 0,
+      "load_steps": 10
+    },
+    {
+      "scenario": "village3",
+      "exit_code": 0,
+      "characters": 1,
+      "deletion_backups": 0,
+      "load_steps": 10
+    },
+    {
+      "scenario": "village-full",
+      "exit_code": 0,
+      "characters": 1,
+      "deletion_backups": 0,
+      "load_steps": 10
+    },
+    {
+      "scenario": "delete",
+      "exit_code": 0,
+      "characters": 0,
+      "deletion_backups": 1,
+      "load_steps": 10
+    },
+    {
+      "scenario": "empty",
+      "exit_code": 0,
+      "characters": 0,
+      "deletion_backups": 1,
+      "load_steps": 10
+    }
+  ],
+  "runtime_captures": [
+    {
+      "file": "create-create.png",
+      "bytes": 1024174,
+      "sha256": "45fc60cbdf96983f1dc0a2b1dd989e5b2d427146b98508af7a5109f44e80a48f"
+    },
+    {
+      "file": "create-dialog-204.png",
+      "bytes": 1309472,
+      "sha256": "563812ab9635905a43ceb5c19b71073d19007c3f8cc7016712d18ae7e0e63f64"
+    },
+    {
+      "file": "create-dialog-212.png",
+      "bytes": 1292481,
+      "sha256": "a61e6a42ab029055c7de284fb26327201813fb82fcea428f21a7050ad5e82b13"
+    },
+    {
+      "file": "create-dialog-213.png",
+      "bytes": 1309907,
+      "sha256": "f58fc3d13cc5d5997de8d7b8838a1e4da25c9f6a8cb08ebda9127c280e279a27"
+    },
+    {
+      "file": "create-dialog-235.png",
+      "bytes": 1291311,
+      "sha256": "f286037f400fe765375692c39614f46b139bf5533b510c0b8a45c04a067d6aec"
+    },
+    {
+      "file": "create-dialog-237.png",
+      "bytes": 1290709,
+      "sha256": "20a412395b6ba0a894964c9275ae02c79d58b5d6e89b3b033005a7e9b7c31c04"
+    },
+    {
+      "file": "create-dialog-238.png",
+      "bytes": 1288903,
+      "sha256": "e4644cb45061583fd23ce0fb2c7a9ae620b753b510ab47c4eff749db99ec29cc"
+    },
+    {
+      "file": "create-dialog-239.png",
+      "bytes": 1291791,
+      "sha256": "ec44cbe3e212b192b32fbb00f35150a7f8600205504179c4c03b7ca599636c4c"
+    },
+    {
+      "file": "create-dialog-dragged.png",
+      "bytes": 1293928,
+      "sha256": "ed97679c4f485b737b2d30e00a0f4ac2a6567983dc9d88146890e1621fa714ff"
+    },
+    {
+      "file": "create-hud-compact.png",
+      "bytes": 1269930,
+      "sha256": "3a2176c10d2cbf6edccd8440d0c72ed32c7efe02320b78f65819ee4aadb7df61"
+    },
+    {
+      "file": "create-hud-restored.png",
+      "bytes": 1267787,
+      "sha256": "4de32c0acd41a794890c3a478f0d4f0c621bec8d19e79c60aa5b417ae5abd47a"
+    },
+    {
+      "file": "create-info.png",
+      "bytes": 1384717,
+      "sha256": "937639be83bf57bceb9267a9ff523c875d1f5377dc27d8751ef56aaccf9bafc3"
+    },
+    {
+      "file": "create-inventory-moved.png",
+      "bytes": 1310702,
+      "sha256": "d739e724b744d99e61e8d3d234beefec2b1951babd58f7b9f400a357d6fe35bb"
+    },
+    {
+      "file": "create-mandara.png",
+      "bytes": 1387213,
+      "sha256": "9d2e6dda8ae4c931aa183ab1ea9879bac685eaf79734b16e123615ed96beffa6"
+    },
+    {
+      "file": "create-mandara1st-world.png",
+      "bytes": 1268141,
+      "sha256": "cf1883623165c0377190d3f6e23d7e6e93c861ff79efb91e3af1c213a30d68f2"
+    },
+    {
+      "file": "create-native-loading.png",
+      "bytes": 1389340,
+      "sha256": "ec77315fb38ca26963f3a172fcaaaac752ba24d2c71bd529f33b1dc260eaecd2"
+    },
+    {
+      "file": "create-select.png",
+      "bytes": 1419053,
+      "sha256": "9f8598121fbd9c761936ca6915ed519bc60b09ecbb03f15fae2f068cbe6b9de4"
+    },
+    {
+      "file": "create-weapon-equipped.png",
+      "bytes": 1309290,
+      "sha256": "7ca7959748eaa14c4e2538f19cf5c609fafd4dc7e472b912373f5995fe176e8e"
+    },
+    {
+      "file": "create-world-walked.png",
+      "bytes": 1260891,
+      "sha256": "68178febbcb76c150adc94f8dd1b5a4ed858ef058c13cefcad9e99932a8408c3"
+    },
+    {
+      "file": "delete-delete.png",
+      "bytes": 1762746,
+      "sha256": "08827ac3558aefb7359b61c2c1262fb29698bcca0cc9bcbe0a7aca725cbf4c16"
+    },
+    {
+      "file": "delete-empty.png",
+      "bytes": 1132856,
+      "sha256": "110d84a1324a843c156b090a50c85c620bed9f91451c61a31b9faeb8890f701d"
+    },
+    {
+      "file": "delete-info-restart.png",
+      "bytes": 1384785,
+      "sha256": "5a3e86ae08776c80098550b360f3c5bbc72cd5226f60c2f1da86e67d184002e5"
+    },
+    {
+      "file": "delete-select.png",
+      "bytes": 1418834,
+      "sha256": "a3dd7c0ae2b82e7d968409b1544841db33785c592bbbafdf5b51e21452c08ea3"
+    },
+    {
+      "file": "empty-empty-restart.png",
+      "bytes": 1133176,
+      "sha256": "ac2d923d63d0f319c368fb2474eb1aef9cc131cd186e748d34d4655f579c8391"
+    },
+    {
+      "file": "village-full-info.png",
+      "bytes": 1384764,
+      "sha256": "ae831ec2a78c55279469ac2fe1dc5df1e19f7413b322ef9154751343f1b7681c"
+    },
+    {
+      "file": "village-full-mandara.png",
+      "bytes": 1387380,
+      "sha256": "904b912b1f712bd2d3d051694f20c2161298085f4c59f8644bf4487b58ad40fc"
+    },
+    {
+      "file": "village-full-over-population.png",
+      "bytes": 1420053,
+      "sha256": "1a00643567dc755d0dc5dff4001972f0de25ece5a0ca51109c460b299f3e8bcb"
+    },
+    {
+      "file": "village-full-select.png",
+      "bytes": 1418553,
+      "sha256": "ea9ca8dfddd4af34bb9340172f0539937deac9932fa02899e67103bb678e1efc"
+    },
+    {
+      "file": "village2-dialog-204.png",
+      "bytes": 1309581,
+      "sha256": "2a9da9da0ce11b840b96338a26a159671510c2a6b4fce49f843fb845cea4d595"
+    },
+    {
+      "file": "village2-dialog-212.png",
+      "bytes": 1291770,
+      "sha256": "a8e640b1f69b183c0eb83cf408924378b2b1637580f15c3f32a527b949d4e399"
+    },
+    {
+      "file": "village2-dialog-213.png",
+      "bytes": 1308907,
+      "sha256": "8cfdb39c54625ad9db3ac1102976d814d0babd6d4aff02f88c39236813d9380e"
+    },
+    {
+      "file": "village2-dialog-235.png",
+      "bytes": 1289389,
+      "sha256": "3dcdae47f4b42849a9ed4193d788eb5fce73ed933d4445d96fcdad2ccb445731"
+    },
+    {
+      "file": "village2-dialog-237.png",
+      "bytes": 1290771,
+      "sha256": "542f59f5df3f0a82c3eb8715f87a3c3999c196df70cbb7d6975e676ec0e02b81"
+    },
+    {
+      "file": "village2-dialog-238.png",
+      "bytes": 1291483,
+      "sha256": "22098b44450ca7c8a186a6f6e6b6956125bceaf14aa0eb49946ea2ffc67be585"
+    },
+    {
+      "file": "village2-dialog-239.png",
+      "bytes": 1291982,
+      "sha256": "93e3260a4c966bfa2218af783d0ae80c9ce883962e114288ec2062d19aeeada8"
+    },
+    {
+      "file": "village2-dialog-dragged.png",
+      "bytes": 1291593,
+      "sha256": "16e14883d7e0d574a93fe718208576acc2bc9a3152d55d3afb106c915f8774ad"
+    },
+    {
+      "file": "village2-hud-compact.png",
+      "bytes": 1267892,
+      "sha256": "fb4eac49ee8382d1422aa959cde64b82a8529f9ea9a2b664c6c6d57a8169b200"
+    },
+    {
+      "file": "village2-hud-restored.png",
+      "bytes": 1265594,
+      "sha256": "7cd54e856148eda7c81e2eed9ef7b279748f752072dd1165e50d5cbf0f1d4df3"
+    },
+    {
+      "file": "village2-info.png",
+      "bytes": 1384361,
+      "sha256": "26b5c7c2586f76656f8e499e0a5942c4fe99432fece2b9337b4e1159c3f0778f"
+    },
+    {
+      "file": "village2-inventory-moved.png",
+      "bytes": 1310981,
+      "sha256": "1af48a5fe7a70e2e014012cf720ce69f1f323eb1c8385784f4f4d11e98436027"
+    },
+    {
+      "file": "village2-mandara.png",
+      "bytes": 1387366,
+      "sha256": "bb0a14f3eb9e5111bdf4ccc5166ed315dfa256c17a56811de27f6ebd0cfc6fad"
+    },
+    {
+      "file": "village2-mandara1st-world.png",
+      "bytes": 1265518,
+      "sha256": "271f83c2d3e683406ed38f6e6b0c22aaba4f8de4d02e495007bd0563dd4cfa32"
+    },
+    {
+      "file": "village2-native-loading.png",
+      "bytes": 1388891,
+      "sha256": "7c7b1b4e16a50c27d87542703b132d0f2703bed6b1365edd31eef92fb5ddeffc"
+    },
+    {
+      "file": "village2-select.png",
+      "bytes": 1418632,
+      "sha256": "0bf30846de3f0e646cafe8ed9df4669525068e43020be8237abfd094b7d35581"
+    },
+    {
+      "file": "village2-weapon-equipped.png",
+      "bytes": 1310632,
+      "sha256": "f8feccd745c7a3432ddba58397b3942edd7dc285af531556532c54fa48152c76"
+    },
+    {
+      "file": "village2-world-walked.png",
+      "bytes": 1255126,
+      "sha256": "9962ec464bf3990e454e896efed99ef38783c3fb6ff627aebc7445ec5bfed4a0"
+    },
+    {
+      "file": "village3-dialog-204.png",
+      "bytes": 1310981,
+      "sha256": "ef4b8212b186ab48b22b9686db2641823a2264860c7ea752d2e17e99ed1584ef"
+    },
+    {
+      "file": "village3-dialog-212.png",
+      "bytes": 1291626,
+      "sha256": "2946839546899ffd19f2483bb6d5fdb6ccc9225b6e0467abfb8dc792f2f8e04a"
+    },
+    {
+      "file": "village3-dialog-213.png",
+      "bytes": 1308215,
+      "sha256": "d0a659d8901c7a8a6821d887cc83b7ae8e3ea6f6cff30b3d34d6a56c68acb18a"
+    },
+    {
+      "file": "village3-dialog-235.png",
+      "bytes": 1289853,
+      "sha256": "3bd57a0a4d63dd3221976dfe96f281e1924c6c63d47dbcb4bd1d78f63ee2bbde"
+    },
+    {
+      "file": "village3-dialog-237.png",
+      "bytes": 1289693,
+      "sha256": "7d0cc521fecaee674646ef84b4a23142b137550f4fb5045b2f19e12bef4dc5da"
+    },
+    {
+      "file": "village3-dialog-238.png",
+      "bytes": 1294733,
+      "sha256": "2753a4dbfa635afdc130c9bab5ac966d59ab16efad7e75593d0f7c56678c08cd"
+    },
+    {
+      "file": "village3-dialog-239.png",
+      "bytes": 1291250,
+      "sha256": "35b08fcefff3cdeac830af296cc920de5e5205b58e72b5cd18ccbb6878dd9598"
+    },
+    {
+      "file": "village3-dialog-dragged.png",
+      "bytes": 1290096,
+      "sha256": "76d93a03ef5937941aea947d05d94b892376716dc17d8ccdcb93f9cbc31ad30c"
+    },
+    {
+      "file": "village3-hud-compact.png",
+      "bytes": 1264054,
+      "sha256": "45819fb572a4b62a8802e5ee7629c16b55fb9c502ff59b422d80efa0d0a2e3ea"
+    },
+    {
+      "file": "village3-hud-restored.png",
+      "bytes": 1261511,
+      "sha256": "b9dae21e4620f8e00253e5a94eac92a2ebf88b5b3c0dd6531794546dd7e439a2"
+    },
+    {
+      "file": "village3-info.png",
+      "bytes": 1384491,
+      "sha256": "4851d31955a5662cd8dbf5a431e15028f27b807151542bd6b0567afb22675b6b"
+    },
+    {
+      "file": "village3-inventory-moved.png",
+      "bytes": 1307728,
+      "sha256": "b0fe0677956da6ec20999d3d328a9adf16b22a888e7be8ead0896953840f38bc"
+    },
+    {
+      "file": "village3-mandara.png",
+      "bytes": 1387574,
+      "sha256": "795f33b1c63d2a4e16ab052459aab6d6445a48088319733beb16dafb2471d8d8"
+    },
+    {
+      "file": "village3-mandara1st-world.png",
+      "bytes": 1260889,
+      "sha256": "28c347662028503924d90c1b290ca72169c15c055657ad20eb468d81c37028b9"
+    },
+    {
+      "file": "village3-native-loading.png",
+      "bytes": 1389206,
+      "sha256": "dda9f8d35521fefa875887fba66a0d04eff9e6ba00ca2997311a66a04d8021da"
+    },
+    {
+      "file": "village3-select.png",
+      "bytes": 1419137,
+      "sha256": "6e88b1effb137748bf674cadc4622f4f0809eab9d118a916a775550358f6a3f3"
+    },
+    {
+      "file": "village3-weapon-equipped.png",
+      "bytes": 1306143,
+      "sha256": "f806eabc0b5801b1a78a01d76976a3784682258b434fc6fd66aaf7c699a97621"
+    },
+    {
+      "file": "village3-world-walked.png",
+      "bytes": 1250263,
+      "sha256": "9caa71c9b7b15d373af32bce9ea49d64e7ccc0e3d38fde7d60e01fad688ecece"
+    }
+  ],
+  "manifest_files": 4171,
+  "manifest_bytes": 253474449,
+  "normal_userdata_sha256_unchanged": {
+    "userdata/offline/tantra.sqlite3": "835579EE0B98BDF5CDD42197F9E84973A2944258BAEAB9E0F1FC67BAC42FCE3F",
+    "userdata/system/SaveID.bin": "4C026DCA53567521DAD4C27AB8585C4C5AE4C47F136DF3A4E59F2103C8CA0B9E"
+  },
+  "limits": [
+    "Component combat lifecycle is CPU-tested; complete combat GPU/play acceptance is pending.",
+    "Full AI/NPC services, advanced item/combat systems, complete INTRO parity and environment parity remain incomplete.",
+    "No full regression suite, Debug, relocation or prolonged gameplay rerun for this slice."
+  ]
+}

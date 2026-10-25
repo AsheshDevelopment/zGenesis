@@ -1,0 +1,182 @@
+{
+  "date": "2026-10-26",
+  "goal": "Client implementation continuation; active/incomplete",
+  "runtime_attempt": {
+    "result": "service_and_persistence_assertions_passed",
+    "runtime_processes": 1,
+    "world_group": 1,
+    "server_zone": 1,
+    "executable_sha256": "e13665d34523e7ef9b7053cfad78555612847bdae342b12161eb27517eb3a733",
+    "process": {
+      "exit_code": 0,
+      "exception": null,
+      "runtime_processes": 1,
+      "world_group": 1,
+      "diagnostics_fresh": true,
+      "normal_profile_unchanged": true
+    },
+    "inventory_slots_checked": 72,
+    "cargo_slots_checked": 120,
+    "unselected_roster_unchanged": true,
+    "source_checkpoint_unchanged": true,
+    "quick_slots_unchanged": true,
+    "normal_profile_unchanged": true,
+    "additional_user_profile_files_unchanged": 49,
+    "before_money": 99797,
+    "after_money": 99647,
+    "before_cargo": {
+      "money": 0,
+      "revision": 2
+    },
+    "after_cargo": {
+      "money": 150,
+      "revision": 6
+    },
+    "current_and_saved_cell": [
+      486,
+      173
+    ],
+    "ground_clicks": 104,
+    "diagnostic_errors": [
+      {
+        "severity": "error",
+        "code": "TMB_DETAIL_UNSUPPORTED",
+        "message": "Additional skinned record is incomplete or its skeleton differs: record= vertices=0 indices=0 mapped=0",
+        "source": "C:\\_GitHub\\tantra-dev-main\\_client\\resource/fx\\fxMAPMandara1stModel\\mWT_2010012.tmb"
+      },
+      {
+        "severity": "error",
+        "code": "TMB_DETAIL_UNSUPPORTED",
+        "message": "Additional skinned record is incomplete or its skeleton differs: record= vertices=0 indices=0 mapped=0",
+        "source": "C:\\_GitHub\\tantra-dev-main\\_client\\resource/fx\\fxPCModel\\mLT_2000071.tmb"
+      },
+      {
+        "severity": "error",
+        "code": "TMB_DETAIL_UNSUPPORTED",
+        "message": "Additional skinned record is incomplete or its skeleton differs: record= vertices=0 indices=0 mapped=0",
+        "source": "C:\\_GitHub\\tantra-dev-main\\_client\\resource/fx\\fxPCModel\\mLT_2000071.tmb"
+      },
+      {
+        "severity": "error",
+        "code": "TMB_DETAIL_UNSUPPORTED",
+        "message": "Additional skinned record is incomplete or its skeleton differs: record= vertices=0 indices=0 mapped=0",
+        "source": "C:\\_GitHub\\tantra-dev-main\\_client\\resource/fx\\fxMAPMandara1stModel\\mALTER2_2010102.tmb"
+      },
+      {
+        "severity": "error",
+        "code": "TMB_DETAIL_UNSUPPORTED",
+        "message": "Additional skinned record is incomplete or its skeleton differs: record= vertices=0 indices=0 mapped=0",
+        "source": "C:\\_GitHub\\tantra-dev-main\\_client\\resource/fx\\fxMAPMandara1stModel\\mALTER2_2010102.tmb"
+      }
+    ],
+    "strict_diagnostic_gate_passed": false,
+    "camera_visual_acceptance": "pending; finite matrices and automated recovery are insufficient",
+    "full_mandara_acceptance": false,
+    "captures": [
+      {
+        "file": "closure-camera-orbit.png",
+        "sha256": "8742846777c7cb530ca82bd2a89da70f6e130dc224f3aed022a25595e85c5be2"
+      },
+      {
+        "file": "closure-camera-reset.png",
+        "sha256": "3d57fa7f99acaa95342c04007cb0ba4ba5e2706fde6f4c523cfd19c38458b674"
+      },
+      {
+        "file": "closure-restored-skill.png",
+        "sha256": "1296f1726c87bb4bddf29c3d32ed9308b1f90c0e4fe9a5169dc3ff60ff0c7678"
+      },
+      {
+        "file": "closure-restored-world.png",
+        "sha256": "6b0c25114a378029814b1e48f082cf1e92de18b979087dd2e64631f826bce4c4"
+      },
+      {
+        "file": "closure-save-result.png",
+        "sha256": "27ce9d99e5ca9ba7ff9ccc30fbed2bf146898dad07b2443496c78c841511662d"
+      },
+      {
+        "file": "closure-warehouse.png",
+        "sha256": "d383868a22a8123ae3af07ef32fe5b02726b5de938fee4d41ef17c70bc3e9e74"
+      },
+      {
+        "file": "closure-warehouse-deposited.png",
+        "sha256": "1cba732bdb5cc988302982017aaf893e0d7013bfa989db3065acf84ab51f8753"
+      },
+      {
+        "file": "closure-warehouse-money.png",
+        "sha256": "0791c00279aa98f6d5608069c4c2a3dc8760a65c70232f0a00717f4698ce3d76"
+      },
+      {
+        "file": "closure-warehouse-withdrawn.png",
+        "sha256": "92004f0713bb4d5df2ecc47ec5dc518876d9703db2fbcc07eacbb132569e3df2"
+      }
+    ]
+  },
+  "strict_runtime_wrapper_passed": false,
+  "runtime_launches": 1,
+  "automatic_relaunch": false,
+  "source_fix": {
+    "file": "_remake/src/resources/RigidTmb.cpp",
+    "cause": "Additional-record material validation rejected the native (null) exporter sentinel accepted in the root record.",
+    "change": "Normalize only the exact (null) texture sentinel; retain complete geometry/influence records and all renderer validation.",
+    "models": [
+      {
+        "name": "mWT_2010012.tmb",
+        "vertices": [
+          18,
+          18
+        ]
+      },
+      {
+        "name": "mLT_2000071.tmb",
+        "vertices": [
+          42,
+          42,
+          42
+        ]
+      },
+      {
+        "name": "mALTER2_2010102.tmb",
+        "vertices": [
+          82,
+          82,
+          4
+        ]
+      }
+    ]
+  },
+  "cpu_checks": {
+    "world_scene_fidelity": "passed; 13451 assertions, every submitted FX part sampled and validated",
+    "native_authored_bind_skinning": "passed",
+    "strict_tmb_fixtures": "three passed, including complete mapping/tree checks and malformed temporary data rejection"
+  },
+  "corrected_launcher_sha256": "1c24751d7f06bfdb878758083251b0499d89779c1e3d87ef247c1ba6b47ccb1c",
+  "corrected_launcher_clients": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": "1c24751d7f06bfdb878758083251b0499d89779c1e3d87ef247c1ba6b47ccb1c",
+    "C:\\_GitHub\\TantraSrc\\_client": "1c24751d7f06bfdb878758083251b0499d89779c1e3d87ef247c1ba6b47ccb1c"
+  },
+  "corrected_build_launched": false,
+  "packages": {
+    "static_verification": "both passed --skip-runtime",
+    "manifest_files": 1731,
+    "manifest_bytes": 704379841
+  },
+  "preservation": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "files_checked": 148,
+      "hpk_files": 148,
+      "changed": []
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "files_checked": 197,
+      "hpk_files": 148,
+      "changed": []
+    }
+  },
+  "run_artifacts": "_remake\\build-migration\\mandara-acceptance-20261026-continue1",
+  "cpu_build_logs": ".migration-local\\mandara-acceptance-fx-20261026",
+  "remaining": [
+    "Corrected-build strict runtime diagnostics",
+    "Usable warehouse camera framing and complete collision/obstruction acceptance",
+    "Remaining client implementation-plan tasks"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "source": "E:/PC/Pictures/Group/Icon-ZoneServer.ico",
+  "project": "_server/assets/Icon-ZoneServer.ico",
+  "source_bytes_preserved": true,
+  "sha256": "5c984d2639e9d75a3bbd0ba3114f2e713db6ff3dd316d42e40ab08cbbeff6a50",
+  "executable_icon_verified": true,
+  "embedded_dib_bytes": 4264,
+  "window_icon_wired": true,
+  "gui_launched": false,
+  "executable_sha256": "24bd600334ca87c432ec6c922e96ac80e7060644e328152497a1d7c0a66c439b",
+  "window_icon_visual_acceptance": "not launched",
+  "later_tcm_build_executable_sha256": "662236951760f7580d065edb360cf2611c8fdc18a7ca25255e2bb5153a98146a",
+  "later_tcm_build_resource_payload_verified": true
+}

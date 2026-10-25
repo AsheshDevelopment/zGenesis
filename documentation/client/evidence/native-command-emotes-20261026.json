@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-26",
+  "goal_status": "active_incomplete",
+  "game_launches": 0,
+  "commands": [
+    {
+      "command": 10,
+      "effect": 8,
+      "animation": 833
+    },
+    {
+      "command": 11,
+      "effect": 9,
+      "animation": 831
+    },
+    {
+      "command": 12,
+      "effect": 10,
+      "animation": 832
+    }
+  ],
+  "tribe_motion_profiles_checked": 24,
+  "cpu_checks": [
+    "offline_world_gameplay",
+    "native_pc_equipped_weapon_bindings",
+    "native_world_hotkeys"
+  ],
+  "release_build": "passed",
+  "static_packages": {
+    "outputs": 2,
+    "files_each": 1731,
+    "passed": true
+  },
+  "protected_files_unchanged": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": 148,
+    "C:\\_GitHub\\TantraSrc\\_client": 197
+  },
+  "launchers": {
+    "C:\\_GitHub\\tantra-dev-main\\_client\\HTLauncher.exe": "a1cb22af1188e68e083da1105dfabfb57efdf33ed958a2f2295a6016dbaa2c82",
+    "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe": "a1cb22af1188e68e083da1105dfabfb57efdf33ed958a2f2295a6016dbaa2c82"
+  },
+  "runtime_acceptance": false,
+  "scope": "offline command buttons/slots and native emote lifecycle; no online replication claim",
+  "remaining": "social/shop/assist/summon/event commands and remaining phased client requirements"
+}

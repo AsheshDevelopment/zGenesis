@@ -1,0 +1,66 @@
+{
+  "recorded_utc": "2026-10-25T03:35:32.002912+00:00",
+  "scope": "Equipped-weapon animation selection for all eight client tribes",
+  "native_sources": {
+    "_references/Tantra/HTlauncher/HTResMgr.h": "2587864224a08ffadd4c9480d9078f01004c8375985ec2ea673aeb1521e420ef",
+    "_references/Tantra/HTlauncher/HTIDDef.h": "1099927c4916dae1e61c36c880e1182974d9efd2058103ef3465b9a14c8fb840",
+    "_references/Tantra/HTlauncher/HTEngineHandler.h": "c2a1ad115741159fc37c4fe1df14a8bd920943c47d3468b17a615bd5d966191b",
+    "_references/Tantra/HTlauncher/HTEngineHandler.cpp": "dec2f71e6b25091e54c7742d8d85a00b4c4658865cfaff61b0d12f4836bf5500",
+    "_references/Tantra/HTlauncher/HTMainCharacter.cpp": "6e7b5ee760a729fbc8afad3b4aa59a61ed394e51ba9e3f601037c2fa6226e08d"
+  },
+  "behavior": [
+    "Item.dwItemType selects native PCAttackAni standing/walking/running/hit PCStateAni states",
+    "Tribe column selects body; hair follows selected body; ordinary aprons follow original requested state",
+    "Only an off-hand short sword selects dual attacks; a shield does not",
+    "Neutral safety-cell locomotion and original holstered/emote selection retained",
+    "Each normal attack advances the original 1-initialized sequence counter and a visual revision; same-type one-shot attacks replay",
+    "AUTOATTACK visual playback uses max(500,attackSpeedMs)+100 ms; authority damage/cooldown/reward formulas unchanged"
+  ],
+  "cpu": {
+    "canonical_passed": true,
+    "staged_passed": true,
+    "equipped_checks_each": 8609,
+    "body_hair_apron_bindings_each": 4803,
+    "weapon_types_in_item": 12,
+    "player_tribes": 8,
+    "attack_sequences": 3,
+    "attack_regression_checks": 2320,
+    "offline_world_gameplay": "passed, including first attack revision/sequence",
+    "graphics_device_started": false
+  },
+  "release": {
+    "configuration": "Release x64",
+    "launcher_sha256": "e17d6c0591eab6cf2adf446d87ad03667ed143faa6a045843d4b2925ffa40d53",
+    "launcher_bytes": 3500032,
+    "outputs": [
+      "C:/_GitHub/tantra-dev-main/_client",
+      "C:/_GitHub/TantraSrc/_client"
+    ],
+    "files": 1689,
+    "manifest_bytes": 677516826,
+    "closure_files": 2522,
+    "staged_bytes_equal_build": true,
+    "static_verification": "passed for both outputs --skip-runtime",
+    "new_game_started": false
+  },
+  "preservation": {
+    "userdata_files": 44,
+    "packs": 148,
+    "unchanged": true,
+    "launcher_sha256": "e17d6c0591eab6cf2adf446d87ad03667ed143faa6a045843d4b2925ffa40d53"
+  },
+  "limits": [
+    "Rendered equipped-weapon acceptance remains pending",
+    "Weapon hand/back socket relocation and bow arrow/projectile lifecycle remain separate gaps",
+    "Non-weapon/emote selection tested; default Garuda SIT back-apron has an existing skeleton mismatch, so full emote rendering is not certified"
+  ],
+  "logs": {
+    ".migration-local/weapon-animation-cpu.log": "33e264916a1c64645a0c7507f02a5ae0aae1be34df310f31c3d3e6730359f1bb",
+    ".migration-local/weapon-animation-staged-cpu.log": "1277dc3b729a77c6aeedd26fe0dba008507c670429e4d9b38ebde6110efc0fa6",
+    ".migration-local/weapon-animation-client-build.log": "c8c4be28879dcde174c2a5cb37a5b286317c44181601903d65a87a86184f5152",
+    ".migration-local/weapon-animation-static.log": "edd54a144b32b131bf5a5ee8a3d6770046969e200c92b6593bc1cadefb35cc9c",
+    ".migration-local/weapon-animation-legacy-stage.log": "efedb22f7b6250a021646c40ca9ee20bcaf5792a46a63622115ec8cd260b7887",
+    ".migration-local/weapon-animation-legacy-static.log": "edd54a144b32b131bf5a5ee8a3d6770046969e200c92b6593bc1cadefb35cc9c"
+  },
+  "git_state": "Local and uncommitted; broader goal remains paused"
+}

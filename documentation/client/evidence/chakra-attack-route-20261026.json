@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-26",
+  "user_preference": "Keep original Chakra bonus display",
+  "chakra_finding": "Right fields are effective minus base; spent points are already in the left totals and persisted MOB.",
+  "fix": "Accepted attack clears the old ground route immediately and removes its obsolete click FX.",
+  "tests": {
+    "offline_world_gameplay": "passed; old path canceled before tick, selection-only movement preserved, new route approaches monster, previous impact checks pass",
+    "native_skill_authority": "passed; native UI frame, base/total increase, remaining-point decrease, unchanged bonus, SQLite MOB and reinitialized status",
+    "native_progression_actions": "passed"
+  },
+  "proof": [
+    "NATIVE_SKILL_AUTHORITY_VERIFIED checks=123 ready=source costs=source cooldown=source effects=4 expiry=source movement_cancel=no_cost sqlite=verified chakra=base_total_bonus_and_sqlite_reload combat_wear=persisted profile=C:/_GitHub/tantra-dev-main/_remake/build-migration/skill-profiles\\skill-authority-20844506918000",
+    "NATIVE_PROGRESSION_ACTIONS_VERIFIED tribes=8 chakra=source learn=source prerequisites=guarded quick_pages=5 binary_bytes=400 persistence=verified",
+    "ATTACK_ROUTE_REPLACEMENT_VERIFIED old_ground_path=canceled_before_tick selection_only=preserved new_route=monster_approach"
+  ],
+  "source_navigation": "Player click direction/collision probes; server monster segment/roam and BASE_GetRoute local directional routing; client monster interpolation. Remake uses bounded grid A* and is not complete native navigation parity.",
+  "launcher_sha256": "e13665d34523e7ef9b7053cfad78555612847bdae342b12161eb27517eb3a733",
+  "clients": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": "e13665d34523e7ef9b7053cfad78555612847bdae342b12161eb27517eb3a733",
+    "C:\\_GitHub\\TantraSrc\\_client": "e13665d34523e7ef9b7053cfad78555612847bdae342b12161eb27517eb3a733"
+  },
+  "protected_files": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "existing_files": 148,
+      "hpk": 148,
+      "changed": []
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "existing_files": 197,
+      "hpk": 148,
+      "changed": []
+    }
+  },
+  "package": "Both static --skip-runtime checks pass; 1731 manifest files each",
+  "game_launched": false,
+  "renderer_launched": false,
+  "audio_device_started": false,
+  "visual_acceptance": "pending",
+  "broader_goal": "remains paused",
+  "logs": ".migration-local\\chakra-attack-route-20261026"
+}

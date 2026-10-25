@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-25",
+  "repositories": [
+    {
+      "repo": "tantra-dev-main",
+      "url": "https://github.com/Tantra-Development/tantra-dev-main.git",
+      "commit": "d1f02c8ec96ed2f59c1c0faed9815d4586c6bafd",
+      "remote_matches": true,
+      "clean": true
+    },
+    {
+      "repo": "_client",
+      "url": "https://github.com/Tantra-Development/_client.git",
+      "commit": "bb8c4339a676c37aba51cf85088f30c747d02ee0",
+      "remote_matches": true,
+      "clean": true
+    },
+    {
+      "repo": "_server",
+      "url": "https://github.com/Tantra-Development/_server.git",
+      "commit": "b4a4ed607e726c3c59261cc5bae482689af8b906",
+      "remote_matches": true,
+      "clean": true
+    },
+    {
+      "repo": "_remake",
+      "url": "https://github.com/Tantra-Development/_remake.git",
+      "commit": "f43b525ab6cb8b473adf0f24c98e068c55fc8900",
+      "remote_matches": true,
+      "clean": true
+    },
+    {
+      "repo": "_references",
+      "url": "https://github.com/Tantra-Development/_references.git",
+      "commit": "eb248ef50bd2d0f5ec1bf0a59d904d62eacd63dc",
+      "remote_matches": true,
+      "clean": true
+    },
+    {
+      "repo": "docs",
+      "url": "https://github.com/Tantra-Development/docs.git",
+      "commit": "10bb55e4da3727294acc862bed499587810f5ca5",
+      "remote_matches": true,
+      "clean": true
+    }
+  ],
+  "recursive_submodules": [
+    " bb8c4339a676c37aba51cf85088f30c747d02ee0 _client (heads/main)",
+    " eb248ef50bd2d0f5ec1bf0a59d904d62eacd63dc _references (heads/main)",
+    " f43b525ab6cb8b473adf0f24c98e068c55fc8900 _remake (heads/main)",
+    " 535d80badefc83c5c527ec5748f2a20d6a9310fe _remake/external/SDL3 (535d80b)",
+    " b4a4ed607e726c3c59261cc5bae482689af8b906 _server (heads/main)",
+    " 10bb55e4da3727294acc862bed499587810f5ca5 docs (heads/main)"
+  ],
+  "result": "all remote main heads match and all recursive pointers clean",
+  "scope": "First verified complete publication, before this documentation checklist update; latest versions are pinned by parent gitlinks."
+}

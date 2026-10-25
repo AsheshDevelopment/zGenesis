@@ -1,0 +1,455 @@
+HT3DHeaven.dll SHA256=b818b89edbc9f8e49bb1b79200371740eaa157dabac23bbf1e2d52e40ff99941
+Read-only inspection; original DLL is never executed.
+
+Private CRT word RNG
+0x2005177D: call 0x20054a42
+0x20051782: mov ecx, dword ptr [eax + 0x14]
+0x20051785: imul ecx, ecx, 0x343fd
+0x2005178B: add ecx, 0x269ec3
+0x20051791: mov dword ptr [eax + 0x14], ecx
+0x20051794: mov eax, ecx
+0x20051796: shr eax, 0x10
+0x20051799: and eax, 0x7fff
+0x2005179E: ret 
+
+8192 signed lookup values: (rand()%20000-10000)*0.0001
+0x20003903: lea edi, [ebx + 0x90004]
+0x20003909: mov dword ptr [ebp - 4], esi
+0x2000390C: call 0x2005177d
+0x20003911: cdq 
+0x20003912: mov ecx, 0x4e20
+0x20003917: idiv ecx
+0x20003919: sub edx, 0x2710
+0x2000391F: mov dword ptr [ebp - 8], edx
+0x20003922: fild dword ptr [ebp - 8]
+0x20003925: fmul dword ptr [0x20063474]
+0x2000392B: fstp dword ptr [edi]
+0x2000392D: add edi, 4
+0x20003930: dec dword ptr [ebp - 4]
+0x20003933: jne 0x2000390c
+
+Lookup consumes a word and masks to 8192 entries
+0x2001265A: push esi
+0x2001265B: mov esi, ecx
+0x2001265D: call 0x2005177d
+0x20012662: and eax, 0x1fff
+0x20012667: fld dword ptr [esi + eax*4 + 0x90004]
+0x2001266E: pop esi
+0x2001266F: ret 
+
+TFX loading reseeds the engine CRT from time(NULL)
+0x2000F220: push 0
+0x2000F222: mov dword ptr [ebp - 0x10], eax
+0x2000F225: mov edi, ecx
+0x2000F227: call 0x20051b42
+0x2000F22C: push eax
+0x2000F22D: call 0x20051770
+0x2000F232: mov esi, dword ptr [ebp + 8]
+
+time helper converts FILETIME ticks to Unix seconds
+0x20051B42: push ebp
+0x20051B43: mov ebp, esp
+0x20051B45: push ecx
+0x20051B46: push ecx
+0x20051B47: lea eax, [ebp - 8]
+0x20051B4A: push eax
+0x20051B4B: call dword ptr [0x20063044]
+0x20051B51: mov eax, dword ptr [ebp - 8]
+0x20051B54: mov ecx, dword ptr [ebp - 4]
+0x20051B57: push 0
+0x20051B59: add eax, 0x2ac18000
+0x20051B5E: push 0x989680
+0x20051B63: adc ecx, 0xfe624e21
+0x20051B69: push ecx
+0x20051B6A: push eax
+0x20051B6B: call 0x20057600
+0x20051B70: mov ecx, dword ptr [ebp + 8]
+0x20051B73: test ecx, ecx
+0x20051B75: je 0x20051b79
+0x20051B77: mov dword ptr [ecx], eax
+0x20051B79: leave 
+0x20051B7A: ret 
+
+Mode 2: zero offset then three signed velocity lanes in reverse argument order
+0x20013C2E: fldz 
+0x20013C30: lea esi, [ebp - 0xa4]
+0x20013C36: fstp dword ptr [ebp - 0xa4]
+0x20013C3C: lea edi, [ebp - 0x34]
+0x20013C3F: fldz 
+0x20013C41: fstp dword ptr [ebp - 0xa0]
+0x20013C47: fldz 
+0x20013C49: fstp dword ptr [ebp - 0x9c]
+0x20013C4F: movsd dword ptr es:[edi], dword ptr [esi]
+0x20013C50: movsd dword ptr es:[edi], dword ptr [esi]
+0x20013C51: movsd dword ptr es:[edi], dword ptr [esi]
+0x20013C52: mov edi, 0x2075af28
+0x20013C57: mov ecx, edi
+0x20013C59: call 0x2001265a
+0x20013C5E: lea esi, [ebx + 0x4a0]
+0x20013C64: mov ecx, edi
+0x20013C66: fmul dword ptr [esi]
+0x20013C68: fstp dword ptr [ebp - 0x14]
+0x20013C6B: call 0x2001265a
+0x20013C70: fmul dword ptr [esi]
+0x20013C72: mov ecx, edi
+0x20013C74: fstp dword ptr [ebp + 0x10]
+0x20013C77: call 0x2001265a
+0x20013C7C: mov eax, dword ptr [ebp + 0x10]
+0x20013C7F: fmul dword ptr [esi]
+0x20013C81: mov dword ptr [ebp - 0xac], eax
+0x20013C87: mov eax, dword ptr [ebp - 0x14]
+0x20013C8A: fstp dword ptr [ebp - 0xb0]
+0x20013C90: mov dword ptr [ebp - 0xa8], eax
+0x20013C96: lea esi, [ebp - 0xb0]
+0x20013C9C: jmp 0x20013cc8
+
+Store 256 six-float templates
+0x20013CCE: mov edi, dword ptr [ebx + 0x52c]
+0x20013CD4: add edi, dword ptr [ebp + 0xc]
+0x20013CD7: add dword ptr [ebp + 0xc], 0x18
+0x20013CDB: cmp dword ptr [ebp + 0xc], 0x1800
+0x20013CE2: push 6
+0x20013CE4: pop ecx
+0x20013CE5: lea esi, [ebp - 0x34]
+0x20013CE8: rep movsd dword ptr es:[edi], dword ptr [esi]
+0x20013CEA: jl 0x20013965
+
+Emission uses a strict elapsed > interval comparison and skips state 4
+0x20013EAE: fld dword ptr [ebx + 0x494]
+0x20013EB4: fld dword ptr [0x2080af2c]
+0x20013EBA: fcomp dword ptr [0x20063454]
+0x20013EC0: fnstsw ax
+0x20013EC2: test ah, 0x44
+0x20013EC5: jnp 0x20013ed1
+0x20013EC7: fld1 
+0x20013EC9: fdiv dword ptr [0x2080af2c]
+0x20013ECF: fmulp st(1)
+0x20013ED1: cmp dword ptr [ebx + 0x14c], 4
+0x20013ED8: je 0x20014412
+0x20013EDE: fld dword ptr [ebp + 0x7c]
+0x20013EE1: fsub dword ptr [ebx + 0x490]
+0x20013EE7: fcompp 
+0x20013EE9: fnstsw ax
+0x20013EEB: test ah, 0x41
+0x20013EEE: jne 0x20014414
+
+Each spawn consumes template, velocity-variation and age-variation words even for zero variation
+0x20014113: call 0x2005177d
+0x20014118: mov ecx, dword ptr [ebx + 0x52c]
+0x2001411E: and eax, 0xff
+0x20014123: lea eax, [eax + eax*2]
+0x20014126: lea esi, [ecx + eax*8]
+0x20014129: push 0xac
+0x2001412E: mov dword ptr [ebp + 0x70], esi
+0x20014131: call 0x200505f0
+0x20014136: test eax, eax
+0x20014138: pop ecx
+0x20014139: je 0x20014149
+0x2001413B: mov ecx, eax
+0x2001413D: call 0x20012516
+0x20014142: mov edi, eax
+0x20014144: mov dword ptr [ebp + 0x50], edi
+0x20014147: jmp 0x20014150
+0x20014149: and dword ptr [ebp + 0x50], 0
+0x2001414D: mov edi, dword ptr [ebp + 0x50]
+0x20014150: mov dword ptr [ebp + 0x3c], edi
+0x20014153: call 0x2005177d
+0x20014158: mov dword ptr [ebp + 0x4c], eax
+0x2001415B: push 2
+0x2001415D: fild dword ptr [ebp + 0x4c]
+0x20014160: cdq 
+0x20014161: pop ecx
+0x20014162: idiv ecx
+0x20014164: fmul dword ptr [ebx + 0x57c]
+0x2001416A: fmul dword ptr [0x2006501c]
+0x20014170: add edi, 0x14
+0x20014173: test edx, edx
+0x20014175: je 0x20014198
+0x20014177: fadd dword ptr [0x20063458]
+0x2001417D: fld st(0)
+0x2001417F: fmul dword ptr [esi + 0xc]
+0x20014182: fstp dword ptr [ebp + 0x54]
+0x20014185: fld st(0)
+0x20014187: fmul dword ptr [esi + 0x10]
+0x2001418A: fstp dword ptr [ebp + 0x58]
+0x2001418D: fmul dword ptr [esi + 0x14]
+0x20014190: lea esi, [ebp + 0x54]
+0x20014193: fstp dword ptr [ebp + 0x5c]
+0x20014196: jmp 0x200141b7
+0x20014198: fsubr dword ptr [0x20063458]
+0x2001419E: fld st(0)
+0x200141A0: fmul dword ptr [esi + 0xc]
+0x200141A3: fstp dword ptr [ebp]
+0x200141A6: fld st(0)
+0x200141A8: fmul dword ptr [esi + 0x10]
+0x200141AB: fstp dword ptr [ebp + 4]
+0x200141AE: fmul dword ptr [esi + 0x14]
+0x200141B1: lea esi, [ebp]
+0x200141B4: fstp dword ptr [ebp + 8]
+0x200141B7: movsd dword ptr es:[edi], dword ptr [esi]
+0x200141B8: movsd dword ptr es:[edi], dword ptr [esi]
+0x200141B9: movsd dword ptr es:[edi], dword ptr [esi]
+0x200141BA: call 0x2005177d
+0x200141BF: mov dword ptr [ebp + 0x4c], eax
+0x200141C2: push 2
+0x200141C4: cdq 
+0x200141C5: fild dword ptr [ebp + 0x4c]
+0x200141C8: pop ecx
+0x200141C9: idiv ecx
+0x200141CB: fmul dword ptr [ebx + 0x574]
+0x200141D1: fmul dword ptr [ebx + 0x498]
+0x200141D7: fmul dword ptr [0x2006501c]
+0x200141DD: mov ecx, dword ptr [ebp + 0x50]
+0x200141E0: test edx, edx
+0x200141E2: je 0x200141eb
+0x200141E4: fadd dword ptr [ebp + 0x7c]
+0x200141E7: fstp dword ptr [ecx]
+0x200141E9: jmp 0x200141f3
+0x200141EB: fsubr dword ptr [ebp + 0x7c]
+0x200141EE: mov eax, dword ptr [ebp + 0x50]
+0x200141F1: fstp dword ptr [eax]
+
+Emission drops residual interval debt
+0x200143CE: mov eax, dword ptr [ebp + 0x7c]
+0x200143D1: mov dword ptr [ebx + 0x490], eax
+
+Previous update zero sentinel
+0x20014509: fld dword ptr [ebx + 0x27c]
+0x2001450F: mov eax, dword ptr [edi + 4]
+0x20014512: fcomp dword ptr [0x20063454]
+0x20014518: mov esi, dword ptr [edi + 8]
+0x2001451B: mov dword ptr [ebp + 0x3c], eax
+0x2001451E: mov dword ptr [ebp + 0x60], esi
+0x20014521: fnstsw ax
+0x20014523: test ah, 0x44
+0x20014526: jnp 0x200146ea
+
+Early expiry is lifetime minus 0.1
+0x2001452C: fld dword ptr [ebp + 0x7c]
+0x2001452F: fsub dword ptr [esi]
+0x20014531: fld dword ptr [ebx + 0x498]
+0x20014537: fsub dword ptr [0x20064704]
+0x2001453D: fcompp 
+0x2001453F: fnstsw ax
+0x20014541: test ah, 0x41
+0x20014544: jp 0x2001455e
+0x20014546: push esi
+0x20014547: call 0x200516fd
+0x2001454C: pop ecx
+0x2001454D: push edi
+0x2001454E: lea ecx, [ebx + 0x54c]
+0x20014554: call 0x2000eef9
+0x20014559: jmp 0x200146df
+
+Stationary parent acceleration is applied to velocity before position
+0x20014669: fld dword ptr [ebp + 0x7c]
+0x2001466C: fsub dword ptr [ebx + 0x27c]
+0x20014672: fld dword ptr [ebp + 0x24]
+0x20014675: fmul st(1)
+0x20014677: fld dword ptr [ebp + 0x28]
+0x2001467A: fmul st(2)
+0x2001467C: fstp dword ptr [ebp + 0x10]
+0x2001467F: fld dword ptr [ebp + 0x2c]
+0x20014682: fmul st(2)
+0x20014684: fstp dword ptr [ebp + 0x14]
+0x20014687: fadd dword ptr [esi + 0x14]
+0x2001468A: fstp dword ptr [esi + 0x14]
+0x2001468D: fstp st(0)
+0x2001468F: fld dword ptr [ebp + 0x10]
+0x20014692: fadd dword ptr [esi + 0x18]
+0x20014695: fstp dword ptr [esi + 0x18]
+0x20014698: fld dword ptr [ebp + 0x14]
+0x2001469B: fadd dword ptr [esi + 0x1c]
+0x2001469E: fstp dword ptr [esi + 0x1c]
+0x200146A1: fld dword ptr [ebp + 0x7c]
+0x200146A4: mov eax, dword ptr [ebp + 0x7c]
+0x200146A7: fsub dword ptr [ebx + 0x27c]
+0x200146AD: fld st(0)
+0x200146AF: fmul dword ptr [esi + 0x14]
+0x200146B2: fld st(1)
+0x200146B4: fmul dword ptr [esi + 0x18]
+0x200146B7: fstp dword ptr [ebp + 0x1c]
+0x200146BA: fld st(1)
+0x200146BC: fmul dword ptr [esi + 0x1c]
+0x200146BF: fstp dword ptr [ebp + 0x20]
+0x200146C2: fadd dword ptr [esi + 8]
+0x200146C5: fstp dword ptr [esi + 8]
+0x200146C8: fstp st(0)
+0x200146CA: fld dword ptr [ebp + 0x1c]
+0x200146CD: fadd dword ptr [esi + 0xc]
+0x200146D0: fstp dword ptr [esi + 0xc]
+0x200146D3: fld dword ptr [ebp + 0x20]
+0x200146D6: fadd dword ptr [esi + 0x10]
+0x200146D9: fstp dword ptr [esi + 0x10]
+
+Nonzero motion scalar with a zero scaled vector multiplies velocity per update
+0x2001455E: fld dword ptr [ebx + 0x4d8]
+0x20014564: fcomp dword ptr [0x20063454]
+0x2001456A: fnstsw ax
+0x2001456C: test ah, 0x44
+0x2001456F: jnp 0x200145c8
+0x20014571: fld dword ptr [ebx + 0x4cc]
+0x20014577: fcomp dword ptr [0x20063454]
+0x2001457D: fnstsw ax
+0x2001457F: test ah, 0x44
+0x20014582: jp 0x200145c8
+0x20014584: fld dword ptr [ebx + 0x4d0]
+0x2001458A: fcomp dword ptr [0x20063454]
+0x20014590: fnstsw ax
+0x20014592: test ah, 0x44
+0x20014595: jp 0x200145c8
+0x20014597: fld dword ptr [ebx + 0x4d4]
+0x2001459D: fcomp dword ptr [0x20063454]
+0x200145A3: fnstsw ax
+0x200145A5: test ah, 0x44
+0x200145A8: jp 0x200145c8
+0x200145AA: fld dword ptr [ebx + 0x4d8]
+0x200145B0: fld st(0)
+0x200145B2: fmul dword ptr [esi + 0x14]
+0x200145B5: fstp dword ptr [esi + 0x14]
+0x200145B8: fld st(0)
+0x200145BA: fmul dword ptr [esi + 0x18]
+0x200145BD: fstp dword ptr [esi + 0x18]
+0x200145C0: fmul dword ptr [esi + 0x1c]
+0x200145C3: jmp 0x2001469e
+
+Scalar phase uses fmod(current-birth,lifetime)
+0x2000CA10: push ebp
+0x2000CA11: mov ebp, esp
+0x2000CA13: fld dword ptr [ebp + 0x10]
+0x2000CA16: push esi
+0x2000CA17: push edi
+0x2000CA18: sub esp, 0x10
+0x2000CA1B: fstp qword ptr [esp + 8]
+0x2000CA1F: mov esi, ecx
+0x2000CA21: fld dword ptr [ebp + 0xc]
+0x2000CA24: fsub dword ptr [ebp + 8]
+0x2000CA27: fstp qword ptr [esp]
+0x2000CA2A: call 0x20051b10
+0x2000CA2F: mov edx, dword ptr [esi + 0x10c]
+
+Scalar interval is left-inclusive and right-exclusive
+0x2000CA3F: mov ecx, dword ptr [esi + 0x114]
+0x2000CA45: lea esi, [ecx + 8]
+0x2000CA48: fld dword ptr [ebp + 0x10]
+0x2000CA4B: fmul dword ptr [ecx]
+0x2000CA4D: fld st(1)
+0x2000CA4F: fcompp 
+0x2000CA51: fnstsw ax
+0x2000CA53: test ah, 1
+0x2000CA56: jne 0x2000ca68
+0x2000CA58: fld dword ptr [ebp + 0x10]
+0x2000CA5B: fmul dword ptr [esi]
+0x2000CA5D: fld st(1)
+0x2000CA5F: fcompp 
+0x2000CA61: fnstsw ax
+0x2000CA63: test ah, 5
+0x2000CA66: jnp 0x2000ca80
+0x2000CA68: inc edi
+0x2000CA69: add ecx, 8
+0x2000CA6C: add esi, 8
+0x2000CA6F: cmp edi, edx
+0x2000CA71: jl 0x2000ca48
+0x2000CA73: fstp st(0)
+0x2000CA75: mov eax, 0x80004005
+0x2000CA7A: pop edi
+0x2000CA7B: pop esi
+0x2000CA7C: pop ebp
+0x2000CA7D: ret 0x10
+0x2000CA80: fld dword ptr [ebp + 0x10]
+0x2000CA83: fmul dword ptr [ecx]
+0x2000CA85: fld dword ptr [ebp + 0x10]
+0x2000CA88: fmul dword ptr [esi]
+0x2000CA8A: fsub st(1)
+0x2000CA8C: fcom dword ptr [0x20063454]
+0x2000CA92: fnstsw ax
+0x2000CA94: test ah, 0x41
+0x2000CA97: mov eax, dword ptr [ebp + 0x14]
+0x2000CA9A: jne 0x2000cab7
+0x2000CA9C: fld dword ptr [esi + 4]
+0x2000CA9F: fsub dword ptr [ecx + 4]
+0x2000CAA2: fdiv st(1)
+0x2000CAA4: fld st(3)
+0x2000CAA6: fsub st(3)
+0x2000CAA8: fmulp st(1)
+0x2000CAAA: fadd dword ptr [ecx + 4]
+0x2000CAAD: fstp dword ptr [eax]
+0x2000CAAF: fstp st(0)
+0x2000CAB1: fstp st(0)
+0x2000CAB3: fstp st(0)
+0x2000CAB5: jmp 0x2000cac2
+0x2000CAB7: fstp st(0)
+0x2000CAB9: fstp st(0)
+0x2000CABB: fstp st(0)
+0x2000CABD: fld dword ptr [ecx + 4]
+0x2000CAC0: fstp dword ptr [eax]
+
+Color interpolation takes low serialized byte first
+0x2000D583: fld st(2)
+0x2000D585: mov esi, dword ptr [ecx + 4]
+0x2000D588: fsub st(2)
+0x2000D58A: mov eax, 0xff
+0x2000D58F: and esi, eax
+0x2000D591: test esi, esi
+0x2000D593: fdiv st(1)
+0x2000D595: mov dword ptr [ebp + 0x10], esi
+0x2000D598: fst dword ptr [ebp - 8]
+0x2000D59B: fstp st(3)
+0x2000D59D: fstp st(0)
+0x2000D59F: fstp st(0)
+0x2000D5A1: fild dword ptr [ebp + 0x10]
+0x2000D5A4: jge 0x2000d5ac
+0x2000D5A6: fadd dword ptr [0x2006346c]
+0x2000D5AC: movzx esi, byte ptr [ecx + 5]
+0x2000D5B0: mov dword ptr [ebp + 0x10], esi
+0x2000D5B3: movzx esi, byte ptr [ecx + 6]
+0x2000D5B7: fild dword ptr [ebp + 0x10]
+0x2000D5BA: movzx ecx, byte ptr [ecx + 7]
+0x2000D5BE: fstp dword ptr [ebp + 0xc]
+0x2000D5C1: mov dword ptr [ebp + 0x10], esi
+0x2000D5C4: fild dword ptr [ebp + 0x10]
+0x2000D5C7: mov dword ptr [ebp + 0x10], ecx
+0x2000D5CA: fild dword ptr [ebp + 0x10]
+0x2000D5CD: mov ecx, dword ptr [edx + 4]
+0x2000D5D0: and ecx, eax
+0x2000D5D2: test ecx, ecx
+0x2000D5D4: fstp dword ptr [ebp + 8]
+0x2000D5D7: mov dword ptr [ebp + 0x10], ecx
+
+Interpolated color alpha is inverted
+0x2000D6E3: mov eax, dword ptr [ebp + 0x14]
+0x2000D6E6: fld dword ptr [ebp + 0x10]
+0x2000D6E9: mov ecx, dword ptr [ebp + 0xc]
+0x2000D6EC: fstp dword ptr [eax]
+0x2000D6EE: mov dword ptr [eax + 4], ecx
+0x2000D6F1: fstp dword ptr [eax + 8]
+0x2000D6F4: fld1 
+0x2000D6F6: fsub dword ptr [ebp + 8]
+0x2000D6F9: fstp dword ptr [eax + 0xc]
+
+Emitter premultiplies all RGB lanes by returned alpha
+0x20012A46: fld dword ptr [ebp - 0x5c]
+0x20012A49: fld dword ptr [ebp - 0x68]
+0x20012A4C: fmul st(1)
+0x20012A4E: fstp dword ptr [ebp - 0x58]
+0x20012A51: fld dword ptr [ebp - 0x64]
+0x20012A54: fmul st(1)
+0x20012A56: fstp dword ptr [ebp - 0x54]
+0x20012A59: fld dword ptr [ebp - 0x60]
+0x20012A5C: fmul st(1)
+0x20012A5E: fstp dword ptr [ebp - 0x50]
+
+Vertex color rounds and packs the returned lanes
+0x20012B4A: fmul dword ptr [0x20063460]
+0x20012B50: fadd dword ptr [0x20063468]
+0x20012B56: call 0x20051688
+0x20012B5B: mov ecx, dword ptr [ebp - 4]
+0x20012B5E: shl eax, 8
+0x20012B61: or eax, dword ptr [ebp - 8]
+0x20012B64: shl eax, 8
+0x20012B67: or eax, edi
+0x20012B69: shl eax, 8
+0x20012B6C: or eax, esi
+0x20012B6E: mov dword ptr [ecx + 0x3c], eax
+
+Implemented subset: mode 2, one particle per burst, density 1, stationary identity-rotation null parent, zero authored variation; scalar/color curves and vertex premultiplication. This does not prove all FX lifecycle/culling, renderer depth/geometry, initial whole-engine RNG state, optimized/x87 bit parity or full visual parity.

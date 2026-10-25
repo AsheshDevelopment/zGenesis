@@ -1,0 +1,44 @@
+{
+  "executable_sha256": "e9357b0201800ddd9543171a9d231f8c642c14f28e7e736b24e7b9947e3aab68",
+  "runtime_processes": 1,
+  "world_group": 0,
+  "mandara_route": 18,
+  "required_model": "MON_Aprah_Varaha_Raja.tmb",
+  "saved_cell": [
+    498,
+    335
+  ],
+  "source": "read-only backup of existing offline roster",
+  "checks": [
+    "face framing",
+    "hair framing",
+    "cancel creation",
+    "select saved character",
+    "Mandara entry",
+    "30 settled world frames",
+    "clean exit"
+  ],
+  "normal_save_sha256_unchanged": "8748b43a709161c4acf171739cf3f6f9f7fc1d35def9ace69d13f3e7e63edcea",
+  "captures": [
+    {
+      "file": "saved-roster-face-camera.png",
+      "sha256": "f52d4cbcdbb9ab3b21036fc234b0100b0f9a931f21c9651d2749036e04efc0c4"
+    },
+    {
+      "file": "saved-roster-hair-camera.png",
+      "sha256": "93143dfd1876d3825f03643ffaca04cc6b4d554df5672e0e17e310798a9770d8"
+    },
+    {
+      "file": "saved-roster-native-loading.png",
+      "sha256": "40205e921c8f70cb903b57e223c310c804a257a309bb5e008df6cda0b14b240a"
+    },
+    {
+      "file": "saved-roster-saved-character-info.png",
+      "sha256": "a1b859f079e5c6c51ccb9bc60c150af09cad339bd10d496590aae136e288be10"
+    },
+    {
+      "file": "saved-roster-world.png",
+      "sha256": "c463811c70319b7128da876634a8d97dd6e5244a9ae9d6e22f57d9fa255b064d"
+    }
+  ]
+}

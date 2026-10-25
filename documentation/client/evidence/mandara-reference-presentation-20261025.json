@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-25",
+  "build": "Release x64 OGRE Classic 14.6.1 D3D11 SDL3",
+  "sha256": "fa3251494312ca21179d58c50f117300e0f8cd157b4a0a25f35d462f905d301f",
+  "outputs": {
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "launcher_sha256": "fa3251494312ca21179d58c50f117300e0f8cd157b4a0a25f35d462f905d301f",
+      "hpk_unchanged": 148,
+      "userdata_unchanged": 46
+    },
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "launcher_sha256": "fa3251494312ca21179d58c50f117300e0f8cd157b4a0a25f35d462f905d301f",
+      "hpk_unchanged": 148,
+      "userdata_unchanged": 0
+    }
+  },
+  "files_per_output": 1731,
+  "bytes_per_output": 704267201,
+  "cpu": {
+    "existing_skinning_parts": 15,
+    "normal_tribes": 8,
+    "normal_parts": 94,
+    "normal_vertices": 5935,
+    "scene_checks": 8876,
+    "field_placements": 55,
+    "scene_warning_count": 0,
+    "hlsl_compile_and_link": "passed"
+  },
+  "implemented": [
+    "separate complete sky backdrop from cloud caps",
+    "conservative focused 2048 shadow projection",
+    "normalized 3x3 tent shadow filtering",
+    "weighted inverse-transpose animated normals"
+  ],
+  "preserved": [
+    "original cloud/environment assets and map time settings",
+    "native terrain detail multiplication and map lighting values",
+    "map world fog and independent sky-fog setting",
+    "existing shadow distance/resolution/caster rules"
+  ],
+  "runtime": "not launched; visual result, camera stability and FPS unverified",
+  "broader_goal": "paused; no visual acceptance gate closed",
+  "git": "local uncommitted changes; no commit/push requested",
+  "local_logs": "C:\\_GitHub\\tantra-dev-main\\.migration-local\\mandara-visual-20261025",
+  "reference_version": "KathanaGame.exe file/product 4.0.1.7",
+  "static_package": "Both outputs passed: 1731 files, x64, imports resolved, original layout, exact nine-frame icon. Runtime skipped."
+}

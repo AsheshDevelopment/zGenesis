@@ -1,0 +1,121 @@
+{
+  "date": "2026-10-25",
+  "scope": "Ordinary melee durability, live status recalculation, item-info codec and SQLite persistence; full client remains incomplete",
+  "implemented": [
+    "compiled original UpdateEquipDur",
+    "native main-hand and incoming armor call order",
+    "native off-hand wear API",
+    "shared combat/armor RNG",
+    "native strict-below-zero recalculation",
+    "36-byte MSG_ITEM codec and frontend equipment-info dispatch",
+    "guarded suppression of the source unassigned armor-slot packet",
+    "live status synchronization before later actors in a tick",
+    "ordered notifications with end-of-tick persistence"
+  ],
+  "rules": {
+    "weapon_loss": 1,
+    "armor_minimum_denominator": 50,
+    "armor_weights_percent": [
+      20,
+      15,
+      20,
+      10,
+      10,
+      15,
+      10
+    ],
+    "indestructible": 25500,
+    "break_condition": "subtraction below zero, then clamp to zero",
+    "zero_damage_and_empty_slot_rolls": "original RNG step retained",
+    "offhand_attack_integration": "full dual-hit pipeline remains pending"
+  },
+  "wire": {
+    "id": "0xB100",
+    "record": "MSG_ITEM",
+    "bytes": 36,
+    "header_bytes": 12,
+    "body_bytes": 24,
+    "item_offset": 20,
+    "item_bytes": 16,
+    "client_zone_declarations_match": true,
+    "source_bytes_and_rejection_checks": "passed"
+  },
+  "cpu": {
+    "wear_assertions": 122,
+    "authority_assertions": 115,
+    "stat_regression_assertions": 129,
+    "effect_regression_assertions": 108,
+    "gameplay_fixture": "passed CPU movement/inventory/melee/death/respawn/revival",
+    "authority_fixture": "C:\\_GitHub\\tantra-dev-main\\_remake\\build-migration\\skill-profiles\\skill-authority-177395739351700",
+    "group": 1,
+    "zone": 1,
+    "account": "ashesh",
+    "sqlite": {
+      "quick_check": "ok",
+      "foreign_key_errors": 0,
+      "characters": 1,
+      "full_worn_item_record_checked_by_cpp": true
+    },
+    "initial_fixture_failure": "Hardcoded starter-item ID assumption; replaced with exact carried-item conservation check. No native crash established."
+  },
+  "undefined_source_correction": {
+    "source": "empty armor roll reaches AddMessage without assigning byIndex/kItem",
+    "adapter": "zero-initialize record, mark unassigned index, suppress only that undefined update",
+    "wear_and_rng_preserved": true
+  },
+  "build": {
+    "configuration": "Release",
+    "x64": true,
+    "launcher": "C:\\_GitHub\\tantra-dev-main\\_client\\HTLauncher.exe",
+    "sha256": "efbad7c77121ded786ce29d6c5b8368d67f22fd6eb6ef94cc22e4fb4dbd0e78c",
+    "bytes": 3393024,
+    "manifest_files": 1515,
+    "payload_bytes": 669703922,
+    "static_verification": "FINAL_CLIENT_VERIFIED files=1515 original_layout=verified x64=verified imports=resolved icon_frames=9 icon_payload=exact title=not-run relocation=not-run",
+    "game_launches_this_checkpoint": 0
+  },
+  "preservation": {
+    "hpk_checked_unchanged": 148,
+    "normal_userdata_absent": true,
+    "legacy": {
+      "normal_new_workspace_userdata_absent": true,
+      "native_client": {
+        "path": "C:\\_GitHub\\TantraSrc\\TantraClient\\HTLauncher.exe",
+        "sha256": "03d4587c4f87eeb71eb8be288b765836ccf8a1f11d49760d48239c6496c73903",
+        "unchanged": true
+      },
+      "previous_distribution": {
+        "path": "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe",
+        "sha256": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34",
+        "unchanged": true
+      },
+      "private_save": {
+        "path": "C:\\_GitHub\\TantraSrc\\_client\\userdata\\offline\\tantra.sqlite3",
+        "sha256": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f",
+        "unchanged": true
+      }
+    }
+  },
+  "source_sha256": {
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\CMOB.CPP": "3421c51069c245603784168aa8ea2c276798d480b9749d8e9124734ad0715a46",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\CMob2.cpp": "50cd5a0bbe8d5287d44ced2bd893013f33c8c472b09982890db11caee3c65e8b",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\Basedef.h": "06d0028f615afcc34c0f8aa18d9dfe8af5c9a748ca5144b01dff8d8d0941ed22",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\Basedef.h": "b6954bb781fb4836518192e8b010a54fd21f340f7e076e4bfa9eae3d0097073c"
+  },
+  "logs": {
+    "wear-tests.log": "7b99cbd42e9de60f9eee722854408c3ecb3e2d5a5f0ff82472c268359d091f5c",
+    "wear-authority-tests.log": "312625556186cb2cb725b52c882169526eb5b1944130029e8970de89fbc5163d",
+    "wear-final-regressions.log": "feda0f7d1983080219158a96cc1eb92ad273af343c39128f69091bdae0ee13da",
+    "wear-client-build-stage.log": "b83a8dd885dc1d733234b4ca0c73dcaf99ecb691939424b30fc6cc9c0b57eb9d",
+    "wear-client-static.log": "549cd8853719cf0dddf07795d347443f8eb448d2690dd015dd6630d9adbcbd1a"
+  },
+  "remaining": [
+    "rendered durability/broken-item/repair acceptance",
+    "complete dual-hit and targeted/area skill wear ordering",
+    "full native item-result/tooltip coverage",
+    "charged/timed item phases, drops, ownership and decay",
+    "online authority acceptance",
+    "remaining 14-phase client plan"
+  ],
+  "git": "Local uncommitted continuation; no new push. Server, original references and SDL3 remain unchanged."
+}

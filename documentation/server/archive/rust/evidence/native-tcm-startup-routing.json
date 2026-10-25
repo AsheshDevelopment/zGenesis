@@ -1,0 +1,131 @@
+{
+  "checked_at": "2026-10-23T20:50:06.026789+00:00",
+  "component": "Actual TCM startup, cell heights/events and native BASE_GetRoute primitive",
+  "whole_goal_complete": false,
+  "npc_walk_loop_connected": false,
+  "game_ready": false,
+  "new_cpu_tests_passed": 2,
+  "route_cases": 2880,
+  "synthetic_route_cases": 6,
+  "native_cell_count": 1048576,
+  "native_cell_fingerprints": {
+    "heights": "6605082316536838323",
+    "properties": "14977080742881948821",
+    "events": "8842432114623390501",
+    "influence": "12866473410273778437"
+  },
+  "synthetic_cell_fingerprints": {
+    "heights": "13776390871405411134",
+    "properties": "13166695848164240108",
+    "events": "16406537091127898150",
+    "influence": "12866473410273778437"
+  },
+  "runtime_uses_propagated_influence": false,
+  "runtime_uses_native_early_return": true,
+  "missing_cell_defaults": [
+    0,
+    0,
+    0
+  ],
+  "native_initial_spawns_compared": 1702,
+  "native_scheduler_ticks_compared": 256,
+  "source_timed_rng": {
+    "state": 1270257614,
+    "draws": 585143
+  },
+  "historical_propagated_fixture": "fixtures/native-initial-generation-propagated.json",
+  "historical_fixture_sha256": "8d2994eb132cb7ec8ba6f03dc8118828e9452c4978f9ac35a96b5e986d5a8d27",
+  "fixture_sha256": {
+    "native-npc-navigation.json": "ed68dde0ab76268e7a298da8b772fb3e8c6ebf20c79138eb660b40e31ed305f7",
+    "native-zone-synthetic.tcm": "b9134e7f525bf79a04652a36ca4177cfff0148d9288ee14dfc898b6f124e366d",
+    "native-initial-generation.json": "6275b9a336656a47c36c6207f68eea91e6e0070761399281ea3e8a5addbc2289"
+  },
+  "packaged_world_validator": {
+    "generators": 508,
+    "influence_fingerprint": 12866473410273778437,
+    "native_templates": 964,
+    "next_free_handle": 2719,
+    "npc_actor_simulation_ready": false,
+    "reserved_monsters": 1702
+  },
+  "packaged_manual_generation_validator": {
+    "game_ready": false,
+    "initialized": 1702,
+    "live_actor_publication": false,
+    "placed": 1701,
+    "placement_failed": 1,
+    "pop_callbacks": false,
+    "pop_dispatch_checked": true,
+    "pop_scope": "native empty bindings verified per actor",
+    "random_draws": 585143,
+    "random_state": 1270257614,
+    "scope": "ordered route, NPC Init, placement before Pop"
+  },
+  "manual_validator_boundary": "File-order component walk; one placement failure is reported. It is not the original timed scheduler or a live gameplay test.",
+  "source_files_unchanged": {
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\CMob.cpp": "3421c51069c245603784168aa8ea2c276798d480b9749d8e9124734ad0715a46",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\server.cpp": "6639ca68a1e18c121e1e8a60fd2c7bbdd8f07b1d73540f645509e58ad9b6da7a",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\Basedef.h": "06d0028f615afcc34c0f8aa18d9dfe8af5c9a748ca5144b01dff8d8d0941ed22",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\HTParamMgr.cpp": "e8574693579ed3ed3da0d4438e3c8ac53228f600886ac58c4811fb8e4328ee11",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\HTUtilLib.lib": "b9ea532bd1a263065d9684a5fc6f97a05aef81b5c3c0ffc44fa9816e51e40259",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\HTServerSetting.cpp": "4415768a055b2d2bae74fec568a3c0ed313e68302bf793307e0163a9c7f5f5e9",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\GetFunc.cpp": "eae98b7130fef718777ef716746b1916280a7a4a97eeb730efdc0f1ee2537cad",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\Basedef.cpp": "9f245bc03104e868189065d272b93ca9b9669827b93829dcffc6ec6e7074d0ce",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\CMOB.CPP": "3421c51069c245603784168aa8ea2c276798d480b9749d8e9124734ad0715a46",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\SendFunc.cpp": "1db3811218dfafd279df8ce67742df816745a67298e0c50147d2d71a04a501d2",
+    "C:\\_GitHub\\TantraSrc\\Tantra\\zone\\TNInfluenceMap.cpp": "324aa845b8cc064ee7bfb813c3fa5e9b2433c37942a3840becb47c24bf43eb26"
+  },
+  "zone_source_hashes_unchanged": {
+    "GenerationArea.idx": "67494f868d7b96a335c7cf49a53f6d19a4873da2f941268ab2a1370f8c32f13d",
+    "MapData.tcm": "b82dbade3898f6576014832c607bd628c68d7976704394bf95c021211787b61e",
+    "NPCGener.txt": "0ce999a87789cafd74a0ce3995f1a63f52fd0151599a1cfe79189c38ae7b6da5",
+    "Data/Settings.ini": "f59216b863829baa355a9f66727b0df35af93a4beca1137a2e1d6ca2c43110a6",
+    "Data/WorldSettings.ini": "a8479867b50a89d896a8044708236363d7e08c96820c7e4a554780fa4b0db6b5"
+  },
+  "normal_client_files_unchanged": {
+    "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34",
+    "C:\\_GitHub\\TantraSrc\\_client\\userdata\\offline\\tantra.sqlite3": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f"
+  },
+  "binaries_current": [
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-server-manager.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "662236951760f7580d065edb360cf2611c8fdc18a7ca25255e2bb5153a98146a"
+    },
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-zone.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "07b72556436d32255d71a88329e03856ee0af5c97ae3f5eee1b15a9af075cce3"
+    },
+    {
+      "file": "C:\\_GitHub\\TantraSrc\\_server\\bin\\tantra-service.exe",
+      "machine": "x64",
+      "configuration": "Debug",
+      "sha256": "33745383856681c59049f1688028b1e9c422d086bb252d6957206d0758e10926"
+    }
+  ],
+  "checks": [
+    "2 new cell/startup/navigation tests passed",
+    "3 entry tests passed across retained runs; old blocked-default assertion corrected to compiled native zero default",
+    "2 existing movement tests passed, including 96 native speed-guard cases",
+    "1 full TCM-startup/initial-generation test passed across 1702 spawns/256 ticks",
+    "Clippy services/zone/manager all-targets warnings denied passed",
+    "workspace Debug x64 build and packaging passed",
+    "packaged world/manual generation validators completed without listener",
+    "cargo fmt --check and git diff --check _server passed"
+  ],
+  "reference_boundary": "Original BASE_InitializeAttribute/BASE_GetRoute compiled with consumed deployed 76/5/16-byte layout adapter. Not complete original SDK ABI, unsafe malformed-file behavior or full original-server binary parity. Existing NPC Init correction/boundaries still apply.",
+  "earlier_socket_capture": "test-output/native-population-1792786542-43524",
+  "earlier_socket_capture_tests_current_startup": false,
+  "zone_processes_started": 0,
+  "socket_tests_rerun": false,
+  "game_client_launched": false,
+  "manager_gui_launched": false,
+  "pending": [
+    "Source GetNextPos/StandingBy, eight-tick processing, enemy detection and ordered callbacks",
+    "Actual NPC movement, aggro, combat and death/reward lifecycle",
+    "Current socket/frontend acceptance and all remaining six-area requirements"
+  ]
+}

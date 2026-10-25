@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-25",
+  "status": "built_staged_runtime_visual_acceptance_pending",
+  "installed": [
+    {
+      "root": "C:\\_GitHub\\tantra-dev-main\\_client",
+      "executable_sha256": "898a14addc6cb852dbe2aa360b06bfa7e45a18d322975b9e9868631db2f951bd",
+      "protected_files_unchanged": 148,
+      "hpk_files_unchanged": 148,
+      "package_static_verified": true
+    },
+    {
+      "root": "C:\\_GitHub\\TantraSrc\\_client",
+      "executable_sha256": "898a14addc6cb852dbe2aa360b06bfa7e45a18d322975b9e9868631db2f951bd",
+      "protected_files_unchanged": 197,
+      "hpk_files_unchanged": 148,
+      "package_static_verified": true
+    }
+  ],
+  "ground_billboard_mode": 2,
+  "ground_plane_axes": {
+    "right": [
+      1,
+      0,
+      0
+    ],
+    "up": [
+      0,
+      0,
+      1
+    ]
+  },
+  "hud": {
+    "player_panel": [
+      216,
+      66
+    ],
+    "target_panel": [
+      216,
+      42
+    ],
+    "bar_width": 210,
+    "levels": "authoritative byteLevel and character level",
+    "target_drag_persistence": "session only; original Interface.sys excludes the new panel id"
+  },
+  "name_raster_lift_pixels": 8,
+  "shadow_max_flat_ground_length_in_actor_heights": 1.5,
+  "grass": {
+    "authored_flags_preserved": 4712,
+    "continuous_alpha": true,
+    "depth_test": true,
+    "depth_write": false,
+    "fade_from_startup_camera_grassalphaarea": true,
+    "supplied_fade_source_units": 40,
+    "static_batches": 3721,
+    "object_triangles": 380497
+  },
+  "tests": {
+    "scene_cpu_checks": 9152,
+    "world_presentation_cpu_checks": 5840,
+    "render_cpu_checks": 6960,
+    "exact_grass_shader_compile_and_link": true
+  },
+  "game_launched": false,
+  "renderer_launched": false,
+  "audio_device_started": false,
+  "commit_created": false,
+  "push_performed": false,
+  "logs": "C:\\_GitHub\\tantra-dev-main\\.migration-local\\reference-presentation-20261025",
+  "limitations": [
+    "Actual temporal grass stability and reference pixel matching require an offline runtime acceptance session.",
+    "Ground ring is planar, not a fully terrain-conforming decal mesh on steep slopes.",
+    "Shadow length bound describes flat receivers."
+  ]
+}

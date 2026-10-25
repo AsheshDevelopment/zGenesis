@@ -1,0 +1,67 @@
+{
+  "recorded_utc": "2026-10-24T22:59:06.694417+00:00",
+  "change": "Bound nearby actor/loot creation between SDL event-pump frames; initial population gate before gameplay",
+  "budget": {
+    "max_creations_per_frame": 2,
+    "soft_microseconds_per_update": 4000,
+    "first_creation_always_allowed": true,
+    "single_upload_indivisible": true,
+    "background_io": false
+  },
+  "cpu": {
+    "test": "world_actor_loading",
+    "status": "passed",
+    "checks": 167,
+    "source_actors": 1718,
+    "initial_eligible_actors": 4,
+    "initial_frames_with_6ms_double_uploads": 4,
+    "relocation_frames": 24,
+    "renderer": "CPU test double; no GPU uploads"
+  },
+  "camera": {
+    "test": "native_main_camera_source_order",
+    "status": "passed",
+    "cases": 1440,
+    "original_functions": 18,
+    "gameplay_update": 11,
+    "delayed_vs_uninterrupted_sequence": "equal in actor-loading CPU fixture"
+  },
+  "release": {
+    "configuration": "Release x64",
+    "launcher": "C:\\_GitHub\\tantra-dev-main\\_client\\HTLauncher.exe",
+    "sha256": "3ebc43ae3569b554f246cfe394451716edad592ab70ffb0e3d9adf5d26b5056d",
+    "bytes": 3485696,
+    "build_stage_hashes_equal": true,
+    "manifest_files": 1629,
+    "manifest_bytes": 676130650,
+    "closure_files": 2462,
+    "static_verifier": "passed --skip-runtime",
+    "runtime_started_by_agent": false
+  },
+  "user_report": {
+    "updated_build_reaches_mandara": true,
+    "movement_camera_responsiveness": "awaiting confirmation",
+    "build_sha_of_report": "not independently instrumented; report precedes this rebuild"
+  },
+  "limits": [
+    "No current-build renderer, frame-time benchmark or live stack captured",
+    "Old deployment hang cause remains unproven",
+    "Single upload can exceed soft budget",
+    "Full loading, collision and Mandara services acceptance remain open"
+  ],
+  "logs": {
+    ".migration-local/actor-loading-client-build.log": {
+      "path": ".migration-local/actor-loading-client-build.log",
+      "sha256": "af95e7df400a4ac60060a4d3936b8b1d1f07efa887dbad597491d5ba3344911b"
+    },
+    ".migration-local/actor-loading-cpu.log": {
+      "path": ".migration-local/actor-loading-cpu.log",
+      "sha256": "4eb925fa0e231ee15dab8c8bc82ad45f9437e54a64cbdfa430bde58819754fc7"
+    },
+    ".migration-local/actor-loading-static.log": {
+      "path": ".migration-local/actor-loading-static.log",
+      "sha256": "0b28a8f07bd2f787bed132c537b5b674348831cf86208842bb419b88f5b7ef8f"
+    }
+  },
+  "git_state": "New source/runtime/documentation changes are local and uncommitted; prior published checkpoint remains available"
+}

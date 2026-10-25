@@ -1,0 +1,122 @@
+{
+  "recorded_utc": "2026-10-25T03:04:46.917626+00:00",
+  "error": "Cannot apply native PC socket animation: FApron",
+  "cause": "Adjacent body-animation fields were incorrectly supplied as apron clips",
+  "native_first_sequence_columns": {
+    "male_body_front_back": [
+      1,
+      37,
+      38
+    ],
+    "female_body_front_back": [
+      4,
+      39,
+      40
+    ]
+  },
+  "native_sources": {
+    "_references/Tantra/HTlauncher/HTResMgr.h": "2587864224a08ffadd4c9480d9078f01004c8375985ec2ea673aeb1521e420ef",
+    "_references/Tantra/HTlauncher/HTEngineHandler.cpp": "dec2f71e6b25091e54c7742d8d85a00b4c4658865cfaff61b0d12f4836bf5500"
+  },
+  "movement": "Accepted ground retargets retain worldAnimationState unless a skill owned the pose; the existing state-change guard preserves active locomotion playback",
+  "cpu": {
+    "canonical_passed": true,
+    "staged_passed": true,
+    "checks_each": 2320,
+    "body_apron_bindings_each": 864,
+    "attack_rows": 12,
+    "avatar_types": 8,
+    "sequences": 3,
+    "graphics_device": false,
+    "scope": "Actual resource binding/CPU pose samples; movement path has source/build verification, not rendered acceptance"
+  },
+  "release": {
+    "configuration": "Release x64",
+    "sha256": "9b39b3b3ee9f59cfdc8a47a27e00c51d7a748a2f1a24a7949bce8bf079ba5c63",
+    "bytes": 3496960,
+    "outputs": [
+      "C:/_GitHub/tantra-dev-main/_client",
+      "C:/_GitHub/TantraSrc/_client"
+    ],
+    "files": 1677,
+    "manifest_bytes": 677047938,
+    "closure_files": 2510,
+    "hashes_equal_to_build": true,
+    "static_verifier": "Both outputs passed --skip-runtime",
+    "new_game_started": false
+  },
+  "added_clips": {
+    "apron": [
+      "resource/object/PC/Ani/PC_COM_BApron_ATK_1H_WEAPON_01.tab",
+      "resource/object/PC/Ani/PC_COM_BApron_ATK_1H_WEAPON_02.tab",
+      "resource/object/PC/Ani/PC_COM_BApron_ATK_1H_WEAPON_03.tab",
+      "resource/object/PC/Ani/PC_COM_BApron_ATK_1H_WEAPON_04.tab",
+      "resource/object/PC/Ani/PC_COM_BApron_ATK_1H_WEAPON_05.tab",
+      "resource/object/PC/Ani/PC_COM_BApron_ATK_2H_AXE_02.tab",
+      "resource/object/PC/Ani/PC_COM_BApron_ATK_2H_AXE_03.tab",
+      "resource/object/PC/Ani/PC_COM_BApron_ATK_Falchion_01.tab",
+      "resource/object/PC/Ani/PC_COM_BApron_ATK_Falchion_02.tab",
+      "resource/object/PC/Ani/PC_COM_BApron_ATK_Falchion_03.tab",
+      "resource/object/PC/Ani/PC_COM_BApron_ATK_GLOVE_02.tab",
+      "resource/object/PC/Ani/PC_COM_BApron_ATK_SPEAR_01.tab",
+      "resource/object/PC/Ani/PC_COM_BApron_ATK_SPEAR_02.tab",
+      "resource/object/PC/Ani/PC_COM_FApron_ATK_1H_WEAPON_01.tab",
+      "resource/object/PC/Ani/PC_COM_FApron_ATK_1H_WEAPON_02.tab",
+      "resource/object/PC/Ani/PC_COM_FApron_ATK_1H_WEAPON_03.tab",
+      "resource/object/PC/Ani/PC_COM_FApron_ATK_1H_WEAPON_04.tab",
+      "resource/object/PC/Ani/PC_COM_FApron_ATK_1H_WEAPON_05.tab",
+      "resource/object/PC/Ani/PC_COM_FApron_ATK_2H_AXE_02.tab",
+      "resource/object/PC/Ani/PC_COM_FApron_ATK_2H_AXE_03.tab",
+      "resource/object/PC/Ani/PC_COM_FApron_ATK_Falchion_01.tab",
+      "resource/object/PC/Ani/PC_COM_FApron_ATK_Falchion_02.tab",
+      "resource/object/PC/Ani/PC_COM_FApron_ATK_Falchion_03.tab",
+      "resource/object/PC/Ani/PC_COM_FApron_ATK_GLOVE_02.tab",
+      "resource/object/PC/Ani/PC_COM_FApron_ATK_SPEAR_01.tab",
+      "resource/object/PC/Ani/PC_COM_FApron_ATK_SPEAR_02.tab",
+      "resource/object/PC/Ani/PC_FCOM_BApron_ATK_2H_SWORD_01.tab",
+      "resource/object/PC/Ani/PC_FCOM_BApron_ATK_2H_SWORD_02.tab",
+      "resource/object/PC/Ani/PC_FCOM_BApron_ATK_2H_SWORD_03.tab",
+      "resource/object/PC/Ani/PC_FCOM_FApron_ATK_2H_SWORD_01.tab",
+      "resource/object/PC/Ani/PC_FCOM_FApron_ATK_2H_SWORD_02.tab",
+      "resource/object/PC/Ani/PC_FCOM_FApron_ATK_2H_SWORD_03.tab",
+      "resource/object/PC/Ani/PC_MCOM_BApron_ATK_2H_SWORD_01.tab",
+      "resource/object/PC/Ani/PC_MCOM_BApron_ATK_2H_SWORD_02.tab",
+      "resource/object/PC/Ani/PC_MCOM_BApron_ATK_2H_SWORD_03.tab",
+      "resource/object/PC/Ani/PC_MCOM_FApron_ATK_2H_SWORD_01.tab",
+      "resource/object/PC/Ani/PC_MCOM_FApron_ATK_2H_SWORD_02.tab",
+      "resource/object/PC/Ani/PC_MCOM_FApron_ATK_2H_SWORD_03.tab",
+      "resource/object/PC/Ani/PC_RAK_BApron_ATK_BOW.tab",
+      "resource/object/PC/Ani/PC_RAK_FApron_ATK_BOW.tab"
+    ],
+    "hair": [
+      "resource/object/PC/Ani/PC_COM_Hair01_ATK_2H_AXE_02.tab",
+      "resource/object/PC/Ani/PC_COM_Hair01_ATK_Falchion_02.tab",
+      "resource/object/PC/Ani/PC_COM_Hair01_ATK_Falchion_03.tab",
+      "resource/object/PC/Ani/PC_COM_Hair01_ATK_GLOVE_02.tab",
+      "resource/object/PC/Ani/PC_FCOM_Hair01_ATK_2H_SWORD_02.tab",
+      "resource/object/PC/Ani/PC_FCOM_Hair01_ATK_2H_SWORD_03.tab",
+      "resource/object/PC/Ani/PC_MCOM_Hair01_ATK_2H_SWORD_02.tab",
+      "resource/object/PC/Ani/PC_MCOM_Hair01_ATK_2H_SWORD_03.tab"
+    ]
+  },
+  "preservation": {
+    "userdata_files": 44,
+    "packs": 148,
+    "unchanged": true,
+    "launcher_sha256": "9b39b3b3ee9f59cfdc8a47a27e00c51d7a748a2f1a24a7949bce8bf079ba5c63"
+  },
+  "remaining": [
+    "Rendered basic attack and repeated walk/run retarget acceptance",
+    "Random/combo selection unchanged",
+    "Full client goal remains paused and incomplete"
+  ],
+  "logs": {
+    ".migration-local/pc-attack-fix-cpu.log": "9b46d9a68b98a5f06faee5029404dc0cf19a58df99fe7b1107523f25c01207cf",
+    ".migration-local/pc-attack-fix-staged-cpu.log": "e230b03cc30870c5c56d4378f3d9fff0f09a57a6c8b9b7192a49eaf525f9e1d2",
+    ".migration-local/pc-attack-fix-client-build.log": "810b7eda2892f52dc5169a41e2643618b2a7d29951d5d33b874983c1d8a87fd3",
+    ".migration-local/pc-attack-fix-static.log": "43ab8290983f5ebc90212a0957cb4efc414c1eb8c1da55768fbde4866a8cdbee",
+    ".migration-local/pc-attack-fix-legacy-stage.log": "f03414b305147849d8636620b871f9eb3a38b0307104037082ab6e2eac8fe1f3",
+    ".migration-local/pc-attack-fix-legacy-static.log": "43ab8290983f5ebc90212a0957cb4efc414c1eb8c1da55768fbde4866a8cdbee"
+  },
+  "git_state": "Local and uncommitted"
+}

@@ -1,0 +1,167 @@
+{
+  "checked_at": "2026-10-23T23:30:27.842757+00:00",
+  "whole_plan_complete": false,
+  "game_ready": false,
+  "checks": {
+    "login-cpu.log": {
+      "sha256": "6ae2afb37f69754f388aab04b986b673f3aa5d9d0931508e39650d840687dbab",
+      "passed": [
+        "core",
+        "login_cpu"
+      ]
+    },
+    "login-runtime-corrected.log": {
+      "sha256": "a446179c0d5688d79f16b2069b6046b8516dae30ba014204286ce67135687722",
+      "passed": [
+        "login_runtime"
+      ]
+    },
+    "rules-debug-cpu.log": {
+      "sha256": "6b5cd632b12d0f20474ed569c39f09dd54c45c80b9a9518a27ca4763c0946645",
+      "passed": [
+        "native_probability",
+        "native_status"
+      ]
+    },
+    "login-rules-release-cpu.log": {
+      "sha256": "90aeb4d6121ce56e440475167c4ae9b15b6f87c1ad7bd5b54a366dc74f5d70cc",
+      "passed": [
+        "core",
+        "store_credentials",
+        "store_transactions",
+        "store_ownership",
+        "store_recovery",
+        "store_migration",
+        "store_backup",
+        "store_restore",
+        "login_cpu",
+        "native_probability",
+        "native_status"
+      ]
+    },
+    "service-settings-cpu.log": {
+      "sha256": "e8d0776374e0778cffa8cb19e669750d479d31656b117f1702c584a1a1e04bd9",
+      "passed": [
+        "core",
+        "login_cpu"
+      ]
+    },
+    "profile-release-cpu.log": {
+      "sha256": "85f07b1d3e171bb37c1d3c232941e2b3dcf38a01c4ce8eba5d75a0a9cab9f958",
+      "passed": [
+        "core",
+        "login_cpu"
+      ]
+    }
+  },
+  "recorded_native_status_cases": 24,
+  "probability_comparisons": 664211,
+  "current_packaged_binaries": {
+    "TantraService.exe": {
+      "sha256": "7df23a67cc97bf3daf302b5f1c2506c8d8ffcf189eb6e07b32e95c663bdfeb0b",
+      "bytes": 2300928,
+      "machine": "x64"
+    },
+    "TantraServerManager.exe": {
+      "sha256": "89a07c17bc1389b352586c9c669c71887ad4586dd95bf22cadfbd398627a8373",
+      "bytes": 1938944,
+      "machine": "x64"
+    },
+    "TantraZone.exe": {
+      "sha256": "51a51effe121648e445b5cd33ab8071660f05a9eff0be7c47c05cd50e52ae394",
+      "bytes": 2291200,
+      "machine": "x64"
+    }
+  },
+  "offline_cli": {
+    "passed": true,
+    "binary_sha256": "7df23a67cc97bf3daf302b5f1c2506c8d8ffcf189eb6e07b32e95c663bdfeb0b",
+    "output": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-sql-cli-6fdpjdm0",
+    "provision_duplicate_rejected": true,
+    "backup_source_preserved": true,
+    "restore_fenced_sessions": 1,
+    "pre_restore_copy_verified": true,
+    "listeners_started": 0
+  },
+  "recorded_debug_service_route": {
+    "output": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-login-route-1744db1c3d36",
+    "result": {
+      "client_processes_started": 0,
+      "dependency_order": true,
+      "disconnect_reconnect": true,
+      "duplicate_owner_rejected": true,
+      "fragmented_native_login": true,
+      "game_ready": false,
+      "native_create_roster_delete": true,
+      "native_filters": true,
+      "offline_restore_tool": true,
+      "passed": true,
+      "service_processes_started": 2,
+      "zone_processes_started": 0
+    },
+    "tested_service_sha256": "50c9568d861ccaa01480346e0bc0a8c5a7a627905df13182f58d2d0f83b48dcc",
+    "note": "Retained Debug route predates service-profile editor/CLI hardening; packaged Release has CPU and stopped-tool checks, no repeated network run."
+  },
+  "database_view": {
+    "account_dialog_resource": true,
+    "admin_document_ready": true,
+    "backend": "Win32 Common Controls v6",
+    "dpi": 96,
+    "game_ready": false,
+    "height": 850,
+    "icon_resource": true,
+    "page": "Database",
+    "restore_control": true,
+    "rows": 2,
+    "width": 1280,
+    "window_title": "Tantra Server Manager",
+    "worker_start_requested": false,
+    "zone_rows": 0
+  },
+  "normal_client_hashes_unchanged": {
+    "C:\\_GitHub\\TantraSrc\\_client\\HTLauncher.exe": "2793be4220f092d33c469397cb29d8f59949f9206da3b3c7541c918a33573f34",
+    "C:\\_GitHub\\TantraSrc\\_client\\userdata\\offline\\tantra.sqlite3": "b1a0fb635fa22c63f9b74fee6ad6cf253b70cc6c9f67b4665f40e18bd7ad405f"
+  },
+  "preserved_inputs": {
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\src\\native\\NativeCharacterCreation.cpp": "d70d7c75ab2f96198757818aef6bc901aee0eea73ae8c405c336a58e3f88d857",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\src\\native\\NativeCharacterCreation.h": "d0947fe9bc14f92c298317f199984f77b1c11fc50c84d4431434a2ae55093da8",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\src\\native\\NativeCharacterRecords.cpp": "af3f19c3c72efb4613e0df604de294a5b2a8596a0e43dbc7d9184c0e797ada10",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\src\\native\\NativeCharacterRecords.h": "551ae0997ce7319d7efb186fb1683bd47a9e74ad350eba45b26d4ad4a318345d",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\src\\rules\\compatibility\\HtPcStatProjection.h": "5fc25d703da35182c595ae4757ec5341eaca8b8e1bfc935d3b1ef6bc12230c83",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\src\\rules\\compatibility\\HtPcStatProjection.cpp": "8ceb15169f5173f631332c4a08427c0acd5f205db533dad502e0d602cab97af4",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\src\\rules\\compatibility\\HtCharacterVitals.h": "64911f14201bfaa5be309c244c741fb14bf9e1deb5310d0767856883bcd7ece1",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\src\\rules\\compatibility\\HtCharacterVitals.cpp": "820404141236f12e18755ea4540a1d1e137f71002d191b5a0adc6afa005ee3c0",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\src\\rules\\compatibility\\HtNativeProbability.h": "5f7584410657d1aef6af7f3ed4dbaf41d30ce590231b50cd70fa7338d44aab2f",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\src\\rules\\compatibility\\HtNativeProbability.cpp": "8217c12d5bc850df63562fd89b26abdf438b6e02d8cc703516818765711cdb70",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\src\\rules\\resources\\NativeCharacterStatTables.h": "89b2058478dccfc8621974c0a51823a9d4ca4859509c52b46d034d7b63e67982",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\src\\rules\\resources\\NativeCharacterStatTables.cpp": "eb4bcc99a5b2916748a32c6cdcfbf731cba613ae0837e6a45edd6e0e65e16ebd",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\src\\rules\\resources\\NativeGameplayParameters.h": "db2d138d2ea71ca890476cde6b7d5533aa2f2cd92b389f6d0df5bf9ca8727de1",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\src\\rules\\resources\\NativeGameplayParameters.cpp": "e4c4856aedd1d6838775a3309e3d10874b45cfa22cf21bca88bd135a7e0403ce",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\src\\rules\\resources\\NativeWorldSettings.h": "9744e2c1efa58679010140762b2264f801d19e2d18ca0d27efbfa14dad8957a6",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\src\\rules\\resources\\NativeWorldSettings.cpp": "12ca2e1710c539e43616e7a973e0d6e354078f3972c7350833b7b2caa9721107",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\tools\\rules\\generate-native-pc-stat-core.py": "9b13bf96c8a201f17eec56f8cd391785404666df11ee0becc7206bfa93048e86",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\tools\\rules\\generate-native-probability.py": "18407f96d61eba7c66204e0f1658ecb31e4786e3b0ea31305cefe416893a78a2",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\data\\rules\\character-stats\\Coefficient.tsv": "e3266aedea147191c343d543010da69c4606325a31df7b14a896a6d1ad0c428b",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\data\\rules\\character-stats\\EffectTolerance.tsv": "c4428feee97b62655d780ab1f9e26e7051ac55788f282b9d3f51eb0f3a21607b",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\data\\rules\\character-stats\\LevelUp.tsv": "58aad9cb49143138ea11a2a99f83f9628f5527e37ca68c3e15381ca288771dbc",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\data\\rules\\character-stats\\PROVENANCE.json": "5234b3bee4fecdce2d7c2252fd00d6b45a89cab6e9ffb3d6aa7d386a9f5062a6",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\data\\rules\\gameplay-parameters\\Item.tsv": "734be078b91eaa1d3cd8d52f20155636d2eafa9f6beb72456c0c63bac158010e",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\data\\rules\\gameplay-parameters\\MonsterSkill.tsv": "18429c42e50d5f84650b83a4b3f9abba8d73fc131f1f787a3e05c024dcfe59d4",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\data\\rules\\gameplay-parameters\\PCSkill.tsv": "c8fcd83fb5a025b2db4bbb3bc51765aae079dafb62bc2e6505bdcae71f673355",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\data\\rules\\gameplay-parameters\\PROVENANCE.json": "b4517322f747f5fce5e61632d94165b55ef5c19d6d3f9b573b206c9c901d07fd",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\fixtures\\native-character-codec.json": "a74f9c1f3a236f551d7b2972b6ea28c320e70d3a273468e0fdac3dcb5edc0037",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\fixtures\\credential-reference.json": "942fd56143658c82b561632a6ca602aa9d1ba30f6269bbfa2a8d0d7ada72994d",
+    "C:\\_GitHub\\TantraSrc\\_server_cpp\\fixtures\\native-status.json": "4e1aa845a4423fe04c4174d8394068991ca03cf23be717ba0f5d16ef58c991a9",
+    "E:\\Global-server\\Zone01\\NameFilter.txt": "6362206d505261c42eb39a11c1b3203a37a66d353e3768af9627c92430a13114",
+    "E:\\Global-server\\Zone01\\ChatFilter.txt": "3da1c17be28e7878c02b1168d2cd42ee6322889978c4eb7876038941b5407f35",
+    "E:\\Global-server\\Zone01\\Language.txt": "8330b4f960746bbfcc9581ab7979765b4fa53c181f8a17d3151451d6cba0b980",
+    "C:\\_GitHub\\TantraSrc\\TantraClient\\system\\HTMessage.txl": "6d81cc04a4636e4463d7cd9b042a1ec10be5841136cba4a7dda1bf227f453eac",
+    "C:\\_GitHub\\TantraSrc\\TantraClient\\serverlist.bin": "8a40e62035eef2bc78cde054f490fc93b1e6aca5dcc8c89daab957a34aca8c9f"
+  },
+  "remaining": [
+    "Full account/backup/restore GUI input acceptance",
+    "Complete native protocol inventory and failures",
+    "Connected zone authority and OGRE CHAR_INIT",
+    "Gameplay and shared/social roles M3-M6"
+  ]
+}

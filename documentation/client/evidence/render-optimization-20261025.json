@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-25",
+  "build": "Release x64 OGRE Classic 14.6.1 D3D11 SDL3",
+  "sha256": "78a1035f53a5015ef7d83d4b803f407edf257fd892ff4bd6b40ab1fd81d5147f",
+  "outputs": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "launcher_sha256": "78a1035f53a5015ef7d83d4b803f407edf257fd892ff4bd6b40ab1fd81d5147f",
+      "hpk_unchanged": 148,
+      "userdata_unchanged": 0
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "launcher_sha256": "78a1035f53a5015ef7d83d4b803f407edf257fd892ff4bd6b40ab1fd81d5147f",
+      "hpk_unchanged": 148,
+      "userdata_unchanged": 44
+    }
+  },
+  "files_per_output": 1731,
+  "bytes_per_output": 704326593,
+  "cpu": {
+    "focused_checks": 428,
+    "old_static_batches": 5742,
+    "new_static_batches": 3721,
+    "object_triangles_preserved": 380497,
+    "visual_fx_scale": 3,
+    "scene_fidelity": "passed",
+    "lighting_shadow_hlsl_compile": "passed",
+    "source_lod_fallback": "passed",
+    "grass_coverage_mips": "passed",
+    "telemetry_format_math": "passed"
+  },
+  "implemented": [
+    "3x visual FX radius; native audio/jitter distances",
+    "sampler setup order, grass coverage mips and small depth bias",
+    "effective-material spatial static batch merging",
+    "world actor frustum skin/upload culling; pose and socket-parent reuse",
+    "native character LOD and static grass/far distance limits",
+    "per-line renderer and process telemetry"
+  ],
+  "runtime": "no game/renderer/server/audio-device launched; live appearance, GPU provider availability and FPS unverified",
+  "limits": [
+    "full static-object authored/adaptive terrain LOD remains open",
+    "frustum/distance culling is not hardware occlusion culling",
+    "GPU metric is process busiest engine, not whole-device load",
+    "loaded batch reduction is not a measured frame-time speedup"
+  ],
+  "broader_goal": "paused; no visual acceptance gate closed",
+  "git": "no commit/push requested",
+  "local_logs": "C:\\_GitHub\\tantra-dev-main\\.migration-local\\render-optimization-20261025",
+  "static_package": "Both outputs passed: 1731 files, original layout, x64/imports, exact nine-frame icon. Runtime skipped."
+}

@@ -1,0 +1,119 @@
+{
+  "scope": "CPU format/bounds regressions; no GPU/game launch",
+  "passed": 12,
+  "failed": 0,
+  "cases": [
+    {
+      "case": "rgba32.dds",
+      "tool": "texture_metadata_probe",
+      "expected_acceptance": true,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "DDS 2x1 bpp=32 alpha=1 bytes=136\n",
+      "stderr": ""
+    },
+    {
+      "case": "rgb24-padded.dds",
+      "tool": "texture_metadata_probe",
+      "expected_acceptance": true,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "DDS 2x1 bpp=24 alpha=0 bytes=136\n",
+      "stderr": ""
+    },
+    {
+      "case": "bc1.dds",
+      "tool": "texture_metadata_probe",
+      "expected_acceptance": true,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "DDS 4x4 bpp=4 alpha=1 bytes=136\n",
+      "stderr": ""
+    },
+    {
+      "case": "bc2.dds",
+      "tool": "texture_metadata_probe",
+      "expected_acceptance": true,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "DDS 3x5 bpp=8 alpha=1 bytes=160\n",
+      "stderr": ""
+    },
+    {
+      "case": "bc3.dds",
+      "tool": "texture_metadata_probe",
+      "expected_acceptance": true,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "DDS 4x4 bpp=8 alpha=1 bytes=144\n",
+      "stderr": ""
+    },
+    {
+      "case": "bad-header.dds",
+      "tool": "texture_metadata_probe",
+      "expected_acceptance": false,
+      "exit_code": 1,
+      "passed": true,
+      "stdout": "",
+      "stderr": "invalid DDS header size: C:\\_GitHub\\tantra-dev-main\\_remake\\build-migration\\resource-reader-boundaries-20261025-v2\\bad-header.dds\n"
+    },
+    {
+      "case": "zero-width.dds",
+      "tool": "texture_metadata_probe",
+      "expected_acceptance": false,
+      "exit_code": 1,
+      "passed": true,
+      "stdout": "",
+      "stderr": "invalid DDS dimensions: C:\\_GitHub\\tantra-dev-main\\_remake\\build-migration\\resource-reader-boundaries-20261025-v2\\zero-width.dds\n"
+    },
+    {
+      "case": "truncated-top.dds",
+      "tool": "texture_metadata_probe",
+      "expected_acceptance": false,
+      "exit_code": 1,
+      "passed": true,
+      "stdout": "",
+      "stderr": "truncated DDS top-level surface: C:\\_GitHub\\tantra-dev-main\\_remake\\build-migration\\resource-reader-boundaries-20261025-v2\\truncated-top.dds\n"
+    },
+    {
+      "case": "r03_part13.tmb",
+      "tool": "tmb_probe",
+      "expected_acceptance": true,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "NAME r03_part13\nVERSION 1\nTYPE 1\nFLAGS 1\nMATERIALS 67\nMATERIAL_PARAMETER_COUNT 17\nVERTICES 6710\nINDICES 11685\nTEXTURE D_02_b_16_d.bmp\nBOUNDS -1353.74,-55.7223,-998.995;-282.614,264.945,-50.7656\nBONES 0\nSKELETON_TREE_OFFSET 0\nSOURCE_PARENT_COUNT 0\nPOST_SKELETON_DATA_OFFSET 0\nPOST_SKELETON_DATA_BYTES 0\nPOST_SKELETON_INFLUENCE_COUNT_ENTRIES 0\nPOST_SKELETON_INFLUENCE_GROUPS 0\nADDITIONAL_SUBMESHES 0\nTYPE2_STATUS RIGID\n",
+      "stderr": ""
+    },
+    {
+      "case": "r06_part_12.tmb",
+      "tool": "tmb_probe",
+      "expected_acceptance": true,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "NAME r06_part_12\nVERSION 1\nTYPE 1\nFLAGS 1\nMATERIALS 76\nMATERIAL_PARAMETER_COUNT 17\nVERTICES 12720\nINDICES 27348\nTEXTURE D_02_b_16_d.bmp\nBOUNDS -2407.47,-24.471,-2272.22;-152.526,351.104,-34.1207\nBONES 0\nSKELETON_TREE_OFFSET 0\nSOURCE_PARENT_COUNT 0\nPOST_SKELETON_DATA_OFFSET 0\nPOST_SKELETON_DATA_BYTES 0\nPOST_SKELETON_INFLUENCE_COUNT_ENTRIES 0\nPOST_SKELETON_INFLUENCE_GROUPS 0\nADDITIONAL_SUBMESHES 0\nTYPE2_STATUS RIGID\n",
+      "stderr": ""
+    },
+    {
+      "case": "impossible-materials.tmb",
+      "tool": "tmb_probe",
+      "expected_acceptance": false,
+      "exit_code": 1,
+      "passed": true,
+      "stdout": "",
+      "stderr": "invalid or truncated TMB material table\n"
+    },
+    {
+      "case": "truncated-materials.tmb",
+      "tool": "tmb_probe",
+      "expected_acceptance": false,
+      "exit_code": 1,
+      "passed": true,
+      "stdout": "",
+      "stderr": "invalid or truncated TMB material table\n"
+    }
+  ],
+  "dds_reference": [
+    "https://learn.microsoft.com/en-us/windows/win32/direct3ddds/dds-header",
+    "https://learn.microsoft.com/en-us/windows/win32/direct3ddds/dds-pixelformat"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "current_staged_sha256": "43b4a011d0930dc98497375caeb22684839f7310a642a6f6c28dc1b194720827",
+  "files": 4357,
+  "bytes": 258524854,
+  "current_build_runtime_launched": false,
+  "runtime_attempts_this_slice": 1,
+  "runtime_evidence": "mandara-goal1-runtime.json",
+  "runtime_result": "partial; warehouse NPC visibility / clipped camera, QA exit 8",
+  "CPU_checks": "native progression, original UI/title/orientation, stats/equipment, entry/effect ticking and Mandara authority fixtures passed at their recorded checkpoints",
+  "population_preflight": {
+    "available_base_models": 39,
+    "animation_bindings": 227,
+    "missing_monster_catalog": [
+      2718
+    ],
+    "missing_npc_catalog": [
+      1457
+    ],
+    "result": "fails intentionally on missing source references",
+    "current_native_profile": {
+      "available_base_models": 39,
+      "animation_bindings": 227,
+      "missing_monster_catalog": [
+        2718
+      ],
+      "missing_npc_catalog": [],
+      "evidence": "mandara-native-npc-placement.json"
+    }
+  },
+  "source_asset_evidence": "gameplay-source-asset-gaps.json",
+  "static_client_check": "passed; x64 imports, exact icon payload, original folder layout, owned asset inventory",
+  "committed": false,
+  "previous_runtime_evidence": "gameplay-expansion-runtime.json",
+  "latest_runtime_sha256": "c7826a8d664c4a73f14b8d2e145052592fff1d6eeb8d4d0232cd35e6875c40a4",
+  "normal_profile_hashes_unchanged": true,
+  "normal_profile_file_count": 46,
+  "CPU_camera_followup": "native client NPC placement mismatch corrected; canonical warehouse/save routes and service ranges pass CPU; geometry visibility has viable native approaches",
+  "native_placement_evidence": "mandara-native-npc-placement.json",
+  "prepared_runtime_output": "C:\\_GitHub\\TantraSrc\\_remake\\build-ogre-sdl\\mandara-goal1-native-placement-runtime-20261023",
+  "next_runtime_authorization": "requested; no second game process launched"
+}

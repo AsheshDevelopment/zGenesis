@@ -1,0 +1,537 @@
+Read-only inspection; original DLLs are never executed.
+
+HT3DHeaven.dll SHA256=b818b89edbc9f8e49bb1b79200371740eaa157dabac23bbf1e2d52e40ff99941
+
+Parent front-plane gate followed by priority 100 distance bypass
+0x2000C32E: fld dword ptr [ebp - 0x1c]
+0x2000C331: fsub dword ptr [eax + 0x18]
+0x2000C334: fstp dword ptr [ebp - 0x10]
+0x2000C337: fld dword ptr [ebp - 0x18]
+0x2000C33A: fsub dword ptr [eax + 0x1c]
+0x2000C33D: fstp dword ptr [ebp - 0xc]
+0x2000C340: fld dword ptr [ebp - 0x14]
+0x2000C343: fsub dword ptr [eax + 0x20]
+0x2000C346: fst dword ptr [ebp - 8]
+0x2000C349: fmul dword ptr [eax + 0x50]
+0x2000C34C: fld dword ptr [ebp - 0xc]
+0x2000C34F: fmul dword ptr [eax + 0x4c]
+0x2000C352: faddp st(1)
+0x2000C354: fld dword ptr [ebp - 0x10]
+0x2000C357: fmul dword ptr [eax + 0x48]
+0x2000C35A: faddp st(1)
+0x2000C35C: fcomp dword ptr [0x20063454]
+0x2000C362: fnstsw ax
+0x2000C364: test ah, 5
+0x2000C367: jnp 0x2000c3ae
+0x2000C369: mov ebx, dword ptr [ebx + 0x380]
+0x2000C36F: cmp ebx, 5
+0x2000C372: je 0x2000c38e
+0x2000C374: cmp ebx, 0x14
+0x2000C377: je 0x2000c387
+0x2000C379: cmp ebx, 0x64
+0x2000C37C: jne 0x2000c39a
+0x2000C37E: mov al, 1
+0x2000C380: pop edi
+0x2000C381: pop esi
+0x2000C382: pop ebx
+0x2000C383: leave 
+0x2000C384: ret 4
+0x2000C387: fld dword ptr [ebp + 8]
+0x2000C38A: fadd st(0), st(0)
+0x2000C38C: jmp 0x2000c397
+0x2000C38E: fld dword ptr [ebp + 8]
+0x2000C391: fmul dword ptr [0x20063468]
+0x2000C397: fstp dword ptr [ebp + 8]
+0x2000C39A: lea eax, [ebp - 0x10]
+0x2000C39D: push eax
+0x2000C39E: call 0x2000210c
+0x2000C3A3: fcomp dword ptr [ebp + 8]
+0x2000C3A6: pop ecx
+0x2000C3A7: fnstsw ax
+0x2000C3A9: test ah, 0x41
+0x2000C3AC: jne 0x2000c37e
+0x2000C3AE: xor al, al
+0x2000C3B0: jmp 0x2000c380
+0x2000C3B2: push esi
+
+Base activation primes previous update before the local particle pass
+0x2000E8AD: push ebp
+0x2000E8AE: mov ebp, esp
+0x2000E8B0: sub esp, 0x20
+0x2000E8B3: push ebx
+0x2000E8B4: mov ebx, ecx
+0x2000E8B6: cmp byte ptr [ebx + 0x284], 0
+0x2000E8BD: push esi
+0x2000E8BE: push edi
+0x2000E8BF: jne 0x2000eadc
+0x2000E8C5: push 2
+0x2000E8C7: lea eax, [ebx + 0x14c]
+0x2000E8CD: pop ecx
+0x2000E8CE: cmp dword ptr [eax], ecx
+0x2000E8D0: je 0x2000e8dd
+0x2000E8D2: mov edx, dword ptr [ebp + 8]
+0x2000E8D5: mov dword ptr [ebx + 0x27c], edx
+0x2000E8DB: mov dword ptr [eax], ecx
+
+Elapsed guard and absolute timeGetTime clock
+0x2000F422: mov eax, 0x200611d2
+0x2000F427: call 0x20051668
+0x2000F42C: sub esp, 0x2c4
+0x2000F432: mov edx, dword ptr [ebp + 8]
+0x2000F435: fld dword ptr [edx + 0x54]
+0x2000F438: mov eax, dword ptr [0x20076e00]
+0x2000F43D: xor eax, dword ptr [ebp + 4]
+0x2000F440: fcomp dword ptr [0x20063454]
+0x2000F446: push ebx
+0x2000F447: mov dword ptr [ebp - 0x10], eax
+0x2000F44A: mov ebx, ecx
+0x2000F44C: fnstsw ax
+0x2000F44E: mov dword ptr [ebp - 0x14], ebx
+0x2000F451: test ah, 5
+0x2000F454: jnp 0x2000f8c2
+0x2000F45A: fld dword ptr [edx + 0x54]
+0x2000F45D: fcomp dword ptr [0x20063aa4]
+0x2000F463: fnstsw ax
+0x2000F465: test ah, 0x41
+0x2000F468: je 0x2000f8c2
+0x2000F46E: mov eax, dword ptr [edx + 0x9c]
+0x2000F474: push esi
+0x2000F475: mov dword ptr [ebx + 0x170], eax
+0x2000F47B: mov ecx, dword ptr [0x20078120]
+0x2000F481: mov eax, dword ptr [ecx]
+0x2000F483: push edi
+0x2000F484: push dword ptr [edx + 0x58]
+0x2000F487: call dword ptr [eax + 0x120]
+0x2000F48D: mov esi, eax
+0x2000F48F: lea edi, [ebx + 0x128]
+0x2000F495: movsd dword ptr es:[edi], dword ptr [esi]
+0x2000F496: movsd dword ptr es:[edi], dword ptr [esi]
+0x2000F497: lea ecx, [ebp - 0x2d0]
+0x2000F49D: movsd dword ptr es:[edi], dword ptr [esi]
+0x2000F49E: call 0x2000ef3f
+0x2000F4A3: and dword ptr [ebp - 4], 0
+0x2000F4A7: cmp byte ptr [ebx + 0x25], 0
+0x2000F4AB: je 0x2000f8b1
+0x2000F4B1: call dword ptr [0x20063160]
+0x2000F4B7: test eax, eax
+0x2000F4B9: mov dword ptr [ebp + 8], eax
+0x2000F4BC: fild dword ptr [ebp + 8]
+0x2000F4BF: jge 0x2000f4c7
+0x2000F4C1: fadd dword ptr [0x2006346c]
+0x2000F4C7: fmul dword ptr [0x2006473c]
+0x2000F4CD: and dword ptr [ebp - 0x20], 0
+0x2000F4D1: add ebx, 0x14c
+0x2000F4D7: fst dword ptr [ebx - 0x134]
+0x2000F4DD: fstp dword ptr [ebx - 0x12c]
+0x2000F4E3: mov ebx, dword ptr [ebx]
+0x2000F4E5: test ebx, ebx
+
+Loop flag suppresses leaf EndCheck
+0x2000F525: add byte ptr [eax], al
+0x2000F527: add byte ptr [ebx + 0x41d9ec4d], cl
+0x2000F52D: sbb byte ptr [ebx - 0x3174aefa], cl
+0x2000F533: fstp dword ptr [esp]
+0x2000F536: call dword ptr [eax + 0x18]
+0x2000F539: cmp byte ptr [ebx + 0x128], 0
+0x2000F540: je 0x2000f544
+0x2000F542: xor al, al
+0x2000F544: cmp byte ptr [ebx + 0x12a], 0
+0x2000F54B: je 0x2000f556
+0x2000F54D: mov ecx, esi
+0x2000F54F: call 0x2000e42c
+0x2000F554: mov al, 1
+
+Active leaf update precedes pending creation
+0x2000F56F: mov ecx, dword ptr [ebp - 0x14]
+0x2000F572: fld dword ptr [ecx + 0x170]
+0x2000F578: fcomp dword ptr [0x20063454]
+0x2000F57E: fnstsw ax
+0x2000F580: test ah, 1
+0x2000F583: jne 0x2000f5a7
+0x2000F585: fld dword ptr [ecx + 0x170]
+0x2000F58B: fcomp dword ptr [0x20063468]
+0x2000F591: fnstsw ax
+0x2000F593: test ah, 0x41
+0x2000F596: jp 0x2000f5a7
+0x2000F598: mov eax, dword ptr [esi + 0x37c]
+0x2000F59E: test eax, eax
+0x2000F5A0: je 0x2000f5b6
+0x2000F5A2: cmp eax, 1
+0x2000F5A5: jmp 0x2000f5b4
+0x2000F5A7: mov eax, dword ptr [esi + 0x37c]
+0x2000F5AD: test eax, eax
+0x2000F5AF: je 0x2000f5b6
+0x2000F5B1: cmp eax, 2
+0x2000F5B4: jne 0x2000f5c4
+0x2000F5B6: fld dword ptr [ecx + 0x18]
+0x2000F5B9: mov eax, dword ptr [esi]
+0x2000F5BB: push ecx
+0x2000F5BC: mov ecx, esi
+0x2000F5BE: fstp dword ptr [esp]
+0x2000F5C1: call dword ptr [eax + 0xc]
+0x2000F5C4: cmp dword ptr [ebp + 8], 0
+0x2000F5C8: mov edi, dword ptr [edi + 4]
+0x2000F5CB: je 0x2000f5f3
+0x2000F5CD: mov eax, dword ptr [esi]
+0x2000F5CF: mov ecx, esi
+0x2000F5D1: call dword ptr [eax + 8]
+0x2000F5D4: mov eax, dword ptr [esi]
+0x2000F5D6: push 1
+0x2000F5D8: mov ecx, esi
+0x2000F5DA: call dword ptr [eax]
+0x2000F5DC: push dword ptr [ebp - 0x18]
+0x2000F5DF: call 0x200516fd
+0x2000F5E4: pop ecx
+0x2000F5E5: push dword ptr [ebp + 8]
+0x2000F5E8: lea ecx, [ebx + 0x25c]
+0x2000F5EE: call 0x2000eef9
+0x2000F5F3: test edi, edi
+0x2000F5F5: jne 0x2000f513
+0x2000F5FB: mov edx, dword ptr [ebp - 0x1c]
+0x2000F5FE: cmp dword ptr [ebx + 0x258], 0
+
+Pending creation compares node start with group age
+0x2000F61C: jmp 0x2000f621
+0x2000F61E: mov ecx, dword ptr [ebp + 8]
+0x2000F621: mov eax, dword ptr [ebp - 0x14]
+0x2000F624: fld dword ptr [eax + 0x18]
+0x2000F627: mov esi, dword ptr [ecx + 8]
+0x2000F62A: fsub dword ptr [ebx + 4]
+0x2000F62D: mov dword ptr [ebp - 0x18], esi
+0x2000F630: fcomp dword ptr [esi + 8]
+0x2000F633: fnstsw ax
+0x2000F635: test ah, 1
+0x2000F638: jne 0x2000f7ed
+0x2000F63E: lea ecx, [ebp - 0x2d0]
+0x2000F644: call 0x2000ed68
+0x2000F649: fld dword ptr [esi + 8]
+
+Loop duration advances group start without rebuilding nodes
+0x2000F802: mov eax, dword ptr [ebp - 0x14]
+0x2000F805: fld dword ptr [eax + 0x18]
+0x2000F808: mov eax, dword ptr [ebx]
+0x2000F80A: fsub dword ptr [ebx + 4]
+0x2000F80D: fcomp dword ptr [eax + 4]
+0x2000F810: fnstsw ax
+0x2000F812: test ah, 0x41
+0x2000F815: jne 0x2000f840
+0x2000F817: cmp byte ptr [ebx + 0x128], 0
+0x2000F81E: je 0x2000f834
+0x2000F820: cmp byte ptr [ebx + 0x12a], 0
+0x2000F827: jne 0x2000f834
+0x2000F829: mov eax, dword ptr [ebp - 0x14]
+0x2000F82C: mov eax, dword ptr [eax + 0x18]
+0x2000F82F: mov dword ptr [ebx + 4], eax
+0x2000F832: jmp 0x2000f840
+0x2000F834: cmp dword ptr [ebx + 0x264], 0
+0x2000F83B: jne 0x2000f840
+0x2000F83D: mov dword ptr [ebp - 0x20], edx
+
+Initialization inverts the authored coordinate byte
+0x200135AF: mov dword ptr [ebx + 0x10], esi
+0x200135B2: mov eax, dword ptr [esi]
+0x200135B4: lea edi, [ebx + 0x570]
+0x200135BA: push edi
+0x200135BB: mov ecx, esi
+0x200135BD: call dword ptr [eax + 0x10]
+0x200135C0: cmp byte ptr [edi], 0
+0x200135C3: mov ecx, esi
+0x200135C5: sete al
+0x200135C8: mov byte ptr [edi], al
+
+Null parent is multiplied by ten in particle coordinates
+0x20014040: mov eax, dword ptr [ebx + 0x20]
+0x20014043: test eax, eax
+0x20014045: jle 0x20014089
+0x20014047: mov ecx, dword ptr [0x20078120]
+0x2001404D: mov edx, dword ptr [ecx]
+0x2001404F: push eax
+0x20014050: call dword ptr [edx + 0x104]
+0x20014056: test eax, eax
+0x20014058: je 0x200140e7
+0x2001405E: mov ecx, eax
+0x20014060: call 0x2000ac02
+0x20014065: fld dword ptr [0x200646f8]
+0x2001406B: fld dword ptr [eax]
+0x2001406D: lea esi, [ebp + 0x54]
+0x20014070: fmul st(1)
+0x20014072: fstp dword ptr [ebp + 0x54]
+0x20014075: fld dword ptr [eax + 4]
+0x20014078: fmul st(1)
+0x2001407A: fstp dword ptr [ebp + 0x58]
+0x2001407D: fld dword ptr [eax + 8]
+0x20014080: fmul st(1)
+0x20014082: fstp dword ptr [ebp + 0x5c]
+0x20014085: fstp st(0)
+0x20014087: jmp 0x20014033
+
+Inverted coordinate flag adds the scaled parent at spawn
+0x20014295: cmp dword ptr [ebx + 0x20], eax
+0x20014298: jle 0x200142bc
+0x2001429A: mov eax, dword ptr [ebp + 0x70]
+0x2001429D: fld dword ptr [ebp + 0x64]
+0x200142A0: fadd dword ptr [eax]
+0x200142A2: lea esi, [ebp + 0xc]
+0x200142A5: fstp dword ptr [ebp + 0xc]
+0x200142A8: fld dword ptr [ebp + 0x68]
+0x200142AB: fadd dword ptr [eax + 4]
+0x200142AE: fstp dword ptr [ebp + 0x10]
+0x200142B1: fld dword ptr [ebp + 0x6c]
+0x200142B4: fadd dword ptr [eax + 8]
+0x200142B7: fstp dword ptr [ebp + 0x14]
+0x200142BA: jmp 0x20014256
+
+Scaled parent addition
+0x20014256: cmp byte ptr [ebx + 0x570], 0
+0x2001425D: lea eax, [ebx + 0x564]
+0x20014263: mov edi, eax
+0x20014265: movsd dword ptr es:[edi], dword ptr [esi]
+0x20014266: movsd dword ptr es:[edi], dword ptr [esi]
+0x20014267: movsd dword ptr es:[edi], dword ptr [esi]
+0x20014268: je 0x2001436b
+0x2001426E: fld dword ptr [0x2075aefc]
+0x20014274: fadd dword ptr [eax]
+0x20014276: fstp dword ptr [eax]
+0x20014278: fld dword ptr [0x2075af00]
+0x2001427E: fadd dword ptr [eax + 4]
+0x20014281: fstp dword ptr [eax + 4]
+0x20014284: fld dword ptr [0x2075af04]
+0x2001428A: fadd dword ptr [eax + 8]
+0x2001428D: fstp dword ptr [eax + 8]
+0x20014290: jmp 0x2001436b
+
+Sprite half extents are texture dimensions times curve scale and authored size
+0x20012F8D: mov ecx, dword ptr [ebx + 0xc]
+0x20012F90: mov esi, dword ptr [edi + 8]
+0x20012F93: push dword ptr [ebx + 0x11c]
+0x20012F99: mov eax, dword ptr [ecx]
+0x20012F9B: mov dword ptr [ebp + 0x38], esi
+0x20012F9E: call dword ptr [eax + 0x11c]
+0x20012FA4: test eax, eax
+0x20012FA6: mov dword ptr [ebp + 0x70], eax
+0x20012FA9: fild dword ptr [ebp + 0x70]
+0x20012FAC: jge 0x20012fb4
+0x20012FAE: fadd dword ptr [0x2006346c]
+0x20012FB4: fmul dword ptr [esi + 0x54]
+0x20012FB7: mov ecx, dword ptr [ebx + 0xc]
+0x20012FBA: push dword ptr [ebx + 0x11c]
+0x20012FC0: mov eax, dword ptr [ecx]
+0x20012FC2: fmul dword ptr [ebx + 0x124]
+0x20012FC8: fstp dword ptr [ebp + 0x70]
+0x20012FCB: call dword ptr [eax + 0x120]
+0x20012FD1: test eax, eax
+0x20012FD3: mov dword ptr [ebp + 0x28], eax
+0x20012FD6: fild dword ptr [ebp + 0x28]
+0x20012FD9: jge 0x20012fe1
+0x20012FDB: fadd dword ptr [0x2006346c]
+0x20012FE1: fmul dword ptr [esi + 0x58]
+0x20012FE4: fmul dword ptr [ebx + 0x128]
+
+Native corner order and camera inverse billboard basis
+0x2001300F: fld dword ptr [ebp + 0x70]
+0x20013012: mov esi, dword ptr [ebx + 0x120]
+0x20013018: fchs 
+0x2001301A: push 0x10
+0x2001301C: fst dword ptr [ebp + 0x3c]
+0x2001301F: pop ecx
+0x20013020: fld st(1)
+0x20013022: add esi, 0x17c
+0x20013028: fchs 
+0x2001302A: lea edi, [ebp - 0x18]
+0x2001302D: fst dword ptr [ebp + 0x40]
+0x20013030: lea eax, [ebx + 0x29c]
+0x20013036: fldz 
+0x20013038: push eax
+0x20013039: fstp dword ptr [ebp + 0x44]
+0x2001303C: fld st(1)
+0x2001303E: fstp dword ptr [ebp + 0x48]
+0x20013041: fld st(2)
+0x20013043: fstp dword ptr [ebp + 0x4c]
+0x20013046: fldz 
+0x20013048: fstp dword ptr [ebp + 0x50]
+0x2001304B: fld dword ptr [ebp + 0x70]
+0x2001304E: fst dword ptr [ebp + 0x54]
+0x20013051: fld st(3)
+0x20013053: fstp dword ptr [ebp + 0x58]
+0x20013056: fldz 
+0x20013058: fstp dword ptr [ebp + 0x5c]
+0x2001305B: fstp dword ptr [ebp + 0x60]
+0x2001305E: fst dword ptr [ebp + 0x64]
+0x20013061: fstp st(0)
+0x20013063: fstp st(0)
+0x20013065: fstp st(0)
+0x20013067: fldz 
+0x20013069: fstp dword ptr [ebp + 0x68]
+0x2001306C: rep movsd dword ptr es:[edi], dword ptr [esi]
+
+Particle draw uses 0.1 scale
+0x20013260: fld dword ptr [ebx + 0x2d4]
+0x20013266: push esi
+0x20013267: fchs 
+0x20013269: push edi
+0x2001326A: sub esp, 0xc
+0x2001326D: fstp dword ptr [esp + 8]
+0x20013271: fld dword ptr [ebx + 0x2d0]
+0x20013277: fchs 
+0x20013279: fstp dword ptr [esp + 4]
+0x2001327D: fld dword ptr [ebx + 0x2cc]
+0x20013283: fchs 
+0x20013285: fstp dword ptr [esp]
+0x20013288: push 0x2075aeb8
+0x2001328D: call 0x2001111a
+0x20013292: fld dword ptr [0x20064704]
+0x20013298: add esp, 4
+0x2001329B: fld st(0)
+0x2001329D: fstp dword ptr [esp + 8]
+0x200132A1: mov esi, 0x2075ae78
+0x200132A6: fst dword ptr [esp + 4]
+0x200132AA: fstp dword ptr [esp]
+0x200132AD: push esi
+0x200132AE: call 0x20040bff
+0x200132B3: fld dword ptr [ebx + 0x2d4]
+0x200132B9: sub esp, 0xc
+0x200132BC: fstp dword ptr [esp + 8]
+0x200132C0: fld dword ptr [ebx + 0x2d0]
+0x200132C6: fstp dword ptr [esp + 4]
+0x200132CA: fld dword ptr [ebx + 0x2cc]
+0x200132D0: fstp dword ptr [esp]
+0x200132D3: push 0x2075ae38
+0x200132D8: call 0x2001111a
+0x200132DD: add esp, 0x10
+0x200132E0: push esi
+0x200132E1: push 0x2075aeb8
+0x200132E6: lea eax, [ebp + 0x2c]
+0x200132E9: push eax
+0x200132EA: call 0x20040332
+0x200132EF: push 0x10
+0x200132F1: pop ecx
+0x200132F2: push 0x2075ae38
+0x200132F7: lea eax, [ebp - 0x14]
+0x200132FA: push eax
+0x200132FB: lea eax, [ebp - 0x54]
+0x200132FE: lea esi, [ebp + 0x2c]
+0x20013301: lea edi, [ebp - 0x14]
+0x20013304: push eax
+0x20013305: rep movsd dword ptr es:[edi], dword ptr [esi]
+0x20013307: call 0x20040332
+0x2001330C: push 0x10
+
+The selected coordinate flag clears parent translation, not camera translation
+0x20013375: cmp byte ptr [ebx + 0x340], 0
+0x2001337C: je 0x2001347a
+0x20013382: fldz 
+0x20013384: fstp dword ptr [0x2075ae28]
+0x2001338A: fldz 
+0x2001338C: fstp dword ptr [0x2075ae2c]
+0x20013392: fldz 
+0x20013394: fstp dword ptr [0x2075ae30]
+0x2001339A: jmp 0x2001347a
+
+Volume flag selects ONE/ONE versus SRCALPHA/INVSRCALPHA
+0x200134B4: cmp dword ptr [ebx + 0x274], 0
+0x200134BB: mov ecx, dword ptr [ebx + 0xc]
+0x200134BE: mov eax, dword ptr [ecx]
+0x200134C0: push 1
+0x200134C2: push 0x1b
+0x200134C4: je 0x200134df
+0x200134C6: call dword ptr [eax + 0xb8]
+0x200134CC: mov ecx, dword ptr [ebx + 0xc]
+0x200134CF: mov eax, dword ptr [ecx]
+0x200134D1: push 2
+0x200134D3: push 0x13
+0x200134D5: call dword ptr [eax + 0xb8]
+0x200134DB: push 2
+0x200134DD: jmp 0x200134f6
+0x200134DF: call dword ptr [eax + 0xb8]
+0x200134E5: mov ecx, dword ptr [ebx + 0xc]
+0x200134E8: mov eax, dword ptr [ecx]
+0x200134EA: push 5
+0x200134EC: push 0x13
+0x200134EE: call dword ptr [eax + 0xb8]
+0x200134F4: push 6
+0x200134F6: mov ecx, dword ptr [ebx + 0xc]
+0x200134F9: mov eax, dword ptr [ecx]
+0x200134FB: push 0x14
+0x200134FD: call dword ptr [eax + 0xb8]
+
+Preset 25 registration: cull 1, depth mode 0
+0x20005879: xor ecx, ecx
+0x2000587B: and byte ptr [ebp - 0x100], cl
+0x20005881: and byte ptr [ebp - 0xff], cl
+0x20005887: and byte ptr [ebp - 0xfe], cl
+0x2000588D: push 4
+0x2000588F: pop eax
+0x20005890: mov dword ptr [ebp - 0x10c], ebx
+0x20005896: mov dword ptr [ebp - 0x108], 7
+0x200058A0: mov dword ptr [ebp - 0x104], ebx
+0x200058A6: mov dword ptr [ebp - 0x120], ebx
+0x200058AC: mov dword ptr [ebp - 0x11c], ebx
+0x200058B2: mov dword ptr [ebp - 0x114], esi
+0x200058B8: mov dword ptr [ebp - 0x128], ecx
+0x200058BE: mov dword ptr [ebp - 0x118], edi
+0x200058C4: mov dword ptr [ebp - 0x124], esi
+0x200058CA: mov dword ptr [ebp - 0xcc], esi
+0x200058D0: mov dword ptr [ebp - 0xc8], ecx
+0x200058D6: mov dword ptr [ebp - 0xd0], eax
+0x200058DC: mov dword ptr [ebp - 0xd8], esi
+0x200058E2: mov dword ptr [ebp - 0xd4], ecx
+0x200058E8: mov dword ptr [ebp - 0xe0], eax
+0x200058EE: mov dword ptr [ebp - 0xb8], esi
+0x200058F4: mov dword ptr [ebp - 0xdc], ebx
+0x200058FA: mov dword ptr [ebp - 0xc0], edi
+0x20005900: mov dword ptr [ebp - 0xbc], edi
+0x20005906: mov dword ptr [ebp - 0xc4], ecx
+0x2000590C: mov dword ptr [ebp - 0xb4], ebx
+0x20005912: mov eax, dword ptr [ebp - 4]
+0x20005915: mov ecx, dword ptr [eax + 0x30d94]
+0x2000591B: push 0x19
+0x2000591D: lea edx, [ebp - 0x128]
+0x20005923: mov dword ptr [ebp - 0xa4], ebx
+0x20005929: mov eax, dword ptr [ecx]
+0x2000592B: push edx
+0x2000592C: call dword ptr [eax + 4]
+
+HTDirect3D.dll SHA256=f6fcff9ceb96461f58ecc97d06b821e78f685f4707b59aa738a77d7786c0431a
+
+Cull mode 1 maps to D3DCULL_NONE
+0x30004755: mov eax, dword ptr [ebp + 0xc]
+0x30004758: dec eax
+0x30004759: je 0x30004776
+0x3000475B: dec eax
+0x3000475C: je 0x30004765
+0x3000475E: dec eax
+0x3000475F: jne 0x30004785
+0x30004761: push 2
+0x30004763: jmp 0x30004778
+0x30004765: mov ecx, dword ptr [esi + 0x10]
+0x30004768: mov edx, dword ptr [ecx]
+0x3000476A: push 3
+0x3000476C: push 0x16
+0x3000476E: call dword ptr [edx + 0xb8]
+0x30004774: jmp 0x30004785
+0x30004776: push 1
+0x30004778: mov ecx, dword ptr [esi + 0x10]
+0x3000477B: mov eax, dword ptr [ecx]
+0x3000477D: push 0x16
+0x3000477F: call dword ptr [eax + 0xb8]
+
+Depth mode zero maps to ZENABLE false and ZWRITEENABLE false
+0x30004785: mov eax, dword ptr [ebp + 0x14]
+0x30004788: cmp eax, 4
+0x3000478B: ja 0x3000481c
+0x30004791: jmp dword ptr [eax*4 + 0x30004fb4]
+0x30004798: push 0
+0x3000479A: mov ecx, dword ptr [esi + 0x10]
+0x3000479D: mov edx, dword ptr [ecx]
+0x3000479F: push 7
+0x300047A1: call dword ptr [edx + 0xb8]
+0x300047A7: mov ecx, dword ptr [esi + 0x10]
+0x300047AA: mov eax, dword ptr [ecx]
+0x300047AC: push 0
+0x300047AE: push 0xe
+0x300047B0: call dword ptr [eax + 0xb8]
+0x300047B6: jmp 0x3000481c
+
+Selected static null-parent result: particlePosition starts at parentWorld*10+authoredPosition; draw corners are particlePosition plus camera-basis texture extents, then multiplied by 0.1. Parent translation is cleared for the inverted coordinate flag. This is not a camera-centered depth adjustment. OGRE world-unit conversion follows afterward.
+
+This verifies the selected lifecycle/coordinate/blend/depth branches. It does not prove complete FX modes, whole-engine RNG initialization/call history, floating-point bit parity or original-client pixel parity.

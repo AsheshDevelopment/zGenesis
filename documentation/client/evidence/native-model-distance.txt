@@ -1,0 +1,358 @@
+Native model-distance and LOD evidence
+Read-only inspection; binaries are not executed.
+HT3DHeaven.dll: 552960 bytes; SHA256=b818b89edbc9f8e49bb1b79200371740eaa157dabac23bbf1e2d52e40ff99941
+HTLauncher.exe: 1482752 bytes; SHA256=03d4587c4f87eeb71eb8be288b765836ccf8a1f11d49760d48239c6496c73903
+
+Manager vtable RVA=0x63588; distance slot=0x1C0 -> 0x20003CB0; set-LOD slot=0x1B8 -> 0x200016F2
+
+Launcher LOD loop (matches HTMapSystem's skinned-model branch)
+0x1003B005: call dword ptr [eax + 0x1c0]
+0x1003B00B: fstp dword ptr [ebp + 0xc]
+0x1003B00E: mov ecx, dword ptr [esi]
+0x1003B010: push dword ptr [edi + 0xc]
+0x1003B013: mov eax, dword ptr [ecx]
+0x1003B015: call dword ptr [eax + 0x10c]
+0x1003B01B: fld dword ptr [ebp + 0xc]
+0x1003B01E: cmp eax, 0x16
+0x1003B021: push 0
+0x1003B023: push ecx
+0x1003B024: fstp dword ptr [esp]
+0x1003B027: mov ecx, esi
+0x1003B029: jne 0x1003b032
+0x1003B02B: call 0x100367e2
+0x1003B030: jmp 0x1003b037
+0x1003B032: call 0x100366e7
+0x1003B037: cmp eax, 4
+0x1003B03A: jne 0x1003b050
+0x1003B03C: push edi
+0x1003B03D: lea eax, [ebp - 0x38]
+0x1003B040: push eax
+0x1003B041: lea ecx, [ebp - 0x44]
+0x1003B044: call 0x100210cb
+0x1003B049: mov edi, dword ptr [eax]
+0x1003B04B: mov dword ptr [ebp + 8], edi
+0x1003B04E: jmp 0x1003b069
+0x1003B050: mov ecx, dword ptr [esi]
+0x1003B052: mov edx, dword ptr [ecx]
+0x1003B054: push eax
+0x1003B055: push dword ptr [edi + 0xc]
+0x1003B058: call dword ptr [edx + 0x1b8]
+
+Manager model-to-camera distance
+0x20003CB0: push ebp
+0x20003CB1: mov ebp, esp
+0x20003CB3: sub esp, 0x18
+0x20003CB6: push ebx
+0x20003CB7: mov ebx, ecx
+0x20003CB9: mov eax, dword ptr [ebx]
+0x20003CBB: lea ecx, [ebp + 8]
+0x20003CBE: push ecx
+0x20003CBF: push dword ptr [ebp + 8]
+0x20003CC2: mov ecx, ebx
+0x20003CC4: call dword ptr [eax + 0x2a4]
+0x20003CCA: test eax, eax
+0x20003CCC: je 0x20003cd6
+0x20003CCE: fld dword ptr [0x20063454]
+0x20003CD4: jmp 0x20003d2a
+0x20003CD6: mov ecx, dword ptr [ebp + 8]
+0x20003CD9: push esi
+0x20003CDA: push edi
+0x20003CDB: call 0x2000ac02
+0x20003CE0: push dword ptr [ebx + 0x30da0]
+0x20003CE6: mov esi, eax
+0x20003CE8: mov eax, dword ptr [ebx]
+0x20003CEA: lea edi, [ebp - 0xc]
+0x20003CED: movsd dword ptr es:[edi], dword ptr [esi]
+0x20003CEE: movsd dword ptr es:[edi], dword ptr [esi]
+0x20003CEF: mov ecx, ebx
+0x20003CF1: movsd dword ptr es:[edi], dword ptr [esi]
+0x20003CF2: call dword ptr [eax + 0x104]
+0x20003CF8: add eax, 0x18
+0x20003CFB: fld dword ptr [ebp - 0xc]
+0x20003CFE: lea esi, [ebp - 0x18]
+0x20003D01: fsub dword ptr [eax]
+0x20003D03: lea edi, [ebp - 0xc]
+0x20003D06: fstp dword ptr [ebp - 0x18]
+0x20003D09: fld dword ptr [ebp - 8]
+0x20003D0C: fsub dword ptr [eax + 4]
+0x20003D0F: fstp dword ptr [ebp - 0x14]
+0x20003D12: fld dword ptr [ebp - 4]
+0x20003D15: fsub dword ptr [eax + 8]
+0x20003D18: lea eax, [ebp - 0xc]
+0x20003D1B: push eax
+0x20003D1C: fstp dword ptr [ebp - 0x10]
+0x20003D1F: movsd dword ptr es:[edi], dword ptr [esi]
+0x20003D20: movsd dword ptr es:[edi], dword ptr [esi]
+0x20003D21: movsd dword ptr es:[edi], dword ptr [esi]
+0x20003D22: call 0x2000210c
+0x20003D27: pop ecx
+0x20003D28: pop edi
+0x20003D29: pop esi
+0x20003D2A: pop ebx
+0x20003D2B: leave 
+0x20003D2C: ret 4
+
+Three-component vector length
+0x2000210C: mov eax, dword ptr [esp + 4]
+0x20002110: fld dword ptr [eax + 8]
+0x20002113: push ecx
+0x20002114: fld dword ptr [eax + 4]
+0x20002117: push ecx
+0x20002118: fld dword ptr [eax]
+0x2000211A: fld st(0)
+0x2000211C: fmul st(1)
+0x2000211E: fld st(2)
+0x20002120: fmul st(3)
+0x20002122: faddp st(1)
+0x20002124: fld st(3)
+0x20002126: fmul st(4)
+0x20002128: faddp st(1)
+0x2000212A: fstp st(3)
+0x2000212C: fstp st(0)
+0x2000212E: fstp st(0)
+0x20002130: fstp qword ptr [esp]
+0x20002133: call 0x20050954
+0x20002138: pop ecx
+0x20002139: pop ecx
+0x2000213A: ret 
+
+Square-root positive-input path
+0x20050954: lea edx, [esp + 4]
+0x20050958: call 0x20055225
+0x2005095D: push edx
+0x2005095E: wait 
+0x2005095F: fnstcw word ptr [esp]
+0x20050962: mov eax, dword ptr [esp + 0xc]
+0x20050966: je 0x200509b9
+0x20050968: cmp word ptr [esp], 0x27f
+0x2005096E: je 0x20050975
+0x20050970: call 0x200551f5
+0x20050975: test eax, 0x80000000
+0x2005097A: jne 0x2005099b
+0x2005097C: fsqrt 
+
+Native character LOD function (TooFar=4)
+0x100367E2: fld dword ptr [esp + 4]
+0x100367E6: fld dword ptr [ecx + 0x1cc]
+0x100367EC: fchs 
+0x100367EE: fcomp st(1)
+0x100367F0: fnstsw ax
+0x100367F2: test ah, 0x41
+0x100367F5: jp 0x1003680a
+0x100367F7: fcom dword ptr [ecx + 0x1cc]
+0x100367FD: fnstsw ax
+0x100367FF: test ah, 0x41
+0x10036802: jp 0x1003680a
+0x10036804: fstp st(0)
+0x10036806: xor eax, eax
+0x10036808: jmp 0x1003686e
+0x1003680A: fcom dword ptr [ecx + 0x1cc]
+0x10036810: fnstsw ax
+0x10036812: test ah, 0x41
+0x10036815: jne 0x1003682b
+0x10036817: fcom dword ptr [ecx + 0x1d0]
+0x1003681D: fnstsw ax
+0x1003681F: test ah, 0x41
+0x10036822: jp 0x1003682b
+0x10036824: xor eax, eax
+0x10036826: fstp st(0)
+0x10036828: inc eax
+0x10036829: jmp 0x1003686e
+0x1003682B: fcom dword ptr [ecx + 0x1d0]
+0x10036831: fnstsw ax
+0x10036833: test ah, 0x41
+0x10036836: jne 0x1003684b
+0x10036838: fcom dword ptr [ecx + 0x1d4]
+0x1003683E: fnstsw ax
+0x10036840: test ah, 0x41
+0x10036843: jp 0x1003684b
+0x10036845: fstp st(0)
+0x10036847: push 2
+0x10036849: jmp 0x1003686d
+0x1003684B: fcom dword ptr [ecx + 0x1d4]
+0x10036851: fnstsw ax
+0x10036853: test ah, 0x41
+0x10036856: jne 0x10036869
+0x10036858: fcomp dword ptr [ecx + 0x1c4]
+0x1003685E: fnstsw ax
+0x10036860: test ah, 0x41
+0x10036863: jp 0x1003686b
+0x10036865: push 3
+0x10036867: jmp 0x1003686d
+0x10036869: fstp st(0)
+0x1003686B: push 4
+0x1003686D: pop eax
+0x1003686E: ret 8
+
+Manager applies only levels 0 through 3 to objects
+0x200016F2: push ebp
+0x200016F3: mov ebp, esp
+0x200016F5: cmp dword ptr [ebp + 0xc], 0
+0x200016F9: jl 0x20001722
+0x200016FB: cmp dword ptr [ebp + 0xc], 3
+0x200016FF: jg 0x20001722
+0x20001701: mov eax, dword ptr [ecx]
+0x20001703: lea edx, [ebp + 8]
+0x20001706: push edx
+0x20001707: push dword ptr [ebp + 8]
+0x2000170A: call dword ptr [eax + 0x2a4]
+0x20001710: test eax, eax
+0x20001712: jne 0x20001722
+0x20001714: mov ecx, dword ptr [ebp + 8]
+0x20001717: push dword ptr [ebp + 0xc]
+0x2000171A: mov eax, dword ptr [ecx]
+0x2000171C: call dword ptr [eax + 0xec]
+0x20001722: pop ebp
+
+Skinned object detail setter forwards to its model instance
+0x200261BE: mov ecx, dword ptr [ecx + 8]
+0x200261C1: mov eax, dword ptr [ecx]
+0x200261C3: jmp dword ptr [eax + 0x160]
+
+Model-instance detail getter and setter
+0x2000B5F2: movzx eax, byte ptr [ecx + 0x80]
+0x2000B5F9: ret 
+0x2000B5FA: mov al, byte ptr [esp + 4]
+0x2000B5FE: mov byte ptr [ecx + 0x80], al
+0x2000B604: ret 4
+
+Model-instance constructor initializes detail to zero
+0x2000B62D: mov eax, 0x20061040
+0x2000B632: call 0x20051668
+0x2000B637: sub esp, 0x10
+0x2000B63A: push ebx
+0x2000B63B: push esi
+0x2000B63C: mov ebx, ecx
+0x2000B63E: push edi
+0x2000B63F: mov dword ptr [ebp - 0x10], ebx
+0x2000B642: call 0x2000b22d
+0x2000B647: and dword ptr [ebp - 4], 0
+0x2000B64B: lea ecx, [ebx + 0x94]
+0x2000B651: mov dword ptr [ebx], 0x20063c18
+0x2000B657: call 0x2000b2f4
+0x2000B65C: lea ecx, [ebx + 0x11c]
+0x2000B662: call 0x2004e1d0
+0x2000B667: fldz 
+0x2000B669: fstp dword ptr [ebp - 0x1c]
+0x2000B66C: lea edi, [ebx + 0x84]
+0x2000B672: fldz 
+0x2000B674: lea esi, [ebp - 0x1c]
+0x2000B677: fstp dword ptr [ebp - 0x18]
+0x2000B67A: and byte ptr [ebx + 0x80], 0
+0x2000B681: fldz 
+0x2000B683: mov byte ptr [ebp - 4], 1
+
+Named-detail selection is conditional, not proof of every base-renderer path
+0x20023AA0: mov eax, 0x2006182d
+0x20023AA5: call 0x20051668
+0x20023AAA: sub esp, 0x70c
+0x20023AB0: mov eax, dword ptr [0x20076e00]
+0x20023AB5: xor eax, dword ptr [ebp + 4]
+0x20023AB8: push esi
+0x20023AB9: mov esi, ecx
+0x20023ABB: cmp byte ptr [esi + 0x264], 0
+0x20023AC2: mov dword ptr [ebp - 0x10], eax
+0x20023AC5: jne 0x20023ace
+0x20023AC7: xor eax, eax
+0x20023AC9: jmp 0x20023fa5
+0x20023ACE: push ebx
+0x20023ACF: push edi
+0x20023AD0: lea ecx, [ebp - 0x318]
+0x20023AD6: call 0x200029a0
+0x20023ADB: cmp byte ptr [esi + 0x124], 0
+0x20023AE2: je 0x20023cfa
+0x20023AE8: mov ecx, dword ptr [esi + 0x5c]
+0x20023AEB: mov eax, dword ptr [ecx]
+0x20023AED: call dword ptr [eax + 0xe0]
+0x20023AF3: mov eax, dword ptr [esi + 0x160]
+0x20023AF9: xor ebx, ebx
+0x20023AFB: test eax, eax
+0x20023AFD: jbe 0x20023c78
+0x20023B03: lea edi, [esi + 0x150]
+0x20023B09: push ebx
+0x20023B0A: mov ecx, edi
+0x20023B0C: call 0x2001a4d0
+0x20023B11: cmp dword ptr [eax], 0
+0x20023B14: je 0x20023c6b
+0x20023B1A: lea ecx, [ebp - 0x114]
+0x20023B20: call 0x2004e1d0
+0x20023B25: mov ecx, dword ptr [esi + 8]
+0x20023B28: mov eax, dword ptr [ecx]
+0x20023B2A: and dword ptr [ebp - 4], 0
+Detail suffix at 0x20067828: _L1
+Detail suffix at 0x2006782C: _L2
+Detail suffix at 0x20067830: _L3
+Detail suffix at 0x20067834: _L4
+
+Named-detail path maps levels 0,1,2,3 to _L1,_L2,_L3,_L4
+0x20023B2E: call dword ptr [eax + 0x15c]
+0x20023B34: sub eax, 0
+0x20023B37: je 0x20023be6
+0x20023B3D: dec eax
+0x20023B3E: je 0x20023bb3
+0x20023B40: dec eax
+0x20023B41: je 0x20023b80
+0x20023B43: dec eax
+0x20023B44: jne 0x20023c20
+0x20023B4A: push ebx
+0x20023B4B: mov ecx, edi
+0x20023B4D: call 0x2001a4d0
+0x20023B52: push 0x20067834
+0x20023B57: lea ecx, [ebp - 0x418]
+0x20023B5D: push ecx
+0x20023B5E: mov ecx, dword ptr [eax]
+0x20023B60: call 0x2004e4a0
+0x20023B65: push eax
+0x20023B66: lea ecx, [ebp - 0x114]
+0x20023B6C: mov byte ptr [ebp - 4], 4
+0x20023B70: call 0x2004e040
+0x20023B75: lea ecx, [ebp - 0x418]
+0x20023B7B: jmp 0x20023c17
+0x20023B80: push ebx
+0x20023B81: mov ecx, edi
+0x20023B83: call 0x2001a4d0
+0x20023B88: push 0x20067830
+0x20023B8D: lea ecx, [ebp - 0x718]
+0x20023B93: push ecx
+0x20023B94: mov ecx, dword ptr [eax]
+0x20023B96: call 0x2004e4a0
+0x20023B9B: push eax
+0x20023B9C: lea ecx, [ebp - 0x114]
+0x20023BA2: mov byte ptr [ebp - 4], 3
+0x20023BA6: call 0x2004e040
+0x20023BAB: lea ecx, [ebp - 0x718]
+0x20023BB1: jmp 0x20023c17
+0x20023BB3: push ebx
+0x20023BB4: mov ecx, edi
+0x20023BB6: call 0x2001a4d0
+0x20023BBB: push 0x2006782c
+0x20023BC0: lea ecx, [ebp - 0x618]
+0x20023BC6: push ecx
+0x20023BC7: mov ecx, dword ptr [eax]
+0x20023BC9: call 0x2004e4a0
+0x20023BCE: push eax
+0x20023BCF: lea ecx, [ebp - 0x114]
+0x20023BD5: mov byte ptr [ebp - 4], 2
+0x20023BD9: call 0x2004e040
+0x20023BDE: lea ecx, [ebp - 0x618]
+0x20023BE4: jmp 0x20023c17
+0x20023BE6: push ebx
+0x20023BE7: mov ecx, edi
+0x20023BE9: call 0x2001a4d0
+0x20023BEE: push 0x20067828
+0x20023BF3: lea ecx, [ebp - 0x518]
+0x20023BF9: push ecx
+0x20023BFA: mov ecx, dword ptr [eax]
+0x20023BFC: call 0x2004e4a0
+0x20023C01: push eax
+0x20023C02: lea ecx, [ebp - 0x114]
+0x20023C08: mov byte ptr [ebp - 4], 1
+0x20023C0C: call 0x2004e040
+0x20023C11: lea ecx, [ebp - 0x518]
+0x20023C17: and byte ptr [ebp - 4], 0
+0x20023C1B: call 0x2004dfa0
+
+Conclusion: distance uses all three position differences and vector length; it is not planar or squared distance.
+The shipped TooFar code is 4. The local compatibility HT3D.h header's -1 is not this binary profile's value.
+The inspected named-detail path chooses _L1/_L2/_L3/_L4 for levels 0/1/2/3; it does not draw them all together.
+This does not establish bone skinning or every renderer-internal detail/missing-record policy.
