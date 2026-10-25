@@ -3,7 +3,7 @@
   "source_data": "passed",
   "rendered_content": "actual JavaScript renderer with CPU DOM adapter; passed",
   "export_file_hashes": {
-    "count": 288,
+    "count": 290,
     "result": "matched"
   },
   "http": [
@@ -15,7 +15,7 @@
     {
       "path": "/genesis/snapshot.json",
       "status": 200,
-      "sha256": "d0a1a5fc16bae237823aa1281e6aba46728ffe8951836f5edd04dcdc724b9c0f"
+      "sha256": "9bdccc9eba024c998ea2d5e3e55928589c3f86cb7ac8ffd91357f8c51943e925"
     },
     {
       "path": "/genesis/assets/tantra-world.png",
@@ -55,7 +55,7 @@
     {
       "path": "/genesis/assets/roadmap-data.js?v=20261026-2",
       "status": 200,
-      "sha256": "2126d8ba04b803f1332b177fc9168e8f3fe7584452b9cb5310cb77483ea16a55"
+      "sha256": "d1c08987ea921c086ac6a90f2aec56a9b154e327120f47f01c72eefad65aa011"
     },
     {
       "path": "/genesis/assets/roadmap.js?v=20261026-2",
@@ -65,12 +65,12 @@
     {
       "path": "/genesis/documentation/client/planning/HTLAUNCHER_CLIENT_IMPLEMENTATION_PLAN.md",
       "status": 200,
-      "sha256": "75cf24311298ffc2cfdb5a78f4551d725be0793609d3aa205dc2070b2cd334fc"
+      "sha256": "4b58f381f2328008edcdcdac3f4f00a13c2fd2644c0018e99e69a6b89324c543"
     },
     {
       "path": "/genesis/documentation/client/PROGRESS.md",
       "status": 200,
-      "sha256": "ec05bf12655c330a31b47484af6f65aac19b6a15b68c88f9b242ad04c4dbcbf0"
+      "sha256": "519111332b9319637f6e1f5766d0582c4111b51472562fcfa56ede5cacaf9017"
     },
     {
       "path": "/genesis/reference/bgfx/IMPLEMENTATION_PLAN.md",
@@ -92,6 +92,6 @@
   "browser_visual_acceptance": "not run; browser connection bootstrap rejected its required module",
   "production_deployment": "not verified by Git publication",
   "game_launches": 0,
-  "export_manifest_sha256": "fb8dc74e164826feb539df1f2418c0c12cd7a0e61b2b3503a109cc081f29e3d1",
-  "source_head": "2109eace0a3bd4f4d0d5d25e04b724d68afe786d"
+  "export_manifest_sha256": "5b90194bdc1af0d383c9a871a2a04f06bbba07a15801f3c5d830bcc2de71a99f",
+  "source_head": "b1024c36ce1034edafb74ab2ab185e2fbb1f1e4a"
 }

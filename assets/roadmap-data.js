@@ -419,7 +419,16 @@ window.TANTRA_ROADMAP = {
               "id": "P06-T02",
               "done": true,
               "text": "Ordinary instant HP/TP consumables and item-type cooldowns.",
-              "children": []
+              "children": [
+                {
+                  "done": true,
+                  "text": "Connect supported ordinary timed stat-buff items to native replacement,"
+                },
+                {
+                  "done": false,
+                  "text": "Accept timed-item presentation and finish repeat-use/mixed-phase items."
+                }
+              ]
             },
             {
               "id": "P06-T03",
@@ -455,6 +464,10 @@ window.TANTRA_ROADMAP = {
                 {
                   "done": true,
                   "text": "Update ordinary item quick-slot keys from accepted authority snapshots;"
+                },
+                {
+                  "done": true,
+                  "text": "Connect ordinary timed stat buffs through source OnTakeAffections and"
                 },
                 {
                   "done": false,
@@ -950,6 +963,11 @@ window.TANTRA_ROADMAP = {
         "Accept environment fidelity, loading performance and every zone"
       ],
       "changes": [
+        {
+          "date": "2026-10-26",
+          "title": "Ordinary timed consumable buffs",
+          "text": "Ten authored stat-buff records now use native replacement, expiry and durable consumption. Five focused CPU checks and both packages pass; in-game, repeat-use and mixed-phase item acceptance remain open."
+        },
         {
           "date": "2026-10-26",
           "title": "Native item quick-slot lifecycle",
@@ -2724,11 +2742,11 @@ window.TANTRA_ROADMAP = {
   "sources": {
     "ogre_plan": {
       "path": "documentation/client/planning/HTLAUNCHER_CLIENT_IMPLEMENTATION_PLAN.md",
-      "sha256": "75cf24311298ffc2cfdb5a78f4551d725be0793609d3aa205dc2070b2cd334fc"
+      "sha256": "4b58f381f2328008edcdcdac3f4f00a13c2fd2644c0018e99e69a6b89324c543"
     },
     "ogre_progress": {
       "path": "documentation/client/PROGRESS.md",
-      "sha256": "ec05bf12655c330a31b47484af6f65aac19b6a15b68c88f9b242ad04c4dbcbf0"
+      "sha256": "519111332b9319637f6e1f5766d0582c4111b51472562fcfa56ede5cacaf9017"
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",

@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-26",
+  "goal_status": "active_incomplete",
+  "scope": "Ordinary pure OnAffect timed stat consumables; ten matching authored records",
+  "launches": {
+    "game": 0,
+    "renderer": 0,
+    "server": 0,
+    "audio_device": 0
+  },
+  "cpu": {
+    "passed": [
+      "native_timed_consumables",
+      "native_progression_actions",
+      "native_skill_authority",
+      "offline_character_persistence",
+      "mandara_closure"
+    ],
+    "focused_assertions": 155,
+    "tribes": 8,
+    "matching_authored_records": 10,
+    "native_item": 7021,
+    "native_effect": 4170,
+    "buff_duration_ms": 90000,
+    "buff_flat_bonus": 20,
+    "replacement_and_expiry": "source callback; same effect refreshes without doubling",
+    "rejections": "dead/capacity/cooldown/no live callback/callback failure guarded; no inventory or cooldown commit",
+    "sqlite": "accepted consumption saved; real abort leaves saved inventory unchanged, disconnects and publishes no accepted change"
+  },
+  "build": {
+    "final_release": "passed",
+    "configuration": "Release x64",
+    "sha256": "1a975d5b452eb471e7e32a1dd230c2bb847395592e610146829fcf3fcbc88cde",
+    "files_each": 1731,
+    "payload_bytes_each": 704440257,
+    "static_verification": "both packages passed; runtime/title/relocation not run"
+  },
+  "preservation": {
+    "C:\\_GitHub\\tantra-dev-main\\_client": {
+      "hpk_unchanged": 148,
+      "protected_files_unchanged": 148,
+      "launcher_sha256": "1a975d5b452eb471e7e32a1dd230c2bb847395592e610146829fcf3fcbc88cde"
+    },
+    "C:\\_GitHub\\TantraSrc\\_client": {
+      "hpk_unchanged": 148,
+      "protected_files_unchanged": 197,
+      "launcher_sha256": "1a975d5b452eb471e7e32a1dd230c2bb847395592e610146829fcf3fcbc88cde"
+    }
+  },
+  "native_reference_hashes": {
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\CMob2.cpp": "50cd5a0bbe8d5287d44ced2bd893013f33c8c472b09982890db11caee3c65e8b",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\zone\\CMOB.CPP": "3421c51069c245603784168aa8ea2c276798d480b9749d8e9124734ad0715a46",
+    "C:\\_GitHub\\tantra-dev-main\\_references\\Tantra\\HTlauncher\\HTQuickSlot.cpp": "178a169b121b7897e3c038f022a76be73d1df9f0921acde476b6d8eabafc4d14"
+  },
+  "logs": {
+    ".migration-local\\native-timed-consumables-20261026\\build-stage.log": "ffe16404b562ab3452a4cf8d5ab391f7591215894000730f56d6449c5266b3d7",
+    ".migration-local\\native-timed-consumables-20261026\\cpu-build-final.log": "fd5bc7b90c6cd99ad3890210f69b80f123febf7a7036715686923030a653bed4",
+    ".migration-local\\native-timed-consumables-20261026\\cpu-build.log": "57242644b097e2ef02675da3a706db8694dcdc1c078f9eb38c9a3075b26f7197",
+    ".migration-local\\native-timed-consumables-20261026\\cpu-tests-final.log": "93f9c923a0e3a39c104398c8484fe9a65726e5292fdf47d7d745d7f1ebdc0031",
+    ".migration-local\\native-timed-consumables-20261026\\cpu-tests.log": "05a47d863ccb249807799f130b78938fa34be5eb578d474deee6d502b27883bd",
+    ".migration-local\\native-timed-consumables-20261026\\stage-user.log": "4de875036da7b07098a8da5068c49765386757e802222849cb8531f8b1f3e7b2",
+    ".migration-local\\native-timed-consumables-20261026\\static-user.log": "27e799f008e46a79d324231f03408161f2415e87f33bd41bf0952c8c7d4fd536",
+    ".migration-local\\native-timed-consumables-20261026\\static-workspace.log": "27e799f008e46a79d324231f03408161f2415e87f33bd41bf0952c8c7d4fd536"
+  },
+  "remaining": [
+    "Rendered stats/quick bars/buff presentation/FX/audio",
+    "Repeat-use toggle and 59-second cadence, mixed phases and purchased entitlements",
+    "Other skill/item-cost families and online replies",
+    "Corrected Mandara FX/camera and full phased client acceptance"
+  ]
+}

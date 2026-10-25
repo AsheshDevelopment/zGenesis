@@ -1,5 +1,22 @@
 # Tantra Online client progress
 
+## 2026-10-26 - ordinary timed consumable buffs
+
+- [x] Connect supported pure OnAffect items to the native live status callback;
+  ten authored records match this family, with requirements and cooldown guards.
+- [x] Preserve native effect replacement/expiry and status notifications, then
+  publish accepted inventory changes only after durable consumption.
+- [x] Pass 155 focused assertions across eight tribes and skill/progression/
+  ordinary-item regressions; verify real SQLite rejection conserves saved items
+  and clears accepted events on failed-session teardown.
+- [x] Rebuild/overwrite both clients and pass static packages; preserve HPKs and
+  all private userdata. No game, renderer, server or audio device was launched.
+- [ ] Accept presentation in-game and finish repeat-use, mixed-phase,
+  entitlement, other item-cost and full client acceptance paths.
+
+[Implementation and original references](guides/NATIVE_TIMED_CONSUMABLES.md).
+
+
 ## 2026-10-26 - native quick-slot item lifecycle
 
 - [x] Activate/display the exact saved inventory key and validate it at CHAR_INIT.

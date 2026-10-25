@@ -4,6 +4,7 @@ Use current progress and the phased plan for task status; historical test hashes
 
 [Documentation home](../README.md) | [Current progress](../PROGRESS.md)
 
+- [Native ordinary timed consumables](NATIVE_TIMED_CONSUMABLES.md)
 - [Native quick-slot item lifecycle](NATIVE_QUICK_SLOT_ITEM_LIFECYCLE.md)
 - [Native pickup/drop messages and sounds](NATIVE_GROUND_ITEM_FEEDBACK.md)
 - [Manual ground drops and pickup stacking](NATIVE_GROUND_ITEMS.md)

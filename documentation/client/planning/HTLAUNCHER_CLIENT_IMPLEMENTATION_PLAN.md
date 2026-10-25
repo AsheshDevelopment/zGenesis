@@ -144,7 +144,7 @@ messages are search anchors; line numbers may change as implementation proceeds.
 | `Tantra\HTlauncher\TNNetworkManager.cpp`: `RequestSkillCastUnitSkill`, `RequestSkillCastAreaSkill`; `HTQuickSlot.cpp`: `HT_vActionskill` | Quick slots reach timed self buffs and direct unit/ground-area action sequences; impact authority is implemented | Finish specialized projectiles, remaining authority/effect/command/result paths and visual acceptance |
 | `Tantra\zone\CMob.cpp`: damage and continuous-effect rules | `_remake\src\compatibility\HtPcStatProjection.cpp` throws for periodic damage without combat authority/attacker context | Add recipients, attribution, damage/death lifecycle and periodic-effect integration |
 | `Tantra\HTlauncher\HTPortal.cpp`, world transition handlers and native portal/regen requests | `_remake\src\client\OfflineCharacterChannel.cpp` rejects nonzero position/portal/target CHAR_INIT variants | Implement valid handoff/re-entry and destination-failure paths before enabling those requests |
-| Native consumable/charge/cancel rules in `Tantra\zone\CMob2.cpp` | `_remake\src\client\OfflineWorldGameplay.cpp::useItem` supports ordinary instant HP/TP recovery and rejects other phases/costs | Implement remaining supported item families with native consumption/cancellation order |
+| Native consumable/charge/cancel rules in `Tantra\zone\CMob2.cpp` | `_remake\src\client\OfflineConsumables.cpp::useItem` supports instant HP/TP recovery and ten authored pure OnAffect stat-buff records; other phases/costs remain gated | Implement remaining supported item families with native consumption/cancellation order |
 | Original resource identities and lifetime behavior | `CharacterResourceCache` now retains shared immutable resources; actors and LOD records reuse handles, with isolated native track bindings | Explicit character invalidation exists; map/collision sharing, budgets and background loading remain open |
 
 Historical HPK evidence retains its original scope. The current continuation
@@ -348,6 +348,10 @@ Owned implementation: `OfflineInventoryRules.h`, `OfflineNpcServices.*`,
 - [x] **P06-T01** — Inventory/equipment transfers, occupied-slot swaps, stack merge/split,
   native slot/tribe rules, stat recalculation and represented equipment appearance.
 - [x] **P06-T02** — Ordinary instant HP/TP consumables and item-type cooldowns.
+  - [x] Connect supported ordinary timed stat-buff items to native replacement,
+    expiry and accepted SQLite consumption; ten authored records match. See
+    [timed consumables](../guides/NATIVE_TIMED_CONSUMABLES.md).
+  - [ ] Accept timed-item presentation and finish repeat-use/mixed-phase items.
 - [x] **P06-T03** — Native dialogue, merchant buy/sell, repair, personal item/Rupiah warehouse
   and save-point code with authenticated transactional persistence.
 - [x] **P06-T04** — Earlier offline runtime evidence for repair, buying/selling and potion use.
@@ -369,6 +373,9 @@ Owned implementation: `OfflineInventoryRules.h`, `OfflineNpcServices.*`,
   - [x] Update ordinary item quick-slot keys from accepted authority snapshots;
     retain source replacement order and saved 400-byte profiles. See the
     [quick-slot lifecycle checkpoint](../guides/NATIVE_QUICK_SLOT_ITEM_LIFECYCLE.md).
+  - [x] Connect ordinary timed stat buffs through source OnTakeAffections and
+    durable accepted inventory events; verify native replacement/expiry and
+    failed-save conservation. [Timed-item checkpoint](../guides/NATIVE_TIMED_CONSUMABLES.md).
   - [ ] Accept rendered drop/pickup paths and finish ownership/release, decay,
     remaining item-result families and continuous/charged-item phases.
 - [ ] **P06-T07** — Connect the same UI/request/result flow to C++ server authority and verify
