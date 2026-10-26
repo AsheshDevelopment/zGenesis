@@ -7,14 +7,16 @@ through the project-owned bgfx backend. The window/product is **Tantra Online**.
 - [Detailed implementation plan](IMPLEMENTATION_PLAN.md)
 - [Progress and next continuation](PROGRESS.md)
 
-Options now has native `Resolution < 1024x768x32 >` arrows and an **Advance**
-button. Select a preset or type a custom size; basic OK or Advance Apply updates
-SDL3/bgfx immediately. Advance provides 4:3/16:9/16:10, windowed/borderless/
-fullscreen, texture/shadow/filter quality, fog/detail, VSync, view distance and
-brightness. Graphics save in the external profile's `system/Graphics.cfg`.
-Custom resolution bounds are 800x600..7680x4320; fullscreen requires an exact
-supported mode and borderless uses desktop pixels. The 32 suffix is actual
-32-bit DX11 colour depth. Existing UI images and HPK assets are reused.
+Options has native `Resolution < 1024x768x32 >` arrows and an **Advance** button.
+Advance opens the reference-style compact **Settings** panel: Presets/Options
+section bars, Low/Mid/High presets and grouped gold buttons with selected states.
+Select a preset or type a custom size; Apply updates SDL3/bgfx immediately.
+The existing aspect/window/quality, fog/detail/VSync and brightness/distance
+controls remain functional; graphics save outside the client in the profile's
+`system/Graphics.cfg`. Current layout acceptance passes 103 real SDL checks.
+Custom bounds are 800x600..7680x4320; fullscreen requires an exact supported mode,
+and borderless uses desktop pixels. The 32 suffix is actual DX11 colour depth.
+Existing UI images and HPK assets are reused.
 
 C02 now passes its bounded original-resource/ordered-rendering gate: 22 focused
 checks per Debug/Release build, 84 renderer assertions per configuration, 94 live

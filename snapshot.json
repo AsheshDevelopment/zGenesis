@@ -12,11 +12,11 @@
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "f15c9f5f848246a5f38e792cd5aaca935c103350fc40398f72ef57d9ae107075"
+      "sha256": "5c242621995502ced75502f3b90c5c98257db8504b80f2df43b5375e8bf2d48b"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "832ec759e65dedb704e0ea0ecb0bfa916a7f202da0471c501746b68a3262b639"
+      "sha256": "7d3d23b8db39b8f7f67359461b7a0e495121d056082e8721d98b8f7fda151d0b"
     }
   },
   "reference": {

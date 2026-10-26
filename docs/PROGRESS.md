@@ -1,6 +1,6 @@
 # Roadmap website progress
 
-Version: 1.0.10. Reviewed: 2026-10-27.
+Version: 1.0.11. Reviewed: 2026-10-27.
 
 - [x] Replace the former site with Tantra-O and Tantra-B roadmaps.
 - [x] Preserve actual OGRE and bgfx task/progress/acceptance records.
@@ -17,6 +17,6 @@ No game feature is marked complete by exporting this website.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 124/254 named tasks checked (49%); 5/10 gates recorded. Latest: C02 original assets and live graphics options accepted. Accept 22/22 bounded resource/render tasks and the minimum gate. Preserve native family identity, deterministic Pop precedence, original DDS/DXT mip chains/premultiplied alpha and source UI images; reject ambiguous/traversal/bad inputs and stale shader keys. Verify world cutout/translucent depth, UVs, clipping and eight asymmetric front/back render/pick resize cases. Help becomes Advance with Resolution arrows showing actual 32-bit colour, three aspect ratios/custom sizes, windowed/borderless/fullscreen and live texture/shadow/fog/detail/filter/VSync/view-distance/brightness settings. Debug/Release each pass 22 focused tests and 84 renderer assertions; actual SDL passes 94 settings checks. Original assets pass 100 frames plus resize/minimise/restore; independent miniaudio regression and 53-file packaging pass. Protected/default/seed data are unchanged. Wider visual/performance, maps/skills, DPI/recovery and release remain open; no FPS gain or full visual parity is claimed. Remaining native skill/FX and complete map/game acceptance stay open.
+- **Tantra-B**: 124/254 named tasks checked (49%); 5/10 gates recorded. Latest: Native Settings layout matches supplied reference. Replace stretched value rows with a compact 330-pixel Settings frame, Presets/Options sections, native 64x19 gold button groups, selected highlights and plain values between arrows. Add working Low/Mid/High presets while retaining custom resolutions, all three aspect ratios, window modes and existing live quality/sliders. High retains native 2048 shadows; Ultra selects 4096. Debug/Release builds and three focused MainUI/Interface tests per configuration pass; final hidden SDL/bgfx UI checks are rerun after label refinement. Actual SDL passes 103 checks, including presets reaching renderer/camera state, persistence and Apply/Cancel. Review 1024x768 and 800x600 captures; 53-file packaging and protected/default/seed preservation pass. No new task or gate is closed. MSAA, model/FX/object-distance and circle-shadow controls from the reference remain separate renderer work. No new failures or FPS/visual-parity gain is claimed. Remaining native skill/FX and complete map/game acceptance stay open.
 
 These are separate source checklists, not release-completion percentages.

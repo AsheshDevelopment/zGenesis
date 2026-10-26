@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "C02 original-resource and ordered-rendering contracts and C05 movement/camera/MainUI are accepted. Native Advance options apply resolution, window mode and graphics live using original UI images. Broader skill/FX, collision, map and release backlog stays open; game source remains uncommitted.",
+      "description": "C02 original resources/ordered rendering and C05 movement/camera/MainUI are accepted. Advance now opens the requested compact native Settings layout, with quality presets, grouped buttons and arrow selectors; live settings remain functional. Broader skill/FX, collision, maps and release remain open; game source is uncommitted.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -2761,6 +2761,11 @@ window.TANTRA_ROADMAP = {
       "changes": [
         {
           "date": "2026-10-27",
+          "title": "Native Settings layout matches supplied reference",
+          "text": "Replace stretched value rows with a compact 330-pixel Settings frame, Presets/Options sections, native 64x19 gold button groups, selected highlights and plain values between arrows. Add working Low/Mid/High presets while retaining custom resolutions, all three aspect ratios, window modes and existing live quality/sliders. High retains native 2048 shadows; Ultra selects 4096. Debug/Release builds and three focused MainUI/Interface tests per configuration pass; final hidden SDL/bgfx UI checks are rerun after label refinement. Actual SDL passes 103 checks, including presets reaching renderer/camera state, persistence and Apply/Cancel. Review 1024x768 and 800x600 captures; 53-file packaging and protected/default/seed preservation pass. No new task or gate is closed. MSAA, model/FX/object-distance and circle-shadow controls from the reference remain separate renderer work. No new failures or FPS/visual-parity gain is claimed."
+        },
+        {
+          "date": "2026-10-27",
           "title": "C02 original assets and live graphics options accepted",
           "text": "Accept 22/22 bounded resource/render tasks and the minimum gate. Preserve native family identity, deterministic Pop precedence, original DDS/DXT mip chains/premultiplied alpha and source UI images; reject ambiguous/traversal/bad inputs and stale shader keys. Verify world cutout/translucent depth, UVs, clipping and eight asymmetric front/back render/pick resize cases. Help becomes Advance with Resolution arrows showing actual 32-bit colour, three aspect ratios/custom sizes, windowed/borderless/fullscreen and live texture/shadow/fog/detail/filter/VSync/view-distance/brightness settings. Debug/Release each pass 22 focused tests and 84 renderer assertions; actual SDL passes 94 settings checks. Original assets pass 100 frames plus resize/minimise/restore; independent miniaudio regression and 53-file packaging pass. Protected/default/seed data are unchanged. Wider visual/performance, maps/skills, DPI/recovery and release remain open; no FPS gain or full visual parity is claimed."
         },
@@ -2924,11 +2929,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "f15c9f5f848246a5f38e792cd5aaca935c103350fc40398f72ef57d9ae107075"
+      "sha256": "5c242621995502ced75502f3b90c5c98257db8504b80f2df43b5375e8bf2d48b"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "832ec759e65dedb704e0ea0ecb0bfa916a7f202da0471c501746b68a3262b639"
+      "sha256": "7d3d23b8db39b8f7f67359461b7a0e495121d056082e8721d98b8f7fda151d0b"
     }
   },
   "reference": {

@@ -1316,6 +1316,18 @@ unsupported exclusive modes fail diagnostically and borderless uses desktop
 pixels. Saves use the external profile's `system/Graphics.cfg`, version 1.
 Original Interface.sys and HPKs remain canonical and are not duplicated.
 
+**Reference layout refinement:** the supplied Settings screenshot is now the
+layout guide. Advance opens a 330-pixel native Settings frame, with Presets and
+Options separators, Low/Mid/High presets, original 64x19 button groups, selected
+highlights and plain resolution/filter values between arrows. Existing custom
+sizes/sliders/live application remain available. High preserves 2048 shadows;
+Ultra selects 4096. Debug/Release MainUI/Interface tests and 103 actual SDL checks
+pass, including all three presets. Captures at 1024x768 and 800x600 are visually
+reviewed. Final evidence: `GRAPHICS_REFERENCE_LAYOUT_ACCEPTANCE.json` and
+`graphics-reference-layout-runtime2`. This layout refinement adds no task/gate
+count. MSAA, model/FX/object-distance and circle-shadow controls shown only in
+the reference remain separate renderer work.
+
 **Colour/asset contract:** the default Legacy mode retains original encoded
 texture lighting. Optional Linear (modern) decodes sampled albedo/fog with gamma
 2.2 for lighting and encodes output; alpha composition remains on the encoded

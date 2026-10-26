@@ -2,6 +2,35 @@
 
 Updated: 2026-10-27. Status: **C02 and C05 offline checkpoints accepted and staged; full plan incomplete**.
 
+## Reference-style Settings layout (2026-10-27)
+
+Changed: Advance now opens the requested compact Settings design: a native
+330-pixel frame, Presets and Options section bars, original 64x19 gold buttons,
+Low/Mid/High quality presets, plain values between arrows, and grouped selected
+states. Custom size and brightness/draw-distance sliders remain available.
+High retains the native 2048 shadow profile; Ultra selects 4096. Renderer and
+language display the current DirectX 11 / English configuration. The main Options
+resolution value also uses plain text between its original arrows.
+
+Verified: Debug/Release builds and three focused MainUI/Interface tests per
+configuration pass; the final hidden SDL/bgfx UI check is rerun after the label
+revision. The actual SDL settings workflow passes 103 checks, including all three
+presets reaching renderer/camera state, selected highlights, resolution/aspect/
+custom sizes, window modes, quality choices, persistence and Apply/Cancel.
+Captures at 1024x768 and 800x600 are visually reviewed. Package closure passes 53
+owned files; protected/default/seed data remain unchanged. Evidence:
+`build/evidence/GRAPHICS_REFERENCE_LAYOUT_ACCEPTANCE.json` and
+`graphics-reference-layout-runtime2`.
+
+Final staged Release SHA256:
+`4566c934e9d8342393f599559c107eab080c143878e21588e3649139553bb45c`.
+
+Failed: no new failure in this revision. Remaining: screenshot-only MSAA,
+model/FX/object-distance and circle-shadow controls need separate renderer work.
+All broader game/visual/recovery/release limits remain open. No additional C02
+or other roadmap task/gate is closed by this layout refinement. Game source
+remains uncommitted; the previous C02/C05 executable hashes below are historical.
+
 ## C02 original resources, ordered rendering and Advance settings (2026-10-27)
 
 C02 is accepted for the bounded contract: 22/22 tasks and its minimum gate.
@@ -62,8 +91,8 @@ Interface.sys is untouched. The separate strike attempt still records missing
 Remaining: all five continuation objectives and wider skills/AI, native collision,
 other maps/portals, Windows DPI/recovery, matched visual/performance and release
 acceptance. Texture LOD selection does not imply reduced GPU allocation or a
-measured FPS gain. Game source is uncommitted. C05's staged hash below is history;
-the current staged hash is the C02 hash above.
+measured FPS gain. Game source is uncommitted. C02/C05 staged hashes record those checkpoints; the latest staged hash is in
+the Settings layout revision above.
 
 ## C05 movement, camera and MainUI (2026-10-27)
 
