@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "C05 offline movement, camera and represented MainUI are accepted with source-backed cursors, tooltips, colour/font modes, bounded text caching, native names, camera obstruction recovery and isolated SDL/persistence evidence. The broader skill/FX, native collision, other-map and release backlog remains open; source changes are uncommitted.",
+      "description": "C02 original-resource and ordered-rendering contracts and C05 movement/camera/MainUI are accepted. Native Advance options apply resolution, window mode and graphics live using original UI images. Broader skill/FX, collision, map and release backlog stays open; game source remains uncommitted.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -1402,19 +1402,19 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P03-03",
-              "done": false,
+              "done": true,
               "text": "Resolve duplicate basenames using archive family, map and relative resource identity.",
               "children": []
             },
             {
               "id": "P03-04",
-              "done": false,
+              "done": true,
               "text": "Retain deterministic regular/Pop precedence; do not scan every archive on every lookup.",
               "children": []
             },
             {
               "id": "P03-05",
-              "done": false,
+              "done": true,
               "text": "Validate TPA/TXL profiles, section sizes, counts, IDs, opaque tails and string encodings.",
               "children": []
             },
@@ -1426,19 +1426,19 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P03-07",
-              "done": false,
+              "done": true,
               "text": "Port THM/TCC/TML/TMD/TMB/TAB readers and verify coordinates, normals, UVs and material groups.",
               "children": []
             },
             {
               "id": "P03-08",
-              "done": false,
+              "done": true,
               "text": "Support DDS/DXT1/2/3/4/5 and original TGA/BMP; preserve premultiplied-alpha identity and mip chains.",
               "children": []
             },
             {
               "id": "P03-09",
-              "done": false,
+              "done": true,
               "text": "Treat _TGA as useful provenance, with an explicit material policy for cutout versus actual translucency.",
               "children": []
             },
@@ -1456,37 +1456,37 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P03-12",
-              "done": false,
+              "done": true,
               "text": "Reject traversal, malformed offsets and ambiguous unqualified resource requests with useful diagnostics.",
               "children": []
             },
             {
               "id": "P04-06",
-              "done": false,
+              "done": true,
               "text": "Compile backend-specific shaders with shaderc and version the shader cache key.",
               "children": []
             },
             {
               "id": "P04-07",
-              "done": false,
+              "done": true,
               "text": "Specify vertex layouts/varyings and validate their linkage and buffer strides.",
               "children": []
             },
             {
               "id": "P04-08",
-              "done": false,
+              "done": true,
               "text": "Test source left-handed coordinates, winding, matrix layout, depth convention and texture origin once at the renderer boundary.",
               "children": []
             },
             {
               "id": "P04-09",
-              "done": false,
+              "done": true,
               "text": "Do not copy OGRE's clip-X reflection blindly; prove asymmetric left/right landmark and picking cases.",
               "children": []
             },
             {
               "id": "P05-01",
-              "done": false,
+              "done": true,
               "text": "Assign explicit passes for shadow, background sky, opaque/cutout world, water/translucency, FX and UI.",
               "children": []
             },
@@ -1498,19 +1498,19 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P05-03",
-              "done": false,
+              "done": true,
               "text": "Add per-widget clipping/scissor, pixel alignment, alpha blend and native texture dimensions.",
               "children": []
             },
             {
               "id": "P05-04",
-              "done": false,
+              "done": true,
               "text": "Port original UI SYS declarations, texture catalogs, control IDs and responsive panel anchoring.",
               "children": []
             },
             {
               "id": "P09-13",
-              "done": false,
+              "done": true,
               "text": "Define explicit linear/sRGB handling and a parity/modern presentation mode boundary.",
               "children": []
             },
@@ -1523,13 +1523,13 @@ window.TANTRA_ROADMAP = {
           ],
           "gate": {
             "id": "BG-C02-GATE",
-            "done": false,
+            "done": true,
             "text": "Sampled old/new bytes/IDs agree; malformed inputs fail diagnostically. Asymmetric landmarks, transparency/cutout overlap, clipped UI and projection/picking remain correct on resize. No account or Mandara world is required.",
             "children": []
           },
-          "done": 7,
+          "done": 22,
           "total": 22,
-          "percent": 32
+          "percent": 100
         },
         {
           "id": "C03",
@@ -2736,6 +2736,8 @@ window.TANTRA_ROADMAP = {
         }
       ],
       "foundations": [
+        "C02: qualified HPK resource identity, original DDS mips/alpha, clipped ordered UI and asymmetric world render/picking across four sizes",
+        "Native Advance settings: resolution arrows, 4:3/16:9/16:10/custom, windowed/borderless/fullscreen and live graphics quality; actual 32-bit D3D11 colour",
         "Ordinary attacks use native costs/CalDamage and consume next-attack bonuses at melee impact or projectile arrival; first TAB attack annotation matches the original engine",
         "C++20 x64 Debug/Release, bgfx/D3D11, SDL3 and miniaudio; clean dedicated client",
         "Direct TantraParam.tpa and HPK resources; Philippine English names; server-only data and saves outside the client",
@@ -2757,6 +2759,11 @@ window.TANTRA_ROADMAP = {
         "Broaden distinct-map/portal, visual/performance/recovery and release acceptance without inferring FPS gains from caching"
       ],
       "changes": [
+        {
+          "date": "2026-10-27",
+          "title": "C02 original assets and live graphics options accepted",
+          "text": "Accept 22/22 bounded resource/render tasks and the minimum gate. Preserve native family identity, deterministic Pop precedence, original DDS/DXT mip chains/premultiplied alpha and source UI images; reject ambiguous/traversal/bad inputs and stale shader keys. Verify world cutout/translucent depth, UVs, clipping and eight asymmetric front/back render/pick resize cases. Help becomes Advance with Resolution arrows showing actual 32-bit colour, three aspect ratios/custom sizes, windowed/borderless/fullscreen and live texture/shadow/fog/detail/filter/VSync/view-distance/brightness settings. Debug/Release each pass 22 focused tests and 84 renderer assertions; actual SDL passes 94 settings checks. Original assets pass 100 frames plus resize/minimise/restore; independent miniaudio regression and 53-file packaging pass. Protected/default/seed data are unchanged. Wider visual/performance, maps/skills, DPI/recovery and release remain open; no FPS gain or full visual parity is claimed."
+        },
         {
           "date": "2026-10-27",
           "title": "C05 movement, camera and MainUI accepted",
@@ -2838,10 +2845,10 @@ window.TANTRA_ROADMAP = {
           "text": "ZFLauncher uses its dedicated client/profile. OGRE runtime results are not transferred to bgfx acceptance."
         }
       ],
-      "done": 109,
+      "done": 124,
       "total": 254,
-      "percent": 43,
-      "accepted": 4
+      "percent": 49,
+      "accepted": 5
     }
   ],
   "zones": [
@@ -2917,11 +2924,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "ac1e3600529d6e45047364fdb68b82420d57a27842fd546fbd5582c2df7568f4"
+      "sha256": "f15c9f5f848246a5f38e792cd5aaca935c103350fc40398f72ef57d9ae107075"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "7a57e9fd1882dcd67da32ee4ba973814b870c5f3cff25416fb3eec5ab5675053"
+      "sha256": "832ec759e65dedb704e0ea0ecb0bfa916a7f202da0471c501746b68a3262b639"
     }
   },
   "reference": {

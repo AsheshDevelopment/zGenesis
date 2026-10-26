@@ -10,20 +10,20 @@ OGRE remake's implemented foundations**. Build a separate `ZFLauncher.exe` with
 the `Tantra Online` window/product title, using the same client assets and
 **ashesh / ashesh** login. Keep `_client/HTLauncher.exe` available for comparison.
 
-**C05 is accepted for the represented offline scope (2026-10-27).** The broader
+**C02 and C05 are accepted for their represented offline scope (2026-10-27).**
+The user requested C02 and native live graphics options after C05. The broader
 skill/strike expansion and server work remain paused. ZFLauncher uses C++20,
-SDL3 and bgfx/D3D11 with the dedicated `_client_bgfx` assets and external runtime
-support. The complete plan remains open; this checkpoint does not close other
-phase gates. Game source changes remain uncommitted.
+SDL3 and bgfx/D3D11 with dedicated `_client_bgfx` assets and external runtime
+support. The complete plan remains open. Game source changes remain uncommitted.
 
 ### Current work order
 
-1. C05 is implemented, staged and verified; retain its explicit offline/native-collision limits.
-2. Batch source, CPU, GPU and isolated SDL checks; reconcile checkboxes from
-   their evidence, including previously implemented C05 features.
-3. Retain all five continuation objectives and the wider backlog below. Do not
-   expand the unfinished combo/conditional-target or periodic skill services as
-   part of this C05 request.
+1. C02 original resources/ordered rendering and the native Advance graphics
+   settings are implemented, staged and verified; retain the documented bounds.
+2. C05 movement/camera/MainUI remains accepted, including its explicit missing
+   authored native-collision limitation.
+3. Retain all five continuation objectives and the wider backlog. Do not expand
+   unfinished combo/conditional-target or periodic skill services in this slice.
 
 The preceding strike batch is retained: five target-independent strike-rule
 cases and eight encounters for skills3026/3012/3109. Full skills3033/3107 still
@@ -804,7 +804,7 @@ acceptance.
 | --- | --- | --- | --- | --- |
 | C00 | [x] | 379 source/tool hashes, baseline commit/patch, nine input hashes, pinned dependencies | `c00-baseline-inputs/RESULT.json`; `docs/evidence/source-baseline.json` | Broad asynchronous handle/DTO architecture remains in parent tasks |
 | C01 | [ ] | C++20 x64 Debug/Release, D3D11 shell, resize/minimize/restore; namespaced executable/shaders/notices staged | `c01-builds`; `c01-shell`; `_client_bgfx/system/zflauncher/package-manifest.json` | Focus/DPI, repeated recovery and clean-machine closure |
-| C02 | [ ] | Native HPK model/textures, material alpha/detail, ordered UI, CPU reader/profile checks | `c02-assets`; `c02-resources` | Full asymmetric/clipping/resize matrix and normal/colour contracts |
+| C02 | [x] | Original HPK readers/identity, authored DDS mips/alpha, world depth/UVs, asymmetric render/pick resize matrix, clipped native UI and live graphics options | `C02_ACCEPTANCE.json`; `c02-resources-release-accepted`; `c02-resources-debug-accepted`; `c02-graphics-runtime5`; `c02-original-assets2` | Wider asset inventory, Windows DPI/recovery, exact visual/performance parity and full-game acceptance remain open |
 | C03 | [x] | ashesh login; create/select/delete; all eight tribe previews with face/hair changes; full-roster and duplicate-name rejection, cancellation and corrected retry | `c03-roster-lifecycle-guarded`; `c03-eight-previews-complete`; `c03-roster-boundaries` | Complete appearance/equipment/LOD combinations and repeated transition cleanup |
 | C04 | [ ] | Source CHAR_INIT to map40001, 524288 terrain triangles, 6503 placements, actors and essential native HUD | `c04-entry-actor-catalog`; `map-cpu-preflight.txt` | Async cancellation, complete seed-state checks and broader transition/reload matrix |
 | C05 | [x] | Blocked SDL clicks, town/field run/walk/retarget, orbit/reset/zoom, native UI/cursors/tooltips/names, bounded text cache and fresh-process UI/quickslot persistence | `C05_ACCEPTANCE.json`; `c05-town-runtime1`; `c05-field-runtime1`; `c05-hotkeys-runtime2`; `c05-persistence-runtime1` | Authored .tbo missing; full game/online/visual parity stays outside this offline checkpoint |
@@ -942,7 +942,7 @@ verified slices and their remaining requirements are listed in the checkpoint ta
 | OGRE group | Existing implementation/reference and remaining limits | First bgfx checkpoint | bgfx implementation | CPU/build evidence | bgfx runtime acceptance |
 | --- | --- | --- | --- | --- | --- |
 | 01 Application/configuration | SDL3/OGRE shell, diagnostics/build/staging; recovery/DPI gaps | C01 | [ ] | [ ] | [ ] |
-| 02 Original resources | HPK/catalog/map/model/UI readers and alpha/detail; broader preflight gaps | C02 | [ ] | [ ] | [ ] |
+| 02 Original resources | Bounded HPK/catalog/map/model/UI, alpha/mip, coordinate/depth/clipping and live display contract accepted; wider asset audit remains | C02 | [x] | [x] | [x] |
 | 03 INTRO/characters | SQLite login, three-slot create/select/delete and loading/CHAR_INIT; roster lifecycle, eight previews and retry accepted; full appearance/equipment/LOD and transition coverage open | C03-C04 | [ ] | [ ] | [ ] |
 | 04 MainUI/status/slots | focus/drag/close panels, calculated status, Chakra/learning and item slots | C05 | [ ] | [ ] | [ ] |
 | 05 Movement/actors/camera | bounded offline navigation/camera accepted; full authored native collision remains open | C05 | [ ] | [ ] | [ ] |
@@ -1276,31 +1276,67 @@ Port bounded HPK/catalog/asset readers and native path identity. Render one orig
 
 - [x] **P03-01** Port bounded HPK indexing and entry reads without bulk extraction.
 - [x] **P03-02** Preserve the original `resource/` and `system/` folder/archive names.
-- [ ] **P03-03** Resolve duplicate basenames using archive family, map and relative resource identity.
-- [ ] **P03-04** Retain deterministic regular/Pop precedence; do not scan every archive on every lookup.
-- [ ] **P03-05** Validate TPA/TXL profiles, section sizes, counts, IDs, opaque tails and string encodings.
+- [x] **P03-03** Resolve duplicate basenames using archive family, map and relative resource identity.
+- [x] **P03-04** Retain deterministic regular/Pop precedence; do not scan every archive on every lookup.
+- [x] **P03-05** Validate TPA/TXL profiles, section sizes, counts, IDs, opaque tails and string encodings.
 - [x] **P03-06** Retain the shipped 276-byte item profile when validated; the available source declaration alone is 272 bytes.
-- [ ] **P03-07** Port THM/TCC/TML/TMD/TMB/TAB readers and verify coordinates, normals, UVs and material groups.
-- [ ] **P03-08** Support DDS/DXT1/2/3/4/5 and original TGA/BMP; preserve premultiplied-alpha identity and mip chains.
-- [ ] **P03-09** Treat `_TGA` as useful provenance, with an explicit material policy for cutout versus actual translucency.
+- [x] **P03-07** Port THM/TCC/TML/TMD/TMB/TAB readers and verify coordinates, normals, UVs and material groups.
+- [x] **P03-08** Support DDS/DXT1/2/3/4/5 and original TGA/BMP; preserve premultiplied-alpha identity and mip chains.
+- [x] **P03-09** Treat `_TGA` as useful provenance, with an explicit material policy for cutout versus actual translucency.
 - [x] **P03-10** Preserve English item/NPC/monster strings from the correct parameter records.
 - [x] **P03-11** Read private CFG overrides over original HTStartup/HTSpec values; default to the requested HIGH profile.
-- [ ] **P03-12** Reject traversal, malformed offsets and ambiguous unqualified resource requests with useful diagnostics.
-- [ ] **P04-06** Compile backend-specific shaders with shaderc and version the shader cache key.
-- [ ] **P04-07** Specify vertex layouts/varyings and validate their linkage and buffer strides.
-- [ ] **P04-08** Test source left-handed coordinates, winding, matrix layout, depth convention and texture origin once at the renderer boundary.
-- [ ] **P04-09** Do not copy OGRE's clip-X reflection blindly; prove asymmetric left/right landmark and picking cases.
-- [ ] **P05-01** Assign explicit passes for shadow, background sky, opaque/cutout world, water/translucency, FX and UI.
+- [x] **P03-12** Reject traversal, malformed offsets and ambiguous unqualified resource requests with useful diagnostics.
+- [x] **P04-06** Compile backend-specific shaders with shaderc and version the shader cache key.
+- [x] **P04-07** Specify vertex layouts/varyings and validate their linkage and buffer strides.
+- [x] **P04-08** Test source left-handed coordinates, winding, matrix layout, depth convention and texture origin once at the renderer boundary.
+- [x] **P04-09** Do not copy OGRE's clip-X reflection blindly; prove asymmetric left/right landmark and picking cases.
+- [x] **P05-01** Assign explicit passes for shadow, background sky, opaque/cutout world, water/translucency, FX and UI.
 - [x] **P05-02** Keep UI painter ordering deterministic; define transparent sorting separately from opaque batching.
-- [ ] **P05-03** Add per-widget clipping/scissor, pixel alignment, alpha blend and native texture dimensions.
-- [ ] **P05-04** Port original UI SYS declarations, texture catalogs, control IDs and responsive panel anchoring.
-- [ ] **P09-13** Define explicit linear/sRGB handling and a parity/modern presentation mode boundary.
+- [x] **P05-03** Add per-widget clipping/scissor, pixel alignment, alpha blend and native texture dimensions.
+- [x] **P05-04** Port original UI SYS declarations, texture catalogs, control IDs and responsive panel anchoring.
+- [x] **P09-13** Define explicit linear/sRGB handling and a parity/modern presentation mode boundary.
 - [x] **P09-14** Keep UI colour independent of scene exposure/tone mapping; prevent double gamma correction.
+
+**Accepted evidence (2026-10-27):** 22/22 named tasks and the minimum gate;
+see `build/evidence/C02_ACCEPTANCE.json`. Debug/Release each pass 22 focused
+checks and 84 renderer assertions. The no-account original-asset scenario passes
+100 frames, resize/minimise/restore without renderer reinitialisation. Actual SDL
+Options passes 94 checks across three aspect ratios, a typed 1320x825 resolution,
+all four shadow qualities, borderless/fullscreen/windowed, invalid rejection,
+Apply/Cancel and saved graphics values. The independent miniaudio regression
+passes. Protected/default/seed data are unchanged; package closure is 53 files.
+
+**Requested graphics extension:** reuse original MainUI frames, arrows, buttons
+and volume sliders. Help becomes Advance. Both resolution selectors show
+`Resolution < 1024x768x32 >`; 32 is the actual BGRA8/D3D11 colour depth. Basic
+arrows select a draft and OK applies it; Advance also exposes aspect/custom size,
+window mode, texture/shadow/filter quality, fog/detail/VSync, view distance and
+brightness. Apply is live. Custom sizes are bounded to 800x600..7680x4320;
+unsupported exclusive modes fail diagnostically and borderless uses desktop
+pixels. Saves use the external profile's `system/Graphics.cfg`, version 1.
+Original Interface.sys and HPKs remain canonical and are not duplicated.
+
+**Colour/asset contract:** the default Legacy mode retains original encoded
+texture lighting. Optional Linear (modern) decodes sampled albedo/fog with gamma
+2.2 for lighting and encodes output; alpha composition remains on the encoded
+BGRA8 target. UI/FX/sky bypass this world colour adjustment. This is not HDR or a
+fully colour-managed pipeline. Texture quality biases authored mip levels;
+filtering is bilinear/trilinear/anisotropic. It does not rewrite assets or claim
+lower GPU allocation. Original TMB world materials retain their two-sided policy;
+rendered front/back landmarks and picking agree without clip-X reflection.
+
+Failure history remains in the separate attempts: partial-mip DDS allocation,
+unqualified PC preload, and qualified names passed into basename-only native
+skin assembly were corrected. The HUD position test now seeds its known layout
+in memory rather than depending on user-owned Interface.sys positions. No source
+asset/table alias was added. Missing INTRO models and wider skill/FX gaps remain
+recorded and skipped. Windows DPI/recovery, broader visual/performance and full
+game/map acceptance remain separate open gates.
 
 **Headless check:** `--check resources` with the runner command and a fresh output.
 **Explicit runtime scenario:** `asset-scene`; use separate prepare/run commands and separate outputs for each scenario.
 
-- [ ] **BG-C02-GATE** Sampled old/new bytes/IDs agree; malformed inputs fail diagnostically. Asymmetric landmarks, transparency/cutout overlap, clipped UI and projection/picking remain correct on resize. No account or Mandara world is required.
+- [x] **BG-C02-GATE** Sampled old/new bytes/IDs agree; malformed inputs fail diagnostically. Asymmetric landmarks, transparency/cutout overlap, clipped UI and projection/picking remain correct on resize. No account or Mandara world is required.
 
 ### C03 Offline account and first character preview
 

@@ -1,5 +1,19 @@
 # Unreleased
 
+## 1.0.10 - 2026-10-27 (Tantra-B only)
+
+Changed: accept C02 bounded original resources/ordered rendering and native live
+Advance graphics options, including the requested resolution arrows. Preserve
+Tantra-O and its bundled documentation. Colour depth displays the actual 32 bits.
+Verified: Debug/Release each pass 22 focused tests and 84 renderer assertions;
+94 actual SDL graphics checks, original-asset resize/minimise/restore, independent
+miniaudio controls and 53-file package closure pass. Source/DOM export checks
+are rerun; real browser layout acceptance is not rerun because layout is unchanged.
+Failed: earlier DDS/PC path/test-fixture failures were corrected and retained;
+the separate missing1000106/unsupported TFX node7 strike acceptance remains open.
+Remaining: wider assets/visual/performance/DPI/recovery, skills/collision/maps and
+release gates. Game source remains uncommitted; no new FPS gain is claimed.
+
 ## 1.0.9 - 2026-10-27 (Tantra-B only)
 
 Changed: accept the represented C05 offline movement, camera and MainUI checkpoint;
@@ -147,6 +161,6 @@ Remaining: real browser layout acceptance.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 109/254 named tasks checked (43%); 4/10 gates recorded. Latest: C05 movement, camera and MainUI accepted. Implement original CUR/ANI contexts, 200ms item/skill/control tooltips, native widget colours/font modes, bounded label caching and unchanged bitmap upload avoidance, player name policies and camera obstruction recovery. Accept 32 static / 8 dynamic routes, isolated SDL town blocked-click, field E/R retarget and 63 hotkey checks, plus six restart/relogin/character/village persistence legs. Debug/Release checks and clean packaging pass. The native camera baseline remains 150; the client explicitly selects 450 maximum zoom. Missing authored .tbo collision and wider strike/FX services remain open. No FPS gain or production/native visual parity is claimed. Remaining native skill/FX and complete map/game acceptance stay open.
+- **Tantra-B**: 124/254 named tasks checked (49%); 5/10 gates recorded. Latest: C02 original assets and live graphics options accepted. Accept 22/22 bounded resource/render tasks and the minimum gate. Preserve native family identity, deterministic Pop precedence, original DDS/DXT mip chains/premultiplied alpha and source UI images; reject ambiguous/traversal/bad inputs and stale shader keys. Verify world cutout/translucent depth, UVs, clipping and eight asymmetric front/back render/pick resize cases. Help becomes Advance with Resolution arrows showing actual 32-bit colour, three aspect ratios/custom sizes, windowed/borderless/fullscreen and live texture/shadow/fog/detail/filter/VSync/view-distance/brightness settings. Debug/Release each pass 22 focused tests and 84 renderer assertions; actual SDL passes 94 settings checks. Original assets pass 100 frames plus resize/minimise/restore; independent miniaudio regression and 53-file packaging pass. Protected/default/seed data are unchanged. Wider visual/performance, maps/skills, DPI/recovery and release remain open; no FPS gain or full visual parity is claimed. Remaining native skill/FX and complete map/game acceptance stay open.
 
 These are separate source checklists, not release-completion percentages.

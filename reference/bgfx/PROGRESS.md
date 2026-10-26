@@ -1,6 +1,69 @@
 # ZFLauncher bgfx progress and continuation
 
-Updated: 2026-10-27. Status: **C05 offline checkpoint accepted and staged; full plan incomplete**.
+Updated: 2026-10-27. Status: **C02 and C05 offline checkpoints accepted and staged; full plan incomplete**.
+
+## C02 original resources, ordered rendering and Advance settings (2026-10-27)
+
+C02 is accepted for the bounded contract: 22/22 tasks and its minimum gate.
+`build/evidence/C02_ACCEPTANCE.json` records source hashes, tests and final
+staged executable. The complete game/roadmap remains unfinished.
+
+Changed:
+
+- Resolve textures by native family/relative identity. Missing qualified paths
+  cannot alias a different family; ambiguous unqualified names fail. Regular
+  textures precede paired Pop textures, and HPK indexes remain cached. PC body,
+  equipment and INTRO preload requests now supply the appropriate family.
+- Preserve original DDS/DXT1..5 mip counts, including partial chains and DXT2/4
+  premultiplied identity. Keep actual-alpha cutout/blend policy and original
+  TGA/BMP support. Reject bad archive bounds/traversal and root-prefix siblings.
+- Version backend shader cache keys, validate vertex stride/linkage, apply
+  per-widget GPU scissor and preserve equal-layer creation order. Test opaque,
+  cutout and translucent overlap, top-left UVs and asymmetric render/pick sides.
+- Replace Help with Advance, reusing existing native frame/button/arrow/slider
+  images. The basic selector is `Resolution < 1024x768x32 >`; 32 is the actual
+  DX11 BGRA8 colour depth. Arrows change the draft; basic OK or Advance Apply
+  applies immediately. Advance opens alone and remains centred across resizing.
+- Add 4:3, 16:9 and 16:10 presets; custom 800x600..7680x4320; windowed,
+  borderless and supported exclusive fullscreen. Add authored-mip texture LOD,
+  Off/1024/2048/4096 shadows, fog/detail, filtering, VSync, view distance,
+  brightness and optional world Linear colour. Legacy remains default; UI is
+  colour-independent. The modern path is gamma-2.2 sampled-albedo lighting,
+  with encoded-target alpha composition, not an HDR/fully managed pipeline.
+- Persist graphics atomically to the external profile's `system/Graphics.cfg`.
+  Unsupported modes and failed saves report errors; Apply rollback retains the
+  previous display/settings. No client support/resource duplicates were added.
+
+Verified:
+
+- Debug and Release builds pass. `c02-resources-debug-accepted` and
+  `c02-resources-release-accepted` each pass 22 focused tests. Each renderer probe
+  passes 84 assertions, including all five DXT formats, partial mips, qualified
+  identity/Pop precedence, world/UI overlap, clipping, eight front/back resize
+  cases, shader-cache rejection and clean reinitialisation.
+- `c02-graphics-runtime5` passes 94 actual SDL checks: native arrows and labels,
+  aspect ratios, typed 1320x825, all shadow qualities, live renderer state,
+  fullscreen/borderless/windowed, saved values, rejection and Apply/Cancel.
+  The native Options and Advance captures were visually reviewed; text overlap
+  was corrected. `c02-audio-runtime1` independently verifies live/new voice mute,
+  independent streamed music, persistence and restored miniaudio preferences.
+- `c02-original-assets2` renders original HPK mesh/texture for 100 frames and
+  passes resize/minimise/restore with zero renderer reinitialisations, without
+  an account or Mandara entry. `c02-package-accepted` verifies 53 owned files.
+- Runtime protected/default/seed data remain unchanged. Final staged Release
+  SHA256: `d8d1db21745e4da9aceee18a6572f4b363dd64bf8fe72e214d91b3a152c699f2`.
+
+Failed and corrected: the earlier partial-mip allocation, basename PC preload
+and native skin path attempts are retained separately. The native HUD test's
+fixed position assumptions were replaced with an in-memory fixture; original
+Interface.sys is untouched. The separate strike attempt still records missing
+1000106/unsupported TFX node7 and remains unaccepted.
+
+Remaining: all five continuation objectives and wider skills/AI, native collision,
+other maps/portals, Windows DPI/recovery, matched visual/performance and release
+acceptance. Texture LOD selection does not imply reduced GPU allocation or a
+measured FPS gain. Game source is uncommitted. C05's staged hash below is history;
+the current staged hash is the C02 hash above.
 
 ## C05 movement, camera and MainUI (2026-10-27)
 

@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.9"
+VERSION = "1.0.10"
 
 
 def sha(body):
@@ -80,8 +80,10 @@ def refresh(source):
     project["total"] = sum(group["total"] for group in project["groups"])
     project["percent"] = (200 * project["done"] + project["total"]) // (2 * project["total"])
     project["accepted"] = sum(bool(group["gate"] and group["gate"]["done"]) for group in project["groups"])
-    project["description"] = "C05 offline movement, camera and represented MainUI are accepted with source-backed cursors, tooltips, colour/font modes, bounded text caching, native names, camera obstruction recovery and isolated SDL/persistence evidence. The broader skill/FX, native collision, other-map and release backlog remains open; source changes are uncommitted."
+    project["description"] = "C02 original-resource and ordered-rendering contracts and C05 movement/camera/MainUI are accepted. Native Advance options apply resolution, window mode and graphics live using original UI images. Broader skill/FX, collision, map and release backlog stays open; game source remains uncommitted."
     project["foundations"] = [
+        "C02: qualified HPK resource identity, original DDS mips/alpha, clipped ordered UI and asymmetric world render/picking across four sizes",
+        "Native Advance settings: resolution arrows, 4:3/16:9/16:10/custom, windowed/borderless/fullscreen and live graphics quality; actual 32-bit D3D11 colour",
         "Ordinary attacks use native costs/CalDamage and consume next-attack bonuses at melee impact or projectile arrival; first TAB attack annotation matches the original engine",
         "C++20 x64 Debug/Release, bgfx/D3D11, SDL3 and miniaudio; clean dedicated client",
         "Direct TantraParam.tpa and HPK resources; Philippine English names; server-only data and saves outside the client",
@@ -103,6 +105,7 @@ def refresh(source):
         "Broaden distinct-map/portal, visual/performance/recovery and release acceptance without inferring FPS gains from caching"
     ]
     latest = [
+        {"date": "2026-10-27", "title": "C02 original assets and live graphics options accepted", "text": "Accept 22/22 bounded resource/render tasks and the minimum gate. Preserve native family identity, deterministic Pop precedence, original DDS/DXT mip chains/premultiplied alpha and source UI images; reject ambiguous/traversal/bad inputs and stale shader keys. Verify world cutout/translucent depth, UVs, clipping and eight asymmetric front/back render/pick resize cases. Help becomes Advance with Resolution arrows showing actual 32-bit colour, three aspect ratios/custom sizes, windowed/borderless/fullscreen and live texture/shadow/fog/detail/filter/VSync/view-distance/brightness settings. Debug/Release each pass 22 focused tests and 84 renderer assertions; actual SDL passes 94 settings checks. Original assets pass 100 frames plus resize/minimise/restore; independent miniaudio regression and 53-file packaging pass. Protected/default/seed data are unchanged. Wider visual/performance, maps/skills, DPI/recovery and release remain open; no FPS gain or full visual parity is claimed."},
         {"date": "2026-10-27", "title": "C05 movement, camera and MainUI accepted", "text": "Implement original CUR/ANI contexts, 200ms item/skill/control tooltips, native widget colours/font modes, bounded label caching and unchanged bitmap upload avoidance, player name policies and camera obstruction recovery. Accept 32 static / 8 dynamic routes, isolated SDL town blocked-click, field E/R retarget and 63 hotkey checks, plus six restart/relogin/character/village persistence legs. Debug/Release checks and clean packaging pass. The native camera baseline remains 150; the client explicitly selects 450 maximum zoom. Missing authored .tbo collision and wider strike/FX services remain open. No FPS gain or production/native visual parity is claimed."},
 
         {"date": "2026-10-27", "title": "Implementation paused; quicker independent tasks prioritised", "text": "Record the paused worktree honestly. The new strike batch passes 19,041 Release CPU checks: five target-independent rule cases and eight encounters for skills 3026/3012/3109. Skills 3033/3107 have partial rule coverage only. Debug, GPU, actual launcher/UI/audio acceptance and staging remain pending; the earlier staged client is unchanged. Text/glyph caching and small UI fixes are next after bounded strike acceptance. No broad task/gate or optimisation gain is newly accepted."},
@@ -139,7 +142,7 @@ def refresh(source):
             content = content.replace("Version: " + VERSION + " Reviewed:", "Version: " + VERSION + ". Reviewed:")
             content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-10-27.", content)
         elif "## " + VERSION not in content:
-            content = content.replace("# Unreleased\n", '# Unreleased\n\n## 1.0.9 - 2026-10-27 (Tantra-B only)\n\nChanged: accept the represented C05 offline movement, camera and MainUI checkpoint;\npublish source-backed cursors/tooltips, widget colour/font modes, bounded text\ncaching, native names and camera recovery. Preserve Tantra-O and its documentation.\nVerified: Debug/Release focused checks, 287 UI checks per configuration, original\ncursor assets, 32 static/eight dynamic routes, real SDL controls/retarget/63 hotkeys,\nsix fresh-process persistence legs and clean package closure. Export source/DOM\nchecks are rerun; browser layout acceptance is not rerun.\nFailed: the separate strike GPU attempt records missing 1000106 and unsupported\nTFX node 7. That skill-FX acceptance remains open.\nRemaining: authored .tbo collision, full skills/state/AI, distinct maps/portals,\nvisual/performance/recovery/release and other open phase gates. No measured FPS\ngain is claimed; game implementation source remains uncommitted.\n')
+            content = content.replace("# Unreleased\n", '# Unreleased\n\n## 1.0.10 - 2026-10-27 (Tantra-B only)\n\nChanged: accept C02 bounded original resources/ordered rendering and native live\nAdvance graphics options, including the requested resolution arrows. Preserve\nTantra-O and its bundled documentation. Colour depth displays the actual 32 bits.\nVerified: Debug/Release each pass 22 focused tests and 84 renderer assertions;\n94 actual SDL graphics checks, original-asset resize/minimise/restore, independent\nminiaudio controls and 53-file package closure pass. Source/DOM export checks\nare rerun; real browser layout acceptance is not rerun because layout is unchanged.\nFailed: earlier DDS/PC path/test-fixture failures were corrected and retained;\nthe separate missing1000106/unsupported TFX node7 strike acceptance remains open.\nRemaining: wider assets/visual/performance/DPI/recovery, skills/collision/maps and\nrelease gates. Game source remains uncommitted; no new FPS gain is claimed.\n')
         path.write_text(content, encoding="utf-8", newline="\n")
     readme = ROOT / "README.md"
     content = re.sub(r"Version: \d+\.\d+\.\d+", "Version: " + VERSION, readme.read_text(encoding="utf-8"))

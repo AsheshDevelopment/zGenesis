@@ -7,6 +7,21 @@ through the project-owned bgfx backend. The window/product is **Tantra Online**.
 - [Detailed implementation plan](IMPLEMENTATION_PLAN.md)
 - [Progress and next continuation](PROGRESS.md)
 
+Options now has native `Resolution < 1024x768x32 >` arrows and an **Advance**
+button. Select a preset or type a custom size; basic OK or Advance Apply updates
+SDL3/bgfx immediately. Advance provides 4:3/16:9/16:10, windowed/borderless/
+fullscreen, texture/shadow/filter quality, fog/detail, VSync, view distance and
+brightness. Graphics save in the external profile's `system/Graphics.cfg`.
+Custom resolution bounds are 800x600..7680x4320; fullscreen requires an exact
+supported mode and borderless uses desktop pixels. The 32 suffix is actual
+32-bit DX11 colour depth. Existing UI images and HPK assets are reused.
+
+C02 now passes its bounded original-resource/ordered-rendering gate: 22 focused
+checks per Debug/Release build, 84 renderer assertions per configuration, 94 live
+SDL graphics checks, an original-asset resize/minimise/restore scenario and clean
+53-file package closure. See `build/evidence/C02_ACCEPTANCE.json` locally.
+This checkpoint does not establish whole-game or exact native visual parity.
+
 The current native persistence matrix passes six fresh-process legs over one
 private profile, including Restart, another character and the three supported
 Mandara village zones. Window/options bytes, quickbar mode, equipment attachments
