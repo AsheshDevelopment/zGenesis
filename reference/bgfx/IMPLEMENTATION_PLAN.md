@@ -18,8 +18,9 @@ support. The complete plan remains open. Game source changes remain uncommitted.
 
 ### Current work order
 
-1. C02 original resources/ordered rendering and the native Advance graphics
-   settings are implemented, staged and verified; retain the documented bounds.
+1. Native coloured item/skill tooltips, NPC conversation hover/greeting and
+   player/monster birth FX are the current verified implementation slice.
+   Keep mount/version gaps explicit; retain the accepted C02/C05 bounds.
 2. C05 movement/camera/MainUI remains accepted, including its explicit missing
    authored native-collision limitation.
 3. Retain all five continuation objectives and the wider backlog. Do not expand
@@ -28,6 +29,51 @@ support. The complete plan remains open. Game source changes remain uncommitted.
 The preceding strike batch is retained: five target-independent strike-rule
 cases and eight encounters for skills3026/3012/3109. Full skills3033/3107 still
 need target/combo services. Its CPU pass does not establish complete skill parity.
+
+## Source-backed hover, NPC and birth FX checkpoint (2026-10-27)
+
+Verified the nine supplied May tooltip screenshots against native source before
+implementation. `HTObjectInfo.cpp:415` defines ordered name/description/stat/
+limit/source/next-level sections. `HTInterface.cpp:642` defines the 200ms delay,
+14px rows, padding, 35-row bound and 80% dark background; `HTextern.cpp:421`
+defines white/grey/red/yellow/cyan colours. The original effect formatter,
+message IDs, item-family predicates and refinement arrays are compiled from
+`HTSkillSystem.cpp`, `HTClientParamMgr.cpp` and `HTItemSystem.cpp`; generated
+`build/generated/NativeTooltipSource.json` pins their read-only source hashes.
+
+- Item tooltips use Philippine English names/descriptions and HTMessage text,
+  actual refinement/material nibbles, ceil durability in hundredths, quantity or
+  timed-item duration, effects, attack speed, tribe/deity/level/Chakra limits,
+  red unmet conditions and purchase/sale price/context. Inventory/equipment,
+  cargo, merchant and represented quick slots share the formatter.
+- Skills show current learned level/effects/costs and native next/request
+  conditions, prerequisite levels and next-level effects/costs. fxPC link0
+  supplies the passive classification. Live maximum HP/TP and changed Chakra
+  feed the original formatter; no newer server numbers replace client TPA data.
+- NPC choices keep transparent normal state with original image9 on hover/down
+  (`HTInterface.cpp:5055`). The former normal-texture0 alpha test suppressed
+  their valid hover images; sprite creation now preserves each native state.
+- Accepted NPC opening plays its own Resource NPC clickSound at byte64 using
+  Map NPCSound archive at byte644 and the NPCSound sheet, matching
+  `HTNPCSystem.cpp:310`. Page changes do not replay; close/reopen does. These
+  are HPK-backed miniaudio effects voices, controlled by live effects gain.
+- Player entry/revival uses NEWBORN1010001 (`HTMainCharacter.cpp:292,4284`).
+  Nearby monster entry/respawn uses field type7 born/always/die bindings,
+  matching `HTMonster.cpp:120`. Loading no longer consumes hidden birth FX;
+  first appearance, life changes, death, AOI departure/reentry, equipment
+  rebind, finite expiry and scene resets have explicit lifecycle handling.
+- Sale confirmation also uses the Philippine English item name. Raw resource
+  bytes inserted into a UTF-8 HTMessage previously caused raster failure and
+  ended the launcher during inventory-to-merchant dragging.
+
+Evidence and final validation are recorded in the matching latest section of
+`PROGRESS.md` and `build/evidence/HOVER_NPC_SPAWN_ACCEPTANCE.json`. The native
+formatter leaves unhandled effect rows unrendered as source does; the exact
+45 IDs are recorded in `native-tooltips-*/NATIVE_TOOLTIP_RESULT.json`. The
+loaded K3 TPA has no riding/mount entries matching Vishnu's Elephant screenshot.
+Generic item requirements use native rows when present; mount-specific runtime
+acceptance and newer-table integration remain open. No HPK is extracted into
+the client, no missing resource is substituted, and no broad C06/C07 gate closes.
 
 ## Current continuation: native data, skills, navigation and runtime verification
 
@@ -1525,7 +1571,7 @@ Port inventory/equipment/ordinary consumables, shops/repair/warehouse/save point
 
 - [ ] **P07-12** Keep action animation locks, impact times, facing, blend completion and loop rules source-backed.
 - [ ] **P11-06** Preserve native inventory/equipment placement, stacking, splitting, occupied-slot and consumable actions.
-- [ ] **P11-07** Show actual item-instance state in tooltips: refinement, durability, effects, limits, count and service context.
+- [x] **P11-07** Show actual item-instance state in tooltips: refinement, durability, effects, limits, count and service context. Native item/skill row order, colours, refinement/sub-refinement, ceil durability units, requirements, count/time, price and merchant contexts are implemented. See the source-backed hover/NPC/birth checkpoint below; the current K3 table has no screenshot mount entry.
 - [x] **P11-08** Wire merchant dialogue and buy/sell confirmations with authoritative prices/counts/revisions.
 - [x] **P11-09** Wire repair, warehouse item/Rupiah movement and save-point confirmation/persistence.
 - [x] **P11-10** Handle stale requests, insufficient money/capacity and invalid selections without client-side optimistic divergence.

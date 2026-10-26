@@ -2,6 +2,61 @@
 
 Updated: 2026-10-27. Status: **C02 and C05 offline checkpoints accepted and staged; full plan incomplete**.
 
+## Native hover, NPC greetings and birth FX (2026-10-27)
+
+Changed: verify the supplied nine May screenshots against HTObjectInfo,
+HTInterface, HTItemSystem, HTSkillSystem, HTNPCSystem, HTMainCharacter and
+HTMonster before implementation. Compile the native effect formatter, family
+predicates, message IDs and refinement arrays with pinned source hashes.
+
+- Render centred, coloured tooltip rows with original spacing, 200ms delay,
+  wrapping/clamping and unchanged-document upload avoidance. Show actual
+  refinement/sub-refinement, ceil durability units, quantity/time, effects,
+  attack speed, limits, prices and merchant context. Skills include learned
+  level, current effects/costs and next/request conditions/effects/costs.
+- Preserve native NPC normal 0 / hover 9 / down 9 states. Play the NPC-specific click
+  greeting once per accepted opening through HPK-backed miniaudio effects;
+  page changes retain the voice, reopening starts again, and gain applies live.
+- Show NEWBORN 1010001 for player entry/revival and native field birth graphs for
+  monster appearance/life changes. Defer through loading; handle death, AOI
+  departure/reentry, finite expiry, equipment rebind and clean scene resets.
+- Use Philippine English item text inside sale confirmation. Legacy resource
+  name bytes inside a UTF-8 message caused the real merchant flow to exit on sale.
+
+Verified: final Debug/Release builds each pass nine focused CTests. Per config,
+3,759 tooltip assertions cover 1,664 items / 203 represented skills and 179 available
+NPC greeting payloads; 337 UI assertions include native timing/cache, the pictured
+item/VEGA/BAIRABA hovers and sale text; 190 presentation/audio assertions cover
+NPC open/page/reopen/gain and birth lifecycle/depth. Independent pixel checks
+find 5,727 changed NPC hover pixels only inside its 315x19 row, identical pressed
+pixels, and real red/yellow tooltip glyphs. Captures are visually reviewed.
+
+The final actual-SDL paid-repair merchant workflow passes purchase/sale and both
+cancellations, exact source prices, paid repair and invalid repair rejection.
+NPC 1101 emits one native greeting; SQLite money/inventory/cargo and other
+characters are checked. Protected/default/seed files stay unchanged. Final
+package closure is 53 owned files. Evidence:
+`build/evidence/HOVER_NPC_SPAWN_ACCEPTANCE.json`, `hover-npc-merchant-runtime3`,
+`native-tooltips-{Debug,Release}`, `c05-ui-{Debug,Release}` and
+`hover-spawn-{Debug,Release}`.
+
+Final staged Release SHA256:
+`5ff893ff101cbf3e05beceec4a118d4a215bdcf4a3bc651fb963e37b59e142f6`.
+
+Failed/corrected: the existing HUD fixture depended on the source client's
+1600x900 resolution; it now seeds 1024x768 only in memory. The unlearned skill
+assertion mistook prerequisite Lvl1 text for a learned title. First two merchant
+attempts ended on the sale-name encoding bug; their outputs are retained and
+the corrected fresh third run passes. No final focused failure remains.
+
+Remaining: the selected K3 client TPA contains no matching screenshot mount/
+riding entries; do not mix in newer Global rows. The original formatter has no
+text for 45 encountered effect IDs; their exact list is recorded in the tooltip
+results. Mount-specific runtime checks, broader inventory combinations and all
+other-map/skill/FX/visual/release gates remain open. P11-07 is now checked;
+Tantra-B becomes 125/254 named tasks (49%), still 5/10 accepted gates. Game source
+remains local/uncommitted; preceding executable hashes below are historical.
+
 ## Reference-style Settings layout (2026-10-27)
 
 Changed: Advance now opens the requested compact Settings design: a native

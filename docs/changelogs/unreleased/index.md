@@ -1,5 +1,20 @@
 # Unreleased
 
+## 1.0.12 - 2026-10-27 (Tantra-B only)
+
+Changed: add source-backed coloured item/skill hover details, original NPC
+choice states and opening greetings, and player/monster birth lifecycle.
+Fix legacy item-name bytes inside English sale confirmation; check P11-07.
+Verified: Debug/Release each pass nine focused tests, including 3,759 tooltip,
+337 UI and 190 FX/audio assertions. Pixel checks, actual SDL paid repair/buy/
+sell/cancellation, SQLite/profile preservation and 53-file packaging pass.
+Source/DOM export checks are rerun; website layout is unchanged.
+Failed/corrected: retain early sale-name encoding failures and the corrected
+HUD-resolution/unlearned-title test fixtures. Final focused checks pass.
+Remaining: missing screenshot mount data, 45 unhandled formatter effect IDs and
+wider game/FX/map/release work. Tantra-B is 125/254 (49%), five gates. Preserve
+Tantra-O data/docs; game source remains uncommitted.
+
 ## 1.0.11 - 2026-10-27 (Tantra-B only)
 
 Changed: match the supplied native Settings layout with Presets/Options sections,
@@ -174,6 +189,6 @@ Remaining: real browser layout acceptance.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 124/254 named tasks checked (49%); 5/10 gates recorded. Latest: Native Settings layout matches supplied reference. Replace stretched value rows with a compact 330-pixel Settings frame, Presets/Options sections, native 64x19 gold button groups, selected highlights and plain values between arrows. Add working Low/Mid/High presets while retaining custom resolutions, all three aspect ratios, window modes and existing live quality/sliders. High retains native 2048 shadows; Ultra selects 4096. Debug/Release builds and three focused MainUI/Interface tests per configuration pass; final hidden SDL/bgfx UI checks are rerun after label refinement. Actual SDL passes 103 checks, including presets reaching renderer/camera state, persistence and Apply/Cancel. Review 1024x768 and 800x600 captures; 53-file packaging and protected/default/seed preservation pass. No new task or gate is closed. MSAA, model/FX/object-distance and circle-shadow controls from the reference remain separate renderer work. No new failures or FPS/visual-parity gain is claimed. Remaining native skill/FX and complete map/game acceptance stay open.
+- **Tantra-B**: 125/254 named tasks checked (49%); 5/10 gates recorded. Latest: Native tooltips, NPC greetings and birth FX verified. Verify the supplied tooltip screenshots against native source; compile the original effect formatter, message IDs, family predicates and refinement arrays. Render centred coloured item/skill rows with live instance fields, requirements, prices/service context and current/next skill conditions/effects/costs. Restore original NPC hover/down image9 and play each NPC greeting once per opening through HPK-backed miniaudio effects gain. Defer player NEWBORN and monster birth until rendering is ready; verify first appearance, revive/life/AOI changes, equipment retention, expiry and cleanup. Fix sale confirmation mixing legacy item-name bytes into UTF-8 English text. Debug/Release each pass nine focused tests: 3,759 tooltip, 337 UI and 190 presentation/audio assertions. Pixel checks isolate 5,727 NPC hover pixels and verify coloured tooltip glyphs. Actual SDL paid-repair/buy/sell/cancellation workflow, SQLite preservation and 53-file packaging pass. Corrected early merchant attempts are retained. P11-07 closes; 125/254 tasks and five gates. The K3 table has no matching screenshot mount entry; 45 unhandled formatter effect IDs and wider game/FX work remain recorded and open. Remaining native skill/FX and complete map/game acceptance stay open.
 
 These are separate source checklists, not release-completion percentages.

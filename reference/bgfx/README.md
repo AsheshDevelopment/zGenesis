@@ -7,6 +7,13 @@ through the project-owned bgfx backend. The window/product is **Tantra Online**.
 - [Detailed implementation plan](IMPLEMENTATION_PLAN.md)
 - [Progress and next continuation](PROGRESS.md)
 
+Native item and skill hovers now use source-ordered coloured rows, real instance
+stats/requirements and current/next skill levels. NPC choices show their original
+hover image and play their authored greeting once per opening. Player entry and
+revival, monster appearance/respawn and loading-gated birth FX are supported.
+The selected K3 table has no screenshot mount entry; missing/unhandled data are
+recorded rather than replaced. See the latest progress checkpoint for validation.
+
 Options has native `Resolution < 1024x768x32 >` arrows and an **Advance** button.
 Advance opens the reference-style compact **Settings** panel: Presets/Options
 section bars, Low/Mid/High presets and grouped gold buttons with selected states.

@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "C02 original resources/ordered rendering and C05 movement/camera/MainUI are accepted. Advance now opens the requested compact native Settings layout, with quality presets, grouped buttons and arrow selectors; live settings remain functional. Broader skill/FX, collision, maps and release remain open; game source is uncommitted.",
+      "description": "C02/C05 offline checkpoints remain accepted. Source-backed coloured item/skill tooltips, NPC choice hover and opening audio, and player/monster birth lifecycle are staged and verified. P11-07 is checked; mount/version and broader skill/FX, collision, maps and release gaps remain open. Game source is uncommitted.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -2044,8 +2044,8 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P11-07",
-              "done": false,
-              "text": "Show actual item-instance state in tooltips: refinement, durability, effects, limits, count and service context.",
+              "done": true,
+              "text": "Show actual item-instance state in tooltips: refinement, durability, effects, limits, count and service context. Native item/skill row order, colours, refinement/sub-refinement, ceil durability units, requirements, count/time, price and merchant contexts are implemented. See the source-backed hover/NPC/birth checkpoint below; the current K3 table has no screenshot mount entry.",
               "children": []
             },
             {
@@ -2151,9 +2151,9 @@ window.TANTRA_ROADMAP = {
             "text": "Buy/sell/repair and item/Rupiah deposit/withdraw conserve state; save-point and current/saved cells survive exit/reload. Basic encounter applies hit/death and represented rewards. Failure/stale/capacity paths and source hashes pass. Full active skills/AI/loot remain open.",
             "children": []
           },
-          "done": 11,
+          "done": 12,
           "total": 19,
-          "percent": 58
+          "percent": 63
         },
         {
           "id": "C07",
@@ -2736,6 +2736,9 @@ window.TANTRA_ROADMAP = {
         }
       ],
       "foundations": [
+        "Source-backed coloured item/skill hover documents, instance refinement/durability/requirements and merchant context; current/next skill effects and costs",
+        "Native NPC choice hover/pressed images and HPK-backed greetings once per opening with live miniaudio effects gain",
+        "Player NEWBORN and monster field birth graphs deferred through loading, with revive/life/AOI/equipment/expiry/reset handling",
         "C02: qualified HPK resource identity, original DDS mips/alpha, clipped ordered UI and asymmetric world render/picking across four sizes",
         "Native Advance settings: resolution arrows, 4:3/16:9/16:10/custom, windowed/borderless/fullscreen and live graphics quality; actual 32-bit D3D11 colour",
         "Ordinary attacks use native costs/CalDamage and consume next-attack bonuses at melee impact or projectile arrival; first TAB attack annotation matches the original engine",
@@ -2759,6 +2762,11 @@ window.TANTRA_ROADMAP = {
         "Broaden distinct-map/portal, visual/performance/recovery and release acceptance without inferring FPS gains from caching"
       ],
       "changes": [
+        {
+          "date": "2026-10-27",
+          "title": "Native tooltips, NPC greetings and birth FX verified",
+          "text": "Verify the supplied tooltip screenshots against native source; compile the original effect formatter, message IDs, family predicates and refinement arrays. Render centred coloured item/skill rows with live instance fields, requirements, prices/service context and current/next skill conditions/effects/costs. Restore original NPC hover/down image9 and play each NPC greeting once per opening through HPK-backed miniaudio effects gain. Defer player NEWBORN and monster birth until rendering is ready; verify first appearance, revive/life/AOI changes, equipment retention, expiry and cleanup. Fix sale confirmation mixing legacy item-name bytes into UTF-8 English text. Debug/Release each pass nine focused tests: 3,759 tooltip, 337 UI and 190 presentation/audio assertions. Pixel checks isolate 5,727 NPC hover pixels and verify coloured tooltip glyphs. Actual SDL paid-repair/buy/sell/cancellation workflow, SQLite preservation and 53-file packaging pass. Corrected early merchant attempts are retained. P11-07 closes; 125/254 tasks and five gates. The K3 table has no matching screenshot mount entry; 45 unhandled formatter effect IDs and wider game/FX work remain recorded and open."
+        },
         {
           "date": "2026-10-27",
           "title": "Native Settings layout matches supplied reference",
@@ -2850,7 +2858,7 @@ window.TANTRA_ROADMAP = {
           "text": "ZFLauncher uses its dedicated client/profile. OGRE runtime results are not transferred to bgfx acceptance."
         }
       ],
-      "done": 124,
+      "done": 125,
       "total": 254,
       "percent": 49,
       "accepted": 5
@@ -2929,11 +2937,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "5c242621995502ced75502f3b90c5c98257db8504b80f2df43b5375e8bf2d48b"
+      "sha256": "7559098b74e7148f14a5ee427b75d2ddc8b59ee903480073935a0bcb866cc01b"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "7d3d23b8db39b8f7f67359461b7a0e495121d056082e8721d98b8f7fda151d0b"
+      "sha256": "a7cb8807931bdaee106cdbb44ac83130960d55645068c4a976bc1087295177d3"
     }
   },
   "reference": {
