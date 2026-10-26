@@ -1,6 +1,32 @@
 # ZFLauncher bgfx progress and continuation
 
-Updated: 2026-10-27. Status: **runnable offline development client; full plan incomplete**.
+Updated: 2026-10-27. Status: **implementation paused; last staged offline client available; full plan incomplete**.
+
+## Paused strike-service work in progress (2026-10-27)
+
+The user paused implementation and requested documentation/roadmap publication.
+The last staged client is still the ordinary-attack checkpoint below, SHA256
+`c746e15bdd9876a9292c12a85186e0967fe879036ca9d0263e37a9ab49df7e7a`.
+The later source changes are not built into that launcher and are not committed.
+
+| Current work | Evidence and limits |
+| --- | --- |
+| Native strike rules | Four target-independent CastInstant2 cases are extracted from CMob3: MultipleStrike, CriticalStrike, PierceStrike and PierceStrike2. Active skill hits clear ordinary critical doubling; ordinary critical scaling retains the native passive bonus and excludes pierce. Native skill-book probability decks and authored phase flags are retained. This does not implement all CastInstant2 target/combo services. |
+| Release CPU acceptance | `strike-services-cpu-release4/STRIKE_SERVICES_RESULT.json` passes 19,041 checks: five source-rule cases and eight encounters, with **zero GPU cases**. The complete-action encounters cover skill3026 and multiple-hit skills3012/3109 at .001/.05-second ticks, cancellation, one cast cost, early-death records and one reward. Skills3033/3107 are covered only for the represented target-independent rule calculations, not complete actions. |
+| Written presentation changes | Repeated target records carry native 300ms digit delays and share one attack FX factor. The first TAB attack-marker helper is shared with active-skill timing. These paths compile in the Release probe; actual GPU/UI/audio and production-launcher acceptance remain pending. |
+| Earlier regression evidence | `strike-services-initial-release1.log` passes skill-cast and ordinary-bonus checks, but predates the final presentation/helper changes. It is not a final whole-batch regression result. |
+| Failed attempts and source-data limits | Early probe builds used incorrect presentation API names; corrected to existing interfaces. The first multi-hit fixture used the wrong weapon for3109; the accepted fixture selects its authored required bow and arrows. Skill3027 references PierceStrike but lacks CastInstant2 in its authored phase flags; no phase/data patch was invented. Additional combo/conditional-target effects in3033/3107 remain open. |
+
+- [ ] Build and verify Debug for the current strike batch.
+- [ ] Verify available strike animation/FX and 300ms feedback in GPU and actual SDL/UI/audio runs; record/skip missing authored resources without aliases.
+- [ ] Build/stage the production launcher only after the focused checks pass, then verify protected/default/seed state and packaging.
+
+The user requested faster progress through easier independent items. On resumption,
+finish the bounded acceptance above, then prioritise P05-07's text/glyph caching
+and unchanged-label upload avoidance and small remaining UI fixes. Those cache
+changes have **not** been implemented. Defer expansion into the more involved
+combo, conditional-target, periodic and monster-state services while keeping them
+in the full backlog. No broad task/gate count or performance claim changes here.
 
 ## Native ordinary attacks and first TAB attack annotation (2026-10-27)
 

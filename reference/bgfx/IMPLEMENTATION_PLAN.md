@@ -10,12 +10,32 @@ OGRE remake's implemented foundations**. Build a separate `ZFLauncher.exe` with
 the `Tantra Online` window/product title, using the same client assets and
 **ashesh / ashesh** login. Keep `_client/HTLauncher.exe` available for comparison.
 
-**Implementation is in progress.** ZFLauncher now builds and runs the original
+**Implementation is paused at the user's request.** ZFLauncher builds and runs the original
 offline login, saved character preview, character lifecycle, CHAR_INIT/Mandara and
 minimum controls through bgfx/D3D11. The user's dedicated runtime is now
 `_client_bgfx`; `_client` remains the original OGRE client. The complete plan remains
 open; the broader gates below deliberately retain their unverified requirements.
-The server goal remains paused. No commit/push or submodule registration was made.
+The server goal remains paused. Game source changes remain uncommitted; documentation
+publication is separate. No bgfx submodule registration was made.
+
+### Paused checkpoint and next work order (2026-10-27)
+
+The last staged Release remains `c746e15bdd9876a9292c12a85186e0967fe879036ca9d0263e37a9ab49df7e7a`.
+The newer strike-service source is **work in progress**, not a staged client update.
+Its latest Release CPU run passes 19,041 checks: five target-independent strike-rule
+cases and eight encounters for critical skill3026 and multiple-hit skills3012/3109.
+Full skills3033/3107 still need additional target/combo services. Debug, GPU,
+actual launcher/UI/audio validation and staging of this batch remain pending.
+No broad task or acceptance gate is closed by those CPU results.
+
+On resumption, follow the user's requested faster work order:
+
+1. Finish focused acceptance of the bounded strike changes; defer expansion into
+   combo/conditional-target, periodic and monster-state services.
+2. Prefer small independent items, starting with P05-07's bounded text/glyph cache
+   and unchanged-label upload avoidance, then the remaining bounded UI fixes.
+3. Batch focused checks and reconcile older checklists only against direct evidence.
+   Retain all five continuation objectives and the wider backlog below.
 
 ## Current continuation: native data, skills, navigation and runtime verification
 
@@ -1818,4 +1838,3 @@ scoped offline foundations, not complete client delivery.
 - [ ] Offline and supported online authority behavior agree with the pinned rules/protocol.
 - [ ] Final ZFLauncher packaging preserves the other client executable and user data.
 - [ ] Known deviations and unsupported features are explicit; no unchecked task is silently declared complete.
-

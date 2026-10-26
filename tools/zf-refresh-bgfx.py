@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.7"
+VERSION = "1.0.8"
 
 
 def sha(body):
@@ -80,7 +80,7 @@ def refresh(source):
     project["total"] = sum(group["total"] for group in project["groups"])
     project["percent"] = (200 * project["done"] + project["total"]) // (2 * project["total"])
     project["accepted"] = sum(bool(group["gate"] and group["gate"]["done"]) for group in project["groups"])
-    project["description"] = "The bgfx/SDL3 client runs the native offline Tantra foundation with direct TPA reads, English names, tested navigation, weapon/skill FX, native hotkeys and restart persistence. Crowded-scene CPU/GPU and loading baselines are measured. Complete skills, AI, other maps and full visual/release acceptance remain open."
+    project["description"] = "Implementation is paused. The last staged bgfx/SDL3 client retains the verified offline foundation, native data/FX/navigation and persistence. New strike-service source has Release CPU evidence only; Debug, GPU, launcher validation and staging remain pending. Complete skills, AI, other maps and release acceptance stay open."
     project["foundations"] = [
         "Ordinary attacks use native costs/CalDamage and consume next-attack bonuses at melee impact or projectile arrival; first TAB attack annotation matches the original engine",
         "C++20 x64 Debug/Release, bgfx/D3D11, SDL3 and miniaudio; clean dedicated client",
@@ -97,12 +97,13 @@ def refresh(source):
         "Two trials per town/dense-field/combat scene: 7,200 measured frames, raw CPU/GPU/loading timings and hardware/input hashes"
     ]
     project["next"] = [
-        "Complete native special-skill patterns, monster area/timed states, remaining buff/strike services and weapon/skill timing combinations; record and skip missing assets",
-        "Test CPU pose/deformation improvements and GPU skinning against the measured baseline while preserving native normals, sockets and timing",
-        "Reduce unchanged UI/traversal work; budget resource creation around the measured loading stalls before claiming gains",
-        "Complete other-map and in-game portal transitions, native AI/services, online gameplay and matched visual acceptance"
-    ]
+    "On resumption, finish focused Debug/GPU/SDL acceptance of the bounded strike batch before staging it; no expansion into complex skill families yet",
+    "Prioritise small independent work: P05-07 text/glyph caching and avoiding unchanged-label uploads, then bounded UI fixes; batch focused checks",
+    "Retain the full backlog for combo/conditional-target, periodic/area/monster-state services, special patterns and remaining weapon/skill combinations",
+    "Complete distinct-map/in-game portal transitions and broader visual/performance/release acceptance; retain measured baselines without claiming optimisation gains"
+]
     latest = [
+        {"date": "2026-10-27", "title": "Implementation paused; quicker independent tasks prioritised", "text": "Record the paused worktree honestly. The new strike batch passes 19,041 Release CPU checks: five target-independent rule cases and eight encounters for skills 3026/3012/3109. Skills 3033/3107 have partial rule coverage only. Debug, GPU, actual launcher/UI/audio acceptance and staging remain pending; the earlier staged client is unchanged. Text/glyph caching and small UI fixes are next after bounded strike acceptance. No broad task/gate or optimisation gain is newly accepted."},
         {"date": "2026-10-27", "title": "Native ordinary attacks and first TAB attack marker", "text": "Fix ordinary attacks bypassing native CalDamage and retaining skill 3059's next-attack bonus. All 12 supplied weapon payloads and 12 timing/cancellation encounters pass, plus an unmodified native elite miss; 15,474 checks pass in each configuration. Match the original engine's first attack annotation, accepting Srbinda's duplicate-tag clip without extra damage. Release/Debug status/projectile/navigation gates and ten monster encounters/four GPU cases pass; staged SDL combat/UI/audio and clean packaging pass. Missing dart item and prior FX gaps remain recorded. Wider native strike/state services and full map/game acceptance stay open."},
         {"date": "2026-10-26", "title": "Native shield energy and per-hit FX", "text": "Implement source instant shield/break cases and physical/elemental absorption, preserving native rounding, energy and exhaustion flags. Real3102 levels1–10 and3145 authority pass2,555 checks in Release/Debug, including two GPU cases, shield-only visible-pixel comparisons, ranged arrival, equipment and death cleanup. Restore the DealDamage guard so defensive3022 retains3059's bonus until damaging3007. Shield and ordinary-buff SDL workflows each pass88 checks; status/skill/projectile/navigation regressions and packaging pass. Missing3145 FX is recorded and skipped. Wider skill/monster families remain open."},
         {"date": "2026-10-26", "title": "Native monster default ranged attacks", "text": "Replace fixed-range idSkill0 attacks with source default melee/ranged selection and locked MONSkill animation/TAB timing. Monsters2004/2005 pass eight fine/coarse encounters and three GPU cases in Debug/Release, including visible follow/impact and eight lifecycle/rebind checks. SDL combat/audio/Prana and88 buff/equipment checks pass. The current build has six isolated profile trials/7,200 measured frames; dense43-actor medians9.67–9.87ms include4.10–4.16ms CPU pose work. Special-skill patterns, timed monster states and wider skill services remain open."},
@@ -136,7 +137,7 @@ def refresh(source):
             content = content.replace("Version: " + VERSION + " Reviewed:", "Version: " + VERSION + ". Reviewed:")
             content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-10-27.", content)
         elif "## " + VERSION not in content:
-            content = content.replace("# Unreleased\n", "# Unreleased\n\n## " + VERSION + " - 2026-10-27 (Tantra-B only)\n\nChanged: route ordinary attacks through native weapon cost/CalDamage/CastInstant1\ntransactions. Match the original engine's first TAB attack annotation; Srbinda's\nadjacent duplicate tag is ignored. Refresh only Tantra-B and preserve Tantra-O.\nVerified: 12 weapon damage payloads, 12 fine/coarse timing/cancellation encounters,\na natural native elite miss and 15,474 checks per configuration. Release/Debug\nstatus/projectile/navigation gates, first-marker gates and ten monster encounters\nwith four GPU cases pass. Staged SDL combat/UI/audio, persistence guards and\nclean packaging pass. The earlier performance baseline remains pinned.\nFailed: reproduce/fix cached ordinary damage retaining 3059 and the timing\nloader rejecting duplicate tags. Earlier QA fixture/build attempts remain\nrecorded; accepted final checks pass. Missing dart item and prior FX gaps are\nrecorded and skipped without aliases or resource hunting.\nRemaining: critical/pierce/multiple-strike, periodic/area/monster-state services,\nspecial patterns, other maps and broader visual/performance/release acceptance.\nNo full-game gate or optimisation gain is newly accepted.\n")
+            content = content.replace("# Unreleased\n", "# Unreleased\n\n## " + VERSION + " - 2026-10-27 (Tantra-B only)\n\nChanged: publish the paused implementation snapshot and the user's request to\nprioritise quicker independent fixes with batched focused validation. Preserve\nTantra-O, all five objectives and the full backlog.\nVerified: retained Release CPU evidence for 19,041 checks, five target-independent\nstrike-rule cases and eight encounters for skills 3026/3012/3109. Source plan and\nprogress hashes match the export; website source/DOM checks are rerun.\nFailed/pending: earlier probe API/weapon fixtures were corrected. New Debug, GPU,\nactual launcher/UI/audio validation and staging have not been performed.\nSkills 3033/3107 still need target/combo services. No new complete skill-family\nor broad game gate is accepted from partial CPU evidence.\nRemaining: finish the bounded strike acceptance on resumption, then prioritise\nP05-07 text/glyph caching and small UI fixes. Those cache changes are not yet\nimplemented. Wider strike/state/AI/map/visual/performance/release work stays open.\nThe last staged ordinary-attack client and earlier performance baseline remain\nunchanged; game implementation sources remain uncommitted.\n")
         path.write_text(content, encoding="utf-8", newline="\n")
     readme = ROOT / "README.md"
     content = re.sub(r"Version: \d+\.\d+\.\d+", "Version: " + VERSION, readme.read_text(encoding="utf-8"))

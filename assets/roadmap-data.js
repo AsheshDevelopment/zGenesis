@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "The bgfx/SDL3 client runs the native offline Tantra foundation with direct TPA reads, English names, tested navigation, weapon/skill FX, native hotkeys and restart persistence. Crowded-scene CPU/GPU and loading baselines are measured. Complete skills, AI, other maps and full visual/release acceptance remain open.",
+      "description": "Implementation is paused. The last staged bgfx/SDL3 client retains the verified offline foundation, native data/FX/navigation and persistence. New strike-service source has Release CPU evidence only; Debug, GPU, launcher validation and staging remain pending. Complete skills, AI, other maps and release acceptance stay open.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -2751,12 +2751,17 @@ window.TANTRA_ROADMAP = {
         "Two trials per town/dense-field/combat scene: 7,200 measured frames, raw CPU/GPU/loading timings and hardware/input hashes"
       ],
       "next": [
-        "Complete native special-skill patterns, monster area/timed states, remaining buff/strike services and weapon/skill timing combinations; record and skip missing assets",
-        "Test CPU pose/deformation improvements and GPU skinning against the measured baseline while preserving native normals, sockets and timing",
-        "Reduce unchanged UI/traversal work; budget resource creation around the measured loading stalls before claiming gains",
-        "Complete other-map and in-game portal transitions, native AI/services, online gameplay and matched visual acceptance"
+        "On resumption, finish focused Debug/GPU/SDL acceptance of the bounded strike batch before staging it; no expansion into complex skill families yet",
+        "Prioritise small independent work: P05-07 text/glyph caching and avoiding unchanged-label uploads, then bounded UI fixes; batch focused checks",
+        "Retain the full backlog for combo/conditional-target, periodic/area/monster-state services, special patterns and remaining weapon/skill combinations",
+        "Complete distinct-map/in-game portal transitions and broader visual/performance/release acceptance; retain measured baselines without claiming optimisation gains"
       ],
       "changes": [
+        {
+          "date": "2026-10-27",
+          "title": "Implementation paused; quicker independent tasks prioritised",
+          "text": "Record the paused worktree honestly. The new strike batch passes 19,041 Release CPU checks: five target-independent rule cases and eight encounters for skills 3026/3012/3109. Skills 3033/3107 have partial rule coverage only. Debug, GPU, actual launcher/UI/audio acceptance and staging remain pending; the earlier staged client is unchanged. Text/glyph caching and small UI fixes are next after bounded strike acceptance. No broad task/gate or optimisation gain is newly accepted."
+        },
         {
           "date": "2026-10-27",
           "title": "Native ordinary attacks and first TAB attack marker",
@@ -2907,11 +2912,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "180639580aedd617426f4f39b2bc619ceb8e3cf290c437c05a2022cb3ee19483"
+      "sha256": "e85b0bc6f19b7965a642db19721504544561bbbb5a2cb8555c65b6bbf9600371"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "99948314719956e6d18a5b0501012dcd6ed8338865c601b946819a0b6cb3ef83"
+      "sha256": "12688d5d3fa3851422945fa4519d7ae684f1720a0342655f7ec0b7f2e931f21f"
     }
   },
   "reference": {
