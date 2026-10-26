@@ -2,6 +2,31 @@
 
 Updated: 2026-10-26. Status: **runnable offline development client; full plan incomplete**.
 
+## Native monster default ranged attacks (2026-10-26)
+
+- [x] Replace unconditional idSkill0/fixed20-unit monster attacks with `CMob::BattleProcessor`'s default melee/ranged branch. Use `GetFunc::CalDistance`'s rounded integer-cell distance and native body radius. Imported skill ranges already include `LoadSkillData`'s +2; retain that transformation once. Monsters with no ranged skill continue using their native melee fallback.
+- [x] Lock the selected skill and its TAB timing at windup. Resolve MONSkill's animation through MonAni; use ATK1 only for a zero animation binding, matching `HTEngineHandler::HT_hrChangeMonsterAttackAnimation`. Display, damage and activation/impact presentation now share that actual skill identity. Monster events are excluded from the separate PC-skill FX decoder.
+- [x] Implement native long-attack types3/4 with a depth-tested null carrier and authored follow/impact graphs. Use the existing225-unit/second straight-flight equations. Keep HP and hit digits on the source TAB marker (`HTMonster::HT_vMonster_AttackPointCheck`); visual arrival never applies damage a second time. Remove flights on caster/target death, missing render owner, generation replacement and scene clear; rebind their target during the same player's equipment display replacement.
+- [x] `monster-ranged-render-final3`: eight positive encounters cover monsters2004/2005, melee41010/41011 and ranged41400/41401, at .001/.05-second ticks. Verify each native miss and positive hit against the .448485-second marker. Three GPU cases pass eight lifecycle/rebind checks. Matched held-pose on/off captures prove visible follow (45–46 pixels over three channel levels) and impact (1,068–1,102 pixels); zero unsupported/missing graph warnings. These isolated captures contain the real actors/FX, not a full map visual comparison.
+- [x] Release build/staging and actual SDL combat regression pass (`monster-ranged-release-build5.log`, `monster-ranged-stage1`, `monster-ranged-sdl-combat1`). The launcher presents two player/two monster impacts, six glyphs, ten sound requests and60 earned Prana; protected/default/seed data stay unchanged. Release's existing projectile/marker/flight/navigation regressions pass in `monster-ranged-regression-release1.log`.
+- [x] Debug build and the same eight encounters/three GPU cases/eight lifecycle checks pass (`monster-ranged-debug-build1.log`, `monster-ranged-final-probe-debug-build1.log`, `monster-ranged-render-debug-final1`). Debug's matched captures have the same visible-pixel counts. Five focused Debug CPU gates pass across `monster-ranged-regression-debug1.log` and `monster-ranged-debug-timing-retest1.log`; the initial marker gate was not run because its binary was unbuilt, then passed after that target was built. The195.05-second projectile and302.22-second navigation checks completed successfully; they were not restarted on an observation timeout.
+- [x] Actual SDL buff3110/equip/unequip/Escape still passes88 checks (`monster-ranged-sdl-buff1`), with unchanged protected/default/seed data. Clean client layout/external runtime closure passes (`monster-ranged-package1`). The final Release monster CPU gate passes separately in `monster-ranged-cpu-release-final1.log`.
+- [x] Rebaseline this exact staged Release (`monster-ranged-profile1`, SHA256 `871a8eac3242c7334fe67a3f6dbfd1bd8a2c3392bf20e943c2d6a4bc5ca05788`): six isolated trials /7,200 measured frames, all GPU samples valid, no concurrent builds/QA and unchanged protected/default/native inputs. Dense43-actor medians9.67–9.87ms include4.10–4.16ms pose work; GPU1.49–1.67ms. Initial dense actor creation takes370–380ms, settled population2084–2114ms. Combat40-actor medians9.14–9.25ms retain a73.02ms worst interval. Preserve raw timings and the older baseline's executable identity; no isolated optimisation gain is claimed.
+
+The encounter fixture retains one real generated actor at its authored position
+and uses a private in-memory level20 PC with30 extra Heart Chakra. Native RNG,
+attack/dodge decks, damage parameters and resource bytes are unchanged. Initial
+test attempts incorrectly required the first swing to hit; the source deck
+dodged it. The accepted test checks those misses and the subsequent positive hit.
+Another capture sampled after the short impact lifetime; the accepted matched
+capture is taken while the authored effect is live. Failed attempts are retained.
+
+The separate ten-step special-skill patterns in `CMob::SelectSkill`, cast counts,
+synchronised skills, area/timed monster states and the complete AI scheduler
+remain open. This accepts the default melee/ranged branch in Mandara, not every
+monster skill or another map's FX library. Full skill/weapon FX and whole-client
+visual/performance/release gates remain open.
+
 ## Buff FX during equipment replacement (2026-10-26)
 
 - [x] Reproduce a committed3110 buff disappearing after the same player's equipment rebuilds its renderer object (`buff-owner-repro1`). The original client keeps its logical main-character model during equip/unequip; our new object name left the visual pointing at a destroyed parent.

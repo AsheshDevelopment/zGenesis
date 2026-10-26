@@ -2742,18 +2742,24 @@ window.TANTRA_ROADMAP = {
         "Source hit markers, projectile arrival costs, elemental trails and represented persistent skill-state cleanup",
         "Native body/hair/apron action clips, cast looping and retained animation clocks during head/equipment replacement",
         "Committed buff FX retain their owner, age and expiry through actual SDL equip/unequip without recasting or charging TP",
+        "Native default monster melee/ranged selection, locked skill/TAB timing and visible authored follow/impact with lifecycle cleanup",
         "32 static and 8 dynamic native navigation cases; actual SDL immediate attack retargeting",
         "Native menu/camera/quickbar/chat keys; source optional F11 broadcast camera",
         "Six fresh-process persistence legs: Interface.sys, equipment attachments, quick slots, independent audio and three Mandara village zones",
         "Two trials per town/dense-field/combat scene: 7,200 measured frames, raw CPU/GPU/loading timings and hardware/input hashes"
       ],
       "next": [
-        "Complete remaining available attached/area/monster-state FX and weapon/skill timing combinations; record and skip missing assets",
+        "Complete native special-skill patterns, monster area/timed states, remaining buff/strike services and weapon/skill timing combinations; record and skip missing assets",
         "Test CPU pose/deformation improvements and GPU skinning against the measured baseline while preserving native normals, sockets and timing",
         "Reduce unchanged UI/traversal work; budget resource creation around the measured loading stalls before claiming gains",
         "Complete other-map and in-game portal transitions, native AI/services, online gameplay and matched visual acceptance"
       ],
       "changes": [
+        {
+          "date": "2026-10-26",
+          "title": "Native monster default ranged attacks",
+          "text": "Replace fixed-range idSkill0 attacks with source default melee/ranged selection and locked MONSkill animation/TAB timing. Monsters2004/2005 pass eight fine/coarse encounters and three GPU cases in Debug/Release, including visible follow/impact and eight lifecycle/rebind checks. SDL combat/audio/Prana and88 buff/equipment checks pass. The current build has six isolated profile trials/7,200 measured frames; dense43-actor medians9.67–9.87ms include4.10–4.16ms CPU pose work. Special-skill patterns, timed monster states and wider skill services remain open."
+        },
         {
           "date": "2026-10-26",
           "title": "Buff FX survive equipment replacement",
@@ -2889,11 +2895,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "396f61bcbe2db94ea7ab495e3445e32ef437cad2be77c0351ce4f07ebbf2f7fa"
+      "sha256": "783820794475eba5510f10b030a97ba5955d968b85cfdac930148fd035a80bd7"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "a097971193ec09d559a3c95dc1bfec5d6244169b6aa56db75e1fcdf2dc6aaebc"
+      "sha256": "297acbfd30eeadbd2768a1085400270b803d472733126eb489f81c792e30b7ec"
     }
   },
   "reference": {

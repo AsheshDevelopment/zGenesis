@@ -1,5 +1,20 @@
 # Unreleased
 
+## 1.0.5 - 2026-10-26 (Tantra-B only)
+
+Changed: record native default monster melee/ranged selection, locked skill/TAB
+timing and separately owned ranged follow/impact. Refresh only Tantra-B.
+Verified: Debug/Release eight encounters/three GPU cases/eight lifecycle checks;
+matched visible-pixel captures, projectile/navigation/marker CPU gates, native
+SDL combat/audio/Prana and88 buff/equipment checks, clean packaging and six
+isolated profile trials/7,200 measured frames. Tantra-O/docs stay unchanged.
+Failed: initial tests assumed the first native swing would hit and sampled a
+short impact after expiry; both are corrected without changing RNG/assets.
+An initially unbuilt Debug marker probe was built and its gate passed on retest.
+Remaining: special-skill patterns, monster area/timed states, wider buff/strike
+services, other maps, online gameplay and rendering optimisations. No broad
+game gate or isolated optimisation gain is newly accepted.
+
 ## 1.0.4 - 2026-10-26 (Tantra-B only)
 
 Changed: record committed buff FX ownership across equipment display replacement.
@@ -65,6 +80,6 @@ Remaining: real browser layout acceptance.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 92/254 named tasks checked (36%); 3/10 gates recorded. Latest: Buff FX survive equipment replacement. Fix committed buff visuals losing their destroyed display parent during equip/unequip. Rebind exact owner references while retaining graph age, expiry, socket, geometry and particle/audio state. Real3110 Release/Debug renderer checks and88 actual SDL checks pass; held-pose captures are pixel-identical. Projectile/lifecycle regression and clean packaging pass. The earlier verifier's pre-login skill comparison is corrected to actual world-entry bytes. Wider native skill/monster FX families remain open. Remaining native skill/FX and complete map/game acceptance stay open.
+- **Tantra-B**: 92/254 named tasks checked (36%); 3/10 gates recorded. Latest: Native monster default ranged attacks. Replace fixed-range idSkill0 attacks with source default melee/ranged selection and locked MONSkill animation/TAB timing. Monsters2004/2005 pass eight fine/coarse encounters and three GPU cases in Debug/Release, including visible follow/impact and eight lifecycle/rebind checks. SDL combat/audio/Prana and88 buff/equipment checks pass. The current build has six isolated profile trials/7,200 measured frames; dense43-actor medians9.67–9.87ms include4.10–4.16ms CPU pose work. Special-skill patterns, timed monster states and wider skill services remain open. Remaining native skill/FX and complete map/game acceptance stay open.
 
 These are separate source checklists, not release-completion percentages.

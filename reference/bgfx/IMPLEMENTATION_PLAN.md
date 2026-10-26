@@ -38,6 +38,7 @@ The next work is ordered below. A passing slice does not close the full plan.
    - [x] Verify authoritative hit timing for all12 supplied weapon types at .001/.05-second ticks, plus native3301 straight,3306 pursuit and3162 bow pursuit:27 positive-damage encounters and five lifecycle cases. Melee commits at the source marker; projectile cases keep HP/TP/arrows unchanged until arrival. This matrix does not cover every skill or synthesized dual-wield combination.
    - [x] Select native body/hair/front-apron/back-apron clips together for movement, attacks, INTRO selection/idle and action/active skill phases. Use source head-type hair mappings, attack-variant apron fields and skill triplets; normalise each live clip to the action duration and retain source looping during cast. Preserve selected clips/clocks during model replacement; retain valid zero-duration socket clips.
    - [x] Audit7,024 native animation sets /889 decoded clips, including312 attack sets and6,376 skill-phase sets. Verify424 GPU playback sets,1,651 body/socket clock checks,56 hair changes,8 head replacements and8 equipment replacements. Native name-bound loading accepts8 exercised skill cases with differing mesh/track counts while retaining hierarchy, bind/influence and root validation. The one missing PCAni31159 reference is recorded and skipped.
+   - [x] Implement the native default monster melee/ranged branch: rounded native-cell distance, body radius, already-loaded skill ranges and idSkill0/idSkill1 selection. Lock the chosen skill/TAB at windup, use the MONSkill animation (ATK1 only when its binding is zero), and carry the actual skill into activation/impact FX. Monsters2004/2005 pass eight fine/coarse melee/ranged encounters and three Release GPU cases (`monster-ranged-render-final3`); native misses and subsequent positive hits are both checked at the TAB marker. Ranged follow1200065/impact1200067 render visibly and clear on death, generation/owner loss and scene teardown; equipment replacement retains incoming flights. Native HP/hit digits occur at the marker, with no second damage at visual arrival. The separate special-skill pattern scheduler, timed states and remaining families stay open.
    - [ ] Complete all available projectile/follow FX and remaining attached/area/monster state families. Four real GPU projectile cases render follow/impact geometry and hit digits. Missing authored assets are now recorded and skipped per the user's instruction; retain the historical failed3162 full-FX result without treating that asset gap as a remaining implementation blocker. Extend buff coverage beyond the represented once/loop decoder and real3110 regression; unsupported native node/skill-service cases remain open.
    - [ ] Extend authoritative animation/impact/damage timing to every supported weapon/skill combination and remaining strike phases. The27 encounters and288 binding checks cover distinct bounded matrices.
 3. **Stress-test navigation.**
@@ -55,11 +56,30 @@ The next work is ordered below. A passing slice does not close the full plan.
 
 ### Controlled profiling baseline (2026-10-26)
 
-The first matrix below predates the socket-animation correction. Retain its
-executable/source hashes; use a new measured run of the corrected build before
-claiming equal-quality optimisation gains.
+The original `world-profile-matrix1` predates the socket-animation correction.
+Retain each cohort's executable/source hashes; correctness changes are separate
+baselines, not isolated optimisation comparisons.
 
-The corrected build now has its own accepted baseline:
+The current monster default-attack build has a separately accepted baseline:
+`build/evidence/monster-ranged-profile1` (Release SHA256
+`871a8eac3242c7334fe67a3f6dbfd1bd8a2c3392bf20e943c2d6a4bc5ca05788`).
+Six sequential trials /7,200 measured frames pass, with all delayed GPU samples
+valid and protected/default data unchanged. Settings and scenes retain the
+existing i7-12650H/RTX4050,1024x768 HIGH,D3D11,2048-shadow,VSync-off baseline.
+
+| Monster default-attack build | Frame median ms | Frame p95 ms | Frame p99 ms | GPU median ms | Settled populated load ms |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Town4 actors |6.55–6.68|7.60–7.88|8.34–8.71|1.53–1.54|1677–1727|
+| Dense field43 actors |9.67–9.87|10.98–11.16|12.03–12.29|1.49–1.67|2084–2114|
+| Skill/combat40 actors |9.14–9.25|13.01|18.20–18.59|1.20–1.33|2000–2029|
+
+Worst intervals are11.99/18.31/73.02ms respectively. Dense pose work is4.10–4.16ms
+inside5.29–5.42ms animation traversal; initial dense actor creation stalls370–380ms.
+No builds or competing QA overlapped this run. OS file cache remains uncontrolled;
+actor counts are retained population, not all in the camera frustum. Preserve raw
+CSV/loading stages and timing-overlap caveats. No optimisation gain is inferred.
+
+The earlier socket-animation correction also has its own accepted baseline:
 `build/evidence/socket-animation-profile1` (Release SHA256
 `43a9aeb41bf40781f2f76442e699736eaf7adc2d32363e90481bde37bffbdaaa`).
 All six trials /7,200 measured frames pass with the same hardware, settings and
@@ -73,8 +93,9 @@ scene definitions. Native skill3124 runs through the body/socket animation API.
 
 Worst intervals are20.56/26.29/72.06ms respectively. Dense pose work is4.23–4.25ms
 inside5.57ms animation traversal; initial dense actor creation stalls388–398ms.
-This is the current baseline for subsequent optimisations. The older table is
-historical evidence of the earlier build; animation correctness changed and no
+These figures belong to the socket-animation executable; the newer monster
+default-attack cohort above is current. The older table is historical evidence
+of the earlier build; animation correctness changed and no
 speedup or regression isolation is inferred from comparing those two cohorts.
 
 `tools/profile-world.py --output build/evidence/NEW_DIRECTORY` uses two trials by
