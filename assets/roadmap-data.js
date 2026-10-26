@@ -2736,6 +2736,7 @@ window.TANTRA_ROADMAP = {
         }
       ],
       "foundations": [
+        "Ordinary attacks use native costs/CalDamage and consume next-attack bonuses at melee impact or projectile arrival; first TAB attack annotation matches the original engine",
         "C++20 x64 Debug/Release, bgfx/D3D11, SDL3 and miniaudio; clean dedicated client",
         "Direct TantraParam.tpa and HPK resources; Philippine English names; server-only data and saves outside the client",
         "Native INTRO, eight tribe previews, equipment/sockets, native UI and ordinary durable offline services",
@@ -2756,6 +2757,11 @@ window.TANTRA_ROADMAP = {
         "Complete other-map and in-game portal transitions, native AI/services, online gameplay and matched visual acceptance"
       ],
       "changes": [
+        {
+          "date": "2026-10-27",
+          "title": "Native ordinary attacks and first TAB attack marker",
+          "text": "Fix ordinary attacks bypassing native CalDamage and retaining skill 3059's next-attack bonus. All 12 supplied weapon payloads and 12 timing/cancellation encounters pass, plus an unmodified native elite miss; 15,474 checks pass in each configuration. Match the original engine's first attack annotation, accepting Srbinda's duplicate-tag clip without extra damage. Release/Debug status/projectile/navigation gates and ten monster encounters/four GPU cases pass; staged SDL combat/UI/audio and clean packaging pass. Missing dart item and prior FX gaps remain recorded. Wider native strike/state services and full map/game acceptance stay open."
+        },
         {
           "date": "2026-10-26",
           "title": "Native shield energy and per-hit FX",
@@ -2901,11 +2907,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "5b1a00e2efc04e72d895400a94430d6a15d31e85399f6ec8048f55e4e1e035bd"
+      "sha256": "180639580aedd617426f4f39b2bc619ceb8e3cf290c437c05a2022cb3ee19483"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "7dd6244dad591a039d3f2cf116926b1f44bd629b5a38972a4dc893c39b31723b"
+      "sha256": "99948314719956e6d18a5b0501012dcd6ed8338865c601b946819a0b6cb3ef83"
     }
   },
   "reference": {

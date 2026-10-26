@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.6"
+VERSION = "1.0.7"
 
 
 def sha(body):
@@ -82,6 +82,7 @@ def refresh(source):
     project["accepted"] = sum(bool(group["gate"] and group["gate"]["done"]) for group in project["groups"])
     project["description"] = "The bgfx/SDL3 client runs the native offline Tantra foundation with direct TPA reads, English names, tested navigation, weapon/skill FX, native hotkeys and restart persistence. Crowded-scene CPU/GPU and loading baselines are measured. Complete skills, AI, other maps and full visual/release acceptance remain open."
     project["foundations"] = [
+        "Ordinary attacks use native costs/CalDamage and consume next-attack bonuses at melee impact or projectile arrival; first TAB attack annotation matches the original engine",
         "C++20 x64 Debug/Release, bgfx/D3D11, SDL3 and miniaudio; clean dedicated client",
         "Direct TantraParam.tpa and HPK resources; Philippine English names; server-only data and saves outside the client",
         "Native INTRO, eight tribe previews, equipment/sockets, native UI and ordinary durable offline services",
@@ -102,6 +103,7 @@ def refresh(source):
         "Complete other-map and in-game portal transitions, native AI/services, online gameplay and matched visual acceptance"
     ]
     latest = [
+        {"date": "2026-10-27", "title": "Native ordinary attacks and first TAB attack marker", "text": "Fix ordinary attacks bypassing native CalDamage and retaining skill 3059's next-attack bonus. All 12 supplied weapon payloads and 12 timing/cancellation encounters pass, plus an unmodified native elite miss; 15,474 checks pass in each configuration. Match the original engine's first attack annotation, accepting Srbinda's duplicate-tag clip without extra damage. Release/Debug status/projectile/navigation gates and ten monster encounters/four GPU cases pass; staged SDL combat/UI/audio and clean packaging pass. Missing dart item and prior FX gaps remain recorded. Wider native strike/state services and full map/game acceptance stay open."},
         {"date": "2026-10-26", "title": "Native shield energy and per-hit FX", "text": "Implement source instant shield/break cases and physical/elemental absorption, preserving native rounding, energy and exhaustion flags. Real3102 levels1–10 and3145 authority pass2,555 checks in Release/Debug, including two GPU cases, shield-only visible-pixel comparisons, ranged arrival, equipment and death cleanup. Restore the DealDamage guard so defensive3022 retains3059's bonus until damaging3007. Shield and ordinary-buff SDL workflows each pass88 checks; status/skill/projectile/navigation regressions and packaging pass. Missing3145 FX is recorded and skipped. Wider skill/monster families remain open."},
         {"date": "2026-10-26", "title": "Native monster default ranged attacks", "text": "Replace fixed-range idSkill0 attacks with source default melee/ranged selection and locked MONSkill animation/TAB timing. Monsters2004/2005 pass eight fine/coarse encounters and three GPU cases in Debug/Release, including visible follow/impact and eight lifecycle/rebind checks. SDL combat/audio/Prana and88 buff/equipment checks pass. The current build has six isolated profile trials/7,200 measured frames; dense43-actor medians9.67–9.87ms include4.10–4.16ms CPU pose work. Special-skill patterns, timed monster states and wider skill services remain open."},
         {"date": "2026-10-26", "title": "Buff FX survive equipment replacement", "text": "Fix committed buff visuals losing their destroyed display parent during equip/unequip. Rebind exact owner references while retaining graph age, expiry, socket, geometry and particle/audio state. Real3110 Release/Debug renderer checks and88 actual SDL checks pass; held-pose captures are pixel-identical. Projectile/lifecycle regression and clean packaging pass. The earlier verifier's pre-login skill comparison is corrected to actual world-entry bytes. Wider native skill/monster FX families remain open."},
@@ -132,8 +134,9 @@ def refresh(source):
         if name == "docs/PROGRESS.md":
             content = re.sub(r"Version: \d+\.\d+\.\d+", "Version: " + VERSION, content)
             content = content.replace("Version: " + VERSION + " Reviewed:", "Version: " + VERSION + ". Reviewed:")
+            content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-10-27.", content)
         elif "## " + VERSION not in content:
-            content = content.replace("# Unreleased\n", "# Unreleased\n\n## " + VERSION + " - 2026-10-26 (Tantra-B only)\n\nChanged: record native instant shield energy/absorption and per-hit State FX.\nRestore source DealDamage gating so defensive casts retain one-shot bonuses.\nRefresh only Tantra-B; preserve Tantra-O data and bundled documentation.\nVerified: real3102 levels1–10 and3145 authority,2,555 Release/Debug checks and\ntwo GPU cases, shield-only visible-pixel captures, ranged arrival, equipment/death\ncleanup, two88-check SDL workflows, status/skill/projectile/navigation gates\nand clean packaging. The earlier measured performance baseline stays pinned.\nFailed: reproduce/fix defensive3022 consuming3059; test fixture funding and\npassive-versus-active attack selection are corrected. Missing3145 FX remains\nrecorded and skipped without an alias. Accepted final checks pass.\nRemaining: wider buff/strike, periodic/area/monster-state services, special\nskill patterns, other maps and broader visual/performance/release acceptance.\nNo full-game gate or new performance gain is claimed.\n")
+            content = content.replace("# Unreleased\n", "# Unreleased\n\n## " + VERSION + " - 2026-10-27 (Tantra-B only)\n\nChanged: route ordinary attacks through native weapon cost/CalDamage/CastInstant1\ntransactions. Match the original engine's first TAB attack annotation; Srbinda's\nadjacent duplicate tag is ignored. Refresh only Tantra-B and preserve Tantra-O.\nVerified: 12 weapon damage payloads, 12 fine/coarse timing/cancellation encounters,\na natural native elite miss and 15,474 checks per configuration. Release/Debug\nstatus/projectile/navigation gates, first-marker gates and ten monster encounters\nwith four GPU cases pass. Staged SDL combat/UI/audio, persistence guards and\nclean packaging pass. The earlier performance baseline remains pinned.\nFailed: reproduce/fix cached ordinary damage retaining 3059 and the timing\nloader rejecting duplicate tags. Earlier QA fixture/build attempts remain\nrecorded; accepted final checks pass. Missing dart item and prior FX gaps are\nrecorded and skipped without aliases or resource hunting.\nRemaining: critical/pierce/multiple-strike, periodic/area/monster-state services,\nspecial patterns, other maps and broader visual/performance/release acceptance.\nNo full-game gate or optimisation gain is newly accepted.\n")
         path.write_text(content, encoding="utf-8", newline="\n")
     readme = ROOT / "README.md"
     content = re.sub(r"Version: \d+\.\d+\.\d+", "Version: " + VERSION, readme.read_text(encoding="utf-8"))

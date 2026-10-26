@@ -1,5 +1,23 @@
 # Unreleased
 
+## 1.0.7 - 2026-10-27 (Tantra-B only)
+
+Changed: route ordinary attacks through native weapon cost/CalDamage/CastInstant1
+transactions. Match the original engine's first TAB attack annotation; Srbinda's
+adjacent duplicate tag is ignored. Refresh only Tantra-B and preserve Tantra-O.
+Verified: 12 weapon damage payloads, 12 fine/coarse timing/cancellation encounters,
+a natural native elite miss and 15,474 checks per configuration. Release/Debug
+status/projectile/navigation gates, first-marker gates and ten monster encounters
+with four GPU cases pass. Staged SDL combat/UI/audio, persistence guards and
+clean packaging pass. The earlier performance baseline remains pinned.
+Failed: reproduce/fix cached ordinary damage retaining 3059 and the timing
+loader rejecting duplicate tags. Earlier QA fixture/build attempts remain
+recorded; accepted final checks pass. Missing dart item and prior FX gaps are
+recorded and skipped without aliases or resource hunting.
+Remaining: critical/pierce/multiple-strike, periodic/area/monster-state services,
+special patterns, other maps and broader visual/performance/release acceptance.
+No full-game gate or optimisation gain is newly accepted.
+
 ## 1.0.6 - 2026-10-26 (Tantra-B only)
 
 Changed: record native instant shield energy/absorption and per-hit State FX.
@@ -96,6 +114,6 @@ Remaining: real browser layout acceptance.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 92/254 named tasks checked (36%); 3/10 gates recorded. Latest: Native shield energy and per-hit FX. Implement source instant shield/break cases and physical/elemental absorption, preserving native rounding, energy and exhaustion flags. Real3102 levels1–10 and3145 authority pass2,555 checks in Release/Debug, including two GPU cases, shield-only visible-pixel comparisons, ranged arrival, equipment and death cleanup. Restore the DealDamage guard so defensive3022 retains3059's bonus until damaging3007. Shield and ordinary-buff SDL workflows each pass88 checks; status/skill/projectile/navigation regressions and packaging pass. Missing3145 FX is recorded and skipped. Wider skill/monster families remain open. Remaining native skill/FX and complete map/game acceptance stay open.
+- **Tantra-B**: 92/254 named tasks checked (36%); 3/10 gates recorded. Latest: Native ordinary attacks and first TAB attack marker. Fix ordinary attacks bypassing native CalDamage and retaining skill 3059's next-attack bonus. All 12 supplied weapon payloads and 12 timing/cancellation encounters pass, plus an unmodified native elite miss; 15,474 checks pass in each configuration. Match the original engine's first attack annotation, accepting Srbinda's duplicate-tag clip without extra damage. Release/Debug status/projectile/navigation gates and ten monster encounters/four GPU cases pass; staged SDL combat/UI/audio and clean packaging pass. Missing dart item and prior FX gaps remain recorded. Wider native strike/state services and full map/game acceptance stay open. Remaining native skill/FX and complete map/game acceptance stay open.
 
 These are separate source checklists, not release-completion percentages.

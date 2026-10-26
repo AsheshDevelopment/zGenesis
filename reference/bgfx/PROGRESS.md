@@ -1,6 +1,27 @@
 # ZFLauncher bgfx progress and continuation
 
-Updated: 2026-10-26. Status: **runnable offline development client; full plan incomplete**.
+Updated: 2026-10-27. Status: **runnable offline development client; full plan incomplete**.
+
+## Native ordinary attacks and first TAB attack annotation (2026-10-27)
+
+- [x] Reproduce ordinary attacks bypassing the native damage calculation and leaving skill 3059's 40% next-attack bonus active (`attack-bonus-repro3.log`). Bind the equipped item's native skill type, combat phases and costs into the status adapter. Ordinary attacks now share the source cost/CalDamage/CastInstant1 transaction with active skills. Melee commits at the authored marker; released ordinary arrows commit on arrival, including after Escape. A same-frame earlier incoming hit updates the live mob before cost validation. No hit/critical deck or native damage/cost record is changed.
+- [x] Verify exact damage payloads for all 12 supplied weapon types: the first attack adds the native physical percentage, leaves all other lanes intact and clears the bonus; the second cannot reuse it. Validation with an active bonus and rejected dead/missing-arrow requests preserve the bonus, output and resources. Twelve bare-hand/sword/bow encounters cover .001/.05-second ticks and Escape before melee impact/after arrow release; a separate authored elite encounter obtains a natural miss without replacing RNG/cards. The final attack suite has 15,474 checks per configuration (`attack-bonus-first-marker-cpu-release1.log`, `attack-bonus-first-marker-cpu-debug1.log`). No ordinary dart item (animation 910) exists in the supplied catalog; record it in `MISSING_WEAPONS.tsv` without an alias or resource search.
+- [x] Correct the timing loader's rejection of Srbinda's two adjacent attack tags (`attack-bonus-release3.log`). The pinned original `HT3DHeaven.dll` loader at RVA2DDB1 stores the first attack/Attack substring before the final key; Start/ChangeAnimation cache one index, and the state query has a consumed flag. `native-first-attack-marker.json` records four verified disassembly blocks; the DLL is inspected, never executed or shipped. The loader now uses key18 at .805051 seconds and ignores key19 at .808081 seconds. The Tiger marker, 36 PC attack clips and rejection of a clip without a marker also pass in Release/Debug. This closes that duplicate-annotation rejection; native MultipleStrike services remain separate unfinished work.
+- [x] Replace the world-gameplay regression's injected damage snapshot with the actual starter weapon and live native session. Check every target HP change against emitted impacts, native reward/drop, death and revival. The 13-test Release/Debug status/equipment/skill/effect/projectile/navigation matrices pass (`attack-bonus-cpu-release-final1.log`, `attack-bonus-cpu-debug-final1.log`), taking 49.14/694.22 seconds. Those matrices preceded the marker correction; the two affected marker/bonus gates pass separately afterwards. Unchanged navigation is not repeated for the annotation-only change.
+- [x] Rebuild/stage the final Release and pass actual SDL combat/UI/audio/Prana/drop checks (`attack-bonus-sdl-combat2`): two player impacts, two monster impacts, six glyphs and ten sound requests. Exit0; protected, default-profile and seed snapshots remain unchanged. Clean client layout/external runtime closure passes with 52 owned files (`attack-bonus-package1`); clean-machine deployment remains open. Staging log: `attack-bonus-stage-first-marker2.log`.
+- [x] Release projectile GPU regression (`attack-bonus-projectile-render-release1`): 27 positive encounters, five lifecycle cases and four rendered cases pass. Skill 3162's missing activation remains recorded/skipped; available unsupported-FX warnings are zero. Release monster GPU regression (`attack-bonus-monster-render-release1`) adds Srbinda to the default melee/ranged matrix: ten positive fine/coarse encounters, four GPU cases and nine lifecycle checks pass. Srbinda's misses and positive hits both occur at the first marker; the new checks verify actual selected animation and authored impact geometry/depth, without claiming full-map visual parity.
+
+- [x] Final Debug monster GPU acceptance also passes ten encounters/four GPU cases/nine lifecycle checks (`attack-bonus-monster-render-debug1`). Both fine/coarse Srbinda cases retain the native first miss and subsequent positive hit at .805051 seconds. Debug's affected first-marker/bonus retest completes in90.60 seconds; no timed-out observation is treated as a failed process or restarted run.
+
+The final Release executable
+matches the staged client at SHA256
+`c746e15bdd9876a9292c12a85186e0967fe879036ca9d0263e37a9ab49df7e7a`.
+`attack-bonus-source-evidence.json` pins the source, native engine evidence,
+canonical inputs, accepted results and current executable identity.
+The earlier controlled performance baseline remains tied to the monster-ranged
+build; no optimisation gain is claimed. Remaining critical/pierce/multiple-strike,
+periodic/area/monster-state services, special patterns and broader map/game
+acceptance remain open.
 
 ## Native shield energy and per-hit FX (2026-10-26)
 
