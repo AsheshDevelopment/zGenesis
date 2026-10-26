@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "Implementation is paused. The last staged bgfx/SDL3 client retains the verified offline foundation, native data/FX/navigation and persistence. New strike-service source has Release CPU evidence only; Debug, GPU, launcher validation and staging remain pending. Complete skills, AI, other maps and release acceptance stay open.",
+      "description": "C05 offline movement, camera and represented MainUI are accepted with source-backed cursors, tooltips, colour/font modes, bounded text caching, native names, camera obstruction recovery and isolated SDL/persistence evidence. The broader skill/FX, native collision, other-map and release backlog remains open; source changes are uncommitted.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -1537,7 +1537,7 @@ window.TANTRA_ROADMAP = {
           "tasks": [
             {
               "id": "P05-07",
-              "done": false,
+              "done": true,
               "text": "Cache text/glyph results by font, locale, content, colour and dimensions; avoid per-frame GDI uploads.",
               "children": []
             },
@@ -1740,9 +1740,9 @@ window.TANTRA_ROADMAP = {
             "text": "ashesh / ashesh opens copied roster without HTTP/server. Preview matches seed appearance/equipment and pose fixtures. Fresh disposable profiles pass create/select/delete/validation/retry once in ZFLauncher. Original saves are unchanged.",
             "children": []
           },
-          "done": 22,
+          "done": 23,
           "total": 33,
-          "percent": 67
+          "percent": 70
         },
         {
           "id": "C04",
@@ -1897,7 +1897,7 @@ window.TANTRA_ROADMAP = {
           "tasks": [
             {
               "id": "P05-05",
-              "done": false,
+              "done": true,
               "text": "Preserve source button states, shortcut dispatch, focus, close/Escape and panel dragging.",
               "children": []
             },
@@ -1909,37 +1909,37 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P05-08",
-              "done": false,
+              "done": true,
               "text": "Apply original widget RGB and alpha, including orange NPC headings/options and white dialogue text.",
               "children": []
             },
             {
               "id": "P05-09",
-              "done": false,
+              "done": true,
               "text": "Add item/skill/control tooltips with topmost hit testing, native delay, wrapping and viewport clamping.",
               "children": []
             },
             {
               "id": "P05-10",
-              "done": false,
+              "done": true,
               "text": "Add source player/NPC/monster names with correct model-height anchors, colours and speech placement.",
               "children": []
             },
             {
               "id": "P05-11",
-              "done": false,
+              "done": true,
               "text": "Port original CUR/ANI cursor files and source cursor-context priority.",
               "children": []
             },
             {
               "id": "P05-12",
-              "done": false,
+              "done": true,
               "text": "Recreate status, target, inventory, cargo, skill, quick-slot, minimap, chat and options panels.",
               "children": []
             },
             {
               "id": "P05-13",
-              "done": false,
+              "done": true,
               "text": "Track dirty widgets; unchanged inventories/names must not rerasterize or upload each frame.",
               "children": []
             },
@@ -1951,43 +1951,43 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P10-01",
-              "done": false,
+              "done": true,
               "text": "Port source mouse/keyboard movement and run/walk/camera modes exactly.",
               "children": []
             },
             {
               "id": "P10-02",
-              "done": false,
+              "done": true,
               "text": "Keep click picking, pathfinding, height sampling and actor collision in native units.",
               "children": []
             },
             {
               "id": "P10-03",
-              "done": false,
+              "done": true,
               "text": "Reject blocked destinations; route around obstructions without teleporting through buildings.",
               "children": []
             },
             {
               "id": "P10-04",
-              "done": false,
+              "done": true,
               "text": "Handle narrow passages, corners, slopes, edges and moving actor obstruction.",
               "children": []
             },
             {
               "id": "P10-05",
-              "done": false,
+              "done": true,
               "text": "Preserve turn/facing behavior and action-locked movement requests.",
               "children": []
             },
             {
               "id": "P10-06",
-              "done": false,
+              "done": true,
               "text": "Implement source reset/orbit/zoom/follow and camera obstruction without abrupt clipping.",
               "children": []
             },
             {
               "id": "P10-07",
-              "done": false,
+              "done": true,
               "text": "Keep rendered interpolation separate from authoritative position and saved cells.",
               "children": []
             },
@@ -1999,13 +1999,13 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P10-09",
-              "done": false,
+              "done": true,
               "text": "Accept the ZFLauncher Mandara movement/camera route independently, then broaden route coverage; OGRE acceptance does not count as a bgfx pass.",
               "children": []
             },
             {
               "id": "P12-02",
-              "done": false,
+              "done": true,
               "text": "Preserve Chakra spending, skill learning and native quick-slot modes/shortcuts.",
               "children": []
             },
@@ -2018,13 +2018,13 @@ window.TANTRA_ROADMAP = {
           ],
           "gate": {
             "id": "BG-C05-GATE",
-            "done": false,
+            "done": true,
             "text": "Real SDL input moves without teleporting, rejects blocked destinations and preserves animation phase on retarget. Reset/orbit/zoom and town-route framing are usable. UI hit order, copied quick slots and layout/state survive reload.",
             "children": []
           },
-          "done": 4,
+          "done": 20,
           "total": 20,
-          "percent": 20
+          "percent": 100
         },
         {
           "id": "C06",
@@ -2751,12 +2751,17 @@ window.TANTRA_ROADMAP = {
         "Two trials per town/dense-field/combat scene: 7,200 measured frames, raw CPU/GPU/loading timings and hardware/input hashes"
       ],
       "next": [
-        "On resumption, finish focused Debug/GPU/SDL acceptance of the bounded strike batch before staging it; no expansion into complex skill families yet",
-        "Prioritise small independent work: P05-07 text/glyph caching and avoiding unchanged-label uploads, then bounded UI fixes; batch focused checks",
-        "Retain the full backlog for combo/conditional-target, periodic/area/monster-state services, special patterns and remaining weapon/skill combinations",
-        "Complete distinct-map/in-game portal transitions and broader visual/performance/release acceptance; retain measured baselines without claiming optimisation gains"
+        "Continue C04/C07 and remaining ordinary gameplay gates from their explicit open requirements",
+        "Keep unfinished strike acceptance separate: record missing 1000106 and unsupported TFX type7; target/combo/periodic services remain open",
+        "Retain explicit missing authored collision and client/import version differences; no HPK extraction or silent dataset replacement",
+        "Broaden distinct-map/portal, visual/performance/recovery and release acceptance without inferring FPS gains from caching"
       ],
       "changes": [
+        {
+          "date": "2026-10-27",
+          "title": "C05 movement, camera and MainUI accepted",
+          "text": "Implement original CUR/ANI contexts, 200ms item/skill/control tooltips, native widget colours/font modes, bounded label caching and unchanged bitmap upload avoidance, player name policies and camera obstruction recovery. Accept 32 static / 8 dynamic routes, isolated SDL town blocked-click, field E/R retarget and 63 hotkey checks, plus six restart/relogin/character/village persistence legs. Debug/Release checks and clean packaging pass. The native camera baseline remains 150; the client explicitly selects 450 maximum zoom. Missing authored .tbo collision and wider strike/FX services remain open. No FPS gain or production/native visual parity is claimed."
+        },
         {
           "date": "2026-10-27",
           "title": "Implementation paused; quicker independent tasks prioritised",
@@ -2770,12 +2775,12 @@ window.TANTRA_ROADMAP = {
         {
           "date": "2026-10-26",
           "title": "Native shield energy and per-hit FX",
-          "text": "Implement source instant shield/break cases and physical/elemental absorption, preserving native rounding, energy and exhaustion flags. Real3102 levels1–10 and3145 authority pass2,555 checks in Release/Debug, including two GPU cases, shield-only visible-pixel comparisons, ranged arrival, equipment and death cleanup. Restore the DealDamage guard so defensive3022 retains3059's bonus until damaging3007. Shield and ordinary-buff SDL workflows each pass88 checks; status/skill/projectile/navigation regressions and packaging pass. Missing3145 FX is recorded and skipped. Wider skill/monster families remain open."
+          "text": "Implement source instant shield/break cases and physical/elemental absorption, preserving native rounding, energy and exhaustion flags. Real3102 levels1â€“10 and3145 authority pass2,555 checks in Release/Debug, including two GPU cases, shield-only visible-pixel comparisons, ranged arrival, equipment and death cleanup. Restore the DealDamage guard so defensive3022 retains3059's bonus until damaging3007. Shield and ordinary-buff SDL workflows each pass88 checks; status/skill/projectile/navigation regressions and packaging pass. Missing3145 FX is recorded and skipped. Wider skill/monster families remain open."
         },
         {
           "date": "2026-10-26",
           "title": "Native monster default ranged attacks",
-          "text": "Replace fixed-range idSkill0 attacks with source default melee/ranged selection and locked MONSkill animation/TAB timing. Monsters2004/2005 pass eight fine/coarse encounters and three GPU cases in Debug/Release, including visible follow/impact and eight lifecycle/rebind checks. SDL combat/audio/Prana and88 buff/equipment checks pass. The current build has six isolated profile trials/7,200 measured frames; dense43-actor medians9.67–9.87ms include4.10–4.16ms CPU pose work. Special-skill patterns, timed monster states and wider skill services remain open."
+          "text": "Replace fixed-range idSkill0 attacks with source default melee/ranged selection and locked MONSkill animation/TAB timing. Monsters2004/2005 pass eight fine/coarse encounters and three GPU cases in Debug/Release, including visible follow/impact and eight lifecycle/rebind checks. SDL combat/audio/Prana and88 buff/equipment checks pass. The current build has six isolated profile trials/7,200 measured frames; dense43-actor medians9.67â€“9.87ms include4.10â€“4.16ms CPU pose work. Special-skill patterns, timed monster states and wider skill services remain open."
         },
         {
           "date": "2026-10-26",
@@ -2833,10 +2838,10 @@ window.TANTRA_ROADMAP = {
           "text": "ZFLauncher uses its dedicated client/profile. OGRE runtime results are not transferred to bgfx acceptance."
         }
       ],
-      "done": 92,
+      "done": 109,
       "total": 254,
-      "percent": 36,
-      "accepted": 3
+      "percent": 43,
+      "accepted": 4
     }
   ],
   "zones": [
@@ -2912,11 +2917,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "e85b0bc6f19b7965a642db19721504544561bbbb5a2cb8555c65b6bbf9600371"
+      "sha256": "ac1e3600529d6e45047364fdb68b82420d57a27842fd546fbd5582c2df7568f4"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "12688d5d3fa3851422945fa4519d7ae684f1720a0342655f7ec0b7f2e931f21f"
+      "sha256": "7a57e9fd1882dcd67da32ee4ba973814b870c5f3cff25416fb3eec5ab5675053"
     }
   },
   "reference": {

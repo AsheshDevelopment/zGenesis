@@ -10,32 +10,24 @@ OGRE remake's implemented foundations**. Build a separate `ZFLauncher.exe` with
 the `Tantra Online` window/product title, using the same client assets and
 **ashesh / ashesh** login. Keep `_client/HTLauncher.exe` available for comparison.
 
-**Implementation is paused at the user's request.** ZFLauncher builds and runs the original
-offline login, saved character preview, character lifecycle, CHAR_INIT/Mandara and
-minimum controls through bgfx/D3D11. The user's dedicated runtime is now
-`_client_bgfx`; `_client` remains the original OGRE client. The complete plan remains
-open; the broader gates below deliberately retain their unverified requirements.
-The server goal remains paused. Game source changes remain uncommitted; documentation
-publication is separate. No bgfx submodule registration was made.
+**C05 is accepted for the represented offline scope (2026-10-27).** The broader
+skill/strike expansion and server work remain paused. ZFLauncher uses C++20,
+SDL3 and bgfx/D3D11 with the dedicated `_client_bgfx` assets and external runtime
+support. The complete plan remains open; this checkpoint does not close other
+phase gates. Game source changes remain uncommitted.
 
-### Paused checkpoint and next work order (2026-10-27)
+### Current work order
 
-The last staged Release remains `c746e15bdd9876a9292c12a85186e0967fe879036ca9d0263e37a9ab49df7e7a`.
-The newer strike-service source is **work in progress**, not a staged client update.
-Its latest Release CPU run passes 19,041 checks: five target-independent strike-rule
-cases and eight encounters for critical skill3026 and multiple-hit skills3012/3109.
-Full skills3033/3107 still need additional target/combo services. Debug, GPU,
-actual launcher/UI/audio validation and staging of this batch remain pending.
-No broad task or acceptance gate is closed by those CPU results.
+1. C05 is implemented, staged and verified; retain its explicit offline/native-collision limits.
+2. Batch source, CPU, GPU and isolated SDL checks; reconcile checkboxes from
+   their evidence, including previously implemented C05 features.
+3. Retain all five continuation objectives and the wider backlog below. Do not
+   expand the unfinished combo/conditional-target or periodic skill services as
+   part of this C05 request.
 
-On resumption, follow the user's requested faster work order:
-
-1. Finish focused acceptance of the bounded strike changes; defer expansion into
-   combo/conditional-target, periodic and monster-state services.
-2. Prefer small independent items, starting with P05-07's bounded text/glyph cache
-   and unchanged-label upload avoidance, then the remaining bounded UI fixes.
-3. Batch focused checks and reconcile older checklists only against direct evidence.
-   Retain all five continuation objectives and the wider backlog below.
+The preceding strike batch is retained: five target-independent strike-rule
+cases and eight encounters for skills3026/3012/3109. Full skills3033/3107 still
+need target/combo services. Its CPU pass does not establish complete skill parity.
 
 ## Current continuation: native data, skills, navigation and runtime verification
 
@@ -815,7 +807,7 @@ acceptance.
 | C02 | [ ] | Native HPK model/textures, material alpha/detail, ordered UI, CPU reader/profile checks | `c02-assets`; `c02-resources` | Full asymmetric/clipping/resize matrix and normal/colour contracts |
 | C03 | [x] | ashesh login; create/select/delete; all eight tribe previews with face/hair changes; full-roster and duplicate-name rejection, cancellation and corrected retry | `c03-roster-lifecycle-guarded`; `c03-eight-previews-complete`; `c03-roster-boundaries` | Complete appearance/equipment/LOD combinations and repeated transition cleanup |
 | C04 | [ ] | Source CHAR_INIT to map40001, 524288 terrain triangles, 6503 placements, actors and essential native HUD | `c04-entry-actor-catalog`; `map-cpu-preflight.txt` | Async cancellation, complete seed-state checks and broader transition/reload matrix |
-| C05 | [ ] | Real ground click/local movement, inventory toggle, right-drag orbit, Insert reset and conservative frustum tests | `c05-controls`; `c05-navigation-cpu`; `zf_frustum` CTest | Blocked/narrow town routes, zoom/obstruction, quick-slot/layout reload, tooltips |
+| C05 | [x] | Blocked SDL clicks, town/field run/walk/retarget, orbit/reset/zoom, native UI/cursors/tooltips/names, bounded text cache and fresh-process UI/quickslot persistence | `C05_ACCEPTANCE.json`; `c05-town-runtime1`; `c05-field-runtime1`; `c05-hotkeys-runtime2`; `c05-persistence-runtime1` | Authored .tbo missing; full game/online/visual parity stays outside this offline checkpoint |
 | C06 | [x] | Monster2001 defeat/reward, actual player death and native revival; warehouse/save; buy/sell, paid repair, money/capacity rejection and prompt cancellation; paid-repair full-record reload | Earlier service/reload evidence; `c06-paid-repair`; `c06-paid-repair-reload`; `c06-no-money`; `c06-full-inventory`; `c06-death-presentation` | Full hit/miss/critical/block/FX, active skills, AI and loot remain open |
 | C07 | [ ] | Authored deformed normals and inverse-transpose world normals; directional depth comparison, cutout caster shader, 3x3 filtering and texel-snapped projection | `zf_normal_transforms`; `c03-eight-previews-complete`; `c07-shadow-profile-options` | Broad foliage/bias/movement parity, sky/water/weather/TFX/audio and matched OGRE views |
 | C08-C09 | [ ] | Frame/GPU measurements, sampled resource counters and reusable frame-stat quad; backlog retained | `c08-idle-frame-sample`; `proceed-cpu.log`; `proceed-python-verified.log` | GPU skinning, asynchronous loading, performance/recovery/release, full gameplay, online and ten zones |
@@ -953,7 +945,7 @@ verified slices and their remaining requirements are listed in the checkpoint ta
 | 02 Original resources | HPK/catalog/map/model/UI readers and alpha/detail; broader preflight gaps | C02 | [ ] | [ ] | [ ] |
 | 03 INTRO/characters | SQLite login, three-slot create/select/delete and loading/CHAR_INIT; roster lifecycle, eight previews and retry accepted; full appearance/equipment/LOD and transition coverage open | C03-C04 | [ ] | [ ] | [ ] |
 | 04 MainUI/status/slots | focus/drag/close panels, calculated status, Chakra/learning and item slots | C05 | [ ] | [ ] | [ ] |
-| 05 Movement/actors/camera | bounded navigation/camera; usable obstruction/native collision acceptance open | C05 | [ ] | [ ] | [ ] |
+| 05 Movement/actors/camera | bounded offline navigation/camera accepted; full authored native collision remains open | C05 | [ ] | [ ] | [ ] |
 | 06 Inventory/NPC services | ordinary shop/paid-repair/warehouse/save minimum accepted; full inventory/tooltip combinations open | C06 | [ ] | [ ] | [ ] |
 | 07 Combat/progression | basic melee/progression; complete active skills/AI/FX/loot remain | C06, then C09 | [ ] | [ ] | [ ] |
 | 08 Quests/refinement | advanced services and complete quests/refinement remain | C09 | [ ] | [ ] | [ ] |
@@ -1039,7 +1031,14 @@ _remake_bgfx/
 | `C:\_GitHub\TantraSrc\_client` | Original OGRE client and historical input-hash baseline; preserved |
 | `B:\__TANTRA\TantraDataScripts` | Editable Excel/table reference; validate export correspondence with runtime TPA/TXL |
 | `B:\__TANTRA\TantraDataScripts\K3` | Read-only K3 authored XML/XLS/XLSX reference for parameters, messages, FX and NPCs; compare IDs/layouts with the selected runtime version |
+| `C:\_GitHub\TantraSrc\GenesisK3-XMLs` | Read-only Genesis K3 reference. TantraParam.xml, ClientRes.xml and XMLS-XLS/HTMessage.xml are byte-identical to the inspected K3 counterparts; this does not establish equality of all files. |
 | `B:\__TANTRA\TantraDataScripts\Global` | Read-only Global authored tables, including `fxPC.xls`; retain language columns and version differences rather than replacing runtime tables wholesale |
+
+On2026-10-27, the three inspected Global XMLs differ from K3/Genesis K3.
+Current offline gameplay import provenance selects Global; display-English
+fallback generation explicitly selects Genesis K3. Keep those roles and source
+versions separate. This comparison does not authorise replacing runtime data.
+
 | `B:\Tantra-Files\_TantraClients\TantraOnline-Global` | Read-only shipped Global client assets and binary tables; inspect both `system` and `resource\fx` catalogs because they differ; read HPKs in place without extraction |
 | `E:\Global-server` | Deployment zone data; generation areas, collision/grid and NPC generation must come from one zone dataset |
 | `A:\zEngineK2\server` | Server-manager UI reference only; server work stays in the server project |
@@ -1311,7 +1310,7 @@ Seed the private profile and connect native offline login/server/channel/roster 
 
 **Owned backlog tasks:**
 
-- [ ] **P05-07** Cache text/glyph results by font, locale, content, colour and dimensions; avoid per-frame GDI uploads.
+- [x] **P05-07** Cache text/glyph results by font, locale, content, colour and dimensions; avoid per-frame GDI uploads.
 - [ ] **P06-01** Port boot/config/preload and source INTRO camera/map/FX/music sequence.
 - [x] **P06-02** Rebuild original login, server and channel selection presentation.
 - [x] **P06-03** Connect offline login/roster to the existing authority, not a renderer-only demo account.
@@ -1403,35 +1402,56 @@ Load Mandara terrain/placements/regular+Pop objects and coherent Zone01 offline 
 
 ### C05 Movement, camera and MainUI
 
+**Accepted offline checkpoint: 2026-10-27, 20/20 tasks and BG-C05-GATE.**
+Evidence: `build/evidence/C05_ACCEPTANCE.json`. Debug/Release focused tests,
+287 GPU/UI checks per configuration, 32 static/eight dynamic routes, isolated SDL
+town blocked-click and hostile-field retargeting, 63 hotkey checks and six
+fresh-process persistence legs pass. Final font-mode checks and the staged
+launcher hotkey run pass after visual review corrected normal-font shadows.
+
+New work adds native CUR/ANI contexts, 200ms item/skill/control tooltips, widget
+RGB/alpha and source font modes, bounded label caching/unchanged uploads, name
+policies and smooth camera recovery. Shared camera defaults remain native 150;
+the playable client explicitly opts into the requested 450-unit maximum. F11
+remains optional broadcast mode. This phase accepts represented offline
+behaviour with the explicit missing authored `.tbo` collision limit.
+
+P10-07's dataflow is audited: simulation owns continuous native position and
+saved cells; presenters consume const gameplay, convert copies to render units
+and interpolate meshes/visual root tracks without writing those results back.
+This does not claim online snapshot interpolation or replication.
+
 **Prerequisites:** C04 initialized world; native height/navigation/collision and UI state.
 
 Port click/keyboard run/walk, camera controls, blocked routes and action locks. Complete represented panels, status, Chakra/learning, item quick slots, focus/drag/close, cursors and saved layout. Retain the explicit missing-native-collision limitation.
 
 **Owned backlog tasks:**
 
-- [ ] **P05-05** Preserve source button states, shortcut dispatch, focus, close/Escape and panel dragging.
+- [x] **P05-05** Preserve source button states, shortcut dispatch, focus, close/Escape and panel dragging.
 - [x] **P05-06** Persist normal positions/options in native client `resource/UI/Interface.sys`; isolate QA settings in private profiles and preserve unknown fields. Verify layout, quickbar orientation/key mode and character isolation across restart/relogin and supported village changes (`persistence-runtime3`).
-- [ ] **P05-08** Apply original widget RGB and alpha, including orange NPC headings/options and white dialogue text.
-- [ ] **P05-09** Add item/skill/control tooltips with topmost hit testing, native delay, wrapping and viewport clamping.
-- [ ] **P05-10** Add source player/NPC/monster names with correct model-height anchors, colours and speech placement.
+- [x] **P05-08** Apply original widget RGB and alpha, including orange NPC headings/options and white dialogue text.
+- [x] **P05-09** Add item/skill/control tooltips with topmost hit testing, native delay, wrapping and viewport clamping.
+- [x] **P05-10** Add source player/NPC/monster names with correct model-height anchors, colours and speech placement.
 
-  Player, monster and NPC names now render at the native model-height+3,
-  model-height+5 and NPC+25 anchors; NPC text is yellow. Speech placement and the
-  remaining conditional player/faction/name policies keep this parent open.
-- [ ] **P05-11** Port original CUR/ANI cursor files and source cursor-context priority.
-- [ ] **P05-12** Recreate status, target, inventory, cargo, skill, quick-slot, minimap, chat and options panels.
-- [ ] **P05-13** Track dirty widgets; unchanged inventories/names must not rerasterize or upload each frame.
+  Player/monster/NPC anchors are model-height+3/model-height+5/NPC+25.
+  NPC names are yellow; local-player karma, attacker, castle-clan and invisible
+  rules follow source priority. Speech keeps source placement, 5000ms lifetime
+  and DBCS-safe 55-byte truncation at the60-byte threshold. Remote guild/party
+  replication belongs to C09.
+- [x] **P05-11** Port original CUR/ANI cursor files and source cursor-context priority.
+- [x] **P05-12** Recreate status, target, inventory, cargo, skill, quick-slot, minimap, chat and options panels.
+- [x] **P05-13** Track dirty widgets; unchanged inventories/names must not rerasterize or upload each frame.
 - [x] **P07-10** Keep repeated movement destinations from restarting the same animation.
-- [ ] **P10-01** Port source mouse/keyboard movement and run/walk/camera modes exactly.
-- [ ] **P10-02** Keep click picking, pathfinding, height sampling and actor collision in native units.
-- [ ] **P10-03** Reject blocked destinations; route around obstructions without teleporting through buildings.
-- [ ] **P10-04** Handle narrow passages, corners, slopes, edges and moving actor obstruction.
-- [ ] **P10-05** Preserve turn/facing behavior and action-locked movement requests.
-- [ ] **P10-06** Implement source reset/orbit/zoom/follow and camera obstruction without abrupt clipping.
-- [ ] **P10-07** Keep rendered interpolation separate from authoritative position and saved cells.
+- [x] **P10-01** Port source mouse/keyboard movement and run/walk/camera modes exactly.
+- [x] **P10-02** Keep click picking, pathfinding, height sampling and actor collision in native units.
+- [x] **P10-03** Reject blocked destinations; route around obstructions without teleporting through buildings.
+- [x] **P10-04** Handle narrow passages, corners, slopes, edges and moving actor obstruction.
+- [x] **P10-05** Preserve turn/facing behavior and action-locked movement requests.
+- [x] **P10-06** Implement source reset/orbit/zoom/follow and camera obstruction without abrupt clipping.
+- [x] **P10-07** Keep rendered interpolation separate from authoritative position and saved cells.
 - [x] **P10-08** Record missing authored `.tbo` collision as a remaining parity limit; do not mark geometric fallback as native collision complete.
-- [ ] **P10-09** Accept the ZFLauncher Mandara movement/camera route independently, then broaden route coverage; OGRE acceptance does not count as a bgfx pass.
-- [ ] **P12-02** Preserve Chakra spending, skill learning and native quick-slot modes/shortcuts.
+- [x] **P10-09** Accept the ZFLauncher Mandara movement/camera route independently, then broaden route coverage; OGRE acceptance does not count as a bgfx pass.
+- [x] **P12-02** Preserve Chakra spending, skill learning and native quick-slot modes/shortcuts.
 
 **Additional planning and minimum-slice tasks:**
 
@@ -1440,12 +1460,12 @@ Port click/keyboard run/walk, camera controls, blocked routes and action locks. 
 P07-09b's represented equipment acceptance is sword4001 in separate safe/hostile
 SDL runs, including walking and running. Other weapon/body socket compatibility,
 full equipment/LOD matrices and ranged/skill semantics remain under P07-08/C07
-and C09; this does not close BG-C05-GATE's zoom/layout/obstruction requirements.
+and C09. Current C05 evidence accepts zoom/layout/obstruction; broader equipment/LOD parity is not inferred.
 
 **Headless check:** `--check controls-navigation` with the runner command and a fresh output.
 **Explicit runtime scenario:** `mandara-controls`; use separate prepare/run commands and separate outputs for each scenario.
 
-- [ ] **BG-C05-GATE** Real SDL input moves without teleporting, rejects blocked destinations and preserves animation phase on retarget. Reset/orbit/zoom and town-route framing are usable. UI hit order, copied quick slots and layout/state survive reload.
+- [x] **BG-C05-GATE** Real SDL input moves without teleporting, rejects blocked destinations and preserves animation phase on retarget. Reset/orbit/zoom and town-route framing are usable. UI hit order, copied quick slots and layout/state survive reload.
 
 ### C06 Ordinary services and basic offline combat
 

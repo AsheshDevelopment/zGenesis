@@ -1,32 +1,67 @@
 # ZFLauncher bgfx progress and continuation
 
-Updated: 2026-10-27. Status: **implementation paused; last staged offline client available; full plan incomplete**.
+Updated: 2026-10-27. Status: **C05 offline checkpoint accepted and staged; full plan incomplete**.
 
-## Paused strike-service work in progress (2026-10-27)
+## C05 movement, camera and MainUI (2026-10-27)
 
-The user paused implementation and requested documentation/roadmap publication.
-The last staged client is still the ordinary-attack checkpoint below, SHA256
-`c746e15bdd9876a9292c12a85186e0967fe879036ca9d0263e37a9ab49df7e7a`.
-The later source changes are not built into that launcher and are not committed.
+The user resumed this phase explicitly. New implementation covers:
 
-| Current work | Evidence and limits |
-| --- | --- |
-| Native strike rules | Four target-independent CastInstant2 cases are extracted from CMob3: MultipleStrike, CriticalStrike, PierceStrike and PierceStrike2. Active skill hits clear ordinary critical doubling; ordinary critical scaling retains the native passive bonus and excludes pierce. Native skill-book probability decks and authored phase flags are retained. This does not implement all CastInstant2 target/combo services. |
-| Release CPU acceptance | `strike-services-cpu-release4/STRIKE_SERVICES_RESULT.json` passes 19,041 checks: five source-rule cases and eight encounters, with **zero GPU cases**. The complete-action encounters cover skill3026 and multiple-hit skills3012/3109 at .001/.05-second ticks, cancellation, one cast cost, early-death records and one reward. Skills3033/3107 are covered only for the represented target-independent rule calculations, not complete actions. |
-| Written presentation changes | Repeated target records carry native 300ms digit delays and share one attack FX factor. The first TAB attack-marker helper is shared with active-skill timing. These paths compile in the Release probe; actual GPU/UI/audio and production-launcher acceptance remain pending. |
-| Earlier regression evidence | `strike-services-initial-release1.log` passes skill-cast and ordinary-bonus checks, but predates the final presentation/helper changes. It is not a final whole-batch regression result. |
-| Failed attempts and source-data limits | Early probe builds used incorrect presentation API names; corrected to existing interfaces. The first multi-hit fixture used the wrong weapon for3109; the accepted fixture selects its authored required bow and arrows. Skill3027 references PierceStrike but lacks CastInstant2 in its authored phase flags; no phase/data patch was invented. Additional combo/conditional-target effects in3033/3107 remain open. |
+- Native CUR/ANI assets and represented context priority using the Windows
+  decoder, with missing files recorded rather than extracted or substituted.
+- Item, skill and enabled control tooltips: source 200ms delay, topmost hit,
+  wrapped 35-line bound and viewport clamp. Item text reads live instance
+  durability/refinement/count. Skill name/description follows
+  HTEngineHandler -> FXPCResMgr -> `resource/fx/fxPC.txl` type1; numeric TPA
+  PCSkill records do not contain that text.
+- Widget foreground/shadow RGB and alpha, including native orange NPC options.
+  The source shadow colour is now retained in the captured UI graph.
+- A process-local bounded 512-entry/16MiB raster payload cache, keyed by text,
+  locale/font, dimensions, alignment, wrapping, alpha and colours. Identical
+  UI bitmaps skip GPU replacement. Existing inventory/name dirty checks remain.
+  No new FPS or profiling gain is claimed.
+- Native karma/attacker/castle-clan name colours, invisible-name suppression,
+  original name/speech anchors, five-second speech lifetime and DBCS-safe
+ 55-byte truncation at the source 60-byte threshold.
+- Camera obstruction retracts immediately and recovers outward smoothly.
+  Re-entry resets the source heading. Shared camera code defaults to native 150;
+  ZFLauncher explicitly selects the requested 450-unit extended zoom maximum.
+  F11 remains the source's optional broadcast-camera mode.
 
-- [ ] Build and verify Debug for the current strike batch.
-- [ ] Verify available strike animation/FX and 300ms feedback in GPU and actual SDL/UI/audio runs; record/skip missing authored resources without aliases.
-- [ ] Build/stage the production launcher only after the focused checks pass, then verify protected/default/seed state and packaging.
+C05 is accepted: 20/20 tasks and its minimum gate. Evidence/hashes are in
+`build/evidence/C05_ACCEPTANCE.json`. Debug/Release each pass ten focused checks;
+final font-mode changes separately pass all three affected tests/configuration.
+The UI probe passes 287 checks/configuration, including 14 native cursor assets
+and 120 unchanged bitmap submissions with no upload. Actual SDL town blocked
+click, field E/R retarget and63 hotkey checks pass. Six fresh-process
+restart/relogin/character/village legs pass. Protected/default/seed data remain
+unchanged. Final package closure passes 52 owned files. The staged Release is
+`424366845a5b77eea75238e29c38cc8faa3365ca4728f875ead089c38879d9df`.
 
-The user requested faster progress through easier independent items. On resumption,
-finish the bounded acceptance above, then prioritise P05-07's text/glyph caching
-and unchanged-label upload avoidance and small remaining UI fixes. Those cache
-changes have **not** been implemented. Defer expansion into the more involved
-combo, conditional-target, periodic and monster-state services while keeping them
-in the full backlog. No broad task/gate count or performance claim changes here.
+Visual review corrected a new font-shadow mismatch: normal labels always use
+the source's black right/down passes; declared coloured shadows apply only to
+the appropriate bold/outline/shadow modes. Window titles use native border mode.
+
+Retain the explicit missing authored `.tbo` collision limitation; current routes
+use the represented cell/TCC/geometric fallback. Presenters consume const native
+positions/cells and interpolate meshes independently; online replication is C09.
+No FPS gain, whole-game or exact native visual-parity completion is implied.
+
+## Deferred strike-service work (2026-10-27)
+
+The previous source changes remain in the worktree. Release CPU regression
+passes five source-rule cases and eight encounters for 3026/3012/3109; full
+3033/3107 still need target/combo services. New GPU attempt
+`c05-strike-render1` records missing binding1000106 and fails acceptance on
+`WorldSkillImpact/4: Unsupported TFX node type7`. That broader skill-FX work is
+not accepted by C05 and is not expanded here. No asset alias or authored data
+patch was added. Current Debug/Release skill-cast/ordinary-bonus CPU checks are
+included in the focused regression, without a complete-skill claim.
+
+The old staged ordinary-attack hash was
+`c746e15bdd9876a9292c12a85186e0967fe879036ca9d0263e37a9ab49df7e7a`;
+new C05 staging/acceptance is recorded above. Source remains
+uncommitted. Broader skill/state/AI/map/visual/performance/release work and all
+five continuation objectives remain open.
 
 ## Native ordinary attacks and first TAB attack annotation (2026-10-27)
 
