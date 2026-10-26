@@ -2741,6 +2741,7 @@ window.TANTRA_ROADMAP = {
         "Native INTRO, eight tribe previews, equipment/sockets, native UI and ordinary durable offline services",
         "Source hit markers, projectile arrival costs, elemental trails and represented persistent skill-state cleanup",
         "Native body/hair/apron action clips, cast looping and retained animation clocks during head/equipment replacement",
+        "Committed buff FX retain their owner, age and expiry through actual SDL equip/unequip without recasting or charging TP",
         "32 static and 8 dynamic native navigation cases; actual SDL immediate attack retargeting",
         "Native menu/camera/quickbar/chat keys; source optional F11 broadcast camera",
         "Six fresh-process persistence legs: Interface.sys, equipment attachments, quick slots, independent audio and three Mandara village zones",
@@ -2753,6 +2754,11 @@ window.TANTRA_ROADMAP = {
         "Complete other-map and in-game portal transitions, native AI/services, online gameplay and matched visual acceptance"
       ],
       "changes": [
+        {
+          "date": "2026-10-26",
+          "title": "Buff FX survive equipment replacement",
+          "text": "Fix committed buff visuals losing their destroyed display parent during equip/unequip. Rebind exact owner references while retaining graph age, expiry, socket, geometry and particle/audio state. Real3110 Release/Debug renderer checks and88 actual SDL checks pass; held-pose captures are pixel-identical. Projectile/lifecycle regression and clean packaging pass. The earlier verifier's pre-login skill comparison is corrected to actual world-entry bytes. Wider native skill/monster FX families remain open."
+        },
         {
           "date": "2026-10-26",
           "title": "Native hair and apron action phases",
@@ -2883,11 +2889,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "4410ddaa88cdde753c18c0c2bc4e81d82275d886ec895acf18adf8f9140478c7"
+      "sha256": "396f61bcbe2db94ea7ab495e3445e32ef437cad2be77c0351ce4f07ebbf2f7fa"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "9e093b4211c6c0237cf7426f50c009503ca16fcdd7fc55241c936285b8615890"
+      "sha256": "a097971193ec09d559a3c95dc1bfec5d6244169b6aa56db75e1fcdf2dc6aaebc"
     }
   },
   "reference": {

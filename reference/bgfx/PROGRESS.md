@@ -2,6 +2,23 @@
 
 Updated: 2026-10-26. Status: **runnable offline development client; full plan incomplete**.
 
+## Buff FX during equipment replacement (2026-10-26)
+
+- [x] Reproduce a committed3110 buff disappearing after the same player's equipment rebuilds its renderer object (`buff-owner-repro1`). The original client keeps its logical main-character model during equip/unequip; our new object name left the visual pointing at a destroyed parent.
+- [x] Rebind exact FX parent and Prana destination references after a successful production equipment replacement. Preserve graph age, lifetime, socket, geometry and existing particle/audio state. An invalid replacement fails without changing attachment state. Death, missing-owner and scene teardown still remove owned effects normally.
+- [x] Release and Debug renderer regressions pass (`buff-owner-render1`, `buff-owner-render-debug1`): actual3110 transaction,180-second expiry, pre-commit cancellation, effect-removal snapshot, equipment replacement without a recast/TP charge, death, missing parent and scene cleanup. The held-pose before/after captures have identical pixels.
+- [x] `buff-owner-sdl2` passes88 checks through ordinary SDL input: cast3110, open inventory, equip the native starter sword, unequip it and press Escape. Both display replacements retain the live buff and deadline; persisted inventory/equipment return to their entry records and skills match the captured in-world entry bytes. Exit0; protected client, default profile and seed hashes are unchanged.
+- [x] Release/Debug builds and four focused CPU checks in each configuration pass (`buff-owner-release-build3.log`, `buff-owner-debug-build1.log`, `buff-owner-cpu-release1.log`, `buff-owner-cpu-debug1.log`). Release is staged (`buff-owner-stage2`); clean client layout/external runtime closure passes (`buff-owner-package1`).
+- [x] Rebuild and run the existing rendered projectile regression against the current FX header (`buff-owner-projectile-build1.log`, `buff-owner-projectile-render1`):27 positive-damage encounters, five lifecycle cases and four GPU flight/impact cases pass. Accepted missing3162 activation remains recorded; unsupported-runtime warnings remain zero.
+
+The first SDL runtime (`buff-owner-sdl1`) passed its live checks, but the
+post-run verifier compared skills against the pre-login fixture. Native world
+entry clears reserved skill slot30; the corrected verifier captures the actual
+world-entry bytes and requires them unchanged through equipment replacement.
+The failed attempt is retained. No canonical profile/resource was edited or
+extracted. This closes the equipment ownership bug; wider buff services, monster
+skill selection/ranged/state families and full skill timing remain open.
+
 ## Native body, hair and apron animation sets (2026-10-26)
 
 - [x] Fix hair/apron attachments retaining their creation clips while the body moves, attacks or casts. Decode native state/attack/skill body/front/back triplets and Head/PCAni hair mapping. Apply independent clip rates to the same action duration, source cast looping, finite attack playback and key-zero starts. Production world and INTRO selection/idle paths use the new sets.
@@ -736,10 +753,10 @@ uses normal triangle picking of a visible actor. The failed attempt is retained.
 ## Next continuation
 
 1. Resolve the reported TPA/import version differences. Direct native reading and shared-field comparison now pass; keep client presentation parameters and server-only authority distinct.
-2. Resolve3162's missing activation binding and complete remaining attached/area/monster-state FX and wider live-buff/strike coverage. The12-weapon/27-encounter projectile matrix, elemental ribbons and represented persistent-state/cancellation cleanup now pass their bounded checks; the full FX result remains failed on missing source content.
-3. Stress-test stairs, narrow passages, corners, live monster chase and immediate attack retargeting. Missing authored collision remains a parity limit.
-4. Verify Interface.sys, quick slots, equipment and audio persistence across restart/relogin and character/map changes.
-5. Measure crowded-scene CPU/GPU costs and loading stalls, then prioritize batching/GPU skinning/asynchronous loading. Full performance/release gates remain open.
+2. Complete remaining available attached/area/monster-state FX and wider live-buff/strike coverage. Record and skip missing authored content as requested. The12-weapon/27-encounter projectile matrix, elemental ribbons, body/socket action phases and represented persistent-state/cancellation/equipment cleanup pass bounded checks. Native monster pattern selection, ranged attacks and wider skill services remain open.
+3. Preserve the32 static/eight dynamic Mandara navigation cases and actual SDL immediate retarget regression. Smooth visual stairs, missing authored collision and other maps remain parity limits.
+4. Preserve six fresh-process Interface.sys/quick-slot/equipment/audio/restart/relogin/character/village-zone checks. Distinct client map art and ordinary in-game portal handoffs remain open; the tested village zones share Mandara art40001.
+5. Use the corrected-animation7,200-frame CPU/GPU/loading baseline to prioritise pose work, batching and asynchronous loading. No optimisation gain is claimed. Full performance/release gates remain open.
 
 Known source gap: Mandara's `r01_common_cart01.bmp` is absent from the canonical
 client. The renderer reports it and uses the same authored untextured material as
