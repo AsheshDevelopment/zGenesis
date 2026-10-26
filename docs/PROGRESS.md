@@ -17,6 +17,6 @@ No game feature is marked complete by exporting this website.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 75/245 named tasks checked; 3/10 gates recorded. Latest: Ordinary services and revival. The bgfx progress record closes its C06 minimum service gate, including paid repair/reload and native death/revival. Full combat/FX coverage remains open.
+- **Tantra-B**: 87/252 named tasks checked (35%); 3/10 gates recorded. Latest: Mandara FX, active-skill and audio checkpoint. Native field/target FX, a rendered skill cast, eight CPU tribe fixtures, fresh-login Chakra persistence, attack retargeting and safe/field music are verified. Full skill/FX/AI and exact visual parity remain open; missing canonical FX1000386 is recorded.
 
 These are separate source checklists, not release-completion percentages.

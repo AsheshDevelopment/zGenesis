@@ -1054,9 +1054,9 @@ window.TANTRA_ROADMAP = {
       "name": "Tantra-B",
       "engine": "bgfx · Direct3D11 · SDL3",
       "launcher": "ZFLauncher.exe",
-      "stage": "Offline migration in progress",
+      "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "The bgfx project has its own launcher, client folder and acceptance record. Its documented minimum gates cover the baseline, INTRO lifecycle and ordinary services; broader rendering and gameplay parity remain open.",
+      "description": "The bgfx/SDL3 client reaches Mandara with native combat timing, Philippine English names, Chakra persistence, field FX, supported active skills and map audio. Three minimum gates are accepted; complete gameplay, FX, visual and performance parity remain open.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -1516,7 +1516,7 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P09-14",
-              "done": false,
+              "done": true,
               "text": "Keep UI colour independent of scene exposure/tone mapping; prevent double gamma correction.",
               "children": []
             }
@@ -1527,9 +1527,9 @@ window.TANTRA_ROADMAP = {
             "text": "Sampled old/new bytes/IDs agree; malformed inputs fail diagnostically. Asymmetric landmarks, transparency/cutout overlap, clipped UI and projection/picking remain correct on resize. No account or Mandara world is required.",
             "children": []
           },
-          "done": 6,
+          "done": 7,
           "total": 22,
-          "percent": 27
+          "percent": 32
         },
         {
           "id": "C03",
@@ -1717,7 +1717,7 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P13-02a",
-              "done": false,
+              "done": true,
               "text": "Port represented INTRO FX node types required for login/preview with source timing; list unsupported families.",
               "children": []
             },
@@ -1734,9 +1734,9 @@ window.TANTRA_ROADMAP = {
             "text": "ashesh / ashesh opens copied roster without HTTP/server. Preview matches seed appearance/equipment and pose fixtures. Fresh disposable profiles pass create/select/delete/validation/retry once in ZFLauncher. Original saves are unchanged.",
             "children": []
           },
-          "done": 20,
+          "done": 21,
           "total": 32,
-          "percent": 63
+          "percent": 66
         },
         {
           "id": "C04",
@@ -1834,7 +1834,7 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P09-04",
-              "done": false,
+              "done": true,
               "text": "Render a separate complete sky backdrop; do not derive gradient coverage from the low cloud mesh.",
               "children": []
             },
@@ -1881,9 +1881,9 @@ window.TANTRA_ROADMAP = {
             "text": "Copied character reaches rendered Mandara at the seed zone/cells with expected stats/equipment and essential UI. Heights/placements/material identity and async cancellation pass; no duplicate actors/audio. Movement/services are not claimed yet.",
             "children": []
           },
-          "done": 9,
+          "done": 10,
           "total": 22,
-          "percent": 41
+          "percent": 45
         },
         {
           "id": "C05",
@@ -1939,7 +1939,7 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P07-10",
-              "done": false,
+              "done": true,
               "text": "Keep repeated movement destinations from restarting the same animation.",
               "children": []
             },
@@ -2005,7 +2005,7 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P07-09b",
-              "done": false,
+              "done": true,
               "text": "Accept source walk/run/sheath states and unchanged animation phase on retarget before combat.",
               "children": []
             }
@@ -2016,9 +2016,9 @@ window.TANTRA_ROADMAP = {
             "text": "Real SDL input moves without teleporting, rejects blocked destinations and preserves animation phase on retarget. Reset/orbit/zoom and town-route framing are usable. UI hit order, copied quick slots and layout/state survive reload.",
             "children": []
           },
-          "done": 1,
+          "done": 3,
           "total": 20,
-          "percent": 5
+          "percent": 15
         },
         {
           "id": "C06",
@@ -2119,6 +2119,24 @@ window.TANTRA_ROADMAP = {
               "done": true,
               "text": "Wire selected basic attack/impact sound/FX; complete event/family coverage remains P13-06.",
               "children": []
+            },
+            {
+              "id": "P11-13a",
+              "done": true,
+              "text": "Verify all four Chakra allocations through native UI frames, SQLite and fresh login/CHAR_INIT; retain source base/bonus semantics.",
+              "children": []
+            },
+            {
+              "id": "P12-01b",
+              "done": true,
+              "text": "Replace a ground route immediately on attack and replan the represented moving-target approach; keep full AI routing acceptance open.",
+              "children": []
+            },
+            {
+              "id": "P12-03a",
+              "done": true,
+              "text": "Cast represented learned active skills through quick slots, source phase/TAB timing, HP/TP costs and native damage equations; accept eight CPU tribe fixtures and one SDL skill/FX fixture.",
+              "children": []
             }
           ],
           "gate": {
@@ -2127,9 +2145,9 @@ window.TANTRA_ROADMAP = {
             "text": "Buy/sell/repair and item/Rupiah deposit/withdraw conserve state; save-point and current/saved cells survive exit/reload. Basic encounter applies hit/death and represented rewards. Failure/stale/capacity paths and source hashes pass. Full active skills/AI/loot remain open.",
             "children": []
           },
-          "done": 8,
-          "total": 16,
-          "percent": 50
+          "done": 11,
+          "total": 19,
+          "percent": 58
         },
         {
           "id": "C07",
@@ -2232,6 +2250,30 @@ window.TANTRA_ROADMAP = {
               "children": []
             },
             {
+              "id": "P13-02b",
+              "done": true,
+              "text": "Bind the 55 authored Mandara field FX placements and accept representative native portals, altar and water graphs independently in bgfx.",
+              "children": []
+            },
+            {
+              "id": "P13-03b",
+              "done": true,
+              "text": "Present native selected-target and terrain-conforming ground indicators with preserved UVs and sampled terrain/object-floor heights.",
+              "children": []
+            },
+            {
+              "id": "P13-07a",
+              "done": true,
+              "text": "Verify Mandara safe/field BGM playback and source day/night sound-region selection; full travel/options/device recovery remain open.",
+              "children": []
+            },
+            {
+              "id": "P13-10a",
+              "done": true,
+              "text": "Report missing authored FX IDs/resources explicitly, including canonical missing skill binding1000386; preserve absent INTRO TMB handling.",
+              "children": []
+            },
+            {
               "id": "P20-07",
               "done": false,
               "text": "Capture matched reference views for sky, fog, foliage, character material and shadow edges.",
@@ -2250,9 +2292,9 @@ window.TANTRA_ROADMAP = {
             "text": "Matrix groups 01-06 and represented 07/12 portions have independent bgfx evidence. Cover eight previews, LOD/fallback transitions, matched environment/foliage/character/shadow views and actual selected audio. List broader native/OGRE gaps explicitly.",
             "children": []
           },
-          "done": 4,
-          "total": 18,
-          "percent": 22
+          "done": 8,
+          "total": 22,
+          "percent": 36
         },
         {
           "id": "C08",
@@ -2682,19 +2724,37 @@ window.TANTRA_ROADMAP = {
         }
       ],
       "foundations": [
-        "C++20 x64 Debug/Release, pinned bgfx dependencies and separate client output",
-        "Original HPK resources, native UI, CPU skinning and sockets",
-        "Offline login, eight tribe previews and saved-roster Mandara entry",
-        "Documented minimum warehouse, save, merchant, repair and death/revival gates",
-        "Directional shadow submission and authored-normal checks"
+        "C++20 x64 Debug/Release and a dedicated bgfx/D3D11 client/profile",
+        "Native HPK resources, original MainUI, eight tribe previews, CPU skinning and sockets",
+        "Offline login, character lifecycle, Mandara entry and ordinary durable services",
+        "Native melee hit markers, damage glyphs, attack facing/audio and immediate attack retargeting",
+        "All four Chakra allocations survive SQLite persistence and a fresh login",
+        "55 authored Mandara field FX bindings; portal, altar, water and terrain-conforming target indicators",
+        "Supported active-skill phases: eight CPU tribe fixtures and a real SDL skill/animation/FX run",
+        "Native terrain detail, high world filtering, creature shadows, full sky backdrop and safe/field music"
       ],
       "next": [
-        "Broaden movement, narrow passages, camera obstruction and MainUI acceptance",
-        "Finish inherited combat/animation/FX adapters with native TAB hit timing",
-        "Complete sky, water, weather, foliage and matched rendering comparisons",
-        "Add GPU skinning, asynchronous loading, lifecycle recovery and remaining gameplay"
+        "Complete specialised/item-cost casts, projectile/follow/state FX and apron/weapon matrices",
+        "Resolve recorded native FX asset gaps without guessed replacements; finish NPC idle and remaining node semantics",
+        "Accept full AI navigation/leash/patrol, quests, travel, online services and each additional zone",
+        "Finish matched original-client visual acceptance, GPU skinning, asynchronous loading and measured performance"
       ],
       "changes": [
+        {
+          "date": "2026-10-26",
+          "title": "Mandara FX, skills and audio checkpoint",
+          "text": "55 TML FX instances resolve. Portal, altar, water, ground and target captures pass on/off/restoration checks. Skill3124 passes native UI/key1, two animation clips, six FX geometry submissions and TP110 to104; eight CPU tribe fixtures pass impact timing. Field30007 and safe30008 MP3 playback are verified. Full skill/FX parity and canonical missing binding1000386 remain open."
+        },
+        {
+          "date": "2026-10-26",
+          "title": "Source movement, Chakra and English combat",
+          "text": "Attack commands immediately replace an old ground route; represented monster chase uses collision-checked offline routes and live attack facing. All four Chakra stats survive UI frames, saved records and a fresh login. Actual player/monster attack audio, native impact glyphs and Philippine TantraParam names are verified."
+        },
+        {
+          "date": "2026-10-26",
+          "title": "Terrain, materials and complete sky backdrop",
+          "text": "Retain native detail.dds, matching section borders and 16x world filtering. Correct the textured scenery material override, neutral daylight presentation and full high-colour sky coverage; verify creature-only shadows and ten atmosphere states. Exact original-client visual and performance parity remain open."
+        },
         {
           "date": "2026-10-26",
           "title": "Ordinary services and revival",
@@ -2711,9 +2771,9 @@ window.TANTRA_ROADMAP = {
           "text": "ZFLauncher uses its dedicated client/profile. OGRE runtime results are not transferred to bgfx acceptance."
         }
       ],
-      "done": 75,
-      "total": 245,
-      "percent": 31,
+      "done": 87,
+      "total": 252,
+      "percent": 35,
       "accepted": 3
     }
   ],
@@ -2790,11 +2850,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "cbb6ee487dba47c750452abf5a77eb1f80c2afee0d03e78e76f68ace88238b9b"
+      "sha256": "3d602c52399f8ce990b28991a8b5121a30c7195aabf6a46f2ce64ba69de04316"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "514c53bb4de03d669d4b8cca25471a290a0ff46343a4bc4f7bdb6c2c50acd2ce"
+      "sha256": "7f327049bcc0b13c94378ff11cd77897ef61df8f9cc58a3096d280a48d3c335b"
     }
   },
   "reference": {

@@ -19,6 +19,19 @@ The server goal remains paused. No commit/push or submodule registration was mad
 
 ### Active OGRE implementation migration
 
+Current requested continuation (2026-10-26, all items require source and runtime
+evidence; earlier graphics checks do not close these):
+
+- [ ] Mandara portal, altar and every authored field-effect binding, including lifecycle, placement and required native FX node families.
+- [ ] Native skill UI interactions, learned/active skills, cast/action/attack animation phases, impact timing and attached/projectile/area skill FX.
+- [x] Terrain-conforming ground-click indicator, without terrain clipping.
+- [x] Chakra allocation display/persistence verified against original status semantics and an independent reload.
+- [x] Attack orders immediately replace an existing ground route; moving targets update the approach route.
+- [ ] Explain and compare original player/monster navigation with offline routing; close represented collision/chase defects.
+- [x] Selected-target arrow, Philippine English TantraParam monster names, attack facing and both actor/player attack audio.
+- [x] Native per-map/per-area/day-night music and ambience selection; verify safety versus authored sound-space rules.
+- [x] Sky appearance regression, normal Mandara integration, Debug/Release and preserved original assets/profiles.
+
 The user requested all already-implemented OGRE foundations in bgfx, explicitly
 including combat animation, movement routing, FX, UI, names and the damage hit
 frame. This is implementation work, not a transfer of OGRE acceptance results.
@@ -44,9 +57,66 @@ frame. This is implementation work, not a transfer of OGRE acceptance results.
 - [x] Build Debug/Release, stage only owned `_client_bgfx` files and run isolated
   bgfx acceptance with default/source profile and canonical input preservation.
 
+### Mandara action, FX and audio continuation, 2026-10-26
+
+The current bounded implementation now includes native field model/billboard/
+particle/sample nodes, PC skill catalogue/action bindings, target indicators,
+active-skill phases and map sound regions. This does **not** close complete FX,
+skill, NPC idle-event, AI or visual-parity gates.
+
+| Accepted scope | Direct evidence under `build/evidence` |
+| --- | --- |
+| Mandara field graphs | `native_world_fx_bindings` resolves all 55 TML day/night instances. `mandara-fx-verified` renders portal FX1400017/1400009, altar1400023, water1400011, ground1010009 and selection1010011. Held-pose on/off/restored views change 251568 / 23611 / 46129 / 51917 pixels respectively and restore exactly outside the FPS overlay. |
+| Ground marker | Native graph geometry is subdivided and each vertex samples the same terrain/TCC object floor as movement, with .3 native-unit clearance and depth testing. CPU proof covers 768 fitted vertices and interpolated UVs. |
+| Skills | `mandara-actions-cpu-final.log`: eight native tribes learn through source requirements, then cast an eligible skill with unchanged pre-impact HP/TP, one impact and guarded cooldown. `mandara-skill-verified`: native skill window, actual quick key1, skill3124, two PCAni clips, six FX geometry submissions and TP110 ->104. |
+| Chakra | `mandara-chakra-relogin-ctest.log`: all four stats go through the authenticated channel, actual UPDATE_UI frames, saved SQLite bytes and a closed/reopened store plus fresh login/CHAR_INIT. Main stat increases; the adjacent plus field remains effective-minus-base, exactly as `HTInterface.cpp:4698-4706`. |
+| Retarget/facing/audio | `offline_world_gameplay` starts a ground route then attacks and proves that route is cleared immediately. Native target approach is rebuilt when its actor moves; engaged monster yaw follows the current player during windup. `mandara-actions-final-combat` includes two PC/two monster impacts, six native glyphs and ten sound requests, with actual player/monster playback diagnostics. |
+| Map audio/sky | `mandara-actions-final-combat` starts field30007 (`Mandara1stField2.mp3`); `mandara-actions-town-sky` starts safe30008 (`Mandara1stVillage2.mp3`) and passes ten atmosphere states. Twenty TMS regions select distinct day/night ambience in the CPU fixture. |
+
+Final builds/package: `mandara-actions-builds-verified`, `mandara-actions-debug-shell`
+(100 frames, resize/minimise/restore and three renderer reinitialisations),
+`mandara-actions-package-verified` (16 owned files), and
+`mandara-actions-source-preservation` (379 reused source files, nine canonical
+inputs and six repair references unchanged). Six focused CPU checks plus14 Python
+checks pass; the additional fresh-login Chakra regression also passes. Release
+SHA256 is `7e57fc6b39d10bff56a1e1318dbbc5d4b26cddecfe6fb406b4638d66aa20c08f`.
+The Release executable is staged back in `_client_bgfx` after the Debug smoke.
+
+**Source semantics:** `HTMainCharacterMove.cpp:205-218` advances the local PC
+along its current segment with source speed and terrain/object height sampling.
+`HTMoveMonster.cpp:48+` receives network endpoints/speed and interpolates the
+monster. Server `CMob3.cpp`, `GetAttackPos` and `PickFreeMobGrid` own combat
+positioning/occupancy. The offline authority uses bounded A* over the native
+10-unit grid, validates both server TCM and client TCC, checks actor footprints,
+and smooths only swept-clear segments. Monsters now use that routing instead
+of a straight chase ray, retry blocked routes and replan moving goals. This is
+an offline adapter, not a claim of the original server's complete aggression,
+leash, patrol or congestion algorithm.
+
+`HTMapInfo.cpp:31-184` selects the actual map/safe/field BGM; the lower-level TMS
+BGM playback in `HTMapSystem.cpp:2428` is commented out in the original. TMS
+regions supply overlapping day/night ambience. Music fades at source .5 gain
+per second; sample ownership stops departed loops and updates camera-relative
+positions. Attack samples retain native per-family IDs and absent second-ID
+fallback. Philippine TantraParam English names remain authoritative.
+
+**Still open:** item-cost casts, specialised target/strike/start-action services,
+complete projectile/follow and persistent skill-state FX, all apron/weapon
+matrices, NPC idle-trigger effects, emitter mode3, trails/local lights/jitter,
+complete billboard/UV/coordinate semantics and exhaustive original-client visual
+comparison. Unsupported nodes/resources emit explicit diagnostics. The supplied
+fxPC catalogue lacks referenced ID1000386 (observed during skill3124); its bytes
+match `_client`, `_client_bgfx` and canonical TantraClient. Mandara also has two
+unplaced dangling name bindings (1400027 /1400122). No guessed replacements are
+introduced. The 55 actual field placements resolve; missing INTRO TMBs remain
+skipped as instructed.
+
 Original OGRE gaps (complete active skills/AI/quests/trade/online/ten-zone
 acceptance, full native FX, GPU skinning and asynchronous loading) remain open;
 their presence in an OGRE plan does not make them an implemented source feature.
+
+User decision: skip any missing INTRO TMB and leave it absent. Do not search for
+or substitute that model; a skipped placement does not block this migration.
 
 Accepted migration evidence (local `build/evidence`, each run pins its executable):
 
@@ -67,8 +137,8 @@ TAB duration to `max(500, attackSpeed) + 100` milliseconds for ordinary PC melee
 Monster attacks keep their authored duration. Damage/rewards, native digit/miss
 textures, hit flash and impact sounds follow the marker, with native swing/voice
 events at windup. Hurt revisions do not restart an ongoing monster attack.
-Pending impacts cannot damage an already-dead actor. Status notifications drain
-in FIFO order within the same frame so an older update cannot lag the HP bar.
+Pending impacts cannot damage an already-dead actor. Up to 32 status notifications
+drain in FIFO order per frame, avoiding the previous one-message HP-bar backlog.
 Philippine English names/messages remain the default, with original IDs intact.
 
 The first environment attempt was rejected by an inherited QA startup guard
@@ -79,7 +149,209 @@ normal entry recalculation. The corrected test pins 52; gameplay values were not
 changed to satisfy the test. These are development acceptance slices, not a full
 skills/FX/AI, exact original star RNG, screenshot-parity or performance claim.
 
+### Visual correction after the 07:22 screenshot, 2026-10-26
+
+The preceding technical passes did not establish visual acceptance. The user's
+screenshot exposed washed-out ground, dark scenery and weak character shadows.
+Current accepted visuals supersede the earlier reference-preset appearance.
+
+- [x] Compare the live `_remake` renderer and run `_client/HTLauncher.exe` in an
+  isolated profile. `ogre-current-visual-reference` completed with the original
+  executable/profile/protected files unchanged. Terrain HPK and Mandara CFG
+  hashes match between `_client`, `_client_bgfx` and canonical TantraClient.
+- [x] Match OGRE's map-global material override for textured scenery: do not
+  multiply the TMB diffuse colour on top of albedo and OBJ_MATERIAL. Three
+  source grass examples have diffuse RGB about 0.588. The old multiplication
+  darkened foliage/rocks/buildings a second time; retain TMB colour for missing
+  texture/untextured fallbacks. Evidence: `visual-material-source-evidence.json`.
+- [x] Remove the washed-out terrain gamma2.2/tint preset. The explicit reference
+  presentation now uses linear terrain gain2, gamma1, neutral tint and zero
+  grass grading; map-lit textured foliage retains its original colour. Native
+  ungraded presentation remains available. This is not a finished sRGB pipeline.
+- [x] Render a separate camera-centred spherical sky backdrop, while preserving
+  the original cloud geometry/masks. Mandara's cloud TMD tops out at about192
+  source units and cannot cover the CFG's800-unit high-colour band. Prove all
+  low/mid/high colours and full horizontal coverage with clouds/celestials
+  disabled only for diagnostic captures; both remain enabled normally.
+- [x] Tighten the 2048 PCF shadow projection from half-span1.8 to.45 and depth
+  range.1–20 to.1–4; reduce depth/slope bias from.0001/.00025 to.00002/.00006.
+  This increases useful local texel/depth precision for native-sized characters.
+
+Accepted `build/evidence/visual-material-sky-verified` contains four noon/night
+views, matched light/detail/shadow omission, exact restoration, and five
+independent sky elevation captures. All authored sky colours match within0.402
+RGB units; 1,170 horizon samples have no backdrop gap. Detail changes462,883
+world pixels and shadows change2,004; all3,087 terrain border comparisons match.
+The same empty foreground region has luma standard deviation9.77 versus5.84 in
+the rejected earlier look, preserving more authored texture contrast. These are
+specific render proofs and visually reviewed captures, not exact stock parity.
+
+`visual-material-sky-environment` passes ten authored states, 578,916 changed
+cloud pixels and77,830/82,177 changed fog pixels matching the authored blend.
+Debug/Release builds, six CPU checks, 14 Python tests, three Debug renderer
+restarts, the16-owned-file final Release package and protected-source checks
+pass. See `visual-material-sky-{final-builds,final-package,source-preservation}`
+and the corresponding CPU/Python/build logs. Release is staged in `_client_bgfx`;
+default/source profiles and the OGRE installation remain unchanged.
+
+The first new backdrop diagnostic correctly failed exact restoration: it saved
+the getter's normalized camera target, changing the original view/shadow anchor.
+The probe now restores the precise camera passed to the renderer. It also hides
+celestial flares during colour-band measurement. The rejected output remains in
+`visual-backdrop-contrast`; use the accepted output above for current results.
+Full moving-camera shadow tuning, matching original camera/asset identity and
+complete scene/skill/FX fidelity remain open.
+
+### Mandara terrain, shadows and HIGH quality, 2026-10-26
+
+Historical technical checkpoint; its appearance is superseded by the visual
+correction above.
+
+The normal profile already selects HIGH (`spec=3`, `rtshadow=true`, native far
+clip 3500), matching `_remake/src/resources/ClientRenderProfile.cpp`. Original
+CFG bytes and explicit private overrides remain intact. This pass corrects
+renderer differences found by comparing the live OGRE implementation:
+
+- [x] Clamp section base images at their edges; repeat the native `detail.dds`
+  independently using absolute world X/Z times `1.25 * .035`. Keep the native
+  multiplicative detail equation, original terrain topology/heights/normals and
+  all 10 supplied detail mips. Enable 16x world anisotropic filtering, including
+  after resize/reset; UI sampling remains separate.
+- [x] Check the actual submitted section border positions, normals and detail
+  coordinates: 3,087 shared-border comparisons, zero maximum difference.
+- [x] Match OGRE's represented HIGH shadow scope: animated creatures and their
+  attachments cast; opaque terrain/scenery receive. Terrain/scenery, UI and FX
+  do not cast, and characters/alpha foliage do not receive this projection.
+  Keep the 2048 depth map and PCF; use OGRE's 50 percent modulation after scene
+  grading so fill lights do not erase the projected shadow.
+- [x] Preserve premultiplied alpha through world grading and fog. The nonlinear
+  grade first unpremultiplies, then restores alpha weighting; fog RGB is weighted
+  by the same alpha. This avoids opaque-looking transparent grass/foliage edges.
+- [x] Capture matched detail/shadow/grass isolation and exact restoration without
+  resetting environment light state; retain ordinary runtime grass visibility.
+
+Accepted GPU evidence: `build/evidence/terrain-high-first`. All 16 sections bind
+the native 10-mip detail; disabling detail changes 460,571 world pixels.
+Creature casters submit 30,812 triangles, terrain/scenery casters submit zero;
+shadow omission changes 4,136 world pixels and only brightens them. Detail,
+shadow and grass restoration reproduce the complete frame exactly; opaque UI
+colours stay unchanged. See `TERRAIN_QUALITY_RESULT.json` and
+`TERRAIN_QUALITY_PIXELS.json`. Captures include all four noon/night views.
+
+`terrain-high-environment` passes ten authored atmosphere states, 505,747 changed
+cloud pixels and 80,173 of 83,845 changed fog pixels matching the authored RGB
+blend. Six terrain/profile/normal/light CTests and 14 Python tests pass. Debug
+passes three renderer restarts; Debug/Release hashes, the final 16-file Release
+package and protected-source checks are in `terrain-high-final-builds`,
+`terrain-high-final-package` and `terrain-high-source-preservation`. Default and
+source profiles remain unchanged.
+
+The first extended CPU run found an inherited test looking for `HT3DHeaven.dll`
+inside the dedicated client. Its explicit read-only engine reference now points
+to canonical `TantraClient/HT3DHeaven.dll`; the DLL is not copied into the new
+client. The first build's QA map-scope error was corrected before staging.
+Earlier rejected logs remain separate from accepted results.
+
+These checks establish the represented Mandara path. Full contact/bias/fade
+tuning across moving cameras/all maps, complete original quality controls and
+exact screenshot parity remain open in P09-09/P09-15 and the broader gates.
+
+### Mandara1st lighting reference pass, 2026-10-26
+
+Historical preset and captures; gamma2.2/warm tint/grass grading below are
+superseded by the visual correction above.
+
+Visual references are the user's screenshots `Screenshot 2026-10-25 183450.png`
+and `Screenshot 2026-10-25 183704.png` in
+`C:\Users\Ashesh\Pictures\Screenshots`. Their original bytes were preserved;
+hashes and preset settings are recorded in `build/evidence/mandara-reference-inputs.json`.
+
+- [x] Apply the authored SUBLIGHT rotation and six-interval ambient/diffuse colour
+  interpolation, alongside the existing sun/moon lighting.
+- [x] Apply the map's CHARACTERLIGHT ambient/diffuse spotlight: main-character
+  position plus native `(0,50,-5)`, range100, full cone angles15/90 degrees,
+  falloff1 and constant distance attenuation inside the native range.
+- [x] Retain the authored TML grass flag in scene placements and per-instance
+  rendering; shared model geometry is not changed by presentation grading.
+- [x] Add the requested warm daylight presentation separately from native
+  material/light equations. Reference preset: exposure1.1, gamma2.2, tint
+  `(1,.94,.86)` for terrain; authored grass uses half the adjustment. Grading
+  occurs before fog and excludes characters, buildings, sky, UI and FX.
+- [x] Start offline Mandara at authored noon (`phase=.25`), then continue the
+  native day/night rates. CHAR_INIT's authoritative timestamp and saves are
+  unchanged. `--offline-world-time native` restores the timestamp-based start;
+  a phase in `[0,1)` selects another visual start.
+- [x] Retain `--world-look native` to bypass the reference grade. The reference
+  preset is a deliberate presentation choice, not proof of native colour-space
+  or pixel-perfect screenshot parity.
+- [x] Verify four fixed views at noon/night, individual light omission and held
+  pose native/reference restoration through an isolated offline runtime.
+
+Accepted runtime: `build/evidence/mandara-lighting-verified`. Its pixel proof
+records 146,397 pixels affected by the sublight, 1,576 by the character light,
+202,418 ground pixels affected by the reference preset, and 2,729 unchanged
+opaque HP/TP pixels. Stone/sky sample regions are unchanged by the grade. Both
+light and presentation restoration reproduce the complete original frame
+exactly. Camera, pose, time and textures are held fixed for those comparisons.
+`tools/verify-mandara-lighting-pixels.py` performs the read-only pixel checks.
+The controlled `mandara-lighting --fixture weapon-combat` runner invokes them
+automatically. Earlier baseline/native-fill/terrain/grass tuning captures remain
+in separate evidence folders, each with its own executable hash.
+
+Final acceptance also includes the three CTests in
+`mandara-lighting-regression-cpu.log`, 14 Python tests in
+`mandara-lighting-final-python.log`, Debug/Release build hashes in
+`mandara-lighting-final-builds`, and three Debug renderer restarts in
+`mandara-lighting-debug-shell`. Release is staged; the 16-file package and
+379-source/nine-input/six-reference preservation checks passed in
+`mandara-lighting-final-package` and `mandara-lighting-source-preservation`.
+Both isolated runtimes preserved the default/source profiles and protected files.
+
+Mandara FX are **still partial**. `build/evidence/mandara-fx-inventory.json`
+records 32 FXField catalog entries and 32 field-manager effects, plus native
+monster effect/skill managers. These assets are present, but general field,
+skill/aura, model/sprite/particle/sound TFX dispatch is not implemented merely
+because the reader can inventory them. Basic hit flash/digits/sounds and the
+existing environment presentation work; the screenshot's skill/aura effects
+remain C09/P13 work. Complete specular/emissive lighting, all weapon/skill
+animation variants, matched original-camera/asset parity and full scene/recovery
+coverage also remain open.
+
 ### Verified implementation slices, 2026-10-26
+
+Weapon continuation accepted: `nativePcCombatBindings` now supplies the same
+PCAttackAni attack type to authority and presentation, including type916 for a
+native off-hand dagger. Weapon stand/walk/run states use type20 fields49-51;
+ordinary safe-cell movement uses generic PCStateAni states801-803. The displayed
+weapon switches between its authored hand and source sheath socket without
+recreating the body. Authored secondary claw models are also represented.
+
+`weapon-sword-town` verifies sword4001 on `BWeapon01`, generic stand/run/walk,
+ordinary SDL retarget and preserved movement phase. `weapon-sword-field` verifies
+the same owned sword on `RightHand` with native states806/814/810. The separate
+`weapon-sword-combat` encounter uses type901, two player/two monster marker-timed
+impacts, native sword sounds, defeat/reward and persisted native state.
+`weapon-stance-native-reload` independently restores the complete prior
+character/cargo records without mutation. Every run preserves default and source
+profiles. All evidence is under local `build/evidence`.
+
+`weapon-bindings-final-cpu.log` checks 12 authored weapon types across eight
+tribes: 288 attack-variant bindings, 129 distinct TAB files and 88 available
+sheath-socket combinations. It separately checks dual type916 selection and
+invalid item rejection. This is a resource/binding matrix, not proof that every
+tribe may legally equip every weapon or that all weapon gameplay is complete.
+Four source-requested sheath socket names are absent on some supplied bodies;
+the native dagger requests also include unavailable `HWeapon01`/`LeftSSW`.
+Presentation reports unavailable requested sockets once and retains the authored
+Item socket when a requested stance socket is unavailable. No invented aliases
+or replacement models are used. Full affected weapon/body parity stays open.
+
+Debug/Release builds and the 16-file Release package passed
+`weapon-stance-final-builds`, `weapon-stance-final-package` and
+`weapon-stance-source-preservation`; original 379 source files, nine inputs and
+six repair references remain unchanged. Ten rebuilt regression CTests passed in
+`weapon-stance-regression-cpu.log`; 14 Python tests passed in
+`weapon-stance-python.log`. The Debug shell also passed three renderer restarts.
 
 Detailed continuation and failures are in [PROGRESS.md](PROGRESS.md). Evidence
 paths below are relative to `build/evidence` and remain local/ignored. Each runtime
@@ -559,7 +831,7 @@ Port bounded HPK/catalog/asset readers and native path identity. Render one orig
 - [ ] **P05-03** Add per-widget clipping/scissor, pixel alignment, alpha blend and native texture dimensions.
 - [ ] **P05-04** Port original UI SYS declarations, texture catalogs, control IDs and responsive panel anchoring.
 - [ ] **P09-13** Define explicit linear/sRGB handling and a parity/modern presentation mode boundary.
-- [ ] **P09-14** Keep UI colour independent of scene exposure/tone mapping; prevent double gamma correction.
+- [x] **P09-14** Keep UI colour independent of scene exposure/tone mapping; prevent double gamma correction.
 
 **Headless check:** `--check resources` with the runner command and a fresh output.
 **Explicit runtime scenario:** `asset-scene`; use separate prepare/run commands and separate outputs for each scenario.
@@ -607,7 +879,7 @@ Seed the private profile and connect native offline login/server/channel/roster 
 
 - [x] **P07-04a** Implement and verify CPU skinning/normal fallback for first preview; full GPU parent stays open.
 - [x] **P07-08a** Preview one tribe with seed face/hair/skin/equipment and sockets; all eight remain P07-08.
-- [ ] **P13-02a** Port represented INTRO FX node types required for login/preview with source timing; list unsupported families.
+- [x] **P13-02a** Port represented INTRO FX node types required for login/preview with source timing; list unsupported families.
 - [x] **P13-06a** Connect selected INTRO sound/music events and gains; verify actual playback separately.
 
 **Headless check:** `--check profile-pose` with the runner command and a fresh output.
@@ -647,7 +919,7 @@ Load Mandara terrain/placements/regular+Pop objects and coherent Zone01 offline 
 - [ ] **P08-12** Add picking/broadphase support using the same geometry/pose as rendering.
 - [ ] **P09-01** Reproduce map material overrides and original ambient/diffuse/emissive ordering first.
 - [ ] **P09-02** Apply source sun, sublight and character-light configuration with correct units and directions.
-- [ ] **P09-04** Render a separate complete sky backdrop; do not derive gradient coverage from the low cloud mesh.
+- [x] **P09-04** Render a separate complete sky backdrop; do not derive gradient coverage from the low cloud mesh.
 - [ ] **P09-06** Respect separate SKY fog and world fog flags; reproduce authored starts/ends/colours.
 - [x] **P11-05** Connect calculated status/effects after CHAR_INIT and apply authoritative notifications.
 - [x] **P20-05** Verify selection -> CHAR_INIT -> Mandara before movement/camera/NPC transactions.
@@ -683,7 +955,7 @@ Port click/keyboard run/walk, camera controls, blocked routes and action locks. 
 - [ ] **P05-11** Port original CUR/ANI cursor files and source cursor-context priority.
 - [ ] **P05-12** Recreate status, target, inventory, cargo, skill, quick-slot, minimap, chat and options panels.
 - [ ] **P05-13** Track dirty widgets; unchanged inventories/names must not rerasterize or upload each frame.
-- [ ] **P07-10** Keep repeated movement destinations from restarting the same animation.
+- [x] **P07-10** Keep repeated movement destinations from restarting the same animation.
 - [ ] **P10-01** Port source mouse/keyboard movement and run/walk/camera modes exactly.
 - [ ] **P10-02** Keep click picking, pathfinding, height sampling and actor collision in native units.
 - [ ] **P10-03** Reject blocked destinations; route around obstructions without teleporting through buildings.
@@ -697,7 +969,12 @@ Port click/keyboard run/walk, camera controls, blocked routes and action locks. 
 
 **Additional planning and minimum-slice tasks:**
 
-- [ ] **P07-09b** Accept source walk/run/sheath states and unchanged animation phase on retarget before combat.
+- [x] **P07-09b** Accept source walk/run/sheath states and unchanged animation phase on retarget before combat.
+
+P07-09b's represented equipment acceptance is sword4001 in separate safe/hostile
+SDL runs, including walking and running. Other weapon/body socket compatibility,
+full equipment/LOD matrices and ranged/skill semantics remain under P07-08/C07
+and C09; this does not close BG-C05-GATE's zoom/layout/obstruction requirements.
 
 **Headless check:** `--check controls-navigation` with the runner command and a fresh output.
 **Explicit runtime scenario:** `mandara-controls`; use separate prepare/run commands and separate outputs for each scenario.
@@ -731,6 +1008,9 @@ Port inventory/equipment/ordinary consumables, shops/repair/warehouse/save point
 - [ ] **P12-07a** Accept baseline encounter routing/leash/facing with authoritative ranges; full native AI remains open.
 - [x] **P12-08a** Apply represented basic rewards/progression/persistence; full loot/pickup/penalties remain P12-08.
 - [x] **P13-06b** Wire selected basic attack/impact sound/FX; complete event/family coverage remains P13-06.
+- [x] **P11-13a** Verify all four Chakra allocations through native UI frames, SQLite and fresh login/CHAR_INIT; retain source base/bonus semantics.
+- [x] **P12-01b** Replace a ground route immediately on attack and replan the represented moving-target approach; keep full AI routing acceptance open.
+- [x] **P12-03a** Cast represented learned active skills through quick slots, source phase/TAB timing, HP/TP costs and native damage equations; accept eight CPU tribe fixtures and one SDL skill/FX fixture.
 
 **Headless check:** `--check offline-gameplay` with the runner command and a fresh output.
 **Explicit runtime scenarios:** `saved-services` and `basic-combat`; use separate prepare/run commands and separate outputs for each scenario.
@@ -852,6 +1132,10 @@ name layer and are historical; current same-quality performance remains open.
 - [ ] **P13-08** Apply live effects/music gains to existing and future voices and persist the native option values.
 - [ ] **P13-09** Handle audio device failure as recoverable; prevent duplicate music on transition/retry.
 - [ ] **P13-10** Record unsupported FX node semantics instead of silently skipping visible content.
+- [x] **P13-02b** Bind the 55 authored Mandara field FX placements and accept representative native portals, altar and water graphs independently in bgfx.
+- [x] **P13-03b** Present native selected-target and terrain-conforming ground indicators with preserved UVs and sampled terrain/object-floor heights.
+- [x] **P13-07a** Verify Mandara safe/field BGM playback and source day/night sound-region selection; full travel/options/device recovery remain open.
+- [x] **P13-10a** Report missing authored FX IDs/resources explicitly, including canonical missing skill binding1000386; preserve absent INTRO TMB handling.
 - [ ] **P20-07** Capture matched reference views for sky, fog, foliage, character material and shadow edges.
 
 **Additional planning and minimum-slice tasks:**
