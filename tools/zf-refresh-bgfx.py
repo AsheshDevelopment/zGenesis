@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.12"
+VERSION = "1.0.13"
 
 
 def sha(body):
@@ -80,8 +80,10 @@ def refresh(source):
     project["total"] = sum(group["total"] for group in project["groups"])
     project["percent"] = (200 * project["done"] + project["total"]) // (2 * project["total"])
     project["accepted"] = sum(bool(group["gate"] and group["gate"]["done"]) for group in project["groups"])
-    project["description"] = "C02/C05 offline checkpoints remain accepted. Source-backed coloured item/skill tooltips, NPC choice hover and opening audio, and player/monster birth lifecycle are staged and verified. P11-07 is checked; mount/version and broader skill/FX, collision, maps and release gaps remain open. Game source is uncommitted."
+    project["description"] = "C02/C05 offline checkpoints remain accepted. Original altar UI, authoritative native refinement and32 secret-whisper source commands are implemented and verified. P16-03 closes; complete advanced NPC, quest, social/online and other command dependencies remain open. Game source is uncommitted."
     project["foundations"] = [
+        "Native portal1000 altar UI, exact main/sub refinement and additive rules, persistent100-card percentage decks, stale-instance rejection and SQLite outcomes",
+        "Both original whisper/message fields,32 authenticated offline source commands, exact Fors838 spellings and a complete287-entry availability inventory",
         "Source-backed coloured item/skill hover documents, instance refinement/durability/requirements and merchant context; current/next skill effects and costs",
         "Native NPC choice hover/pressed images and HPK-backed greetings once per opening with live miniaudio effects gain",
         "Player NEWBORN and monster field birth graphs deferred through loading, with revive/life/AOI/equipment/expiry/reset handling",
@@ -123,6 +125,7 @@ def refresh(source):
         {"date": "2026-10-26", "title": "Native data, projectiles and navigation stress", "text": "Direct TPA decoding/comparison preserves client/import version differences and external server data. Weapon/projectile tests cover27 encounters, refinement/animation bindings and represented buff/cancellation cleanup. Navigation passes32 static and8 dynamic cases. Missing authored FX are recorded and skipped as requested; remaining available families stay open."},
         {"date": "2026-10-26", "title": "Default hotkeys and monster impact correction", "text": "Native menu, movement, camera, quickbar and chat bindings pass63 actual SDL checks plus earned F-pickup and retarget regressions. F11 retains optional source broadcast behaviour. Monster activation/impact columns and case-insensitive graph lookup are corrected; actual monster2001 impact geometry/depth passes."}
     ]
+    latest.insert(0, {"date": "2026-10-27", "title": "Altar refinement and native whisper commands", "text": "Implement original portal1000 picking, window236, animated orb, inventory offers, source costs and confirmation/result UI. Compile active Server.cpp main/sub refinement and native percentage decks with Global-version item masks. Verify5,619 refinement assertions/1,000 attempts,433 command parser checks,32 commands exercised through live authority,145 command runtime checks and59 altar SDL checks with SQLite/profile protection. Debug/Release each pass17 focused tests. Restore the source secret-whisper path deliberately offline;287 command inventory entries distinguish aliases and unavailable server systems. P16-03 closes:126/254 tasks (50%), five gates. Missing6526 and zero donation/GM refinement modifiers remain recorded; advanced NPC/quest/social/online work stays open."})
     titles = {change["title"] for change in latest}
     project["changes"] = latest + [change for change in project["changes"] if change["title"] not in titles]
     # OGRE data and all bundled OGRE documentation remain byte-identical.
@@ -132,6 +135,10 @@ def refresh(source):
         path.write_bytes(body)
         data["sources"][key]["sha256"] = sha(body)
     (ROOT / "reference/bgfx/README.md").write_bytes((source / "README.md").read_bytes())
+    command_doc = ROOT / "reference/bgfx/docs/NATIVE_COMMANDS.md"
+    command_doc.parent.mkdir(parents=True, exist_ok=True)
+    command_doc.write_bytes((source / "docs/NATIVE_COMMANDS.md").read_bytes())
+    data["sources"]["bgfx_commands"] = {"path": command_doc.relative_to(ROOT).as_posix(), "sha256": sha(command_doc.read_bytes())}
     data_path.write_text("/* Generated from the authoritative plans; refresh Tantra-B with tools/zf-refresh-bgfx.py. */\nwindow.TANTRA_ROADMAP = " + json.dumps(data, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8", newline="\n")
     snapshot = read_json(ROOT / "snapshot.json")
     snapshot["sources"] = data["sources"]
@@ -147,7 +154,25 @@ def refresh(source):
             content = content.replace("Version: " + VERSION + " Reviewed:", "Version: " + VERSION + ". Reviewed:")
             content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-10-27.", content)
         elif "## " + VERSION not in content:
-            content = content.replace("# Unreleased\n", '# Unreleased\n\n## 1.0.12 - 2026-10-27 (Tantra-B only)\n\nChanged: add source-backed coloured item/skill hover details, original NPC\nchoice states and opening greetings, and player/monster birth lifecycle.\nFix legacy item-name bytes inside English sale confirmation; check P11-07.\nVerified: Debug/Release each pass nine focused tests, including 3,759 tooltip,\n337 UI and 190 FX/audio assertions. Pixel checks, actual SDL paid repair/buy/\nsell/cancellation, SQLite/profile preservation and 53-file packaging pass.\nSource/DOM export checks are rerun; website layout is unchanged.\nFailed/corrected: retain early sale-name encoding failures and the corrected\nHUD-resolution/unlearned-title test fixtures. Final focused checks pass.\nRemaining: missing screenshot mount data, 45 unhandled formatter effect IDs and\nwider game/FX/map/release work. Tantra-B is 125/254 (49%), five gates. Preserve\nTantra-O data/docs; game source remains uncommitted.\n')
+            entry = """# Unreleased
+
+## 1.0.13 - 2026-10-27 (Tantra-B only)
+
+Changed: add source-native altar refinement and32 offline secret-whisper
+commands; publish the full command inventory and check P16-03.
+Verified: Debug/Release each pass17 focused tests;5,619 refinement assertions,
+433 parser checks,145 command and59 altar SDL checks with SQLite/profile
+preservation. Package closure contains55 owned files. Source/DOM export checks
+are rerun; website layout is unchanged.
+Failed/corrected: an initial command probe clicked the hidden chat field before
+Enter; the UI inventory assertion expected31 rather than33 native windows.
+Corrected fresh command/altar runs and final focused checks pass.
+Remaining: missing6526, zero donation/GM refinement modifiers, and complete
+advanced NPC/quest/social/online command dependencies. Tantra-B is126/254 (50%),
+five gates. Preserve Tantra-O data/docs; game source remains uncommitted.
+"""
+            content = content.replace("# Unreleased\n", entry)
+
         path.write_text(content, encoding="utf-8", newline="\n")
     readme = ROOT / "README.md"
     content = re.sub(r"Version: \d+\.\d+\.\d+", "Version: " + VERSION, readme.read_text(encoding="utf-8"))
@@ -160,6 +185,7 @@ def refresh(source):
         completed = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, check=True)
         checks[name] = completed.stdout.strip() or "passed"
     manifest = read_json(ROOT / ".roadmap-files.json")
+    manifest["files"][command_doc.relative_to(ROOT).as_posix()] = sha(command_doc.read_bytes())
     for name in manifest["files"]:
         manifest["files"][name] = sha((ROOT / name).read_bytes())
     manifest["files"]["tools/zf-refresh-bgfx.py"] = sha(Path(__file__).read_bytes())

@@ -16,7 +16,28 @@ skill/strike expansion and server work remain paused. ZFLauncher uses C++20,
 SDL3 and bgfx/D3D11 with dedicated `_client_bgfx` assets and external runtime
 support. The complete plan remains open. Game source changes remain uncommitted.
 
-### Current work order
+### Altar and secret-whisper command checkpoint (2026-10-27)
+
+- [x] Source portal1000 opens the original refinement window236 and inventory;
+  selection references real instances, displays native costs, confirms before
+  spending, animates the original orb and reports accepted native results.
+- [x] Compile native main/sub rules and persistent percentage decks; preserve
+  additive protections, exact rounding, material consumption and SQLite state.
+  P16-03 closes. P16-02 remains open for the other advanced NPC callbacks.
+- [x] Verify selected Server.cpp command recipients and restore the intended
+  offline path through both original chat edits. Implement32 native operations;
+  catalog all287 parser entries plus direct whisper-handler extensions.
+- [ ] Port remaining server/social/event/siege/movie command dependencies; the
+  command inventory explicitly identifies unavailable operations. Commands do
+  not close broader social/online gates.
+
+Final Debug/Release each pass17 focused tests. The staged executable passes145
+command,59 altar and63 existing hotkey SDL checks; SQLite/profile preservation
+and55-file package closure pass. Evidence and limitations are in the latest [progress checkpoint](PROGRESS.md)
+and [source command inventory](docs/NATIVE_COMMANDS.md). No original HPK is
+extracted; new authority masks remain outside the clean client tree.
+
+## Current work order
 
 1. Native coloured item/skill tooltips, NPC conversation hover/greeting and
    player/monster birth FX are the current verified implementation slice.
@@ -1852,7 +1873,7 @@ Retain full skills/periodic combat/AI/loot, quests/refinement, travel/revival, o
 - [ ] **P15-10** Keep all ten acceptance toggles unchecked until their individual evidence exists.
 - [ ] **P16-01** Audit native quest state, dialogue conditions, kill/item objectives and rewards.
 - [ ] **P16-02** Implement advanced NPC callbacks, class/religion changes and refinement workflows.
-- [ ] **P16-03** Preserve authoritative main/sub-refinement chances, costs, limits and result handling.
+- [x] **P16-03** Preserve authoritative main/sub-refinement chances, costs, limits and result handling. Active Server.cpp rules, native shuffled percentage decks, Global-version masks, original altar UI, stale-offer rejection and SQLite outcomes are implemented. CPU success/failure/reset/destruction and actual SDL altar transactions pass; zone donation/GM modifiers remain the zero baseline.
 - [ ] **P16-04** Add portals/transport, return items and remaining resurrection paths/penalties.
 - [ ] **P16-05** Implement chat channels/whispers, parties and authoritative membership state.
 - [ ] **P16-06** Implement trade offer/confirm/cancel/disconnect behavior and atomic item/money persistence.

@@ -1,5 +1,20 @@
 # Unreleased
 
+## 1.0.13 - 2026-10-27 (Tantra-B only)
+
+Changed: add source-native altar refinement and32 offline secret-whisper
+commands; publish the full command inventory and check P16-03.
+Verified: Debug/Release each pass17 focused tests;5,619 refinement assertions,
+433 parser checks,145 command and59 altar SDL checks with SQLite/profile
+preservation. Package closure contains55 owned files. Source/DOM export checks
+are rerun; website layout is unchanged.
+Failed/corrected: an initial command probe clicked the hidden chat field before
+Enter; the UI inventory assertion expected31 rather than33 native windows.
+Corrected fresh command/altar runs and final focused checks pass.
+Remaining: missing6526, zero donation/GM refinement modifiers, and complete
+advanced NPC/quest/social/online command dependencies. Tantra-B is126/254 (50%),
+five gates. Preserve Tantra-O data/docs; game source remains uncommitted.
+
 ## 1.0.12 - 2026-10-27 (Tantra-B only)
 
 Changed: add source-backed coloured item/skill hover details, original NPC
@@ -189,6 +204,6 @@ Remaining: real browser layout acceptance.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 125/254 named tasks checked (49%); 5/10 gates recorded. Latest: Native tooltips, NPC greetings and birth FX verified. Verify the supplied tooltip screenshots against native source; compile the original effect formatter, message IDs, family predicates and refinement arrays. Render centred coloured item/skill rows with live instance fields, requirements, prices/service context and current/next skill conditions/effects/costs. Restore original NPC hover/down image9 and play each NPC greeting once per opening through HPK-backed miniaudio effects gain. Defer player NEWBORN and monster birth until rendering is ready; verify first appearance, revive/life/AOI changes, equipment retention, expiry and cleanup. Fix sale confirmation mixing legacy item-name bytes into UTF-8 English text. Debug/Release each pass nine focused tests: 3,759 tooltip, 337 UI and 190 presentation/audio assertions. Pixel checks isolate 5,727 NPC hover pixels and verify coloured tooltip glyphs. Actual SDL paid-repair/buy/sell/cancellation workflow, SQLite preservation and 53-file packaging pass. Corrected early merchant attempts are retained. P11-07 closes; 125/254 tasks and five gates. The K3 table has no matching screenshot mount entry; 45 unhandled formatter effect IDs and wider game/FX work remain recorded and open. Remaining native skill/FX and complete map/game acceptance stay open.
+- **Tantra-B**: 126/254 named tasks checked (50%); 5/10 gates recorded. Latest: Altar refinement and native whisper commands. Implement original portal1000 picking, window236, animated orb, inventory offers, source costs and confirmation/result UI. Compile active Server.cpp main/sub refinement and native percentage decks with Global-version item masks. Verify5,619 refinement assertions/1,000 attempts,433 command parser checks,32 commands exercised through live authority,145 command runtime checks and59 altar SDL checks with SQLite/profile protection. Debug/Release each pass17 focused tests. Restore the source secret-whisper path deliberately offline;287 command inventory entries distinguish aliases and unavailable server systems. P16-03 closes:126/254 tasks (50%), five gates. Missing6526 and zero donation/GM refinement modifiers remain recorded; advanced NPC/quest/social/online work stays open. Remaining native skill/FX and complete map/game acceptance stay open.
 
 These are separate source checklists, not release-completion percentages.

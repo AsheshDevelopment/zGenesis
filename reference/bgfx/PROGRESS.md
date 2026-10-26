@@ -2,6 +2,62 @@
 
 Updated: 2026-10-27. Status: **C02 and C05 offline checkpoints accepted and staged; full plan incomplete**.
 
+## Altar refinement and native whisper commands (2026-10-27)
+
+Changed: implement native portal1000 triangle picking/range checks and the
+original window236, animated orb, four inventory-reference slots, costs and
+reconfirmation/result dialogs. Compile active Server.cpp RefiningItem,
+item-family checks, exact tables and TFPercentMixer's persistent100-card
+streams. Preserve main/sub refinement, all supplied additive protections,
+Amala/Taru/Apad, consumption and native failure/reset/destruction outcomes.
+Import refinable masks from the same pinned Global XML as offline authority;
+keep the K3 client display data separate. Authenticate and revision-check offers,
+reject stale item instances and commit accepted results through SQLite.
+
+Verify the command route in the selected Server.cpp rather than the older
+AdministrateGame.cpp: the secret whisper dispatch calls are commented in that
+snapshot. Restore them deliberately for the authenticated offline authority.
+Make both native chat edits usable with mouse focus, Tab, Enter and DBCS-aware
+Backspace; retain the recipient across submissions and show System responses.
+Support32 source commands, preserving exact Fors838 spellings, case, parser
+family, source Chakra reset, native status/equipment/passive rebuilding, Prana
+thresholds and ground-item fields. Validate values before changing state.
+
+[Complete command inventory and usage](docs/NATIVE_COMMANDS.md) lists287 source
+entries including aliases/Japan duplicates,32 implemented canonical commands,
+ordinary chat aliases and additional custom whisper-handler tokens. Missing
+party/siege/event/raw-table/movie/network services return explicit errors.
+Source MAX_LEVEL355 exceeds the one-byte player field; reject wrapping values
+and missing level-table rows. No command grants online privileges.
+
+Verified: final Debug/Release builds each pass17 focused tests, including
+5,619 refinement assertions /1,000 attempts and433 command parser assertions.
+The final staged executable passes145 command checks exercising all32 commands,
+59 altar checks and63 existing default-hotkey checks through actual SDL.
+The altar charges source cost5 discounted to2, then attribute cost5, with no
+cancellation charge. Earlier runs show attribute success; the final run also
+accepts the native random attribute failure and consumes the source material.
+SQLite money, level/Chakra/skills/Karma, original item metadata, refinement and
+dropped-item pickups match authority. Protected assets/default profiles stay
+unchanged. The clean client/external runtime package has55 owned files.
+
+Evidence: `build/evidence/ALTAR_COMMANDS_ACCEPTANCE.json`,
+`commands-final-runtime1`, `refinement-staged-runtime1`,
+`commands-hotkeys-final1`, `altar-commands-package-final1` and the per-config
+`commands-*` / `refinement-*` results. Captures are visually reviewed.
+Final staged Release SHA256: `e6b2ac7419cc3262538404a9879eeca300ef5a91e707026fb7d57cfb6cd0e99f`.
+
+Failed/corrected: the first command probe clicked the hidden chat field before
+Enter; use the actual opening sequence. The existing UI inventory expected31
+rather than33 windows; also assert that native236/485 start closed. Retain the
+failed outputs; corrected fresh runs and all final focused checks pass.
+Tantra-B becomes126/254 named tasks (50%), still five accepted gates.
+
+Remaining: missing Global extra-additive6526 is recorded rather than fabricated;
+zone donation/GM refinement modifiers remain zero baseline. Full advanced NPC,
+quest, social and online command services remain open. Existing failures and
+historical executable hashes below are retained.
+
 ## Native hover, NPC greetings and birth FX (2026-10-27)
 
 Changed: verify the supplied nine May screenshots against HTObjectInfo,

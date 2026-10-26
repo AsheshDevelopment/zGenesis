@@ -7,6 +7,16 @@ through the project-owned bgfx backend. The window/product is **Tantra Online**.
 - [Detailed implementation plan](IMPLEMENTATION_PLAN.md)
 - [Progress and next continuation](PROGRESS.md)
 
+Click a nearby Mandara refinement altar to open its original item/material UI.
+Drag inventory items into the offer, review the source cost and confirm; accepted
+outcomes save to SQLite. Right-click an offered item to remove it.
+
+For offline source commands, press Enter, click the small whisper recipient
+box, type `007Qkddkr`, press Tab and enter e.g. `/MoneyFors838 1000` in the message
+box. Use `ExHelpGm` for `/ChangeLevel 1 20`, `/ResetStat 1` and `/ResetSkill 1`.
+Commands are case-sensitive. [All command names, arguments and availability](docs/NATIVE_COMMANDS.md)
+are listed separately;32 canonical commands currently work offline.
+
 Native item and skill hovers now use source-ordered coloured rows, real instance
 stats/requirements and current/next skill levels. NPC choices show their original
 hover image and play their authored greeting once per opening. Player entry and

@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "C02/C05 offline checkpoints remain accepted. Source-backed coloured item/skill tooltips, NPC choice hover and opening audio, and player/monster birth lifecycle are staged and verified. P11-07 is checked; mount/version and broader skill/FX, collision, maps and release gaps remain open. Game source is uncommitted.",
+      "description": "C02/C05 offline checkpoints remain accepted. Original altar UI, authoritative native refinement and32 secret-whisper source commands are implemented and verified. P16-03 closes; complete advanced NPC, quest, social/online and other command dependencies remain open. Game source is uncommitted.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -2659,8 +2659,8 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P16-03",
-              "done": false,
-              "text": "Preserve authoritative main/sub-refinement chances, costs, limits and result handling.",
+              "done": true,
+              "text": "Preserve authoritative main/sub-refinement chances, costs, limits and result handling. Active Server.cpp rules, native shuffled percentage decks, Global-version masks, original altar UI, stale-offer rejection and SQLite outcomes are implemented. CPU success/failure/reset/destruction and actual SDL altar transactions pass; zone donation/GM modifiers remain the zero baseline.",
               "children": []
             },
             {
@@ -2730,12 +2730,14 @@ window.TANTRA_ROADMAP = {
             "text": "Every claimed feature has source/authority/CPU/runtime evidence. Single-client transport differs from multiplayer acceptance. Each zone separately passes resources, authority and transition/persistence; profiles alone never pass.",
             "children": []
           },
-          "done": 0,
+          "done": 1,
           "total": 46,
-          "percent": 0
+          "percent": 2
         }
       ],
       "foundations": [
+        "Native portal1000 altar UI, exact main/sub refinement and additive rules, persistent100-card percentage decks, stale-instance rejection and SQLite outcomes",
+        "Both original whisper/message fields,32 authenticated offline source commands, exact Fors838 spellings and a complete287-entry availability inventory",
         "Source-backed coloured item/skill hover documents, instance refinement/durability/requirements and merchant context; current/next skill effects and costs",
         "Native NPC choice hover/pressed images and HPK-backed greetings once per opening with live miniaudio effects gain",
         "Player NEWBORN and monster field birth graphs deferred through loading, with revive/life/AOI/equipment/expiry/reset handling",
@@ -2762,6 +2764,11 @@ window.TANTRA_ROADMAP = {
         "Broaden distinct-map/portal, visual/performance/recovery and release acceptance without inferring FPS gains from caching"
       ],
       "changes": [
+        {
+          "date": "2026-10-27",
+          "title": "Altar refinement and native whisper commands",
+          "text": "Implement original portal1000 picking, window236, animated orb, inventory offers, source costs and confirmation/result UI. Compile active Server.cpp main/sub refinement and native percentage decks with Global-version item masks. Verify5,619 refinement assertions/1,000 attempts,433 command parser checks,32 commands exercised through live authority,145 command runtime checks and59 altar SDL checks with SQLite/profile protection. Debug/Release each pass17 focused tests. Restore the source secret-whisper path deliberately offline;287 command inventory entries distinguish aliases and unavailable server systems. P16-03 closes:126/254 tasks (50%), five gates. Missing6526 and zero donation/GM refinement modifiers remain recorded; advanced NPC/quest/social/online work stays open."
+        },
         {
           "date": "2026-10-27",
           "title": "Native tooltips, NPC greetings and birth FX verified",
@@ -2858,9 +2865,9 @@ window.TANTRA_ROADMAP = {
           "text": "ZFLauncher uses its dedicated client/profile. OGRE runtime results are not transferred to bgfx acceptance."
         }
       ],
-      "done": 125,
+      "done": 126,
       "total": 254,
-      "percent": 49,
+      "percent": 50,
       "accepted": 5
     }
   ],
@@ -2937,11 +2944,15 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "7559098b74e7148f14a5ee427b75d2ddc8b59ee903480073935a0bcb866cc01b"
+      "sha256": "bd0d3a97eb1893ea447648bafdb95023f224291c9e3739c1bf58d2ed678afa90"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "a7cb8807931bdaee106cdbb44ac83130960d55645068c4a976bc1087295177d3"
+      "sha256": "61e6b96f2ac1c61ec477eb4912fc8038a256ac70e66e2481031bdb90cd619707"
+    },
+    "bgfx_commands": {
+      "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",
+      "sha256": "42a9bc1eaafbe459154f19232d5d83a374f0ccc08c6ff6f3d2bcb4691901f410"
     }
   },
   "reference": {
