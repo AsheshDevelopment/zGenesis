@@ -17,6 +17,352 @@ minimum controls through bgfx/D3D11. The user's dedicated runtime is now
 open; the broader gates below deliberately retain their unverified requirements.
 The server goal remains paused. No commit/push or submodule registration was made.
 
+## Current continuation: native data, skills, navigation and runtime verification
+
+The next work is ordered below. A passing slice does not close the full plan.
+
+1. **Native client parameters.**
+   - [x] Read `system/TantraParam.tpa` directly in memory. Generate pointer-free field offsets from `Tantra/HTlauncher/HTClientParamMgr.h`; validate complete stream closure and retain padding/unknown record bytes.
+   - [x] Support the source item272 layout and this client's item276 layout with an opaque four-byte tail. Accept native Portal ID0, preserve first duplicate records and reject truncated/oversized/malformed inputs without replacing a valid catalog.
+   - [x] Bind TPA to the runtime resource catalog. Prefer Philippine English names/descriptions, then native TPA text, then existing resource names. Require the TPA for normal INTRO startup; do not extract HPKs or create temporary TFX files.
+   - [x] Compare every identically named numeric field in shared item, monster, PC-skill and monster-skill records against the existing offline imports. Keep server-only imports outside the client and preserve their authority.
+   - [x] Debug/Release builds, focused reader/catalog tests, actual INTRO roster/flat-circle and skill3124 runtime regression, staged Release and package validation.
+   - [ ] Resolve client/import version differences before treating them as one gameplay dataset. The comparison reports 470 Item,655 PCSkill,17 Monster and1 MonsterSkill differing values; imports also contain IDs/levels absent from the client. Do not silently overwrite either source. The item tail remains uninterpreted.
+2. **Complete skill and weapon FX.**
+   - [x] Decode active-skill State separately from Impact, preserve native once/loop/energy rules, attach state FX to the caster and bound their lifetime to the committed skill duration and live native effect slots. Skill3110 has an actual transaction/render/expiry regression.
+   - [x] Cancel the pending action through the authenticated channel with Escape. Clear transient cast FX without charging a pre-commit cast; retain committed buff state. Remove skill FX on death, missing parent and scene clear; reset selection/monster FX ownership when distance-culling removes an actor.
+   - [x] Resolve refinement-material nibbles from native TPA, apply levels1..10 brightness .50..95 and native fire/ice/lightning/poison textures to attached weapon ribbons. Verify88 refinement cases,288 animation bindings and five actual GPU ribbon cases, including cancel/sheathe/hide/destroy cleanup.
+   - [x] Launch supported ordinary bow/dart and action3/5/6 projectile paths at the native TAB attack marker. Use source straight/piercing speeds, extensions and pursuit equations; commit damage and native HP/TP/item costs on arrival. Equipped arrows and active inventory costs follow the native one-arrow/five-stack rules atomically.
+   - [x] Render native arrow7091 and bound follow/impact graphs with full native U/V/N orientation, world depth testing and flight-owned cleanup. Keep released shots after ordinary Escape; discard shots after caster death, target generation replacement or scene/population reset. Preserve level1..5/6..8/9..10 FX variants.
+   - [x] Verify authoritative hit timing for all12 supplied weapon types at .001/.05-second ticks, plus native3301 straight,3306 pursuit and3162 bow pursuit:27 positive-damage encounters and five lifecycle cases. Melee commits at the source marker; projectile cases keep HP/TP/arrows unchanged until arrival. This matrix does not cover every skill or synthesized dual-wield combination.
+   - [ ] Complete all available projectile/follow FX and remaining attached/area/monster state families. Four real GPU projectile cases render follow/impact geometry and hit digits. Missing authored assets are now recorded and skipped per the user's instruction; retain the historical failed3162 full-FX result without treating that asset gap as a remaining implementation blocker. Extend buff coverage beyond the represented once/loop decoder and real3110 regression; unsupported native node/skill-service cases remain open.
+   - [ ] Extend authoritative animation/impact/damage timing to every supported weapon/skill combination and remaining strike phases. The27 encounters and288 binding checks cover distinct bounded matrices.
+3. **Stress-test navigation.**
+   - [x] Exercise32 static Mandara cases: four real altar stair routes, the market and ruined-wall single-cell passages, and house/temple-column detours, each walking/running at .016/.2-second ticks. Record actual accepted movement steps and floor heights; check both native grids and actor clearance at .5-unit subdivisions.
+   - [x] Exercise8 dynamic cases: monster corner chase and moving-player replanning, immediate ground-to-attack retarget and a second-monster retarget at both tick rates. Preserve native actor parameters; document private QA actor repositioning. Verify arrival, current target, facing during attack and native attack state.
+   - [x] Verify actual SDL surface clicks, movement-animation phase retention and E/R attack preemption. The old clicked destination remains38.7861 units away when R replaces it; the selected target's native attack animation starts. Use isolated profiles and preserve default/seed/protected data.
+4. **Persistence and transitions.**
+   - [x] Verify Interface.sys, quick slots, equipped render attachments and independent music/effects settings over six fresh authenticated processes sharing one private profile: native SDL Restart request, same-character relogin, another character, village18, village19 and return to village1. Preserve native unknown fields and character isolation. Evidence: `persistence-runtime3`.
+   - [x] Restore the saved vertical/horizontal quickbar flag and number/function-key mode on world entry. Preserve explicit client/runtime/profile/log roots in the production Restart command; verify Windows argument decoding, including quoting and trailing backslashes. Debug/Release option/menu/restart CPU checks pass.
+   - [ ] Extend transitions when distinct client-art maps and in-game portal travel are implemented. Current server zones1/18/19 all bind clientMap40001; this matrix does not claim other maps or actual OS ShellExecute child spawning (the harness launches the exact emitted Restart command).
+5. **Crowded scenes and loading.**
+   - [x] Establish the pre-optimisation CPU/GPU baseline in native town, the densest collision-checked authored actor neighbourhood and real skill/combat scenes. Run two sequential fresh processes per scene,120 warmup frames and1,200 measured frames each; record raw frame/loading CSVs, hardware, executable/source/input hashes, retained actor/FX counts, pose/upload work and captures. Evidence: `world-profile-matrix1`.
+   - [x] Separate simulation, UI/audio/equipment, actor requests, status/camera, FX/names/combat, pose deformation, animation/socket traversal, world/UI submission and frame-call wait. Preserve delayed bgfx timings as overlapping measurements; missing GPU timings remain empty rather than zero.
+   - [x] Measure native loading calls, first playable frame, initial nearby actor/FX presentation and settled populated frame. Prioritise animation/pose work, unchanged UI work, then scene submission; use measured loading stalls to plan worker decode/upload budgets. Do not implement or claim optimisation gains before comparison against this baseline.
+
+### Controlled profiling baseline (2026-10-26)
+
+`tools/profile-world.py --output build/evidence/NEW_DIRECTORY` uses two trials by
+default, fresh disposable profiles and ordinary SDL selection/skill/attack keys.
+Normal play leaves timing scopes disabled. The field fixture chooses a valid
+cell with43 native actors within400 units from the actual1,718-actor population;
+it clones no actors. Combat uses a separate native encounter with40 retained
+actors, so its difference from the dense idle scene is not an isolated FX cost.
+
+Release,1024x768, native HIGH settings,2048 shadow map, D3D11, VSync not requested;
+Intel i7-12650H and RTX4050 Laptop GPU (actual selected vendor4318/device10401).
+Ranges below are the two trial results, in milliseconds. Each trial records1,200
+valid delayed GPU samples; asynchronous GPU values can repeat across frames.
+
+| Scene | Retained actors | Frame median | Frame p95 | Frame p99 | Pose median | GPU median | Settled populated load |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Town idle |4|6.52–6.56|7.50–7.53|8.26–8.35|0.97–0.98|1.52–1.55|1659–1709|
+| Dense field idle |43|9.68–9.73|10.83–10.92|11.68–11.97|4.12|1.45–1.64|2049–2081|
+| Field skill/combat |40|9.05–9.20|12.50–12.56|18.78–18.90|3.25–3.28|1.22–1.25|1991–2024|
+
+Worst measured frame intervals: town12.11ms, dense field18.74ms, combat69.32ms.
+Each combat trial records a damaging3124 skill and six positive-damage impacts.
+Dense pose work updates27,891 vertices /1,198KiB per frame; total animation/socket
+traversal is5.32–5.35ms, containing4.12ms pose work. UI/audio/equipment is about
+1.8ms, world submission1.14–1.15ms. These observations support prioritising CPU
+pose/deformation work (with palette/normal/socket parity gates), then dirty UI
+updates and traversal. GPU skinning benefit is an inference to test, not an
+implemented optimisation or measured speedup. Static batching/immutable buffers
+remain open; these results do not justify reducing native quality.
+
+Full map decode stalls282–302ms, objects/environment/sky creation253–264ms,
+authority initialisation requests238–246ms, population initialisation308–319ms,
+and initial dense actor presentation365–370ms. Native control/render readiness
+precedes that last population stall; both timestamps are recorded separately.
+Budgeted resource creation is a loading priority. The separate terrain decode is
+only about7–10ms here; do not attribute the entire full-map call to duplicate
+terrain work without finer evidence.
+
+Raw CSVs, summaries, captures, `HARDWARE.json`, `INPUTS.json` and integrity
+results live under `build/evidence/world-profile-matrix1`. Trials did not overlap
+builds or other QA started by the runner. OS file caches were uncontrolled and
+fixture generation reads the same map, so these are fresh-process/profile loads,
+not disk-cold measurements. Retained actors/FX are instantiated owners, not all
+visible in the camera. Texture/object buffer figures are partial estimates, not
+total VRAM. Wall intervals include the previous frame's QA/SDL overhead; current
+application scopes are sampled before buffered CSV output. Pose work is nested
+inside animation timing; application work contains the stage scopes, while bgfx
+CPU/GPU timers overlap and refer to delayed frames. No online-crowd, every-map,
+hardware-independent FPS target or full performance gate is accepted.
+
+Navigation evidence: `build/evidence/navigation-ctest-Release` and
+`navigation-ctest-Debug` each contain the32-case static result,8-case dynamic
+result and actual movement traces. Native source anchors are altar309,
+display1123, house353, temple column301 and ruined stair/wall6156. Stair ranges
+are20.1..32.0635 native units; the current TCC floor remains quantized, with a
+maximum observed6.86349-unit height step. The tests prove authoritative movement
+and floor selection, not smooth visual interpolation or absent TBO geometry.
+CPU checks pass in both configurations. `navigation-input-runtime1` proves the
+ordinary SDL route/attack behavior and exits0. Planning microseconds are
+diagnostic stress-run timings, not a controlled performance baseline.
+
+The optional movement observer records accepted player/monster steps and is
+unset in ordinary play. It changes no movement/damage arithmetic. Native source
+references: `HTMainCharacterMove.cpp:42,65`, `HTMapSystem.cpp:765,1532`,
+`HTMainCharacter.cpp:2172` and `zone/CMOB.CPP:8821`. The offline router remains a
+bounded A* adapter over the client TCC plus the selected atomic server zone
+dataset; this checkpoint does not claim the entire native AI scheduler or every
+zone. Initial fixture-classification/assertion mistakes are retained under
+`navigation-static1` / `navigation-dynamic1`; accepted evidence uses the final
+CTest directories and SDL runtime result.
+
+## Default hotkeys and chat commands (user addition,2026-10-26)
+
+- [x] Inspect native key-down/continuous input, UI focus/Tab/Enter, camera,
+  quick-slot and chat-command dispatch before implementing the missing controls.
+  Sources: `HTInterfaceCheck.cpp:1034,1284,1320,1534,1589`,
+  `HTInterface.cpp:8700`, `HTWindowManager.cpp:380`, `HTChatting.cpp`,
+  `HTQuickSlot.cpp`, `HTCamera.cpp` and `HTMainCharacterMove.cpp`.
+- [x] Complete menu keys L/I/U/K/Esc/C/G/J/H/B/N/Tab/M and Print Screen, using
+  native windows/options, names and speech-bubble behavior.
+- [x] Complete main-keyboard -/+ page cycling, Shift+1..5 page selection and
+  slots1..0, retaining the source's saved number/function-key mode.
+- [x] Complete W forward, A/D turning, Left/Right camera orbit, Z run/walk,
+  X sit, F12 view mode, Insert/middle-wheel reset, F11 source camera preset
+  behavior, numpad zoom, E enemy/T colleague selection, R attack, F pickup and
+  held Alt item highlighting, with native focus/death/action restrictions.
+- [x] Complete Enter chat focus, V reply and the requested /all,/s,/whisper,/w,
+  /party,/ashram,/addfriend,/ashrampost and /trade command dispatch/validation.
+  Keep offline authority distinct from any future online transport.
+- [x] Verify every listed binding and alias through CPU input tests and actual
+  SDL UI/gameplay/chat regressions, including typing without accidental actions,
+  key release/focus loss, rejected targets and persistence where native.
+
+Source distinctions: OEM0xBD/0xBB (main -/+) cycle quickbar pages; numpad
+VK_SUBTRACT/VK_ADD control camera distance. A/D turn the character while the
+arrow keys orbit the camera. The user's duplicate + zoom entries must not collapse
+these distinct bindings. F11's supplied-source branch is guarded by
+`g_bGoAttackCamera` and reads authored camera presets; retain that provenance
+instead of inventing a meaning for its label. The user explicitly chose to
+preserve this optional broadcast-camera behavior. Existing L/I/U/K/O/C and a subset
+of quickbar/E/R/Z/Insert behavior do not close this complete hotkey addition.
+
+Accepted hotkey evidence: `hotkeys-runtime4` passes63 actual-SDL assertions,
+including native menu graphs, both cropped/full Mandara minimaps from the existing
+TerrainTex HPK, Ctrl/edit-focus isolation, Alt+W, focus loss, F12, inactive default
+F11 and native BMP capture on Print Screen release. Captures live in the external
+profile's `ScreenShot` folder, preserving the clean client. `hotkeys-loot-runtime3`
+earns actual native drops, shows readable white Alt labels, walks beyond pickup
+range, routes back with F and persists100000→100011 Rupiah. It also verifies2
+player and2 monster source-timed impacts,6 hit glyphs and10 sound requests.
+`hotkeys-retarget-regression2` retains movement animation phase and preempts an
+old ground goal38.7878 units away with actual E/R input.
+
+Release/Debug CPU input/menu/keyboard gates pass, including the native keyboard
+speed multiplier12 (15*.8), integer walking speed, per-update .1-radian turns,
+route replacement, cell collision, release and authentication; optional native
+broadcast preset loading/cycling has a separate CPU fixture. Final builds are
+`hotkeys-final-release-build4.log` / `hotkeys-final-debug-build3.log`; Release is
+staged in `hotkeys-stage4`. Failed earlier test attempts remain retained:
+`hotkeys-loot-runtime1` issued movement before the native swing completed;
+`hotkeys-retarget-regression1` used an occluded projected test destination beside
+a statue. The corrected tests wait for the native action lock and select an
+actual collision-checked surface ray; production collision/attack locks remain.
+
+Offline scope: T has no other PC to select in the solo authority. Chat commands
+dispatch to that authenticated authority and show missing-recipient/party/Ashram/
+trade failures; no online peer, friend database or guild service is simulated.
+V uses the last actually received whisper, empty until one exists. Native chat
+window declarations and typing are implemented; additional chat-window styles,
+network services and complete map-overlay markers remain separate parity work.
+
+## Monster FX phase correction (2026-10-26)
+
+User instruction: **record missing resources and move on**. Keep missing PC FX
+1000386, skill3162 activation1000646/7/8 and monster skill41290 impact1200101 in
+this existing plan. Skip absent resources, retain diagnostics, and continue the
+available implementation. Do not search further or invent replacements for them.
+
+- [x] Decode `HTResTableMONSkill` by named native fields. Activation is DWORD2
+  and impact is DWORD4; the old dispatcher incorrectly used follow DWORD3 and
+  persistent-state DWORD5. Keep those phases distinct for future ranged/state
+  work. Ordinary monster impacts now bind at the event's authoritative position.
+- [x] Preserve exact FX-name matches and add ASCII case-insensitive lookup,
+  consistent with native `CHTString::HT_iStringCompare` (`_tcsicmp`). The supplied
+  `dadati_Fire` binding now resolves to the existing `dadati_fire` graph without
+  editing or extracting client assets.
+- [x] Audit all36 Mandara monster skill rows,45 nonzero phase links and13 unique
+  FX IDs in Release/Debug. After the name fix,44 phase links resolve. Keep the
+  complete-family result false: skill41290 references missing binding1200101 in
+  both the current and supplied Global reference client's Mandara tables.
+- [x] Verify actual Vasabhum2001 / skill41004 impact1200007 on the player at a
+  native damage event. `monster-impact-runtime2` presents40 vertices /60 indices
+  with depth test on and depth write off, exits0 and preserves protected/default/
+  seed files. The existing native impact/audio/Prana/trail/F-pickup gates pass.
+
+Evidence: `monster-skill-bindings-Release` / `monster-skill-bindings-Debug`,
+`monster-fx-case-cpu-release1.log`, `monster-fx-bindings-debug1.log`,
+`monster-fx-reference-audit1.json`, `monster-impact-runtime2`,
+`monster-fx-case-release-build1.log`, `monster-fx-final-debug-build1.log` and
+`monster-fx-stage2`. This closes the phase/lookup bugs; it does not close all
+monster skill selection, ranged/area/buff families or the earlier missing
+PC-skill3162 activation1000646.
+
+TPA evidence: `build/evidence/native-tpa-imports2/TPA_IMPORT_COMPARISON.json` and production-reader dump; Release/Debug build logs `native-tpa-*build*.log`; `native-tpa-roster1` and `native-tpa-skill1` runtime results; `native-tpa-package1`. The current plaintext TPA closes at895334 bytes:623 monsters,501 monster skills,1106 levelled PC-skill records,1664 items,291 NPCs,114 portals,520 quests and49 area indicators. Input TPA/import hashes remain unchanged. Encrypted/other undocumented TPA layouts are unsupported and fail explicitly.
+
+Skill/trail evidence: `build/evidence/elemental-trails-render2` has actual vertex/texture/depth/cleanup results and held-pose pixel comparisons for the plain ribbon and four elements; `skill-state-render3` verifies native3110 costs/state,180-second visual/native-effect expiry, pre-commit cancellation, removal snapshots, death/owner/scene cleanup and2479 changed pixels when state is removed. `skill-state-final-render1` repeats the state lifecycle on the final production implementation; `skill-state-escape-skill1` verifies actual SDL key1/Escape cancellation and successful recast. INTRO/Mandara regressions are `skill-state-intro-regression1` and `skill-state-final-mandara1`; package closure is `skill-state-final-package1`. CPU Debug/Release logs are `skill-state-cpu-*`. Source references: `HTItemSystem.cpp:3424,3457,4118`, `HTEngineHandler.cpp:12518`, `HTFXResMgr.h:362` and `HTMainCharacter.cpp:2968`. Presentation intentionally corrects the old poison-to-fire getter typo using the engine's existing poison texture; gameplay/refinement arithmetic is unchanged. Ribbon endpoints still use the existing weapon-mesh extent adapter rather than claiming the closed engine's exact endpoint algorithm.
+
+Projectile evidence: `build/evidence/projectile-reference-encounters-release1.log`
+and `projectile-ctest/PROJECTILE_PIPELINE_RESULT.json` record the CPU encounter
+matrix; `projectile-orientation-render1/PROJECTILE_PIPELINE_RESULT.json` records
+27 simulation cases, five lifecycle checks and four GPU cases, with
+`simulation_passed:true`, `unresolved_fx:1`, `passed:false`. The unresolved row
+is1000646, not a waived check. `projectile-reference-render1` retains the earlier
+arrow-orientation capture; final rigid-arrow/follow orientation follows
+`HTAttackManager.cpp:535` U=flight, V=(Y cross U) cross U, N=Y cross U.
+Native request/cost timing is grounded in `HTAttackManager.cpp:642` and
+`zone/CMob3.cpp:1080,6244,6264`. Pure flight, atomic item-cost and level-variant
+checks have separate CPU tests. Source pursuit starts at deterministic lift1
+within the native randomized range; swept XZ collision avoids coarse-tick
+tunnelling. These are bounded adapters, not full native combat/TFX parity.
+
+Final Debug/Release build logs are `projectile-orientation-*build1.log`; five
+focused CPU tests pass in both configurations, with the corrected orientation
+probe repeated after rebuilding. Release is staged (`projectile-stage1`). Actual
+SDL3124/Escape/recast, saved INTRO and Mandara FX/occlusion/UV regressions pass in
+`projectile-skill-regression1`, `projectile-intro-regression1` and
+`projectile-mandara-regression1`, preserving default/seed/protected profiles.
+Package layout/dependency validation passes in `projectile-package1`.
+The broader five-part goal, full FX acceptance and clean-machine release remain
+open; no commit/push was performed at this checkpoint.
+
+## INTRO selection ground circle (2026-10-26)
+
+- [x] Inspect native INTRO_CHOOSE01 (1400016): billboard node2 is authored as upright mode1; nodes3/4 are separate particle emitters.
+- [x] Present only node2 as a horizontal XZ circle, following the selected actor's root/yaw, with 0.3 native-unit clearance above the platform. Preserve texture UVs, colour/size curves and the two particle layers. Keep world depth testing and no depth writes.
+- [x] Verify actual uploaded vertices have constant Y and remain horizontal after a 40-degree camera orbit. Use an isolated copy of the existing roster; original/default profiles and client resources remain unchanged.
+- [x] Build Release/Debug, stage Release and validate the package. Evidence: `build/evidence/intro-selection-ground-runtime1/INTRO_SELECTION_GROUND_RESULT.json`, original/orbit captures, build logs and `intro-selection-ground-package`.
+
+## Client-only layout cleanup (2026-10-26)
+
+- [x] Audit the existing native resource categories, supplied `dev-docs/ClientTree.md`, and native UI save/load paths before cleanup.
+- [x] Preserve 103 support/profile files outside the client. Both legacy and active SQLite logical states match their originals; backups and the migration ledger are in `.migration-local/`.
+- [x] Keep the launcher, required Visual C++ DLLs and native client resources/configuration in `_client_bgfx`. Put shaders, English import, offline/server tables, dependency notices, manifests and logs in this project's `runtime/`; normal saves use this project's `userdata/zflauncher`.
+- [x] Put `Start-Offline.cmd` in `_client_bgfx`, as requested. Repeated staging no longer creates support, profile or log folders inside the client.
+- [x] Reuse `_client_bgfx/resource/UI/Interface.sys` for normal window/options persistence, including independent effects/music volume. Preserve unknown fields and extra window positions. Explicit QA uses isolated copies; native controls no longer require ClientOptions.ini.
+- [x] Keep native `MainUISave.sys` (legacy v2004), `MainUIInfo.sys` and `Interface.sys` (active v2005). MainUISave has no active load/save call in the checked source.
+- [x] Clear 2,507 archive-redundant loose payloads, including the user-removed bitmap alias verified by content hash, while preserving all 148 HPKs. Relocate 77 non-runtime extraction indexes/cache records. Retain the three SourceSafe metadata files listed in the default tree, per the user's default-file clarification.
+- [x] Honor the final archive policy: do not extract/recreate files merely because a default tree lists a loose copy. ENVTEX payloads remain in ENVTEX.hpk; extraction CSVs are unnecessary.
+- [x] Route TAB animation loading through NativeResourceIO, alongside meshes, textures, UI and samples. Post-cleanup Mandara FX/occlusion, roster, INTRO audio/FX, recovery/persistence and combat/trail/Prana checks pass with duplicate files absent.
+- [x] Finish empty-folder removal after Sublime Text released its handle. The strict package check rejects remake support/profile/log directories and non-default extraction metadata inside the client.
+- [x] Rebuild Debug/Release; pass five focused CPU checks, 14 Python checks, source/dependency preservation, profile rejection guards and the runtime checks above.
+
+Evidence: `build/evidence/CLEAN_CLIENT_NATIVE_INTEGRITY.json` records 6,178 initially inventoried files, 2,507 redundant loose payloads cleared, 77 non-runtime metadata files relocated and 3,594 retained files (excluding ZFLauncher.exe). All retained bytes match the starting inventory; no native payload was lost and all 148 HPKs remain. `CLIENT_PROFILE_RELOCATION.json` proves both database states were preserved. `CLIENT_TREE_COMPARISON.json` records native/version differences against the supplied default tree; the tree does not override the user's instruction to read HPKs without extraction. Runtime evidence is under `build/evidence/clean-layout-*`, with final package closure under `default-client-tree-*`; the active executable hash is in `runtime/package-manifest.json`.
+
+The existing `system/TantraParam.tpa` remains a native client file and is now read directly by the client resource catalog. The offline authority still reads imported parameter/stat tables outside the client; client/server data-version differences are reported separately above. ClientRes/HTMessage/FX TXLs remain direct native inputs.
+
+
+## Active visual, options and native gameplay continuation (2026-10-26 11:43+)
+
+User scope remains cumulative. Keep the accepted fire/torch appearance and
+Env_Water01 falling-sheet orientation/flow. The newer15:48/15:49 references refine
+the altar brightness and fountain foam, as recorded below.
+
+- [x] Correct altar orientation/brightness against the supplied15:48 references: white core and bright horizontal streaks. Preserve world depth occlusion and native geometry/motion.
+- [x] Refine Env_Water01 against the15:49 reference: retain its blue falling sheet and animated basin surfaces, with stronger white foam at impact. Keep native height/flow and fire/torch settings intact.
+- [ ] Complete golden Chakra beam, green sparkles and violet base visual acceptance across the broader progression matrix; represented snapshots already have runtime evidence.
+- [ ] Functional and persisted Options controls, especially independent live effects/music volume, using miniaudio.
+- [ ] Separate player HP/TP/level and target name/HP/level HUD windows matching the supplied references.
+- [ ] Cap creature shadow length at the reference scale for player, monsters and NPCs.
+- [ ] Improve INTRO sky and interior ambient light; continue skipping missing INTRO TMBs.
+- [ ] Pin, build and validate miniaudio for music, 2D samples and spatial samples, including mute/unmute.
+- [ ] Source-verified character-select names, equipped/unarmed selection attack and return to idle; selection FX.
+- [ ] Increase gameplay zoom-out distance, retain collision and disable VSync by default.
+- [ ] Verify/complete native per-map CFG day/night timing and the normal runtime default.
+- [ ] Source-authoritative HP/TP recovery cadence, state restrictions, clamps and saved/UI updates.
+- [ ] Source-backed Prana reward presentation on monster defeat.
+- [ ] Source-backed weapon trails, attachment endpoints, action windows and lifecycle.
+- [ ] Build Debug/Release, run focused CPU and actual UI/GPU/audio regressions, restage Release and update these checkboxes with evidence.
+
+Latest altar/fountain evidence (2026-10-26):
+`build/evidence/altar-water-reference-runtime2` captures each close-up at the same
+held state with previous intensity, adjusted intensity, FX off and restored.
+The altar uses RGB gain3 for its core and2.2 for its streak models; the fountain
+uses gain3 only on its existing foam emitter. Other field/skill layers keep gain1.
+This uses the existing unlit floating-point tint, avoiding vertex-byte clamping;
+it is a reference presentation adjustment, not a change to native assets or
+gameplay. Exposure changes76004 altar pixels and2845 fountain pixels; restored
+views match exactly. All three altar and four fountain visual layers retain
+depth testing without depth writes. Real-wall occlusion still changes0 pixels.
+
+The first run retained a shutdown access violation: `clear()` passed a map-key
+reference into `stop()`, which compared it after erasing the key. Cache identities
+are now captured before erasure. The corrected runtime exits0 and preserves
+default/seed/protected data. Debug/Release build logs are
+`altar-water-reference-*build2.log`; CPU native field bindings and cleanup pass.
+The optional `native_world_fx_probe --inspect-water` audit measures basin water
+at37 and rendered stone floor at33.6494, so no speculative height offset is
+applied. Final staging/package checks are `altar-water-stage2` and
+`altar-water-package1`; broader FX/goal acceptance remains open.
+The separate `altar-water-skill-regression1` also passes actual skill3124,
+Escape cancellation/recast and a second clean world shutdown.
+
+## FX presentation corrections after the 10:10 screenshot review
+
+- [x] Resolve the native >9999 position sentinel from the rendered target height;
+  retain floating model chevrons and the distinct yellow selection/red attack
+  graphs (1010011 /1010031). Actor death/deselection removes the indicator.
+- [x] Conform ground-plane billboard layers without flattening the animated
+  chevrons. Stop the ground marker when movement stops or attack/cast takes over.
+  Root-attached progression/skill rings also fit the native terrain/TCC floor.
+- [x] Apply the native attached-model parent-yaw correction, independent FX scale
+  and transformed fixed-billboard axes. The accepted fountain side capture shows
+  Env_Water01 falling into its basin; restore its authored V texture motion.
+- [x] Animate model texture U/V independently of TAB skinning, including the
+  portal's opposite +1/-1 U rates. Assign texture overrides by material slot;
+  do not deduplicate slots by texture name or repeat the last override forever.
+- [x] Composite alpha smoke before emissive flames/sparks. Preserve the separately
+  verified particle blend path; use premultiplied alpha for model/billboard FX to
+  avoid multiplying their premultiplied colour by alpha again.
+- [x] Observe committed world snapshots for Chakra/level increases (1010003) and
+  learned/upgraded skills (1010002). Initial loading and unchanged snapshots do
+  not replay upgrades. Existing allocation validation and persistence remain in
+  the authoritative offline channel.
+- [x] Show native dropped-item targeting (1010021) on hovered loot and remove it
+  after pickup/removal or pointer departure. Restrict picking to actual loot
+  owners; correct the inherited OGRE-name comparison for bgfx object names.
+- [x] Extend the real Mandara GPU scenario with separate arrow/ring height checks,
+  native attack colour, item ring/chevrons, model UV deltas, progression dispatch,
+  torch blend families and held-pose on/off pixel checks. Snapshot presentation
+  fixtures do not award levels or modify the saved character.
+
+Accepted evidence: `build/evidence/fx-parity-runtime3`. The four field views
+restore exactly; portal animation changes174354 pixels. Target/ground, attack,
+item, level-up, Chakra, skill-up and torch captures change7024,716,971,194049,
+194035,81553 and49407 pixels respectively. Behind a real opaque house wall the
+FX still changes0 pixels; the depth-off control changes7744 pixels. Portal U
+rates advance +.125/-.125 and waterfall V advances -.125 over .125 seconds.
+
+Debug and Release builds, four focused CPU and14 Python checks pass.
+`fx-parity-intro-regression` accepts native INTRO fire/sound/music;
+`fx-parity-skill-regression` accepts real skill3124 UI/key, two animation clips,
+six FX geometry submissions and TP110 ->104. `fx-parity-combat-regression`
+accepts a real monster attack marker, two player/two monster impacts, six damage
+glyphs and ten sound requests. Package16-file closure and379 source/nine input/
+six repair preservation checks pass. Release is staged in
+`_client_bgfx/ZFLauncher.exe`, SHA256:
+`7cc5fdede8d2b66970f8f34006b69fe8442ca26be13ac71ea3d518352a59615d`.
+
+These checks cover the requested presentation corrections, not complete native
+TFX/skill/FX-family parity. Wider open gates and canonical missing FX1000386
+remain open. Original assets, OGRE source and default profiles are preserved;
+missing INTRO TMBs continue to be skipped without searching or substitution.
+
 ### Active OGRE implementation migration
 
 Current requested continuation (2026-10-26, all items require source and runtime
@@ -56,6 +402,40 @@ frame. This is implementation work, not a transfer of OGRE acceptance results.
   cleanup; unsupported native families stay explicit in C09.
 - [x] Build Debug/Release, stage only owned `_client_bgfx` files and run isolated
   bgfx acceptance with default/source profile and canonical input preservation.
+
+### World FX occlusion correction after the 09:36 screenshot
+
+- [x] Separate world-FX depth testing from terrain conformance. Every model,
+  billboard and particle submitted by NativeWorldFx tests scene depth; blended
+  effects retain depth writes off, native colour/blend and the FX draw pass.
+- [x] Refresh texture, depth and blend state when a cached FX mesh is updated,
+  rather than retaining its creation-time flags.
+- [x] Keep the separately verified native INTRO particle preset and UI/sky paths
+  unchanged; the bounded OGRE INTRO implementation was not a general Mandara
+  world-occlusion reference.
+- [x] Accept a held-pose GPU occlusion regression against the rendered native
+  house `World/Object/327` / `r01_Stru_man_house1_01.tmb`. Behind the wall, FX
+  changes0 pixels; disabling depth reproduces7744 leaking pixels. Re-enabling
+  depth on the same cached buffers restores0 differences. In front, alpha and
+  additive FX each change9604 pixels, and switching cached blend changes9604.
+
+`build/evidence/world-fx-depth-runtime1` contains the wall, hidden, depth-off,
+restored and front captures plus `FX_OCCLUSION_STATE.json` and
+`FIELD_FX_PIXELS.json`. All four representative field views still show FX and
+restore exactly: portal1400017=217736, altar1400023=7898, portal1400009=10105,
+water1400011=11419 changed pixels. Earlier on/off/restored captures did not test
+building occlusion and missed the depth-state defect; this check now runs as
+part of the `mandara-fx` scenario acceptance.
+
+Four focused CPU and14 Python checks pass. `world-fx-depth-intro-regression`
+retains native INTRO fire/audio/music acceptance; `world-fx-depth-skill-regression`
+retains real skill3124 UI/key/animation/FX/TP acceptance. Debug/Release build,
+100-frame Debug smoke with three renderer reinitialisations, package16-file
+closure and379 source/nine input/six repair preservation checks pass.
+Release is restaged in `_client_bgfx`; SHA256:
+`4ae0c26f76a316c497755443a455aa956becaf3d122f5d5d4154d2b8a4d1efb8`.
+This fixes opaque-world FX occlusion; the wider FX/skill/visual-parity backlog
+and canonical missing FX1000386 remain open.
 
 ### Mandara action, FX and audio continuation, 2026-10-26
 
@@ -480,8 +860,8 @@ and prepare fresh disposable profiles for destructive creation/deletion and
 transaction tests. Hash OGRE source files excluding only the namespaced destination
 before/after seed, staging and runtime; never include that destination recursively.
 
-Stage `Start-ZFLauncher-Offline.cmd` for ZFLauncher. Preserve OGRE's existing
-`Start-Offline.cmd`, executable, support files and user additions. Namespace bgfx
+Stage `_client_bgfx/Start-Offline.cmd` for ZFLauncher. Preserve OGRE's existing
+`_client/Start-Offline.cmd`, executable, support files and user additions. Namespace bgfx
 shaders/logs/diagnostics; isolate incompatible DLLs with a verified Windows loader
 strategy rather than relying on another launcher's DLL version.
 
@@ -588,10 +968,25 @@ _remake_bgfx/
 | `C:\_GitHub\TantraSrc\_client_bgfx` | Current bgfx runtime HPKs/configuration; preserve user-added archives |
 | `C:\_GitHub\TantraSrc\_client` | Original OGRE client and historical input-hash baseline; preserved |
 | `B:\__TANTRA\TantraDataScripts` | Editable Excel/table reference; validate export correspondence with runtime TPA/TXL |
+| `B:\__TANTRA\TantraDataScripts\K3` | Read-only K3 authored XML/XLS/XLSX reference for parameters, messages, FX and NPCs; compare IDs/layouts with the selected runtime version |
+| `B:\__TANTRA\TantraDataScripts\Global` | Read-only Global authored tables, including `fxPC.xls`; retain language columns and version differences rather than replacing runtime tables wholesale |
+| `B:\Tantra-Files\_TantraClients\TantraOnline-Global` | Read-only shipped Global client assets and binary tables; inspect both `system` and `resource\fx` catalogs because they differ; read HPKs in place without extraction |
 | `E:\Global-server` | Deployment zone data; generation areas, collision/grid and NPC generation must come from one zone dataset |
 | `A:\zEngineK2\server` | Server-manager UI reference only; server work stays in the server project |
 | `A:\zEngineK2\client\resources\ZFLauncher.ico` | Previously requested client branding; prefer its already copied project-owned version |
 | `C:\Program Files (x86)\Steam\steamapps\common\Kathana\KathanaGame.exe` | Visual reference, observed file/product version 4.0.1.7; no verified renderer/asset equivalence |
+
+Reference audit (2026-10-26): `build/evidence/fx-reference-audit1/FX_REFERENCE_AUDIT.json`
+records hashes and decoded rows from the current client, Global client's two
+`fxPC.txl` files, K3 `fxPC.xml` and Global `fxPC.xls`. All five reference skill3162
+through action1100017 and activation1000646, but none defines1000646/7/8 in
+FXSkill. The current client follows1000451; the Global/K3 references follow1001073.
+Global `system/fxPC.txl` and `resource/fx/fxPC.txl` also differ from each other.
+Existing PAR28_CST/FLW/ATK graphs do not establish an activation replacement.
+Keep the missing activation diagnostic and historical full-FX result; per the
+user's later instruction, record the missing resource and move on. Do not invent
+an alias or copy a different-version catalog into the client. The reproducible
+read-only audit is `tools/audit-fx-references.py` (xlrd is audit tooling only).
 
 Native files beneath the primary source root:
 
@@ -871,7 +1266,7 @@ Seed the private profile and connect native offline login/server/channel/roster 
 - [ ] **P18-04** Stop/cancel jobs before destroying scenes and reject late work by generation.
 - [ ] **P18-06** Preserve SQLite transaction boundaries, integrity, schema backups and WAL handling.
 - [x] **P18-07** Prevent simultaneous OGRE/bgfx writes to the same private database/profile.
-- [x] **P19-06** Default to private `_client_bgfx/userdata/zflauncher`; support `--user-data-root` and disposable acceptance profiles seeded from an explicitly identified saved roster.
+- [x] **P19-06** Default to private `_remake_bgfx/userdata/zflauncher` outside the clean client; support `--user-data-root` and disposable acceptance profiles seeded from an explicitly identified saved roster.
 - [x] **P19-09** Provide separate shortcuts identifying OGRE and bgfx builds clearly.
 - [x] **P20-04** Use one offline process and one channel, `ashesh / ashesh`, with an isolated saved roster.
 
@@ -944,7 +1339,7 @@ Port click/keyboard run/walk, camera controls, blocked routes and action locks. 
 **Owned backlog tasks:**
 
 - [ ] **P05-05** Preserve source button states, shortcut dispatch, focus, close/Escape and panel dragging.
-- [ ] **P05-06** Persist positions/options in a private profile without truncating unknown Interface.sys data.
+- [x] **P05-06** Persist normal positions/options in native client `resource/UI/Interface.sys`; isolate QA settings in private profiles and preserve unknown fields. Verify layout, quickbar orientation/key mode and character isolation across restart/relogin and supported village changes (`persistence-runtime3`).
 - [ ] **P05-08** Apply original widget RGB and alpha, including orange NPC headings/options and white dialogue text.
 - [ ] **P05-09** Add item/skill/control tooltips with topmost hit testing, native delay, wrapping and viewport clamping.
 - [ ] **P05-10** Add source player/NPC/monster names with correct model-height anchors, colours and speech placement.
@@ -1129,7 +1524,7 @@ name layer and are historical; current same-quality performance remains open.
 - [ ] **P13-04** Match billboard modes, blend factors, UV animation, colour/size curves and depth rules.
 - [ ] **P13-06** Support field day/night FX and actor impact/attack/skill audio events.
 - [ ] **P13-07** Route map music and safe/hostile-area changes from original tables/source logic.
-- [ ] **P13-08** Apply live effects/music gains to existing and future voices and persist the native option values.
+- [x] **P13-08** Apply live effects/music gains to existing and future voices and persist native option values. Independent miniaudio category gains and restored live playback pass options and six-process persistence checks.
 - [ ] **P13-09** Handle audio device failure as recoverable; prevent duplicate music on transition/retry.
 - [ ] **P13-10** Record unsupported FX node semantics instead of silently skipping visible content.
 - [x] **P13-02b** Bind the 55 authored Mandara field FX placements and accept representative native portals, altar and water graphs independently in bgfx.
@@ -1185,6 +1580,7 @@ Refine immutable caches, upload budgets, GPU skinning and pooling against CPU pa
 - [ ] **P07-07** Keep UV/index/bind data immutable; update only pose/instance data during ordinary animation.
 - [ ] **P13-05** Pool emitters/buffers and bound spawns/uploads without changing authored effect timing.
 - [ ] **P17-02** Measure cold/warm startup, INTRO, CHAR_INIT/Mandara readiness and transition stalls separately.
+- [x] **P17-02a** Establish fresh-process native town/dense-field/skill CPU/GPU and destination-loading baselines with raw timings, two trials, hardware/input hashes and captures (`world-profile-matrix1`); disk-cold startup and other maps remain P17-02.
 - [ ] **P17-04** Cache immutable archive indexes, decoded metadata, meshes, textures and bound animation resources.
 - [ ] **P17-05** Use a derived cache keyed by payload hash, reader/schema version, shader version and target backend.
 - [ ] **P17-06** Decode/read on workers and budget GPU uploads so SDL events/loading animation remain responsive.
@@ -1196,7 +1592,7 @@ Refine immutable caches, upload budgets, GPU skinning and pooling against CPU pa
 - [ ] **P17-12** Bound GPU/CPU/IO memory, queue depth and resource retirement across repeated transitions.
 - [ ] **P17-13** Compare equal-quality builds; do not claim improvement from reduced shadows/visibility/animation/texture quality.
 - [ ] **P17-14** Define provisional acceptance of sustained 60 FPS at the agreed test resolution on named hardware, then refine from measured baselines.
-- [ ] **P17-15** Report median and p95/p99 frame times and worst stalls alongside FPS; no 500-1,000 FPS guarantee.
+- [x] **P17-15** Report median/p95/p99 frame intervals and worst stalls alongside scoped CPU/GPU timings. The six measured native scene trials retain raw samples; no 500-1,000 FPS guarantee or broad performance acceptance is claimed.
 - [ ] **P18-03** Exercise repeated resize/minimize/focus loss and renderer-reset paths explicitly.
 - [ ] **P18-05** Retire GPU handles only after their use is complete; verify shutdown ordering and leaks.
 - [ ] **P18-08** Check selection/retry/return paths for missing sockets, stale render state and duplicate actors/audio.

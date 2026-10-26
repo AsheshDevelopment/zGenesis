@@ -148,27 +148,23 @@
     "browser_visual_acceptance": "not run"
   },
   "game_launches": 0,
-  "export_manifest_sha256": "c927557b708c0cecb21f904ace32bdb3c8bf8de4e6672ed4140688bb81e5caa0",
+  "export_manifest_sha256": "9745877b2866ad93e0af932db65b28e9265a368a41f19d52c8743a58a854e068",
   "source_head": "2247cfc6905300f1b7e50c6a8283309930df14f7",
   "tantra_b_refresh": {
-    "version": "1.0.1",
-    "reviewed": "2026-10-26",
+    "version": "1.0.2",
     "scope": "Tantra-B only",
-    "tasks": "87/252",
-    "percent": 35,
+    "tasks": "91/253",
+    "percent": 36,
     "accepted_gates": 3,
     "tantra_o_data_unchanged": true,
     "tantra_o_documentation_files_unchanged": 276,
     "source_hashes": "matched to current bgfx workspace",
     "website_checks": {
-      "javascript_syntax": "passed",
-      "source_data_routes_filters_hashes": "passed",
-      "actual_renderer_cpu_dom": "passed",
-      "tantra_o_checked_tasks": "46/102 unchanged",
-      "tantra_b_checked_tasks": "87/252",
-      "broad_gates": "3/10 unchanged"
+      "syntax": "passed",
+      "source_data": "{\"result\":\"passed\",\"projects\":[{\"name\":\"Tantra-O\",\"tasks\":\"46/102\",\"coverage\":45,\"accepted\":0},{\"name\":\"Tantra-B\",\"tasks\":\"91/253\",\"coverage\":36,\"accepted\":3}],\"routes\":6,\"zones\":10,\"sourceHashes\":\"matched\",\"navigationAndFilters\":\"passed\",\"browserVisualAcceptance\":\"not_run\",\"gameLaunches\":0}",
+      "rendered_content": "{\"result\":\"passed\",\"renderer\":\"actual roadmap.js with CPU DOM adapter\",\"ogre\":{\"phases\":14,\"tasks\":102,\"checked\":46},\"bgfx\":{\"checkpoints\":10,\"tasks\":253,\"checked\":91},\"defaultPage\":\"Tantra-O\",\"projectSwitching\":\"passed\",\"searchStatusExpandCollapse\":\"passed\",\"browserLayout\":\"not_run\"}"
     },
     "browser_visual_acceptance": "not rerun; layout code unchanged",
-    "game_evidence": "See reference/bgfx/PROGRESS.md; source runtime evidence is not website acceptance"
+    "game_evidence": "See reference/bgfx/PROGRESS.md; game runtime evidence is separate from website acceptance"
   }
 }

@@ -1,4 +1,4 @@
-/* Standalone export; refresh from dev-docs/_roadmap. */
+/* Generated from the authoritative plans; refresh Tantra-B with tools/zf-refresh-bgfx.py. */
 window.TANTRA_ROADMAP = {
   "reviewed": "2026-10-26",
   "method": "Checked named top-level tasks / named top-level tasks. Nested subtasks and acceptance gates are displayed but excluded from the percentage. Different project checklists are not a cross-renderer comparison or release-readiness estimate.",
@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "The bgfx/SDL3 client reaches Mandara with native combat timing, Philippine English names, Chakra persistence, field FX, supported active skills and map audio. Three minimum gates are accepted; complete gameplay, FX, visual and performance parity remain open.",
+      "description": "The bgfx/SDL3 client runs the native offline Tantra foundation with direct TPA reads, English names, tested navigation, weapon/skill FX, native hotkeys and restart persistence. Crowded-scene CPU/GPU and loading baselines are measured. Complete skills, AI, other maps and full visual/release acceptance remain open.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -1688,7 +1688,7 @@ window.TANTRA_ROADMAP = {
             {
               "id": "P19-06",
               "done": true,
-              "text": "Default to private _client_bgfx/userdata/zflauncher; support --user-data-root and disposable acceptance profiles seeded from an explicitly identified saved roster.",
+              "text": "Default to private _remake_bgfx/userdata/zflauncher outside the clean client; support --user-data-root and disposable acceptance profiles seeded from an explicitly identified saved roster.",
               "children": []
             },
             {
@@ -1897,8 +1897,8 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P05-06",
-              "done": false,
-              "text": "Persist positions/options in a private profile without truncating unknown Interface.sys data.",
+              "done": true,
+              "text": "Persist normal positions/options in native client resource/UI/Interface.sys; isolate QA settings in private profiles and preserve unknown fields. Verify layout, quickbar orientation/key mode and character isolation across restart/relogin and supported village changes (persistence-runtime3).",
               "children": []
             },
             {
@@ -2016,9 +2016,9 @@ window.TANTRA_ROADMAP = {
             "text": "Real SDL input moves without teleporting, rejects blocked destinations and preserves animation phase on retarget. Reset/orbit/zoom and town-route framing are usable. UI hit order, copied quick slots and layout/state survive reload.",
             "children": []
           },
-          "done": 3,
+          "done": 4,
           "total": 20,
-          "percent": 15
+          "percent": 20
         },
         {
           "id": "C06",
@@ -2233,8 +2233,8 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P13-08",
-              "done": false,
-              "text": "Apply live effects/music gains to existing and future voices and persist the native option values.",
+              "done": true,
+              "text": "Apply live effects/music gains to existing and future voices and persist native option values. Independent miniaudio category gains and restored live playback pass options and six-process persistence checks.",
               "children": []
             },
             {
@@ -2292,9 +2292,9 @@ window.TANTRA_ROADMAP = {
             "text": "Matrix groups 01-06 and represented 07/12 portions have independent bgfx evidence. Cover eight previews, LOD/fallback transitions, matched environment/foliage/character/shadow views and actual selected audio. List broader native/OGRE gaps explicitly.",
             "children": []
           },
-          "done": 8,
+          "done": 9,
           "total": 22,
-          "percent": 36
+          "percent": 41
         },
         {
           "id": "C08",
@@ -2322,6 +2322,12 @@ window.TANTRA_ROADMAP = {
               "id": "P17-02",
               "done": false,
               "text": "Measure cold/warm startup, INTRO, CHAR_INIT/Mandara readiness and transition stalls separately.",
+              "children": []
+            },
+            {
+              "id": "P17-02a",
+              "done": true,
+              "text": "Establish fresh-process native town/dense-field/skill CPU/GPU and destination-loading baselines with raw timings, two trials, hardware/input hashes and captures (world-profile-matrix1); disk-cold startup and other maps remain P17-02.",
               "children": []
             },
             {
@@ -2392,8 +2398,8 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P17-15",
-              "done": false,
-              "text": "Report median and p95/p99 frame times and worst stalls alongside FPS; no 500-1,000 FPS guarantee.",
+              "done": true,
+              "text": "Report median/p95/p99 frame intervals and worst stalls alongside scoped CPU/GPU timings. The six measured native scene trials retain raw samples; no 500-1,000 FPS guarantee or broad performance acceptance is claimed.",
               "children": []
             },
             {
@@ -2427,9 +2433,9 @@ window.TANTRA_ROADMAP = {
             "text": "Named hardware/scene/quality has median/p95/p99, stalls, loading and memory evidence. Provisional sustained 60 FPS target uses recorded resolution; it is not a claimed result. Debug/Release, relocation and repeated lifecycle checks preserve assets/saves. C09 claims remain open.",
             "children": []
           },
-          "done": 1,
-          "total": 20,
-          "percent": 5
+          "done": 3,
+          "total": 21,
+          "percent": 14
         },
         {
           "id": "C09",
@@ -2724,22 +2730,37 @@ window.TANTRA_ROADMAP = {
         }
       ],
       "foundations": [
-        "C++20 x64 Debug/Release and a dedicated bgfx/D3D11 client/profile",
-        "Native HPK resources, original MainUI, eight tribe previews, CPU skinning and sockets",
-        "Offline login, character lifecycle, Mandara entry and ordinary durable services",
-        "Native melee hit markers, damage glyphs, attack facing/audio and immediate attack retargeting",
-        "All four Chakra allocations survive SQLite persistence and a fresh login",
-        "55 authored Mandara field FX bindings; portal, altar, water and terrain-conforming target indicators",
-        "Supported active-skill phases: eight CPU tribe fixtures and a real SDL skill/animation/FX run",
-        "Native terrain detail, high world filtering, creature shadows, full sky backdrop and safe/field music"
+        "C++20 x64 Debug/Release, bgfx/D3D11, SDL3 and miniaudio; clean dedicated client",
+        "Direct TantraParam.tpa and HPK resources; Philippine English names; server-only data and saves outside the client",
+        "Native INTRO, eight tribe previews, equipment/sockets, native UI and ordinary durable offline services",
+        "Source hit markers, projectile arrival costs, elemental trails and represented persistent skill-state cleanup",
+        "32 static and 8 dynamic native navigation cases; actual SDL immediate attack retargeting",
+        "Native menu/camera/quickbar/chat keys; source optional F11 broadcast camera",
+        "Six fresh-process persistence legs: Interface.sys, equipment attachments, quick slots, independent audio and three Mandara village zones",
+        "Two trials per town/dense-field/combat scene: 7,200 measured frames, raw CPU/GPU/loading timings and hardware/input hashes"
       ],
       "next": [
-        "Complete specialised/item-cost casts, projectile/follow/state FX and apron/weapon matrices",
-        "Resolve recorded native FX asset gaps without guessed replacements; finish NPC idle and remaining node semantics",
-        "Accept full AI navigation/leash/patrol, quests, travel, online services and each additional zone",
-        "Finish matched original-client visual acceptance, GPU skinning, asynchronous loading and measured performance"
+        "Complete remaining available attached/area/monster-state FX and weapon/skill timing combinations; record and skip missing assets",
+        "Test CPU pose/deformation improvements and GPU skinning against the measured baseline while preserving native normals, sockets and timing",
+        "Reduce unchanged UI/traversal work; budget resource creation around the measured loading stalls before claiming gains",
+        "Complete other-map and in-game portal transitions, native AI/services, online gameplay and matched visual acceptance"
       ],
       "changes": [
+        {
+          "date": "2026-10-26",
+          "title": "Persistence and controlled performance baseline",
+          "text": "Six isolated restart/relogin/character/village legs pass. Saved quickbar orientation and key mode are fixed; equipment attachments and independent live audio restore. Six Release profile trials measure 7,200 frames: dense field43 actors median9.68 to9.73ms, CPU pose4.12ms, GPU1.45 to1.64ms. Dense actor creation stalls365 to370ms. No optimisation gain or broad game gate is claimed."
+        },
+        {
+          "date": "2026-10-26",
+          "title": "Native data, projectiles and navigation stress",
+          "text": "Direct TPA decoding/comparison preserves client/import version differences and external server data. Weapon/projectile tests cover27 encounters, refinement/animation bindings and represented buff/cancellation cleanup. Navigation passes32 static and8 dynamic cases. Missing authored FX are recorded and skipped as requested; remaining available families stay open."
+        },
+        {
+          "date": "2026-10-26",
+          "title": "Default hotkeys and monster impact correction",
+          "text": "Native menu, movement, camera, quickbar and chat bindings pass63 actual SDL checks plus earned F-pickup and retarget regressions. F11 retains optional source broadcast behaviour. Monster activation/impact columns and case-insensitive graph lookup are corrected; actual monster2001 impact geometry/depth passes."
+        },
         {
           "date": "2026-10-26",
           "title": "Mandara FX, skills and audio checkpoint",
@@ -2771,9 +2792,9 @@ window.TANTRA_ROADMAP = {
           "text": "ZFLauncher uses its dedicated client/profile. OGRE runtime results are not transferred to bgfx acceptance."
         }
       ],
-      "done": 87,
-      "total": 252,
-      "percent": 35,
+      "done": 91,
+      "total": 253,
+      "percent": 36,
       "accepted": 3
     }
   ],
@@ -2850,11 +2871,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "3d602c52399f8ce990b28991a8b5121a30c7195aabf6a46f2ce64ba69de04316"
+      "sha256": "ec3dbc12f6b62a3c49111179bd38d3098e2fa280c8b99656ab7369e9c599fbd2"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "7f327049bcc0b13c94378ff11cd77897ef61df8f9cc58a3096d280a48d3c335b"
+      "sha256": "847e4d09ed2e8de3049211f1d1c62809861bb3f6909ddd85759a570c2f6c840b"
     }
   },
   "reference": {

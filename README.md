@@ -3,7 +3,7 @@
 Standalone website for **Tantra-O** (OGRE / HTLauncher) and **Tantra-B** (bgfx /
 ZFLauncher). Tantra-O is the default page. Design follows the supplied local
 zGenesis reference: charcoal/coral colours, large hero, progress bars and
-expandable workstreams. Version: 1.0.0.
+expandable workstreams. Version: 1.0.2.
 
 Open `index.html`, or serve this repository root with Python's HTTP server.
 Use `#tantra-o` and `#tantra-b` for each roadmap. Tasks and Changelogs retain the
@@ -14,6 +14,12 @@ work both at a domain root and under a website subdirectory.
 `documentation/` contains the source documentation snapshot; `reference/bgfx/`
 contains the separate bgfx plan/progress snapshot. Checked task coverage is not
 release readiness. Full phase acceptance remains visible and separate.
+
+## Refresh Tantra-B only
+
+Run `python tools/zf-refresh-bgfx.py --bgfx-root C:\_GitHub\TantraSrc\_remake_bgfx`.
+It regenerates Tantra-B tasks from its source plan and preserves Tantra-O and
+all bundled OGRE documentation. Run the checks below before committing.
 
 ## Refresh from the documentation repository
 
