@@ -2,6 +2,36 @@
 
 Updated: 2026-10-26. Status: **runnable offline development client; full plan incomplete**.
 
+## Native shield energy and per-hit FX (2026-10-26)
+
+- [x] Compile the four instant shield/break cases from `CMob2::OnTakeInstant2` and both native absorption functions into the existing status adapter. Skill3102 creates energy instead of an ordinary timed-effect slot;3145 derives enhanced energy from TP after its cast cost. Keep ordinary70% physical absorption, enhanced physical/elemental percentages, native nearest rounding, shared enhanced energy, pierce bypass and strict-less-than depletion flags. Exact exhaustion keeps the native flag while an overflow hit clears it.
+- [x] Route incoming monster damage through the live defender session before combining physical/pierce/elemental lanes and updating HP. Misses consume no energy or TP. Native effect ticking and equipment updates retain the energy; a fresh native entry starts without invented saved shield state. No new fields are added to native character persistence or the client tree.
+- [x] Match `HTMainCharacter::HT_vMainChar_SetActiveSkillEffect`: type24 has no continuous State graph; incoming melee hits/misses play level1 State once, and long attacks wait for visual arrival. Enhanced wins if both flags are present. The per-hit owner survives equipment replacement and is removed on death/scene clear. Skill3145 is present in Global authority data but lacks its canonical fxPC link; `MISSING_FX.tsv` records it and presentation is skipped, with no search or alias.
+- [x] Reproduce a defensive cast consuming a one-shot attack bonus (`energy-shield-bonus-repro1`). Restore the native `CastSkill` DealDamage guard around CalDamage/CastInstant1. Real3059 retains its40% next-attack bonus through defensive3022; damaging3007 consumes it once. The first follow-up test chose passive3001 as its attack; the corrected test uses the actual active damage record.
+- [x] Final Release/Debug renderer acceptance (`energy-shield-isolated-render-release1`, `energy-shield-isolated-render-debug1`): 2,555 checks each cover real3102 levels1..10, real3145 cast/absorption, rounding/depletion/break/invalid requests and the defensive-bonus regression. Two GPU cases cover levels1/10, melee/ranged shield reactions, native misses, actual HP/energy debit, level1 State selection, equipment, Escape and death cleanup. The explicit private level100 Rakshasa uses30 extra Nerve and230 extra Heart Chakra; native950 TP pays3145's850 TP cost, leaving100 TP and1,000 enhanced energy. Native costs, RNG, records and assets are unchanged. Matched captures hide only `WorldSkillShieldImpact` geometry while holding pose, clock, monster impact and all other FX unchanged: level1/10 show299/450 pixels differing by more than3 channel levels in both configurations. These isolate the shield itself, tightening the earlier global-FX on/off captures. No available-graph warnings occur.
+- [x] Actual SDL shield3102 and ordinary buff3110 each pass88 cast/equip/unequip/Escape checks on the final staged Release (`energy-shield-sdl-final2`, `energy-shield-buff-final2`). Both exit0 and preserve their protected/default/seed snapshots. The earlier buff-regression preparation was held by the running normal launcher; the accepted run followed the user's explicit close response, without terminating their process.
+- [x] Twelve status/equipment/parameter/skill/caste/effect/projectile/monster/navigation CPU gates pass in each configuration (`energy-shield-cpu-release1.log` plus `energy-shield-skill-release1.log`, and `energy-shield-cpu-debug1.log`). Debug's953.67-second matrix completed, including224.49-second projectiles and571.50-second navigation. The later DealDamage guard has separate affected cast/shield/projectile retests; unrelated navigation is not repeated merely to produce another green log.
+
+The initial enhanced-shield fixture could not pay850 TP; the accepted fixture
+uses native Heart-based mana rather than relaxing costs or adding fake TP.
+Missing3145 presentation remains explicit. Final Release/Debug affected cast/
+shield/projectile retests pass (`energy-shield-final-cpu-release2.log`,
+`energy-shield-final-cpu-debug2.log`). Debug's623.89-second affected matrix,
+including479.04-second projectiles, completed successfully. Clean client layout/external runtime closure passes
+(`energy-shield-package-final2`); Release is staged (`energy-shield-stage-final2.log`).
+Build and client executables match SHA256
+`a90b975cc91dcbed7a8261c6c3d4b1fc4aec122cd5a0c4ec7d739e732a69e404`.
+`energy-shield-source-evidence.json` pins this checkpoint's sources and results.
+
+`energy-shield-pattern-audit.json` also verifies all23 nonzero template IDs
+referenced by the supplied Zone01 generators: their authored Global skill
+patterns are zero. The Global source has588 patterned templates outside that
+set. This does not implement their special-skill scheduler, cast counts or
+area/timed state services. Remaining native skill/weapon FX and broader game
+gates stay open. The last controlled7,200-frame baseline remains tied to the
+monster-ranged executable; no new shield performance result or optimisation
+gain is claimed.
+
 ## Native monster default ranged attacks (2026-10-26)
 
 - [x] Replace unconditional idSkill0/fixed20-unit monster attacks with `CMob::BattleProcessor`'s default melee/ranged branch. Use `GetFunc::CalDistance`'s rounded integer-cell distance and native body radius. Imported skill ranges already include `LoadSkillData`'s +2; retain that transformation once. Monsters with no ranged skill continue using their native melee fallback.

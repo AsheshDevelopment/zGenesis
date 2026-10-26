@@ -1,6 +1,6 @@
 # Roadmap website progress
 
-Version: 1.0.5. Reviewed: 2026-10-26.
+Version: 1.0.6. Reviewed: 2026-10-26.
 
 - [x] Replace the former site with Tantra-O and Tantra-B roadmaps.
 - [x] Preserve actual OGRE and bgfx task/progress/acceptance records.
@@ -17,6 +17,6 @@ No game feature is marked complete by exporting this website.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 92/254 named tasks checked (36%); 3/10 gates recorded. Latest: Native monster default ranged attacks. Replace fixed-range idSkill0 attacks with source default melee/ranged selection and locked MONSkill animation/TAB timing. Monsters2004/2005 pass eight fine/coarse encounters and three GPU cases in Debug/Release, including visible follow/impact and eight lifecycle/rebind checks. SDL combat/audio/Prana and88 buff/equipment checks pass. The current build has six isolated profile trials/7,200 measured frames; dense43-actor medians9.67–9.87ms include4.10–4.16ms CPU pose work. Special-skill patterns, timed monster states and wider skill services remain open. Remaining native skill/FX and complete map/game acceptance stay open.
+- **Tantra-B**: 92/254 named tasks checked (36%); 3/10 gates recorded. Latest: Native shield energy and per-hit FX. Implement source instant shield/break cases and physical/elemental absorption, preserving native rounding, energy and exhaustion flags. Real3102 levels1–10 and3145 authority pass2,555 checks in Release/Debug, including two GPU cases, shield-only visible-pixel comparisons, ranged arrival, equipment and death cleanup. Restore the DealDamage guard so defensive3022 retains3059's bonus until damaging3007. Shield and ordinary-buff SDL workflows each pass88 checks; status/skill/projectile/navigation regressions and packaging pass. Missing3145 FX is recorded and skipped. Wider skill/monster families remain open. Remaining native skill/FX and complete map/game acceptance stay open.
 
 These are separate source checklists, not release-completion percentages.

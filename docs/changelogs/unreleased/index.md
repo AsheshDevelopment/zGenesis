@@ -1,5 +1,21 @@
 # Unreleased
 
+## 1.0.6 - 2026-10-26 (Tantra-B only)
+
+Changed: record native instant shield energy/absorption and per-hit State FX.
+Restore source DealDamage gating so defensive casts retain one-shot bonuses.
+Refresh only Tantra-B; preserve Tantra-O data and bundled documentation.
+Verified: real3102 levels1–10 and3145 authority,2,555 Release/Debug checks and
+two GPU cases, shield-only visible-pixel captures, ranged arrival, equipment/death
+cleanup, two88-check SDL workflows, status/skill/projectile/navigation gates
+and clean packaging. The earlier measured performance baseline stays pinned.
+Failed: reproduce/fix defensive3022 consuming3059; test fixture funding and
+passive-versus-active attack selection are corrected. Missing3145 FX remains
+recorded and skipped without an alias. Accepted final checks pass.
+Remaining: wider buff/strike, periodic/area/monster-state services, special
+skill patterns, other maps and broader visual/performance/release acceptance.
+No full-game gate or new performance gain is claimed.
+
 ## 1.0.5 - 2026-10-26 (Tantra-B only)
 
 Changed: record native default monster melee/ranged selection, locked skill/TAB
@@ -80,6 +96,6 @@ Remaining: real browser layout acceptance.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 92/254 named tasks checked (36%); 3/10 gates recorded. Latest: Native monster default ranged attacks. Replace fixed-range idSkill0 attacks with source default melee/ranged selection and locked MONSkill animation/TAB timing. Monsters2004/2005 pass eight fine/coarse encounters and three GPU cases in Debug/Release, including visible follow/impact and eight lifecycle/rebind checks. SDL combat/audio/Prana and88 buff/equipment checks pass. The current build has six isolated profile trials/7,200 measured frames; dense43-actor medians9.67–9.87ms include4.10–4.16ms CPU pose work. Special-skill patterns, timed monster states and wider skill services remain open. Remaining native skill/FX and complete map/game acceptance stay open.
+- **Tantra-B**: 92/254 named tasks checked (36%); 3/10 gates recorded. Latest: Native shield energy and per-hit FX. Implement source instant shield/break cases and physical/elemental absorption, preserving native rounding, energy and exhaustion flags. Real3102 levels1–10 and3145 authority pass2,555 checks in Release/Debug, including two GPU cases, shield-only visible-pixel comparisons, ranged arrival, equipment and death cleanup. Restore the DealDamage guard so defensive3022 retains3059's bonus until damaging3007. Shield and ordinary-buff SDL workflows each pass88 checks; status/skill/projectile/navigation regressions and packaging pass. Missing3145 FX is recorded and skipped. Wider skill/monster families remain open. Remaining native skill/FX and complete map/game acceptance stay open.
 
 These are separate source checklists, not release-completion percentages.

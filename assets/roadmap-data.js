@@ -2743,6 +2743,7 @@ window.TANTRA_ROADMAP = {
         "Native body/hair/apron action clips, cast looping and retained animation clocks during head/equipment replacement",
         "Committed buff FX retain their owner, age and expiry through actual SDL equip/unequip without recasting or charging TP",
         "Native default monster melee/ranged selection, locked skill/TAB timing and visible authored follow/impact with lifecycle cleanup",
+        "Native instant shield energy, per-hit level1 State FX and defensive casts retaining one-shot attack bonuses",
         "32 static and 8 dynamic native navigation cases; actual SDL immediate attack retargeting",
         "Native menu/camera/quickbar/chat keys; source optional F11 broadcast camera",
         "Six fresh-process persistence legs: Interface.sys, equipment attachments, quick slots, independent audio and three Mandara village zones",
@@ -2755,6 +2756,11 @@ window.TANTRA_ROADMAP = {
         "Complete other-map and in-game portal transitions, native AI/services, online gameplay and matched visual acceptance"
       ],
       "changes": [
+        {
+          "date": "2026-10-26",
+          "title": "Native shield energy and per-hit FX",
+          "text": "Implement source instant shield/break cases and physical/elemental absorption, preserving native rounding, energy and exhaustion flags. Real3102 levels1–10 and3145 authority pass2,555 checks in Release/Debug, including two GPU cases, shield-only visible-pixel comparisons, ranged arrival, equipment and death cleanup. Restore the DealDamage guard so defensive3022 retains3059's bonus until damaging3007. Shield and ordinary-buff SDL workflows each pass88 checks; status/skill/projectile/navigation regressions and packaging pass. Missing3145 FX is recorded and skipped. Wider skill/monster families remain open."
+        },
         {
           "date": "2026-10-26",
           "title": "Native monster default ranged attacks",
@@ -2895,11 +2901,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "783820794475eba5510f10b030a97ba5955d968b85cfdac930148fd035a80bd7"
+      "sha256": "5b1a00e2efc04e72d895400a94430d6a15d31e85399f6ec8048f55e4e1e035bd"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "297acbfd30eeadbd2768a1085400270b803d472733126eb489f81c792e30b7ec"
+      "sha256": "7dd6244dad591a039d3f2cf116926b1f44bd629b5a38972a4dc893c39b31723b"
     }
   },
   "reference": {

@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.5"
+VERSION = "1.0.6"
 
 
 def sha(body):
@@ -89,6 +89,7 @@ def refresh(source):
         "Native body/hair/apron action clips, cast looping and retained animation clocks during head/equipment replacement",
         "Committed buff FX retain their owner, age and expiry through actual SDL equip/unequip without recasting or charging TP",
         "Native default monster melee/ranged selection, locked skill/TAB timing and visible authored follow/impact with lifecycle cleanup",
+        "Native instant shield energy, per-hit level1 State FX and defensive casts retaining one-shot attack bonuses",
         "32 static and 8 dynamic native navigation cases; actual SDL immediate attack retargeting",
         "Native menu/camera/quickbar/chat keys; source optional F11 broadcast camera",
         "Six fresh-process persistence legs: Interface.sys, equipment attachments, quick slots, independent audio and three Mandara village zones",
@@ -101,6 +102,7 @@ def refresh(source):
         "Complete other-map and in-game portal transitions, native AI/services, online gameplay and matched visual acceptance"
     ]
     latest = [
+        {"date": "2026-10-26", "title": "Native shield energy and per-hit FX", "text": "Implement source instant shield/break cases and physical/elemental absorption, preserving native rounding, energy and exhaustion flags. Real3102 levels1–10 and3145 authority pass2,555 checks in Release/Debug, including two GPU cases, shield-only visible-pixel comparisons, ranged arrival, equipment and death cleanup. Restore the DealDamage guard so defensive3022 retains3059's bonus until damaging3007. Shield and ordinary-buff SDL workflows each pass88 checks; status/skill/projectile/navigation regressions and packaging pass. Missing3145 FX is recorded and skipped. Wider skill/monster families remain open."},
         {"date": "2026-10-26", "title": "Native monster default ranged attacks", "text": "Replace fixed-range idSkill0 attacks with source default melee/ranged selection and locked MONSkill animation/TAB timing. Monsters2004/2005 pass eight fine/coarse encounters and three GPU cases in Debug/Release, including visible follow/impact and eight lifecycle/rebind checks. SDL combat/audio/Prana and88 buff/equipment checks pass. The current build has six isolated profile trials/7,200 measured frames; dense43-actor medians9.67–9.87ms include4.10–4.16ms CPU pose work. Special-skill patterns, timed monster states and wider skill services remain open."},
         {"date": "2026-10-26", "title": "Buff FX survive equipment replacement", "text": "Fix committed buff visuals losing their destroyed display parent during equip/unequip. Rebind exact owner references while retaining graph age, expiry, socket, geometry and particle/audio state. Real3110 Release/Debug renderer checks and88 actual SDL checks pass; held-pose captures are pixel-identical. Projectile/lifecycle regression and clean packaging pass. The earlier verifier's pre-login skill comparison is corrected to actual world-entry bytes. Wider native skill/monster FX families remain open."},
         {"date": "2026-10-26", "title": "Native hair and apron action phases", "text": "Fix attachments retaining idle clips while the body moves, attacks or casts. Audit7,024 binding sets and889 clips;424 renderer cases verify native attack/skill clips,1,651 clock checks,56 hair selections and model replacement. Actual SDL3124 adds39 socket checks. Debug/Release, projectile/buff cleanup and six persistence legs pass. The corrected build has a separate7,200-frame profile baseline; remaining native skill/monster FX families stay open."},
@@ -131,7 +133,7 @@ def refresh(source):
             content = re.sub(r"Version: \d+\.\d+\.\d+", "Version: " + VERSION, content)
             content = content.replace("Version: " + VERSION + " Reviewed:", "Version: " + VERSION + ". Reviewed:")
         elif "## " + VERSION not in content:
-            content = content.replace("# Unreleased\n", "# Unreleased\n\n## " + VERSION + " - 2026-10-26 (Tantra-B only)\n\nChanged: record native default monster melee/ranged selection, locked skill/TAB\ntiming and separately owned ranged follow/impact. Refresh only Tantra-B.\nVerified: Debug/Release eight encounters/three GPU cases/eight lifecycle checks;\nmatched visible-pixel captures, projectile/navigation/marker CPU gates, native\nSDL combat/audio/Prana and88 buff/equipment checks, clean packaging and six\nisolated profile trials/7,200 measured frames. Tantra-O/docs stay unchanged.\nFailed: initial tests assumed the first native swing would hit and sampled a\nshort impact after expiry; both are corrected without changing RNG/assets.\nAn initially unbuilt Debug marker probe was built and its gate passed on retest.\nRemaining: special-skill patterns, monster area/timed states, wider buff/strike\nservices, other maps, online gameplay and rendering optimisations. No broad\ngame gate or isolated optimisation gain is newly accepted.\n")
+            content = content.replace("# Unreleased\n", "# Unreleased\n\n## " + VERSION + " - 2026-10-26 (Tantra-B only)\n\nChanged: record native instant shield energy/absorption and per-hit State FX.\nRestore source DealDamage gating so defensive casts retain one-shot bonuses.\nRefresh only Tantra-B; preserve Tantra-O data and bundled documentation.\nVerified: real3102 levels1–10 and3145 authority,2,555 Release/Debug checks and\ntwo GPU cases, shield-only visible-pixel captures, ranged arrival, equipment/death\ncleanup, two88-check SDL workflows, status/skill/projectile/navigation gates\nand clean packaging. The earlier measured performance baseline stays pinned.\nFailed: reproduce/fix defensive3022 consuming3059; test fixture funding and\npassive-versus-active attack selection are corrected. Missing3145 FX remains\nrecorded and skipped without an alias. Accepted final checks pass.\nRemaining: wider buff/strike, periodic/area/monster-state services, special\nskill patterns, other maps and broader visual/performance/release acceptance.\nNo full-game gate or new performance gain is claimed.\n")
         path.write_text(content, encoding="utf-8", newline="\n")
     readme = ROOT / "README.md"
     content = re.sub(r"Version: \d+\.\d+\.\d+", "Version: " + VERSION, readme.read_text(encoding="utf-8"))
