@@ -1,5 +1,17 @@
 # Unreleased
 
+## 1.0.3 - 2026-10-26 (Tantra-B only)
+
+Changed: record native body/hair/apron action phases and the corrected build's
+independent CPU/GPU/loading baseline. Refresh only Tantra-B source tasks/data.
+Verified:7,024 binding sets,424 GPU playback cases,39 actual SDL socket checks,
+Debug/Release CPU gates, projectile/buff cleanup, six persistence legs and
+7,200 measured frames. Tantra-O data and276 documentation files stay unchanged.
+Failed: historical attempts and the absent PCAni31159/FX references remain
+recorded in the source plan; no missing asset is substituted. Final checks pass.
+Remaining: native skill/monster FX families, outfit/visual coverage, other maps,
+online gameplay and rendering optimisations; no new broad gate is accepted.
+
 ## 1.0.2 - 2026-10-26 (Tantra-B only)
 
 Changed: refresh only Tantra-B snapshots, checked tasks, native data/FX/hotkeys,
@@ -39,6 +51,6 @@ Remaining: real browser layout acceptance.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 91/253 named tasks checked (36%); 3/10 gates recorded. Latest: Persistence and controlled performance baseline. Six isolated restart/relogin/character/village legs pass. Saved quickbar orientation and key mode are fixed; equipment attachments and independent live audio restore. Six Release profile trials measure 7,200 frames: dense field43 actors median9.68 to9.73ms, CPU pose4.12ms, GPU1.45 to1.64ms. Dense actor creation stalls365 to370ms. No optimisation gain or broad game gate is claimed. Remaining native skill/FX and complete map/game acceptance stay open.
+- **Tantra-B**: 92/254 named tasks checked (36%); 3/10 gates recorded. Latest: Native hair and apron action phases. Fix attachments retaining idle clips while the body moves, attacks or casts. Audit7,024 binding sets and889 clips;424 renderer cases verify native attack/skill clips,1,651 clock checks,56 hair selections and model replacement. Actual SDL3124 adds39 socket checks. Debug/Release, projectile/buff cleanup and six persistence legs pass. The corrected build has a separate7,200-frame profile baseline; remaining native skill/monster FX families stay open. Remaining native skill/FX and complete map/game acceptance stay open.
 
 These are separate source checklists, not release-completion percentages.

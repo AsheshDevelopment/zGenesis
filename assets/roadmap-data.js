@@ -1626,6 +1626,12 @@ window.TANTRA_ROADMAP = {
               "children": []
             },
             {
+              "id": "P07-11a",
+              "done": true,
+              "text": "Bind native movement/attack/skill body, hair and apron clips together; verify all source attack rows/tribes/variants, selected live skill phases and head/equipment clock retention. Missing source records are logged without aliases; complete outfit/flag/visual coverage remains P07-11/P07-08.",
+              "children": []
+            },
+            {
               "id": "P07-13",
               "done": false,
               "text": "Calculate conservative animated/attachment bounds for rendering, picking and shadows.",
@@ -1734,9 +1740,9 @@ window.TANTRA_ROADMAP = {
             "text": "ashesh / ashesh opens copied roster without HTTP/server. Preview matches seed appearance/equipment and pose fixtures. Fresh disposable profiles pass create/select/delete/validation/retry once in ZFLauncher. Original saves are unchanged.",
             "children": []
           },
-          "done": 21,
-          "total": 32,
-          "percent": 66
+          "done": 22,
+          "total": 33,
+          "percent": 67
         },
         {
           "id": "C04",
@@ -2734,6 +2740,7 @@ window.TANTRA_ROADMAP = {
         "Direct TantraParam.tpa and HPK resources; Philippine English names; server-only data and saves outside the client",
         "Native INTRO, eight tribe previews, equipment/sockets, native UI and ordinary durable offline services",
         "Source hit markers, projectile arrival costs, elemental trails and represented persistent skill-state cleanup",
+        "Native body/hair/apron action clips, cast looping and retained animation clocks during head/equipment replacement",
         "32 static and 8 dynamic native navigation cases; actual SDL immediate attack retargeting",
         "Native menu/camera/quickbar/chat keys; source optional F11 broadcast camera",
         "Six fresh-process persistence legs: Interface.sys, equipment attachments, quick slots, independent audio and three Mandara village zones",
@@ -2746,6 +2753,11 @@ window.TANTRA_ROADMAP = {
         "Complete other-map and in-game portal transitions, native AI/services, online gameplay and matched visual acceptance"
       ],
       "changes": [
+        {
+          "date": "2026-10-26",
+          "title": "Native hair and apron action phases",
+          "text": "Fix attachments retaining idle clips while the body moves, attacks or casts. Audit7,024 binding sets and889 clips;424 renderer cases verify native attack/skill clips,1,651 clock checks,56 hair selections and model replacement. Actual SDL3124 adds39 socket checks. Debug/Release, projectile/buff cleanup and six persistence legs pass. The corrected build has a separate7,200-frame profile baseline; remaining native skill/monster FX families stay open."
+        },
         {
           "date": "2026-10-26",
           "title": "Persistence and controlled performance baseline",
@@ -2792,8 +2804,8 @@ window.TANTRA_ROADMAP = {
           "text": "ZFLauncher uses its dedicated client/profile. OGRE runtime results are not transferred to bgfx acceptance."
         }
       ],
-      "done": 91,
-      "total": 253,
+      "done": 92,
+      "total": 254,
       "percent": 36,
       "accepted": 3
     }
@@ -2871,11 +2883,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "ec3dbc12f6b62a3c49111179bd38d3098e2fa280c8b99656ab7369e9c599fbd2"
+      "sha256": "4410ddaa88cdde753c18c0c2bc4e81d82275d886ec895acf18adf8f9140478c7"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "847e4d09ed2e8de3049211f1d1c62809861bb3f6909ddd85759a570c2f6c840b"
+      "sha256": "9e093b4211c6c0237cf7426f50c009503ca16fcdd7fc55241c936285b8615890"
     }
   },
   "reference": {

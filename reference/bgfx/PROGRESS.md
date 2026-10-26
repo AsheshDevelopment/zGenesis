@@ -2,6 +2,27 @@
 
 Updated: 2026-10-26. Status: **runnable offline development client; full plan incomplete**.
 
+## Native body, hair and apron animation sets (2026-10-26)
+
+- [x] Fix hair/apron attachments retaining their creation clips while the body moves, attacks or casts. Decode native state/attack/skill body/front/back triplets and Head/PCAni hair mapping. Apply independent clip rates to the same action duration, source cast looping, finite attack playback and key-zero starts. Production world and INTRO selection/idle paths use the new sets.
+- [x] Preserve selected clips and clocks during head/equipment replacement. Keep valid zero-duration hair clips on key zero; log missing optional bindings/payloads without replacing them or searching other clients.
+- [x] Correct the extra mesh/animation count restriction in the name-bound loader. The native engine's 2DE71/2EDDF path searches tracks by name and skips absent branches; its current reference hash/disassembly recheck passes in `socket-native-namebinding.txt`. Keep original mesh hierarchy, bind-matrix, weight bounds and required-track checks. Eight count-different supplied skill cases now render.
+- [x] `socket-animation-render6`:7,024 binding sets,312 attack sets across13 source rows/eight tribes/three variants,6,376 skill-phase sets,889 decoded TABs and one valid static clip. Verify424 GPU playback sets,1,651 body/socket clock checks,424 key-zero starts,56 hair selections and8 head/8 equipment replacements. One unavailable PCAni31159 reference remains in `MISSING_ANIMATIONS.tsv`; it is skipped as requested.
+- [x] Eight focused CPU gates pass in Release and Debug, including native bind/weight/singular-transform checks, normals, animation timestamps, weapon bindings, socket inventory and27 actual projectile/weapon encounters. Logs: `socket-animation-cpu-release1.log` and `socket-animation-cpu-debug1.log`. Debug's encounter matrix takes193.96s; it completes successfully.
+- [x] Actual SDL skill3124/Escape/recast passes39 additional socket clip/loop/phase checks, two body clips, six FX submissions and TP110 to104 (`socket-animation-skill-runtime1`). INTRO roster/selection/idle regression passes (`socket-animation-intro-runtime1`). Protected/default/seed data stay unchanged.
+- [x] `socket-animation-projectile-render2`:27 positive-damage encounters, five cleanup cases and four rendered flight/impact cases pass with the body/socket API. Missing3162 activation1000646 remains recorded; unsupported-runtime warnings are zero. The verifier now distinguishes the user's accepted missing assets from unsupported available effects instead of failing the whole run on an accepted asset gap.
+- [x] `socket-animation-buff-runtime1` retains real3110 buff transaction/180-second expiry, Escape, effect-removal snapshot, death, owner removal and scene cleanup. `socket-animation-persistence1` repeats all six native restart/relogin/character/village legs successfully; protected/default data remain unchanged.
+- [x] Rebaseline the corrected Release independently: `socket-animation-profile1` passes six trials /7,200 measured frames, all delayed GPU samples valid, and unchanged source/runtime/native inputs. Current43-actor field medians10.07–10.28ms include4.23–4.25ms pose work; GPU1.68–1.69ms. Keep the older matrix tied to its own executable; this correctness change is not a same-quality optimisation comparison. Final package check passes in `socket-animation-package1`; Release remains staged.
+
+Historical failed attempts remain retained: the first inventory assumed every
+clip had positive duration; later renderer coverage exposed the count-only
+restriction. The first updated projectile probe treated a legitimate zero-clip
+ready phase as a body-state ID; it now leaves that phase without an animation,
+as production already does. No missing resource was substituted or extracted.
+These checks cover binding/playback and the represented live transactions, not
+every skill service, monster state family, outfit or original-client visual
+comparison. The overall skill/weapon FX goal remains active.
+
 ## Crowded-scene and loading baseline (2026-10-26)
 
 - [x] Add opt-in application/backend scopes and `tools/profile-world.py`. Ordinary play does not read profiling clocks. Record raw CSVs, hardware, native/runtime input and source/executable hashes, scene captures, actor/FX owners, deformed vertices/upload bytes and delayed bgfx CPU/GPU timings.

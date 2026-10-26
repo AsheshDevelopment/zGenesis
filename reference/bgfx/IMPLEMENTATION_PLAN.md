@@ -35,6 +35,8 @@ The next work is ordered below. A passing slice does not close the full plan.
    - [x] Launch supported ordinary bow/dart and action3/5/6 projectile paths at the native TAB attack marker. Use source straight/piercing speeds, extensions and pursuit equations; commit damage and native HP/TP/item costs on arrival. Equipped arrows and active inventory costs follow the native one-arrow/five-stack rules atomically.
    - [x] Render native arrow7091 and bound follow/impact graphs with full native U/V/N orientation, world depth testing and flight-owned cleanup. Keep released shots after ordinary Escape; discard shots after caster death, target generation replacement or scene/population reset. Preserve level1..5/6..8/9..10 FX variants.
    - [x] Verify authoritative hit timing for all12 supplied weapon types at .001/.05-second ticks, plus native3301 straight,3306 pursuit and3162 bow pursuit:27 positive-damage encounters and five lifecycle cases. Melee commits at the source marker; projectile cases keep HP/TP/arrows unchanged until arrival. This matrix does not cover every skill or synthesized dual-wield combination.
+   - [x] Select native body/hair/front-apron/back-apron clips together for movement, attacks, INTRO selection/idle and action/active skill phases. Use source head-type hair mappings, attack-variant apron fields and skill triplets; normalise each live clip to the action duration and retain source looping during cast. Preserve selected clips/clocks during model replacement; retain valid zero-duration socket clips.
+   - [x] Audit7,024 native animation sets /889 decoded clips, including312 attack sets and6,376 skill-phase sets. Verify424 GPU playback sets,1,651 body/socket clock checks,56 hair changes,8 head replacements and8 equipment replacements. Native name-bound loading accepts8 exercised skill cases with differing mesh/track counts while retaining hierarchy, bind/influence and root validation. The one missing PCAni31159 reference is recorded and skipped.
    - [ ] Complete all available projectile/follow FX and remaining attached/area/monster state families. Four real GPU projectile cases render follow/impact geometry and hit digits. Missing authored assets are now recorded and skipped per the user's instruction; retain the historical failed3162 full-FX result without treating that asset gap as a remaining implementation blocker. Extend buff coverage beyond the represented once/loop decoder and real3110 regression; unsupported native node/skill-service cases remain open.
    - [ ] Extend authoritative animation/impact/damage timing to every supported weapon/skill combination and remaining strike phases. The27 encounters and288 binding checks cover distinct bounded matrices.
 3. **Stress-test navigation.**
@@ -51,6 +53,28 @@ The next work is ordered below. A passing slice does not close the full plan.
    - [x] Measure native loading calls, first playable frame, initial nearby actor/FX presentation and settled populated frame. Prioritise animation/pose work, unchanged UI work, then scene submission; use measured loading stalls to plan worker decode/upload budgets. Do not implement or claim optimisation gains before comparison against this baseline.
 
 ### Controlled profiling baseline (2026-10-26)
+
+The first matrix below predates the socket-animation correction. Retain its
+executable/source hashes; use a new measured run of the corrected build before
+claiming equal-quality optimisation gains.
+
+The corrected build now has its own accepted baseline:
+`build/evidence/socket-animation-profile1` (Release SHA256
+`43a9aeb41bf40781f2f76442e699736eaf7adc2d32363e90481bde37bffbdaaa`).
+All six trials /7,200 measured frames pass with the same hardware, settings and
+scene definitions. Native skill3124 runs through the body/socket animation API.
+
+| Corrected animation build | Frame median ms | Frame p95 ms | Frame p99 ms | GPU median ms | Settled populated load ms |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Town4 actors |6.56–6.82|7.62–8.21|8.46–11.50|1.56–1.59|1748–1764|
+| Dense field43 actors |10.07–10.28|11.37–13.70|12.34–15.57|1.68–1.69|2082–2207|
+| Skill/combat40 actors |9.21–9.51|12.64–13.01|17.50–18.58|1.34–1.60|2017–2097|
+
+Worst intervals are20.56/26.29/72.06ms respectively. Dense pose work is4.23–4.25ms
+inside5.57ms animation traversal; initial dense actor creation stalls388–398ms.
+This is the current baseline for subsequent optimisations. The older table is
+historical evidence of the earlier build; animation correctness changed and no
+speedup or regression isolation is inferred from comparing those two cohorts.
 
 `tools/profile-world.py --output build/evidence/NEW_DIRECTORY` uses two trials by
 default, fresh disposable profiles and ordinary SDL selection/skill/attack keys.
@@ -1256,6 +1280,7 @@ Seed the private profile and connect native offline login/server/channel/roster 
 - [x] **P07-05** Handle variable influence counts and bone limits explicitly; never drop extra weights silently.
 - [x] **P07-06** Transform normals correctly during deformation, including nonuniform transforms.
 - [ ] **P07-11** Preserve authored sockets and apron animations; missing optional sockets produce bounded diagnostics.
+- [x] **P07-11a** Bind native movement/attack/skill body, hair and apron clips together; verify all source attack rows/tribes/variants, selected live skill phases and head/equipment clock retention. Missing source records are logged without aliases; complete outfit/flag/visual coverage remains P07-11/P07-08.
 - [ ] **P07-13** Calculate conservative animated/attachment bounds for rendering, picking and shadows.
 - [x] **P11-01** Reuse SQLite character/session data through versioned adapters and schema migrations.
 - [x] **P11-02** Default to `_client_bgfx/userdata/zflauncher`; explicitly seed it once from the current OGRE profile using a read-only SQLite backup and persistent companion-file copies; refuse an existing destination.

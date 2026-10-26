@@ -148,12 +148,12 @@
     "browser_visual_acceptance": "not run"
   },
   "game_launches": 0,
-  "export_manifest_sha256": "9745877b2866ad93e0af932db65b28e9265a368a41f19d52c8743a58a854e068",
+  "export_manifest_sha256": "45f389d89ba067044a84c862e7db14b1411a7038c76bc92d8db6598ec01c742f",
   "source_head": "2247cfc6905300f1b7e50c6a8283309930df14f7",
   "tantra_b_refresh": {
-    "version": "1.0.2",
+    "version": "1.0.3",
     "scope": "Tantra-B only",
-    "tasks": "91/253",
+    "tasks": "92/254",
     "percent": 36,
     "accepted_gates": 3,
     "tantra_o_data_unchanged": true,
@@ -161,8 +161,8 @@
     "source_hashes": "matched to current bgfx workspace",
     "website_checks": {
       "syntax": "passed",
-      "source_data": "{\"result\":\"passed\",\"projects\":[{\"name\":\"Tantra-O\",\"tasks\":\"46/102\",\"coverage\":45,\"accepted\":0},{\"name\":\"Tantra-B\",\"tasks\":\"91/253\",\"coverage\":36,\"accepted\":3}],\"routes\":6,\"zones\":10,\"sourceHashes\":\"matched\",\"navigationAndFilters\":\"passed\",\"browserVisualAcceptance\":\"not_run\",\"gameLaunches\":0}",
-      "rendered_content": "{\"result\":\"passed\",\"renderer\":\"actual roadmap.js with CPU DOM adapter\",\"ogre\":{\"phases\":14,\"tasks\":102,\"checked\":46},\"bgfx\":{\"checkpoints\":10,\"tasks\":253,\"checked\":91},\"defaultPage\":\"Tantra-O\",\"projectSwitching\":\"passed\",\"searchStatusExpandCollapse\":\"passed\",\"browserLayout\":\"not_run\"}"
+      "source_data": "{\"result\":\"passed\",\"projects\":[{\"name\":\"Tantra-O\",\"tasks\":\"46/102\",\"coverage\":45,\"accepted\":0},{\"name\":\"Tantra-B\",\"tasks\":\"92/254\",\"coverage\":36,\"accepted\":3}],\"routes\":6,\"zones\":10,\"sourceHashes\":\"matched\",\"navigationAndFilters\":\"passed\",\"browserVisualAcceptance\":\"not_run\",\"gameLaunches\":0}",
+      "rendered_content": "{\"result\":\"passed\",\"renderer\":\"actual roadmap.js with CPU DOM adapter\",\"ogre\":{\"phases\":14,\"tasks\":102,\"checked\":46},\"bgfx\":{\"checkpoints\":10,\"tasks\":254,\"checked\":92},\"defaultPage\":\"Tantra-O\",\"projectSwitching\":\"passed\",\"searchStatusExpandCollapse\":\"passed\",\"browserLayout\":\"not_run\"}"
     },
     "browser_visual_acceptance": "not rerun; layout code unchanged",
     "game_evidence": "See reference/bgfx/PROGRESS.md; game runtime evidence is separate from website acceptance"
