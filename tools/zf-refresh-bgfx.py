@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.13"
+VERSION = "1.0.14"
 
 
 def sha(body):
@@ -80,8 +80,10 @@ def refresh(source):
     project["total"] = sum(group["total"] for group in project["groups"])
     project["percent"] = (200 * project["done"] + project["total"]) // (2 * project["total"])
     project["accepted"] = sum(bool(group["gate"] and group["gate"]["done"]) for group in project["groups"])
-    project["description"] = "C02/C05 offline checkpoints remain accepted. Original altar UI, authoritative native refinement and32 secret-whisper source commands are implemented and verified. P16-03 closes; complete advanced NPC, quest, social/online and other command dependencies remain open. Game source is uncommitted."
+    project["description"] = "C06 now has all 19 represented tasks accepted: native inventory/equipment/consumables, merchant/repair/warehouse/save-point services and basic offline combat. Source-backed off-hand rules, authored reactions, combat-sight disengagement and direct warehouse equipment transfers are verified. Full AI, timed consumables, online and broader gameplay remain C09. Game source is uncommitted."
     project["foundations"] = [
+        "C06: native dual-dagger/bow/arrow placement, atomic occupied swaps, split/merge/cancel and ordinary consumable recovery; direct warehouse/equipment transfers",
+        "C06: authored HIT/DIE durations and finite restarts, native combat-sight disengagement, target indicators/facing, source hit markers and durable encounter outcomes",
         "Native portal1000 altar UI, exact main/sub refinement and additive rules, persistent100-card percentage decks, stale-instance rejection and SQLite outcomes",
         "Both original whisper/message fields,32 authenticated offline source commands, exact Fors838 spellings and a complete287-entry availability inventory",
         "Source-backed coloured item/skill hover documents, instance refinement/durability/requirements and merchant context; current/next skill effects and costs",
@@ -126,6 +128,7 @@ def refresh(source):
         {"date": "2026-10-26", "title": "Default hotkeys and monster impact correction", "text": "Native menu, movement, camera, quickbar and chat bindings pass63 actual SDL checks plus earned F-pickup and retarget regressions. F11 retains optional source broadcast behaviour. Monster activation/impact columns and case-insensitive graph lookup are corrected; actual monster2001 impact geometry/depth passes."}
     ]
     latest.insert(0, {"date": "2026-10-27", "title": "Altar refinement and native whisper commands", "text": "Implement original portal1000 picking, window236, animated orb, inventory offers, source costs and confirmation/result UI. Compile active Server.cpp main/sub refinement and native percentage decks with Global-version item masks. Verify5,619 refinement assertions/1,000 attempts,433 command parser checks,32 commands exercised through live authority,145 command runtime checks and59 altar SDL checks with SQLite/profile protection. Debug/Release each pass17 focused tests. Restore the source secret-whisper path deliberately offline;287 command inventory entries distinguish aliases and unavailable server systems. P16-03 closes:126/254 tasks (50%), five gates. Missing6526 and zero donation/GM refinement modifiers remain recorded; advanced NPC/quest/social/online work stays open."})
+    latest.insert(0, {"date": "2026-10-28", "title": "C06 ordinary services and basic combat accepted", "text": "Close all 19 C06 tasks after implementing native off-hand and bow/arrow placement, atomic final-slot validation, direct warehouse/equipment transfers, consumable unpack fallback, authored monster HIT/DIE timing and finite restarts, combat-sight disengagement and range-aware approach. Debug/Release each pass 27 focused tests; the new authority matrix covers 27 inventory and eight fine/coarse combat cases with exact 80/10/10 normal/critical/miss decks. Nine actual SDL legs verify inventory, selection/attack FX and facing, defeat/reward/pickup, death/revival, warehouse/save point, paid repair/buy/sell and money/capacity failures, plus fresh-process reloads. SQLite and protected/default/seed preservation and 55-file packaging pass. Record missing Global arrow 7091 and use supplied 7092 only in the owned fixture. Correct stale headless zoom setup and private test fixtures. P07-12, P11-06, P12-01, P12-04 and P12-05a/06a/07a close:133/254 (52%), five gates. Full AI/roam, timed consumables, online services, complete loot/penalties and other maps remain C09."})
     titles = {change["title"] for change in latest}
     project["changes"] = latest + [change for change in project["changes"] if change["title"] not in titles]
     # OGRE data and all bundled OGRE documentation remain byte-identical.
@@ -152,24 +155,25 @@ def refresh(source):
         if name == "docs/PROGRESS.md":
             content = re.sub(r"Version: \d+\.\d+\.\d+", "Version: " + VERSION, content)
             content = content.replace("Version: " + VERSION + " Reviewed:", "Version: " + VERSION + ". Reviewed:")
-            content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-10-27.", content)
+            content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-10-28.", content)
         elif "## " + VERSION not in content:
             entry = """# Unreleased
 
-## 1.0.13 - 2026-10-27 (Tantra-B only)
+## 1.0.14 - 2026-10-28 (Tantra-B only)
 
-Changed: add source-native altar refinement and32 offline secret-whisper
-commands; publish the full command inventory and check P16-03.
-Verified: Debug/Release each pass17 focused tests;5,619 refinement assertions,
-433 parser checks,145 command and59 altar SDL checks with SQLite/profile
-preservation. Package closure contains55 owned files. Source/DOM export checks
-are rerun; website layout is unchanged.
-Failed/corrected: an initial command probe clicked the hidden chat field before
-Enter; the UI inventory assertion expected31 rather than33 native windows.
-Corrected fresh command/altar runs and final focused checks pass.
-Remaining: missing6526, zero donation/GM refinement modifiers, and complete
-advanced NPC/quest/social/online command dependencies. Tantra-B is126/254 (50%),
-five gates. Preserve Tantra-O data/docs; game source remains uncommitted.
+Changed: complete all 19 C06 tasks with native equipment placement, inventory
+operations, direct warehouse/equipment movement and basic combat lifecycle fixes.
+Use authored monster reactions and combat sight; retain original hit timing.
+Verified: Debug/Release each pass 27 focused tests. The authority matrix covers
+27 inventory and eight combat cases; nine actual SDL legs verify services,
+combat, failures and fresh-process persistence. Protected/default/seed hashes,
+SQLite and the clean 55-file package pass. Source/DOM export checks are rerun.
+Failed/corrected: a stale camera fixture omitted explicit extended zoom; private
+dagger/arrow fixtures were corrected from the selected source data. Missing
+Global arrow 7091 is recorded; supplied 7092 is used only in the owned fixture.
+Remaining: complete AI/roam, timed consumables, online services, full loot/
+penalties and other maps remain C09. Tantra-B is 133/254 (52%), five gates.
+Preserve Tantra-O data/docs; game source remains uncommitted.
 """
             content = content.replace("# Unreleased\n", entry)
 

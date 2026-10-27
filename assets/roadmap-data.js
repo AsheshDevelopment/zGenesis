@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "C02/C05 offline checkpoints remain accepted. Original altar UI, authoritative native refinement and32 secret-whisper source commands are implemented and verified. P16-03 closes; complete advanced NPC, quest, social/online and other command dependencies remain open. Game source is uncommitted.",
+      "description": "C06 now has all 19 represented tasks accepted: native inventory/equipment/consumables, merchant/repair/warehouse/save-point services and basic offline combat. Source-backed off-hand rules, authored reactions, combat-sight disengagement and direct warehouse equipment transfers are verified. Full AI, timed consumables, online and broader gameplay remain C09. Game source is uncommitted.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -1646,7 +1646,7 @@ window.TANTRA_ROADMAP = {
             {
               "id": "P11-02",
               "done": true,
-              "text": "Default to _client_bgfx/userdata/zflauncher; explicitly seed it once from the current OGRE profile using a read-only SQLite backup and persistent companion-file copies; refuse an existing destination.",
+              "text": "Default to _remake_bgfx/userdata/zflauncher; explicitly seed it once from the current OGRE profile using a read-only SQLite backup and persistent companion-file copies; refuse an existing destination.",
               "children": []
             },
             {
@@ -2032,13 +2032,13 @@ window.TANTRA_ROADMAP = {
           "tasks": [
             {
               "id": "P07-12",
-              "done": false,
+              "done": true,
               "text": "Keep action animation locks, impact times, facing, blend completion and loop rules source-backed.",
               "children": []
             },
             {
               "id": "P11-06",
-              "done": false,
+              "done": true,
               "text": "Preserve native inventory/equipment placement, stacking, splitting, occupied-slot and consumable actions.",
               "children": []
             },
@@ -2074,13 +2074,13 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P12-01",
-              "done": false,
+              "done": true,
               "text": "Port target selection/selection arrow, approach, attack range and facing.",
               "children": []
             },
             {
               "id": "P12-04",
-              "done": false,
+              "done": true,
               "text": "Maintain action locks without freezing simulation/input pumping.",
               "children": []
             },
@@ -2098,19 +2098,19 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P12-05a",
-              "done": false,
+              "done": true,
               "text": "Accept represented basic melee hit/miss/critical/block and impact feedback under pinned source rules.",
               "children": []
             },
             {
               "id": "P12-06a",
-              "done": false,
+              "done": true,
               "text": "Port baseline encounter idle/move/chase/attack/hurt/death; retain complete AI/respawn gaps.",
               "children": []
             },
             {
               "id": "P12-07a",
-              "done": false,
+              "done": true,
               "text": "Accept baseline encounter routing/leash/facing with authoritative ranges; full native AI remains open.",
               "children": []
             },
@@ -2151,9 +2151,9 @@ window.TANTRA_ROADMAP = {
             "text": "Buy/sell/repair and item/Rupiah deposit/withdraw conserve state; save-point and current/saved cells survive exit/reload. Basic encounter applies hit/death and represented rewards. Failure/stale/capacity paths and source hashes pass. Full active skills/AI/loot remain open.",
             "children": []
           },
-          "done": 12,
+          "done": 19,
           "total": 19,
-          "percent": 63
+          "percent": 100
         },
         {
           "id": "C07",
@@ -2736,6 +2736,8 @@ window.TANTRA_ROADMAP = {
         }
       ],
       "foundations": [
+        "C06: native dual-dagger/bow/arrow placement, atomic occupied swaps, split/merge/cancel and ordinary consumable recovery; direct warehouse/equipment transfers",
+        "C06: authored HIT/DIE durations and finite restarts, native combat-sight disengagement, target indicators/facing, source hit markers and durable encounter outcomes",
         "Native portal1000 altar UI, exact main/sub refinement and additive rules, persistent100-card percentage decks, stale-instance rejection and SQLite outcomes",
         "Both original whisper/message fields,32 authenticated offline source commands, exact Fors838 spellings and a complete287-entry availability inventory",
         "Source-backed coloured item/skill hover documents, instance refinement/durability/requirements and merchant context; current/next skill effects and costs",
@@ -2764,6 +2766,11 @@ window.TANTRA_ROADMAP = {
         "Broaden distinct-map/portal, visual/performance/recovery and release acceptance without inferring FPS gains from caching"
       ],
       "changes": [
+        {
+          "date": "2026-10-28",
+          "title": "C06 ordinary services and basic combat accepted",
+          "text": "Close all 19 C06 tasks after implementing native off-hand and bow/arrow placement, atomic final-slot validation, direct warehouse/equipment transfers, consumable unpack fallback, authored monster HIT/DIE timing and finite restarts, combat-sight disengagement and range-aware approach. Debug/Release each pass 27 focused tests; the new authority matrix covers 27 inventory and eight fine/coarse combat cases with exact 80/10/10 normal/critical/miss decks. Nine actual SDL legs verify inventory, selection/attack FX and facing, defeat/reward/pickup, death/revival, warehouse/save point, paid repair/buy/sell and money/capacity failures, plus fresh-process reloads. SQLite and protected/default/seed preservation and 55-file packaging pass. Record missing Global arrow 7091 and use supplied 7092 only in the owned fixture. Correct stale headless zoom setup and private test fixtures. P07-12, P11-06, P12-01, P12-04 and P12-05a/06a/07a close:133/254 (52%), five gates. Full AI/roam, timed consumables, online services, complete loot/penalties and other maps remain C09."
+        },
         {
           "date": "2026-10-27",
           "title": "Altar refinement and native whisper commands",
@@ -2865,9 +2872,9 @@ window.TANTRA_ROADMAP = {
           "text": "ZFLauncher uses its dedicated client/profile. OGRE runtime results are not transferred to bgfx acceptance."
         }
       ],
-      "done": 126,
+      "done": 133,
       "total": 254,
-      "percent": 50,
+      "percent": 52,
       "accepted": 5
     }
   ],
@@ -2944,11 +2951,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "bd0d3a97eb1893ea447648bafdb95023f224291c9e3739c1bf58d2ed678afa90"
+      "sha256": "c82a1ef42a2e2683e47e5e373bba9c4977fdaa281869e2fb5bf27fbc823ac855"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "61e6b96f2ac1c61ec477eb4912fc8038a256ac70e66e2481031bdb90cd619707"
+      "sha256": "6f962a3f300835449716a6226aa0dc76e422f7961fb294c1597188a304b5e19b"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",

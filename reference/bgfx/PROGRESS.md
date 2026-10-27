@@ -1,6 +1,58 @@
 # ZFLauncher bgfx progress and continuation
 
-Updated: 2026-10-27. Status: **C02 and C05 offline checkpoints accepted and staged; full plan incomplete**.
+Updated: 2026-10-28. Status: **C02, C05 and represented C06 checkpoints accepted and staged; full plan incomplete**.
+
+## C06 ordinary services and basic offline combat (2026-10-28)
+
+Changed: close all 19 represented C06 tasks. Add native dual-dagger mastery/
+tribe/main-hand checks, bow/arrow compatibility, safe final-slot validation and
+direct warehouse/equipment transfers. Character and cargo changes commit in one
+SQLite transaction; dead characters cannot move items. Preserve stack counts,
+splitting/merging, original opaque item fields and cancellation. Restore the
+source unpack fallback when ordinary potion use is cooling down.
+
+Replace fixed monster HIT/DIE timers with original clip durations, restart
+repeated finite reactions and hold completed death poses. Misses do not trigger
+HIT. End chase at the source target-relative combat-sight distance, and choose
+approach points within the active weapon/skill range. The SDL encounter now
+also verifies original selection/attack graphs, bound actor ownership, facing
+and finite basic attack animation.
+
+Verified: final Debug/Release builds each pass 27 focused CTests.
+The Debug matrix takes about 850 seconds; Release takes about 76 seconds.
+These are verification durations; performance acceptance remains C08.
+The authority matrix has 27 inventory and eight fine/coarse encounter cases,
+with 11,031 assertions and exact 80/10/10 normal/critical/miss decks. Nine SDL
+legs on one staged executable pass: 42 inventory checks; melee defeat, Pranas/
+loot and both attack sounds; actual player death/finished pose/native revival;
+warehouse/save-point and direct cargo/equipment round trips; paid repair/buy/
+sell; insufficient money and full inventory; two fresh-process reloads.
+
+SQLite retains complete item metadata, counts, money, saved cells, other
+characters and cargo. Warehouse money is conserved; its revision advances six
+steps, including equipment to/from cargo. Repair costs 15 (durability 0 to 4500),
+buy costs 225 and sell returns 37. Package closure is 55 owned files. All protected,
+normal/default and imported seed hashes stay unchanged; captures are reviewed.
+
+Evidence: `build/evidence/C06_ACCEPTANCE.json` passes after both configuration
+test logs, all nine runtime legs and protected SQLite/profile audits pass. Its input matrix is
+`build/C06_ACCEPTANCE_MATRIX.json`; source pins and version/behaviour boundaries
+are in `docs/evidence/c06-source.json`. Final runtime folders are
+`c06-accepted-*`; failed and earlier outputs remain separate. Staged Release
+SHA256: `2729f201264cf0c1c684f242748bab7e6f9e6956aa3a5b9d6ed864b1e8aeaaa8`.
+
+Failed/corrected: the older world probe assumed extended zoom was the camera
+default; configure its explicit 450 limit, as the live client already does.
+The private dual-wield fixture initially used sword 4001 rather than a dagger;
+use the real dagger row. The default arrow 7091 is absent from the Global export;
+record it and use supplied 7092 in the owned fixture. The inventory camera fixture
+now starts at the normal clear town cell. A mistyped build target was corrected.
+
+Remaining: complete AI/roaming/special-skill patterns, timed and other advanced
+consumables, online services, complete loot/penalties and other maps stay in C09.
+P07-12, P11-06, P12-01, P12-04 and P12-05a/06a/07a now close; Tantra-B becomes
+133/254 tasks (52%), still five accepted gates because the minimum C06 gate was
+already checked. Game source remains local/uncommitted.
 
 ## Altar refinement and native whisper commands (2026-10-27)
 

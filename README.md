@@ -3,7 +3,7 @@
 Standalone website for **Tantra-O** (OGRE / HTLauncher) and **Tantra-B** (bgfx /
 ZFLauncher). Tantra-O is the default page. Design follows the supplied local
 zGenesis reference: charcoal/coral colours, large hero, progress bars and
-expandable workstreams. Version: 1.0.13.
+expandable workstreams. Version: 1.0.14.
 
 Open `index.html`, or serve this repository root with Python's HTTP server.
 Use `#tantra-o` and `#tantra-b` for each roadmap. Tasks and Changelogs retain the

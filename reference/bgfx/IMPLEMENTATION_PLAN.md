@@ -1,6 +1,6 @@
 # ZFLauncher bgfx offline implementation plan and progress
 
-Updated: 2026-10-27. Target: C++20, Windows x64, SDL3, bgfx/D3D11 and SQLite.
+Updated: 2026-10-28. Target: C++20, Windows x64, SDL3, bgfx/D3D11 and SQLite.
 Owned workspace: `C:\_GitHub\TantraSrc\_remake_bgfx`.
 Primary reuse baseline: `C:\_GitHub\TantraSrc\_remake`.
 Dedicated final client: `C:\_GitHub\TantraSrc\_client_bgfx`.
@@ -1443,7 +1443,7 @@ Seed the private profile and connect native offline login/server/channel/roster 
 - [x] **P07-11a** Bind native movement/attack/skill body, hair and apron clips together; verify all source attack rows/tribes/variants, selected live skill phases and head/equipment clock retention. Missing source records are logged without aliases; complete outfit/flag/visual coverage remains P07-11/P07-08.
 - [ ] **P07-13** Calculate conservative animated/attachment bounds for rendering, picking and shadows.
 - [x] **P11-01** Reuse SQLite character/session data through versioned adapters and schema migrations.
-- [x] **P11-02** Default to `_client_bgfx/userdata/zflauncher`; explicitly seed it once from the current OGRE profile using a read-only SQLite backup and persistent companion-file copies; refuse an existing destination.
+- [x] **P11-02** Default to `_remake_bgfx/userdata/zflauncher`; explicitly seed it once from the current OGRE profile using a read-only SQLite backup and persistent companion-file copies; refuse an existing destination.
 - [x] **P11-03** Keep `ashesh / ashesh` as the local test identity only; do not seed production credentials.
 - [x] **P11-04** Restore level, Chakra, skills, quick slots, inventory/equipment, cargo, money and saved zone/cells.
 - [ ] **P13-01** Port typed FX catalogs and authored TFX node lifetimes/attachments.
@@ -1590,23 +1590,23 @@ Port inventory/equipment/ordinary consumables, shops/repair/warehouse/save point
 
 **Owned backlog tasks:**
 
-- [ ] **P07-12** Keep action animation locks, impact times, facing, blend completion and loop rules source-backed.
-- [ ] **P11-06** Preserve native inventory/equipment placement, stacking, splitting, occupied-slot and consumable actions.
+- [x] **P07-12** Keep action animation locks, impact times, facing, blend completion and loop rules source-backed.
+- [x] **P11-06** Preserve native inventory/equipment placement, stacking, splitting, occupied-slot and consumable actions.
 - [x] **P11-07** Show actual item-instance state in tooltips: refinement, durability, effects, limits, count and service context. Native item/skill row order, colours, refinement/sub-refinement, ceil durability units, requirements, count/time, price and merchant contexts are implemented. See the source-backed hover/NPC/birth checkpoint below; the current K3 table has no screenshot mount entry.
 - [x] **P11-08** Wire merchant dialogue and buy/sell confirmations with authoritative prices/counts/revisions.
 - [x] **P11-09** Wire repair, warehouse item/Rupiah movement and save-point confirmation/persistence.
 - [x] **P11-10** Handle stale requests, insufficient money/capacity and invalid selections without client-side optimistic divergence.
 - [x] **P11-12** Verify database before/after state and normal-profile hashes after one isolated acceptance run.
-- [ ] **P12-01** Port target selection/selection arrow, approach, attack range and facing.
-- [ ] **P12-04** Maintain action locks without freezing simulation/input pumping.
+- [x] **P12-01** Port target selection/selection arrow, approach, attack range and facing.
+- [x] **P12-04** Maintain action locks without freezing simulation/input pumping.
 - [x] **P20-06** Accept warehouse/save-point/persistence in ZFLauncher after its own initial creation/deletion checks; omit repeated matrices only when that ZFLauncher path already passed and its dependencies are unchanged.
 - [x] **P20-09** Verify SQLite counts, money, revisions and saved cells after exit; compare normal-profile hashes.
 
 **Additional planning and minimum-slice tasks:**
 
-- [ ] **P12-05a** Accept represented basic melee hit/miss/critical/block and impact feedback under pinned source rules.
-- [ ] **P12-06a** Port baseline encounter idle/move/chase/attack/hurt/death; retain complete AI/respawn gaps.
-- [ ] **P12-07a** Accept baseline encounter routing/leash/facing with authoritative ranges; full native AI remains open.
+- [x] **P12-05a** Accept represented basic melee hit/miss/critical/block and impact feedback under pinned source rules.
+- [x] **P12-06a** Port baseline encounter idle/move/chase/attack/hurt/death; retain complete AI/respawn gaps.
+- [x] **P12-07a** Accept baseline encounter routing/leash/facing with authoritative ranges; full native AI remains open.
 - [x] **P12-08a** Apply represented basic rewards/progression/persistence; full loot/pickup/penalties remain P12-08.
 - [x] **P13-06b** Wire selected basic attack/impact sound/FX; complete event/family coverage remains P13-06.
 - [x] **P11-13a** Verify all four Chakra allocations through native UI frames, SQLite and fresh login/CHAR_INIT; retain source base/bonus semantics.
@@ -1677,6 +1677,37 @@ manifest and the rounded-full case is covered by the authority CPU checks.
 `c06-merchant-final` verifies the staged build after this final rounding change.
 
 - [x] **BG-C06-GATE** Buy/sell/repair and item/Rupiah deposit/withdraw conserve state; save-point and current/saved cells survive exit/reload. Basic encounter applies hit/death and represented rewards. Failure/stale/capacity paths and source hashes pass. Full active skills/AI/loot remain open.
+
+**Current C06 closure (2026-10-28):** all 19 represented tasks above are now
+implemented. Off-hand daggers require the source tribe, one-handed main weapon
+and dual mastery; bows accept arrow stacks. Both final equipment placements are
+validated before committing an occupied-slot exchange. Warehouse/equipment
+movement uses the same rules and a single character/cargo SQLite transaction.
+The native right-click unpack fallback also works when a potion is cooling down.
+
+Monster HIT/DIE uses authored clip durations and finite sequence restarts;
+misses do not start a hit animation. Native combat sight ends out-of-range
+chases, and approach uses the requested weapon/skill range. Target indicators,
+facing, one-shot attacks, source damage markers, recovery/death/revival and
+actual audio/glyphs are checked through the live SDL route.
+
+Final C06 verification passes 27 focused tests per configuration and nine
+actual SDL legs for inventory, melee, revival, warehouse/save point, successful
+and rejected merchant operations, and fresh-process reloads. Full source/data
+provenance is `docs/evidence/c06-source.json`; retained acceptance is
+`build/evidence/C06_ACCEPTANCE.json`. `tools/verify-c06-acceptance.py` refuses
+missing legs, mixed executable hashes, failed SQLite audits or changed protected
+profiles. These checks close the represented C06 slice; complete AI/roaming,
+timed consumables, online services and full loot/penalty/map coverage remain C09.
+
+The selected server declares `eCmbt_Blocked` but does not produce it in ordinary
+combat. The existing zero-damage glyph is preserved; no extra shield-block
+probability is invented. The pinned Global item export lacks arrow7091; only
+the supplied arrow7092 is used in the disposable inventory fixture. The source
+camera keeps its native default; its older headless extended-zoom fixture now
+explicitly requests 450, matching the live client. Historical runs below retain
+the earlier cargo revision increment of four; the current warehouse/equipment
+round trip produces six increments and is the authoritative closure evidence.
 
 ### C07 Current OGRE foundation coverage
 

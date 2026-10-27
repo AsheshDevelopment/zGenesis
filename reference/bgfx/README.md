@@ -7,6 +7,14 @@ through the project-owned bgfx backend. The window/product is **Tantra Online**.
 - [Detailed implementation plan](IMPLEMENTATION_PLAN.md)
 - [Progress and next continuation](PROGRESS.md)
 
+C06 now implements its complete represented offline slice: inventory/equipment,
+stack/split/consumable actions, merchant buy/sell and repair, warehouse item/money
+and direct equipment movement, save points and basic combat/death/revival.
+Source off-hand rules, finite monster reactions, combat-sight chase limits and
+range-aware approach are enforced by the authenticated authority. Advanced AI,
+timed consumables and full online/loot/map coverage remain open in C09.
+See the latest [progress checkpoint](PROGRESS.md) for the current acceptance matrix.
+
 Click a nearby Mandara refinement altar to open its original item/material UI.
 Drag inventory items into the offer, review the source cost and confirm; accepted
 outcomes save to SQLite. Right-click an offered item to remove it.
