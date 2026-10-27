@@ -39,17 +39,14 @@ extracted; new authority masks remain outside the clean client tree.
 
 ## Current work order
 
-1. Native coloured item/skill tooltips, NPC conversation hover/greeting and
-   player/monster birth FX are the current verified implementation slice.
-   Keep mount/version gaps explicit; retain the accepted C02/C05 bounds.
-2. C05 movement/camera/MainUI remains accepted, including its explicit missing
-   authored native-collision limitation.
-3. Retain all five continuation objectives and the wider backlog. Do not expand
-   unfinished combo/conditional-target or periodic skill services in this slice.
-
-The preceding strike batch is retained: five target-independent strike-rule
-cases and eight encounters for skills3026/3012/3109. Full skills3033/3107 still
-need target/combo services. Its CPU pass does not establish complete skill parity.
+1. Keep C08 implementation/benchmark work paused. Nineteen of its 21 tasks
+   have individual evidence; replace the rejected warm combat comparison and
+   enforce matching actor workload before closing P17-13/P17-14 or C08 gate.
+2. The requested Prana fix is verified and staged: native monster Follow FX
+   (DieActivateFX+1) uses the source homing motion and follows a moving player.
+   Preserve selected-only monster names and NPC target cleanup on close.
+3. Publish the Tantra-B checkpoint; keep accepted C02/C05/C06 scope and the
+   paused wider skill/server work. C09 and full release parity remain open.
 
 ## Source-backed hover, NPC and birth FX checkpoint (2026-10-27)
 
@@ -1811,53 +1808,72 @@ Its player on/off/restored images remain exactly reversible.
 
 Refine immutable caches, upload budgets, GPU skinning and pooling against CPU parity. Verify repeated scene retirement, corrupt/missing inputs, renderer recovery, SQLite migration safety and relocatable dependency closure. Modern enhancements never substitute for parity.
 
+**Paused checkpoint:** 19/21 individual tasks verified. P17-13/P17-14 and
+BG-C08-GATE remain open. The warm GPU combat trial revived to town (four
+actors instead of 44); its comparison and aggregate acceptance were rejected.
+The replacement trial was stopped at the user's pause. No overall speedup or
+complete sustained-scene acceptance is claimed.
+
 **Owned backlog tasks:**
 
-- [ ] **P07-04** Implement GPU skinning with a tested palette layout and a correct CPU fallback.
-- [ ] **P07-07** Keep UV/index/bind data immutable; update only pose/instance data during ordinary animation.
-- [ ] **P13-05** Pool emitters/buffers and bound spawns/uploads without changing authored effect timing.
-- [ ] **P17-02** Measure cold/warm startup, INTRO, CHAR_INIT/Mandara readiness and transition stalls separately.
-- [x] **P17-02a** Establish fresh-process native town/dense-field/skill CPU/GPU and destination-loading baselines with raw timings, two trials, hardware/input hashes and captures (`world-profile-matrix1`); disk-cold startup and other maps remain P17-02.
-- [ ] **P17-04** Cache immutable archive indexes, decoded metadata, meshes, textures and bound animation resources.
-- [ ] **P17-05** Use a derived cache keyed by payload hash, reader/schema version, shader version and target backend.
-- [ ] **P17-06** Decode/read on workers and budget GPU uploads so SDL events/loading animation remain responsive.
-- [ ] **P17-07** Prioritize player/ground/essential UI before distant actors or optional FX.
-- [ ] **P17-08** Use spatial culling and material/mesh-compatible instancing; retain transparent sort boundaries.
-- [ ] **P17-09** Skip invisible visual work conservatively while clocks, simulation, sockets and shadow requirements remain correct.
-- [ ] **P17-10** Reuse per-frame memory; avoid heap-heavy map/string lookup and redundant constant updates per draw.
+- [x] **P07-04** Implement GPU skinning with a tested palette layout and a correct CPU fallback.
+- [x] **P07-07** Keep UV/index/bind data immutable; update only pose/instance data during ordinary animation.
+- [x] **P13-05** Pool emitters/buffers and bound spawns/uploads without changing authored effect timing.
+- [x] **P17-02** Measure cold/warm startup, INTRO, CHAR_INIT/Mandara readiness and transition stalls separately.
+- [x] **P17-02a** Establish fresh-process native town/dense-field/skill CPU/GPU and destination-loading baselines with raw timings, two trials, hardware/input hashes and captures (`world-profile-matrix1`); physical disk-cold and other-map coverage remain outside the represented current-map C08 acceptance.
+- [x] **P17-04** Cache immutable archive indexes, decoded metadata, meshes, textures and bound animation resources.
+- [x] **P17-05** Use a derived cache keyed by payload hash, reader/schema version, shader version and target backend.
+- [x] **P17-06** Decode/read on workers and budget GPU uploads so SDL events/loading animation remain responsive.
+- [x] **P17-07** Prioritize player/ground/essential UI before distant actors or optional FX.
+- [x] **P17-08** Use spatial culling and material/mesh-compatible instancing; retain transparent sort boundaries.
+- [x] **P17-09** Skip invisible visual work conservatively while clocks, simulation, sockets and shadow requirements remain correct.
+- [x] **P17-10** Reuse per-frame memory; avoid heap-heavy map/string lookup and redundant constant updates per draw.
 - [x] **P17-11** Cache or sample resource counters; do not rescan every texture/buffer manager per frame.
-- [ ] **P17-12** Bound GPU/CPU/IO memory, queue depth and resource retirement across repeated transitions.
+- [x] **P17-12** Bound GPU/CPU/IO memory, queue depth and resource retirement across repeated transitions.
 - [ ] **P17-13** Compare equal-quality builds; do not claim improvement from reduced shadows/visibility/animation/texture quality.
 - [ ] **P17-14** Define provisional acceptance of sustained 60 FPS at the agreed test resolution on named hardware, then refine from measured baselines.
 - [x] **P17-15** Report median/p95/p99 frame intervals and worst stalls alongside scoped CPU/GPU timings. The six measured native scene trials retain raw samples; no 500-1,000 FPS guarantee or broad performance acceptance is claimed.
-- [ ] **P18-03** Exercise repeated resize/minimize/focus loss and renderer-reset paths explicitly.
-- [ ] **P18-05** Retire GPU handles only after their use is complete; verify shutdown ordering and leaks.
-- [ ] **P18-08** Check selection/retry/return paths for missing sockets, stale render state and duplicate actors/audio.
-- [ ] **P19-10** Retain license notices and omit SDK source/build caches, secrets and unused canonical payloads from the client package.
+- [x] **P18-03** Exercise repeated resize/minimize/focus loss and renderer-reset paths explicitly.
+- [x] **P18-05** Retire GPU handles only after their use is complete; verify shutdown ordering and leaks.
+- [x] **P18-08** Check selection/retry/return paths for missing sockets, stale render state and duplicate actors/audio.
+- [x] **P19-10** Retain license notices and omit SDK source/build caches, secrets and unused canonical payloads from the client package.
 
 **Headless check:** `--check performance-package` with the runner command and a fresh output.
 **Explicit runtime scenario:** `lifecycle-performance`; use separate prepare/run commands and separate outputs for each scenario.
 
-The implemented narrower `performance` scenario samples 240 stationary frames
-after settling, including complete application-frame median/p95/p99, valid
-delayed GPU timing, selected GPU PCI identity, draw calls and shadow quality.
-`c08-idle-frame-sample` records 1024x768, median 9.4455ms, p95 10.6836ms,
-p99 11.4916 ms and GPU median 2.22758ms on the selected NVIDIA GPU
-(vendor4318/device10401, RTX4050 Laptop in the local hardware inventory).
-The machine has an i7-12650H and about 32GB RAM. This short stationary sample is
-not a sustained FPS, matched OGRE quality or loading/recovery acceptance.
-The preceding `c08-frame-sample-final` process overlapped a Debug build and is
-retained as instrumentation evidence, excluded from the idle baseline.
-Frame-stat bitmap updates reuse the unchanged quad; sampled counters replace
-per-frame resource-manager scans. GPU memory budgets and full lifetime accounting
-remain open. Final Debug/Release and four-shader package checks are
-`proceed-accepted-builds`/`proceed-accepted-package`; `proceed-accepted-source-preservation`
-checks 379 original files, nine initial inputs and six repair-source inputs.
-`c08-renderer-reinitialization` passes resize/minimize/restore and three
-shutdown/reinitialize/resource-submission cycles in one process. Every uniform,
-shader, depth and framebuffer handle is invalidated after shutdown; scene,
-lighting and resource caches are cleared before reuse. Full world/device-loss,
-focus/DPI and leak/recovery matrices remain open.
+The current protocol uses one frozen Release executable on the named local
+**i7-12650H / RTX 4050 Laptop**, at **1024x768 HIGH**, 2048px real shadows,
+the same native assets/visibility and VSync off. CPU reference and GPU palette
+paths each run two fresh-process trials of town, dense field and combat, with
+at least 1,200 samples and 60 measured seconds per trial. Trial 1 has an empty
+private application-derived cache; trial 2 reuses it. OS disk cache is
+uncontrolled. A physical disk-cold or fresh-OS result is not implied.
+
+Provisional in-world acceptance is mean and p95 frame interval <=16.667ms and
+p99 <=33.334ms in every GPU trial. Report the worst frame, scoped CPU/GPU work,
+process working set/private bytes, payload/driver counters, queue depth and
+startup/INTRO/CHAR_INIT/loading times independently. Loading has a soft upload
+budget; single native decode/upload/authority operations can exceed it. Record
+actual loading-frame wall intervals, not the verifier's fixed simulation step.
+CPU/GPU comparisons isolate skinning; do not attribute the whole difference to
+caching or claim exact scene pixels across naturally evolving 60-second combat.
+
+The 240-frame `performance` scene and `world-profile-matrix1` remain historical
+baselines. Final evidence is collected from `build/C08_ACCEPTANCE_MATRIX.json`
+into `build/evidence/C08_ACCEPTANCE.json`. The runner's `performance-package`
+selection covers 11 Debug/Release tests, with independent CPU/GPU character,
+world-instancing and native-light pixel reducers. `lifecycle-performance` uses
+eight full map retire/rebuild generations, changing-topology pooled FX, actual
+SDL size/minimise/restore/focus events, finite audio owner cleanup and four
+renderer reinitializations. Shader closure is seven binaries plus the key.
+
+Full distribution tooling includes native HPKs and the supplied loose K3
+TantraParam/HTMessage/NPC/FX tables, which the older default tree omits.
+Guarded relocation uses sibling client/runtime roots, external saves/logs and
+app-local MSVC imports with developer PATH entries removed. Locked-stage and
+native fault/dump checks preserve the original client/default profiles. This
+is same-machine relocation; fresh-OS deployment, OS disk-cold coverage, forced
+physical GPU removal and other-map/online/release matrices remain open.
 
 - [ ] **BG-C08-GATE** Named hardware/scene/quality has median/p95/p99, stalls, loading and memory evidence. Provisional sustained 60 FPS target uses recorded resolution; it is not a claimed result. Debug/Release, relocation and repeated lifecycle checks preserve assets/saves. C09 claims remain open.
 

@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "C06 now has all 19 represented tasks accepted: native inventory/equipment/consumables, merchant/repair/warehouse/save-point services and basic offline combat. Source-backed off-hand rules, authored reactions, combat-sight disengagement and direct warehouse equipment transfers are verified. Full AI, timed consumables, online and broader gameplay remain C09. Game source is uncommitted.",
+      "description": "C08 has individual evidence for 19/21 tasks: GPU skinning with CPU fallback, bounded caches/workers/uploads, instancing, FX pooling, recovery and a full relocatable package. The phase gate remains open: a warm combat run revived to town and changed its actor workload. Native Prana Follow FX now homes to the live player, including movement and model replacement; this bounded fix does not resume the paused benchmark work. Monster names are selected-only and NPC close clears its target. Game source is uncommitted.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -2308,73 +2308,73 @@ window.TANTRA_ROADMAP = {
           "tasks": [
             {
               "id": "P07-04",
-              "done": false,
+              "done": true,
               "text": "Implement GPU skinning with a tested palette layout and a correct CPU fallback.",
               "children": []
             },
             {
               "id": "P07-07",
-              "done": false,
+              "done": true,
               "text": "Keep UV/index/bind data immutable; update only pose/instance data during ordinary animation.",
               "children": []
             },
             {
               "id": "P13-05",
-              "done": false,
+              "done": true,
               "text": "Pool emitters/buffers and bound spawns/uploads without changing authored effect timing.",
               "children": []
             },
             {
               "id": "P17-02",
-              "done": false,
+              "done": true,
               "text": "Measure cold/warm startup, INTRO, CHAR_INIT/Mandara readiness and transition stalls separately.",
               "children": []
             },
             {
               "id": "P17-02a",
               "done": true,
-              "text": "Establish fresh-process native town/dense-field/skill CPU/GPU and destination-loading baselines with raw timings, two trials, hardware/input hashes and captures (world-profile-matrix1); disk-cold startup and other maps remain P17-02.",
+              "text": "Establish fresh-process native town/dense-field/skill CPU/GPU and destination-loading baselines with raw timings, two trials, hardware/input hashes and captures (world-profile-matrix1); physical disk-cold and other-map coverage remain outside the represented current-map C08 acceptance.",
               "children": []
             },
             {
               "id": "P17-04",
-              "done": false,
+              "done": true,
               "text": "Cache immutable archive indexes, decoded metadata, meshes, textures and bound animation resources.",
               "children": []
             },
             {
               "id": "P17-05",
-              "done": false,
+              "done": true,
               "text": "Use a derived cache keyed by payload hash, reader/schema version, shader version and target backend.",
               "children": []
             },
             {
               "id": "P17-06",
-              "done": false,
+              "done": true,
               "text": "Decode/read on workers and budget GPU uploads so SDL events/loading animation remain responsive.",
               "children": []
             },
             {
               "id": "P17-07",
-              "done": false,
+              "done": true,
               "text": "Prioritize player/ground/essential UI before distant actors or optional FX.",
               "children": []
             },
             {
               "id": "P17-08",
-              "done": false,
+              "done": true,
               "text": "Use spatial culling and material/mesh-compatible instancing; retain transparent sort boundaries.",
               "children": []
             },
             {
               "id": "P17-09",
-              "done": false,
+              "done": true,
               "text": "Skip invisible visual work conservatively while clocks, simulation, sockets and shadow requirements remain correct.",
               "children": []
             },
             {
               "id": "P17-10",
-              "done": false,
+              "done": true,
               "text": "Reuse per-frame memory; avoid heap-heavy map/string lookup and redundant constant updates per draw.",
               "children": []
             },
@@ -2386,7 +2386,7 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P17-12",
-              "done": false,
+              "done": true,
               "text": "Bound GPU/CPU/IO memory, queue depth and resource retirement across repeated transitions.",
               "children": []
             },
@@ -2410,25 +2410,25 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P18-03",
-              "done": false,
+              "done": true,
               "text": "Exercise repeated resize/minimize/focus loss and renderer-reset paths explicitly.",
               "children": []
             },
             {
               "id": "P18-05",
-              "done": false,
+              "done": true,
               "text": "Retire GPU handles only after their use is complete; verify shutdown ordering and leaks.",
               "children": []
             },
             {
               "id": "P18-08",
-              "done": false,
+              "done": true,
               "text": "Check selection/retry/return paths for missing sockets, stale render state and duplicate actors/audio.",
               "children": []
             },
             {
               "id": "P19-10",
-              "done": false,
+              "done": true,
               "text": "Retain license notices and omit SDK source/build caches, secrets and unused canonical payloads from the client package.",
               "children": []
             }
@@ -2439,9 +2439,9 @@ window.TANTRA_ROADMAP = {
             "text": "Named hardware/scene/quality has median/p95/p99, stalls, loading and memory evidence. Provisional sustained 60 FPS target uses recorded resolution; it is not a claimed result. Debug/Release, relocation and repeated lifecycle checks preserve assets/saves. C09 claims remain open.",
             "children": []
           },
-          "done": 3,
+          "done": 19,
           "total": 21,
-          "percent": 14
+          "percent": 90
         },
         {
           "id": "C09",
@@ -2736,6 +2736,12 @@ window.TANTRA_ROADMAP = {
         }
       ],
       "foundations": [
+        "C08: 128-bone native GPU palette, inverse-transpose normals/shadows, CPU fallback and 32 rendered CPU/GPU comparisons",
+        "C08: bounded decode/cache/upload queues, compatible opaque instancing, pooled changing-topology FX and conservative hidden visual work",
+        "C08: eight scene retirements, four renderer retries, audio-owner cleanup, WAL-safe migration backups and external native diagnostics",
+        "C08: full 3,652-file native client/runtime distribution, four app-local CRT DLLs, locked-stage rejection and two guarded relocation entries",
+        "Native Prana uses monster DieActivateFX+1, source homing movement, live recipient tracking and owner/expiry cleanup; 570 checks per configuration plus an actual rewarded kill",
+        "Selected-only Philippine-English monster names and NPC target/UI/FX cancellation on conversation/service close",
         "C06: native dual-dagger/bow/arrow placement, atomic occupied swaps, split/merge/cancel and ordinary consumable recovery; direct warehouse/equipment transfers",
         "C06: authored HIT/DIE durations and finite restarts, native combat-sight disengagement, target indicators/facing, source hit markers and durable encounter outcomes",
         "Native portal1000 altar UI, exact main/sub refinement and additive rules, persistent100-card percentage decks, stale-instance rejection and SQLite outcomes",
@@ -2757,15 +2763,26 @@ window.TANTRA_ROADMAP = {
         "32 static and 8 dynamic native navigation cases; actual SDL immediate attack retargeting",
         "Native menu/camera/quickbar/chat keys; source optional F11 broadcast camera",
         "Six fresh-process persistence legs: Interface.sys, equipment attachments, quick slots, independent audio and three Mandara village zones",
-        "Two trials per town/dense-field/combat scene: 7,200 measured frames, raw CPU/GPU/loading timings and hardware/input hashes"
+        "Historical pre-C08 baseline: 7,200 measured native scene frames, CPU/GPU/loading timings and hardware/input hashes"
       ],
       "next": [
+        "C08 stays paused: replace the rejected warm combat leg and enforce matched actor workload before accepting P17-13/P17-14 or the phase gate",
         "Continue C04/C07 and remaining ordinary gameplay gates from their explicit open requirements",
-        "Keep unfinished strike acceptance separate: record missing 1000106 and unsupported TFX type7; target/combo/periodic services remain open",
+        "Keep wider strike acceptance separate: missing authored bindings and target/combo/periodic services remain open; C08 light/jitter controls do not accept those skills",
         "Retain explicit missing authored collision and client/import version differences; no HPK extraction or silent dataset replacement",
         "Broaden distinct-map/portal, visual/performance/recovery and release acceptance without inferring FPS gains from caching"
       ],
       "changes": [
+        {
+          "date": "2026-10-28",
+          "title": "Native Prana homes to the live player",
+          "text": "Verify original monster death, attack-manager homing and engine FX lookup before replacing the procedural fading curve. Use monster DieActivateFX+1 on a moving null carrier, native 100-unit speed, six-word launch scatter, live player position +12, correction factor five and three-second lifetime. Preserve the corpse death graph separately and leave reward maths unchanged. Debug/Release each pass the flight rules and 570 presentation checks with path traces/captures, moving-target and recipient-rebind tests, duplicate/zero-reward suppression and expiry/missing-owner cleanup. Actual SDL Vasabhum defeat presents the collection FX and awards 60 Prana; protected/default/seed data and owned packaging pass. The fix is built and staged locally. C08 remains paused at 19/21 verified tasks, with the rejected warm combat comparison and phase gate open; no overall speedup is claimed. Game source remains uncommitted."
+        },
+        {
+          "date": "2026-10-28",
+          "title": "C08 implementation checkpoint; final benchmark paused",
+          "text": "Check 19/21 C08 tasks individually while retaining P17-13/P17-14 and the phase gate open. Debug/Release each pass 11 focused tests, 32 rendered CPU/GPU character comparisons and 626 lifecycle checks. The full 3,652-file package passes two guarded relocated entries, four app-local CRT imports, locked staging and native fault reporting. Six CPU and five matching GPU 60-second trials are retained; reject the warm GPU combat comparison because native revival moved the player to town and reduced median actors from 44 to four. The aggregate is invalidated, its replacement was stopped at the user pause, and no overall speedup or full C08 acceptance is claimed. Selected-only monster names and NPC target cancellation are verified. The bounded native Prana-follow correction is tracked separately; other gameplay/visual/release gates remain open. Preserve Tantra-O; game source is uncommitted."
+        },
         {
           "date": "2026-10-28",
           "title": "C06 ordinary services and basic combat accepted",
@@ -2872,9 +2889,9 @@ window.TANTRA_ROADMAP = {
           "text": "ZFLauncher uses its dedicated client/profile. OGRE runtime results are not transferred to bgfx acceptance."
         }
       ],
-      "done": 133,
+      "done": 149,
       "total": 254,
-      "percent": 52,
+      "percent": 59,
       "accepted": 5
     }
   ],
@@ -2951,11 +2968,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "c82a1ef42a2e2683e47e5e373bba9c4977fdaa281869e2fb5bf27fbc823ac855"
+      "sha256": "8ef4fda071bed3b3550e087124cc8a035e905c51714328d4c2c9655f5df4a896"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "6f962a3f300835449716a6226aa0dc76e422f7961fb294c1597188a304b5e19b"
+      "sha256": "426047bfcadd068fb13fcd3f29580ba827163de42a0e3df710975edce92cc9c2"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",

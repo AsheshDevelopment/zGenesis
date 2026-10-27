@@ -55,14 +55,34 @@ Mandara village zones. Window/options bytes, quickbar mode, equipment attachment
 and independent miniaudio settings restore correctly. All three villages use
 Mandara art40001; other-map and portal handoffs remain separate work.
 
-For explicit measurements, build/stage Release, close an existing launcher, then
-run `python tools/profile-world.py --output build/evidence/NEW_DIRECTORY`.
-The default two trials per town/dense-field/combat scene record raw CPU/GPU and
-loading CSVs in private profiles. The accepted `world-profile-matrix1` contains
-7,200 frames on named hardware; dense43-actor frame medians are9.68–9.73ms with
-4.12ms CPU pose work. These are baselines before optimisation, with an
-uncontrolled OS file cache. Full skill/FX, other maps and release parity remain
-open; missing authored assets are recorded and skipped as requested.
+C08 adds native GPU skinning with a CPU fallback, compatible opaque instancing,
+bounded decode/cache/upload queues and pooled live FX buffers. The original
+pose, socket, picking, shadow and gameplay timing rules remain active. Monster
+names appear only on the selected living target; closing an NPC conversation
+or service also clears that NPC's target UI and selection FX.
+On a rewarded monster kill, its original Prana Follow FX homes from the corpse
+to the player's live position. It follows movement and model replacement, then
+retires on the native timer or when the recipient disappears.
+
+For explicit measurements, build/stage Release and close any existing launcher:
+`python tools/profile-world.py --skinning gpu --trials 2 --seconds 60 --output build/evidence/NEW_DIRECTORY`.
+Use `--skinning cpu` for the same executable's reference path. Each scene has a
+private runtime cache: trial 1 is application-cache cold, trial 2 warm; the OS
+disk cache is uncontrolled. Raw startup/INTRO/CHAR_INIT/loading, scoped CPU/GPU,
+frame-interval and memory data stay alongside captures and hardware/input hashes.
+Do not build or run other game verification while measuring. Historical
+`world-profile-matrix1` is the pre-C08 baseline, not the current acceptance.
+
+To create a full portable Release distribution after staging, run
+`python tools/package-zflauncher.py --output build/distributions/NEW_DIRECTORY`.
+Keep `client` and its sibling `runtime` together; run `client/Start-Offline.cmd`.
+Profiles and logs use `%LOCALAPPDATA%/ZFLauncher`, outside the client. Native
+HPKs, loose parameter/script tables, app-local MSVC DLLs and dependency notices
+are included; project source, SDKs, caches and development profiles are excluded.
+The recovery/relocation verifier is `tools/verify-c08-package.py`; the final C08
+acceptance record is `build/evidence/C08_ACCEPTANCE.json` after all gates pass.
+Fresh-OS deployment, physical GPU removal, wider skills/maps and full release
+parity remain separate verification work.
 
 Additional read-only guides are the K3 and Global folders under
 `B:\__TANTRA\TantraDataScripts`, and the shipped client at

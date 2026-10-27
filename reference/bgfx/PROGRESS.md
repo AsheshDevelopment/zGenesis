@@ -2,6 +2,142 @@
 
 Updated: 2026-10-28. Status: **C02, C05 and represented C06 checkpoints accepted and staged; full plan incomplete**.
 
+## Native Prana follows the player (2026-10-28)
+
+Changed: verify HTMonster.cpp:318-365, HTAttackManager.cpp:87-110,
+299-330, 450-490 and 573-615, and HTEngineHandler.cpp:8460-8467 before
+implementation. Monster death creates MAINCHAR_ATTACKTYPE_PRANA, targets the
+recipient, selects JKS_HOMER and refreshes the live recipient position +12 each
+frame. The native monster Follow graph is DieActivateFX+1. Replace the fading
+procedural curve with that authored graph on a moving null carrier, native
+100-unit speed, six-word CRT launch scatter, velocity correction factor five
+and three-second lifetime. Corpse death FX remain at the monster; the separate
+Follow FX travels to the player. Do not change reward maths or award Prana again.
+
+Verified: Debug/Release each pass the flight-rule probe and a hidden SDL/D3D11
+presentation probe with 570 assertions. Vasabhum uses native Follow FX 1300006;
+path traces and three captures verify movement from the corpse into a moving
+recipient, exact target refresh, preserved age/position through recipient model
+replacement, duplicate-event suppression, zero-reward suppression, expiry and
+missing-owner cleanup. The closest measured distance is below .003 native units.
+The actual SDL kill/loot/weapon-trail scenario also passes: Vasabhum 2001 is
+killed, one collection FX is presented and Prana increases from 0 to 60. Original,
+seed and default profile preservation checks pass. The clean owned package
+check passes after staging. Source pins are `docs/evidence/prana-source.json`.
+
+Evidence: `build/prana-release-tests1.log`, `build/prana-debug-tests1.log`,
+`build/evidence/prana-homing-Release`, `prana-homing-Debug`,
+`prana-sdl-combat1` and `prana-owned-package1`. Staged Release SHA256:
+`9eb9c21304218af4148054c97a26b73e4fd54c1957433eddc06b11da55e2dc72`.
+No outstanding Prana test failures. Missing authored FX are recorded/skipped;
+no replacement asset is invented. This bounded request does not resume C08
+benchmark work. Its previously measured executable remains historical; final
+C08 acceptance needs a matching matrix for the final selected build.
+
+## C08 performance, recovery and full package (2026-10-28; paused, 19/21 tasks verified)
+
+Changed: add a 128-bone GPU palette with native influence order/weights,
+blended inverse-transpose normals, matching shadow deformation and an explicit
+CPU fallback for oversized, invalid or singular blends. Bind vertices, indices
+and UVs stay immutable on the GPU path; native pose clocks and socket/picking
+math remain available on the CPU. Batch compatible opaque map instances while
+retaining transparent/FX submission boundaries. Reuse frame scratch lists and
+live FX/particle/trail GPU buffers as topology grows or shrinks.
+
+Native TFX node5 actor lights and node7 camera jitter are also implemented and
+independently source/pixel checked, with native visibility, owner and expiry
+rules. This supersedes the historical unsupported-control notes below; it does
+not accept the paused wider strike/skill matrix or missing authored bindings.
+
+Add CPU-only read/decode workers, cancellation/join by scene generation,
+priority resource requests and sliced terrain/object uploads (soft 3ms,
+maximum 16 placements; actor creation maximum two per update). Present essential
+ground, player and UI before distant actors. One individual decode/upload may
+exceed the soft budget; loading frame intervals are recorded separately.
+
+Bound decoded mesh/animation cache payloads at 256MiB/512 entries, archive
+indexes at 64MiB/256 containers, queued decode jobs at 32, retained task records
+at 128, texture and geometry payload budgets at 512MiB each, decoded audio at
+64MiB and live voice PCM at 128MiB/256 voices. FX has a 512-instance bound and
+65,536 particles per node. Payload counters are not total allocator/driver VRAM.
+Derived texture artifacts use payload SHA256, reader schema, shader identity and
+D3D11/SM5 keys, checksums, atomic replacement and a 512MiB owned disk budget.
+Corrupt derived files become misses; original HPKs remain authoritative.
+
+SQLite migrations use the SQLite online backup API before changing an owned
+older schema, including committed WAL data. Invalid/foreign/future databases
+remain rejected. Audio owner removal now stops finite sounds as well as loops.
+Native failures record numeric phase/actor/resource/action/position/camera/backend
+context in external logs and emit a minidump. Minidumps contain process memory
+and need inspection before sharing.
+
+Full distribution tooling retains original client-relative assets and HPKs,
+seven shader binaries plus their cache key, offline tables, dependency notices
+and four app-local MSVC CRT DLLs. Start-Offline.cmd stays inside the client;
+support files live in sibling runtime, and profiles/logs remain external. The
+portable startup guard rejects development fallback paths. Locked staging is
+preflighted before any owned file is changed.
+
+Verified so far: Debug/Release each pass 11 focused tests. Eight map retire/
+rebuild generations and four renderer reinitializations pass 626 checks;
+GPU handles return to the same drained baseline. Changing FX topology retains
+its handle count. Thirty-two actual character CPU/GPU captures agree within
+one colour value; compatible world instancing stays within the strict whole-
+image edge-raster tolerance. Native light graphs visibly brighten the held
+actor and expiry restores exact baseline pixels. Actual Mandara entry, combat
+and merchant service regressions pass with protected/default profiles unchanged.
+Final package relocation and fault injection also pass: 3,652 files, two
+relocated Mandara entries/reloads, four app-local CRT imports, locked-stage
+rejection without writes and a native dump with numeric context. Evidence is
+`build/evidence/c08-relocation5/C08_PACKAGE_RESULT.json`; the full distribution
+is `build/distributions/c08-full5`, about 1.06GB. This remains a same-machine
+relocation test, with developer PATH entries removed and guarded package roots.
+
+The additional name/selection fix follows HTMonsterSystem.cpp:603-639 and
+HTNPCControl.cpp:2581-2646 / HTNPC.cpp:103: only the selected living monster
+gets an overhead name. NPC names retain their normal town display. Closing an
+NPC conversation/service clears that NPC's selection, target UI and owned FX;
+a different target chosen in the meantime is preserved. Explicit close,
+Escape, movement, range expiry and terminal script choices use the same cleanup.
+The merchant SDL regression asserts the cleared selection after closing.
+
+Failed/corrected during validation: GPU indices initially used float attributes
+instead of the pinned bgfx unsigned input; instancing initially used obsolete
+TEXCOORD semantics. Image checks rejected both and the corrected bindings pass.
+Mandara exceeded a single decode request; split it into bounded batches. The
+old 1,800-frame QA deadline expired early with uncapped rendering and sliced
+loading; replace it with an elapsed-time deadline, preserving encounter checks.
+A test link dependency and mistyped build targets were corrected. Retain failed
+evidence directories; do not use them as accepted performance baselines.
+
+Performance evidence: six CPU reference trials and five matching GPU trials
+complete 60 measured seconds each at 1024x768 HIGH / 2048 shadows on the local
+i7-12650H and RTX 4050 Laptop. The additional warm GPU combat run returned to
+town after native revival: median actors fell from 44 to four. Retain that
+run but exclude it from comparison. Its aggregate was invalidated as
+`build/evidence/C08_ACCEPTANCE_REJECTED_WORKLOAD.json`, with the reason in
+`C08_ACCEPTANCE_INVALIDATION.json`. There is no accepted C08 aggregate.
+The replacement `c08-profile-gpu-warm-retry1` exited 8 because it was stopped
+at the user's pause; this is an intentional interruption, not a new regression.
+
+The frozen measured executable is SHA256
+`27a4f1b423bbedc07f6f1cf058b39463a2d01b92a8eca9279760ebb2a4093b49`.
+Raw matrices are `c08-profile-cpu2` and `c08-profile-gpu2`; preserve their build,
+input hashes, loading/frame CSVs and captures. GPU town median intervals are
+9.41-9.67ms, field idle 12.26-13.06ms and the matching cold combat trial 12.66ms.
+These results do not establish an overall FPS gain. Native mesh constraints
+leave substantial field geometry on the CPU fallback. Loading-frame telemetry
+was corrected to use wall time; single synchronous operations still produce
+loading stalls and the 3ms upload budget remains soft.
+
+Remaining while C08 stays paused: obtain a matching warm field-combat leg,
+add workload matching to the acceptance collection and recheck the final
+provisional target. P17-13, P17-14 and BG-C08-GATE remain open; 19/21 C08 tasks
+have individual evidence. OS disk-cold, fresh-VM deployment, physical GPU
+removal, other maps, broad online stress and complete gameplay parity remain
+outside this represented checkpoint. The newly requested Prana correction is
+tracked separately and does not resume the broader benchmark work.
+
 ## C06 ordinary services and basic offline combat (2026-10-28)
 
 Changed: close all 19 represented C06 tasks. Add native dual-dagger mastery/

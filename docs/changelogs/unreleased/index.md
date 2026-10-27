@@ -1,5 +1,22 @@
 # Unreleased
 
+## 1.0.15 - 2026-10-28 (Tantra-B only)
+
+Changed: record 19/21 verified C08 tasks, selected-only monster names and NPC
+target cleanup on close. Keep the final comparison and phase gate open.
+Verified: Debug/Release each pass 11 focused tests, 32 CPU/GPU image pairs,
+626 lifecycle checks and a full 3,652-file relocated distribution with four
+app-local CRT imports, locked-stage rejection and native fault reporting.
+Failed/excluded: warm GPU combat revived to town (four actors versus 44).
+Invalidate its aggregate; the replacement was stopped at the user pause.
+Remaining: matched warm combat, workload checks in the acceptance collector,
+final C08 acceptance, fresh-VM/physical-device/other-map and wider game parity.
+Native Prana now follows the live player using the authored monster Follow
+graph and source homing rules. Debug/Release each pass570 presentation checks
+and flight rules; actual SDL defeat awards60 Prana and renders collection FX.
+Missing-owner/expiry cleanup, protected saves/assets and packaging pass. Preserve
+Tantra-O and its documentation; game source remains uncommitted.
+
 ## 1.0.14 - 2026-10-28 (Tantra-B only)
 
 Changed: complete all 19 C06 tasks with native equipment placement, inventory
@@ -220,6 +237,6 @@ Remaining: real browser layout acceptance.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 133/254 named tasks checked (52%); 5/10 gates recorded. Latest: C06 ordinary services and basic combat accepted. Close all 19 C06 tasks after implementing native off-hand and bow/arrow placement, atomic final-slot validation, direct warehouse/equipment transfers, consumable unpack fallback, authored monster HIT/DIE timing and finite restarts, combat-sight disengagement and range-aware approach. Debug/Release each pass 27 focused tests; the new authority matrix covers 27 inventory and eight fine/coarse combat cases with exact 80/10/10 normal/critical/miss decks. Nine actual SDL legs verify inventory, selection/attack FX and facing, defeat/reward/pickup, death/revival, warehouse/save point, paid repair/buy/sell and money/capacity failures, plus fresh-process reloads. SQLite and protected/default/seed preservation and 55-file packaging pass. Record missing Global arrow 7091 and use supplied 7092 only in the owned fixture. Correct stale headless zoom setup and private test fixtures. P07-12, P11-06, P12-01, P12-04 and P12-05a/06a/07a close:133/254 (52%), five gates. Full AI/roam, timed consumables, online services, complete loot/penalties and other maps remain C09. Remaining native skill/FX and complete map/game acceptance stay open.
+- **Tantra-B**: 149/254 named tasks checked (59%); 5/10 gates recorded. Latest: Native Prana homes to the live player. Verify original monster death, attack-manager homing and engine FX lookup before replacing the procedural fading curve. Use monster DieActivateFX+1 on a moving null carrier, native 100-unit speed, six-word launch scatter, live player position +12, correction factor five and three-second lifetime. Preserve the corpse death graph separately and leave reward maths unchanged. Debug/Release each pass the flight rules and 570 presentation checks with path traces/captures, moving-target and recipient-rebind tests, duplicate/zero-reward suppression and expiry/missing-owner cleanup. Actual SDL Vasabhum defeat presents the collection FX and awards 60 Prana; protected/default/seed data and owned packaging pass. The fix is built and staged locally. C08 remains paused at 19/21 verified tasks, with the rejected warm combat comparison and phase gate open; no overall speedup is claimed. Game source remains uncommitted. Remaining native skill/FX and complete map/game acceptance stay open.
 
 These are separate source checklists, not release-completion percentages.

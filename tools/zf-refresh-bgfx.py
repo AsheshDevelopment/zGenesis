@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.14"
+VERSION = "1.0.15"
 
 
 def sha(body):
@@ -80,8 +80,14 @@ def refresh(source):
     project["total"] = sum(group["total"] for group in project["groups"])
     project["percent"] = (200 * project["done"] + project["total"]) // (2 * project["total"])
     project["accepted"] = sum(bool(group["gate"] and group["gate"]["done"]) for group in project["groups"])
-    project["description"] = "C06 now has all 19 represented tasks accepted: native inventory/equipment/consumables, merchant/repair/warehouse/save-point services and basic offline combat. Source-backed off-hand rules, authored reactions, combat-sight disengagement and direct warehouse equipment transfers are verified. Full AI, timed consumables, online and broader gameplay remain C09. Game source is uncommitted."
+    project["description"] = "C08 has individual evidence for 19/21 tasks: GPU skinning with CPU fallback, bounded caches/workers/uploads, instancing, FX pooling, recovery and a full relocatable package. The phase gate remains open: a warm combat run revived to town and changed its actor workload. Native Prana Follow FX now homes to the live player, including movement and model replacement; this bounded fix does not resume the paused benchmark work. Monster names are selected-only and NPC close clears its target. Game source is uncommitted."
     project["foundations"] = [
+        "C08: 128-bone native GPU palette, inverse-transpose normals/shadows, CPU fallback and 32 rendered CPU/GPU comparisons",
+        "C08: bounded decode/cache/upload queues, compatible opaque instancing, pooled changing-topology FX and conservative hidden visual work",
+        "C08: eight scene retirements, four renderer retries, audio-owner cleanup, WAL-safe migration backups and external native diagnostics",
+        "C08: full 3,652-file native client/runtime distribution, four app-local CRT DLLs, locked-stage rejection and two guarded relocation entries",
+        "Native Prana uses monster DieActivateFX+1, source homing movement, live recipient tracking and owner/expiry cleanup; 570 checks per configuration plus an actual rewarded kill",
+        "Selected-only Philippine-English monster names and NPC target/UI/FX cancellation on conversation/service close",
         "C06: native dual-dagger/bow/arrow placement, atomic occupied swaps, split/merge/cancel and ordinary consumable recovery; direct warehouse/equipment transfers",
         "C06: authored HIT/DIE durations and finite restarts, native combat-sight disengagement, target indicators/facing, source hit markers and durable encounter outcomes",
         "Native portal1000 altar UI, exact main/sub refinement and additive rules, persistent100-card percentage decks, stale-instance rejection and SQLite outcomes",
@@ -103,11 +109,12 @@ def refresh(source):
         "32 static and 8 dynamic native navigation cases; actual SDL immediate attack retargeting",
         "Native menu/camera/quickbar/chat keys; source optional F11 broadcast camera",
         "Six fresh-process persistence legs: Interface.sys, equipment attachments, quick slots, independent audio and three Mandara village zones",
-        "Two trials per town/dense-field/combat scene: 7,200 measured frames, raw CPU/GPU/loading timings and hardware/input hashes"
+        "Historical pre-C08 baseline: 7,200 measured native scene frames, CPU/GPU/loading timings and hardware/input hashes"
     ]
     project["next"] = [
+        "C08 stays paused: replace the rejected warm combat leg and enforce matched actor workload before accepting P17-13/P17-14 or the phase gate",
         "Continue C04/C07 and remaining ordinary gameplay gates from their explicit open requirements",
-        "Keep unfinished strike acceptance separate: record missing 1000106 and unsupported TFX type7; target/combo/periodic services remain open",
+        "Keep wider strike acceptance separate: missing authored bindings and target/combo/periodic services remain open; C08 light/jitter controls do not accept those skills",
         "Retain explicit missing authored collision and client/import version differences; no HPK extraction or silent dataset replacement",
         "Broaden distinct-map/portal, visual/performance/recovery and release acceptance without inferring FPS gains from caching"
     ]
@@ -129,6 +136,8 @@ def refresh(source):
     ]
     latest.insert(0, {"date": "2026-10-27", "title": "Altar refinement and native whisper commands", "text": "Implement original portal1000 picking, window236, animated orb, inventory offers, source costs and confirmation/result UI. Compile active Server.cpp main/sub refinement and native percentage decks with Global-version item masks. Verify5,619 refinement assertions/1,000 attempts,433 command parser checks,32 commands exercised through live authority,145 command runtime checks and59 altar SDL checks with SQLite/profile protection. Debug/Release each pass17 focused tests. Restore the source secret-whisper path deliberately offline;287 command inventory entries distinguish aliases and unavailable server systems. P16-03 closes:126/254 tasks (50%), five gates. Missing6526 and zero donation/GM refinement modifiers remain recorded; advanced NPC/quest/social/online work stays open."})
     latest.insert(0, {"date": "2026-10-28", "title": "C06 ordinary services and basic combat accepted", "text": "Close all 19 C06 tasks after implementing native off-hand and bow/arrow placement, atomic final-slot validation, direct warehouse/equipment transfers, consumable unpack fallback, authored monster HIT/DIE timing and finite restarts, combat-sight disengagement and range-aware approach. Debug/Release each pass 27 focused tests; the new authority matrix covers 27 inventory and eight fine/coarse combat cases with exact 80/10/10 normal/critical/miss decks. Nine actual SDL legs verify inventory, selection/attack FX and facing, defeat/reward/pickup, death/revival, warehouse/save point, paid repair/buy/sell and money/capacity failures, plus fresh-process reloads. SQLite and protected/default/seed preservation and 55-file packaging pass. Record missing Global arrow 7091 and use supplied 7092 only in the owned fixture. Correct stale headless zoom setup and private test fixtures. P07-12, P11-06, P12-01, P12-04 and P12-05a/06a/07a close:133/254 (52%), five gates. Full AI/roam, timed consumables, online services, complete loot/penalties and other maps remain C09."})
+    latest.insert(0, {"date":"2026-10-28", "title":"C08 implementation checkpoint; final benchmark paused", "text":"Check 19/21 C08 tasks individually while retaining P17-13/P17-14 and the phase gate open. Debug/Release each pass 11 focused tests, 32 rendered CPU/GPU character comparisons and 626 lifecycle checks. The full 3,652-file package passes two guarded relocated entries, four app-local CRT imports, locked staging and native fault reporting. Six CPU and five matching GPU 60-second trials are retained; reject the warm GPU combat comparison because native revival moved the player to town and reduced median actors from 44 to four. The aggregate is invalidated, its replacement was stopped at the user pause, and no overall speedup or full C08 acceptance is claimed. Selected-only monster names and NPC target cancellation are verified. The bounded native Prana-follow correction is tracked separately; other gameplay/visual/release gates remain open. Preserve Tantra-O; game source is uncommitted."})
+    latest.insert(0, {"date":"2026-10-28", "title":"Native Prana homes to the live player", "text":"Verify original monster death, attack-manager homing and engine FX lookup before replacing the procedural fading curve. Use monster DieActivateFX+1 on a moving null carrier, native 100-unit speed, six-word launch scatter, live player position +12, correction factor five and three-second lifetime. Preserve the corpse death graph separately and leave reward maths unchanged. Debug/Release each pass the flight rules and 570 presentation checks with path traces/captures, moving-target and recipient-rebind tests, duplicate/zero-reward suppression and expiry/missing-owner cleanup. Actual SDL Vasabhum defeat presents the collection FX and awards 60 Prana; protected/default/seed data and owned packaging pass. The fix is built and staged locally. C08 remains paused at 19/21 verified tasks, with the rejected warm combat comparison and phase gate open; no overall speedup is claimed. Game source remains uncommitted."})
     titles = {change["title"] for change in latest}
     project["changes"] = latest + [change for change in project["changes"] if change["title"] not in titles]
     # OGRE data and all bundled OGRE documentation remain byte-identical.
@@ -159,21 +168,22 @@ def refresh(source):
         elif "## " + VERSION not in content:
             entry = """# Unreleased
 
-## 1.0.14 - 2026-10-28 (Tantra-B only)
+## 1.0.15 - 2026-10-28 (Tantra-B only)
 
-Changed: complete all 19 C06 tasks with native equipment placement, inventory
-operations, direct warehouse/equipment movement and basic combat lifecycle fixes.
-Use authored monster reactions and combat sight; retain original hit timing.
-Verified: Debug/Release each pass 27 focused tests. The authority matrix covers
-27 inventory and eight combat cases; nine actual SDL legs verify services,
-combat, failures and fresh-process persistence. Protected/default/seed hashes,
-SQLite and the clean 55-file package pass. Source/DOM export checks are rerun.
-Failed/corrected: a stale camera fixture omitted explicit extended zoom; private
-dagger/arrow fixtures were corrected from the selected source data. Missing
-Global arrow 7091 is recorded; supplied 7092 is used only in the owned fixture.
-Remaining: complete AI/roam, timed consumables, online services, full loot/
-penalties and other maps remain C09. Tantra-B is 133/254 (52%), five gates.
-Preserve Tantra-O data/docs; game source remains uncommitted.
+Changed: record 19/21 verified C08 tasks, selected-only monster names and NPC
+target cleanup on close. Keep the final comparison and phase gate open.
+Verified: Debug/Release each pass 11 focused tests, 32 CPU/GPU image pairs,
+626 lifecycle checks and a full 3,652-file relocated distribution with four
+app-local CRT imports, locked-stage rejection and native fault reporting.
+Failed/excluded: warm GPU combat revived to town (four actors versus 44).
+Invalidate its aggregate; the replacement was stopped at the user pause.
+Remaining: matched warm combat, workload checks in the acceptance collector,
+final C08 acceptance, fresh-VM/physical-device/other-map and wider game parity.
+Native Prana now follows the live player using the authored monster Follow
+graph and source homing rules. Debug/Release each pass 570 presentation checks
+and flight rules; actual SDL defeat awards 60 Prana and renders collection FX.
+Missing-owner/expiry cleanup, protected saves/assets and packaging pass. Preserve
+Tantra-O and its documentation; game source remains uncommitted.
 """
             content = content.replace("# Unreleased\n", entry)
 
