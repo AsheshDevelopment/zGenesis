@@ -1,3 +1,40 @@
+## 31 October 2026: six-part online batch complete
+
+All six requested integration requirements are checked. Native arena/castle
+recovery now includes original MainUI window224, English choice labels, source
+request types, money gates and persisted results. Source arena funding/time gates,
+Global events66-73/150, entrants/winner/prize and shared fixed spawn occupancy are
+connected. Release authority,1,274 MainUI checks and four GPU component captures
+pass. Two network-connected D3D11 HUDs pass actual SDL arena/castle confirmation;
+stopped SQL confirms fees, positive HP and selected destinations. The final live
+run is `tantra-cpp-world-route-e4ee381b9ffe`. Its HUD-only captures do not accept
+competitive 3D scenes; the unused fixture experience range has a NaN readout.
+
+Fix valid early combat packets being rejected before world presentation exists.
+The current Release launcher and server binaries are staged. Test support, profiles
+and logs remain outside the client. No Debug build or broad FX regression was run.
+Earlier failed probe attempts exposed the early-packet issue and private NPC fixture
+setup; the final focused run passes. Record the Zone17 TMB group7 texture-name error
+without extracting or replacing client assets. Full PvP/siege, C09, C08 benchmark
+and all ten map gates remain open. The wider roadmap remains168/254 tasks (66%),
+with5/10 gates. The retracted launcher/window-mode DLL request is excluded.
+
+The dated entries below are historical checkpoints superseded by this completion.
+
+## 31 October 2026: native competitive death UI and castle recovery
+
+Restore original window224:400x120 layout, native MainUI images, English labels,
+selected-row highlight, arena money gate and default castle north-gate choice.
+Preserve zero-ID input and send source types0/2/3/4 through the C++ channel.
+Release MainUI passes1,274 checks; four D3D11 component captures pass. Arena
+selected/castle default captures were inspected. A private authoritative owner
+with original Global Zone17 data passes all three castle choices, living replay
+rejection and exact persisted reopen. These component/authority checks do not
+claim a live competitive client session or enable default competitive profiles.
+Paid arena funding/events and connected confirmation remain open. Release
+ZFLauncher/TantraZone are copied to the existing client/bin locations. No Debug
+build or broad FX regression was run.
+
 ## 31 October 2026: recovery policy and publication follow-up
 
 The C++ server now applies the source low-level saved-book fallback, local

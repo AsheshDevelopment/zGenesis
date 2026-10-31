@@ -13,8 +13,8 @@ the `Tantra Online` window/product title, using the same client assets and
 **C02 and C05 are accepted for their represented offline scope (2026-10-27).**
 The user requested C02 and native live graphics options after C05. The broader
 skill/strike foundations and native C++ MMO integration are active. The server
-batch (five of six requirements checked) and its remaining competitive recovery
-task are tracked in
+batch is complete (six of six requirements checked); its native arena/castle
+recovery, connected HUD evidence and remaining full-game limitations are tracked in
 `../_server_cpp/IMPLEMENTATION_PROGRESS.md`. ZFLauncher uses C++20,
 SDL3 and bgfx/D3D11 with dedicated `_client_bgfx` assets and external runtime
 support. The complete plan remains open; source status follows the repository

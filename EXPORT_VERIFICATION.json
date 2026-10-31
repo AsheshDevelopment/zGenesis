@@ -148,10 +148,10 @@
     "browser_visual_acceptance": "not run"
   },
   "game_launches": 0,
-  "export_manifest_sha256": "aeff6c2488f03bb3203d5d28f66d0deb703caa4568f147fa962406a2cb66973b",
+  "export_manifest_sha256": "50872ba177cc9d78f6195626baea9a2bdbac8502e78a0fb863ef313f9fbd3caf",
   "source_head": "2247cfc6905300f1b7e50c6a8283309930df14f7",
   "tantra_b_refresh": {
-    "version": "1.0.17",
+    "version": "1.0.18",
     "scope": "Tantra-B only",
     "tasks": "168/254",
     "percent": 66,

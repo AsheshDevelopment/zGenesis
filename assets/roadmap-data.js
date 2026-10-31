@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. The current checkpoint verifies real two-client combat/projectiles, SDL trade and cash, recovery, native altar/quest services and a two-zone round trip with remote party HP/chat. C08 keeps its benchmark gate open; C09 and all ten map acceptance gates remain open. Competitive arena/castle recovery is still pending.",
+      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. The current checkpoint verifies real two-client combat/projectiles, SDL trade and cash, recovery, native altar/quest services and a two-zone round trip with remote party HP/chat. C08 keeps its benchmark gate open; C09 and all ten map acceptance gates remain open. Native arena/castle recovery and connected original HUD confirmation now pass; competitive 3D scene, siege and PvP acceptance remain open.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -2736,6 +2736,7 @@ window.TANTRA_ROADMAP = {
         }
       ],
       "foundations": [
+        "Native arena/castle recovery: original death HUD choices, persisted fees/HP/positions, Global arena funding/events, winner/prize; connected SDL HUD-only acceptance",
         "Native C++ shared MMO: real two-client combat/projectiles/trade/cash, service restart recovery, source altar/quests/resurrection and a paid two-zone round trip with party HP/chat",
         "C08: 128-bone native GPU palette, inverse-transpose normals/shadows, CPU fallback and 32 rendered CPU/GPU comparisons",
         "C08: bounded decode/cache/upload queues, compatible opaque instancing, pooled changing-topology FX and conservative hidden visual work",
@@ -2774,6 +2775,11 @@ window.TANTRA_ROADMAP = {
         "Broaden distinct-map/portal, visual/performance/recovery and release acceptance without inferring FPS gains from caching"
       ],
       "changes": [
+        {
+          "date": "2026-10-31",
+          "title": "Six-part online batch complete; native competitive recovery",
+          "text": "All six integration requirements are checked, including source death/recovery. Native window224 preserves original images, English labels, zero-ID input and source requests0/2/3/4. Arena fees, poor fallback,20% recovery,fixed268,732, native funding/time gates and Global events66-73/150 connect entrants, notices, winner and prize. Release authority,1,274 MainUI checks and four GPU component captures pass. Two network-connected D3D11 HUDs verify actual SDL arena/castle choices; stopped SQL confirms money, HP and destinations. These HUD-only fixtures do not accept competitive scenes; a native Zone17 TMB material error and the unused fixture experience range are recorded. Correct early visual combat packets rejecting a status-only client and the private NPC test setup. Current launcher/server Release binaries are staged; the175-file server development package has verified hashes and no accounts/runtime state. No Debug build or broad FX regression. The wider roadmap stays168/254 (66%),5/10 gates; C08 benchmark, full C09 and all map gates remain open. Exclude the retracted launcher request; preserve Tantra-O."
+        },
         {
           "date": "2026-10-31",
           "title": "Recovery policy audit and publication",
@@ -2979,11 +2985,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "d33cd4aa8e99881ac9a1c3bc4004483dffea273880b8d31ae7020114935eab29"
+      "sha256": "fa638cb708f93a492dbdebab4fb8c13c80994e5729ef6e180f2a00018d811681"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "37ff2f88685ca7e7e9346a3edc5b2aa957c46ebee4a67b2583bf7355fd1b3183"
+      "sha256": "608ed9891bf5cb59b3145cc9b3bba8450cdd4b913a74ee725c3b02d5b95c6a06"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",

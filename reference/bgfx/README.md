@@ -15,6 +15,11 @@ range-aware approach are enforced by the authenticated authority. Advanced AI,
 timed consumables and full online/loot/map coverage remain open in C09.
 See the latest [progress checkpoint](PROGRESS.md) for the current acceptance matrix.
 
+The six-part online integration batch is complete: connected combat/social UI,
+recovery, native altar/quest services and two-zone travel. Arena/castle death
+choices pass original-asset HUD and persisted authority checks; full competitive
+scene acceptance and full C09 remain open. See the current progress for evidence.
+
 Supported hostile control/stat-reduction skills now apply through genuine native
 NPC sessions. Stun/hold restrictions, scheduled expiry and monster status FX use
 the original rules; spell and attack impacts resolve in marker order. Range-zero

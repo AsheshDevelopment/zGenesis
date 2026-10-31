@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.17"
+VERSION = "1.0.18"
 
 
 def sha(body):
@@ -80,7 +80,7 @@ def refresh(source):
     project["total"] = sum(group["total"] for group in project["groups"])
     project["percent"] = (200 * project["done"] + project["total"]) // (2 * project["total"])
     project["accepted"] = sum(bool(group["gate"] and group["gate"]["done"]) for group in project["groups"])
-    project["description"] = "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. The current checkpoint verifies real two-client combat/projectiles, SDL trade and cash, recovery, native altar/quest services and a two-zone round trip with remote party HP/chat. C08 keeps its benchmark gate open; C09 and all ten map acceptance gates remain open. Competitive arena/castle recovery is still pending."
+    project["description"] = "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. The current checkpoint verifies real two-client combat/projectiles, SDL trade and cash, recovery, native altar/quest services and a two-zone round trip with remote party HP/chat. C08 keeps its benchmark gate open; C09 and all ten map acceptance gates remain open. Native arena/castle recovery and connected original HUD confirmation now pass; competitive 3D scene, siege and PvP acceptance remain open."
     project["foundations"] = [
         "C08: 128-bone native GPU palette, inverse-transpose normals/shadows, CPU fallback and 32 rendered CPU/GPU comparisons",
         "C08: bounded decode/cache/upload queues, compatible opaque instancing, pooled changing-topology FX and conservative hidden visual work",
@@ -142,6 +142,9 @@ def refresh(source):
     project["foundations"].insert(0,"Native C++ shared MMO: real two-client combat/projectiles/trade/cash, service restart recovery, source altar/quests/resurrection and a paid two-zone round trip with party HP/chat")
     latest.insert(0, {"date":"2026-10-31", "title":"Recovery policy audit and publication", "text":"The native C++ Release resurrection check passes ten source-policy cases plus refund, item consumption, reconnect and saved-zone ownership. Fix the low-level saved-book exception, local Mandara-family rules and final Kruma god-statue destination override. Arena 20,000-rupiah and castle portal220/228 choices are policy-only checks; Zone16/17 admission, original choice UI and event transactions remain open. Five of six online requirements are checked; this follow-up adds no phase/task checkmarks. The development server package has 175 verified files and no accounts/runtime state. No BGFX rebuild or new graphical/FX regression was run. Exclude the retracted legacy-launcher request. Preserve Tantra-O and its documentation."})
 
+    latest.insert(0, {"date":"2026-10-31", "title":"Six-part online batch complete; native competitive recovery", "text":"All six integration requirements are checked, including source death/recovery. Native window224 preserves original images, English labels, zero-ID input and source requests0/2/3/4. Arena fees, poor fallback,20% recovery,fixed268,732, native funding/time gates and Global events66-73/150 connect entrants, notices, winner and prize. Release authority,1,274 MainUI checks and four GPU component captures pass. Two network-connected D3D11 HUDs verify actual SDL arena/castle choices; stopped SQL confirms money, HP and destinations. These HUD-only fixtures do not accept competitive scenes; a native Zone17 TMB material error and the unused fixture experience range are recorded. Correct early visual combat packets rejecting a status-only client and the private NPC test setup. Current launcher/server Release binaries are staged; the175-file server development package has verified hashes and no accounts/runtime state. No Debug build or broad FX regression. The wider roadmap stays168/254 (66%),5/10 gates; C08 benchmark, full C09 and all map gates remain open. Exclude the retracted launcher request; preserve Tantra-O."})
+    project["foundations"].insert(0,"Native arena/castle recovery: original death HUD choices, persisted fees/HP/positions, Global arena funding/events, winner/prize; connected SDL HUD-only acceptance")
+
     titles = {change["title"] for change in latest}
     project["changes"] = latest + [change for change in project["changes"] if change["title"] not in titles]
     # OGRE data and all bundled OGRE documentation remain byte-identical.
@@ -172,17 +175,20 @@ def refresh(source):
         elif "## " + VERSION not in content:
             entry = """# Unreleased
 
-## 1.0.17 - 2026-10-31 (Tantra-B only)
+## 1.0.18 - 2026-10-31 (Tantra-B only)
 
-Changed: refresh the BGFX source docs with the recovery-policy follow-up and
-preserve all existing task/gate checkmarks. Record the 175-file development package.
-Verified: C++ Release build and ten source recovery-policy cases plus existing
-refund, single-consumption, reconnect and saved-zone ownership checks. Apply the
-low-level saved-book fallback, Mandara-family rules and Kruma god-statue override.
-Failed: no focused check failed. No new graphical/FX acceptance is claimed.
-Remaining: competitive arena/castle admission, original choice UI and event
-transactions; C08 benchmark, full C09 and ten per-map acceptance gates stay open.
-The retracted legacy-launcher request is excluded. Tantra-O is unchanged.
+Changed: complete the six-part native C++/BGFX integration batch, including
+original competitive death HUDs and native arena funding/events/recovery.
+Verified: focused Release authority/UI/GPU checks and two connected SDL HUDs;
+stopped SQL confirms fees, positive HP and native arena/castle destinations.
+The current175-file server development package has verified hashes and no state.
+Failed: earlier connected attempts exposed an early visual-packet rejection and
+private NPC fixture mistakes; both are corrected and the final run passes.
+Remaining: native Zone17 TMB material error prevents competitive scene acceptance;
+the HUD fixture's unused experience range is unset. Full PvP/siege, C08 benchmark,
+full C09 and ten map gates remain open. No new broad phase/task closures are inferred.
+No Debug build or broad FX regression. Retracted launcher request excluded.
+Tantra-O data and bundled documentation remain unchanged.
 
 """
             content = content.replace("# Unreleased\n", entry)
