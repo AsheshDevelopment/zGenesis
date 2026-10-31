@@ -1,5 +1,18 @@
 # Unreleased
 
+## 1.0.17 - 2026-10-31 (Tantra-B only)
+
+Changed: refresh the BGFX source docs with the recovery-policy follow-up and
+preserve all existing task/gate checkmarks. Record the 175-file development package.
+Verified: C++ Release build and ten source recovery-policy cases plus existing
+refund, single-consumption, reconnect and saved-zone ownership checks. Apply the
+low-level saved-book fallback, Mandara-family rules and Kruma god-statue override.
+Failed: no focused check failed. No new graphical/FX acceptance is claimed.
+Remaining: competitive arena/castle admission, original choice UI and event
+transactions; C08 benchmark, full C09 and ten per-map acceptance gates stay open.
+The retracted legacy-launcher request is excluded. Tantra-O is unchanged.
+
+
 ## 1.0.16 - 2026-10-31 (Tantra-B only)
 
 Changed: record 19 newly checked C09 online/service tasks and refresh the bundled
@@ -252,6 +265,6 @@ Remaining: real browser layout acceptance.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 168/254 named tasks checked (66%); 5/10 gates recorded. Latest: Connected C++ MMO and cross-zone checkpoint. Check 19 C09 tasks from the source plan: bounded login/session/world transport, separate authority, revision-fenced commands, MSGSRV/CHATSRV parties/chat, atomic trade, cash delivery/recovery and live two-client acceptance. Two real D3D11 launchers verify combat/projectiles and SDL trade; separate Zone01/Zone02 authorities verify paid outward/free return, party HP/presence and bidirectional chat, with stopped SQL records. Native altar/tutorial/class-change services and both resurrection locations are checked. Slot70 preserves refundable death loss. Global event bindings dispatch reward skill41347; Yut quests read registered winnings while the original disabled betting packets remain disabled. Release only; no broad FX regression. Competitive arena/castle recovery, the C08 benchmark gate, full C09 and ten individual map acceptances remain open. Preserve Tantra-O and its documentation. Remaining native skill/FX and complete map/game acceptance stay open.
+- **Tantra-B**: 168/254 named tasks checked (66%); 5/10 gates recorded. Latest: Recovery policy audit and publication. The native C++ Release resurrection check passes ten source-policy cases plus refund, item consumption, reconnect and saved-zone ownership. Fix the low-level saved-book exception, local Mandara-family rules and final Kruma god-statue destination override. Arena 20,000-rupiah and castle portal220/228 choices are policy-only checks; Zone16/17 admission, original choice UI and event transactions remain open. Five of six online requirements are checked; this follow-up adds no phase/task checkmarks. The development server package has 175 verified files and no accounts/runtime state. No BGFX rebuild or new graphical/FX regression was run. Exclude the retracted legacy-launcher request. Preserve Tantra-O and its documentation. Remaining native skill/FX and complete map/game acceptance stay open.
 
 These are separate source checklists, not release-completion percentages.

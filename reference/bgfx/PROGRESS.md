@@ -1,3 +1,16 @@
+## 31 October 2026: recovery policy and publication follow-up
+
+The C++ server now applies the source low-level saved-book fallback, local
+Mandara-family rules and final Kruma god-statue destination override. Release
+`TantraPlayerDamageTests resurrection` passes ten policy cases plus the existing
+refund, single-consumption, reconnect and saved-zone ownership checks. Arena
+20,000-rupiah/castle220/228 choices are checked as policy only: their authority
+admission, native UI and event transactions remain open. No BGFX rebuild or new
+graphical/FX regression was needed. The current server Release is staged and
+packaged separately from client assets. Five of the six online batch requirements
+are checked; the wider roadmap stays 168/254 tasks (66%), with 5/10 gates.
+The unrelated launcher request was retracted and is excluded.
+
 
 ## 31 October 2026: connected C++ MMO checkpoint
 

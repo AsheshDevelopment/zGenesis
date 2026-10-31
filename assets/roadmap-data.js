@@ -2776,6 +2776,11 @@ window.TANTRA_ROADMAP = {
       "changes": [
         {
           "date": "2026-10-31",
+          "title": "Recovery policy audit and publication",
+          "text": "The native C++ Release resurrection check passes ten source-policy cases plus refund, item consumption, reconnect and saved-zone ownership. Fix the low-level saved-book exception, local Mandara-family rules and final Kruma god-statue destination override. Arena 20,000-rupiah and castle portal220/228 choices are policy-only checks; Zone16/17 admission, original choice UI and event transactions remain open. Five of six online requirements are checked; this follow-up adds no phase/task checkmarks. The development server package has 175 verified files and no accounts/runtime state. No BGFX rebuild or new graphical/FX regression was run. Exclude the retracted legacy-launcher request. Preserve Tantra-O and its documentation."
+        },
+        {
+          "date": "2026-10-31",
           "title": "Connected C++ MMO and cross-zone checkpoint",
           "text": "Check 19 C09 tasks from the source plan: bounded login/session/world transport, separate authority, revision-fenced commands, MSGSRV/CHATSRV parties/chat, atomic trade, cash delivery/recovery and live two-client acceptance. Two real D3D11 launchers verify combat/projectiles and SDL trade; separate Zone01/Zone02 authorities verify paid outward/free return, party HP/presence and bidirectional chat, with stopped SQL records. Native altar/tutorial/class-change services and both resurrection locations are checked. Slot70 preserves refundable death loss. Global event bindings dispatch reward skill41347; Yut quests read registered winnings while the original disabled betting packets remain disabled. Release only; no broad FX regression. Competitive arena/castle recovery, the C08 benchmark gate, full C09 and ten individual map acceptances remain open. Preserve Tantra-O and its documentation."
         },
@@ -2974,11 +2979,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "194533e3a5153eda2950d49231874d653cbccf9bc94705d7c4b958f7890e7d1c"
+      "sha256": "d33cd4aa8e99881ac9a1c3bc4004483dffea273880b8d31ae7020114935eab29"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "1d8fecbd9105fd14e5173a3667a4f60cc43506fe044f12ced4a76f3c90cb66f2"
+      "sha256": "37ff2f88685ca7e7e9346a3edc5b2aa957c46ebee4a67b2583bf7355fd1b3183"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",
