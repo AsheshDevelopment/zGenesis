@@ -15,6 +15,15 @@ range-aware approach are enforced by the authenticated authority. Advanced AI,
 timed consumables and full online/loot/map coverage remain open in C09.
 See the latest [progress checkpoint](PROGRESS.md) for the current acceptance matrix.
 
+Supported hostile control/stat-reduction skills now apply through genuine native
+NPC sessions. Stun/hold restrictions, scheduled expiry and monster status FX use
+the original rules; spell and attack impacts resolve in marker order. Range-zero
+hostile area skills originate at the caster. Supported NPC/player periodic damage
+uses the original timer and reducer, including shields, source self-kill handling,
+once-only death/rewards and source revival reset. Delayed casts retain their full
+lifetime; status ticks do not replay attack FX or invent portal locks. Taunt and
+broader skill/world coverage remain open; see the latest progress checkpoint.
+
 Click a nearby Mandara refinement altar to open its original item/material UI.
 Drag inventory items into the offer, review the source cost and confirm; accepted
 outcomes save to SQLite. Right-click an offered item to remove it.
@@ -53,7 +62,11 @@ The current native persistence matrix passes six fresh-process legs over one
 private profile, including Restart, another character and the three supported
 Mandara village zones. Window/options bytes, quickbar mode, equipment attachments
 and independent miniaudio settings restore correctly. All three villages use
-Mandara art40001; other-map and portal handoffs remain separate work.
+Mandara art40001. Ordinary portal101/121 travel now opens the original portal
+menu, charges the source fare once and reconnects to distinct map40002, with a
+free return. A fresh Shambala login preserves complete native character/cargo
+bytes, layout/quickbar files and independent audio preferences. The selected
+K3 Portal profile remains separate from Global; broader routes are still open.
 
 C08 adds native GPU skinning with a CPU fallback, compatible opaque instancing,
 bounded decode/cache/upload queues and pooled live FX buffers. The original
@@ -144,12 +157,16 @@ buildings and sky. To use the ungraded materials and timestamp-based start:
 General Mandara field/skill/aura FX remain incomplete; discovering the 32 authored
 field effects is source inventory, not runtime implementation.
 
-From this directory, build and stage without launching:
+Double-click `../build-zflauncher.bat` to build Release and stage the client.
+From this directory, the equivalent command is:
 
 ```powershell
 .\tools\build-zflauncher.ps1 -Configuration Release
-.\tools\stage-zflauncher.ps1 -Configuration Release
 ```
+
+Use `-Configuration Debug` for Debug, `-Parallel 6` to limit build workers,
+or `-NoStage` to compile only. The separate stage script remains available.
+The build script checks that the staged executable matches the build hash.
 
 Launch `_client_bgfx/Start-Offline.cmd` to play offline. Build prerequisites
 are Visual Studio 2026 C++ x64 tools, Windows SDK 10.0.26100.0, CMake 3.28+,

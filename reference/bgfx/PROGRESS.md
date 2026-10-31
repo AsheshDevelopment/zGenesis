@@ -1,6 +1,1150 @@
+
+## 31 October 2026: connected C++ MMO checkpoint
+
+Two real Release BGFX clients now pass combat/projectile rendering, party HP,
+SDL trade icons/review/commit and local-ledger cash delivery. Separate Zone01 and
+Zone02 processes pass paid outward/free return travel, remote party presence/HP
+and two-way party chat; stopped SQLite records confirm the one fare and claimed
+handoffs. MSGSRV restart/rebind and automatic interrupted-cash recovery also pass.
+Native altar cancellation/commit, tutorial turn-in, class-change event56/skill41347
+and current/saved resurrection choices have targeted authority or graphical
+checks. Reserved MOB slot70 preserves refundable death loss; recovery clears it
+with consumption and HP. Yut quest lookup follows registered winnings while the
+original disabled betting transport stays disabled. No Debug rebuild or broad
+FX regression was performed for this checkpoint.
+
+P14-01..10, P15-07/08/10, P16-05/06/09/10, BG-ONLINE-01 and BG-MULTI-01 now
+have evidence. All ten per-map acceptance gates and the broader C09 gate remain
+open. Competitive arena/castle recovery remains an active server task.
+See ../_server_cpp/docs/evidence/online-six-part-20261031.json and the server
+IMPLEMENTATION_PROGRESS.md. The wider roadmap percentage is distinct from this
+six-requirement online batch.
+
 # ZFLauncher bgfx progress and continuation
 
-Updated: 2026-10-28. Status: **C02, C05 and represented C06 checkpoints accepted and staged; full plan incomplete**.
+## C++ server connection (2026-10-29)
+
+The existing ../_server_cpp C++/Win32 server and manager now have optional
+MariaDB persistence, account registration, configurable private LAN listeners
+and a BGFX Client action. The native two-client route through MariaDB passed
+with shared PC/NPC visibility. Release artifacts are staged. Full online
+combat and graphical acceptance remain on the server roadmap. See
+../_server_cpp/docs/BGFX_MARIADB.md for scope and evidence.
+
+
+Updated: 2026-10-29. Status: **C02, C05 and represented C06 checkpoints accepted and staged; full plan incomplete**.
+
+## Five-part goal completed (2026-10-29)
+
+Complete the requested direct TPA/FX/navigation/persistence/profiling deliverables
+for the supplied offline client. Final friend support uses the source target
+selector, relation tables and recovery cases; support events/FX own the actual
+recipient, with actor-generation/death cleanup and no fake player damage.
+Two authored support fixtures pass, and the final one-case D3D11 attachment
+check passes. Wider existing FX, weapon timing, navigation, persistence and
+CPU/GPU/loading evidence is reused. No Debug rebuild or broad suite repeated.
+
+Staged Release SHA256: 54b0244fb51546eacd82a5c2a1519c0d664155c9e36763db14b2f653aec030aa.
+Evidence: build/evidence/support-final-release3/SUPPORT_RESULT.json,
+support-final-graphics1/IMPACT_SOCKET_RESULT.json, support-final-release-build1.log
+and goal-final-stage.log; final_five_part_audit in the existing goal JSON.
+
+The full remake roadmap remains open. Preserve its explicit broader gameplay,
+missing-resource, every-map/native-TBO/visual-parity and full C08 limitations.
+Percentage estimates are withdrawn. The baseline profile remains pinned to
+ff977 and is not a current-executable performance/speedup claim. Changes are
+uncommitted; no additional Git operation was requested for this closeout.
+
+## Native monster skill patterns (2026-10-29)
+
+Connect original CMob::SelectSkill and all 50 source ten-step patterns to live
+NPC casts. Preserve the default-only path without pattern RNG, repeat counts,
+synchronized echo/action locks, melee/ranged default substitution and shared
+CRT state. NPC strikes now run native CalDamage/CastInstant1/CastInstant2 and
+source success rolls, including the draw consumed by a 100-percent chance.
+
+Route enemy/area hits through the correct victim range; EnemyFarFirst follows
+the direct UseSkill path. Apply supported NPC self effects on the caster's
+session, and attach self impact FX there. Suppress fake player damage text,
+digits and shield impacts from self/support events. Match HTOtherObject's
+activate FX/normal attack animation on monster echo; do not invent a separate
+MON cast-graph phase. Missing MONSkill presentation records are noted/skipped.
+
+The focused Release probe passes default monster2001, fixed monster2018 pattern
+vectors, synchronized repeat-two/lock checks and three world cases: 2018's
+41403/41404, 2072's synchronized41411 and an explicitly queued2242 self41234.
+The fixture restores player HP between hits to finish the sequence; it does
+not claim balance/recovery or automatic low-HP AI-condition coverage. Initial
+failures were fixture exhaustion and a test-only skill ID offset error; retain
+their logs. Final targeted result: 3 world cases, 7 echoes,
+5 distinct skill hits. No Debug build, broad matrix or fresh
+GPU/full-launcher runtime. The Release artifact is staged, SHA256 115f90d370297560aafed3dc1378602859fcbcdcfac4309520524f0f4027f865.
+
+Evidence: build/evidence/monster-pattern-release4/MONSTER_PATTERN_RESULT.json,
+MONSTER_PATTERN_TRACE.tsv, monster-pattern-release-build1.log through build4.log
+and monster-pattern-stage1.log. Friend/party recipients, remaining instant/world
+services, reflection and scripted AI conditions remain open. Full goal remains
+active; about93% is an engineering estimate. Current details/hashes are in
+native_monster_pattern_checkpoint in the existing goal evidence JSON.
+
+## Five-part goal coverage review (2026-10-29)
+
+Current source and matching input hashes retain the existing direct TPA,
+navigation, fresh-process/SDL persistence and CPU/GPU/loading evidence. Update
+the TPA summary to the expanded Monster comparison: 135800 matching and 1192
+differing numeric cells across Item/PCSkill/MonsterSkill/Monster. Differences
+remain version evidence rather than being forced into one dataset.
+
+Full skill/weapon FX coverage remains open: native monster SelectSkill pattern
+dispatch is not connected to the live world. 588 installed monster templates
+have nonzero special-skill patterns; the current world still picks only default
+melee/ranged attacks. Next implement pattern dispatch, synchronized cast phases
+and enemy/self/area target handling through the existing FX pipeline. Keep other
+world-service and missing-resource limits visible. Full goal remains active;
+about 92% is an engineering estimate, not a measured completion score.
+
+No new builds or runtime tests for this review. Existing evidence retains its
+original scope/build hash; no fresh current-executable performance or all-map
+parity claim. See the detailed five-part coverage review in the existing plan
+and five_part_coverage_review_20261029 in the existing goal evidence JSON.
+
+## Native dash skills (2026-10-29)
+
+Implement StartAction/Dash for learned skills 3014 and 3114 using the source's
+rounded cell distance, five truncated samples, nearest free attack cell and
+radius-ten free-cell ordering. Preserve ties and shared random state. Retain
+client TCC/TBO collision between samples so dashes stop at solid geometry.
+
+Move with the native ACTION11 running behavior and speed 40; start movement
+after the actual activation time. Ground/keyboard movement, sitting and another
+cast cannot override an active dash. Escape/death/map reset clear it. Only
+skill 3114 resumes attacking the original living target generation at landing.
+No extra dash damage is invented, and TP is paid once at commit.
+
+Skill 3014's fxPC presentation binding is missing. Record and skip it, use the
+normal native run animation, and retain its server timing/movement. Skill 3114
+uses the existing animation/FX event pipeline. No replacement FX was created.
+
+Validation: five small destination vectors and two actual authored world casts
+pass in one focused Release probe. The first run exposed the missing 3014
+binding; one incremental Release fix/recheck passed. No Debug rebuild, broad
+matrix or fresh GPU/full-launcher scenario. Existing unrelated evidence reused.
+The staged Release SHA256 is 75fdc737c8e43ae08cd0e1a44b921b8bb4aabdbb92fe09d50fc0b20bd347a181.
+Evidence: build/evidence/native-dash-release-build1.log,
+native-dash-release-build2.log, native-dash-release2/DASH_RESULT.json and
+native-dash-stage1.log. Full five-part objective remains open.
+
+## Post-damage skill recovery (2026-10-29)
+
+Compile the original CMob::CastInstant3 with OnHeal/OnRecoverTP. Skills 3142
+and 3227 now cast through the existing native timing/FX pipeline and recover
+HP/TP after a successful hit. Use HP actually removed, including killing hits,
+so overkill does not inflate recovery. Preserve recovered vitals in the final
+world snapshot; cancellation remains unpaid and does not heal.
+
+The same original handler is connected to monster hits. Native IncTP retains
+its NPC guard, preserving the monster template ID; timed steal entries remain
+ignored by CastInstant3 as in the source. No fresh NPC-steal encounter or full
+launcher runtime was run for this checkpoint.
+
+Validation: one Release build and one focused probe, with two authored world
+casts, native percentage/caps, cancellation, cost and killing-hit recovery.
+No Debug rebuild or broad regression matrix. Release launcher staged to the
+client, SHA256 45b0f49b8f7e24c57f0d712be78500fd57d915bb55365d442480d281b234a1e9.
+Evidence: build/evidence/native-steal-release-build1.log,
+native-steal-release1/STEAL_RESULT.json and native-steal-stage1.log.
+
+## Directional and ordinary weapon impacts (2026-10-29)
+
+Ordinary attacks now play their original impact graph via Item.dwItemType and
+PCAttackAni.dwImpactFX. Preserve the attack-start item through projectile release,
+Escape, replacement equipment and arrival. Empty hands retain the original
+no-item behavior; equipped hand weapons still use their authored impact family.
+
+Match HTEngineHandler's opponent overload for PC weapon/skill and incoming monster
+melee/projectile impacts: no-socket effects attach to the opponent; directional
+ones use its animated Front/Left/Right/Back_Din sockets. Preserve the source's
+Front_Din baseline, Din default and strict tie comparisons. Missing authored
+sockets are recorded and skipped without invented substitutes. Keep ordinary
+hit callbacks' default level 1 impact separate from the phase FX level bands.
+
+Before the user's reduced-testing instruction, Release/Debug each passed 4,445
+focused source/data checks over 329 weapons, 12 types, five graph families and
+2,050 skill-level variants. The renderer passed 8,178 checks over 512 character
+pose/direction cases spanning all eight models, rotation, scale, idle/run and
+CPU/GPU skinning. The native-world pipeline passed 30 encounters, 18 rendered
+cases, 14 ordinary-impact cases and six lifecycle cases, including released-shot
+equipment replacement, bare hands and dual wield. Record/skip the same three
+previously missing skill resources; no replacement search or unsupported FX.
+
+Build and stage Release SHA256:
+d209d86e21f22f6d5577839ab91e2451a16d9277101134b3cf336bc482649ac6.
+The additional incoming-impact player-parent assertion is built. A fresh launcher
+scenario was not run after staging; the user requested fewer tests. Keep the
+native world/renderer evidence distinct from a full-launcher acceptance claim.
+Evidence:build/evidence/impact-sockets-Release, impact-sockets-Debug,
+directional-impact-render1, directional-impact-projectiles1,
+directional-impact-launcher-build1.log and directional-impact-stage1.log;
+directional_weapon_impact_checkpoint in the existing goal JSON. The complete
+five-part goal remains active.
+
+## Centred live resolution changes (2026-10-29)
+
+Applying a new resolution or aspect ratio now centres the resized window on its
+current SDL monitor. Capture the display before leaving fullscreen or changing
+size; synchronize the new size before requesting SDL's centred position on that
+same display. Borderless/fullscreen transitions keep the selected monitor, and a
+failed live Apply restores the prior window position with its previous settings.
+The same path centres startup and a return from fullscreen to windowed mode.
+
+The exact staged Release build passes 128 actual SDL/MainUI graphics checks:
+4:3,16:9,16:10, typed 1320x825, borderless, exclusive fullscreen, windowed restoration,
+live quality, persistence, invalid input and Cancel. The test starts with a
+window deliberately displaced from centre and checks its real OS position after
+Apply, within one logical pixel of the monitor centre, retaining the display ID.
+Protected client files, fixture seeds and the normal profile remain unchanged.
+
+Staged SHA256:ac2640c142bdef247b80f36f1ccc7caccfea7dff9b3aa602bb3eab6a84988da0.
+Evidence:build/evidence/centered-display-runtime1/GRAPHICS_OPTIONS_RESULT.json,
+PROCESS_RESULT.json, centered-display-release-build1.log and centered-display-stage1.log.
+The existing goal JSON contains centered_display_checkpoint. The broader skill/
+FX and full-goal audit continue separately.
+
+## Native self-taunt casts and impact ownership (2026-10-29)
+
+Supersede the earlier gated 57-check phase audit below. Skills 3023/3028 now run
+through their actual 132=DealDamage+AffectSelf path. Compile MemorizeAttacker's
+original self-owner early return, then execute native OnTakeAffections/AddEffect.
+Apply the caster effect after each successful unit, including a killing hit;
+retain 8-second ownership, the inner Taunt bit, shared CRT and 500ms scheduled
+expiry. Do not put that timed effect on the monster or invent a threat bonus.
+Another-recipient Taunt still requires its remaining world ledger.
+
+Source HTMainCharacter explicitly sends 3028 as an area cast around the caster,
+even with nonzero iRange. It needs no selection or approach. Emit its authored
+one-shot state graph once on the caster, also for an empty enemy list, without
+repeating weapon/hit audio or extending the portal action-lock timer. Keep 3023's
+authored zero-animation phases and original marker timing.
+
+Correct original no-socket impact categories 0/100/200 to attach to the opponent,
+while activation/state graphs retain their own binding. Verify the actual parent
+in the renderer. The source's other directional impact-socket selection remains
+a separate parity gate; do not treat this as proof of every socket category.
+
+Release passes 11,179 native checks across Naga/Kinnara, both skills and fine/coarse
+frames: actual costs/markers, self versus target state, caster-centred membership,
+Escape, equipment deadline preservation, scheduled expiry, precommit death,
+killing-hit self application, revival Init and empty-area presentation. Four
+D3D11 presentations pass 17,174 checks with authored clips/graphs, depth testing,
+attachment assertions and scene/death cleanup, with no missing FX in these cases.
+Debug also passes 11,179 checks across all eight cases; the independent native
+hostile-affection Debug suite passes 10,512 checks.
+
+The five Release combat suites pass. The fresh projectile regression passes 28
+encounters across 12 weapon types, five rendered cases and five lifecycle cases.
+Record and skip the same three missing resources: 3303 activation graph 1001086,
+3301 follow Sound 2310028, and 3162 activation binding 1000646. No replacement search.
+
+The exact staged executable is the ac2640c1 build verified by the centred-display
+checkpoint above. Evidence:build/evidence/taunt-self-Release, taunt-self-render3,
+taunt-self-release-ctest4.log, taunt-self-release-ctest5.log, taunt-self-projectile1
+and taunt_self_affection_checkpoint in the existing goal JSON. The full five-part
+goal remains active: remaining available skill/socket coverage, linked/world
+services, portal/buff parity and the final completion audit are still open.
+
+## Taunt phase admission audit (2026-10-29)
+
+Verify the native enum before enabling the two taunt casts: AffectSelf is 128,
+whereas instant Taunt is 256. All 10 installed Taunt skill rows are 3023/3028 with
+phase 132=DealDamage 4 + AffectSelf 128. They do not use the disabled instant phase.
+CMob2::CastSkill dispatches AffectSelf to OnTakeAffections, whose active Taunt
+branch calls MemorizeAttacker then AddEffect. MemorizeAttacker's self-owner early
+return does not remove that timed effect. Keep both authored casts gated until
+the native self-affection and world target-selection behavior are covered.
+
+Generate a checked source flag for the separate OnTakeInstant0 handler, which
+returns immediately before its unreachable score loop. Skip those inert effects
+only with the actual 256 phase and without either active affection bit. Debug
+and Release each pass 57 admission checks: genuine learned 3023/3028 casts reject
+without TP charge, queued movement or fabricated buff; mixed/unknown phases stay
+gated. Synthetic inert-phase variants exercise the guard without replacing data.
+This audit does not claim taunt/threat or authored skill rendering is complete.
+
+Evidence:build/evidence/taunt-phase-Release, taunt-phase-Debug,
+taunt-phase-release-ctest2.log, taunt-phase-debug-ctest1.log and the source hashes
+in taunt_phase_admission_checkpoint of the existing goal JSON. The earlier
+exploratory Release cast-admission test failed; the verified source phase audit
+supersedes that assumption. Preserve the failure log as evidence.
+
+Build and stage Release SHA256:
+effb2a8bd6fb3efab94f319227993f32f175b41a783eed3087e203eeed71ad47.
+The Release strike regression passes 19,041 checks across five native proc cases
+and eight encounters. The exact staged executable passes isolated SDL combat:
+two player/two monster impacts, source 41004 impact FX with world depth testing,
+selected target/facing, default chat, loot/prana/trail and saved combat state.
+Protected client files, immutable seeds and the normal profile remain unchanged.
+The smoke result's death_pose_and_zero_hp_presented flag is false; retain that
+limit instead of treating this run as independent corpse-pose proof. Dedicated
+prior death probes remain separate evidence. Logs:taunt-phase-launcher-build1.log,
+taunt-phase-strike-release1.log, taunt-phase-stage1.log and taunt-phase-runtime-combat1
+under build/evidence. This is a partial checkpoint; the complete goal stays open.
+
+## Refreshed CPU-skinning baseline (2026-10-29)
+
+Profile the staged ff977c0e build in six sequential fresh processes, with no
+concurrent build or QA. Keep 1024x768, Direct3D11, VSync off, native population,
+120 warmup frames and 1,200 measured frames per scene/trial. All 7,200 GPU timing
+samples are valid. Town retains 4 actors; field-idle retains 43; both field-combat
+runs retain 38..44, passing the minimum-workload gate without town/revival collapse.
+
+| Scene | Trial1 wall/GPU median ms | Trial2 wall/GPU median ms |
+| --- | --- | --- |
+| Town idle |11.636 /2.838|11.183 /2.594|
+| Field idle |13.846 /2.984|13.779 /2.995|
+| Field combat |13.586 /2.914|16.311 /3.692|
+
+First playable loading is 5.145..5.740 seconds with cold per-scene derived caches
+and 2.543..2.716 seconds with warm derived caches. Settled field population extends
+the field runs to 7.101..7.383 seconds cold and 4.106..4.466 seconds warm. OS disk
+cache is uncontrolled. Keep stage/loading CSVs and CPU scopes; pose deformation
+is nested within animation traversal, and delayed GPU timers overlap CPU work.
+Combat trial 2 is slower, so this is a measured baseline without a speedup claim.
+The inspected field-combat 2 screenshot retains the real field, selected target,
+chat, HP/TP, loot and native scene objects. Protected client files and the normal
+profile remain unchanged.
+
+Evidence:build/evidence/goal-profile-player-periodic1/WORLD_PROFILE_MATRIX.json,
+per-run FRAME_PROFILE.csv/PROFILE_SUMMARY.json/loading captures and integrity
+results; player_periodic_cpu_profile_checkpoint in the existing goal JSON.
+This pins the player-periodic executable before the subsequent taunt admission
+change. Final-current build verification and the complete goal audit stay open.
+
+## Player periodic damage, clock and revival (2026-10-29)
+
+Extend the source-compiled periodic reducer to the player, keeping defense and
+resistance considerations, PC/self damage reduction, immunity, shield energy,
+absorption and original party/status notifications. Resolve the original effect
+owner from trusted native world data. Supported NPC affections now register on
+the real player session at the hit marker; preserve native success-rate handling.
+Keep later unpaid attacks/skills blocked by source DontAttack control.
+
+Advance the player clock even when no effect is active and again before the
+current gameplay marker frame. A buff cast after a long idle receives its full
+native lifetime. Continue paid effects after Escape without another TP charge.
+A lethal self tick uses OnKilled's self-kill exemption; a hostile tick uses the
+existing once-only ordinary death penalty. Cancel pending actions and enter the
+native death state. Source Regen calls Init: revival now resets transient status
+rather than carrying a previous life's damage effect into the revived character.
+
+Periodic HP updates produce status changes without cast/weapon/hit-count or
+attack-chat replays. A fatal hostile tick emits the native death message once;
+the existing dead-to-alive message remains separate. Damage updates uiDamaged,
+whereas ordinary portal admission checks uiAttacked/uiActivate/uiMoved. Keep DoT
+out of the portal activation lock. Verify an uncommitted 1,000-Rupiah Mandara
+route quote while the self buff remains active after its real cast lock expires.
+
+Debug and Release each pass1,450 checks:14 player-lane cases, native magic-shield
+ordering, two fine/coarse self-cast cases3025, two native monster41233 hit cases,
+clock/cancellation, once-only penalties, revival reset, authenticated poll/save/
+relogin, fresh entry protection and the portal quote. Boss-hit isolation uses
+explicit stress-test Muscle20000/Heart400 through the native formulas so the
+large initial attack does not hide its DoT. Ordinary self/authenticated cases use
+normal source-derived caster vitals. The four Release combat probes pass; the
+prior four-probe Debug suite and final updated player Debug probe pass as well.
+The chat/drag GPU regression passes33 checks including periodic death and revival.
+
+Build and stage Release SHA256:
+ff977c0e8ac620f37545cf1dbb8426dc524f93066f881793a16790529f41affb.
+The exact staged build passes actual SDL basic combat and reward persistence,
+skill3110 buff ownership across two equipment replacements, Escape/no recast cost,
+and native HP/TP recovery with matching UI and saved values. Recovery observes
+HP1->11 and TP1->4 at7.83333 seconds of the presentation probe. All three private
+runs preserve protected client files, immutable seeds and the normal user profile.
+Support data, profiles and logs remain outside the client; Start-Offline.cmd stays
+inside the client.
+
+Evidence:build/evidence/player-periodic-Release, player-periodic-Debug,
+player-periodic-final-release-ctest3.log, player-periodic-final-debug-ctest5.log,
+player-periodic-portal-release5.log, player-periodic-chat-final2,
+player-periodic-runtime-combat1, player-periodic-runtime-buff1,
+player-periodic-runtime-recovery1 and player-periodic-final-launcher-build4.log.
+The player_periodic_damage_checkpoint in the existing goal JSON records hashes,
+source functions, scope and per-run results. Earlier NPC/control probe pending
+flags describe their own coverage; the separate player probe proves this subset.
+
+Keep the complete five-part goal active. Taunt/threat, linked/realm/challenge
+world services, remaining skill/weapon coverage, portal/posture/cross-zone buff
+parity and refreshed CPU/GPU/loading measurements remain open. This checkpoint
+does not accept every native combat service or the full C08 package.
+
+## Native NPC periodic damage (2026-10-29)
+
+Compile original CheckAffections, AffectAffection, ElapseAffectionTime, PlayDice
+and DecHP with the NPC damage-lane segment of OnTakeDamage. Retain 500ms checks,
+whole-second accumulation, expiry clipping, source short conversion and integer
+rounding. Carry the shared world CRT stream through native dice, including the
+source draw on a zero-second physical term. Resolve defense/resistance using the
+original eCon_MaxGap consideration and preserve native immunity/shield/absorption
+arithmetic. The selected authority is the authenticated local PC hitting an NPC;
+player recipients and wider attacker/world services remain separate work.
+
+Order scheduled NPC effect checks with spell/projectile and ordinary attack
+markers. Set the native dead FSM when HP reaches zero, cancel its pending attack,
+play the original corpse clip and deliver loot/prana once. A respawn creates a
+new native status session. Escape retains a paid, committed target affection.
+Keep each semantic hit's own resulting HP and target generation so simultaneous
+nonlethal effects cannot request a second death sound. Translate DOTbyDice's
+registered state to Damage when binding the target-owned visual lifetime.
+
+HTMonsterSystem::HT_vMonsterSystem_SCPRespUpdateStatus only updates current HP.
+Accordingly, periodic status events do not replay cast FX, weapon sounds, hit
+numbers or attack-chat messages. The killing tick retains the ordinary death
+sound and existing corpse-born homing Prana flow. NPC status notifications are
+collected per check rather than retained as an ever-growing notification history.
+
+The final native probe passes2,937 checks in Release:14 lane/lag cases over all
+seven damage lanes and four fine/coarse native casts, cancellation, no additional
+TP costs, once-only death/rewards and clean respawn. Debug verifies the same
+assertions. Source skill3303 is a direct marker cast, not a projectile; keep that
+binding distinction in its tests. Existing10,512-check affection and5,377-check
+hostile-world regressions pass in Debug and Release.
+
+Build and stage Release SHA256:
+aa899410b4bccb6375931be5ac4e25968574ab44cf2ee9318f236e4841707c15.
+The actual staged SDL basic-combat run passes with reward persistence, protected
+client files, the immutable seed and the normal user profile unchanged.
+
+The rendered matrix passes28 encounters over all12 supplied weapon types,
+five rendered cases and five projectile lifecycle checks. Verify skill3303's
+impact geometry at its authored marker, then follow six seconds after cancellation:
+periodic ticks do not create extra skill graphs or hit-count feedback and the
+target state effect expires. Inspect its actual impact capture. Three missing
+resources are recorded/skipped:1001086 PDG102_ATV, sound2310028 and binding1000646.
+No replacement search or extraction is performed. The original chat/drag GPU
+regression passes30 checks. This is runtime coverage of the represented effects,
+not a claim that every authored asset or skill family is complete.
+
+Evidence:build/evidence/periodic-damage-Release, periodic-damage-Debug,
+periodic-final-release-ctest2.log, periodic-final-release-ctest3.log,
+periodic-final-debug-ctest2.log, periodic-final-release-build2.log,
+periodic-final-stage1.log, periodic-final-combat1, periodic-projectile-final3,
+periodic-chat-ui-final1 and periodic-final-debug-ctest3.log.
+
+Keep the complete five-part goal active. Player-recipient periodic damage,
+taunt, broader attacker attribution, remaining available skill/weapon coverage,
+portal/buff edge cases and refreshed CPU/GPU/loading measurements remain open.
+
+## Ordinary portal handoff and distinct-map recovery (2026-10-29)
+
+Implement original portal window214 with source MainUI textures, five destination
+rows, native Philippine names/fee formatting and actual portal-triangle picking.
+Escape closes without spending. Authorize the selected route and prepare the
+complete destination before charging. Keep existing UI/preferences and quickbar
+bindings while retiring old actors, names, popups, map images, FX and ambience.
+
+Commit the fare and arrival as one conditional native-MOB update. Reject stale
+saved snapshots and duplicate charges. Bind a one-use grant to the owned account,
+world group, slot, character, portal and destination. Reconnect with real point02
+authentication and native CHAR_INIT connection2, consuming the grant after entry.
+A first-entry recovery also invalidates an older grant. In-zone warp remains a
+separate authority path; broader in-zone/posture/competitive coverage stays open.
+
+Select the complete K3 server Portal table for this K3 client, without rewriting
+Global. Global's portal101 return rectangle is509/937; K3 and the installed client
+use100/66 beside the actual portal. Import all121 K3 records outside the client,
+with provenance and regeneration in CMake. Compare113 common direct-TPA records:
+2,259 values match and114 differ. Preserve those remaining version differences.
+The selected101->121->101 route matches native geometry, costs1,000 once and has
+a free return. Keep later competitive/clan/event routes explicitly unavailable.
+
+Map40002 lacks MAP_Mandara2nd.tms. Record it and skip only its ambient regions;
+map/safe-area BGM selection remains independent and continues. Read available
+TMS files through the native virtual-resource reader, including HPKs. Malformed
+existing files still fail validation. Retain the recorded missing Env_FireTorch2
+graph without searching for or inventing a replacement.
+
+Debug and Release each pass2,400 portal data/ticket checks: full profile comparison,
+stale inventory snapshots, duplicate charge rejection, slot/zone/name binding,
+reconnect, single-use entry and first-entry recovery. Fresh C05 UI and5,375-check
+hostile-control regressions pass. The final staged client passes45 actual SDL
+round-trip checks and basic combat/reward persistence. Inspect the original portal
+menu and rendered Shambala destination captures. All private runs preserve the
+normal profile, protected client files and immutable seed profiles.
+
+Recover the committed Shambala destination from an interrupted earlier handoff
+in a fresh process and native login. Compare complete SQLite native MOB and cargo
+blobs byte-for-byte, plus Interface.sys and quickbar hashes. Retain3/7 independent
+audio preferences, verify actual slider effects on live miniaudio voices/music,
+and restore the original saved bytes. The final build renders map40002 with9,959
+placements. This adds distinct-art restart proof to the earlier six-process
+character/village persistence matrix.
+
+Built/staged Release SHA256: `3493607e9cd016323681f21d0177d7ece62d967a89c0f5edb58062b86286c301`.
+Evidence:build/evidence/portal-handoff-final-sdl1,
+portal-handoff-final-combat1, portal-shambala-final-restart1, portal-ticket-Release,
+portal-ticket-Debug, portal-handoff-release-ctest1.log and
+portal-handoff-debug-ctest1.log; portal_handoff_checkpoint in
+`docs/evidence/five-part-goal-20261028.json`.
+
+Keep the complete five-part goal active. Remaining available skill/timing and
+periodic/taunt work, current-state CPU/GPU/loading measurements and the final
+requirement-by-requirement audit remain open. These checks do not accept broader
+competitive travel, all-map parity, cross-zone buff parity or the full C08 gate.
+
+## Distinct-map portal preparation and map FX bindings (2026-10-28)
+
+Read the original HTPortalParam loader/lookups, HTPortal client selection,
+server.cpp CSP_REQ_MOVE_PORTAL and GetRandom before implementing route quotes
+and landing preparation. Import164 selected Global portal records outside the
+client, retaining all existing TSV bytes. Read113 shared installed-client Portal
+records directly from TantraParam.tpa:2,168 numeric values match and205 differ.
+Preserve client/server content versions rather than merging their destinations,
+prices or rectangles. Portal names remain client presentation data.
+
+Verify the native101->121 route:1,000 Rupiah, level15 in the original client,
+map40002 and the source's upper-exclusive landing rectangle. The source server
+leaves dwLevel initialized to zero; keep its admission separate from the client
+level check. Cover exact3,000/3,001ms action boundaries, future action locks,
+32-bit tick wrap, dead/held characters, insufficient money, first-match fees and
+exceptional server fares without inventing extra client menu destinations.
+These are preparation rules; competitive/clan/event admission is still separate.
+
+Stage one complete Zone02 trio (GenerationArea.idx, MapData.tcm, NPCGener.txt)
+plus its two Data settings files from E:\Global-server\Zone02 under the external
+runtime. Pin all source/copy hashes. Do not mix zone datasets, extract HPKs or
+write resources into the client. Existing tables remain byte-identical.
+
+Decode both native40001 and40002 maps, prepare33 real landing cases and build
+1,295 native destination actors. Debug preparation passes2,462 checks. The
+Release D3D11 case passes2,485, submits terrain and placed geometry, renders the
+character on the destination surface and initializes that map's own field FX.
+The final arrival capture is visually inspected. Record and skip missing graph
+1400020 Env_FireTorch2; no replacement search is performed.
+
+Fix two production Mandara-only bindings found during this work: NativeWorldMap
+retains strFXFiles from ClientRes, NativeWorldFx initializes that library, and
+monster attack timing reads the same destination library. Do not use Mandara's
+monster/field definitions on another map. The fresh Mandara hostile regression
+still passes5,375 checks; Debug Mandara village-map resolution also passes.
+
+Evidence:build/evidence/portal-data1, portal-preparation-release2,
+portal-preparation-Debug, portal-debug-ctest1.log and portal-mandara-regression1.log;
+portal_preparation_checkpoint in docs/evidence/five-part-goal-20261028.json.
+The root Release build/stage passes. Actual staged Mandara field-FX pixels and
+building occlusion, combat/rewards and3110 buff/equipment/Escape regressions all
+pass. Protected client files, seeds and the normal profile remain unchanged in
+all three runs. Built/staged SHA256:
+`0b6cb8855f7a52966cbb52f641d9fd3cc078c06f5740502f655c3f225f01994c`.
+
+At this earlier preparation checkpoint, portal UI/transactions and distinct-map
+restart proof were still pending. The newer ordinary handoff checkpoint above
+closes the represented101/121 round trip and Shambala restart checks. Periodic/taunt services,
+remaining skill/timing coverage and final CPU/GPU/loading measurements also stay
+open under the complete five-part goal.
+
+## Live native hostile control and impact ordering (2026-10-28)
+
+Connect OfflineWorldGameplay to genuine native NPC status sessions, sharing the
+world CRT stream with the real player caster. Supported control/stat-reduction
+affections now reach actual cast impacts, native factors, movement/attack locks,
+500ms effect checks and priority-selected monster state FX. Keep source stun
+attack/dodge factors at one. Hold blocks movement while allowing in-range attacks.
+Remove target-owned loops on expiry, death, generation change or scene teardown;
+retain committed effects after Escape and independently of caster presentation.
+
+Queue spell/projectile commits with ordinary player/monster animation markers,
+then resolve them chronologically in a frame. An earlier lethal monster marker
+cancels the unpaid later spell; an earlier lethal spell cancels the NPC strike.
+Guard target generations so a late event cannot affect a respawned replacement.
+Synchronize native NPC health after each damage result, including lethal hits.
+
+Verify CMob2.cpp's range-zero/nonpositive hostile-area origin: use the caster,
+without a selected unit or forced approach. Fix the range-zero movement failure
+exposed by actual learned skill3043. Preserve existing target-selection radius;
+exact client/server edge-selection parity remains a separate coverage limit.
+
+Release and Debug each pass5,375 live integration checks across fine/coarse3021
+stun, two coarse-frame lethal orderings and pure-control3043 hold. The D3D11 case
+passes5,451 checks, submits the native monster loop with world depth testing and
+captures visible state geometry. Missing3017 presentation binding is recorded
+and skipped; no replacement search or client-resource changes are made.
+
+Fresh Release regressions pass:32 static/eight dynamic navigation cases with
+3,848 surface samples; five native strike-proc cases/eight encounters;474 sitting/
+stacking checks; native Wing socket transforms; all27 positive weapon/projectile
+encounters, five lifecycle and four GPU cases;1,481 Taras checks;3110 and3159
+state expiry/rebind/cancellation/death. Debug effect ticking, entry cleanup and
+skill/equipment initialization also pass. Evidence is retained under
+`build/evidence/hostile-final-*`, `hostile-world-control4`, `hostile-world-Debug`,
+`hostile-world-Release` and the live-world checkpoint in
+`docs/evidence/five-part-goal-20261028.json`.
+
+The root one-click Release build/stage passes. The staged executable passes
+actual SDL3124 skill/cancel,3110 buff/equip/unequip, combat/rewards,130 default
+hotkey/posture checks and55 inventory/held-icon checks. All five runs preserve
+protected files, seeds and the normal profile. Built/staged SHA256:
+`587b3e35a8831be21b7a59ee618c5bbb3fce85f4c42c5434bd14333f70a68a99`.
+
+Periodic damage, attacker/death/reward and taunt services remain open. This
+hostile-skill proof uses the live gameplay API plus actual rendering; actual SDL
+hostile-skill casting and broader skill-family/timing coverage remain separate.
+Distinct client-map/portal travel and refreshed final performance measurements
+also remain open. The complete five-part objective and C08 gate stay open.
+
+## Native hostile-affection recipient component (2026-10-28)
+
+Add NativePcStatusSession::takeSkillAffections, executing the compiled original
+CMob::OnTakeAffections with a real caster session and native NPC recipient.
+The caster skill deck, target resistance deck, level-tolerance dice and deck
+reshuffles share one explicit Windows CRT stream. Restore local RNG bindings
+after the call. Keep the native PC/PC absolute-level Consider lookup even for
+NPC targets. Reject missing context and unsupported taunt/reinitialization
+services before consuming cards or changing effect slots.
+
+Verify source immunity behavior, attribution, combined hold/slow splitting,
+DOTbyDice-to-Damage registration, duration extension and scheduled expiry.
+Stun sets native attack/dodge factors to one and movement to zero; do not
+substitute zero combat factors. Debug and Release each pass 10,512 checks,
+including 1,228 controlled probability vectors and actual imported skill3017
+recipient dispatch. Existing Debug checks pass:108 effect ticking,533 entry
+lifecycle,1,271 skill initialization and664,211 probability comparisons.
+
+Compile the existing native Monster loader into the BGFX resource library.
+Expand the selected Global import from49 to92 numeric columns for genuine NPC
+initialization. All53,263 existing cells across1,087 rows and every other table
+remain identical. The native loader creates964 in-range templates. Keep this
+server authority outside the client. Make the CMake importer retain the full
+schema on regeneration rather than relying on a manual data edit.
+
+Refresh direct TPA comparison against the expanded import:135,800 identical
+numeric values and1,192 differences. Monster now compares2,426 equal values
+and66 differences;49 newly exposed differences are byteReserve7, alongside
+11 byteClass and6 byteSize differences. Preserve the installed-client/Global
+version boundary. Item, PCSkill and MonsterSkill comparison counts are unchanged.
+
+The root Release build/stage passes. Actual staged buff-owner and basic-combat
+runs preserve normal profiles, protected client files and seeds. Built/staged
+SHA256:2c69f25755040c6943d5df4c36f46e33c52a570628dc6216eb2328c0982cd62f.
+Evidence:the hostile_recipient_checkpoint in
+`docs/evidence/five-part-goal-20261028.json`, `build/evidence/hostile-affection-release3`,
+`hostile-affection-debug1`, `hostile-authority-data1`, `hostile-full-monster-tpa1`,
+`hostile-foundation-staged-buff1` and `hostile-foundation-staged-combat1`.
+
+At this earlier component checkpoint it was not yet called by live casts.
+The newer live-world checkpoint above wires supported control/stat reductions
+into casts, NPC control, expiry and FX. Periodic damage, death/rewards and taunt
+world services remain open. Distinct-map/portal travel, remaining timing coverage and the
+full five-part completion audit remain open. No full hostile-combat or C08
+acceptance is claimed, and previous profiling cohorts retain their own hashes.
+
+## Requested fixes: current build verification (2026-10-28)
+
+Recheck the preceding chat, held-icon, English-command and Prana changes, then
+the requested Wing attachment, one-click build, sit/stand and pickup fixes.
+All six pinned original-source hashes still match. The Wing attachment is an
+authored socket on WeaponSpine, not a separate Wing bone; retain its transform
+and the native model rotation rather than adding another rotation offset.
+
+The root Release build-and-stage command passes. Fresh focused checks pass:
+474 sit/stack, 1,258 rendered Wing/posture, 30 chat/drag, 2,912 command-parser and
+5,059 Prana checks, plus four keyboard movement cases. Inspect the turned-wing
+capture. The staged executable passes actual SDL posture/hotkeys (130 checks),
+inventory/held-icon transactions (55), secret-whisper commands (147), and a
+monster kill with persisted rewards and default-visible damage/Prana chat.
+All four staged runs preserve the normal profile, protected files and seeds.
+
+Evidence: `build/evidence/requested-fixes-verified1` and the latest verification
+in `docs/evidence/chat-upward-drag-source.json`. Built/staged Release SHA256:
+`d8d127b98b3b1febc25e829ed5ed8c9117f3e60c0aae147d80bbfe40d3e7d618`.
+These requested fixes pass; remaining five-part work and full C08 acceptance
+remain open. Existing uncommitted changes are retained.
+
+## Available FX rendering, sound diagnostics and status restoration (2026-10-28)
+
+Extend the preparation-only audit to sampled native rendering. The753 referenced
+binding IDs now split into637 with complete required resources, six with a
+missing sound but usable visuals, and110 with absent bindings/graphs. Sound
+ID2310028 is absent from the installed K3 catalog and referenced by the follow
+FX for3301/3143/3321. Record it without finding or inventing a replacement.
+
+Submit all visual nodes across the637 complete IDs, using real actor attachment
+markers, native TFX/TMB/TAB textures/curves, D3D11 and muted miniaudio. Sample
+node starts, middles and ends with fixed actor poses; verify depth checking,
+non-writing depth state, explicit retirement, authored expiry and missing-parent
+cleanup. The first matrix completes13,730 samples without runtime errors. The
+six partial graphs still submit all four visual nodes each despite their sound
+failure; do not suppress their graphics because audio is absent.
+
+Compare captured RGB output with each sweep's fixed-actor baseline. Initial
+single captures for30 IDs happen outside their visible flash windows. A targeted
+765-image timeline recheck shows visible output for all30. Combined verification
+shows643/643 available visual binding IDs change at least one pixel by more than
+two RGB levels. Counts are binding IDs, not unique physical graph files or legal
+cast combinations; this is sampled visibility, not original-client visual parity.
+Inspect representative resampled output before accepting the image comparison.
+
+Improve sound-node diagnostics: validate nonzero sound resources during node
+initialization, cache the resolved path, report decode/play failures and skip
+only that node. Deduplicate repeated missing-node resource messages per scene/
+library instead of logging the same missing sound for every owner or frame.
+A separate30-ID matrix checks actual GPU object removal and zero owned voices
+after retirement; six partial graphs check the same cleanup plus exactly one
+missing-sound diagnostic across explicit stop, expiry and orphan retirement.
+
+Fix a persistent-status cache error. Original HTGameSystem.cpp:991 and damage
+status handlers call the affection selector even for unchanged status masks.
+Our mask-only shortcut can leave a weaker active buff suppressed indefinitely
+after stun ends. Process subsequent offline presentation snapshots through the
+source previous/current selector, retain the age of an unchanged selected graph,
+skip repeated attempts for known missing bindings and keep effects removed when
+their actor is absent. This restores still-active Taras wings on the next identical
+status update after the source's previous-priority suppression. The new check
+also verifies that later unchanged updates do not replay the graph.
+
+Release Taras/posture/status restoration passes1,258 checks; the21 available
+status-graph matrix passes2,692. The updated projectile pipeline passes27 positive
+damage encounters across12 weapon types and three ranged skills, five lifecycle
+cases and four GPU cases. Its two known missing resources remain recorded and
+skipped; unsupported runtime cases are zero. The staged3124 UI cast verifies
+pre-commit Escape, two animations,39 socket checks and14 FX geometries before the
+final status-controller change. The final staged3110 UI cast/equip/unequip/Escape
+passes88 checks after that change; protected/default/seed profiles are unchanged.
+
+Evidence: `docs/evidence/fx-render-sweep-source.json`,
+`build/evidence/fx-render-sweep1`, `fx-render-missing-sounds2`, `fx-pixel-recheck1`,
+`fx-render-visual-aggregate1`, `fx-owner-cleanup2`, `fx-status-restore-taras1`,
+`fx-status-restore-affection1`, `fx-sound-projectiles2`, `fx-sound-staged-skill1`
+and `fx-final-staged-buff1`. Final staged Release SHA256:
+`76e44e29ca111acb5c99e7003003ea554fdcf4176f4166fe6f174df5173e9cee`.
+
+No HPK extraction or canonical client resource rewrite occurs. Preparation,
+visibility, cleanup and actual cast tests remain distinct evidence scopes.
+Remaining timed hostile/monster state dispatch, strike/skill timing combinations
+and distinct client-map portal travel keep the full five-part goal active.
+Previous performance cohorts retain their own hashes; no speedup is inferred.
+
+## Skill FX audit and Sanuta socket correction (2026-10-28)
+
+Continue the active five-part goal. Inventory every nonzero PC-skill link in the
+installed FX catalog across level bands1/6/9, both animation sexes and14 weapon
+states, plus Mandara MONSkill cast/activate/follow/impact/state references. The
+17,220 lookups reference753 FX binding IDs. These are binding lookups, not a
+claim that every combination is a legal cast; multiple IDs may share one graph.
+
+Production resource preparation initially succeeds for640 IDs, records110 missing
+authored bindings/graphs and rejects three Sanuta state IDs1001816..1001818.
+All three use mTwiststar_2000337.tmb. Its FX socket on joint1 has quaternion
+(0,0,0,.707107), squared norm about.5. The remake's unit-length validation rejects
+this shipped data before its model can render.
+
+Verify the original engine binary read-only: socket loader31178..3122B passes
+raw quaternion words to MatrixTransformation. The scalar quaternion matrix path
+40FFD..410DC uses 1-2*(yy+zz) and does not normalize. Correct RigidTmb's validation
+to retain finite non-unit and zero quaternions verbatim. Continue rejecting
+nonfinite/overflowing transforms, bad names/parents, duplicate sockets, truncated
+tables and invalid counts. No asset or HPK is edited or extracted.
+
+After the fix, all643 available referenced IDs prepare;110 missing authored
+entries remain recorded and zero preparation failures remain. Preparation alone
+does not verify material/sound playback, GPU submission, timing or full FX parity.
+Do not close the whole skill-FX gate from this result.
+
+Verify actual Sanuta3159 through the native learn/cast/effect authority with its
+original starter dagger at level100. Run source body/hair/apron phase animations,
+pre-commit cancellation without cost, paid application, the eight-second looping
+state, effect removal/expiry, equipment rebuild without recast/reset, death,
+scene clear and missing-owner cleanup. Repeated independent lifecycle fixtures
+refill native max HP/TP before another paid cast; this does not bypass normal
+production costs or claim a continuous-cast/cooldown test. Inspect rendered
+state and removal captures. The existing3110 state regression still passes.
+
+Debug/Release socket tests each verify31 socket transforms, three raw quaternion
+cases (including an independent non-unit matrix oracle), six malformed cases,
+the Deva header mismatch and conflicting Gandharva influence rejection. Socket
+test input now uses NativeResourceIO, so canonical HPK-backed models are read in
+memory. The final staged3110 SDL cast/equip/unequip/Escape run passes88 checks;
+protected, default and seed profiles remain unchanged.
+
+Evidence: `docs/evidence/sanuta-fx-source.json`,
+`build/evidence/sanuta-native-socket2.txt`, `skill-fx-audit2`, `skill-fx-audit3`,
+`sanuta-state-render4`, `sanuta-state-regression3110` and `sanuta-staged-buff1`.
+Staged Release SHA256:
+`f32cf57a2102ca273c59217d4327c9436567e51c69676b09bd7fa26dcd4d5040`.
+The previous six-run performance cohort retains its own executable hash; no
+optimization gain is inferred from this correctness change. Remaining available
+GPU FX/hostile/monster state/timing coverage and distinct client-map/portal
+transitions remain open. The full goal remains active.
+
+## Active five-part goal: status FX and refreshed verification (2026-10-28)
+
+The user resumed the complete five-part goal. Earlier pause notes below remain
+historical; this checkpoint resumes the requested measurements without accepting
+the rejected C08 aggregate. **The complete goal remains active and incomplete.**
+
+Read the installed TantraParam directly and recompare every identically named
+numeric field shared with the current imports. Results remain 1,664 Item,
+1,106 PCSkill, 501 MonsterSkill and 623 Monster client records. There are
+134,603 matching values and 1,143 differing values (470/655/1/17 respectively).
+Inputs are unchanged. Keep the client and server versions separate; do not
+silently replace server authority or populate the client with server-only data.
+
+Close an FX implementation gap: compile HT_dwGetAffectionFXID unchanged from
+HTEngineHandler.cpp and use the native main-character priority-selected status
+loop, including previous-affection priority and English WizardEyes suppression.
+Cover stun, elemental/continuous-damage indicators, hold/sleep, speed, shields,
+reflection, blessing, weakness and other source branches. Retain the authored
+K3 Wing socket adjustment for PFX_MSP; cast/state/projectile/per-hit shield FX
+remain separate owners. Missing enhanced-shield1010071 and ProtectAll1010090
+bindings are recorded once and skipped, without replacement-resource searches.
+
+Release status presentation passes 2,692 checks across 27 native selector rules,
+21 available rendered graphs and two missing bindings. Check pairwise current
+priority, previous-priority fallback, looping, depth, Escape retention, equipment
+rebinding, death and removal. This controlled status fixture does not prove every
+buff transaction. Actual Taras/posture regression passes 1,254 checks; the live
+shield authority/render matrix passes 2,563 checks and both GPU cases.
+
+Rebuilt navigation passes 32 static and eight dynamic cases, with 3,848 static
+movement samples. It covers altar stairs, single-cell passages, building/column
+corners, monster chase/replanning and immediate first/second attack retargeting.
+TCC stair heights remain quantized; this is not smooth visual/TBO parity.
+
+The staged build passes six fresh-process persistence legs: write/restart,
+same-character relogin, another character, villages18/19 and return to village1.
+Native Interface.sys fields, quick slots, equipment, independent audio settings,
+character isolation and normal profile preservation pass. These server villages
+share clientMap40001; distinct-map portal travel remains open. The harness
+launches the exact emitted Restart command; it does not claim direct ShellExecute
+child-process verification.
+
+Current Release D3D11/HIGH, 1024x768, 2048 shadows, VSync off; local i7-12650H /
+RTX4050 Laptop. Six sequential fresh processes, 120 warmup frames then 1,200
+samples each. Median timings below are milliseconds; settled load is seconds.
+GPU timers overlap CPU stages and must not be summed with them.
+
+| Scene | Frame median ms | Application work median ms | GPU median ms | Settled load s |
+| --- | ---: | ---: | ---: | ---: |
+| town-idle | 9.70–10.13 | 9.62–10.06 | 2.38–2.49 | 2.92–5.91 |
+| field-idle | 12.46–12.71 | 12.39–12.64 | 2.54–2.66 | 4.91–7.74 |
+| field-combat | 13.21–13.22 | 13.09–13.10 | 2.59–2.65 | 4.27–7.64 |
+
+All 7,200 delayed GPU samples are valid. Combat retains38–44 actors rather than
+returning to town; dense idle retains43. Field CPU deformation remains4.30–4.39ms
+for26,176 CPU-skinned vertices, alongside1,715 GPU-skinned vertices. The combined
+UI/audio/equipment bucket is3.98–4.13ms; field world submission is1.31–1.35ms.
+This supports investigating native CPU skinning fallback and unchanged UI work
+before more batching; it does not isolate an optimization gain. Preserve native
+influence/normal/socket parity when extending GPU coverage. Object/environment
+upload has cold individual calls up to205ms; smaller render-thread upload jobs
+need investigation alongside worker decoding. Warm and cold application-cache
+loads differ substantially; OS disk cache is uncontrolled.
+
+Add sampled workload validation before reducing a profile. On18 historical raw
+trials it rejects the known44-to-four actor collapse and retains17 comparable
+workloads. A passing workload check alone does not accept C08 quality/FPS gates.
+No correctness tests/builds or other QA launched by the runner overlapped the
+new measurements. Source, executable, native inputs and normal profiles remain
+unchanged during each complete profile matrix.
+
+Evidence: `docs/evidence/five-part-goal-20261028.json`,
+`build/evidence/affection-release3`, `affection-shields-release1`,
+`goal-tpa-current1`, `goal-navigation-current1`, `goal-persistence-current1`,
+`goal-current-profile1` and `profile-workload-guard2`. Staged Release SHA256:
+`b3c80fef3cc503d9dcdf936f56455a872b0345e172bc744ac7b7a43b6102e847`.
+
+Remaining: available projectile/follow/area/monster state families, remaining
+weapon/skill/strike timing combinations, distinct client-map/portal transitions
+and the separate full quality-matched C08 acceptance. No complete-goal claim.
+
+## English commands, Wing sockets, sit/stand and pickup stacking (2026-10-28)
+
+Verified the four proposed fixes against original source and client assets.
+The Wing finding needs a correction: all eight avatars expose a **Wing socket
+on WeaponSpine**, rather than a bone named Wing. Cast and persistent Taras
+models now follow that socket's animated transform and authored orientation.
+The native model rotation remains in place. Rendered tests check actual socket
+coordinates and wings behind a turned player, including removal and rebinding.
+
+HTMainCharacter's sit-down (823) and stand-up (824) use a one-second playback
+override. Use that override and the same scaled playback clock/strict STOP
+boundary as rendering. Hold movement and E/R/skill actions during posture locks;
+a seated ground click shows the existing ring, starts standing and queues the
+route. Release movement after the final stand pose. Also correct animation
+speed calculation to use the target clip, not the old clip during blending.
+Release passes 1,254 rendered Taras/posture checks and 474 sit/stack authority
+checks; all sixteen tribe-specific transition assets are present.
+
+Server.cpp fills compatible existing stacks before empty inventory slots.
+Pickup now reads byteMaxCount, handles full bags and partial pickup without
+losing the ground remainder. Ordinary dragging of identical nonstackable items
+or full stacks swaps records, including cargo; explicit overlap/split still
+validates count and compatibility.
+
+The generated registry exposes 201 English command entries. Source bytes and
+line provenance remain in generated metadata; translated service names do not
+claim unimplemented offline functionality. `docs/NATIVE_COMMANDS.md` lists all
+32 working offline commands with examples, plus source-only translations and
+ordinary chat commands. The parser passes 2,912 checks; actual SDL secret-whisper
+input passes 147 checks and exercises all 32 offline commands.
+
+Root `build-zflauncher.bat` calls the PowerShell build-and-stage flow. No arguments
+build Release, stage the executable and pause; flags make it noninteractive.
+`-NoStage` supports build-only use. SHA256 verification uses .NET directly so
+it also works when Windows PowerShell cannot autoload Get-FileHash. No assets
+are extracted, and project runtime data remains outside the client.
+
+Evidence: `docs/evidence/chat-upward-drag-source.json`,
+`build/evidence/wing-posture-render3`, `sit-stack-release3`,
+`english-commands-parser1`, and `commands-english-final1`.
+Final one-click build/stage passes (`build/oneclick-release2.log`). The final
+staged executable passes actual SDL default-hotkeys/posture (130 checks),
+held-icon/inventory transactions (55 checks), and real monster kill/chat/reward
+persistence. Chat shows two outgoing and two incoming damage messages and one
+Prana message without taking input focus. The keyboard movement regression also
+passes. All isolated runtime checks preserve normal profiles and seed files.
+Final staged Release SHA256:
+`556e0a2672bceeef195576ff9655c7fd114433718576285ac5f014e3ac1d0757`.
+The 147-check command run used the same source before the script-only hashing
+fix and relink; its executable hash is retained in the evidence JSON.
+C08 remains paused and full release/online service parity remains incomplete.
+
+## Upward Prana, visible chat history and held item icons (2026-10-28)
+
+Changed: make the requested Prana curl predominantly vertical. Keep the native
+JKS homing equation and six-word randomness; scale initial horizontal velocity
+by 0.35 and add 1.5 to initial vertical velocity. This is an explicit visual
+adjustment requested after the source launch looked sideways. Emission remains
+at the corpse and each original mote is absorbed on torso contact. Debug and
+Release each pass 5,059 rendered checks, with all 16 motes absorbed and initial
+lift reaching 20.105 native units.
+
+Verified the chat flow against HTChatting.cpp/h, HTInfoLoad.cpp,
+HTMainCharacter.cpp, HTMonster.cpp, HTGameSystem.cpp, HTMessageDef.h and
+HTextern.cpp. Show the original ChattingBox on world entry without taking
+keyboard focus. Keep separate 105-entry chat/system histories, original
+five-row controls and scrollbar navigation, HTMessage parameter ordering and
+category colours. Connect authoritative outgoing/incoming damage, dodges,
+skill damage, Prana rewards, received items/Rupiah, learned skills and
+death/revival messages. Preserve Philippine English text and monster names.
+Deduplicate by event sequence and avoid item-receipt messages for transfers
+between owned inventory, equipment and cargo.
+
+The native All/Party/Ashram/Alliance buttons select outgoing channels; support
+localized slash aliases, /g, /gc, /guild and /alliance, whisper From/To display,
+V reply and ten-entry input recall. Enforce the source 224-byte normal and
+48-byte group limits. Client receive presentation supports all these channels.
+Offline sessions still have no connected party/guild/whisper service: preserve
+honest unavailable/non-member responses instead of reporting remote delivery.
+This does not implement a multiplayer chat server or party membership service.
+
+Verified held item rendering against HTInterface.cpp:3144-3163. Move the
+original slot image to mouse minus 16 pixels at the top UI layer after pointer
+movement; leave the slot in place, suppress its count/tooltip while held and
+restore it on release/cancellation. Inventory, equipment and cargo share this
+path. Track SDL pointer events and reuse the existing HPK-backed icon; no
+client resource is extracted or rewritten.
+
+Validation: Debug/Release chat-and-icon components each pass 30 checks with
+GPU readback/captures. The final staged executable passes the actual SDL held
+icon/cancel/equip/swap/split/merge/potion scenario (55 checks), and a real kill
+shows two outgoing and two incoming damage messages plus one Prana message
+in the visible, unfocused chat panel. Hotkeys retain 63 checks and the secret
+whisper command flow retains 145 checks/all 32 commands. Those two regression
+runs preceded the final pointer-event optimization; final combat and inventory
+runs use the staged hash below. Disposable profiles and normal saves are
+verified unchanged.
+
+Evidence: `docs/evidence/chat-upward-drag-source.json`,
+`build/evidence/chat-ui-release2`, `chat-ui-debug1`, `prana-upward-release2`,
+`prana-upward-debug1`, `chat-item-drag-sdl1`, `chat-upward-combat-final1`,
+`chat-hotkeys1` and `chat-commands1`. Staged Release SHA256:
+`6051d883da9580c68de27e6b393c0fbff822b507f391b2235f7df8a7fdb6b222`.
+C08 remains paused; no wider release or multiplayer gate is closed.
+
+## Prana native curved launch and absorption (2026-10-28)
+
+Changed: restore the original outward/upward launch before homing. The prior
+absorption fix used a reduced TFX particle velocity, which straightened the
+path too quickly. Share HTAttack's six-CRT-word launch equation with the
+existing source-derived flight adapter; retain the unnormalized world X/Z
+components and upward Y. Each original death mote then uses the native
+100-unit speed and correction factor five toward the moving torso. A separate
+visual RNG leaves combat and authored emitter randomness independent.
+
+The source controls the curved travel. The installed Mandara TXL resolves
+death 1300005 to MON01_DIE01 and Follow 1300006 to MON02_DIE; their TFX nodes
+provide the native visuals without a fixed helix path. Keep the requested
+per-mote absorption presentation: emission stays at the corpse, the original
+particles/births/materials are reused, and no extra Follow or recipient graph
+is created. Swept contact consumes each mote on arrival.
+
+Verified: Debug and Release each pass 5,115 rendered checks, including every
+live mote's position and velocity against the source-derived launcher flight,
+outward/upward flare, live target movement/rebuild, fixed emission, and all
+16 emitted motes absorbed. Initial lift reaches 11.815 native units; the
+maximum 60 Hz step is 3.916 units during the native launch impulse. Swept
+contact, coarse-frame absorption and normal projectile rules pass in both
+configurations. The staged Release passes the actual SDL kill/reward encounter
+and native persistence checks; original, seed and normal profiles are preserved.
+
+Evidence: `docs/evidence/taras-prana-source.json` curvature correction;
+`build/evidence/prana-curvature-release2`, `prana-curvature-debug1` and
+`prana-curvature-combat1`. Staged Release SHA256:
+`d6fc924b02908979858c4647d978e46ac6837183176b0a93b9b06a061241b99a`.
+This supersedes the launch velocity in the absorption checkpoint below.
+C08 remains paused.
+
+## Prana travels into the player and is absorbed (2026-10-28)
+
+Changed: correct the previous moving-emitter approach, which could continue
+emitting at the recipient. Keep the original death graph and emitter at the
+corpse. Give each of its existing/newly emitted death motes an independent
+world-space path toward the live torso, using 100-unit speed and correction
+factor five. Preserve the original particle births/materials and initial
+positions. Sweep contact against a 1.25-unit sphere in substeps no larger than
+1/60 second, shrink/fade over the final approach and remove each mote on
+contact. No recipient effect or replacement Follow graph is created. Drain
+the original corpse emission interval, then retire the graph after its last
+mote. A ten-second per-mote fallback bounds unreachable targets; normal
+projectile/damage/reward rules are unchanged.
+
+Verified: Release/Debug each pass 4,071 rendered particle checks. All16 test
+motes originate at the corpse, travel continuously (maximum measured60Hz step
+1.667 native units), follow a moving/rebuilt recipient and are absorbed.
+The source emitter remains fixed; no motes remain around the player afterward.
+The source/path/arrival captures and per-mote CSV trace verify actual visible
+travel. Swept-contact/coarse-frame rules and existing projectile rules pass in
+both configurations. Taras retains906 checks. The final staged launcher passes
+the actual SDL kill/reward/trail/hit/audio scenario and 60-file package closure;
+original, seed and default profiles remain unchanged. No outstanding failures
+for this correction.
+
+Evidence: `docs/evidence/taras-prana-source.json` absorption correction;
+`build/evidence/prana-absorption-release1`, `prana-absorption-debug1`,
+`prana-absorption-taras1`, `prana-absorption-combat1` and
+`prana-absorption-package1` under `build/evidence`. Staged Release SHA256:
+`62e7912ce47b7ad749499d5e3f54cd36f3547402c53c6ffd6c3dd4d159b99e57`.
+This supersedes emitter-carried collection below. C08 remains paused.
+
+## Taras back wings and existing death-cloud collection (2026-10-28)
+
+Changed: verify Taras 3121 through fxPC.txl, the native skill-type definitions,
+HTMainCharacter's active-skill/state-affection paths and
+HTEngineHandler::HT_dwGetAffectionFXID. Taras is a type-22 one-shot active
+state; its lasting wings come from the separate MoveSpeedPlus affection
+(effect4440, flag0x00400000). Keep the original one-shot PYG11_STA01 and loop
+the installed K3 PFX_MSP/1010053 while that affection remains live. The Global
+reference adds PFX_MSP2/1010075; use the installed catalogue without importing
+Global resources. Respect higher-priority affection suppression. Anchor both
+original wing halves at the live upper back, compensating the baked exporter
+height/root motion while keeping the original meshes, textures and TAB
+deformation. Movement, turns and same-player equipment rebuilds retain wings;
+buff removal, death and native expiry stop them.
+
+The original monster/attack source starts ACTIVATE death FX and a separate
+FOLLOW=DieActivate+1 graph. Per the user's correction, collection now carries
+the already-visible death cloud itself: transfer its existing instance to a
+moving null carrier and retain particle births, age, geometry, colour, source
+height and orientation. Vasabhum uses MON01_DIE01/1300005. No extra Follow
+visual starts. Resolve a fresh graph's authored socket before transfer, retain
+the native homing equation/live player target and three-second flight, and
+allow its existing particle tail to outlive the emitter interval. Preserve the
+cloud after corpse removal and target display replacement. Reward maths and
+authority remain unchanged. This supersedes the earlier separate-Follow
+presentation checkpoint below.
+
+Verified: Debug/Release each pass 906 Taras checks and 579 Prana checks.
+Taras uses a real learned skill transaction; both cast and looping wing
+geometry stay at the upper back, both halves draw, and the loop survives
+beyond the original three-second graph. Removal, priority, turn/movement,
+equipment rebind, death and native timed expiry pass. The cloud probe first
+renders death particles, transfers that same graph, verifies unchanged birth
+times/clock/geometry/colour/rotated pose, follows a moving/rebuilt recipient,
+survives removal of the corpse display and retires on expiry/missing target.
+Closest measured carrier-to-target distance is below .001 native units.
+
+The final Release passes the actual SDL Vasabhum kill/reward/trail/hit/audio
+scenario (Prana0 to60, one reward presentation), Mandara FX pixel/occlusion
+checks, the 91-check field regression and its 5,792-pixel white altar centre
+check. The real kill scenario does not assert the separate death-pose flag;
+the isolated cloud probe supplies the detailed motion/continuity evidence.
+Original/seed/default profiles remain unchanged and 60-file owned package
+closure passes. No outstanding failures for these two requests.
+
+Evidence: `docs/evidence/taras-prana-source.json`,
+`build/evidence/taras-release-final2`, `taras-debug-final2`,
+`prana-cloud-release-final2`, `prana-cloud-debug-final2`,
+`taras-prana-field-final2`, `taras-prana-combat-final1`,
+`taras-prana-mandara-final1` and `taras-prana-package-final1` under
+`build/evidence`. Staged Release SHA256:
+`db02ba338aa6ef73e8d136c2e3d5ada776ffc4ccf40bb3cfc8c184ef73219d09`.
+C08 benchmarks remain paused; its 19/21 tasks and acceptance gate are unchanged.
+
+## Altar solid white centre mesh (2026-10-28)
+
+Changed: the close-camera follow-up exposed a missing part that the earlier
+placement checks did not cover. The authored mALTER2_2010102.tmb contains
+C1_T1 (82 vertices), C2_T1 (82) and P1_T2 (4). The additional-record reader
+rejected the `(null)` texture placeholders, so the second ray section and
+solid centre plane never reached rendering. Accept that native placeholder
+as an unset texture, matching the first record's handling. Use native `_T%d`
+mesh tags when binding TFX replacement textures: both rays use T1; the centre
+uses T2, tNORM_2100429.tga. Pin the original engine tag-selection instructions
+at RVAs 37674/389BE and the original HPK entry hashes. No source asset changes,
+new fill geometry or depth bypass are used.
+
+Verified: Debug/Release each pass 91 field checks, including all three decoded
+model sections, influence mappings, actual white-plane texture binding,
+furnace rim alignment, quest icons, ground conformance and world depth.
+Three close-camera pixel tests cover 5,792 pixels inside the opening and
+require all to be white; both configurations pass with every channel 255.
+The same rectangles reproduce 377 nonwhite pixels in the diagnostic baseline,
+so the pixel test detects the reported strip. Prana homing retains 570 checks
+per configuration; Release light/jitter controls retain 192 checks. The final
+staged launcher passes Mandara FX visibility/motion/occlusion, INTRO flat-ring
+selection and 60-file owned package closure. Protected/default profiles remain
+unchanged. No outstanding failures for this bounded correction.
+
+Evidence: the `altar_core_followup` entry in
+`docs/evidence/field-sprite-source.json`; `build/evidence/altar-core-release1`,
+`altar-core-debug1`, `altar-core-native-instructions.txt`, `altar-core-sdl1`,
+`altar-core-roster1`, `altar-core-package1`, `altar-core-prana-release1`,
+`altar-core-prana-debug1` and `altar-core-controls-release1` under
+`build/evidence`. Staged Release SHA256:
+`b5c47deabf6c2cc6aa29bd2d190c8b234b8291d7e6ce908825c901b56a7d167a`.
+C08 benchmarks remain paused and its acceptance gate remains open.
+
+## Altar and furnace sprite alignment (2026-10-28)
+
+Changed: verify the authored Mandara TFX records and the pinned original
+HT3DHeaven.dll with read-only instruction inspection before correcting the
+renderer. Type-2 sprite positions already use native world units; the shared
+model/particle factor of .1 incorrectly lowered the altar core from +55 to
++5.5 and the furnace layers from +27/+26.5 to +2.7/+2.65. Use direct sprite
+positions, preserving the native attached parent-height conversion. Mode 1
+also carries an authored normal: furnace normal (0,1,0) produces a horizontal
+XZ plane; quest normal (0,0,1) retains an upright icon. Preserve camera-facing
+mode 0, the INTRO ring override, ground conformance, exposure and world depth.
+
+Verified: Release/Debug each pass 58 field-sprite checks, using actual TML
+placements, two orbit views and four full-map captures. Both furnace layers
+stay flat at the rim; the altar sprite centre is +55 above its placement.
+The upright quest icon and conforming ground-click ring pass. Prana homing
+passes 570 checks per configuration; the Release FX control probe passes 192.
+The staged launcher's Mandara FX scenario passes rendered on/off/restoration,
+portal/water motion, progression/selection/item/torch visibility and building
+occlusion. Its INTRO roster scenario retains the flat selection ring under
+camera orbit. Original, seed and default profiles remain unchanged. The
+60-file owned package closure passes. No outstanding failures for this fix.
+
+Evidence: `docs/evidence/field-sprite-source.json`,
+`build/evidence/field-sprite-native-instructions.txt`, `field-sprites-release2`,
+`field-sprites-debug1`, `field-sprites-sdl1`, `field-sprites-roster1`,
+`field-sprites-prana-release1`, `field-sprites-prana-debug1`,
+`field-sprites-controls-release1` and `field-sprites-package1` under
+`build/evidence`. Staged Release SHA256:
+`5c458e2ea6e99561da0e591e15813dee344e84652e0c23a0f15324ef0243cf2a`.
+This bounded fix does not resume C08 benchmarks or close broader FX parity.
 
 ## Native Prana follows the player (2026-10-28)
 
@@ -1299,3 +2443,38 @@ them absent; do not search for replacements or treat them as a repair task.
 These are development slices, not visual/performance parity or production
 completion. No 60 FPS or whole-repository test pass is claimed. No server process,
 commit or push was performed.
+
+### 2026-10-31 C++ connected combat/social continuation
+
+The online BGFX channel now consumes server-authored attack/skill/death/prana/drop
+messages and the eight-member party/HP roster. Party/guild chat, invitations,
+trade offers with explicit version confirmation, guild management and ordinary
+cash-item purchases/recovery use the authoritative C++ services. Cash NPC purchases
+reuse the existing merchant interface. Client gameplay does not award online damage,
+items or cash locally. See `_server_cpp/docs/SHARED_SERVICE_CONTRACTS.md` and
+`_server_cpp/IMPLEMENTATION_PROGRESS.md` for command examples, test evidence and
+remaining source-parity/graphical gates. No full gameplay completion percentage
+is inferred from these connected slices.
+
+### 2026-10-31 periodic skills, social windows and local billing
+
+- [x] Consume authoritative periodic HP events and projectile lifecycle updates;
+  reuse native FX rendering while the C++ server owns contacts, damage and rewards.
+- [x] Six connected original-image windows: Players, Party, Guild, Trade, Rooms
+  and Cash. J opens Players; G opens Guild; tabs reach the other windows. Paging,
+  keyboard text editing, party/guild actions, version-confirmed trade, passworded
+  rooms and cash catalog/buy/recover invoke the real C++ services.
+- [x] Original General/Hanbit/Philippines adapters use the selected local ledger
+  and native country price/bundle rules. No live payment provider is required.
+- [x] Final Release two-client TCP check passes party/guild/room chat, memberships,
+  trade, cash delivery and social view messages without opening offline databases.
+- [x] Six D3D11 social-window captures use state saved from the TCP check. Native
+  projectile rendering passes 30 damage cases, 18 renders and six lifecycle checks.
+- [x] Stage Release ZFLauncher in ../_client_bgfx; support files remain project-owned.
+
+Evidence: ../_server_cpp/docs/evidence/periodic-social-billing-20261031.json.
+These checks cover native UI rendering and protocol integration separately; full
+interactive network gameplay visual acceptance and full original social-window
+parity remain open. Missing content is recorded and skipped: 17 skill bindings,
+21 animation clips and three unresolved FX in the rendered projectile cases.
+The complete MMO/client roadmap is not closed by this batch.

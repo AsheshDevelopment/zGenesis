@@ -12,15 +12,15 @@
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "8ef4fda071bed3b3550e087124cc8a035e905c51714328d4c2c9655f5df4a896"
+      "sha256": "194533e3a5153eda2950d49231874d653cbccf9bc94705d7c4b958f7890e7d1c"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "426047bfcadd068fb13fcd3f29580ba827163de42a0e3df710975edce92cc9c2"
+      "sha256": "1d8fecbd9105fd14e5173a3667a4f60cc43506fe044f12ced4a76f3c90cb66f2"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",
-      "sha256": "42a9bc1eaafbe459154f19232d5d83a374f0ccc08c6ff6f3d2bcb4691901f410"
+      "sha256": "173011ea4aa956c84a45df563caf5adca8fbbea782f30a0b1d79c8155a2a1673"
     }
   },
   "reference": {
@@ -38,9 +38,9 @@
     },
     {
       "id": "tantra-b",
-      "done": 149,
+      "done": 168,
       "total": 254,
-      "percent": 59,
+      "percent": 66,
       "accepted": 5
     }
   ]

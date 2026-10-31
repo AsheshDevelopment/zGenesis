@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "C08 has individual evidence for 19/21 tasks: GPU skinning with CPU fallback, bounded caches/workers/uploads, instancing, FX pooling, recovery and a full relocatable package. The phase gate remains open: a warm combat run revived to town and changed its actor workload. Native Prana Follow FX now homes to the live player, including movement and model replacement; this bounded fix does not resume the paused benchmark work. Monster names are selected-only and NPC close clears its target. Game source is uncommitted.",
+      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. The current checkpoint verifies real two-client combat/projectiles, SDL trade and cash, recovery, native altar/quest services and a two-zone round trip with remote party HP/chat. C08 keeps its benchmark gate open; C09 and all ten map acceptance gates remain open. Competitive arena/castle recovery is still pending.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -2527,61 +2527,61 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P14-01",
-              "done": false,
+              "done": true,
               "text": "Audit _server_cpp\\include\\tantra\\wire.h and current local C++ service implementations; compare the migrated _server version explicitly before reusing a protocol.",
               "children": []
             },
             {
               "id": "P14-02",
-              "done": false,
+              "done": true,
               "text": "Document supported messages versus placeholders; port existing working adapters, not empty callbacks.",
               "children": []
             },
             {
               "id": "P14-03",
-              "done": false,
+              "done": true,
               "text": "Keep localhost/127.0.0.1 defaults; do not import historical source IPs.",
               "children": []
             },
             {
               "id": "P14-04",
-              "done": false,
+              "done": true,
               "text": "Implement authentication/session/roster/world-entry transport with bounded frames and timeouts.",
               "children": []
             },
             {
               "id": "P14-05",
-              "done": false,
+              "done": true,
               "text": "Define movement/combat/inventory/NPC command/notification ownership and revision rules.",
               "children": []
             },
             {
               "id": "P14-06",
-              "done": false,
+              "done": true,
               "text": "Keep client prediction/interpolation distinct from authoritative calculations and persistence.",
               "children": []
             },
             {
               "id": "P14-07",
-              "done": false,
+              "done": true,
               "text": "Prevent the offline authority from mutating online sessions in parallel.",
               "children": []
             },
             {
               "id": "P14-08",
-              "done": false,
+              "done": true,
               "text": "Handle disconnect, cancellation, reconnect, stale notifications and failed handoff without duplication.",
               "children": []
             },
             {
               "id": "P14-09",
-              "done": false,
+              "done": true,
               "text": "Reuse the existing native Win32 server manager and per-zone processes/configuration; do not rewrite the manager inside ZFLauncher.",
               "children": []
             },
             {
               "id": "P14-10",
-              "done": false,
+              "done": true,
               "text": "Gate claims of multiplayer support on actual two-client/server transactions with evidence.",
               "children": []
             },
@@ -2623,13 +2623,13 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P15-07",
-              "done": false,
+              "done": true,
               "text": "Match active server routing to the destination map and reject unsupported zones honestly.",
               "children": []
             },
             {
               "id": "P15-08",
-              "done": false,
+              "done": true,
               "text": "Remove Zone01-only authority restrictions only after the destination's server logic/data are ready.",
               "children": []
             },
@@ -2641,7 +2641,7 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P15-10",
-              "done": false,
+              "done": true,
               "text": "Keep all ten acceptance toggles unchecked until their individual evidence exists.",
               "children": []
             },
@@ -2671,13 +2671,13 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P16-05",
-              "done": false,
+              "done": true,
               "text": "Implement chat channels/whispers, parties and authoritative membership state.",
               "children": []
             },
             {
               "id": "P16-06",
-              "done": false,
+              "done": true,
               "text": "Implement trade offer/confirm/cancel/disconnect behavior and atomic item/money persistence.",
               "children": []
             },
@@ -2695,13 +2695,13 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P16-09",
-              "done": false,
+              "done": true,
               "text": "Mark unsupported online commands visibly and avoid sending guessed legacy packets.",
               "children": []
             },
             {
               "id": "P16-10",
-              "done": false,
+              "done": true,
               "text": "Require explicit server implementation/evidence for each feature, not just client buttons.",
               "children": []
             },
@@ -2713,13 +2713,13 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "BG-ONLINE-01",
-              "done": false,
+              "done": true,
               "text": "Accept a real localhost client/server session before claiming transport support.",
               "children": []
             },
             {
               "id": "BG-MULTI-01",
-              "done": false,
+              "done": true,
               "text": "Accept actual two-client authoritative transactions before claiming multiplayer support.",
               "children": []
             }
@@ -2730,12 +2730,13 @@ window.TANTRA_ROADMAP = {
             "text": "Every claimed feature has source/authority/CPU/runtime evidence. Single-client transport differs from multiplayer acceptance. Each zone separately passes resources, authority and transition/persistence; profiles alone never pass.",
             "children": []
           },
-          "done": 1,
+          "done": 20,
           "total": 46,
-          "percent": 2
+          "percent": 43
         }
       ],
       "foundations": [
+        "Native C++ shared MMO: real two-client combat/projectiles/trade/cash, service restart recovery, source altar/quests/resurrection and a paid two-zone round trip with party HP/chat",
         "C08: 128-bone native GPU palette, inverse-transpose normals/shadows, CPU fallback and 32 rendered CPU/GPU comparisons",
         "C08: bounded decode/cache/upload queues, compatible opaque instancing, pooled changing-topology FX and conservative hidden visual work",
         "C08: eight scene retirements, four renderer retries, audio-owner cleanup, WAL-safe migration backups and external native diagnostics",
@@ -2773,6 +2774,11 @@ window.TANTRA_ROADMAP = {
         "Broaden distinct-map/portal, visual/performance/recovery and release acceptance without inferring FPS gains from caching"
       ],
       "changes": [
+        {
+          "date": "2026-10-31",
+          "title": "Connected C++ MMO and cross-zone checkpoint",
+          "text": "Check 19 C09 tasks from the source plan: bounded login/session/world transport, separate authority, revision-fenced commands, MSGSRV/CHATSRV parties/chat, atomic trade, cash delivery/recovery and live two-client acceptance. Two real D3D11 launchers verify combat/projectiles and SDL trade; separate Zone01/Zone02 authorities verify paid outward/free return, party HP/presence and bidirectional chat, with stopped SQL records. Native altar/tutorial/class-change services and both resurrection locations are checked. Slot70 preserves refundable death loss. Global event bindings dispatch reward skill41347; Yut quests read registered winnings while the original disabled betting packets remain disabled. Release only; no broad FX regression. Competitive arena/castle recovery, the C08 benchmark gate, full C09 and ten individual map acceptances remain open. Preserve Tantra-O and its documentation."
+        },
         {
           "date": "2026-10-28",
           "title": "Native Prana homes to the live player",
@@ -2889,9 +2895,9 @@ window.TANTRA_ROADMAP = {
           "text": "ZFLauncher uses its dedicated client/profile. OGRE runtime results are not transferred to bgfx acceptance."
         }
       ],
-      "done": 149,
+      "done": 168,
       "total": 254,
-      "percent": 59,
+      "percent": 66,
       "accepted": 5
     }
   ],
@@ -2968,15 +2974,15 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "8ef4fda071bed3b3550e087124cc8a035e905c51714328d4c2c9655f5df4a896"
+      "sha256": "194533e3a5153eda2950d49231874d653cbccf9bc94705d7c4b958f7890e7d1c"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "426047bfcadd068fb13fcd3f29580ba827163de42a0e3df710975edce92cc9c2"
+      "sha256": "1d8fecbd9105fd14e5173a3667a4f60cc43506fe044f12ced4a76f3c90cb66f2"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",
-      "sha256": "42a9bc1eaafbe459154f19232d5d83a374f0ccc08c6ff6f3d2bcb4691901f410"
+      "sha256": "173011ea4aa956c84a45df563caf5adca8fbbea782f30a0b1d79c8155a2a1673"
     }
   },
   "reference": {

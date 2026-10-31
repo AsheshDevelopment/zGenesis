@@ -1,6 +1,6 @@
-# ZFLauncher bgfx offline implementation plan and progress
+# ZFLauncher bgfx implementation plan and progress
 
-Updated: 2026-10-28. Target: C++20, Windows x64, SDL3, bgfx/D3D11 and SQLite.
+Updated: 2026-10-31. Target: C++20, Windows x64, SDL3, bgfx/D3D11 and SQLite.
 Owned workspace: `C:\_GitHub\TantraSrc\_remake_bgfx`.
 Primary reuse baseline: `C:\_GitHub\TantraSrc\_remake`.
 Dedicated final client: `C:\_GitHub\TantraSrc\_client_bgfx`.
@@ -12,9 +12,12 @@ the `Tantra Online` window/product title, using the same client assets and
 
 **C02 and C05 are accepted for their represented offline scope (2026-10-27).**
 The user requested C02 and native live graphics options after C05. The broader
-skill/strike expansion and server work remain paused. ZFLauncher uses C++20,
+skill/strike foundations and native C++ MMO integration are active. The server
+batch and its remaining competitive recovery task are tracked in
+`../_server_cpp/IMPLEMENTATION_PROGRESS.md`. ZFLauncher uses C++20,
 SDL3 and bgfx/D3D11 with dedicated `_client_bgfx` assets and external runtime
-support. The complete plan remains open. Game source changes remain uncommitted.
+support. The complete plan remains open; source status follows the repository
+commit history.
 
 ### Altar and secret-whisper command checkpoint (2026-10-27)
 
@@ -39,14 +42,305 @@ extracted; new authority masks remain outside the clean client tree.
 
 ## Current work order
 
-1. Keep C08 implementation/benchmark work paused. Nineteen of its 21 tasks
-   have individual evidence; replace the rejected warm combat comparison and
-   enforce matching actor workload before closing P17-13/P17-14 or C08 gate.
-2. The requested Prana fix is verified and staged: native monster Follow FX
-   (DieActivateFX+1) uses the source homing motion and follows a moving player.
-   Preserve selected-only monster names and NPC target cleanup on close.
-3. Publish the Tantra-B checkpoint; keep accepted C02/C05/C06 scope and the
-   paused wider skill/server work. C09 and full release parity remain open.
+The user's active five-part goal authorizes continued native-data, skill/weapon
+FX, navigation, persistence/transition and CPU/GPU/loading work. Earlier pause
+notes below describe historical checkpoints; current measurements do not accept
+the rejected C08 aggregate or close the full release gate.
+
+1. Preserve direct TantraParam reading and separated server authority; refresh
+   the complete shared numeric-record comparison against current imports.
+2. Complete remaining available skill/weapon FX and authoritative timing. Add
+   the native priority-selected status loops beyond Taras; retain cast/impact,
+   projectile and per-hit shield ownership as separate native paths. Record
+   missing authored bindings without searching for replacement assets.
+3. Retain and rerun stairs, narrow passages, corner chase and immediate attack
+   retarget matrices. Quantized TCC stair heights remain a visual parity limit.
+4. Recheck native UI/quick slots/equipment/audio over restart, relogin, character
+   and represented zone changes; extend distinct-map/portal travel separately.
+5. Measure the current crowded scenes and loading before prioritizing more
+   optimizations. Reject field measurements whose actor workload collapses to
+   town; retain all raw evidence and keep P17-13/P17-14/C08 acceptance open.
+
+Preserve selected-only monster names, NPC target cleanup, accepted altar/furnace
+alignment and the corpse-born upward Prana absorption correction.
+
+### Five-part goal closeout (2026-10-29)
+
+The five requested deliverables are complete for the supplied client/offline
+runtime scope. This closes the data/FX/navigation/persistence/profiling goal,
+not the entire remake roadmap. Withdraw percentage estimates; use the evidence
+and explicit done/open boundaries below.
+
+- [x] Read native TPA directly; compare Item/Monster/PCSkill/MonsterSkill against
+  current imports, retain version differences, keep server support outside client.
+- [x] Integrate supplied skill/weapon FX: projectiles, persistent ownership,
+  cancellation/death cleanup, four elemental trails and native weapon timing.
+  Add NPC pattern/synchronized casts and correct self/friend/party recipient
+  routing. Missing authored resources are recorded/skipped as requested.
+- [x] Stress stairs, narrow passages, corners, chase and immediate attack retarget:
+  reuse the passing 32 static / 8 dynamic cases and 3848 movement samples.
+- [x] Verify Interface.sys/options, quick slots, equipment, audio, character
+  isolation, fresh-process restart/relogin and distinct-map portal recovery.
+- [x] Measure crowded native scenes, CPU/GPU costs and loading before optimization
+  priorities. Retain the pinned baseline and its cache/overlap/build limitations.
+
+Final Release build and staged executable match. Two focused support cases and
+one D3D11 rendering case pass; earlier wider evidence is reused. No Debug rebuild
+or new broad test matrix. Exact files, results, hashes and limitations are in
+final_five_part_audit / native_support_checkpoint in the existing goal JSON.
+
+Keep broader gameplay services (scripted AI conditions, summons, BlessOfGod/full
+world reset, knockback/reflection, online/social/siege), every-map visual parity,
+native TBO/exact closed-engine endpoints and full C08 acceptance on the roadmap.
+They are not silently marked implemented by this goal's FX pipeline closure.
+
+### Five-part goal coverage review (2026-10-29)
+
+Recheck the actual requested scope using current source, the staged executable
+and saved direct evidence; reuse unchanged results without a new test matrix.
+This is a coverage review, not final completion. Engineering estimate: about 92%.
+
+- [x] Direct TPA reading and comparison: current TPA and all four compared import
+  hashes match the expanded report. Compare 135800 equal / 1192 differing
+  numeric cells; keep version differences and server authority separate. Client
+  project/profile/support folders remain outside the client.
+- [ ] Complete skill/weapon FX and timing. Existing projectiles, state effects,
+  trails, cleanup and directional-impact checks cover their recorded cases.
+  The live monster path still selects default melee/ranged skills only. There
+  are 588 installed monster templates with nonzero special-skill patterns
+  (examples 2018/2025/2030). Connect native SelectSkill pattern dispatch,
+  synchronized cast timing and proper enemy/self/area recipients; a static
+  graph sweep cannot close this live-event gap. Retain other unimplemented
+  world-target services and missing authored presentation records explicitly.
+- [x] Requested navigation stress: saved 32 static / 8 dynamic cases and 3848
+  movement samples cover stairs, narrow passages, corners, chase and immediate
+  R retarget. Keep Mandara/TCC/TCM/fallback and quantized-stair limits explicit.
+- [x] Requested persistence/transitions: saved fresh-process and SDL results
+  cover equipment, quick slots, Interface.sys/options, separate audio,
+  character isolation, distinct Mandara/Shambala travel and fresh login at the
+  committed destination. The harness starts the exact emitted Restart command;
+  ordinary ShellExecute spawning was not separately runtime exercised.
+- [x] CPU/GPU/loading baseline collected: six fresh processes / 7200 frames,
+  crowded native field workload and cold/warm derived-cache loading. The
+  measured executable is ff977, predating later combat changes. No current
+  executable benchmark, isolated optimization gain or full C08 acceptance is
+  claimed. Keep measured priorities and timing-overlap/cache limits explicit.
+
+Evidence and current hashes: five_part_coverage_review_20261029 in
+`docs/evidence/five-part-goal-20261028.json`. No new build or runtime test was
+run for this review. The full goal remains active, with requirement 2 open.
+
+### Native monster pattern continuation (2026-10-29)
+
+- [x] Connect original SelectSkill, 50 native patterns, default-slot overrides,
+  shared CRT/repeat counts and synchronized echo/action locks to live NPCs.
+- [x] Use native strike equations/instant strike phases and source success rolls.
+  Keep caster-area victim range and EnemyFarFirst routing distinct.
+- [x] Apply supported NPC self skills on the caster and bind their impact there;
+  suppress false player damage chat/digits/shield FX for support recipients.
+- [x] Pass focused Release default/pattern/repeat checks plus two source-driven
+  enemy world sequences and one controlled NPC self-effect fixture; stage the
+  executable. No Debug rebuild or broad test matrix. See fixture limits and
+  exact evidence in native_monster_pattern_checkpoint in the existing goal JSON.
+- [ ] Finish native friend/party recipient selection/support transactions,
+  remaining instant/world effects (including knockback/reflection) and scripted
+  AI conditions. Confirm new NPC phase/recipient presentation in a targeted GPU
+  run; the current checkpoint is CPU/world evidence, not full FX acceptance.
+
+The earlier default-only coverage-review finding is superseded by this
+checkpoint. The full goal remains active; engineering estimate about93%.
+
+### Current validation preference (2026-10-29)
+
+The user requests faster implementation and fewer tests. Use one Release build
+and focused checks for the behavior being changed. Reuse applicable passing
+evidence. Do not routinely rebuild Debug. Use Debug only for a crash or a
+specific failure that needs it. Repeat broad matrices only for a concrete
+failure, material concern or explicit release-gate request.
+
+- [x] Add ordinary weapon impact graphs with attack-start item ownership and
+  preserve it through released-shot equipment replacement and Escape.
+- [x] Apply original opponent directional-socket selection to weapon/skill and
+  monster impacts, retaining source ties and missing-socket reporting. Keep
+  callback-default impact levels separate from phase FX bands. Evidence:
+  directional_weapon_impact_checkpoint in the existing goal JSON.
+
+- [x] Compile native CastInstant3 and admit HP/TP-steal skills 3142/3227.
+  Recover on the successful damage marker from actual HP removed, cap at
+  native maxima and retain recovery through final world synchronization.
+  Connect the source handler to NPC hits while preserving IncTP's NPC guard.
+  One Release build and two focused authored world casts pass; no fresh NPC
+  encounter or full-launcher runtime is claimed. Evidence:
+  post_damage_steal_checkpoint in the existing goal JSON.
+
+- [x] Implement native StartAction/Dash for skills 3014/3114: source cell
+  destination selection, speed 40 running, activation ordering, collision,
+  cancellation and 3114-only attack follow-up. Two focused Release world casts
+  pass. Missing 3014 presentation is recorded/skipped, without replacement FX.
+  Summon/other StartAction services remain gated. No Debug rebuild or fresh
+  GPU/full-launcher acceptance claim. Evidence: native_dash_checkpoint in the
+  existing goal JSON.
+
+### Refreshed profiling continuation (2026-10-29)
+
+- [x] Measure the staged player-periodic ff977c0e executable with CPU skinning:
+  six fresh sequential processes, two trials for town/field-idle/field-combat,
+  7,200 measured frames with valid GPU timers and retained field workload38..44.
+  Record cold/warm derived-cache loading, raw CPU/GPU scopes and integrity.
+- [ ] Verify the final-current executable after remaining combat changes and
+  complete the full goal audit. Keep broad C08 release acceptance separate.
+
+### Distinct-map portal continuation (2026-10-28)
+
+- [x] Import native Portal numeric records outside the client; compare113 shared
+  direct-TPA records without merging client/Global versions. Preserve existing
+  TSV bytes and stage an atomic Zone02 dataset with its own settings.
+- [x] Verify source route quotes, client/server level-check separation,3-second
+  activity bounds and33 destination landing cases. Debug passes2,462 checks;
+  Release rendering passes2,485, with1,295 native destination actors.
+- [x] Select field FX and monster attack bindings from the destination Map's
+  strFXFiles rather than the Mandara-only constant; retain Mandara regressions.
+- [x] Connect original portal window214 to authenticated fare/save/reconnect
+  transactions for ordinary Mandara/Shambala travel. Verify45 actual SDL round-trip
+  checks, one paid departure/free return and a fresh map40002 restart/native login.
+- [x] Select the complete121-row K3 Portal authority profile without merging or
+  replacing Global. Record the remaining114 direct-client numeric differences.
+- [x] Verify atomic stale-snapshot/duplicate-charge rejection and single-use native
+  connection2 grants; Debug/Release each pass2,400 data/ticket checks. Preserve full
+  native MOB/cargo bytes, layout/quickbar files and independent live audio settings.
+- [ ] Extend in-zone/posture and cross-zone buff coverage; retain broader portal
+  routes and world services as separate gates.
+- [ ] Port remaining competitive/clan/event portal admission services separately.
+
+Record missing Env_FireTorch2 graph1400020 and skip it. Evidence and preparation
+limits are in PROGRESS.md and the portal checkpoint in the existing goal evidence.
+
+### Native hostile-recipient continuation (2026-10-28)
+
+- [x] Add source-compiled active affection dispatch between the real caster and
+  native NPC recipient, preserving caster cards, target resistance, absolute-level
+  considerations and one shared CRT stream. Debug/Release each pass10,512 checks.
+- [x] Retain the full92-column Monster import outside the client; verify all
+  53,263 previously imported cells and other tables remain unchanged. Refresh
+  direct TPA comparison without merging client/Global authority versions.
+- [x] Wire genuine NPC sessions into live casts/hits for the supported native
+  control and stat-reduction effects, scheduled expiry and priority-selected
+  monster FX. Debug/Release each pass5,375 live integration checks; the rendered
+  case passes5,451. Keep unsupported world-service effects rejected.
+- [x] Order spell and ordinary attack markers within each frame; an earlier lethal
+  hit cancels a later unpaid cast. Track target generation across cast/projectile
+  lifetimes. Verify both coarse-frame lethal orderings.
+- [x] Use the caster as the source-verified origin for range-zero hostile area
+  skills. Skill3043 casts without a selected unit or forced approach; native hold
+  stops movement but preserves legal in-range attacks.
+- [x] Run PC-to-NPC periodic damage through source CheckAffections,
+  ElapseAffectionTime, PlayDice and the extracted OnTakeDamage lane reducer.
+  Preserve 500ms checks, whole seconds, expiry clipping, short conversion,
+  integer rounding, shared CRT draws and authored damage/resistance factors.
+- [x] Order periodic checks with ordinary/projectile markers; retain target-life
+  ownership and per-hit HP. Resolve lethal ticks through corpse animation,
+  one loot/prana reward and clean respawn. Cancellation retains committed DoT.
+- [x] Run supported NPC and self-origin periodic damage on the player through
+  the source PC reducer, shield/absorption order, native notifications and the
+  self-kill penalty exemption. Preserve the original monster success-rate gate.
+- [x] Advance the player clock before the actual marker frame and reject unpaid
+  attacks/skills under native DontAttack control. Verify delayed buff starts,
+  source revival Init, authenticated saved HP/TP/skills and fresh entry protection.
+- [x] Exclude periodic HP updates from the source portal activation timer; quote
+  a native route while self DoT remains active after the real cast lock expires.
+  Debug and Release each pass1,450 player-periodic checks; the staged client passes
+  combat, buff-owner/equipment replacement and HP/TP recovery regressions.
+- [x] Audit authored taunt phase bits and preserve safe admission. Skills3023/3028
+  use damage plus AffectSelf128, not disabled instant-taunt256. Debug/Release
+  each pass57 guard checks; genuine casts remain gated without cost or mutation.
+- [x] Implement the actual 3023/3028 AffectSelf lifecycle through source dispatch,
+  including killing hits, owner/duration/inner bit, cancellation, equipment
+  replacement, expiry and revival. Use native caster-centred 3028 area requests
+  and one caster-state graph. Verify Naga/Kinnara and fine/coarse timing.
+- [x] Correct no-socket impact categories 0/100/200 to follow the opponent while
+  keeping caster activation/state graphs separate. Verify four rendered skill
+  cases and the 28-encounter/five-rendered projectile regression.
+- [ ] Complete other-target taunt/threat, linked recipients and broader attacker/world services;
+  retain remaining skill coverage and portal/buff parity as separate open gates.
+
+Evidence: `PROGRESS.md` and the hostile live-world/recipient checkpoints in
+`docs/evidence/five-part-goal-20261028.json`. The complete five-part goal stays open.
+
+### Chat, English commands and verified follow-up fixes (2026-10-28)
+
+- [x] Make Prana collection curl upward into the live character while retaining
+  corpse emission and individual absorption; Debug/Release each pass 5,059 checks.
+- [x] Display native chat by default, with separate chat/system history, damage,
+  Prana and item messages, channel controls and whisper reply presentation.
+  Offline remote chat services remain unavailable; no multiplayer gate is closed.
+- [x] Draw the original held item icon at the cursor across inventory/equipment/
+  cargo; verify release/cancel and normal item transactions through SDL.
+- [x] Expose English command names with source provenance and examples in
+  `docs/NATIVE_COMMANDS.md`; keep unsupported source services unavailable.
+- [x] Audit all eight avatar assets: use the authored Wing socket on WeaponSpine,
+  not an assumed Wing bone; verify animated attachment and back-facing geometry.
+- [x] Implement native 823/824 sit/stand transitions with one-second playback,
+  shared renderer clock timing, input locks and queued ground movement.
+- [x] Fill compatible pickup stacks using byteMaxCount before empty slots;
+  preserve uncollected ground remainder and permit ordinary full-stack/item swaps.
+- [x] Add root build-zflauncher.bat and default build-and-stage PowerShell flow,
+  with noninteractive flags and staged executable hash verification.
+
+Evidence and final staged validation are recorded in `PROGRESS.md` and
+`docs/evidence/chat-upward-drag-source.json`. Fresh verification in
+`build/evidence/requested-fixes-verified1` passes the root Release build/stage,
+six focused probes and four isolated staged runtime scenarios. The requested
+fixes are verified; remaining five-part work and full C08 acceptance stay open.
+
+### Taras and death-cloud collection checkpoint (2026-10-28)
+
+- [x] Verify Taras's native type-22 one-shot state and separate MoveSpeedPlus
+  affection FX. Use installed K3 PFX_MSP, retaining the Global binding difference
+  as reference data without copying foreign client resources.
+- [x] Align cast and persistent wings at the live back, render both original
+  halves and loop until affection removal/expiry, with movement, turn, priority,
+  death and equipment-rebuild handling. Debug/Release each pass906 checks.
+- [x] Reuse the visible native death-cloud instance for Prana collection;
+  preserve its particles, clock, geometry and transform through handoff and
+  corpse removal. Follow the live player with no extra Follow visual.
+  Debug/Release each pass579 checks; real SDL kill/reward and field regressions
+  pass. Stage Release and verify clean package closure.
+- [x] Correct collection to use individual world-space motes with emission
+  fixed at the corpse. Verify continuous travel, swept absorption, approach
+  fade/removal and no recipient-side spawning: Debug/Release each pass4,071
+  checks, all16 test motes absorbed. Stage the corrected Release and retain
+  real kill/reward, Taras and clean package regression evidence.
+- [x] Restore the native six-word randomized outward/upward launch without
+  normalization or TFX velocity reduction. Retain per-mote absorption; verify
+  every visible trajectory against the source-derived flight adapter, fixed
+  corpse emission, movement/rebuild and no recipient-side spawning.
+  Debug/Release each pass 5,115 checks, with all 16 motes absorbed; stage
+  Release and pass the actual SDL kill/reward and persistence encounter.
+
+Source differences, compatibility adjustments and evidence are recorded in
+`docs/evidence/taras-prana-source.json` and [progress](PROGRESS.md). Broader
+skill/FX parity and C08 benchmark acceptance remain open.
+
+### Altar and furnace alignment checkpoint (2026-10-28)
+
+- [x] Verify native TFX sprite coordinates and plane construction before
+  changing placement: original DLL is inspected read-only, never executed.
+- [x] Correct the altar sprite to authored +55 Y; correct Env_Furnace layers
+  to +27/+26.5 Y and use its authored upward normal for the horizontal plane.
+  Retain upright quest icons, camera-facing sprites and native attached-height
+  encoding; no asset is extracted, rewritten or substituted.
+- [x] Pass Debug/Release field geometry and two-view captures, Prana homing,
+  Release light/jitter controls, actual Mandara FX pixel/depth checks and INTRO
+  flat selection-ring checks; stage Release and verify clean package closure.
+- [x] Restore the altar model's second ray and solid centre sections with
+  native `(null)` material placeholders and `_T1`/`_T2` FX texture binding.
+  Verify all three model sections, white-plane texture/depth, and 5,792 white
+  opening pixels across three close-camera views in Debug/Release. The pixel
+  test also detects the reported strip in the diagnostic baseline.
+
+See [progress and evidence](PROGRESS.md) and
+`docs/evidence/field-sprite-source.json`. This corrects an existing FX path;
+it does not change C08's 19/21 tasks or its paused acceptance gate.
 
 ## Source-backed hover, NPC and birth FX checkpoint (2026-10-27)
 
@@ -105,6 +399,28 @@ The next work is ordered below. A passing slice does not close the full plan.
    - [x] Debug/Release builds, focused reader/catalog tests, actual INTRO roster/flat-circle and skill3124 runtime regression, staged Release and package validation.
    - [ ] Resolve client/import version differences before treating them as one gameplay dataset. The comparison reports 470 Item,655 PCSkill,17 Monster and1 MonsterSkill differing values; imports also contain IDs/levels absent from the client. Do not silently overwrite either source. The item tail remains uninterpreted.
 2. **Complete skill and weapon FX.**
+   - [x] Extend available FX coverage to actual sampled submission and captures:
+     all643 usable visual binding IDs submit every visual node and produce a
+     measured image difference. Keep the six partial missing-sound graphs visible;
+     record110 wholly missing bindings/graphs. Preserve sampled/cast/visual-parity
+     scope distinctions in `docs/evidence/fx-render-sweep-source.json`.
+   - [x] Validate nonzero FX sounds and deduplicate missing-node diagnostics;
+     verify allocated mesh/voice retirement, expiry and orphan cleanup. Restore
+     lower-priority live status FX on subsequent unchanged snapshots, preserving
+     active graph age, known-missing skips and missing-owner cleanup.
+   - [x] Audit all catalog PC skill/level-band/sex/weapon lookups and Mandara
+     monster skill FX references with production readers/preparation:753 binding
+     IDs,643 prepared and110 missing authored entries recorded. This is not
+     proof of legal cast combinations or complete rendering/combat parity.
+   - [x] Fix Sanuta3159 state IDs1001816..1001818 by preserving native non-unit
+     socket quaternions. Verify the pinned engine loader/matrix path, Debug/
+     Release malformed/transform cases, real paid Sanuta cast/body/socket/state
+     and lifecycle cleanup, plus original3110 rendered and staged SDL regressions.
+   - [x] Compile HT_dwGetAffectionFXID directly from original source and present
+     the priority-selected main-character status loop. Render 21 available K3
+     status graphs; verify precedence, WizardEyes suppression, Escape retention,
+     equipment rebinding, death/removal cleanup and missing-binding diagnostics.
+     Enhanced-shield1010071 and ProtectAll1010090 are absent and remain skipped.
    - [x] Decode active-skill State separately from Impact, preserve native once/loop/energy rules, attach state FX to the caster and bound their lifetime to the committed skill duration and live native effect slots. Skill3110 has an actual transaction/render/expiry regression.
    - [x] Keep committed buff FX attached when the same player's equipment rebuilds its display object. Transfer exact parent references without resetting graph age, expiry, geometry or audio, and without recasting or charging TP. Reject an absent replacement atomically; ordinary death, missing-owner and scene cleanup remain active. Release/Debug renderer checks and88 actual-SDL checks cover real3110 cast, equip, unequip and Escape (`buff-owner-render1`, `buff-owner-render-debug1`, `buff-owner-sdl2`).
    - [x] Compile native instant MagicShield/EnhancedMagicShield/break cases and both absorption functions from CMob2. Preserve nearest rounding, physical/elemental lane order, pierce bypass, TP-derived enhanced energy and strict exhaustion flags. Verify real3102 levels1..10, real3145 authority, effect ticking, equipment retention and fresh-entry reset. Skill3145's canonical fxPC link is missing; record and skip that presentation without inventing a binding.
@@ -118,7 +434,7 @@ The next work is ordered below. A passing slice does not close the full plan.
    - [x] Verify authoritative hit timing for all12 supplied weapon types at .001/.05-second ticks, plus native3301 straight,3306 pursuit and3162 bow pursuit:27 positive-damage encounters and five lifecycle cases. Melee commits at the source marker; projectile cases keep HP/TP/arrows unchanged until arrival. This matrix does not cover every skill or synthesized dual-wield combination.
    - [x] Select native body/hair/front-apron/back-apron clips together for movement, attacks, INTRO selection/idle and action/active skill phases. Use source head-type hair mappings, attack-variant apron fields and skill triplets; normalise each live clip to the action duration and retain source looping during cast. Preserve selected clips/clocks during model replacement; retain valid zero-duration socket clips.
    - [x] Audit7,024 native animation sets /889 decoded clips, including312 attack sets and6,376 skill-phase sets. Verify424 GPU playback sets,1,651 body/socket clock checks,56 hair changes,8 head replacements and8 equipment replacements. Native name-bound loading accepts8 exercised skill cases with differing mesh/track counts while retaining hierarchy, bind/influence and root validation. The one missing PCAni31159 reference is recorded and skipped.
-   - [x] Implement the native default monster melee/ranged branch: rounded native-cell distance, body radius, already-loaded skill ranges and idSkill0/idSkill1 selection. Lock the chosen skill/TAB at windup, use the MONSkill animation (ATK1 only when its binding is zero), and carry the actual skill into activation/impact FX. Monsters2004/2005 pass eight fine/coarse melee/ranged encounters and three Release GPU cases (`monster-ranged-render-final3`); native misses and subsequent positive hits are both checked at the TAB marker. Ranged follow1200065/impact1200067 render visibly and clear on death, generation/owner loss and scene teardown; equipment replacement retains incoming flights. Native HP/hit digits occur at the marker, with no second damage at visual arrival. The separate special-skill pattern scheduler, timed states and remaining families stay open.
+   - [x] Implement the native default monster melee/ranged branch: rounded native-cell distance, body radius, already-loaded skill ranges and idSkill0/idSkill1 selection. Lock the chosen skill/TAB at windup, use the MONSkill animation (ATK1 only when its binding is zero), and carry the actual skill into activation/impact FX. Monsters2004/2005 pass eight fine/coarse melee/ranged encounters and three Release GPU cases (`monster-ranged-render-final3`); native misses and subsequent positive hits are both checked at the TAB marker. Ranged follow1200065/impact1200067 render visibly and clear on death, generation/owner loss and scene teardown; equipment replacement retains incoming flights. Native HP/hit digits occur at the marker, with no second damage at visual arrival. The native_monster_pattern_checkpoint now adds special patterns and supported enemy/self casts; friend/party recipients, scripted AI conditions and remaining world services stay open.
    - [ ] Complete all available projectile/follow FX and remaining attached/area/monster state families. Four real GPU projectile cases render follow/impact geometry and hit digits. Missing authored assets are recorded and skipped per the user's instruction; retain the historical failed3162 full-FX result without treating that asset gap as an implementation blocker. Extend beyond3110 and3102 energy/per-hit coverage (3145 authority passes but its FX link is absent); unsupported native node/skill-service cases remain open.
    - [ ] Extend authoritative animation/impact/damage timing to every supported weapon/skill combination and remaining strike phases. The27 encounters and288 binding checks cover distinct bounded matrices.
 3. **Stress-test navigation.**
@@ -1370,6 +1686,12 @@ all four shadow qualities, borderless/fullscreen/windowed, invalid rejection,
 Apply/Cancel and saved graphics values. The independent miniaudio regression
 passes. Protected/default/seed data are unchanged; package closure is 53 files.
 
+- [x] Centre the resized window on its current monitor after live resolution/
+  aspect Apply, startup and fullscreen-to-windowed restoration. Preserve the
+  prior position on failed Apply. Pass 128 actual SDL/MainUI checks with native
+  window-position and same-monitor assertions; staged 2026-10-29, no restart.
+  Evidence:build/evidence/centered-display-runtime1.
+
 **Requested graphics extension:** reuse original MainUI frames, arrows, buttons
 and volume sliders. Help becomes Advance. Both resolution selectors show
 `Resolution < 1024x768x32 >`; 32 is the actual BGRA8/D3D11 colour depth. Basic
@@ -1879,6 +2201,20 @@ physical GPU removal and other-map/online/release matrices remain open.
 
 ### C09 Remaining systems and repository administration
 
+
+31 October connected C++ checkpoint: bounded native login/world entry, separate
+online authority, revision-fenced inventory/NPC/combat operations, party/chat,
+trade/cash delivery and reconnect/restart recovery are implemented. Two real
+Release ZFLauncher processes render combat/projectiles and perform SDL trade
+transactions; separate Zone01/Zone02 processes pass the paid round trip, remote
+party HP/presence and bidirectional chat. Native altar/tutorial/class-change
+transactions and both resurrection UI choices are checked, including stopped
+SQLite results and reserved death-refund metadata. See
+[server batch evidence](../_server_cpp/docs/evidence/online-six-part-20261031.json).
+The supported ordinary zone routing is distinct from individual map acceptance.
+Competitive arena/castle recovery and full original-game parity remain open.
+
+
 **Prerequisites:** C00-C08 is the first offline milestone; independent preflight/admin work can happen earlier without blocking it.
 
 Retain full skills/periodic combat/AI/loot, quests/refinement, travel/revival, online/social/competitive and ten-zone work as separate gates. Keep advanced cascades/water/weather distinct from represented environment. Repository registration preserves fetched history; commit/push only when requested.
@@ -1898,42 +2234,42 @@ Retain full skills/periodic combat/AI/loot, quests/refinement, travel/revival, o
 - [ ] **P12-07** Preserve monster navigation, aggression/leash rules and owner-facing during attacks.
 - [ ] **P12-08** Apply loot/rewards, pickup, Prana/experience/leveling and native penalties through authority.
 - [ ] **P12-09** Preserve death UI and source resurrection services; no temporary R-key substitute.
-- [ ] **P14-01** Audit `_server_cpp\include\tantra\wire.h` and current local C++ service implementations; compare the migrated `_server` version explicitly before reusing a protocol.
-- [ ] **P14-02** Document supported messages versus placeholders; port existing working adapters, not empty callbacks.
-- [ ] **P14-03** Keep localhost/127.0.0.1 defaults; do not import historical source IPs.
-- [ ] **P14-04** Implement authentication/session/roster/world-entry transport with bounded frames and timeouts.
-- [ ] **P14-05** Define movement/combat/inventory/NPC command/notification ownership and revision rules.
-- [ ] **P14-06** Keep client prediction/interpolation distinct from authoritative calculations and persistence.
-- [ ] **P14-07** Prevent the offline authority from mutating online sessions in parallel.
-- [ ] **P14-08** Handle disconnect, cancellation, reconnect, stale notifications and failed handoff without duplication.
-- [ ] **P14-09** Reuse the existing native Win32 server manager and per-zone processes/configuration; do not rewrite the manager inside ZFLauncher.
-- [ ] **P14-10** Gate claims of multiplayer support on actual two-client/server transactions with evidence.
+- [x] **P14-01** Audit `_server_cpp\include\tantra\wire.h` and current local C++ service implementations; compare the migrated `_server` version explicitly before reusing a protocol.
+- [x] **P14-02** Document supported messages versus placeholders; port existing working adapters, not empty callbacks.
+- [x] **P14-03** Keep localhost/127.0.0.1 defaults; do not import historical source IPs.
+- [x] **P14-04** Implement authentication/session/roster/world-entry transport with bounded frames and timeouts.
+- [x] **P14-05** Define movement/combat/inventory/NPC command/notification ownership and revision rules.
+- [x] **P14-06** Keep client prediction/interpolation distinct from authoritative calculations and persistence.
+- [x] **P14-07** Prevent the offline authority from mutating online sessions in parallel.
+- [x] **P14-08** Handle disconnect, cancellation, reconnect, stale notifications and failed handoff without duplication.
+- [x] **P14-09** Reuse the existing native Win32 server manager and per-zone processes/configuration; do not rewrite the manager inside ZFLauncher.
+- [x] **P14-10** Gate claims of multiplayer support on actual two-client/server transactions with evidence.
 - [ ] **P15-01** Generate a versioned map/zone manifest from original catalogs and server profiles.
 - [ ] **P15-02** For each zone, keep `NPCGener.txt`, `GenerationArea.idx` and `MapData.tcm` from one selected source dataset.
 - [ ] **P15-03** Preflight regular/Pop meshes/textures, terrain, collision companions, FX, actors, audio and environment configuration.
 - [ ] **P15-04** Report missing assets without silently borrowing another zone's payload.
 - [ ] **P15-05** Match map origin, units, native spawn/save/portal cells and terrain height.
 - [ ] **P15-06** Implement correct resource retirement and bounded preloading for map transitions.
-- [ ] **P15-07** Match active server routing to the destination map and reject unsupported zones honestly.
-- [ ] **P15-08** Remove Zone01-only authority restrictions only after the destination's server logic/data are ready.
+- [x] **P15-07** Match active server routing to the destination map and reject unsupported zones honestly.
+- [x] **P15-08** Remove Zone01-only authority restrictions only after the destination's server logic/data are ready.
 - [ ] **P15-09** Use the same per-zone checks: entry, movement, NPCs, environment, audio, return and saved-zone persistence.
-- [ ] **P15-10** Keep all ten acceptance toggles unchecked until their individual evidence exists.
+- [x] **P15-10** Keep all ten acceptance toggles unchecked until their individual evidence exists.
 - [ ] **P16-01** Audit native quest state, dialogue conditions, kill/item objectives and rewards.
 - [ ] **P16-02** Implement advanced NPC callbacks, class/religion changes and refinement workflows.
 - [x] **P16-03** Preserve authoritative main/sub-refinement chances, costs, limits and result handling. Active Server.cpp rules, native shuffled percentage decks, Global-version masks, original altar UI, stale-offer rejection and SQLite outcomes are implemented. CPU success/failure/reset/destruction and actual SDL altar transactions pass; zone donation/GM modifiers remain the zero baseline.
 - [ ] **P16-04** Add portals/transport, return items and remaining resurrection paths/penalties.
-- [ ] **P16-05** Implement chat channels/whispers, parties and authoritative membership state.
-- [ ] **P16-06** Implement trade offer/confirm/cancel/disconnect behavior and atomic item/money persistence.
+- [x] **P16-05** Implement chat channels/whispers, parties and authoritative membership state.
+- [x] **P16-06** Implement trade offer/confirm/cancel/disconnect behavior and atomic item/money persistence.
 - [ ] **P16-07** Implement guild state, member names/marks and permissions before enabling dependent UI.
 - [ ] **P16-08** Audit PvP, duels, events, siege/competitive modes and their native restrictions.
-- [ ] **P16-09** Mark unsupported online commands visibly and avoid sending guessed legacy packets.
-- [ ] **P16-10** Require explicit server implementation/evidence for each feature, not just client buttons.
+- [x] **P16-09** Mark unsupported online commands visibly and avoid sending guessed legacy packets.
+- [x] **P16-10** Require explicit server implementation/evidence for each feature, not just client buttons.
 - [ ] **P20-11** When separately requested, commit/push the module first and then update/push the parent's pinned gitlink.
 
 **Additional planning and minimum-slice tasks:**
 
-- [ ] **BG-ONLINE-01** Accept a real localhost client/server session before claiming transport support.
-- [ ] **BG-MULTI-01** Accept actual two-client authoritative transactions before claiming multiplayer support.
+- [x] **BG-ONLINE-01** Accept a real localhost client/server session before claiming transport support.
+- [x] **BG-MULTI-01** Accept actual two-client authoritative transactions before claiming multiplayer support.
 
 **Headless check:** `--check full-client-preflight` with the runner command and a fresh output.
 **Explicit runtime scenarios:** `online-session`, `two-client` and `zone-transition`, each implemented when its feature prerequisites are ready. Use separate prepare/run commands and outputs for each scenario.
@@ -1945,7 +2281,7 @@ Retain full skills/periodic combat/AI/loot, quests/refinement, travel/revival, o
 C09 is independent feature gates, not one unbounded test command. The headless
 `full-client-preflight` check inventories source coverage/capabilities. Implement
 runtime scenarios alongside each feature using isolated profiles/sessions. The
-paused dedicated server goal is not resumed by this plan.
+active native server batch is tracked separately in `_server_cpp`.
 
 | Delivery | Prerequisites and completion |
 | --- | --- |
@@ -2020,3 +2356,38 @@ scoped offline foundations, not complete client delivery.
 - [ ] Offline and supported online authority behavior agree with the pinned rules/protocol.
 - [ ] Final ZFLauncher packaging preserves the other client executable and user data.
 - [ ] Known deviations and unsupported features are explicit; no unchecked task is silently declared complete.
+
+### 2026-10-31 C++ connected combat/social continuation
+
+The online BGFX channel now consumes server-authored attack/skill/death/prana/drop
+messages and the eight-member party/HP roster. Party/guild chat, invitations,
+trade offers with explicit version confirmation, guild management and ordinary
+cash-item purchases/recovery use the authoritative C++ services. Cash NPC purchases
+reuse the existing merchant interface. Client gameplay does not award online damage,
+items or cash locally. See `_server_cpp/docs/SHARED_SERVICE_CONTRACTS.md` and
+`_server_cpp/IMPLEMENTATION_PROGRESS.md` for command examples, test evidence and
+remaining source-parity/graphical gates. No full gameplay completion percentage
+is inferred from these connected slices.
+
+### 2026-10-31 periodic skills, social windows and local billing
+
+- [x] Consume authoritative periodic HP events and projectile lifecycle updates;
+  reuse native FX rendering while the C++ server owns contacts, damage and rewards.
+- [x] Six connected original-image windows: Players, Party, Guild, Trade, Rooms
+  and Cash. J opens Players; G opens Guild; tabs reach the other windows. Paging,
+  keyboard text editing, party/guild actions, version-confirmed trade, passworded
+  rooms and cash catalog/buy/recover invoke the real C++ services.
+- [x] Original General/Hanbit/Philippines adapters use the selected local ledger
+  and native country price/bundle rules. No live payment provider is required.
+- [x] Final Release two-client TCP check passes party/guild/room chat, memberships,
+  trade, cash delivery and social view messages without opening offline databases.
+- [x] Six D3D11 social-window captures use state saved from the TCP check. Native
+  projectile rendering passes 30 damage cases, 18 renders and six lifecycle checks.
+- [x] Stage Release ZFLauncher in ../_client_bgfx; support files remain project-owned.
+
+Evidence: ../_server_cpp/docs/evidence/periodic-social-billing-20261031.json.
+These checks cover native UI rendering and protocol integration separately; full
+interactive network gameplay visual acceptance and full original social-window
+parity remain open. Missing content is recorded and skipped: 17 skill bindings,
+21 animation clips and three unresolved FX in the rendered projectile cases.
+The complete MMO/client roadmap is not closed by this batch.
