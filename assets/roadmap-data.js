@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. The current checkpoint verifies real two-client combat/projectiles, SDL trade and cash, recovery, native altar/quest services and a two-zone round trip with remote party HP/chat. C08 keeps its benchmark gate open; C09 and all ten map acceptance gates remain open. Native arena/castle recovery and connected original HUD confirmation now pass; competitive 3D scene, siege and PvP acceptance remain open.",
+      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. The current checkpoint verifies real two-client combat/projectiles, SDL trade and cash, recovery, native altar/quest services and a two-zone round trip with remote party HP/chat. C08 keeps its benchmark gate open; C09 and all ten map acceptance gates remain open. Native arena/castle recovery and connected original HUD confirmation now pass; competitive 3D scene, siege and PvP acceptance remain open. The 1 November follow-up adds native timing, movement checkpoints, channel metrics/create/drain and preserved-data MariaDB deployment; the revised two-client network acceptance passes.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -2721,7 +2721,28 @@ window.TANTRA_ROADMAP = {
               "id": "BG-MULTI-01",
               "done": true,
               "text": "Accept actual two-client authoritative transactions before claiming multiplayer support.",
-              "children": []
+              "children": [
+                {
+                  "done": true,
+                  "text": "Profile native zone subsystems and preserve packet order while replacing empty-cell scans. Two-client visibility p95 falls from 110 to 2 us; higher-population capacity is unproven."
+                },
+                {
+                  "done": true,
+                  "text": "Combine pure movement into bounded checkpoints; retain live pose and committed economy/recovery/transfer rules."
+                },
+                {
+                  "done": true,
+                  "text": "Add Manager channel/tick/queue/database/memory metrics and GUI create/drain controls; real GUI actions pass."
+                },
+                {
+                  "done": true,
+                  "text": "Activate dedicated MariaDB 11.8.9, preserving SQLite. Verify native migration, backup/restore and outage/reconnect."
+                },
+                {
+                  "done": true,
+                  "text": "Verify two BGFX network clients against MariaDB for movement, attacks/skills, death/loot, social chat, trade and cash. Missing INTRO fxMAPnewIntro.txl is recorded; no new rendered or 512/1,000-player acceptance is claimed."
+                }
+              ]
             }
           ],
           "gate": {
@@ -2775,6 +2796,11 @@ window.TANTRA_ROADMAP = {
         "Broaden distinct-map/portal, visual/performance/recovery and release acceptance without inferring FPS gains from caching"
       ],
       "changes": [
+        {
+          "date": "2026-11-01",
+          "title": "Simulation checkpoints and deployed MariaDB",
+          "text": "Complete the five follow-up tasks within the revised two-client scope: native subsystem timing, original-order occupied-bucket visibility, bounded position checkpoints, Manager live metrics/create/drain, and dedicated MariaDB 11.8.9 with preserved SQLite, verified native migration, backup/restore and pool outage recovery. Two BGFX network clients pass movement, normal/skill hits, death/loot, social chat, trade and cash. Matching visibility p95 falls110 to2us and tick p95 from16.742 to9.021ms. The combined MariaDB session records47 moves,4 checkpoints,zero checkpoint failures,max tick46.026ms. Missing INTRO fxMAPnewIntro.txl is recorded and skipped; no new rendered FX or 512/1000-player acceptance. Keep the old256-player221ms spike unaccepted at that population. No Debug build or broad regression. Preserve Tantra-O."
+        },
         {
           "date": "2026-10-31",
           "title": "Six-part online batch complete; native competitive recovery",
@@ -2909,7 +2935,8 @@ window.TANTRA_ROADMAP = {
       "done": 168,
       "total": 254,
       "percent": 66,
-      "accepted": 5
+      "accepted": 5,
+      "reviewed": "2026-11-01"
     }
   ],
   "zones": [
@@ -2985,11 +3012,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "fa638cb708f93a492dbdebab4fb8c13c80994e5729ef6e180f2a00018d811681"
+      "sha256": "b3b9f816e74e6e4d0a0b429ee22b2e9f37185281b1b89f1fa4dd2ad17bfff420"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "608ed9891bf5cb59b3145cc9b3bba8450cdd4b913a74ee725c3b02d5b95c6a06"
+      "sha256": "6068bfb1a97037ac74075f43b5544a9f9c2badfddc6fdb1cc4a6e4e1e609da78"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",

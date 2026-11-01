@@ -1,7 +1,12 @@
 # ZFLauncher - Tantra Online with bgfx
 
+Secure online startup and Server Manager export are implemented and checked. See the
+[connection guide](../_server_cpp/docs/SECURE_CONNECTIONS.md) for the current status.
+Normal ZFLauncher startup reads signed HTMessage.txl/serverlist.bin files;
+Start-Offline.cmd explicitly selects offline play.
+
 Windows x64, C++20, SDL3, miniaudio and bgfx/D3D11 implementation of the Tantra client.
-**ZFLauncher.exe** runs the original offline login, saved roster and Mandara
+**ZFLauncher.exe** opens the signed online profile by default. Start-Offline.cmd runs the original offline login, saved roster and Mandara
 through the project-owned bgfx backend. The window/product is **Tantra Online**.
 
 - [Detailed implementation plan](IMPLEMENTATION_PLAN.md)

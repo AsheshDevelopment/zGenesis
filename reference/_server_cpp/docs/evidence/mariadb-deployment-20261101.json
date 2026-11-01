@@ -1,0 +1,112 @@
+{
+  "backup": {
+    "backup": "C:\\_GitHub\\TantraSrc\\_server_cpp\\build\\evidence\\database-deployment-20261101-194116\\services/SQLDMN\\state/backups\\1793533277-68cbab1950d3.sql",
+    "manifest": {
+      "backend": "mariadb",
+      "bytes": 24602,
+      "created_utc_epoch": 1793533277,
+      "format": 1,
+      "owner": "323c47c96c0feba834d7ab6574a3c3a3f1aa4c0244b9b3e5155d6d3ddf26b71a",
+      "schema": 7,
+      "sha256": "f6164ebbc1b069685b6e69bb3e0241679ae9e9683082afafad36a89cf660eed6"
+    }
+  },
+  "configuration": "Release",
+  "credentials_roles_native_mob_cargo": true,
+  "mariadb_runtime": {
+    "credential_scope": "DPAPI CurrentUser",
+    "executable_sha256": "de2c4350e36bcdff6a18b614a21701a8a827509f44f51274411bb52a2849f9e5",
+    "loopback_only": true,
+    "port": 13306,
+    "provisioned_utc": "2026-11-01T11:27:47.1703901Z",
+    "version": "11.8.9"
+  },
+  "migration": {
+    "live_leases_copied": false,
+    "native_rows_verified": {
+      "account_cargo": 1,
+      "accounts": 1,
+      "characters": 1,
+      "deletion_backups": 1,
+      "guilds": 1,
+      "world_receipts": 1
+    },
+    "passed": true,
+    "previous_profile": "C:\\_GitHub\\TantraSrc\\_server_cpp\\build\\evidence\\database-deployment-20261101-194116\\services/SQLDMN\\state/backups\\storage-pre-mariadb-1793533276-57fbc36278dc.toml",
+    "profile_activated": true,
+    "report": "C:\\_GitHub\\TantraSrc\\_server_cpp\\build\\evidence\\database-deployment-20261101-194116\\services/SQLDMN\\state\\mariadb-migration-1793533276-57fbc36278dc.json",
+    "schema": 7,
+    "source_backup": "C:\\_GitHub\\TantraSrc\\_server_cpp\\build\\evidence\\database-deployment-20261101-194116\\services/SQLDMN\\state/backups\\pre-mariadb-1793533276-57fbc36278dc.sqlite3",
+    "source_backup_sha256": "ef90df619a97e7b8aa8b1ff20720a345c21aace3395ff6c54cfa54da77511f16",
+    "target_database": "tantra_bgfx_migration_check",
+    "target_host": "127.0.0.1",
+    "target_port": 13306
+  },
+  "outage": {
+    "bounded_failure_ms": 203,
+    "pool": {
+      "accepted": 5,
+      "auth_capacity": 8,
+      "auth_limit": 1,
+      "auth_pending": 0,
+      "auth_rejected": 0,
+      "auth_running": 0,
+      "backend": "mariadb",
+      "capacity": 16,
+      "completed": 5,
+      "deadlock_retries": 0,
+      "execution_us": 6219,
+      "failed": 3,
+      "max_execution_us": 4443,
+      "peak_auth_running": 0,
+      "peak_running": 1,
+      "pending": 0,
+      "queue_deadline_ms": 8000,
+      "queue_wait_us": 15000,
+      "reconnects": 2,
+      "rejected": 0,
+      "running": 0,
+      "workers": 2
+    },
+    "recovered": true
+  },
+  "passed": true,
+  "restore": {
+    "pre_restore_backup": "C:\\_GitHub\\TantraSrc\\_server_cpp\\build\\evidence\\database-deployment-20261101-194116\\services/SQLDMN\\state/backups\\1793533277-549f079b4cdf.sql",
+    "restored": true,
+    "schema": 7
+  },
+  "source_unchanged": true,
+  "actual_deployment_migration": {
+    "live_leases_copied": false,
+    "native_rows_verified": {
+      "account_cargo": 0,
+      "accounts": 1,
+      "characters": 0,
+      "deletion_backups": 0,
+      "guilds": 0,
+      "world_receipts": 0
+    },
+    "passed": true,
+    "previous_profile": "C:\\_GitHub\\TantraSrc\\_server_final\\services/SQLDMN\\state/backups\\storage-pre-mariadb-1793533076-7c55bcda55f5.toml",
+    "profile_activated": true,
+    "schema": 7,
+    "source_backup": "C:\\_GitHub\\TantraSrc\\_server_final\\services/SQLDMN\\state/backups\\pre-mariadb-1793533076-7c55bcda55f5.sqlite3",
+    "source_backup_sha256": "a52ab6ecac4ea6b67492658d95a15213a6eaf114cd0e3b111269d3521de31016",
+    "target_database": "tantra_bgfx",
+    "target_host": "127.0.0.1",
+    "target_port": 13306
+  },
+  "actual_deployment_backup": {
+    "backup": "C:\\_GitHub\\TantraSrc\\_server_final\\services/SQLDMN\\state/backups\\1793534499-fea9ea567dc8.sql",
+    "manifest": {
+      "backend": "mariadb",
+      "bytes": 13541,
+      "created_utc_epoch": 1793534499,
+      "format": 1,
+      "owner": "f749f553229a73d18a1854d19cdd1451f9f1c2f9dee242c8baa21bbd65d6c897",
+      "schema": 7,
+      "sha256": "15639471a90c9b4780dbec53de515a45f92d05d2b470fff8cf927a208f263338"
+    }
+  }
+}

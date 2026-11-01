@@ -1,6 +1,25 @@
+## 1 November 2026: server map-channel integration
+
+- [x] Obtain authenticated HTTPS worker admission before opening the game socket.
+- [x] Use selected worker endpoints for native login and durable portal/channel transfers.
+- [x] Add `/channel 2` through the existing loading/reconnect path; distinguish remote party handles by channel.
+- [x] Verify the real BGFX connection code across two independently managed server roots over LAN-interface TLS; stage the Release launcher.
+
+Server capacity and physical multi-host acceptance are documented separately in
+[the C++ scaling plan](../_server_cpp/docs/SCALING.md). No thousand-player or
+full-gameplay visual acceptance is implied by the connection checks.
+
 # ZFLauncher bgfx implementation plan and progress
 
-Updated: 2026-10-31. Target: C++20, Windows x64, SDL3, bgfx/D3D11 and SQLite.
+## 1 November: signed online entry
+
+- [x] Default signed HTMessage.txl/serverlist.bin online profile; explicit offline shortcut.
+- [x] HTTPS login, TLS roster/world channels and one-use entry/handoff tickets.
+- [x] Existing Server Manager editor/exporter, public signature/certificate metadata and external private keys.
+- [x] Focused Release integration and startup checks; see [connection evidence](../_server_cpp/docs/SECURE_CONNECTIONS.md).
+
+
+Updated: 2026-11-01. Target: C++20, Windows x64, SDL3, bgfx/D3D11 and SQLite.
 Owned workspace: `C:\_GitHub\TantraSrc\_remake_bgfx`.
 Primary reuse baseline: `C:\_GitHub\TantraSrc\_remake`.
 Dedicated final client: `C:\_GitHub\TantraSrc\_client_bgfx`.
@@ -2271,6 +2290,12 @@ Retain full skills/periodic combat/AI/loot, quests/refinement, travel/revival, o
 
 - [x] **BG-ONLINE-01** Accept a real localhost client/server session before claiming transport support.
 - [x] **BG-MULTI-01** Accept actual two-client authoritative transactions before claiming multiplayer support.
+  - [x] Profile native zone subsystems and preserve packet order while replacing empty-cell scans. Two-client visibility p95 falls from 110 to 2 us; higher-population capacity is unproven.
+  - [x] Combine pure movement into bounded checkpoints; retain live pose and committed economy/recovery/transfer rules.
+  - [x] Add Manager channel/tick/queue/database/memory metrics and GUI create/drain controls; real GUI actions pass.
+  - [x] Activate dedicated MariaDB 11.8.9, preserving SQLite. Verify native migration, backup/restore and outage/reconnect.
+  - [x] Verify two BGFX network clients against MariaDB for movement, attacks/skills, death/loot, social chat, trade and cash. Missing INTRO fxMAPnewIntro.txl is recorded; no new rendered or 512/1,000-player acceptance is claimed.
+
 
 **Headless check:** `--check full-client-preflight` with the runner command and a fresh output.
 **Explicit runtime scenarios:** `online-session`, `two-client` and `zone-transition`, each implemented when its feature prerequisites are ready. Use separate prepare/run commands and outputs for each scenario.

@@ -1,3 +1,39 @@
+## 1 November 2026: simulation and deployed MariaDB
+
+All five follow-up tasks pass within the user's revised two-client scope:
+native profiling/visibility, position checkpoints, Manager metrics/create/drain,
+preserved-data MariaDB deployment, and two-client movement/combat/skills/loot/
+social/trade/cash verification. The combined session records 47 movement updates,
+four checkpoints, no checkpoint failures and a 46.026 ms maximum tick. A matching
+short social workload reduces visibility p95 from 110 to 2 us and tick p95 from
+16.742 to 9.021 ms.
+
+These local observations do not re-accept the old 256-player 221 ms spike or prove
+thousand-player/physical multi-machine capacity. The graphical INTRO attempt
+stops at missing fxMAPnewIntro.txl; it is recorded and skipped without extracted
+or guessed replacement assets. No new rendered projectile/FX acceptance is claimed.
+See [implementation and evidence](../_server_cpp/docs/SIMULATION_CHECKPOINTS.md).
+
+## 1 November 2026: authenticated map-channel routing
+
+BGFX obtains its HTTPS entry reservation before opening the game socket and uses
+the authenticated worker endpoint. The signed profile still limits allowed worlds
+and maps. `/channel 2` uses the existing loading/reconnect path for a durable
+same-map handoff. Party identities distinguish channels from reused actor handles.
+The connected two-server-root LAN/TLS check passes. Entry UI frames stay behind
+the native character-entry reply while registration waits. The Release launcher
+is staged; no broad graphics/FX regression was run. See
+[server scaling evidence](../_server_cpp/docs/evidence/scaling-components-20261101.json).
+
+## 1 November 2026: signed online entry
+
+Default startup now verifies native HTMessage.txl/serverlist.bin plus signed
+metadata. HTTPS login issues expiring entry tickets, and roster/zone channels
+use Windows Schannel TLS. Existing Server Manager edits and signs the files;
+private identities stay outside the client. Focused authority, actual BGFX-channel,
+editor and online/offline startup checks pass. Full gameplay completion remains
+separate. See [connection evidence](../_server_cpp/docs/SECURE_CONNECTIONS.md).
+
 ## 31 October 2026: six-part online batch complete
 
 All six requested integration requirements are checked. Native arena/castle

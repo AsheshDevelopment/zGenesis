@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.18"
+VERSION = "1.0.19"
 
 
 def sha(body):
@@ -145,6 +145,10 @@ def refresh(source):
     latest.insert(0, {"date":"2026-10-31", "title":"Six-part online batch complete; native competitive recovery", "text":"All six integration requirements are checked, including source death/recovery. Native window224 preserves original images, English labels, zero-ID input and source requests0/2/3/4. Arena fees, poor fallback,20% recovery,fixed268,732, native funding/time gates and Global events66-73/150 connect entrants, notices, winner and prize. Release authority,1,274 MainUI checks and four GPU component captures pass. Two network-connected D3D11 HUDs verify actual SDL arena/castle choices; stopped SQL confirms money, HP and destinations. These HUD-only fixtures do not accept competitive scenes; a native Zone17 TMB material error and the unused fixture experience range are recorded. Correct early visual combat packets rejecting a status-only client and the private NPC test setup. Current launcher/server Release binaries are staged; the175-file server development package has verified hashes and no accounts/runtime state. No Debug build or broad FX regression. The wider roadmap stays168/254 (66%),5/10 gates; C08 benchmark, full C09 and all map gates remain open. Exclude the retracted launcher request; preserve Tantra-O."})
     project["foundations"].insert(0,"Native arena/castle recovery: original death HUD choices, persisted fees/HP/positions, Global arena funding/events, winner/prize; connected SDL HUD-only acceptance")
 
+    latest.insert(0, {"date":"2026-11-01", "title":"Simulation checkpoints and deployed MariaDB", "text":"Complete the five follow-up tasks within the revised two-client scope: native subsystem timing, original-order occupied-bucket visibility, bounded position checkpoints, Manager live metrics/create/drain, and dedicated MariaDB 11.8.9 with preserved SQLite, verified native migration, backup/restore and pool outage recovery. Two BGFX network clients pass movement, normal/skill hits, death/loot, social chat, trade and cash. Matching visibility p95 falls110 to2us and tick p95 from16.742 to9.021ms. The combined MariaDB session records47 moves,4 checkpoints,zero checkpoint failures,max tick46.026ms. Missing INTRO fxMAPnewIntro.txl is recorded and skipped; no new rendered FX or 512/1000-player acceptance. Keep the old256-player221ms spike unaccepted at that population. No Debug build or broad regression. Preserve Tantra-O."})
+    project["description"] += " The 1 November follow-up adds native timing, movement checkpoints, channel metrics/create/drain and preserved-data MariaDB deployment; the revised two-client network acceptance passes."
+    project["reviewed"] = "2026-11-01"
+
     titles = {change["title"] for change in latest}
     project["changes"] = latest + [change for change in project["changes"] if change["title"] not in titles]
     # OGRE data and all bundled OGRE documentation remain byte-identical.
@@ -157,6 +161,13 @@ def refresh(source):
     command_doc = ROOT / "reference/bgfx/docs/NATIVE_COMMANDS.md"
     command_doc.parent.mkdir(parents=True, exist_ok=True)
     command_doc.write_bytes((source / "docs/NATIVE_COMMANDS.md").read_bytes())
+    server_docs = source.parent / "_server_cpp/docs"
+    server_reference = ROOT / "reference/_server_cpp/docs"
+    for relative in ("SIMULATION_CHECKPOINTS.md", "evidence/tick-profile-20261101.json", "evidence/checkpoints-20261101.json", "evidence/scaling-gui-20261101.json", "evidence/mariadb-deployment-20261101.json", "evidence/two-client-simulation-20261101.json"):
+        target = server_reference / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes((server_docs / relative).read_bytes())
+
     data["sources"]["bgfx_commands"] = {"path": command_doc.relative_to(ROOT).as_posix(), "sha256": sha(command_doc.read_bytes())}
     data_path.write_text("/* Generated from the authoritative plans; refresh Tantra-B with tools/zf-refresh-bgfx.py. */\nwindow.TANTRA_ROADMAP = " + json.dumps(data, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8", newline="\n")
     snapshot = read_json(ROOT / "snapshot.json")
@@ -171,14 +182,19 @@ def refresh(source):
         if name == "docs/PROGRESS.md":
             content = re.sub(r"Version: \d+\.\d+\.\d+", "Version: " + VERSION, content)
             content = content.replace("Version: " + VERSION + " Reviewed:", "Version: " + VERSION + ". Reviewed:")
-            content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-10-31.", content)
+            content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-11-01.", content)
         elif "## " + VERSION not in content:
             entry = """# Unreleased
 
-## 1.0.18 - 2026-10-31 (Tantra-B only)
+## 1.0.19 - 2026-11-01 (Tantra-B only)
 
-Changed: complete the six-part native C++/BGFX integration batch, including
-original competitive death HUDs and native arena funding/events/recovery.
+Changed: complete the revised two-client simulation/checkpoint/Manager/MariaDB follow-up.
+Verified: native timing and visibility order, position/economy fencing, GUI channel controls,
+populated native MariaDB migration/backup/restore/outage recovery, and two-client gameplay.
+Limits: short local results; no larger-population or new rendered FX acceptance.
+Missing INTRO fxMAPnewIntro.txl is recorded and skipped.
+
+Prior integration checkpoint: original competitive death HUDs and recovery.
 Verified: focused Release authority/UI/GPU checks and two connected SDL HUDs;
 stopped SQL confirms fees, positive HP and native arena/castle destinations.
 The current175-file server development package has verified hashes and no state.
@@ -206,6 +222,8 @@ Tantra-O data and bundled documentation remain unchanged.
         checks[name] = completed.stdout.strip() or "passed"
     manifest = read_json(ROOT / ".roadmap-files.json")
     manifest["files"][command_doc.relative_to(ROOT).as_posix()] = sha(command_doc.read_bytes())
+    for path in server_reference.rglob("*"):
+        if path.is_file(): manifest["files"][path.relative_to(ROOT).as_posix()] = sha(path.read_bytes())
     for name in manifest["files"]:
         manifest["files"][name] = sha((ROOT / name).read_bytes())
     manifest["files"]["tools/zf-refresh-bgfx.py"] = sha(Path(__file__).read_bytes())
