@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.19"
+VERSION = "1.0.20"
 
 
 def sha(body):
@@ -112,11 +112,11 @@ def refresh(source):
         "Historical pre-C08 baseline: 7,200 measured native scene frames, CPU/GPU/loading timings and hardware/input hashes"
     ]
     project["next"] = [
-        "C08 stays paused: replace the rejected warm combat leg and enforce matched actor workload before accepting P17-13/P17-14 or the phase gate",
-        "Continue C04/C07 and remaining ordinary gameplay gates from their explicit open requirements",
-        "Keep wider strike acceptance separate: missing authored bindings and target/combo/periodic services remain open; C08 light/jitter controls do not accept those skills",
-        "Retain explicit missing authored collision and client/import version differences; no HPK extraction or silent dataset replacement",
-        "Broaden distinct-map/portal, visual/performance/recovery and release acceptance without inferring FPS gains from caching"
+        "Finish the incomplete two-client rendered projectile/skill check; fix visible issues without rerunning unrelated FX",
+        "Continue maps individually with MandaraCave: original resources/NPCs/portals, environment/audio and persisted return positions",
+        "Accept remaining quest dialogue and guild workflows individually; retain the documented absent premium reset contract",
+        "Exercise interruption during map handoff, trade and cash delivery; preserve committed state and reject duplicate rewards",
+        "Replace the rejected C08 combat comparison with matched actor workloads; do not infer thousand-player capacity from two clients"
     ]
     latest = [
         {"date": "2026-10-27", "title": "Native tooltips, NPC greetings and birth FX verified", "text": "Verify the supplied tooltip screenshots against native source; compile the original effect formatter, message IDs, family predicates and refinement arrays. Render centred coloured item/skill rows with live instance fields, requirements, prices/service context and current/next skill conditions/effects/costs. Restore original NPC hover/down image9 and play each NPC greeting once per opening through HPK-backed miniaudio effects gain. Defer player NEWBORN and monster birth until rendering is ready; verify first appearance, revive/life/AOI changes, equipment retention, expiry and cleanup. Fix sale confirmation mixing legacy item-name bytes into UTF-8 English text. Debug/Release each pass nine focused tests: 3,759 tooltip, 337 UI and 190 presentation/audio assertions. Pixel checks isolate 5,727 NPC hover pixels and verify coloured tooltip glyphs. Actual SDL paid-repair/buy/sell/cancellation workflow, SQLite preservation and 53-file packaging pass. Corrected early merchant attempts are retained. P11-07 closes; 125/254 tasks and five gates. The K3 table has no matching screenshot mount entry; 45 unhandled formatter effect IDs and wider game/FX work remain recorded and open."},
@@ -147,7 +147,9 @@ def refresh(source):
 
     latest.insert(0, {"date":"2026-11-01", "title":"Simulation checkpoints and deployed MariaDB", "text":"Complete the five follow-up tasks within the revised two-client scope: native subsystem timing, original-order occupied-bucket visibility, bounded position checkpoints, Manager live metrics/create/drain, and dedicated MariaDB 11.8.9 with preserved SQLite, verified native migration, backup/restore and pool outage recovery. Two BGFX network clients pass movement, normal/skill hits, death/loot, social chat, trade and cash. Matching visibility p95 falls110 to2us and tick p95 from16.742 to9.021ms. The combined MariaDB session records47 moves,4 checkpoints,zero checkpoint failures,max tick46.026ms. Missing INTRO fxMAPnewIntro.txl is recorded and skipped; no new rendered FX or 512/1000-player acceptance. Keep the old256-player221ms spike unaccepted at that population. No Debug build or broad regression. Preserve Tantra-O."})
     project["description"] += " The 1 November follow-up adds native timing, movement checkpoints, channel metrics/create/drain and preserved-data MariaDB deployment; the revised two-client network acceptance passes."
-    project["reviewed"] = "2026-11-01"
+    latest.insert(0, {"date": "2026-11-02", "title": "Visible entry, native NPCs, Mandara2nd and automatic backups", "text": "Complete the five requested follow-up tasks within their documented scope. Missing optional INTRO fire is logged/skipped; two visible Release clients reach gameplay. Native priest selection, offering and god change, class publication, all sixteen second-class branches and later task bindings are connected with committed authority; correct source party rewards and a long-dialogue raster crash. Live priest/class results reopen exactly. Mandara2nd travel, all sixteen NPC positions, sky/cloud/fog, miniaudio BGM and saved fares/positions pass. Manager shows actual MariaDB/readiness and native automatic backups with guarded retention and isolated restore. Matching Release binaries are staged. The separate rendered projectile step remains incomplete; premium class reset lacks a completed source contract and region ambience TMS is missing. Broader C08/C09 and map gates remain open. No Debug rebuild or broad FX regression. Preserve Tantra-O."})
+    project["description"] += " The 2 November checkpoint verifies visible entry, native priest/class services, Mandara2nd scene and persistence, and Manager automatic backups. Its separate rendered projectile step remains incomplete."
+    project["reviewed"] = "2026-11-02"
 
     titles = {change["title"] for change in latest}
     project["changes"] = latest + [change for change in project["changes"] if change["title"] not in titles]
@@ -163,7 +165,7 @@ def refresh(source):
     command_doc.write_bytes((source / "docs/NATIVE_COMMANDS.md").read_bytes())
     server_docs = source.parent / "_server_cpp/docs"
     server_reference = ROOT / "reference/_server_cpp/docs"
-    for relative in ("SIMULATION_CHECKPOINTS.md", "evidence/tick-profile-20261101.json", "evidence/checkpoints-20261101.json", "evidence/scaling-gui-20261101.json", "evidence/mariadb-deployment-20261101.json", "evidence/two-client-simulation-20261101.json"):
+    for relative in ("ADVANCED_NPC_SERVICES.md", "AUTOMATIC_BACKUPS.md", "MANDARA2ND.md", "evidence/npc-map-backups-20261102.json", "SIMULATION_CHECKPOINTS.md", "evidence/tick-profile-20261101.json", "evidence/checkpoints-20261101.json", "evidence/scaling-gui-20261101.json", "evidence/mariadb-deployment-20261101.json", "evidence/two-client-simulation-20261101.json"):
         target = server_reference / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes((server_docs / relative).read_bytes())
@@ -182,29 +184,24 @@ def refresh(source):
         if name == "docs/PROGRESS.md":
             content = re.sub(r"Version: \d+\.\d+\.\d+", "Version: " + VERSION, content)
             content = content.replace("Version: " + VERSION + " Reviewed:", "Version: " + VERSION + ". Reviewed:")
-            content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-11-01.", content)
+            content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-11-02.", content)
         elif "## " + VERSION not in content:
             entry = """# Unreleased
 
-## 1.0.19 - 2026-11-01 (Tantra-B only)
+## 1.0.20 - 2026-11-02 (Tantra-B only)
 
-Changed: complete the revised two-client simulation/checkpoint/Manager/MariaDB follow-up.
-Verified: native timing and visibility order, position/economy fencing, GUI channel controls,
-populated native MariaDB migration/backup/restore/outage recovery, and two-client gameplay.
-Limits: short local results; no larger-population or new rendered FX acceptance.
-Missing INTRO fxMAPnewIntro.txl is recorded and skipped.
+Changed: visible gameplay entry, native priest/class/quest integration, Mandara2nd
+checks and Manager automatic backups/status. Source rules and committed authority
+remain separate from client choices.
+Verified: focused Release rules and two visible clients with reopened NPC and
+map state; native Manager/database/retention/isolated restore checks. Matching
+client/server Release binaries are staged.
+Failed: the separate rendered projectile probe did not complete. A long original
+dialogue crash and later party reward mismatch were found and corrected.
+Remaining: premium reset source contract and Mandara2nd ambience TMS are absent;
+full C08/C09, individual quest/map and larger-population acceptance remain open.
+Tantra-O data and documentation remain unchanged.
 
-Prior integration checkpoint: original competitive death HUDs and recovery.
-Verified: focused Release authority/UI/GPU checks and two connected SDL HUDs;
-stopped SQL confirms fees, positive HP and native arena/castle destinations.
-The current175-file server development package has verified hashes and no state.
-Failed: earlier connected attempts exposed an early visual-packet rejection and
-private NPC fixture mistakes; both are corrected and the final run passes.
-Remaining: native Zone17 TMB material error prevents competitive scene acceptance;
-the HUD fixture's unused experience range is unset. Full PvP/siege, C08 benchmark,
-full C09 and ten map gates remain open. No new broad phase/task closures are inferred.
-No Debug build or broad FX regression. Retracted launcher request excluded.
-Tantra-O data and bundled documentation remain unchanged.
 
 """
             content = content.replace("# Unreleased\n", entry)

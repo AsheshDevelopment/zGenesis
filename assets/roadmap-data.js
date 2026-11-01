@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. The current checkpoint verifies real two-client combat/projectiles, SDL trade and cash, recovery, native altar/quest services and a two-zone round trip with remote party HP/chat. C08 keeps its benchmark gate open; C09 and all ten map acceptance gates remain open. Native arena/castle recovery and connected original HUD confirmation now pass; competitive 3D scene, siege and PvP acceptance remain open. The 1 November follow-up adds native timing, movement checkpoints, channel metrics/create/drain and preserved-data MariaDB deployment; the revised two-client network acceptance passes.",
+      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. The current checkpoint verifies real two-client combat/projectiles, SDL trade and cash, recovery, native altar/quest services and a two-zone round trip with remote party HP/chat. C08 keeps its benchmark gate open; C09 and all ten map acceptance gates remain open. Native arena/castle recovery and connected original HUD confirmation now pass; competitive 3D scene, siege and PvP acceptance remain open. The 1 November follow-up adds native timing, movement checkpoints, channel metrics/create/drain and preserved-data MariaDB deployment; the revised two-client network acceptance passes. The 2 November checkpoint verifies visible entry, native priest/class services, Mandara2nd scene and persistence, and Manager automatic backups. Its separate rendered projectile step remains incomplete.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -2649,13 +2649,27 @@ window.TANTRA_ROADMAP = {
               "id": "P16-01",
               "done": false,
               "text": "Audit native quest state, dialogue conditions, kill/item objectives and rewards.",
-              "children": []
+              "children": [
+                {
+                  "done": true,
+                  "text": "Connect original event/dialogue/kill callbacks and all sixteen later task bindings; check native solo/leader/member reward distribution. Individual quest graphical acceptance remains open."
+                }
+              ]
             },
             {
               "id": "P16-02",
               "done": false,
               "text": "Implement advanced NPC callbacks, class/religion changes and refinement workflows.",
-              "children": []
+              "children": [
+                {
+                  "done": true,
+                  "text": "Connect original priest selection, offerings and god changes with committed costs, replay protection and save-point rules; verify actual SDL choices and persistence."
+                },
+                {
+                  "done": true,
+                  "text": "Check eight tribes and sixteen second-class trial/token branches; publish committed native class changes. The supplied premium reset request contract is incomplete and remains unavailable."
+                }
+              ]
             },
             {
               "id": "P16-03",
@@ -2789,13 +2803,18 @@ window.TANTRA_ROADMAP = {
         "Historical pre-C08 baseline: 7,200 measured native scene frames, CPU/GPU/loading timings and hardware/input hashes"
       ],
       "next": [
-        "C08 stays paused: replace the rejected warm combat leg and enforce matched actor workload before accepting P17-13/P17-14 or the phase gate",
-        "Continue C04/C07 and remaining ordinary gameplay gates from their explicit open requirements",
-        "Keep wider strike acceptance separate: missing authored bindings and target/combo/periodic services remain open; C08 light/jitter controls do not accept those skills",
-        "Retain explicit missing authored collision and client/import version differences; no HPK extraction or silent dataset replacement",
-        "Broaden distinct-map/portal, visual/performance/recovery and release acceptance without inferring FPS gains from caching"
+        "Finish the incomplete two-client rendered projectile/skill check; fix visible issues without rerunning unrelated FX",
+        "Continue maps individually with MandaraCave: original resources/NPCs/portals, environment/audio and persisted return positions",
+        "Accept remaining quest dialogue and guild workflows individually; retain the documented absent premium reset contract",
+        "Exercise interruption during map handoff, trade and cash delivery; preserve committed state and reject duplicate rewards",
+        "Replace the rejected C08 combat comparison with matched actor workloads; do not infer thousand-player capacity from two clients"
       ],
       "changes": [
+        {
+          "date": "2026-11-02",
+          "title": "Visible entry, native NPCs, Mandara2nd and automatic backups",
+          "text": "Complete the five requested follow-up tasks within their documented scope. Missing optional INTRO fire is logged/skipped; two visible Release clients reach gameplay. Native priest selection, offering and god change, class publication, all sixteen second-class branches and later task bindings are connected with committed authority; correct source party rewards and a long-dialogue raster crash. Live priest/class results reopen exactly. Mandara2nd travel, all sixteen NPC positions, sky/cloud/fog, miniaudio BGM and saved fares/positions pass. Manager shows actual MariaDB/readiness and native automatic backups with guarded retention and isolated restore. Matching Release binaries are staged. The separate rendered projectile step remains incomplete; premium class reset lacks a completed source contract and region ambience TMS is missing. Broader C08/C09 and map gates remain open. No Debug rebuild or broad FX regression. Preserve Tantra-O."
+        },
         {
           "date": "2026-11-01",
           "title": "Simulation checkpoints and deployed MariaDB",
@@ -2936,7 +2955,7 @@ window.TANTRA_ROADMAP = {
       "total": 254,
       "percent": 66,
       "accepted": 5,
-      "reviewed": "2026-11-01"
+      "reviewed": "2026-11-02"
     }
   ],
   "zones": [
@@ -3012,11 +3031,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "b3b9f816e74e6e4d0a0b429ee22b2e9f37185281b1b89f1fa4dd2ad17bfff420"
+      "sha256": "57bbf6a5718838f6cc3018f77d20232a068004d7e47a4e329e3cb54dc9d4b9f7"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "6068bfb1a97037ac74075f43b5544a9f9c2badfddc6fdb1cc4a6e4e1e609da78"
+      "sha256": "de2379a7fb3c42e65adb8cb7628eb24b77eabd5e91f741858e2c62bd23710e5a"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",

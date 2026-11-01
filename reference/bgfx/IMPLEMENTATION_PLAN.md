@@ -2275,7 +2275,10 @@ Retain full skills/periodic combat/AI/loot, quests/refinement, travel/revival, o
 - [ ] **P15-09** Use the same per-zone checks: entry, movement, NPCs, environment, audio, return and saved-zone persistence.
 - [x] **P15-10** Keep all ten acceptance toggles unchecked until their individual evidence exists.
 - [ ] **P16-01** Audit native quest state, dialogue conditions, kill/item objectives and rewards.
+  - [x] Connect original event/dialogue/kill callbacks and all sixteen later task bindings; check native solo/leader/member reward distribution. Individual quest graphical acceptance remains open.
 - [ ] **P16-02** Implement advanced NPC callbacks, class/religion changes and refinement workflows.
+  - [x] Connect original priest selection, offerings and god changes with committed costs, replay protection and save-point rules; verify actual SDL choices and persistence.
+  - [x] Check eight tribes and sixteen second-class trial/token branches; publish committed native class changes. The supplied premium reset request contract is incomplete and remains unavailable.
 - [x] **P16-03** Preserve authoritative main/sub-refinement chances, costs, limits and result handling. Active Server.cpp rules, native shuffled percentage decks, Global-version masks, original altar UI, stale-offer rejection and SQLite outcomes are implemented. CPU success/failure/reset/destruction and actual SDL altar transactions pass; zone donation/GM modifiers remain the zero baseline.
 - [ ] **P16-04** Add portals/transport, return items and remaining resurrection paths/penalties.
 - [x] **P16-05** Implement chat channels/whispers, parties and authoritative membership state.

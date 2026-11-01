@@ -1,0 +1,236 @@
+{
+  "updated_utc": "2026-11-01T16:54:52.972007+00:00",
+  "goal_complete": true,
+  "configuration": "Release",
+  "graphical": {
+    "graphical_clients": 2,
+    "passed": true,
+    "results": [
+      {
+        "bidirectional_party_chat": true,
+        "cross_map_party": true,
+        "money_after": 500,
+        "money_before": 1500,
+        "passed": true,
+        "real_network": true,
+        "role": 1,
+        "round_trip": true,
+        "world_processes": 2,
+        "x": 513,
+        "z": 940,
+        "zone": 1
+      },
+      {
+        "bidirectional_party_chat": true,
+        "cross_map_party": true,
+        "money_after": 500,
+        "money_before": 1500,
+        "passed": true,
+        "real_network": true,
+        "role": 2,
+        "round_trip": false,
+        "world_processes": 2,
+        "x": 73,
+        "z": 935,
+        "zone": 2
+      }
+    ]
+  },
+  "optional_intro_fx_skip_count": [
+    1,
+    1
+  ],
+  "mandara2nd": [
+    {
+      "passed": true,
+      "map": 40002,
+      "server_npcs": 16,
+      "sky": true,
+      "cloud_layers": 2,
+      "fog": true,
+      "bgm_id": 30007,
+      "music_enabled": true,
+      "music_playing": true
+    },
+    {
+      "passed": true,
+      "map": 40002,
+      "server_npcs": 16,
+      "sky": true,
+      "cloud_layers": 2,
+      "fog": true,
+      "bgm_id": 30007,
+      "music_enabled": true,
+      "music_playing": true
+    }
+  ],
+  "persisted_positions": {
+    "mandara2nd_position_reopened": true,
+    "passed": true,
+    "records": [
+      {
+        "money": 500,
+        "name": "WorldHero",
+        "revision": 4,
+        "x": 513,
+        "z": 940,
+        "zone": 1
+      },
+      {
+        "money": 500,
+        "name": "BgfxPeer",
+        "revision": 3,
+        "x": 73,
+        "z": 935,
+        "zone": 2
+      }
+    ]
+  },
+  "manager": {
+    "passed": true,
+    "native_database_page": {
+      "backend": "mariadb",
+      "connected": true,
+      "database": "tantra_bgfx",
+      "host": "127.0.0.1",
+      "label": "MariaDB connected, schema 7 (127.0.0.1:13306)",
+      "local_process": true,
+      "pid": 29980,
+      "port": 13306,
+      "schema": "7",
+      "version": "11.8.9-MariaDB"
+    },
+    "backup_settings_dialog": true,
+    "workers_started": false
+  },
+  "backup_checks": {
+    "failure_no_prune": true,
+    "isolated_database": "tantra_bgfx_restore_check",
+    "manual_corrupt_foreign_preserved": true,
+    "native_mariadb_restore": {
+      "pre_restore_backup": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-backup-policy-c48464c77371\\restore/services/SQLDMN\\state/backups\\1793549237-3759b57a157a.sql",
+      "restored": true,
+      "schema": 7
+    },
+    "newest_two_preserved": true,
+    "passed": true,
+    "restart_backoff": true,
+    "retention_owned_only": true,
+    "shared_readiness_labels": true
+  },
+  "class_promotion": {
+    "command": "TantraPlayerDamageTests.exe story-event",
+    "exit_code": 0,
+    "committed_native_class_frame": "0x1981",
+    "replay_and_reopen": true
+  },
+  "client_resource_fix": {
+    "source_workbook": "bin/XLSXData/ClientRes.xlsx",
+    "source_workbook_sha256": "018ffb25b2b2611fe6f316a0b1db6f311272ff8009cbc9c20b336ce2681b9b18",
+    "runtime_catalog_sha256": "8472f8e2524150603cce55c5b679f9cd02b73817b32088f7d5417a7e99e2e5ff",
+    "change": "Native case-insensitive lookup includes Global UPWear; workbook unchanged"
+  },
+  "remaining": [],
+  "known_limits": [
+    "Missing Mandara2nd MAP_Mandara2nd.tms; region ambience skipped and logged, native map BGM plays.",
+    "The separate combat graphical run reached party/trade/cash/normal attacks but did not finish its projectile step; no projectile acceptance is claimed here.",
+    "Backups run while Manager is open, or through an external scheduler invoking --backup-maintenance.",
+    "Premium second-class reset event 1012 has no completed original client request and server handler; explicitly unavailable.",
+    "Individual quest graphical acceptance and all remaining full-game/map roadmap gates stay separate."
+  ],
+  "advanced_npc": {
+    "graphical": {
+      "graphical_clients": 2,
+      "passed": true,
+      "results": [
+        {
+          "brahman": 3,
+          "class1": 0,
+          "god": 4,
+          "money": 99950000,
+          "native_class_promotion": false,
+          "passed": true,
+          "real_network": true,
+          "role": 1,
+          "sdl_priest_services": true
+        },
+        {
+          "brahman": 0,
+          "class1": 1,
+          "god": 1,
+          "money": 0,
+          "native_class_promotion": true,
+          "passed": true,
+          "real_network": true,
+          "role": 2,
+          "sdl_priest_services": false
+        }
+      ]
+    },
+    "persistence": {
+      "advanced_npc_state_reopened": true,
+      "passed": true,
+      "records": [
+        {
+          "brahman": 3,
+          "class1": 0,
+          "god": 4,
+          "money": 99950000,
+          "name": "WorldHero",
+          "revision": 5,
+          "save_zone": 1
+        },
+        {
+          "brahman": 0,
+          "class1": 1,
+          "god": 1,
+          "money": 0,
+          "name": "BgfxPeer",
+          "revision": 4,
+          "save_zone": 1
+        }
+      ]
+    },
+    "source_class_branches": 16,
+    "tribes": 8,
+    "later_task_bindings": 16,
+    "source_party_reward_fix": true,
+    "ui_dialogue_check": "NATIVE_NPC_UI_VERIFIED priest_auto_branch=true god_choice=true source_change_cost=true",
+    "live_evidence_root": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-world-route-42460d803cc1\\graphical",
+    "focused_release_checks": [
+      {
+        "command": "TantraPlayerDamageTests.exe religion",
+        "passed": true,
+        "result": "NATIVE_RELIGION_VERIFIED free_selection=true offering_split_stacks=true fixed_change_cost=true replay_stale_wrong_npc=reject reopen=exact"
+      },
+      {
+        "command": "TantraPlayerDamageTests.exe second-class",
+        "passed": true,
+        "result": "NATIVE_SECOND_CLASS_VERIFIED tribes=8 branches=16 original_trials_tokens_skill_reset=true"
+      },
+      {
+        "command": "TantraPlayerDamageTests.exe party-story",
+        "passed": true,
+        "result": "NATIVE_PARTY_STORY_VERIFIED solo_leader_member_rewards=source_exact"
+      }
+    ]
+  },
+  "release_staging": {
+    "ZFLauncher.exe": {
+      "sha256": "d94e6545ceafb835375e1d6cc0843c0fdff18fc3d2db32ad25ef8060012f3d6b",
+      "source_matches_staged": true
+    },
+    "TantraZone.exe": {
+      "sha256": "9fdaa664fabb25db0d59eb5f8dff28e26fd4ba911ab125995a97b9f0c86f09f2",
+      "source_matches_staged": true
+    },
+    "TantraServerManager.exe": {
+      "sha256": "e8b83b26ba348fdb2c42974831c6f4cf50ec6eb01c9cf16ff72956895fd0f4cb",
+      "source_matches_staged": true
+    },
+    "TantraService.exe": {
+      "sha256": "afaedace474f4ae85923bc2dabe10db138090dfbcc7c78d106a15df43d750dbf",
+      "source_matches_staged": true
+    }
+  }
+}

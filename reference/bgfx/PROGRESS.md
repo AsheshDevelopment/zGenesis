@@ -1,3 +1,27 @@
+## 2 November 2026: visible entry, advanced NPCs, Mandara2nd and backups
+
+Two visible Release clients enter gameplay with the unavailable optional INTRO
+fire logged once and skipped. Native case-insensitive resource lookup also
+restores the Global UPWear records without changing the owned workbook.
+
+The existing NPC UI now connects original god selection, offering, god change
+and class quest callbacks to committed C++ authority. Sixteen second-class
+branches and later story bindings are checked; source party reward distribution
+is corrected. A live two-client priest/promotion session passes, and reopened
+storage matches. Long original dialogue no longer exceeds the raster limit.
+
+Mandara2nd passes paid outward/free return travel, cross-map party chat, all 16
+NPC positions, sky/cloud/fog, miniaudio BGM and saved-position/fare persistence.
+Manager displays actual MariaDB status and precise service readiness. Automatic
+backups, guarded retention and isolated restore checks pass; scheduling runs
+while Manager is open, or through its maintenance command.
+
+The separate graphical projectile step remains incomplete. Missing Mandara2nd
+region-ambience TMS and the incomplete original premium class-reset contract
+are recorded without invented replacements. Broader C08/C09 and map gates remain
+open. See [implementation and evidence](../_server_cpp/docs/evidence/npc-map-backups-20261102.json)
+and [native NPC rules](../_server_cpp/docs/ADVANCED_NPC_SERVICES.md).
+
 ## 1 November 2026: simulation and deployed MariaDB
 
 All five follow-up tasks pass within the user's revised two-client scope:
@@ -910,14 +934,14 @@ GPU timers overlap CPU stages and must not be summed with them.
 
 | Scene | Frame median ms | Application work median ms | GPU median ms | Settled load s |
 | --- | ---: | ---: | ---: | ---: |
-| town-idle | 9.70–10.13 | 9.62–10.06 | 2.38–2.49 | 2.92–5.91 |
-| field-idle | 12.46–12.71 | 12.39–12.64 | 2.54–2.66 | 4.91–7.74 |
-| field-combat | 13.21–13.22 | 13.09–13.10 | 2.59–2.65 | 4.27–7.64 |
+| town-idle | 9.70â€“10.13 | 9.62â€“10.06 | 2.38â€“2.49 | 2.92â€“5.91 |
+| field-idle | 12.46â€“12.71 | 12.39â€“12.64 | 2.54â€“2.66 | 4.91â€“7.74 |
+| field-combat | 13.21â€“13.22 | 13.09â€“13.10 | 2.59â€“2.65 | 4.27â€“7.64 |
 
-All 7,200 delayed GPU samples are valid. Combat retains38–44 actors rather than
-returning to town; dense idle retains43. Field CPU deformation remains4.30–4.39ms
+All 7,200 delayed GPU samples are valid. Combat retains38â€“44 actors rather than
+returning to town; dense idle retains43. Field CPU deformation remains4.30â€“4.39ms
 for26,176 CPU-skinned vertices, alongside1,715 GPU-skinned vertices. The combined
-UI/audio/equipment bucket is3.98–4.13ms; field world submission is1.31–1.35ms.
+UI/audio/equipment bucket is3.98â€“4.13ms; field world submission is1.31â€“1.35ms.
 This supports investigating native CPU skinning fallback and unchanged UI work
 before more batching; it does not isolate an optimization gain. Preserve native
 influence/normal/socket parity when extending GPU coverage. Object/environment
