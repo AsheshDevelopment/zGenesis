@@ -1,0 +1,185 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "1-801-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "1-803-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "1-822-cpu",
+      "different_pixels": 4,
+      "maximum_channel_error": 1
+    },
+    {
+      "case": "1-905-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "2-801-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "2-803-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "2-822-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "2-905-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "3-801-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "3-803-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "3-822-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "3-905-cpu",
+      "different_pixels": 1,
+      "maximum_channel_error": 1
+    },
+    {
+      "case": "4-801-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "4-803-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "4-822-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "4-905-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "5-801-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "5-803-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "5-822-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "5-905-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "6-801-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "6-803-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "6-822-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "6-905-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "7-801-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "7-803-cpu",
+      "different_pixels": 6,
+      "maximum_channel_error": 1
+    },
+    {
+      "case": "7-822-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "7-905-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "8-801-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "8-803-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "8-822-cpu",
+      "different_pixels": 3,
+      "maximum_channel_error": 1
+    },
+    {
+      "case": "8-905-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "monster2001-0-cpu",
+      "different_pixels": 1,
+      "maximum_channel_error": 1
+    },
+    {
+      "case": "monster2001-2-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "monster2001-4-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    },
+    {
+      "case": "monster2001-7-cpu",
+      "different_pixels": 0,
+      "maximum_channel_error": 0
+    }
+  ]
+}

@@ -1,5 +1,25 @@
 # Unreleased
 
+## 1.0.21 - 2026-11-02 (Tantra-B only)
+
+Changed: native quest journal and implemented guild UI, static Cave mineral
+resources/parser, smaller native grid support, character ping and matching
+K3 portal arrival bounds in the owned Global-baseline workbook; eight-influence
+GPU skinning, immediate idle startup and reduced redundant HUD work.
+Verified: two visible Release projectile/Cave clients; actual SDL quest/guild
+workflows, permissions, rewards, reconnect and stopped persistence; interrupted
+native travel/trade/cash socket recovery. Twelve matched Release CPU/GPU trials
+meet the GPU frame-time target at unchanged HIGH quality and actor workloads.
+Retain source, image and raw benchmark evidence.
+Failed: parser, static actor, texture binding and invalid Global arrival bounds
+were found and corrected. Failed performance baselines identified catalog idle
+startup, GPU fallback and redundant HUD rasterization; corrected results pass.
+Remaining: full C08/C09, higher guild ranks/marks, individual map/quest and
+larger-population acceptance. No fresh Debug or broad FX regression is claimed.
+Tantra-O data and documentation remain unchanged.
+
+
+
 ## 1.0.20 - 2026-11-02 (Tantra-B only)
 
 Changed: visible gameplay entry, native priest/class/quest integration, Mandara2nd
@@ -318,6 +338,6 @@ Remaining: real browser layout acceptance.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 168/254 named tasks checked (66%); 5/10 gates recorded. Latest: Visible entry, native NPCs, Mandara2nd and automatic backups. Complete the five requested follow-up tasks within their documented scope. Missing optional INTRO fire is logged/skipped; two visible Release clients reach gameplay. Native priest selection, offering and god change, class publication, all sixteen second-class branches and later task bindings are connected with committed authority; correct source party rewards and a long-dialogue raster crash. Live priest/class results reopen exactly. Mandara2nd travel, all sixteen NPC positions, sky/cloud/fog, miniaudio BGM and saved fares/positions pass. Manager shows actual MariaDB/readiness and native automatic backups with guarded retention and isolated restore. Matching Release binaries are staged. The separate rendered projectile step remains incomplete; premium class reset lacks a completed source contract and region ambience TMS is missing. Broader C08/C09 and map gates remain open. No Debug rebuild or broad FX regression. Preserve Tantra-O. Remaining native skill/FX and complete map/game acceptance stay open.
+- **Tantra-B**: 171/254 named tasks checked (67%); 5/10 gates recorded. Latest: Projectiles, quest/guild UI, Cave, recovery and Release performance verified. All five requested follow-up requirements pass. Two visible clients verify projectile direction/flight/impact, Cave native NPCs/fog/BGM, paid entry/free return and reopened state. Actual SDL quest/guild workflows preserve native history, rewards, permissions and membership. Real source/destination travel and cash socket interruptions retain one fare/debit/delivery; interrupted trade cancels. Fix smaller maps, static type-4 mineral indices/catalog DDS, original K3 portal arrival bounds, catalog idle startup and eight-weight GPU skinning without truncation. Remove repeated HUD rasterization and unchanged life/refining refresh. Twelve matched Release trials retain the same 1024x768 HIGH quality and actor workloads; six GPU trials meet mean/p95/p99 criteria, worst p95 13.610 ms. Retain failed baselines and raw evidence. Matching runtime/data are staged, preserving MariaDB identity/accounts. Full C08 package/configuration, C09, higher guild ranks/marks and individual map/quest gates remain open. Preserve Tantra-O. Remaining native skill/FX and complete map/game acceptance stay open.
 
 These are separate source checklists, not release-completion percentages.

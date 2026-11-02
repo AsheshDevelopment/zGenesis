@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.20"
+VERSION = "1.0.21"
 
 
 def sha(body):
@@ -80,9 +80,12 @@ def refresh(source):
     project["total"] = sum(group["total"] for group in project["groups"])
     project["percent"] = (200 * project["done"] + project["total"]) // (2 * project["total"])
     project["accepted"] = sum(bool(group["gate"] and group["gate"]["done"]) for group in project["groups"])
-    project["description"] = "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. The current checkpoint verifies real two-client combat/projectiles, SDL trade and cash, recovery, native altar/quest services and a two-zone round trip with remote party HP/chat. C08 keeps its benchmark gate open; C09 and all ten map acceptance gates remain open. Native arena/castle recovery and connected original HUD confirmation now pass; competitive 3D scene, siege and PvP acceptance remain open."
+    benchmark = read_json(source.parent / "_server_cpp/docs/evidence/c08-release-benchmark-20261102.json")
+    assert benchmark["passed"] and len(benchmark["profiles"]) == 6
+    worst_p95 = max(row["gpu_wall_ms"]["p95"] for row in benchmark["profiles"])
+    project["description"] = f"Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. The five-part checkpoint verifies real two-client projectiles, native quest/guild UI, MandaraCave, interrupted travel/trade/cash and the matched Release benchmark at 1024x768 HIGH. All six GPU trials meet the 60 FPS criteria; worst p95 {worst_p95:.3f} ms. Full C08 configuration/package, C09, higher guild ranks and individual map gates remain separate."
     project["foundations"] = [
-        "C08: 128-bone native GPU palette, inverse-transpose normals/shadows, CPU fallback and 32 rendered CPU/GPU comparisons",
+        "C08: 128-bone/eight-influence native GPU palette, inverse-transpose normals/shadows, CPU fallback and 36 rendered CPU/GPU comparisons",
         "C08: bounded decode/cache/upload queues, compatible opaque instancing, pooled changing-topology FX and conservative hidden visual work",
         "C08: eight scene retirements, four renderer retries, audio-owner cleanup, WAL-safe migration backups and external native diagnostics",
         "C08: full 3,652-file native client/runtime distribution, four app-local CRT DLLs, locked-stage rejection and two guarded relocation entries",
@@ -112,12 +115,13 @@ def refresh(source):
         "Historical pre-C08 baseline: 7,200 measured native scene frames, CPU/GPU/loading timings and hardware/input hashes"
     ]
     project["next"] = [
-        "Finish the incomplete two-client rendered projectile/skill check; fix visible issues without rerunning unrelated FX",
-        "Continue maps individually with MandaraCave: original resources/NPCs/portals, environment/audio and persisted return positions",
-        "Accept remaining quest dialogue and guild workflows individually; retain the documented absent premium reset contract",
-        "Exercise interruption during map handoff, trade and cash delivery; preserve committed state and reject duplicate rewards",
-        "Replace the rejected C08 combat comparison with matched actor workloads; do not infer thousand-player capacity from two clients"
+        "Finish the separate full C08 configuration/package acceptance for the final build",
+        "Continue Cave encounters and the next original map individually; keep full map gates separate",
+        "Complete higher guild ranks, marks and alliances; retain source permissions and persistent authority",
+        "Accept additional source quest chains individually; do not invent the missing premium reset contract",
+        "Prepare larger-population and physical multi-machine acceptance separately from the two-client checkpoint"
     ]
+
     latest = [
         {"date": "2026-10-27", "title": "Native tooltips, NPC greetings and birth FX verified", "text": "Verify the supplied tooltip screenshots against native source; compile the original effect formatter, message IDs, family predicates and refinement arrays. Render centred coloured item/skill rows with live instance fields, requirements, prices/service context and current/next skill conditions/effects/costs. Restore original NPC hover/down image9 and play each NPC greeting once per opening through HPK-backed miniaudio effects gain. Defer player NEWBORN and monster birth until rendering is ready; verify first appearance, revive/life/AOI changes, equipment retention, expiry and cleanup. Fix sale confirmation mixing legacy item-name bytes into UTF-8 English text. Debug/Release each pass nine focused tests: 3,759 tooltip, 337 UI and 190 presentation/audio assertions. Pixel checks isolate 5,727 NPC hover pixels and verify coloured tooltip glyphs. Actual SDL paid-repair/buy/sell/cancellation workflow, SQLite preservation and 53-file packaging pass. Corrected early merchant attempts are retained. P11-07 closes; 125/254 tasks and five gates. The K3 table has no matching screenshot mount entry; 45 unhandled formatter effect IDs and wider game/FX work remain recorded and open."},
         {"date": "2026-10-27", "title": "Native Settings layout matches supplied reference", "text": "Replace stretched value rows with a compact 330-pixel Settings frame, Presets/Options sections, native 64x19 gold button groups, selected highlights and plain values between arrows. Add working Low/Mid/High presets while retaining custom resolutions, all three aspect ratios, window modes and existing live quality/sliders. High retains native 2048 shadows; Ultra selects 4096. Debug/Release builds and three focused MainUI/Interface tests per configuration pass; final hidden SDL/bgfx UI checks are rerun after label refinement. Actual SDL passes 103 checks, including presets reaching renderer/camera state, persistence and Apply/Cancel. Review 1024x768 and 800x600 captures; 53-file packaging and protected/default/seed preservation pass. No new task or gate is closed. MSAA, model/FX/object-distance and circle-shadow controls from the reference remain separate renderer work. No new failures or FPS/visual-parity gain is claimed."},
@@ -151,6 +155,8 @@ def refresh(source):
     project["description"] += " The 2 November checkpoint verifies visible entry, native priest/class services, Mandara2nd scene and persistence, and Manager automatic backups. Its separate rendered projectile step remains incomplete."
     project["reviewed"] = "2026-11-02"
 
+    latest.insert(0, {"date":"2026-11-02", "title":"Projectiles, quest/guild UI, Cave, recovery and Release performance verified", "text":f"All five requested follow-up requirements pass. Two visible clients verify projectile direction/flight/impact, Cave native NPCs/fog/BGM, paid entry/free return and reopened state. Actual SDL quest/guild workflows preserve native history, rewards, permissions and membership. Real source/destination travel and cash socket interruptions retain one fare/debit/delivery; interrupted trade cancels. Fix smaller maps, static type-4 mineral indices/catalog DDS, original K3 portal arrival bounds, catalog idle startup and eight-weight GPU skinning without truncation. Remove repeated HUD rasterization and unchanged life/refining refresh. Twelve matched Release trials retain the same 1024x768 HIGH quality and actor workloads; six GPU trials meet mean/p95/p99 criteria, worst p95 {worst_p95:.3f} ms. Retain failed baselines and raw evidence. Matching runtime/data are staged, preserving MariaDB identity/accounts. Full C08 package/configuration, C09, higher guild ranks/marks and individual map/quest gates remain open. Preserve Tantra-O."})
+    project["foundations"].insert(0,"Original HTMessage quest journal and connected quest/guild SDL workflows; Cave resources/NPCs/portals/environment/audio and exact reopened state; native TCP interruption recovery")
     titles = {change["title"] for change in latest}
     project["changes"] = latest + [change for change in project["changes"] if change["title"] not in titles]
     # OGRE data and all bundled OGRE documentation remain byte-identical.
@@ -165,10 +171,15 @@ def refresh(source):
     command_doc.write_bytes((source / "docs/NATIVE_COMMANDS.md").read_bytes())
     server_docs = source.parent / "_server_cpp/docs"
     server_reference = ROOT / "reference/_server_cpp/docs"
-    for relative in ("ADVANCED_NPC_SERVICES.md", "AUTOMATIC_BACKUPS.md", "MANDARA2ND.md", "evidence/npc-map-backups-20261102.json", "SIMULATION_CHECKPOINTS.md", "evidence/tick-profile-20261101.json", "evidence/checkpoints-20261101.json", "evidence/scaling-gui-20261101.json", "evidence/mariadb-deployment-20261101.json", "evidence/two-client-simulation-20261101.json"):
+    for relative in ("PROJECTILE_CAVE_RECOVERY.md", "evidence/projectile-cave-recovery-20261102.json", "evidence/c08-release-benchmark-20261102.json", "evidence/c08-release-raw-20261102.zip", "ADVANCED_NPC_SERVICES.md", "AUTOMATIC_BACKUPS.md", "MANDARA2ND.md", "evidence/npc-map-backups-20261102.json", "SIMULATION_CHECKPOINTS.md", "evidence/tick-profile-20261101.json", "evidence/checkpoints-20261101.json", "evidence/scaling-gui-20261101.json", "evidence/mariadb-deployment-20261101.json", "evidence/two-client-simulation-20261101.json"):
         target = server_reference / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes((server_docs / relative).read_bytes())
+
+    for source_image in (server_docs / "evidence/projectile-cave-recovery-20261102").iterdir():
+        target = server_reference / source_image.relative_to(server_docs)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(source_image.read_bytes())
 
     data["sources"]["bgfx_commands"] = {"path": command_doc.relative_to(ROOT).as_posix(), "sha256": sha(command_doc.read_bytes())}
     data_path.write_text("/* Generated from the authoritative plans; refresh Tantra-B with tools/zf-refresh-bgfx.py. */\nwindow.TANTRA_ROADMAP = " + json.dumps(data, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8", newline="\n")
@@ -188,18 +199,22 @@ def refresh(source):
         elif "## " + VERSION not in content:
             entry = """# Unreleased
 
-## 1.0.20 - 2026-11-02 (Tantra-B only)
+## 1.0.21 - 2026-11-02 (Tantra-B only)
 
-Changed: visible gameplay entry, native priest/class/quest integration, Mandara2nd
-checks and Manager automatic backups/status. Source rules and committed authority
-remain separate from client choices.
-Verified: focused Release rules and two visible clients with reopened NPC and
-map state; native Manager/database/retention/isolated restore checks. Matching
-client/server Release binaries are staged.
-Failed: the separate rendered projectile probe did not complete. A long original
-dialogue crash and later party reward mismatch were found and corrected.
-Remaining: premium reset source contract and Mandara2nd ambience TMS are absent;
-full C08/C09, individual quest/map and larger-population acceptance remain open.
+Changed: native quest journal and implemented guild UI, static Cave mineral
+resources/parser, smaller native grid support, character ping and matching
+K3 portal arrival bounds in the owned Global-baseline workbook; eight-influence
+GPU skinning, immediate idle startup and reduced redundant HUD work.
+Verified: two visible Release projectile/Cave clients; actual SDL quest/guild
+workflows, permissions, rewards, reconnect and stopped persistence; interrupted
+native travel/trade/cash socket recovery. Twelve matched Release CPU/GPU trials
+meet the GPU frame-time target at unchanged HIGH quality and actor workloads.
+Retain source, image and raw benchmark evidence.
+Failed: parser, static actor, texture binding and invalid Global arrival bounds
+were found and corrected. Failed performance baselines identified catalog idle
+startup, GPU fallback and redundant HUD rasterization; corrected results pass.
+Remaining: full C08/C09, higher guild ranks/marks, individual map/quest and
+larger-population acceptance. No fresh Debug or broad FX regression is claimed.
 Tantra-O data and documentation remain unchanged.
 
 

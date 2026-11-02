@@ -1,3 +1,31 @@
+## 2 November 2026: projectiles, native quest/guild UI, Cave and recovery
+
+All five requested follow-up requirements pass. Two visible Release clients
+verify projectile flight/impact before damage and native MandaraCave entry,
+return, party/chat, original NPC positions, environment, BGM and saved state.
+The native HTMessage journal, source quest reward and implemented guild UI
+workflows pass with real SDL input, two TCP accounts and reopened storage.
+Interrupted source/destination travel, trade and cash reconciliation/reconnect
+retain exact state without duplicate fares/rewards/delivery.
+
+The Cave fixes cover the original smaller map grid, static mineral/type-4 TMB
+indices, catalog DDS binding and a documented four-cell K3 portal arrival
+compatibility override in the owned Global-baseline workbook. Original packs
+remain authoritative; no HPK is extracted. The final C08 Release CPU/GPU comparison passes twelve matched 60-second
+trials at 1024x768 HIGH, with matching initial/median actor counts. Worst GPU
+p95 is 13.610 ms and p99 is 25.356 ms; raw samples and hardware/input hashes are
+retained. Full C08 configuration/package acceptance remains separate.
+See [source rules and scope](../_server_cpp/docs/PROJECTILE_CAVE_RECOVERY.md)
+and [retained evidence/images](../_server_cpp/docs/evidence/projectile-cave-recovery-20261102.json).
+Higher guild ranks/marks, every quest/encounter, complete map gates and the
+full C08 package/configuration gate remain separate.
+
+The final staged Release also passes 36 CPU/GPU rendered action pairs and
+811,601 native position/normal, bounds, socket and picking checks. Catalog-bound
+monsters start idle immediately; eight stored skin weights retain native order
+without truncation. The earlier failed 60 FPS baseline is rejected; current
+measurements use this corrected renderer and unchanged HIGH quality.
+
 ## 2 November 2026: visible entry, advanced NPCs, Mandara2nd and backups
 
 Two visible Release clients enter gameplay with the unavailable optional INTRO

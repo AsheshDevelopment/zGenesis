@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. The current checkpoint verifies real two-client combat/projectiles, SDL trade and cash, recovery, native altar/quest services and a two-zone round trip with remote party HP/chat. C08 keeps its benchmark gate open; C09 and all ten map acceptance gates remain open. Native arena/castle recovery and connected original HUD confirmation now pass; competitive 3D scene, siege and PvP acceptance remain open. The 1 November follow-up adds native timing, movement checkpoints, channel metrics/create/drain and preserved-data MariaDB deployment; the revised two-client network acceptance passes. The 2 November checkpoint verifies visible entry, native priest/class services, Mandara2nd scene and persistence, and Manager automatic backups. Its separate rendered projectile step remains incomplete.",
+      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. The five-part checkpoint verifies real two-client projectiles, native quest/guild UI, MandaraCave, interrupted travel/trade/cash and the matched Release benchmark at 1024x768 HIGH. All six GPU trials meet the 60 FPS criteria; worst p95 13.610 ms. Full C08 configuration/package, C09, higher guild ranks and individual map gates remain separate. The 1 November follow-up adds native timing, movement checkpoints, channel metrics/create/drain and preserved-data MariaDB deployment; the revised two-client network acceptance passes. The 2 November checkpoint verifies visible entry, native priest/class services, Mandara2nd scene and persistence, and Manager automatic backups. Its separate rendered projectile step remains incomplete.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -1291,7 +1291,7 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P17-01",
-              "done": false,
+              "done": true,
               "text": "Establish named hardware, build, backend, resolution, camera, time and actor population for comparisons.",
               "children": []
             },
@@ -1380,9 +1380,9 @@ window.TANTRA_ROADMAP = {
             "text": "Both builds produce ZFLauncher.exe and shaders. Explicit smoke reports backend/device, handles resize/minimize/focus and exits cleanly. Hash checks preserve HPKs, HTLauncher and OGRE saves.",
             "children": []
           },
-          "done": 14,
+          "done": 15,
           "total": 25,
-          "percent": 56
+          "percent": 60
         },
         {
           "id": "C02",
@@ -2392,13 +2392,13 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P17-13",
-              "done": false,
+              "done": true,
               "text": "Compare equal-quality builds; do not claim improvement from reduced shadows/visibility/animation/texture quality.",
               "children": []
             },
             {
               "id": "P17-14",
-              "done": false,
+              "done": true,
               "text": "Define provisional acceptance of sustained 60 FPS at the agreed test resolution on named hardware, then refine from measured baselines.",
               "children": []
             },
@@ -2436,12 +2436,12 @@ window.TANTRA_ROADMAP = {
           "gate": {
             "id": "BG-C08-GATE",
             "done": false,
-            "text": "Named hardware/scene/quality has median/p95/p99, stalls, loading and memory evidence. Provisional sustained 60 FPS target uses recorded resolution; it is not a claimed result. Debug/Release, relocation and repeated lifecycle checks preserve assets/saves. C09 claims remain open.",
+            "text": "Named hardware/scene/quality has median/p95/p99, stalls, loading and memory evidence. The Release benchmark passes the recorded sustained 60 FPS criteria. Current Debug/Release, relocation and repeated lifecycle closure remains a separate gate and must preserve assets/saves. C09 claims remain open.",
             "children": []
           },
-          "done": 19,
+          "done": 21,
           "total": 21,
-          "percent": 90
+          "percent": 100
         },
         {
           "id": "C09",
@@ -2699,7 +2699,12 @@ window.TANTRA_ROADMAP = {
               "id": "P16-07",
               "done": false,
               "text": "Implement guild state, member names/marks and permissions before enabling dependent UI.",
-              "children": []
+              "children": [
+                {
+                  "done": true,
+                  "text": "Existing master/member UI: actual SDL create/invite/accept/announcement, rejected member actions, confirmed leave/kick/disband, reconnect and reopened membership/announcement. Higher ranks, marks and alliances remain open."
+                }
+              ]
             },
             {
               "id": "P16-08",
@@ -2771,9 +2776,10 @@ window.TANTRA_ROADMAP = {
         }
       ],
       "foundations": [
+        "Original HTMessage quest journal and connected quest/guild SDL workflows; Cave resources/NPCs/portals/environment/audio and exact reopened state; native TCP interruption recovery",
         "Native arena/castle recovery: original death HUD choices, persisted fees/HP/positions, Global arena funding/events, winner/prize; connected SDL HUD-only acceptance",
         "Native C++ shared MMO: real two-client combat/projectiles/trade/cash, service restart recovery, source altar/quests/resurrection and a paid two-zone round trip with party HP/chat",
-        "C08: 128-bone native GPU palette, inverse-transpose normals/shadows, CPU fallback and 32 rendered CPU/GPU comparisons",
+        "C08: 128-bone/eight-influence native GPU palette, inverse-transpose normals/shadows, CPU fallback and 36 rendered CPU/GPU comparisons",
         "C08: bounded decode/cache/upload queues, compatible opaque instancing, pooled changing-topology FX and conservative hidden visual work",
         "C08: eight scene retirements, four renderer retries, audio-owner cleanup, WAL-safe migration backups and external native diagnostics",
         "C08: full 3,652-file native client/runtime distribution, four app-local CRT DLLs, locked-stage rejection and two guarded relocation entries",
@@ -2803,13 +2809,18 @@ window.TANTRA_ROADMAP = {
         "Historical pre-C08 baseline: 7,200 measured native scene frames, CPU/GPU/loading timings and hardware/input hashes"
       ],
       "next": [
-        "Finish the incomplete two-client rendered projectile/skill check; fix visible issues without rerunning unrelated FX",
-        "Continue maps individually with MandaraCave: original resources/NPCs/portals, environment/audio and persisted return positions",
-        "Accept remaining quest dialogue and guild workflows individually; retain the documented absent premium reset contract",
-        "Exercise interruption during map handoff, trade and cash delivery; preserve committed state and reject duplicate rewards",
-        "Replace the rejected C08 combat comparison with matched actor workloads; do not infer thousand-player capacity from two clients"
+        "Finish the separate full C08 configuration/package acceptance for the final build",
+        "Continue Cave encounters and the next original map individually; keep full map gates separate",
+        "Complete higher guild ranks, marks and alliances; retain source permissions and persistent authority",
+        "Accept additional source quest chains individually; do not invent the missing premium reset contract",
+        "Prepare larger-population and physical multi-machine acceptance separately from the two-client checkpoint"
       ],
       "changes": [
+        {
+          "date": "2026-11-02",
+          "title": "Projectiles, quest/guild UI, Cave, recovery and Release performance verified",
+          "text": "All five requested follow-up requirements pass. Two visible clients verify projectile direction/flight/impact, Cave native NPCs/fog/BGM, paid entry/free return and reopened state. Actual SDL quest/guild workflows preserve native history, rewards, permissions and membership. Real source/destination travel and cash socket interruptions retain one fare/debit/delivery; interrupted trade cancels. Fix smaller maps, static type-4 mineral indices/catalog DDS, original K3 portal arrival bounds, catalog idle startup and eight-weight GPU skinning without truncation. Remove repeated HUD rasterization and unchanged life/refining refresh. Twelve matched Release trials retain the same 1024x768 HIGH quality and actor workloads; six GPU trials meet mean/p95/p99 criteria, worst p95 13.610 ms. Retain failed baselines and raw evidence. Matching runtime/data are staged, preserving MariaDB identity/accounts. Full C08 package/configuration, C09, higher guild ranks/marks and individual map/quest gates remain open. Preserve Tantra-O."
+        },
         {
           "date": "2026-11-02",
           "title": "Visible entry, native NPCs, Mandara2nd and automatic backups",
@@ -2951,9 +2962,9 @@ window.TANTRA_ROADMAP = {
           "text": "ZFLauncher uses its dedicated client/profile. OGRE runtime results are not transferred to bgfx acceptance."
         }
       ],
-      "done": 168,
+      "done": 171,
       "total": 254,
-      "percent": 66,
+      "percent": 67,
       "accepted": 5,
       "reviewed": "2026-11-02"
     }
@@ -3031,11 +3042,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "57bbf6a5718838f6cc3018f77d20232a068004d7e47a4e329e3cb54dc9d4b9f7"
+      "sha256": "b57db0903f12233e75d37196c186fdab623cd892e60dacc3558014722ec46d78"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "de2379a7fb3c42e65adb8cb7628eb24b77eabd5e91f741858e2c62bd23710e5a"
+      "sha256": "91ace9f6e8db8612971c1006107920adc345397fefc5f0b7c0bb552391a6ad82"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",

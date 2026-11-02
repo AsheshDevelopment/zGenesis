@@ -1,0 +1,1020 @@
+{
+  "updated_utc": "2026-11-02T02:38:58.655434+00:00",
+  "goal_complete": true,
+  "configuration": "Release",
+  "projectile_graphical": {
+    "graphical_clients": 2,
+    "passed": true,
+    "results": [
+      {
+        "cash_delivery": true,
+        "exact_trade_items": true,
+        "movement_and_loot": true,
+        "normal_combat": true,
+        "party": true,
+        "passed": true,
+        "peer_rendered": true,
+        "projectile_geometry": true,
+        "projectile_hit": true,
+        "real_network": true,
+        "review_confirmations": true,
+        "role": 1,
+        "sdl_trade_drag": true
+      },
+      {
+        "cash_delivery": false,
+        "exact_trade_items": true,
+        "movement_and_loot": true,
+        "normal_combat": true,
+        "party": true,
+        "passed": true,
+        "peer_rendered": true,
+        "projectile_geometry": true,
+        "projectile_hit": true,
+        "real_network": true,
+        "review_confirmations": true,
+        "role": 2,
+        "sdl_trade_drag": true
+      }
+    ]
+  },
+  "projectile_pixels": [
+    {
+      "role": 1,
+      "changed_pixels": 4164,
+      "bbox": [
+        721,
+        339,
+        798,
+        420
+      ]
+    },
+    {
+      "role": 2,
+      "changed_pixels": 53,
+      "bbox": [
+        796,
+        446,
+        804,
+        455
+      ]
+    }
+  ],
+  "flight_states": [
+    {
+      "skill": 3306,
+      "age": 0.133333,
+      "position": [
+        4776.8,
+        35.486,
+        6685.81
+      ],
+      "forward": [
+        0.684788,
+        0.503577,
+        0.52676
+      ],
+      "native_forward_axis": true,
+      "damage_already_received": false
+    },
+    {
+      "skill": 3306,
+      "age": 0.133333,
+      "position": [
+        4776.8,
+        35.486,
+        6685.81
+      ],
+      "forward": [
+        0.684788,
+        0.503577,
+        0.52676
+      ],
+      "native_forward_axis": true,
+      "damage_already_received": false
+    }
+  ],
+  "projectile_evidence_root": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-world-route-880279873b7c\\graphical",
+  "interrupted_trade_cash": {
+    "passed": true,
+    "clients": 2,
+    "transport": "native C++ TCP",
+    "pending_cash_reconciled": true,
+    "cash_reconnect_no_duplicate": true,
+    "uncommitted_trade_cancelled": true,
+    "party_reconnect": true,
+    "root": "C:/Users/Ashesh/AppData/Local/Temp/tantra-cpp-world-route-6728bb403c38"
+  },
+  "native_small_map_projection": {
+    "map": "Zone03",
+    "dimensions": [
+      512,
+      512
+    ],
+    "source_fixed_grid_projection": "exact",
+    "zone01_spatial_golden": "passed"
+  },
+  "guild_permissions_reopen": {
+    "passed": true,
+    "scope": "Store permission transactions and stopped persistence; latest actual SDL/two-account quest/guild proof is recorded in quest_guild_ui.",
+    "root": "C:/Users/Ashesh/AppData/Local/Temp/tantra-cpp-store-253aa787e990"
+  },
+  "asset_additions": [
+    {
+      "destination": "_client_bgfx/resource/object/Monster/Mesh/W_Monster1.tmb",
+      "source": "B:/Tantra-Files/_TantraClients/TantraOnline-Global/resource/object/Monster/Mesh/W_Monster1.tmb",
+      "sha256": "62ab3b4b19df7148dfe22c7d486dc83e607102a79c97bc867e9ef07e8cc2c53d",
+      "hpk_extraction": false
+    },
+    {
+      "destination": "_client_bgfx/resource/object/Monster/MonsterTex2.hpk::W_Monster1.dds",
+      "source": "B:/Tantra-Files/_TantraClients/TantraOnline-Global/resource/object/Monster/MonsterTex2/W_Monster1.dds",
+      "sha256": "6c3d65dc2b97ffc205fb687b0936ed9b8cedb353f2d41c0921ddedbea232a74c",
+      "hpk_extraction": false,
+      "container_sha256": "b0b7831c0e1b0effd09a0fffd0dfd219cbf29c0acc07e8ae542642587bb291f7",
+      "packed_precedence_unchanged": true
+    }
+  ],
+  "remaining": [],
+  "mandaracave": {
+    "passed": true,
+    "root": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-world-route-55d8df79c3c1\\graphical",
+    "results": {
+      "graphical_clients": 2,
+      "passed": true,
+      "results": [
+        {
+          "bidirectional_party_chat": true,
+          "cross_map_party": true,
+          "money_after": 500,
+          "money_before": 1100,
+          "passed": true,
+          "real_network": true,
+          "role": 1,
+          "round_trip": true,
+          "world_processes": 2,
+          "x": 213,
+          "z": 835,
+          "zone": 1
+        },
+        {
+          "bidirectional_party_chat": true,
+          "cross_map_party": true,
+          "money_after": 500,
+          "money_before": 1100,
+          "passed": true,
+          "real_network": true,
+          "role": 2,
+          "round_trip": false,
+          "world_processes": 2,
+          "x": 415,
+          "z": 41,
+          "zone": 3
+        }
+      ]
+    },
+    "persistence": {
+      "destination_zone": 3,
+      "map_position_reopened": true,
+      "passed": true,
+      "records": [
+        {
+          "money": 500,
+          "name": "WorldHero",
+          "revision": 4,
+          "x": 213,
+          "z": 835,
+          "zone": 1
+        },
+        {
+          "money": 500,
+          "name": "BgfxPeer",
+          "revision": 3,
+          "x": 415,
+          "z": 41,
+          "zone": 3
+        }
+      ]
+    },
+    "scene": {
+      "passed": true,
+      "map": 40003,
+      "server_npcs": 7,
+      "sky": false,
+      "cloud_layers": 0,
+      "fog": true,
+      "bgm_id": 30011,
+      "music_enabled": true,
+      "music_playing": true
+    },
+    "resources": {
+      "terrain": [
+        257,
+        257
+      ],
+      "sections": 4,
+      "placements": 43,
+      "models": 32,
+      "missing_textures": 0
+    },
+    "portal131_override": {
+      "workbook": "_server_cpp/bin/XLSXData/TantraParam.xlsx",
+      "range": "Portal!K19:N19",
+      "global": [
+        780,
+        885,
+        787,
+        880
+      ],
+      "project": [
+        206,
+        818,
+        232,
+        846
+      ],
+      "reference": "GenesisK3-XMLs/XMLS-XLS/TantraParam.xml",
+      "reason": "Global rectangle has no valid cells on selected K3 terrain; preserve native matching K3 coordinates"
+    },
+    "data_release": "_server_cpp/state/data-releases/cave-20261102"
+  },
+  "native_quest_journal": {
+    "source": "Tantra/HTlauncher/HTInterface.cpp:7114-7486",
+    "flags": "HTMessage QuestMessage parameters; 255 complete, 254 abandoned, unknown flags omitted",
+    "component_check": "1277 native UI checks passed, including real quest messages and input",
+    "connected_workflow": "passed; Vartan offer/turn-in, selected completed message, exact reward and reopened flags"
+  },
+  "quest_guild_ui": {
+    "passed": true,
+    "root": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-world-route-794e29a98c9c",
+    "result": {
+      "passed": true,
+      "clients": 2,
+      "real_network": true,
+      "actual_sdl": true,
+      "hud_only": true,
+      "quest_journal": true,
+      "native_quest_rewards": true,
+      "guild_permissions": true,
+      "guild_invite_accept": true,
+      "destructive_confirmations": true,
+      "guild_reconnect": true,
+      "guild": 2,
+      "quest_reward_money": 200
+    },
+    "persistence": {
+      "announcement": "Saved native announcement",
+      "passed": true,
+      "records": [
+        {
+          "guild": 2,
+          "money": 400200,
+          "name": "WorldHero",
+          "quest1": 255,
+          "quest2": 1,
+          "revision": 7
+        },
+        {
+          "guild": 2,
+          "money": 0,
+          "name": "BgfxPeer",
+          "quest1": 0,
+          "quest2": 0,
+          "revision": 7
+        }
+      ]
+    },
+    "limits": "One real SDL/D3D11 HUD window with two live C++ TCP accounts; full 3D scene acceptance is separate. Guild UI exposes the implemented master/member roles; higher native ranks, marks and alliances remain open."
+  },
+  "interrupted_travel": {
+    "passed": true,
+    "root": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-world-route-4ea9d4656735",
+    "result": {
+      "passed": true,
+      "clients": 2,
+      "transport": "native C++ TCP",
+      "source_disconnected_before_claim": true,
+      "destination_disconnected_before_char_init": true,
+      "fare_once": true,
+      "native_items_and_progression_preserved": true,
+      "party_recovered": true,
+      "money_before": 1500,
+      "money_after": 500,
+      "zone": 2,
+      "x": 71,
+      "z": 935
+    },
+    "persistence": {
+      "claimed": 1,
+      "handoffs": 1,
+      "money": 500,
+      "passed": true,
+      "revision": 3,
+      "x": 71,
+      "z": 935,
+      "zone": 2
+    }
+  },
+  "interrupted_trade_cash_actual": {
+    "passed": true,
+    "root": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-world-route-c2313eae5a87",
+    "debit_boundary": {
+      "actual_ledger_debit": true,
+      "item": 364,
+      "order": "369c2fc88b6560e6dae0068c4af2c6ef0459d4e8261f8402b1e1cf999ae79701",
+      "quantity": 1,
+      "seeded_debit": false
+    },
+    "socket_interruption": {
+      "after_real_debit": true,
+      "balance": 5000,
+      "before_character_receipt": true,
+      "item": 4364,
+      "native_tcp_disconnect": true,
+      "passed": true,
+      "quantity": 1
+    },
+    "result": {
+      "automatic_pending_cash": true,
+      "cash_reconnect_no_duplicate": true,
+      "clients": 2,
+      "interrupted_trade_cancelled": true,
+      "party_reconnect": true,
+      "passed": true,
+      "transport": "native C++ TCP"
+    },
+    "limits": "Production CashService handler with isolated loopback scheduling fixture; actual purchase/debit, no seeded pending order. Private SQLite fixture, not deployed MariaDB capacity."
+  },
+  "gpu_eight_influences": {
+    "result": {
+      "passed": true,
+      "tribes": 8,
+      "native_parts": 372,
+      "matched_gpu_cases": 36,
+      "checks": 811601
+    },
+    "pixels": {
+      "passed": true,
+      "cases": [
+        {
+          "case": "1-801-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "1-803-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "1-822-cpu",
+          "different_pixels": 4,
+          "maximum_channel_error": 1
+        },
+        {
+          "case": "1-905-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "2-801-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "2-803-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "2-822-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "2-905-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "3-801-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "3-803-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "3-822-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "3-905-cpu",
+          "different_pixels": 1,
+          "maximum_channel_error": 1
+        },
+        {
+          "case": "4-801-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "4-803-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "4-822-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "4-905-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "5-801-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "5-803-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "5-822-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "5-905-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "6-801-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "6-803-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "6-822-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "6-905-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "7-801-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "7-803-cpu",
+          "different_pixels": 6,
+          "maximum_channel_error": 1
+        },
+        {
+          "case": "7-822-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "7-905-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "8-801-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "8-803-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "8-822-cpu",
+          "different_pixels": 3,
+          "maximum_channel_error": 1
+        },
+        {
+          "case": "8-905-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "monster2001-0-cpu",
+          "different_pixels": 1,
+          "maximum_channel_error": 1
+        },
+        {
+          "case": "monster2001-2-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "monster2001-4-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        },
+        {
+          "case": "monster2001-7-cpu",
+          "different_pixels": 0,
+          "maximum_channel_error": 0
+        }
+      ]
+    },
+    "path": "_remake_bgfx\\build\\evidence\\gpu-eight-startup-20261102",
+    "native_weights": "All stored influences retained in original order; more than eight influences retains CPU fallback",
+    "catalog_idle_startup": "Explicitly starts animation after catalog texture binding"
+  },
+  "c08_rejected_baseline": {
+    "accepted": false,
+    "reason": "Sustained 60 FPS threshold failed; before corrected catalog idle startup and eight-influence GPU path",
+    "path": "_remake_bgfx/build/evidence/c08-current3-gpu-20261102"
+  },
+  "staging": {
+    "passed": true,
+    "utc": "2026-11-02T02:07:07.464496+00:00",
+    "release": "C:\\_GitHub\\TantraSrc\\_server_cpp\\state\\data-releases\\cave-20261102",
+    "backup": "C:\\_GitHub\\TantraSrc\\_server_cpp\\state\\stage-backups\\cave-20261102",
+    "preserved_settings_and_identity": true,
+    "connection_profile_preserved": true,
+    "changes": [
+      {
+        "path": "_server_cpp\\data\\rules\\ai\\ai.json",
+        "sha256": "5e9b2db40548cd66b6d0a5f4f0135cfbd711f0e1939e76dfe8469261947c24bd",
+        "bytes": 152295
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\ai\\PROVENANCE.json",
+        "sha256": "0b8ae99c2100519f1f2216da67a4eb7a64784404fdfee714ae1458013017f5ca",
+        "bytes": 2017
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\character-stats\\PROVENANCE.json",
+        "sha256": "37479742e744999fcaa3babfa42f792dc607ed04637a14659de9402d14e4d599",
+        "bytes": 1879
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\combat\\animation-timings.json",
+        "sha256": "3efadca92d5ef6d3744ea26d66dc80905ca038169c4fbbbe4b3f076fd4ac6829",
+        "bytes": 641
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\combat\\animation-timings.tsv",
+        "sha256": "b33d34474bb3c8e087fd89be3eb6aaffc4132581ddae8be36332b751bf92dfed",
+        "bytes": 191371
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\combat\\animation-timings.tsv.missing.txt",
+        "sha256": "9dea6df4b2858a725d63fb28d4d616a52a8aac80ede8d724bb9f0543b0992018",
+        "bytes": 12150
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\combat\\combat.json",
+        "sha256": "6ca66b67eae7513c75eae9f513935147820e62373b1bdc63f606088d6fee3c45",
+        "bytes": 92727
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\combat\\missing-skill-bindings.json",
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "bytes": 2
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\combat\\PROVENANCE.json",
+        "sha256": "417f2d12afb0402d9aa647487a0b2f4f8b032c1dc05bd4a4457d69a82ee8a594",
+        "bytes": 3040
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\gameplay-parameters\\Item.tsv",
+        "sha256": "00db8a9c7789c52889e0a9ecfdd5c30854ec348a3d1eb4f2c1ce31c006e45576",
+        "bytes": 347008
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\gameplay-parameters\\PROVENANCE.json",
+        "sha256": "3e28153cfcb98f10d9a69c1ee808a7495e9fee84e1f53b5d298a26680d4836d7",
+        "bytes": 13189
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\npc-services\\Item.tsv",
+        "sha256": "c65d63681914d808d22b4ca5a88ed47a8d37207a44bb855f75bc694751ab4d9c",
+        "bytes": 73820
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\npc-services\\Portal.tsv",
+        "sha256": "7c9823ddc8d2acdb761e93ccda95e1cb27ea9747228a5276470ac09a40d2580d",
+        "bytes": 10363
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\npc-services\\PROVENANCE.json",
+        "sha256": "78405ace87768fff3e295dcfc663d9b38d39bd9e9542fc8d632c8e0b5677c614",
+        "bytes": 3183
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\quests\\ITEM_GROUP_PROVENANCE.json",
+        "sha256": "8db218d6884bbadb07d062f2a1c20890057b95b8323f68a06b205206bc7dbc15",
+        "bytes": 780
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\quests\\PROVENANCE.json",
+        "sha256": "60fc4bbb5960498242c21c40e493a874e21c629174d18e4742c02fb8ef76c430",
+        "bytes": 1957
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\quests\\WORLD_EVENT_PROVENANCE.json",
+        "sha256": "1a94cddf872af184ce7fd484b9756d474f92221905fa2d79c682176e0f3eceb3",
+        "bytes": 1357
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\refinement\\PROVENANCE.json",
+        "sha256": "3e447eba15ebe8087a9f07b6bb0af0a8f7d858d9c7718f9e1a46bc037199b2ea",
+        "bytes": 621
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\world-gameplay\\Monster.tsv",
+        "sha256": "fea13dfe4ba48f1b3299aa02ff07f19a3a454d08f27fef68b28b3ab9a468cc9b",
+        "bytes": 266302
+      },
+      {
+        "path": "_server_cpp\\data\\rules\\world-gameplay\\PROVENANCE.json",
+        "sha256": "d387b06677c52ef7995b1ebe4427ed5bfb8cf942c14cfc13c61b324974b692b3",
+        "bytes": 5200
+      },
+      {
+        "path": "_server_final\\data\\rules\\combat\\animation-timings.json",
+        "sha256": "3efadca92d5ef6d3744ea26d66dc80905ca038169c4fbbbe4b3f076fd4ac6829",
+        "bytes": 641
+      },
+      {
+        "path": "_server_final\\data\\rules\\gameplay-parameters\\PROVENANCE.json",
+        "sha256": "3e28153cfcb98f10d9a69c1ee808a7495e9fee84e1f53b5d298a26680d4836d7",
+        "bytes": 13189
+      },
+      {
+        "path": "_server_final\\data\\rules\\npc-services\\Portal.tsv",
+        "sha256": "7c9823ddc8d2acdb761e93ccda95e1cb27ea9747228a5276470ac09a40d2580d",
+        "bytes": 10363
+      },
+      {
+        "path": "_server_final\\data\\rules\\npc-services\\PROVENANCE.json",
+        "sha256": "78405ace87768fff3e295dcfc663d9b38d39bd9e9542fc8d632c8e0b5677c614",
+        "bytes": 3183
+      },
+      {
+        "path": "_server_final\\data\\rules\\quests\\PROVENANCE.json",
+        "sha256": "60fc4bbb5960498242c21c40e493a874e21c629174d18e4742c02fb8ef76c430",
+        "bytes": 1957
+      },
+      {
+        "path": "_server_final\\data\\rules\\refinement\\PROVENANCE.json",
+        "sha256": "3e447eba15ebe8087a9f07b6bb0af0a8f7d858d9c7718f9e1a46bc037199b2ea",
+        "bytes": 621
+      },
+      {
+        "path": "_server_final\\data\\rules\\world-gameplay\\PROVENANCE.json",
+        "sha256": "d387b06677c52ef7995b1ebe4427ed5bfb8cf942c14cfc13c61b324974b692b3",
+        "bytes": 5200
+      },
+      {
+        "path": "_remake_bgfx\\runtime\\data\\english.tsv",
+        "sha256": "e0261ae96f200b432fdb6c5046439dd2b8d2ebb3e64d37d221c10f25d21ed911",
+        "bytes": 746527
+      },
+      {
+        "path": "_remake_bgfx\\runtime\\data\\offline\\combat\\animation-timings.json",
+        "sha256": "3efadca92d5ef6d3744ea26d66dc80905ca038169c4fbbbe4b3f076fd4ac6829",
+        "bytes": 641
+      },
+      {
+        "path": "_remake_bgfx\\runtime\\data\\offline\\gameplay-parameters\\PROVENANCE.json",
+        "sha256": "3e28153cfcb98f10d9a69c1ee808a7495e9fee84e1f53b5d298a26680d4836d7",
+        "bytes": 13189
+      },
+      {
+        "path": "_remake_bgfx\\runtime\\data\\offline\\npc-services\\Portal.tsv",
+        "sha256": "7c9823ddc8d2acdb761e93ccda95e1cb27ea9747228a5276470ac09a40d2580d",
+        "bytes": 10363
+      },
+      {
+        "path": "_remake_bgfx\\runtime\\data\\offline\\npc-services\\PROVENANCE.json",
+        "sha256": "78405ace87768fff3e295dcfc663d9b38d39bd9e9542fc8d632c8e0b5677c614",
+        "bytes": 3183
+      },
+      {
+        "path": "_remake_bgfx\\runtime\\data\\offline\\quests\\PROVENANCE.json",
+        "sha256": "60fc4bbb5960498242c21c40e493a874e21c629174d18e4742c02fb8ef76c430",
+        "bytes": 1957
+      },
+      {
+        "path": "_remake_bgfx\\runtime\\data\\offline\\refinement\\PROVENANCE.json",
+        "sha256": "3e447eba15ebe8087a9f07b6bb0af0a8f7d858d9c7718f9e1a46bc037199b2ea",
+        "bytes": 621
+      },
+      {
+        "path": "_remake_bgfx\\runtime\\data\\offline\\world-gameplay\\PROVENANCE.json",
+        "sha256": "d387b06677c52ef7995b1ebe4427ed5bfb8cf942c14cfc13c61b324974b692b3",
+        "bytes": 5200
+      },
+      {
+        "path": "_client_bgfx\\system\\TantraParam.tpa",
+        "sha256": "d72c2762ee5177eb91984d6a6bfcb9934315fbf3ef214a75380e054e5549f3f4",
+        "bytes": 1286442
+      },
+      {
+        "path": "_server_final\\data\\native\\TantraParam.tpa",
+        "sha256": "56b726dae8f204a8a19b40efb3009ac7807037dbaac6fece4fa9e960d3730599",
+        "bytes": 1439732
+      },
+      {
+        "path": "_server_final\\bin\\XLSXData\\TantraParam.xlsx",
+        "sha256": "4d53963763c43dab0869fe4ca7514e760ec1e2f19ddc0b9165ee4fe9131ed4b2",
+        "bytes": 2107010
+      },
+      {
+        "path": "_server_final\\bin\\XLSXData\\TantraParam.provenance.json",
+        "sha256": "4f069544c83381b5d928d31b928a42d07c25947562d6df7843cfcc3ccb95ac81",
+        "bytes": 2620
+      }
+    ],
+    "limits": "Existing signed connection profile preserved; only project data, owned workbook and compiled runtime files copied. Private identity, SQL state and service profiles were not replaced."
+  },
+  "client_executable_sha256": "b11d14d86363a9c82f144c61c8ab7ccebdab19038bd4e0aae2183badcc22c3e5",
+  "server_executable_sha256": {
+    "TantraZone.exe": "7967b22212004a363c3e587507496a748ab0c6238d244eea32414590fa3ceeca",
+    "TantraService.exe": "afaedace474f4ae85923bc2dabe10db138090dfbcc7c78d106a15df43d750dbf",
+    "TantraServerManager.exe": "e8b83b26ba348fdb2c42974831c6f4cf50ec6eb01c9cf16ff72956895fd0f4cb"
+  },
+  "retained_artifacts": {
+    "projectile-role1.png": "ba3fa941ecdf31327aaf2eb711550cc0941982c097c1f85953208fb03fc024fa",
+    "projectile-hidden-role1.png": "c6b66e1a001e5489374ca3da3fb0d4a7b93cefe1cbe3f6add90bfc7c3a489bda",
+    "projectile-role2.png": "7c2681403922be97c39c4d27430c13b8c0b94575611533be0ba990f01d4b0abb",
+    "projectile-hidden-role2.png": "b50195e340c0f389caeae5c82696ecf15d828922a47b829e0aa0d3eae9439206",
+    "mandaracave.png": "add237494e68f207cafa69edd92b2c58c9a3ca425fb937f95490194a753459c3",
+    "quest-completed.png": "849a3e81ccbad785a5f5e475e20123c104715f63600c41f9fb07e8ddbd57a5e5",
+    "guild-invitation.png": "374953e0e4e2ac5e4df1f81381e44b05487ad7837e2443fa00cf72f7a359b20c",
+    "guild-persistent-result.png": "586624aa07532aa2d7720ed532956f48dba27f8397d42c192d91f1c716cba09d",
+    "combat-events-role1.tsv": "488814c99b71163c73984509b3eb25957e3daf2ea91905ccc6f9c3082a21e090",
+    "combat-events-role2.tsv": "66ccd868020a9f64ec770d57f75d5c9862b1d462bf52cfd3adfc580702f5a1f4",
+    "cash_debit_boundary.json": "ed8b13fbd13fbaad3344dac3fc3f9ef120e9a6bd39986d49c3c2ddf59bd2418c",
+    "cash_socket_interruption.json": "d68ac2486944b2b47482dcb8d254a556a65f9eb9bbd6ab954429ec307b84c09b",
+    "gpu_skin_result.json": "c49c5f30df541a3d1b053b9a275cbe1051f70e7ec5a5834f38938e401e46ce36",
+    "gpu_skin_pixels.json": "d98c6400899a21c56c938c0be337c07b13cd512001c7e5f9635048187d72141f",
+    "monster2001-4-cpu.png": "8ce9c9f9cb6e63caab031a086299f48fcd0103a5afb893c130793088ca6cd003",
+    "monster2001-4-gpu.png": "8ce9c9f9cb6e63caab031a086299f48fcd0103a5afb893c130793088ca6cd003"
+  },
+  "c08_second_rejected_baseline": {
+    "accepted": false,
+    "completed_trial": "_remake_bgfx\\build\\evidence\\c08-final-gpu-20261102\\field-combat-1\\PROFILE_SUMMARY.json",
+    "wall_ms": {
+      "count": 4191,
+      "min": 11.9252,
+      "median": 13.40229996,
+      "mean": 14.31841350342639,
+      "p95": 18.69060006,
+      "p99": 31.001280431000033,
+      "max": 91.79379791
+    },
+    "reason": "Combat p95 exceeds 16.667 ms; remaining matrix stopped before wasting CPU trials",
+    "finding": "Repeated HUD refresh, logical-vs-padded label cache dimensions and duplicate status rasterization; final HUD result replaces this build"
+  },
+  "hud_optimization": {
+    "native_gpu_component_passed": true,
+    "scope": "Four native value cases, label readback, zero extent, integer/padded control scaling and inclusive button hit areas",
+    "source_changes": [
+      "Logical label size cache",
+      "Unchanged life and invisible refining refresh guard",
+      "Single refresh rasterization of changed status/target labels",
+      "Ordered status application with one final HUD draw per frame"
+    ],
+    "inventory_refresh_preserved": true
+  },
+  "verification_scope": {
+    "projectiles_and_cave": "Two visible clients on the current world/renderer/resource/audio implementation, before the subsequent HUD-only performance changes. These component implementations and native assets were preserved.",
+    "quest_guild_ui": "Repeated with the final HUD changes, actual SDL input and two real TCP accounts; stopped storage reopened.",
+    "interruptions": "Actual production CashService handler and native C++ TCP recovery; channel/authority code unchanged by HUD optimization.",
+    "performance": "Final frozen Release executable, twelve matched native scene trials; current source/build/fixture hashes, quality, actor counts, raw durations and preservation pass."
+  },
+  "c08_gpu_trials": {
+    "passed": true,
+    "comparison_pending": false,
+    "configuration": "Release",
+    "quality": "1024x768 HIGH; 2048 shadows; VSync off",
+    "trials": [
+      {
+        "scene": "field-combat",
+        "trial": 1,
+        "wall_ms": {
+          "count": 5646,
+          "min": 8.581399918,
+          "median": 9.953800123,
+          "mean": 10.627469256351223,
+          "p95": 13.60830013,
+          "p99": 25.35591014150001,
+          "max": 87.72940189
+        },
+        "workload": {
+          "initial_retained_actors": 38,
+          "minimum_retained_actors": 38,
+          "maximum_retained_actors": 46,
+          "median_retained_actors": 44.0,
+          "native_population": 1718,
+          "field_floor": 24,
+          "minimum_initial_workload_fraction": 0.75,
+          "passed": true
+        }
+      },
+      {
+        "scene": "town-idle",
+        "trial": 1,
+        "wall_ms": {
+          "count": 7372,
+          "min": 7.346800063,
+          "median": 8.062050211999999,
+          "mean": 8.139425149358926,
+          "p95": 8.88559492335,
+          "p99": 9.79999211581,
+          "max": 11.60509977
+        },
+        "workload": {
+          "initial_retained_actors": 4,
+          "minimum_retained_actors": 4,
+          "maximum_retained_actors": 4,
+          "median_retained_actors": 4.0,
+          "native_population": 1718,
+          "field_floor": 24,
+          "minimum_initial_workload_fraction": 0.75,
+          "passed": true
+        }
+      },
+      {
+        "scene": "field-idle",
+        "trial": 1,
+        "wall_ms": {
+          "count": 6282,
+          "min": 8.456300013,
+          "median": 9.496199898499999,
+          "mean": 9.55182540805078,
+          "p95": 10.4378651825,
+          "p99": 11.121659585699998,
+          "max": 15.24520013
+        },
+        "workload": {
+          "initial_retained_actors": 43,
+          "minimum_retained_actors": 43,
+          "maximum_retained_actors": 43,
+          "median_retained_actors": 43.0,
+          "native_population": 1718,
+          "field_floor": 24,
+          "minimum_initial_workload_fraction": 0.75,
+          "passed": true
+        }
+      },
+      {
+        "scene": "field-combat",
+        "trial": 2,
+        "wall_ms": {
+          "count": 5672,
+          "min": 8.512400091,
+          "median": 9.922000114,
+          "mean": 10.580573919929302,
+          "p95": 13.610274619499998,
+          "p99": 25.097262114099998,
+          "max": 88.05470169
+        },
+        "workload": {
+          "initial_retained_actors": 38,
+          "minimum_retained_actors": 38,
+          "maximum_retained_actors": 46,
+          "median_retained_actors": 44.0,
+          "native_population": 1718,
+          "field_floor": 24,
+          "minimum_initial_workload_fraction": 0.75,
+          "passed": true
+        }
+      },
+      {
+        "scene": "town-idle",
+        "trial": 2,
+        "wall_ms": {
+          "count": 7440,
+          "min": 7.282599807,
+          "median": 8.0066500235,
+          "mean": 8.064861275742608,
+          "p95": 8.734194933949997,
+          "p99": 9.48057601232,
+          "max": 11.25689968
+        },
+        "workload": {
+          "initial_retained_actors": 4,
+          "minimum_retained_actors": 4,
+          "maximum_retained_actors": 4,
+          "median_retained_actors": 4.0,
+          "native_population": 1718,
+          "field_floor": 24,
+          "minimum_initial_workload_fraction": 0.75,
+          "passed": true
+        }
+      },
+      {
+        "scene": "field-idle",
+        "trial": 2,
+        "wall_ms": {
+          "count": 6286,
+          "min": 8.479599841,
+          "median": 9.4698499885,
+          "mean": 9.545235347768056,
+          "p95": 10.45235014,
+          "p99": 11.216974632499998,
+          "max": 18.75350066
+        },
+        "workload": {
+          "initial_retained_actors": 43,
+          "minimum_retained_actors": 43,
+          "maximum_retained_actors": 43,
+          "median_retained_actors": 43.0,
+          "native_population": 1718,
+          "field_floor": 24,
+          "minimum_initial_workload_fraction": 0.75,
+          "passed": true
+        }
+      }
+    ],
+    "protected_unchanged": true,
+    "default_profile_unchanged": true
+  },
+  "c08_release_benchmark": {
+    "passed": true,
+    "evidence": "c08-release-benchmark-20261102.json",
+    "sha256": "bb242f456390446947ff9d8b073bfc176c6e1ae5dd85bea605c1c34c2ffb24c9",
+    "trials": 12,
+    "measured_frames": {
+      "cpu": 34863,
+      "gpu": 38698
+    },
+    "worst_gpu_p95_ms": 13.610274619499998,
+    "worst_gpu_p99_ms": 25.35591014150001,
+    "same_actor_workloads": true,
+    "same_quality": true,
+    "scope": "C08 Release performance benchmark; no new Debug or full-package claim"
+  },
+  "completion_audit": [
+    {
+      "requirement": 1,
+      "passed": true,
+      "proof": [
+        "projectile_graphical",
+        "projectile_pixels",
+        "flight_states"
+      ]
+    },
+    {
+      "requirement": 2,
+      "passed": true,
+      "proof": [
+        "quest_guild_ui",
+        "native_quest_journal",
+        "guild_permissions_reopen"
+      ]
+    },
+    {
+      "requirement": 3,
+      "passed": true,
+      "proof": [
+        "mandaracave",
+        "asset_additions",
+        "staging"
+      ]
+    },
+    {
+      "requirement": 4,
+      "passed": true,
+      "proof": [
+        "interrupted_travel",
+        "interrupted_trade_cash_actual"
+      ]
+    },
+    {
+      "requirement": 5,
+      "passed": true,
+      "proof": [
+        "c08_release_benchmark",
+        "gpu_eight_influences",
+        "hud_optimization"
+      ]
+    }
+  ]
+}

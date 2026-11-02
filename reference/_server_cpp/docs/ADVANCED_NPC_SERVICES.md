@@ -26,3 +26,11 @@ Verification:
 - Two visible Release clients: real priest selection, offering and god change through SDL clicks; the other client receives its class promotion. Stopped storage reopens with exactly the observed results. Compact results are in [the evidence manifest](evidence/npc-map-backups-20261102.json).
 
 Missing source contract: NPC event 1012, premium second-class reset, sets a confirmation code in the supplied client source but has no corresponding completed response/request path or zone handler. It is explicitly unavailable; no cash charge or packet is invented. This checkpoint does not accept every premium service, every quest's graphical presentation or full MMO parity.
+
+## Native journal and connected workflow follow-up
+
+The real CHTUIQuestWindow journal is in HTInterface.cpp, delegated to by
+HTQuest.cpp. HTMessage QuestMessage parameters now populate window 235 from
+committed MOB flags: progress, completion, selected details and scrolling.
+The connected Vartan reward/journal and guild permissions/persistence workflows
+pass; see [the follow-up checkpoint](PROJECTILE_CAVE_RECOVERY.md).

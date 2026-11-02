@@ -1,0 +1,325 @@
+{
+  "passed": true,
+  "scope": "C08 Release performance benchmark; no new Debug or full-package claim",
+  "executable_sha256": "b11d14d86363a9c82f144c61c8ab7ccebdab19038bd4e0aae2183badcc22c3e5",
+  "implementation_sha256": "a9b18329835fe97e4304cdfcf30002d0e25c3ddaa7ccf02a8e457d436a844cb3",
+  "quality": "1024x768 HIGH, 2048 shadows, VSync off",
+  "profiles": [
+    {
+      "scene": "field-combat",
+      "trial": 1,
+      "native_population": 1718,
+      "initial_actors": 38,
+      "median_actors": 44.0,
+      "actor_histograms": {
+        "cpu": {
+          "38": 192,
+          "39": 14,
+          "40": 549,
+          "41": 10,
+          "42": 6,
+          "43": 70,
+          "44": 4194,
+          "45": 8,
+          "46": 1
+        },
+        "gpu": {
+          "38": 205,
+          "39": 16,
+          "40": 602,
+          "41": 13,
+          "42": 6,
+          "43": 81,
+          "44": 4714,
+          "45": 8,
+          "46": 1
+        }
+      },
+      "cpu_pose_median_ms": 3.5982,
+      "gpu_pose_median_ms": 2.42145,
+      "gpu_wall_ms": {
+        "count": 5646,
+        "min": 8.581399918,
+        "median": 9.953800123,
+        "mean": 10.627469256351223,
+        "p95": 13.60830013,
+        "p99": 25.35591014150001,
+        "max": 87.72940189
+      },
+      "cpu_wall_ms": {
+        "count": 5044,
+        "min": 9.251399897,
+        "median": 11.18800044,
+        "mean": 11.89608863684437,
+        "p95": 15.2573950575,
+        "p99": 26.7702387631,
+        "max": 89.2040953
+      },
+      "peak_private_bytes": 1217683456.0
+    },
+    {
+      "scene": "town-idle",
+      "trial": 1,
+      "native_population": 1718,
+      "initial_actors": 4,
+      "median_actors": 4.0,
+      "actor_histograms": {
+        "cpu": {
+          "4": 6872
+        },
+        "gpu": {
+          "4": 7372
+        }
+      },
+      "cpu_pose_median_ms": 0.9399,
+      "gpu_pose_median_ms": 0.293,
+      "gpu_wall_ms": {
+        "count": 7372,
+        "min": 7.346800063,
+        "median": 8.062050211999999,
+        "mean": 8.139425149358926,
+        "p95": 8.88559492335,
+        "p99": 9.79999211581,
+        "max": 11.60509977
+      },
+      "cpu_wall_ms": {
+        "count": 6872,
+        "min": 7.931300439,
+        "median": 8.675299585,
+        "mean": 8.731178403335129,
+        "p95": 9.44460527965,
+        "p99": 10.2483407206,
+        "max": 11.72570046
+      },
+      "peak_private_bytes": 1068576768.0
+    },
+    {
+      "scene": "field-idle",
+      "trial": 1,
+      "native_population": 1718,
+      "initial_actors": 43,
+      "median_actors": 43.0,
+      "actor_histograms": {
+        "cpu": {
+          "43": 5518
+        },
+        "gpu": {
+          "43": 6282
+        }
+      },
+      "cpu_pose_median_ms": 4.18755,
+      "gpu_pose_median_ms": 2.8132,
+      "gpu_wall_ms": {
+        "count": 6282,
+        "min": 8.456300013,
+        "median": 9.496199898499999,
+        "mean": 9.55182540805078,
+        "p95": 10.4378651825,
+        "p99": 11.121659585699998,
+        "max": 15.24520013
+      },
+      "cpu_wall_ms": {
+        "count": 5518,
+        "min": 9.839099832,
+        "median": 10.806150265,
+        "mean": 10.87526999296756,
+        "p95": 11.792060310999998,
+        "p99": 12.8263192077,
+        "max": 16.38950035
+      },
+      "peak_private_bytes": 1190199296.0
+    },
+    {
+      "scene": "field-combat",
+      "trial": 2,
+      "native_population": 1718,
+      "initial_actors": 38,
+      "median_actors": 44.0,
+      "actor_histograms": {
+        "cpu": {
+          "38": 184,
+          "39": 13,
+          "40": 554,
+          "41": 11,
+          "42": 6,
+          "43": 75,
+          "44": 4163,
+          "45": 7,
+          "46": 1
+        },
+        "gpu": {
+          "38": 213,
+          "39": 15,
+          "40": 620,
+          "41": 12,
+          "42": 6,
+          "43": 82,
+          "44": 4715,
+          "45": 8,
+          "46": 1
+        }
+      },
+      "cpu_pose_median_ms": 3.5979,
+      "gpu_pose_median_ms": 2.3942,
+      "gpu_wall_ms": {
+        "count": 5672,
+        "min": 8.512400091,
+        "median": 9.922000114,
+        "mean": 10.580573919929302,
+        "p95": 13.610274619499998,
+        "p99": 25.097262114099998,
+        "max": 88.05470169
+      },
+      "cpu_wall_ms": {
+        "count": 5014,
+        "min": 9.792500176,
+        "median": 11.261849665,
+        "mean": 11.971098440313522,
+        "p95": 15.459405442499996,
+        "p99": 27.065375432599993,
+        "max": 88.53489906
+      },
+      "peak_private_bytes": 1212588032.0
+    },
+    {
+      "scene": "town-idle",
+      "trial": 2,
+      "native_population": 1718,
+      "initial_actors": 4,
+      "median_actors": 4.0,
+      "actor_histograms": {
+        "cpu": {
+          "4": 6866
+        },
+        "gpu": {
+          "4": 7440
+        }
+      },
+      "cpu_pose_median_ms": 0.9461,
+      "gpu_pose_median_ms": 0.2907,
+      "gpu_wall_ms": {
+        "count": 7440,
+        "min": 7.282599807,
+        "median": 8.0066500235,
+        "mean": 8.064861275742608,
+        "p95": 8.734194933949997,
+        "p99": 9.48057601232,
+        "max": 11.25689968
+      },
+      "cpu_wall_ms": {
+        "count": 6866,
+        "min": 7.870400324,
+        "median": 8.679199964,
+        "mean": 8.7395586358746,
+        "p95": 9.444175055,
+        "p99": 10.288175152,
+        "max": 12.28140015
+      },
+      "peak_private_bytes": 1070899200.0
+    },
+    {
+      "scene": "field-idle",
+      "trial": 2,
+      "native_population": 1718,
+      "initial_actors": 43,
+      "median_actors": 43,
+      "actor_histograms": {
+        "cpu": {
+          "43": 5549
+        },
+        "gpu": {
+          "43": 6286
+        }
+      },
+      "cpu_pose_median_ms": 4.1351,
+      "gpu_pose_median_ms": 2.8031,
+      "gpu_wall_ms": {
+        "count": 6286,
+        "min": 8.479599841,
+        "median": 9.4698499885,
+        "mean": 9.545235347768056,
+        "p95": 10.45235014,
+        "p99": 11.216974632499998,
+        "max": 18.75350066
+      },
+      "cpu_wall_ms": {
+        "count": 5549,
+        "min": 9.869099595,
+        "median": 10.75469982,
+        "mean": 10.813722620395927,
+        "p95": 11.714199557999997,
+        "p99": 12.813523787199992,
+        "max": 16.27019979
+      },
+      "peak_private_bytes": 1193058304.0
+    }
+  ],
+  "evidence_sha256": {
+    "build\\evidence\\c08-hud-cpu-20261102\\WORLD_PROFILE_MATRIX.json": "32a2f4fff25791751d493f6de31f028ed6abf37adc98d6ee70be4ce133e6cbb4",
+    "build\\evidence\\c08-hud-cpu-20261102\\HARDWARE.json": "8ef71a778cc57bd76150ea77792295f5d3f488a1d73d7b6905686e0b22e3e8ec",
+    "build\\evidence\\c08-hud-gpu-20261102\\WORLD_PROFILE_MATRIX.json": "5606527d819339522d9630ea8f61ff28ea05fa1b8393e1d04426d009ea687527",
+    "build\\evidence\\c08-hud-gpu-20261102\\HARDWARE.json": "8ef71a778cc57bd76150ea77792295f5d3f488a1d73d7b6905686e0b22e3e8ec",
+    "build\\evidence\\c08-hud-cpu-20261102\\field-combat-1\\profile\\QA_FIXTURE.json": "f9614f2b5c66376d83f648e5ef5a8c0ba2e01dd6f7f610597b55ac8abafda97b",
+    "build\\evidence\\c08-hud-cpu-20261102\\field-combat-1\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-hud-cpu-20261102\\field-combat-1\\WORLD_PROFILE_RESULT.json": "6c750b59d6e873b4521b23a20c02f0a2569e9d5393e1aad0e7e6a817db404c5c",
+    "build\\evidence\\c08-hud-cpu-20261102\\field-combat-1\\FRAME_PROFILE.csv": "02f06d59086bdcd3c123c29b44936062e97cfa08e4999033c6b5dc9b8a1d7104",
+    "build\\evidence\\c08-hud-gpu-20261102\\field-combat-1\\profile\\QA_FIXTURE.json": "f9614f2b5c66376d83f648e5ef5a8c0ba2e01dd6f7f610597b55ac8abafda97b",
+    "build\\evidence\\c08-hud-gpu-20261102\\field-combat-1\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-hud-gpu-20261102\\field-combat-1\\WORLD_PROFILE_RESULT.json": "ac71bb6a41c52bc5d490eba353a079e99f8208db65b700984336201885ea8bed",
+    "build\\evidence\\c08-hud-gpu-20261102\\field-combat-1\\FRAME_PROFILE.csv": "69eccb57b75b77d669f7b17ee8c3c6802169dc834091f813f1f60216ab22aeb7",
+    "build\\evidence\\c08-hud-cpu-20261102\\town-idle-1\\profile\\QA_FIXTURE.json": "56c06117100acb200bbd0a96a48d828fd404976e63b5e662aa852463d7dd78bd",
+    "build\\evidence\\c08-hud-cpu-20261102\\town-idle-1\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-hud-cpu-20261102\\town-idle-1\\WORLD_PROFILE_RESULT.json": "b5368cf1915a39e6eefdb2ad90b0f5151034159636b4d501dbc147da7da66f83",
+    "build\\evidence\\c08-hud-cpu-20261102\\town-idle-1\\FRAME_PROFILE.csv": "3003727ff2b88714d74edbf5bbaceb7a35e6ec551dce3bc4ba2ed04516926f4a",
+    "build\\evidence\\c08-hud-gpu-20261102\\town-idle-1\\profile\\QA_FIXTURE.json": "56c06117100acb200bbd0a96a48d828fd404976e63b5e662aa852463d7dd78bd",
+    "build\\evidence\\c08-hud-gpu-20261102\\town-idle-1\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-hud-gpu-20261102\\town-idle-1\\WORLD_PROFILE_RESULT.json": "a7399adf6858f2dbbc128171b42e7c66d2679cd88478a21edce214a0c8b700cb",
+    "build\\evidence\\c08-hud-gpu-20261102\\town-idle-1\\FRAME_PROFILE.csv": "5333efb47c6a88a4fc8e943e9acc60e6213195d3008bcf1aa9c8331a357c5bf7",
+    "build\\evidence\\c08-hud-cpu-20261102\\field-idle-1\\profile\\QA_FIXTURE.json": "8fa941e095dc630480f6042268199849bcc24feb9ac3540f31b6ac140af7dcc7",
+    "build\\evidence\\c08-hud-cpu-20261102\\field-idle-1\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-hud-cpu-20261102\\field-idle-1\\WORLD_PROFILE_RESULT.json": "70cc415362d269d91477d9234b200b4440ec5e62a71088e833d7bd9f7596bcc2",
+    "build\\evidence\\c08-hud-cpu-20261102\\field-idle-1\\FRAME_PROFILE.csv": "a7fad63d037028e0203eb3cb62807896cc99e1570e4018b2db7f927f4eecf8ea",
+    "build\\evidence\\c08-hud-gpu-20261102\\field-idle-1\\profile\\QA_FIXTURE.json": "8fa941e095dc630480f6042268199849bcc24feb9ac3540f31b6ac140af7dcc7",
+    "build\\evidence\\c08-hud-gpu-20261102\\field-idle-1\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-hud-gpu-20261102\\field-idle-1\\WORLD_PROFILE_RESULT.json": "bfe36c60b034c196d514043da82b41a34ff69b6f355a73576ac086e2ce71559d",
+    "build\\evidence\\c08-hud-gpu-20261102\\field-idle-1\\FRAME_PROFILE.csv": "f5041dd66cadb46a745ed51feaa069200f3c4b30153e27c46483df69d95adc55",
+    "build\\evidence\\c08-hud-cpu-20261102\\field-combat-2\\profile\\QA_FIXTURE.json": "f9614f2b5c66376d83f648e5ef5a8c0ba2e01dd6f7f610597b55ac8abafda97b",
+    "build\\evidence\\c08-hud-cpu-20261102\\field-combat-2\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-hud-cpu-20261102\\field-combat-2\\WORLD_PROFILE_RESULT.json": "4ebd98f061d076aab8ce4b4e4f9666491bb6eb2e99c3fc757fa82a8f7f00f27c",
+    "build\\evidence\\c08-hud-cpu-20261102\\field-combat-2\\FRAME_PROFILE.csv": "fe672043304a26feddad06c9999e50f4537a1cd3f3cd3c565f023b53fa9b367f",
+    "build\\evidence\\c08-hud-gpu-20261102\\field-combat-2\\profile\\QA_FIXTURE.json": "f9614f2b5c66376d83f648e5ef5a8c0ba2e01dd6f7f610597b55ac8abafda97b",
+    "build\\evidence\\c08-hud-gpu-20261102\\field-combat-2\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-hud-gpu-20261102\\field-combat-2\\WORLD_PROFILE_RESULT.json": "7bd44e0adddc424ce3213b74bf1385c0743a30c896af74dcd427bfbfe2b9d47c",
+    "build\\evidence\\c08-hud-gpu-20261102\\field-combat-2\\FRAME_PROFILE.csv": "b0fd0baa8bf8dce9770cc85426807f5c505e10af08cc29a5036779aca2fcacec",
+    "build\\evidence\\c08-hud-cpu-20261102\\town-idle-2\\profile\\QA_FIXTURE.json": "56c06117100acb200bbd0a96a48d828fd404976e63b5e662aa852463d7dd78bd",
+    "build\\evidence\\c08-hud-cpu-20261102\\town-idle-2\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-hud-cpu-20261102\\town-idle-2\\WORLD_PROFILE_RESULT.json": "a3156cb06045457ff964d5ccb0c4b0c49fe3a608835a1de46edc9a139ca1aff2",
+    "build\\evidence\\c08-hud-cpu-20261102\\town-idle-2\\FRAME_PROFILE.csv": "3fe7f8a4741bb25b28d8edb20da68fb62101ea2d282687f06edc2e3cec60d92f",
+    "build\\evidence\\c08-hud-gpu-20261102\\town-idle-2\\profile\\QA_FIXTURE.json": "56c06117100acb200bbd0a96a48d828fd404976e63b5e662aa852463d7dd78bd",
+    "build\\evidence\\c08-hud-gpu-20261102\\town-idle-2\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-hud-gpu-20261102\\town-idle-2\\WORLD_PROFILE_RESULT.json": "8a10a7cd235ae80d0ddebe01778c8dfa80ac05783347788e7028c8ae8f4c85ca",
+    "build\\evidence\\c08-hud-gpu-20261102\\town-idle-2\\FRAME_PROFILE.csv": "4a6fb1ac12daf203361ce810f932e36c4445dbcc16de149b0b651d485582aebd",
+    "build\\evidence\\c08-hud-cpu-20261102\\field-idle-2\\profile\\QA_FIXTURE.json": "8fa941e095dc630480f6042268199849bcc24feb9ac3540f31b6ac140af7dcc7",
+    "build\\evidence\\c08-hud-cpu-20261102\\field-idle-2\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-hud-cpu-20261102\\field-idle-2\\WORLD_PROFILE_RESULT.json": "29a9b1cd503ae2f553d519946c5c7f0d39568d84beb7fdfd8ba2c849f00a67cb",
+    "build\\evidence\\c08-hud-cpu-20261102\\field-idle-2\\FRAME_PROFILE.csv": "1bc349e452858cc5adc47969a6960756b6913d9dc3fe5c174410a1078332e9a0",
+    "build\\evidence\\c08-hud-gpu-20261102\\field-idle-2\\profile\\QA_FIXTURE.json": "8fa941e095dc630480f6042268199849bcc24feb9ac3540f31b6ac140af7dcc7",
+    "build\\evidence\\c08-hud-gpu-20261102\\field-idle-2\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-hud-gpu-20261102\\field-idle-2\\WORLD_PROFILE_RESULT.json": "6467386677c31bddfa15bd0132205619d17fa6efc1292871a1bcece94be32f45",
+    "build\\evidence\\c08-hud-gpu-20261102\\field-idle-2\\FRAME_PROFILE.csv": "aaecee086b5cbbcd3e8d150fd53211897e32f21fce660fe542687744eee4fcab"
+  },
+  "limits": [
+    "Live native AI can vary instantaneous actor counts; initial and median counts must match and all raw histograms are retained",
+    "Application cache cold/warm; OS disk cache uncontrolled",
+    "Named local hardware only; no capacity or other-map claim"
+  ],
+  "raw_archive": {
+    "path": "c08-release-raw-20261102.zip",
+    "sha256": "16b8bd1a4006b881d7c2eea097ccac9e39c17123aa110a54c0daf8050957267e",
+    "bytes": 21090542,
+    "measured_frames": {
+      "cpu": 34863,
+      "gpu": 38698
+    }
+  }
+}

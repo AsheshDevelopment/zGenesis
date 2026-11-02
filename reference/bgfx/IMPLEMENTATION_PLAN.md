@@ -1,3 +1,16 @@
+## Completed follow-up - 2 November 2026
+
+Projectile, native journal/implemented guild UI, MandaraCave travel/environment
+and interrupted-operation checks pass. The matched C08 Release benchmark passes twelve 60-second CPU/GPU trials
+at unchanged HIGH quality and matching actor workloads. See [current source/evidence](../_server_cpp/docs/PROJECTILE_CAVE_RECOVERY.md).
+Do not infer the full C09 guild/map gates from these focused workflows.
+
+The final staged Release also passes 36 CPU/GPU rendered action pairs and
+811,601 native position/normal, bounds, socket and picking checks. Catalog-bound
+monsters start idle immediately; eight stored skin weights retain native order
+without truncation. The earlier failed 60 FPS baseline is rejected; current
+measurements use this corrected renderer and unchanged HIGH quality.
+
 ## 1 November 2026: server map-channel integration
 
 - [x] Obtain authenticated HTTPS worker admission before opening the game socket.
@@ -1646,7 +1659,7 @@ Build Debug/Release shell and shaders, SDL3/bgfx D3D11, diagnostics, frame timin
 - [ ] **P04-03** Add RAII wrappers and deferred destruction for textures, buffers, programs, uniforms and framebuffers.
 - [ ] **P04-04** Separate worker decoding from GPU resource creation/submission ownership.
 - [ ] **P04-10** Implement screenshots, resource-leak counters and recoverable renderer diagnostics.
-- [ ] **P17-01** Establish named hardware, build, backend, resolution, camera, time and actor population for comparisons.
+- [x] **P17-01** Establish named hardware, build, backend, resolution, camera, time and actor population for comparisons.
 - [ ] **P17-03** Measure simulation, jobs, animation, UI, draw submission, GPU passes and present time.
 - [ ] **P18-01** Retain failure context: action, actor/resource, character, zone, position/camera and backend.
 - [ ] **P18-02** Handle missing/corrupt resource data, shader failures and upload exhaustion without undefined behavior.
@@ -2172,8 +2185,9 @@ complete sustained-scene acceptance is claimed.
 - [x] **P17-10** Reuse per-frame memory; avoid heap-heavy map/string lookup and redundant constant updates per draw.
 - [x] **P17-11** Cache or sample resource counters; do not rescan every texture/buffer manager per frame.
 - [x] **P17-12** Bound GPU/CPU/IO memory, queue depth and resource retirement across repeated transitions.
-- [ ] **P17-13** Compare equal-quality builds; do not claim improvement from reduced shadows/visibility/animation/texture quality.
-- [ ] **P17-14** Define provisional acceptance of sustained 60 FPS at the agreed test resolution on named hardware, then refine from measured baselines.
+- [x] **P17-13** Compare equal-quality builds; do not claim improvement from reduced shadows/visibility/animation/texture quality.
+- [x] **P17-14** Define provisional acceptance of sustained 60 FPS at the agreed test resolution on named hardware, then refine from measured baselines.
+  - Final Release evidence: twelve matched 60-second trials, same initial/median actor counts, 1024x768 HIGH and 2048 shadows. Worst GPU p95 13.610 ms, p99 25.356 ms; [retained benchmark and raw archive](../_server_cpp/docs/evidence/c08-release-benchmark-20261102.json). Full C08 gate remains open.
 - [x] **P17-15** Report median/p95/p99 frame intervals and worst stalls alongside scoped CPU/GPU timings. The six measured native scene trials retain raw samples; no 500-1,000 FPS guarantee or broad performance acceptance is claimed.
 - [x] **P18-03** Exercise repeated resize/minimize/focus loss and renderer-reset paths explicitly.
 - [x] **P18-05** Retire GPU handles only after their use is complete; verify shutdown ordering and leaks.
@@ -2217,7 +2231,7 @@ native fault/dump checks preserve the original client/default profiles. This
 is same-machine relocation; fresh-OS deployment, OS disk-cold coverage, forced
 physical GPU removal and other-map/online/release matrices remain open.
 
-- [ ] **BG-C08-GATE** Named hardware/scene/quality has median/p95/p99, stalls, loading and memory evidence. Provisional sustained 60 FPS target uses recorded resolution; it is not a claimed result. Debug/Release, relocation and repeated lifecycle checks preserve assets/saves. C09 claims remain open.
+- [ ] **BG-C08-GATE** Named hardware/scene/quality has median/p95/p99, stalls, loading and memory evidence. The Release benchmark passes the recorded sustained 60 FPS criteria. Current Debug/Release, relocation and repeated lifecycle closure remains a separate gate and must preserve assets/saves. C09 claims remain open.
 
 ### C09 Remaining systems and repository administration
 
@@ -2284,6 +2298,7 @@ Retain full skills/periodic combat/AI/loot, quests/refinement, travel/revival, o
 - [x] **P16-05** Implement chat channels/whispers, parties and authoritative membership state.
 - [x] **P16-06** Implement trade offer/confirm/cancel/disconnect behavior and atomic item/money persistence.
 - [ ] **P16-07** Implement guild state, member names/marks and permissions before enabling dependent UI.
+  - [x] Existing master/member UI: actual SDL create/invite/accept/announcement, rejected member actions, confirmed leave/kick/disband, reconnect and reopened membership/announcement. Higher ranks, marks and alliances remain open.
 - [ ] **P16-08** Audit PvP, duels, events, siege/competitive modes and their native restrictions.
 - [x] **P16-09** Mark unsupported online commands visibly and avoid sending guessed legacy packets.
 - [x] **P16-10** Require explicit server implementation/evidence for each feature, not just client buttons.

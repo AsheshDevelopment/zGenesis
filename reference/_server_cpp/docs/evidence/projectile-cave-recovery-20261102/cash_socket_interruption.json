@@ -1,0 +1,9 @@
+{
+  "after_real_debit": true,
+  "balance": 5000,
+  "before_character_receipt": true,
+  "item": 4364,
+  "native_tcp_disconnect": true,
+  "passed": true,
+  "quantity": 1
+}

@@ -148,21 +148,21 @@
     "browser_visual_acceptance": "not run"
   },
   "game_launches": 0,
-  "export_manifest_sha256": "a13162843ae99e7cfdb5e9941a68ba852a254cb4b48baf146ae912c9253b1377",
+  "export_manifest_sha256": "fb3629adda908ce55d3c3245e043112b4e92747ac15ef9c1a7489538ac539510",
   "source_head": "2247cfc6905300f1b7e50c6a8283309930df14f7",
   "tantra_b_refresh": {
-    "version": "1.0.20",
+    "version": "1.0.21",
     "scope": "Tantra-B only",
-    "tasks": "168/254",
-    "percent": 66,
+    "tasks": "171/254",
+    "percent": 67,
     "accepted_gates": 5,
     "tantra_o_data_unchanged": true,
     "tantra_o_documentation_files_unchanged": 276,
     "source_hashes": "matched to current bgfx workspace",
     "website_checks": {
       "syntax": "passed",
-      "source_data": "{\"result\":\"passed\",\"projects\":[{\"name\":\"Tantra-O\",\"tasks\":\"46/102\",\"coverage\":45,\"accepted\":0},{\"name\":\"Tantra-B\",\"tasks\":\"168/254\",\"coverage\":66,\"accepted\":5}],\"routes\":6,\"zones\":10,\"sourceHashes\":\"matched\",\"navigationAndFilters\":\"passed\",\"browserVisualAcceptance\":\"not_run\",\"gameLaunches\":0}",
-      "rendered_content": "{\"result\":\"passed\",\"renderer\":\"actual roadmap.js with CPU DOM adapter\",\"ogre\":{\"phases\":14,\"tasks\":102,\"checked\":46},\"bgfx\":{\"checkpoints\":10,\"tasks\":254,\"checked\":168},\"defaultPage\":\"Tantra-O\",\"projectSwitching\":\"passed\",\"searchStatusExpandCollapse\":\"passed\",\"browserLayout\":\"not_run\"}"
+      "source_data": "{\"result\":\"passed\",\"projects\":[{\"name\":\"Tantra-O\",\"tasks\":\"46/102\",\"coverage\":45,\"accepted\":0},{\"name\":\"Tantra-B\",\"tasks\":\"171/254\",\"coverage\":67,\"accepted\":5}],\"routes\":6,\"zones\":10,\"sourceHashes\":\"matched\",\"navigationAndFilters\":\"passed\",\"browserVisualAcceptance\":\"not_run\",\"gameLaunches\":0}",
+      "rendered_content": "{\"result\":\"passed\",\"renderer\":\"actual roadmap.js with CPU DOM adapter\",\"ogre\":{\"phases\":14,\"tasks\":102,\"checked\":46},\"bgfx\":{\"checkpoints\":10,\"tasks\":254,\"checked\":171},\"defaultPage\":\"Tantra-O\",\"projectSwitching\":\"passed\",\"searchStatusExpandCollapse\":\"passed\",\"browserLayout\":\"not_run\"}"
     },
     "browser_visual_acceptance": "not rerun; layout code unchanged",
     "game_evidence": "See reference/bgfx/PROGRESS.md; game runtime evidence is separate from website acceptance"
