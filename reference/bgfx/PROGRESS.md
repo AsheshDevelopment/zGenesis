@@ -1,3 +1,13 @@
+## 3 November 2026: documentation and remaining workspace changes
+
+Publish the current saved `Interface.sys` UI defaults and IDE preferences with
+the documentation refresh. The retained 2 November Release evidence remains
+the gameplay/performance checkpoint; this update adds no new runtime result.
+Tantra-B remains 171/254 tasks (67%) with five accepted gates. Full C08
+configuration/package, broader quest/guild and individual map acceptance remain
+open. The root Genesis Server Manager report is a historical reference for its
+original layout; use `_server_cpp` documentation for the current C++ manager.
+
 ## 2 November 2026: projectiles, native quest/guild UI, Cave and recovery
 
 All five requested follow-up requirements pass. Two visible Release clients

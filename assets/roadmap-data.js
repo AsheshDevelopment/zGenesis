@@ -2817,6 +2817,11 @@ window.TANTRA_ROADMAP = {
       ],
       "changes": [
         {
+          "date": "2026-11-03",
+          "title": "Documentation and remaining workspace changes published",
+          "text": "Refresh the source progress notes and preserve the completed 2 November Release checkpoint. Include current saved client UI defaults and IDE preferences; label the older Genesis Server Manager report as a historical review of its original layout. Task and gate completion remain unchanged at 171/254 (67%) and 5/10. Existing runtime evidence is retained; this documentation update adds no game rebuild or new runtime acceptance. Preserve Tantra-O."
+        },
+        {
           "date": "2026-11-02",
           "title": "Projectiles, quest/guild UI, Cave, recovery and Release performance verified",
           "text": "All five requested follow-up requirements pass. Two visible clients verify projectile direction/flight/impact, Cave native NPCs/fog/BGM, paid entry/free return and reopened state. Actual SDL quest/guild workflows preserve native history, rewards, permissions and membership. Real source/destination travel and cash socket interruptions retain one fare/debit/delivery; interrupted trade cancels. Fix smaller maps, static type-4 mineral indices/catalog DDS, original K3 portal arrival bounds, catalog idle startup and eight-weight GPU skinning without truncation. Remove repeated HUD rasterization and unchanged life/refining refresh. Twelve matched Release trials retain the same 1024x768 HIGH quality and actor workloads; six GPU trials meet mean/p95/p99 criteria, worst p95 13.610 ms. Retain failed baselines and raw evidence. Matching runtime/data are staged, preserving MariaDB identity/accounts. Full C08 package/configuration, C09, higher guild ranks/marks and individual map/quest gates remain open. Preserve Tantra-O."
@@ -3046,7 +3051,7 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "91ace9f6e8db8612971c1006107920adc345397fefc5f0b7c0bb552391a6ad82"
+      "sha256": "a02fcf29d76770a1343d013772cfad6e7d2a905794c09629491d0b7495e2ae45"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",

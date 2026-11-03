@@ -16,7 +16,7 @@
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "91ace9f6e8db8612971c1006107920adc345397fefc5f0b7c0bb552391a6ad82"
+      "sha256": "a02fcf29d76770a1343d013772cfad6e7d2a905794c09629491d0b7495e2ae45"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",

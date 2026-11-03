@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.21"
+VERSION = "1.0.22"
 
 
 def sha(body):
@@ -156,6 +156,7 @@ def refresh(source):
     project["reviewed"] = "2026-11-02"
 
     latest.insert(0, {"date":"2026-11-02", "title":"Projectiles, quest/guild UI, Cave, recovery and Release performance verified", "text":f"All five requested follow-up requirements pass. Two visible clients verify projectile direction/flight/impact, Cave native NPCs/fog/BGM, paid entry/free return and reopened state. Actual SDL quest/guild workflows preserve native history, rewards, permissions and membership. Real source/destination travel and cash socket interruptions retain one fare/debit/delivery; interrupted trade cancels. Fix smaller maps, static type-4 mineral indices/catalog DDS, original K3 portal arrival bounds, catalog idle startup and eight-weight GPU skinning without truncation. Remove repeated HUD rasterization and unchanged life/refining refresh. Twelve matched Release trials retain the same 1024x768 HIGH quality and actor workloads; six GPU trials meet mean/p95/p99 criteria, worst p95 {worst_p95:.3f} ms. Retain failed baselines and raw evidence. Matching runtime/data are staged, preserving MariaDB identity/accounts. Full C08 package/configuration, C09, higher guild ranks/marks and individual map/quest gates remain open. Preserve Tantra-O."})
+    latest.insert(0, {"date":"2026-11-03", "title":"Documentation and remaining workspace changes published", "text":"Refresh the source progress notes and preserve the completed 2 November Release checkpoint. Include current saved client UI defaults and IDE preferences; label the older Genesis Server Manager report as a historical review of its original layout. Task and gate completion remain unchanged at 171/254 (67%) and 5/10. Existing runtime evidence is retained; this documentation update adds no game rebuild or new runtime acceptance. Preserve Tantra-O."})
     project["foundations"].insert(0,"Original HTMessage quest journal and connected quest/guild SDL workflows; Cave resources/NPCs/portals/environment/audio and exact reopened state; native TCP interruption recovery")
     titles = {change["title"] for change in latest}
     project["changes"] = latest + [change for change in project["changes"] if change["title"] not in titles]
@@ -195,26 +196,21 @@ def refresh(source):
         if name == "docs/PROGRESS.md":
             content = re.sub(r"Version: \d+\.\d+\.\d+", "Version: " + VERSION, content)
             content = content.replace("Version: " + VERSION + " Reviewed:", "Version: " + VERSION + ". Reviewed:")
-            content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-11-02.", content)
+            content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-11-03.", content)
         elif "## " + VERSION not in content:
             entry = """# Unreleased
 
-## 1.0.21 - 2026-11-02 (Tantra-B only)
+## 1.0.22 - 2026-11-03 (Tantra-B only)
 
-Changed: native quest journal and implemented guild UI, static Cave mineral
-resources/parser, smaller native grid support, character ping and matching
-K3 portal arrival bounds in the owned Global-baseline workbook; eight-influence
-GPU skinning, immediate idle startup and reduced redundant HUD work.
-Verified: two visible Release projectile/Cave clients; actual SDL quest/guild
-workflows, permissions, rewards, reconnect and stopped persistence; interrupted
-native travel/trade/cash socket recovery. Twelve matched Release CPU/GPU trials
-meet the GPU frame-time target at unchanged HIGH quality and actor workloads.
-Retain source, image and raw benchmark evidence.
-Failed: parser, static actor, texture binding and invalid Global arrival bounds
-were found and corrected. Failed performance baselines identified catalog idle
-startup, GPU fallback and redundant HUD rasterization; corrected results pass.
-Remaining: full C08/C09, higher guild ranks/marks, individual map/quest and
-larger-population acceptance. No fresh Debug or broad FX regression is claimed.
+Changed: refresh source progress and publication notes; include saved client UI
+and IDE preferences; distinguish the historical Genesis manager report from
+the current C++ manager. Refresh bundled Tantra-B source documentation.
+Verified: source task/gate counts, source hashes and website content checks.
+Existing 2 November gameplay and Release benchmark evidence is retained.
+Failed: none in the final documentation/site checks; runtime gates retain their
+previous status. No game rebuild or new runtime acceptance is claimed.
+Remaining: full C08 configuration/package, broader quest/guild and individual
+map/game acceptance. Coverage stays 171/254 tasks (67%), five accepted gates.
 Tantra-O data and documentation remain unchanged.
 
 
