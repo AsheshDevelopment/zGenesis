@@ -1,0 +1,142 @@
+{
+  "date": "2026-11-05",
+  "scope": "Native party loot/controls, signed LAN deployment, common MariaDB and new-character entry fix",
+  "source_rules": [
+    "Tantra/zone/server.cpp pickup and party handlers",
+    "Tantra/zone/Basedef.h ROOTING_SHARE=1 ROOTING_PERSON=0",
+    "Tantra/HTlauncher/HTParty.cpp",
+    "Tantra/HTlauncher/HTIntroManager.cpp:2711,2821"
+  ],
+  "native_loot": {
+    "policy": true,
+    "atomic_multi_recipient_commit": true,
+    "receipt_replay_rejected": true,
+    "stale_revision_rollback": true,
+    "leader_only_persisted_mode": true,
+    "one_use_invitation_tokens": true,
+    "live_graphical_pickup_rerun": false
+  },
+  "native_ui": {
+    "gpu_component_verified": true,
+    "original_images": true,
+    "centered_dialogs": true,
+    "keyboard_accept_cancel": true
+  },
+  "connections": {
+    "address": "172.16.90.12",
+    "profile_version": 15,
+    "gui_and_live_tls": {
+      "passed": true,
+      "listener_editor": true,
+      "editor_cancel_preserved_profile": true,
+      "manager_pid": 20868,
+      "ready_ports": [
+        21001,
+        21006,
+        3001,
+        3002,
+        3003,
+        3004,
+        3005
+      ],
+      "tls_endpoints": {
+        "passed": true,
+        "signature": true,
+        "https_status": 200,
+        "tls_endpoints": 6,
+        "hostname_verified": true,
+        "login_submitted": false
+      },
+      "workers_left_running": true,
+      "other_pc_checked": false
+    },
+    "wrong_tls_identity_rejection": {
+      "passed": true,
+      "mismatched_certificate_rejected": true,
+      "client_files_preserved": true,
+      "error": "TLS identity does not match the configured hostname, validity or trust root"
+    },
+    "firewall": {
+      "login_ports": [
+        21001,
+        21006
+      ],
+      "sql_or_admin_ports_opened": false,
+      "zone_ports": [
+        3001,
+        3002,
+        3003,
+        3004,
+        3005,
+        30000
+      ],
+      "address": "172.16.90.12",
+      "remote": "LocalSubnet"
+    },
+    "firewall_rules_enabled": true,
+    "database_or_rpc_ports_exposed": false
+  },
+  "database": {
+    "backend": "mariadb",
+    "host": "127.0.0.1",
+    "port": 13306,
+    "database": "tantra_bgfx",
+    "schema": 9,
+    "tables": 15,
+    "account_count_at_check": 1,
+    "character_count_at_check": 1,
+    "accounts_characters_preserved": true,
+    "development_and_final_share_database": true,
+    "native_backup_passed": true,
+    "phpmyadmin_server_selector": 2,
+    "phpmyadmin_cookie_login_checked": true,
+    "xampp_3306_preserved": true,
+    "php_configuration_contains_game_password": false
+  },
+  "entry_fix": {
+    "reported_error": "Owner inventory identity mismatch",
+    "cause": "Network roster cache omitted successful create/remove ACK updates",
+    "focused_loopback_client_channel_passed": true,
+    "failed_creation_preserves_slot": true,
+    "delete_and_reuse": true,
+    "appearance_preserved": true,
+    "authenticated_entry_identity_checked": true,
+    "foreign_inventory_rejected": true,
+    "shared_database_untouched_by_probe": true,
+    "new_real_user_login_rerun": false
+  },
+  "client_sha256": "0de8a10bf0f9e6c30f9f12b839e8e47f639df20983402e60a77417d24f462842",
+  "server_executables": {
+    "TantraService.exe": "6c3a0dd6c275867eaca5439e967fb8a4031bf6cdcae2a418e3c94ca0e59f6747",
+    "TantraZone.exe": "db032f9a91dd6182336adc4a8568d7795dadc122e34323a8ffbd899179582864",
+    "TantraServerManager.exe": "c43a94f95625e5582bc6372e6e6cd98a39f6a26c0a0e221b90fd93b2775cc06d",
+    "TantraDataTools.exe": "c090f98143da50330a80159e96b2a26e005c83776a82c225ac7b95115f62275b"
+  },
+  "beta_package": {
+    "package": "_remake_bgfx/build/distributions/beta-20261105-lan",
+    "zip": "_remake_bgfx/build/distributions/beta-20261105-lan.zip",
+    "sha256": "108b699a1a765c55a15ddbaadf8aca0c4912aa3a51aa02b93464c902b762cb47",
+    "zip_bytes": 697443371,
+    "files": 5225,
+    "signed_profile_verified": true,
+    "modified_file_rejected": true,
+    "loopback_only": false,
+    "clean_player_pc_verified": false
+  },
+  "public_beta_accepted": false,
+  "named_tasks": {
+    "done": 173,
+    "total": 254,
+    "percent": 68,
+    "accepted_gates": 6
+  },
+  "not_rerun": [
+    "Debug builds",
+    "broad FX or performance checks",
+    "full two-client graphical journey on this final binary",
+    "separate player PC",
+    "Internet deployment",
+    "public-capacity or abuse acceptance"
+  ],
+  "corrected_check_issue": "New probe target initially omitted generated resource includes; dependency added, focused Release probe passed."
+}

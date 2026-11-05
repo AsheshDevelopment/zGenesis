@@ -1,3 +1,15 @@
+## Party controls and LAN follow-up — completed 5 November 2026
+
+- [x] Implement native automatic party loot with atomic SQL recipients, overflow/stack handling, persisted leader mode and replay protection.
+- [x] Add sender/expiry-aware native invitations and original leave/kick/disband confirmations for party/Ashram controls.
+- [x] Export signed LAN connection files with matching TLS identity and listener settings; verify live staged endpoints and enable LocalSubnet-only game firewall rules.
+- [x] Use one preserved MariaDB database for normal development/final servers and expose it as a separate phpMyAdmin server selection.
+- [x] Fix creation/deletion ACK roster caching and authenticated owner identity; stage the checked Release launcher and new signed LAN ZIP.
+- [ ] Verify an actual second PC's LAN connection and live graphical automatic loot; public Internet/capacity/abuse/operations acceptance stays open.
+
+These are bounded follow-ups. Named coverage remains173/254 (68%),6/10 gates.
+See [implementation and evidence](../_server_cpp/docs/PARTY_LOOT_LAN.md). Earlier localhost/UI-only evidence below is historical.
+
 ## Local beta and data/UI follow-up — completed 5 November 2026
 
 - [x] Finish a fresh two-client party, trade, merchant/warehouse and saved-return journey from the installed package.

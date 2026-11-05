@@ -1,0 +1,1 @@
+NATIVE_ONLINE_ENTRY_VERIFIED create=first-free failed-create=unchanged delete=reuse appearance=preserved reconnect=accepted foreign-owner=rejected database=untouched

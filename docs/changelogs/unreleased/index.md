@@ -1,5 +1,20 @@
 # Unreleased
 
+## 1.0.27 - 2026-11-05 (Tantra-B only)
+
+Changed: native automatic party loot,leader-owned persisted mode,original
+party/Ashram invitations and confirmations,signed LAN profile15,shared MariaDB
+and new-character entry roster caching. Stage matching Release files and LAN ZIP.
+Verified: focused atomic SQL/social checks,native GPU dialogs,actual HTTPS/TLS
+endpoints,LocalSubnet firewall,database login and creation/reconnect owner checks.
+Failed: reported owner-inventory mismatch corrected; initial probe include-path
+issue corrected. No remaining failure in the focused checks.
+Remaining: another PC's LAN connection,live graphical automatic loot,Internet
+connectivity and public cap/abuse/operations acceptance. No broad FX/performance
+rerun or new gate closure. Tantra-O remains unchanged.
+
+
+
 ## 1.0.26 - 2026-11-05 (Tantra-B only)
 
 Changed: standalone Data Tools,owned Mandara1st NPC workbook corrections,native
@@ -406,6 +421,6 @@ Remaining: real browser layout acceptance.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 173/254 named tasks checked (68%); 6/10 gates recorded. Latest: Local beta package, Mandara1st, standalone tools and native social UI. The extracted signed ZIP passes an unboosted two-client level-one journey: tutorial choices,equipment,party,native trade drag/review,merchant sale,warehouse item/currency round-trip,save and two fresh-process returns. Fix owner-specific equipment names,network collision-grid safety and authoritative occupied-cell echoes. Correct26 Mandara1st NPCs through38 numeric cells in the owned Dotum XLSX; matching native TPA and both online populations have zero position differences. Reject NewMandara. Separate fourteen data-tool actions into TantraDataTools and remove Tools from Server Manager; native server export is TantraParam_sv.tpa,installed as data/TantraParam.tpa with paired C++ rules and rollback. Restore1515 missing exact-path native resources from the approved Global client without overwriting files or extracting HPKs. Restore original party229/Ashram217,218 layouts with server TP and tribe/level/rank/status metadata; focused Release GPU component and MSGSRV presence checks pass. The earlier real-network journey and latest UI component evidence are distinct. The current download verifies native signature/tamper rejection and isolated hashes,while its profile remains localhost. Separate clean-PC,public endpoint/cap/abuse/operations gates remain open; automatic party loot distribution is unavailable. Named coverage remains173/254 (68%),6/10 gates. Historical C08 benchmark and Tantra-O remain unchanged. Remaining native skill/FX and complete map/game acceptance stay open.
+- **Tantra-B**: 173/254 named tasks checked (68%); 6/10 gates recorded. Latest: Native party controls, signed LAN deployment and new-character entry fix. Implement source-based automatic party loot with nearby living recipients,native currency rounding,stack/overflow behavior and random equipment fallback. SQL recipient commits are atomic and receipt/revision protected; MSGSRV persists leader-owned loot mode. Native sender/expiry invitations and party/Ashram leave/kick/disband prompts use original images. Focused Release SQL/social and GPU component checks pass. Export signed profile15 with matching172.16.90.12 TLS identity and game listeners; actual staged HTTPS status200 and six hostname-verified TLS endpoints pass. Enable executable-specific LocalSubnet firewall rules while SQL/RPC remain loopback. Development/final servers share preserved MariaDB13306/tantra_bgfx schema9; local phpMyAdmin separately selects it alongside XAMPP3306. Fix newly created character entry by synchronizing channel roster slots after create/delete ACKs; a focused native-channel regression preserves appearance and reconnect while rejecting foreign owner inventory. Stage the Release launcher and build a signed LAN ZIP with tamper rejection. Earlier two-client graphical journey evidence is separate; another PC,live graphical automatic loot,Internet/public-capacity/abuse/operations acceptance remain open. No Debug or broad FX/performance rerun. Coverage stays173/254 (68%),6/10 gates. Preserve Tantra-O. Remaining native skill/FX and complete map/game acceptance stay open.
 
 These are separate source checklists, not release-completion percentages.

@@ -2,8 +2,8 @@
 
 The two-client fresh-character journey and isolated local installation pass.
 This is a downloadable local-server candidate, with public beta acceptance
-still open. The current signed profile uses localhost; export a reachable
-hostname and matching TLS certificate before distributing it to remote players.
+still open. That earlier signed candidate used localhost. The later [party/LAN checkpoint](PARTY_LOOT_LAN.md)
+adds a new172.16.90.12 candidate with matching TLS, shared MariaDB and an entry fix.
 No second Windows installation or physical player PC was available.
 
 ## What was verified

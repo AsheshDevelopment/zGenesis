@@ -1,0 +1,3 @@
+NATIVE_PARTY_LOOT_VERIFIED money=division-and-overflow items=stack-full-fallback core=picker range=100 living=required
+ATOMIC_TRADE_CASH_GUILD_VERIFIED
+{"case":"shared_transactions","output":"C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-store-3133e763d9d9","passed":true,"processes_started":0}

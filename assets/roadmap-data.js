@@ -2776,6 +2776,8 @@ window.TANTRA_ROADMAP = {
         }
       ],
       "foundations": [
+        "Signed172.16.90.12 LAN deployment,hostname-verified TLS,LocalSubnet firewall and preserved shared MariaDB; new-character owner-entry fix and LAN ZIP",
+        "Native atomic automatic party loot,persisted leader mode,one-use invitations and original party/Ashram confirmations",
         "Original party/Ashram information/member layouts with server TP,tribe/rank/status fields,native images,scrolling and widescreen resize",
         "Owned XLSX Mandara1st placements,standalone Data Tools,server _sv export/native deployment and1515 qualified missing-asset restores",
         "Isolated signed beta ZIP and fresh two-client party/trade/services/saved return; public endpoint and separate clean-PC acceptance remain open",
@@ -2823,6 +2825,11 @@ window.TANTRA_ROADMAP = {
         "Continue additional native quest/combat families and Zone06 separately; do not invent missing source content"
       ],
       "changes": [
+        {
+          "date": "2026-11-05",
+          "title": "Native party controls, signed LAN deployment and new-character entry fix",
+          "text": "Implement source-based automatic party loot with nearby living recipients,native currency rounding,stack/overflow behavior and random equipment fallback. SQL recipient commits are atomic and receipt/revision protected; MSGSRV persists leader-owned loot mode. Native sender/expiry invitations and party/Ashram leave/kick/disband prompts use original images. Focused Release SQL/social and GPU component checks pass. Export signed profile15 with matching172.16.90.12 TLS identity and game listeners; actual staged HTTPS status200 and six hostname-verified TLS endpoints pass. Enable executable-specific LocalSubnet firewall rules while SQL/RPC remain loopback. Development/final servers share preserved MariaDB13306/tantra_bgfx schema9; local phpMyAdmin separately selects it alongside XAMPP3306. Fix newly created character entry by synchronizing channel roster slots after create/delete ACKs; a focused native-channel regression preserves appearance and reconnect while rejecting foreign owner inventory. Stage the Release launcher and build a signed LAN ZIP with tamper rejection. Earlier two-client graphical journey evidence is separate; another PC,live graphical automatic loot,Internet/public-capacity/abuse/operations acceptance remain open. No Debug or broad FX/performance rerun. Coverage stays173/254 (68%),6/10 gates. Preserve Tantra-O."
+        },
         {
           "date": "2026-11-05",
           "title": "Local beta package, Mandara1st, standalone tools and native social UI",
@@ -3074,11 +3081,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "074fb0b9e7be82aba61f72f74a661aeebfa8110ead59b682805dc3862f8bae9d"
+      "sha256": "0520c5a6cdf4c5df6aceba5819f20de37636523ba1c55768c5b091b6922b76f9"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "a021d5f9e9730c1894a70304f26370fa842e01588c5dee00f77c7b924a7f1579"
+      "sha256": "c8b23a162d241fb5d7d0dbe51d3ea51295967c30691bc694e531f3d294bcce2f"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",

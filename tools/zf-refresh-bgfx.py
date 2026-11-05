@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.26"
+VERSION = "1.0.27"
 
 
 def sha(body):
@@ -169,6 +169,9 @@ def refresh(source):
     project["foundations"].insert(0,"Isolated signed beta ZIP and fresh two-client party/trade/services/saved return; public endpoint and separate clean-PC acceptance remain open")
     project["foundations"].insert(0,"Owned XLSX Mandara1st placements,standalone Data Tools,server _sv export/native deployment and1515 qualified missing-asset restores")
     project["foundations"].insert(0,"Original party/Ashram information/member layouts with server TP,tribe/rank/status fields,native images,scrolling and widescreen resize")
+    latest.insert(0, {"date":"2026-11-05", "title":"Native party controls, signed LAN deployment and new-character entry fix", "text":"Implement source-based automatic party loot with nearby living recipients,native currency rounding,stack/overflow behavior and random equipment fallback. SQL recipient commits are atomic and receipt/revision protected; MSGSRV persists leader-owned loot mode. Native sender/expiry invitations and party/Ashram leave/kick/disband prompts use original images. Focused Release SQL/social and GPU component checks pass. Export signed profile15 with matching172.16.90.12 TLS identity and game listeners; actual staged HTTPS status200 and six hostname-verified TLS endpoints pass. Enable executable-specific LocalSubnet firewall rules while SQL/RPC remain loopback. Development/final servers share preserved MariaDB13306/tantra_bgfx schema9; local phpMyAdmin separately selects it alongside XAMPP3306. Fix newly created character entry by synchronizing channel roster slots after create/delete ACKs; a focused native-channel regression preserves appearance and reconnect while rejecting foreign owner inventory. Stage the Release launcher and build a signed LAN ZIP with tamper rejection. Earlier two-client graphical journey evidence is separate; another PC,live graphical automatic loot,Internet/public-capacity/abuse/operations acceptance remain open. No Debug or broad FX/performance rerun. Coverage stays173/254 (68%),6/10 gates. Preserve Tantra-O."})
+    project["foundations"].insert(0,"Native atomic automatic party loot,persisted leader mode,one-use invitations and original party/Ashram confirmations")
+    project["foundations"].insert(0,"Signed172.16.90.12 LAN deployment,hostname-verified TLS,LocalSubnet firewall and preserved shared MariaDB; new-character owner-entry fix and LAN ZIP")
     titles = {change["title"] for change in latest}
     project["changes"] = latest + [change for change in project["changes"] if change["title"] not in titles]
     # OGRE data and all bundled OGRE documentation remain byte-identical.
@@ -187,7 +190,7 @@ def refresh(source):
         target.write_bytes((source / "docs" / relative).read_bytes())
     server_docs = source.parent / "_server_cpp/docs"
     server_reference = ROOT / "reference/_server_cpp/docs"
-    for relative in ("BETA_LOCAL_PACKAGE.md", "PROJECT_DATA.md", "evidence/beta-local-package-20261105.json", "evidence/global-asset-fallback-20261105.json", "evidence/mandara1st-npc-reference-20261105.json", "BETA_CONTENT.md", "BETA_ACCOUNTS_BEGINNER.md", "evidence/beta-accounts-beginner-20261105.json", "GUILD_QUESTS_ZONE05.md", "evidence/guild-quests-zone05-20261105.json", "evidence/zone05-acceptance-20261105.json", "evidence/zone05-travel-persistence-20261105.json", "evidence/guild-quest-persistence-20261105.json", "evidence/original-sql-reference-20261105.json", "FOUR_ZONE_ACCEPTANCE.md", "evidence/four-zone-acceptance-20261105.json", "evidence/four-zone-native-inputs-20261105.json", "PROJECTILE_CAVE_RECOVERY.md", "evidence/projectile-cave-recovery-20261102.json", "evidence/c08-release-benchmark-20261102.json", "evidence/c08-release-raw-20261102.zip", "ADVANCED_NPC_SERVICES.md", "AUTOMATIC_BACKUPS.md", "MANDARA2ND.md", "evidence/npc-map-backups-20261102.json", "SIMULATION_CHECKPOINTS.md", "evidence/tick-profile-20261101.json", "evidence/checkpoints-20261101.json", "evidence/scaling-gui-20261101.json", "evidence/mariadb-deployment-20261101.json", "evidence/two-client-simulation-20261101.json"):
+    for relative in ("PARTY_LOOT_LAN.md", "SECURE_CONNECTIONS.md", "evidence/party-lan-20261105.json", "BETA_LOCAL_PACKAGE.md", "PROJECT_DATA.md", "evidence/beta-local-package-20261105.json", "evidence/global-asset-fallback-20261105.json", "evidence/mandara1st-npc-reference-20261105.json", "BETA_CONTENT.md", "BETA_ACCOUNTS_BEGINNER.md", "evidence/beta-accounts-beginner-20261105.json", "GUILD_QUESTS_ZONE05.md", "evidence/guild-quests-zone05-20261105.json", "evidence/zone05-acceptance-20261105.json", "evidence/zone05-travel-persistence-20261105.json", "evidence/guild-quest-persistence-20261105.json", "evidence/original-sql-reference-20261105.json", "FOUR_ZONE_ACCEPTANCE.md", "evidence/four-zone-acceptance-20261105.json", "evidence/four-zone-native-inputs-20261105.json", "PROJECTILE_CAVE_RECOVERY.md", "evidence/projectile-cave-recovery-20261102.json", "evidence/c08-release-benchmark-20261102.json", "evidence/c08-release-raw-20261102.zip", "ADVANCED_NPC_SERVICES.md", "AUTOMATIC_BACKUPS.md", "MANDARA2ND.md", "evidence/npc-map-backups-20261102.json", "SIMULATION_CHECKPOINTS.md", "evidence/tick-profile-20261101.json", "evidence/checkpoints-20261101.json", "evidence/scaling-gui-20261101.json", "evidence/mariadb-deployment-20261101.json", "evidence/two-client-simulation-20261101.json"):
         target = server_reference / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes((server_docs / relative).read_bytes())
@@ -195,6 +198,12 @@ def refresh(source):
     for evidence in (server_docs / "evidence/beta-local-20261105").glob("*"):
         if evidence.is_file() and evidence.suffix in (".json", ".png"):
             target = server_reference / "evidence/beta-local-20261105" / evidence.name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(evidence.read_bytes())
+
+    for evidence in (server_docs / "evidence/party-lan-20261105").glob("*"):
+        if evidence.is_file() and evidence.suffix in (".json", ".png", ".log"):
+            target = server_reference / "evidence/party-lan-20261105" / evidence.name
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_bytes(evidence.read_bytes())
 
@@ -227,17 +236,18 @@ def refresh(source):
         elif "## " + VERSION not in content:
             entry = """# Unreleased
 
-## 1.0.26 - 2026-11-05 (Tantra-B only)
+## 1.0.27 - 2026-11-05 (Tantra-B only)
 
-Changed: standalone Data Tools,owned Mandara1st NPC workbook corrections,native
-server export/deployment naming,approved missing assets and original social UI.
-Verified: extracted two-client fresh journey,stopped SQL/fresh return,native signed
-profile/tamper rejection,isolated package hashes,eight converter dialogs and
-focused Release party/Ashram rendering plus MSGSRV TP presence.
-Failed: earlier fixture/portrait errors were corrected; historical evidence is
-retained. No Debug,full performance rerun or separate physical-PC acceptance.
-Remaining: reachable public endpoint,clean player PC,public cap/abuse/operations
-and automatic party loot distribution. Tantra-O remains unchanged.
+Changed: native automatic party loot,leader-owned persisted mode,original
+party/Ashram invitations and confirmations,signed LAN profile15,shared MariaDB
+and new-character entry roster caching. Stage matching Release files and LAN ZIP.
+Verified: focused atomic SQL/social checks,native GPU dialogs,actual HTTPS/TLS
+endpoints,LocalSubnet firewall,database login and creation/reconnect owner checks.
+Failed: reported owner-inventory mismatch corrected; initial probe include-path
+issue corrected. No remaining failure in the focused checks.
+Remaining: another PC's LAN connection,live graphical automatic loot,Internet
+connectivity and public cap/abuse/operations acceptance. No broad FX/performance
+rerun or new gate closure. Tantra-O remains unchanged.
 
 
 """

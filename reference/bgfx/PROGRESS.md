@@ -1,3 +1,27 @@
+## 5 November 2026: party controls, shared LAN database and entry fix
+
+Automatic party loot follows the native pickup rules with atomic SQL recipient
+updates, receipt replay protection and a leader-owned persisted mode. Native
+party/Ashram invitations and leave/kick/disband prompts use original UI images.
+Release policy/SQL/social and focused GPU component checks pass.
+
+Signed profile15 and matching TLS now target172.16.90.12; actual staged HTTPS
+and six TLS endpoints pass hostname verification. LocalSubnet-only Windows
+firewall rules are enabled. Both normal server roots share MariaDB
+127.0.0.1:13306/tantra_bgfx, schema9; existing data is preserved. phpMyAdmin now
+also selects this instance separately from XAMPP3306.
+
+Fix the reported new-character owner-inventory mismatch: update the channel's
+fixed roster slots after successful create/delete ACKs, preserve appearance and
+check entry identity. The focused client-channel regression passes creation,
+failed creation, deletion/reuse and reconnect; foreign inventory still fails.
+The fixed Release ZFLauncher is staged, with a new signed LAN ZIP.
+
+Earlier two-client journey evidence stays separate. Another PC's LAN connection,
+live graphical automatic loot and public Internet/capacity/abuse/operations
+acceptance remain open. No Debug or broad FX/performance rerun. Named coverage
+stays173/254 (68%),6/10 gates. See [source and evidence](../_server_cpp/docs/PARTY_LOOT_LAN.md).
+
 ## 5 November 2026: local beta package, Mandara1st and original social UI
 
 The fresh two-client party/trade/services/saved-return journey passes from an
