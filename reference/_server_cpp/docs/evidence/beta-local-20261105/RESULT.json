@@ -1,0 +1,46 @@
+{
+  "graphical_clients": 2,
+  "passed": true,
+  "results": [
+    {
+      "fresh_level": 1,
+      "full_scene": true,
+      "granted_currency": 0,
+      "merchant_sale": false,
+      "money_after": 0,
+      "party": true,
+      "passed": true,
+      "real_network": true,
+      "role": 1,
+      "save_point": true,
+      "save_x": 489,
+      "save_z": 174,
+      "sdl_trade_drag": true,
+      "starter_item_conserved": true,
+      "warehouse_round_trip": false,
+      "x": 489,
+      "z": 174,
+      "zone": 1
+    },
+    {
+      "fresh_level": 1,
+      "full_scene": true,
+      "granted_currency": 0,
+      "merchant_sale": true,
+      "money_after": 4,
+      "party": true,
+      "passed": true,
+      "real_network": true,
+      "role": 2,
+      "save_point": true,
+      "save_x": 488,
+      "save_z": 173,
+      "sdl_trade_drag": true,
+      "starter_item_conserved": true,
+      "warehouse_round_trip": true,
+      "x": 488,
+      "z": 173,
+      "zone": 1
+    }
+  ]
+}

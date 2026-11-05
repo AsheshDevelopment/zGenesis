@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "installed": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\Tantra Beta UI Install jxic_4ui\\Tantra Online",
+  "zip": "C:\\_GitHub\\TantraSrc\\_remake_bgfx\\build\\distributions\\beta-20261105-ready.zip",
+  "zip_sha256": "badef3d04ebd3084dbefad4e00ffd3814b78dcd4b4675fb6a762788099dc98c0",
+  "files": 5225,
+  "all_hashes_passed": true,
+  "updated_from_final_zip": [
+    "client/ZFLauncher.exe"
+  ],
+  "current_ui_build_startup_exit": 0,
+  "mode": "signed native intro startup without submitting login",
+  "developer_path_removed": true,
+  "separate_pc": false,
+  "client_sha256": "21b8da6e4cb7a3ba0b209082daa2f7a49d27052f02a710f365a6393a384c0c8d",
+  "logs": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\Tantra Beta UI Install jxic_4ui\\latest-logs"
+}

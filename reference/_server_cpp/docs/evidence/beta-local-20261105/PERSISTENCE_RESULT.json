@@ -1,0 +1,23 @@
+{
+  "destination_zone": 2,
+  "map_position_reopened": true,
+  "passed": true,
+  "records": [
+    {
+      "money": 0,
+      "name": "WorldHero",
+      "revision": 16,
+      "x": 489,
+      "z": 174,
+      "zone": 1
+    },
+    {
+      "money": 4,
+      "name": "BgfxPeer",
+      "revision": 19,
+      "x": 488,
+      "z": 173,
+      "zone": 1
+    }
+  ]
+}

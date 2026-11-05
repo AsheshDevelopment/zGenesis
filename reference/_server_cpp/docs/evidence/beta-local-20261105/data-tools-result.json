@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "buttons": {
+    "5000": "TantraParam.tpa - Client",
+    "5001": "TantraParam_sv.tpa - Server",
+    "5002": "ClientRes.txl",
+    "5003": "HTMessage.txl",
+    "5004": "NPC script TXL",
+    "5005": "HTSSetting.txl",
+    "5006": "fxPC.txl",
+    "5007": "HTScrollQuestSystem.txl",
+    "5008": "Open XLSXData",
+    "5009": "Generate server list",
+    "5010": "Signed connection export",
+    "5011": "Generate paired data package",
+    "5012": "Apply server data (stopped)",
+    "5013": "Open generated files"
+  },
+  "converter_buttons_verified": 8,
+  "local_workbook_defaults": [
+    "C:\\_GitHub\\TantraSrc\\_server_final\\bin\\XLSXData\\TantraParam.xlsx",
+    "C:\\_GitHub\\TantraSrc\\_server_final\\bin\\XLSXData\\TantraParam.xlsx",
+    "C:\\_GitHub\\TantraSrc\\_server_final\\bin\\XLSXData\\ClientRes.xlsx",
+    "C:\\_GitHub\\TantraSrc\\_server_final\\bin\\XLSXData\\HTMessage.xlsx",
+    "C:\\_GitHub\\TantraSrc\\_server_final\\bin\\XLSXData\\Mandara_NPC.xlsx",
+    "C:\\_GitHub\\TantraSrc\\_server_final\\bin\\XLSXData\\HTSSetting-global.xlsx",
+    "C:\\_GitHub\\TantraSrc\\_server_final\\bin\\XLSXData\\fxPC.xlsx",
+    "C:\\_GitHub\\TantraSrc\\_server_final\\bin\\XLSXData\\HTScrollQuestSystem.xlsx"
+  ],
+  "workbook_choices": {
+    "0": [
+      "TantraParam.xlsx"
+    ],
+    "1": [
+      "TantraParam.xlsx"
+    ],
+    "2": [
+      "ClientRes.xlsx"
+    ],
+    "3": [
+      "HTMessage.xlsx",
+      "HTMessage2.xlsx"
+    ],
+    "4": [
+      "ArenaDurga_NPC.xlsx",
+      "Forge_NPC.xlsx",
+      "Jina1st_NPC.xlsx",
+      "Jina4th2_NPC.xlsx",
+      "Jina4th_NPC.xlsx",
+      "Jina7thCave_NPC.xlsx",
+      "Kathana3_NPC.xlsx",
+      "Kathana4_NPC.xlsx",
+      "Mandara_NPC.xlsx",
+      "Mudha_NPC.xlsx",
+      "Paroksya_NPC.xlsx",
+      "ShambalaAnu_NPC.xlsx",
+      "XLSVariants\\Kathana3_NPC.xlsx"
+    ],
+    "5": [
+      "HTSSetting-global.xlsx"
+    ],
+    "6": [
+      "fxPC.xlsx"
+    ],
+    "7": [
+      "HTScrollQuestSystem.xlsx"
+    ]
+  },
+  "npc_variant_selection": true,
+  "read_only_source_paths": true,
+  "no_data_family_choices": true,
+  "minimum_window_size": [
+    1100,
+    690
+  ],
+  "gui_server_export": true,
+  "other_converters_cancelled": true,
+  "standalone": true,
+  "manager_tools_removed": true,
+  "manager_menus": [
+    "&Server"
+  ]
+}

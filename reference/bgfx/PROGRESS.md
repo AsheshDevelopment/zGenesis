@@ -1,3 +1,21 @@
+## 5 November 2026: local beta package, Mandara1st and original social UI
+
+The fresh two-client party/trade/services/saved-return journey passes from an
+isolated installation. Mandara1st's 26 NPC placements now originate in the owned
+XLSX workbook, with matching client/server exports; NewMandara is rejected.
+TantraDataTools is a standalone GUI and Tools is removed from Server Manager.
+Missing native resources can be restored from the approved Global client by
+exact relative path, preserving existing files and packed archives.
+
+Restore original party panel 229 and Ashram panels 217/218 layouts, HP/TP bars, tribe icons,
+member ranks/status, scrolling and G routing. A focused Release GPU component
+check and MSGSRV TP/persistence check pass. Automatic party loot distribution
+remains unavailable. The prior fresh network journey predates this UI build;
+its exact evidence is preserved separately. Public beta is not accepted: the
+signed package is local-server configured and a separate clean PC is unavailable.
+No Debug or broad FX/performance rerun. Named roadmap stays 173/254 (68%), 6/10 gates.
+See [the workflow and verification scopes](../_server_cpp/docs/BETA_LOCAL_PACKAGE.md).
+
 ## 5 November 2026: beta content, account controls and beginner path
 
 All three requested implementation areas are complete. Freeze the connected

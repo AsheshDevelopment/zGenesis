@@ -1,0 +1,104 @@
+# Local beta journey, native UI and data tools — 5 November 2026
+
+The two-client fresh-character journey and isolated local installation pass.
+This is a downloadable local-server candidate, with public beta acceptance
+still open. The current signed profile uses localhost; export a reachable
+hostname and matching TLS certificate before distributing it to remote players.
+No second Windows installation or physical player PC was available.
+
+## What was verified
+
+Two visible BGFX/D3D11 clients ran from an extracted ZIP, with a stripped PATH,
+explicit package runtime roots and separate temporary profiles. Fresh level-one
+characters used their native starter items and received no currency grants.
+They completed tutorial choices, equipment, party invitation/acceptance, native
+trade drag/review/confirmation and item conservation. The receiving character
+sold the transferred sword for four Rupiah, deposited/withdrew an item and those
+four Rupiah at Bhuvan, then both saved at the Memory Maiden. Stopped SQL and two
+fresh client processes matched the saved native character fields and positions.
+The earlier fuller beginner progression remains separate authority evidence.
+
+The short journey found and fixed per-owner equipment naming collisions, an
+offline collision-grid read in network replicas, and ignored owner movement
+corrections. The authoritative occupied-cell result now updates both movement
+prediction and the character coordinates used by saving.
+
+The final social UI change has separate focused component evidence: original
+party panel 229, Ashram information 217 and members 218, actual native UI textures,
+HP/TP scale, owner exclusion, tribe/rank/status columns, scrolling, G routing and
+widescreen resizing. The former generic lists remain supplemental management
+controls. Roster TP and guild tribe/level/online metadata come from the server.
+This component check is not another live guild/party network acceptance run.
+Automatic party loot distribution is not implemented; its control reports that
+limitation. Alliance/fortress services retain their existing scope.
+
+Evidence is in [beta-local-20261105](evidence/beta-local-20261105).
+`PERSISTENCE_RESULT.json` retains the original harness's unused destination 2
+label; its audited character records and fresh-login results correctly use
+Zone01. The harness metadata is corrected for future beta runs.
+
+## Mandara1st data correction
+
+The packaged source is `_server_final/bin/XLSXData/TantraParam.xlsx`;
+`_server_cpp/bin/XLSXData` is its identical development mirror. Global remains
+the broader baseline, with K3 MainUI/IntroUI and matching Mandara1st map data.
+NewMandara is rejected for this map binding.
+
+Replace only 38 NPC numeric cells with the matching original K3 placement
+reference: 26 Zone01 NPCs, including Bhuvan 1105 at (412,116), Vananta 1104 at (668,174)
+and Memory Maiden 1120 at (491,176). Global-only NPC 1457 has no placement in this map
+and is unplaced. Other cells, ZIP parts, styles and Dotum fonts are unchanged.
+Both workbooks have SHA256
+`f08be205b76736b08414ee9b919deb56d6b18dd4487cfd1d8a62703cb324436f`.
+These values are exported from the workbook; there is no runtime coordinate
+override. Native client TPA audit has zero placement differences, and both
+online clients checked all 26 NPCs against the native reference.
+
+## Standalone tools and native export names
+
+Run `_server_final/bin/TantraDataTools.exe`. Its fourteen right-side buttons
+contain eight converters, workbook access, server-list generation, signed
+connection export and paired package generation/application. All converters
+default to the project's XLSX files. Server Manager has no Tools page or menu;
+its server/account/database operations remain in Manager. The focused GUI check
+opened all eight converters and actually generated a server TPA.
+
+- Client export: `client/system/TantraParam.tpa`.
+- Detached server export: `server/TantraParam_sv.tpa`.
+- Installed server basename: `data/TantraParam.tpa`, copied from that server
+  export, never from the differently laid-out client TPA.
+- C++ runtime rules: paired `data/rules`, regenerated from the same XLSX source.
+
+Apply requires every server worker stopped. Native TPA and rule folders have
+matching backups and rollback. Deploy the matching client overlay and external
+runtime support data together. Original reference files remain read-only.
+
+## Missing native assets and package boundary
+
+The user-approved additional source is
+`B:\Tantra-Files\_TantraClients\TantraOnline-Global`. Restore only missing exact
+relative paths; preserve existing files and keep archives packed. This added
+1,515 files (321,809,431 bytes), including
+`resource/object/PC/Ani/PC_RAK_SKL_AHT_03.tab`. Missing INTRO TMBs and NewMandara
+are skipped. See [asset manifest](evidence/global-asset-fallback-20261105.json).
+Restoration does not enable additional skills or claim visual acceptance for
+every restored animation/FX. The prior data-release warning count predates this
+asset fill and is not the current missing-resource count.
+
+`build-beta-package.py` emits a ZIP, manifest and SHA256 file, verifies the
+profile with the actual native connection reader and rejects a modified signed
+server list. It excludes project source, keys, workbooks and private saves.
+Package `client` and sibling `runtime` must stay together. Current package
+identity, installed hashes and verification scopes are recorded in
+[the checkpoint](evidence/beta-local-package-20261105.json).
+
+Remaining release gates include a reachable public signed endpoint, a clean
+player OS/PC, a measured initial player cap, public-entry abuse checks and
+operator monitoring/backup/rollback/support. The historical C08 benchmark
+still describes its frozen executable; it was not rerun for this UI build.
+
+The project social protocol keeps existing row offsets: party0xff27 accepts the
+legacy400-byte record or464 bytes with appended TP/maxTP; guild0xff24 may append
+12 metadata bytes per row (level,tribe,online), keeping a50-member frame at4088
+bytes within the4096-byte bound. These are remake contracts, not a claim of
+complete stock-client socket compatibility.

@@ -2776,6 +2776,9 @@ window.TANTRA_ROADMAP = {
         }
       ],
       "foundations": [
+        "Original party/Ashram information/member layouts with server TP,tribe/rank/status fields,native images,scrolling and widescreen resize",
+        "Owned XLSX Mandara1st placements,standalone Data Tools,server _sv export/native deployment and1515 qualified missing-asset restores",
+        "Isolated signed beta ZIP and fresh two-client party/trade/services/saved return; public endpoint and separate clean-PC acceptance remain open",
         "Frozen five-zone beta policy, protected native account controls and schema9; fresh tutorial/first-class/equipment/death/saved-return progression verified",
         "Zone05 MandaraCave3rd: original resources, two-client600-Rupiah entry/free return, environment/audio and fresh-process saved state; missing3905 skipped",
         "Native guild ranks/permissions/paid marks, selected quest21/material tasks and Dash/multiple-strike authority; additive schema8 preserves deployed accounts",
@@ -2813,13 +2816,18 @@ window.TANTRA_ROADMAP = {
         "Historical pre-C08 baseline: 7,200 measured native scene frames, CPU/GPU/loading timings and hardware/input hashes"
       ],
       "next": [
-        "Finish the combined fresh-account party/trade/services/saved-return journey; frozen beginner content and account controls are complete",
-        "Verify the final download and signed server configuration on a clean player PC",
+        "Export a reachable public hostname and matching signed TLS profile; the verified download currently targets localhost",
+        "Verify installation on a separate clean Windows player PC; isolated local installation and fresh two-client journey pass",
         "Set an initial public player cap from sustained mixed gameplay, persistence and restart measurements",
         "Finish public-entry abuse rejection, enrollment, monitoring, backup/rollback and tester support gates",
         "Continue additional native quest/combat families and Zone06 separately; do not invent missing source content"
       ],
       "changes": [
+        {
+          "date": "2026-11-05",
+          "title": "Local beta package, Mandara1st, standalone tools and native social UI",
+          "text": "The extracted signed ZIP passes an unboosted two-client level-one journey: tutorial choices,equipment,party,native trade drag/review,merchant sale,warehouse item/currency round-trip,save and two fresh-process returns. Fix owner-specific equipment names,network collision-grid safety and authoritative occupied-cell echoes. Correct26 Mandara1st NPCs through38 numeric cells in the owned Dotum XLSX; matching native TPA and both online populations have zero position differences. Reject NewMandara. Separate fourteen data-tool actions into TantraDataTools and remove Tools from Server Manager; native server export is TantraParam_sv.tpa,installed as data/TantraParam.tpa with paired C++ rules and rollback. Restore1515 missing exact-path native resources from the approved Global client without overwriting files or extracting HPKs. Restore original party229/Ashram217,218 layouts with server TP and tribe/level/rank/status metadata; focused Release GPU component and MSGSRV presence checks pass. The earlier real-network journey and latest UI component evidence are distinct. The current download verifies native signature/tamper rejection and isolated hashes,while its profile remains localhost. Separate clean-PC,public endpoint/cap/abuse/operations gates remain open; automatic party loot distribution is unavailable. Named coverage remains173/254 (68%),6/10 gates. Historical C08 benchmark and Tantra-O remain unchanged."
+        },
         {
           "date": "2026-11-05",
           "title": "Frozen beta, operator account controls and beginner progression",
@@ -3066,11 +3074,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "35d5666d82e9ac83b4e884fd5475ddda19758b4d8337a5a0bf9948d8d0b957b1"
+      "sha256": "074fb0b9e7be82aba61f72f74a661aeebfa8110ead59b682805dc3862f8bae9d"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "ea8240d6ce5fb3f53154ce38803e8cd9dffa262670ce751d5fbf838034d92505"
+      "sha256": "a021d5f9e9730c1894a70304f26370fa842e01588c5dee00f77c7b924a7f1579"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",

@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "source_workbook_sha256": "f08be205b76736b08414ee9b919deb56d6b18dd4487cfd1d8a62703cb324436f",
+  "npcs": 26,
+  "source": "project XLSX",
+  "new_mandara_used": false,
+  "server_export": "server/TantraParam_sv.tpa",
+  "installed": "_server_final/data/TantraParam.tpa",
+  "server_tpa_sha256": "5c72cd806ddd8b859bbb96de24773f7e63a5113f94c8b341cdfa8a6b27fbc682",
+  "client_tpa_sha256": "a2721dcbfa7bcd792dfb84f66a6ad8e3f89128d36e6ce1b08cc667da94ba78c4",
+  "changed_client_files": [
+    "system/TantraParam.tpa",
+    "system/ConnectionProfile.json"
+  ],
+  "profile_version": 14,
+  "rules_source_mirrored": true
+}

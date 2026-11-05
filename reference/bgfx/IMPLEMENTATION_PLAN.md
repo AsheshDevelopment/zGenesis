@@ -1,3 +1,17 @@
+## Local beta and data/UI follow-up — completed 5 November 2026
+
+- [x] Finish a fresh two-client party, trade, merchant/warehouse and saved-return journey from the installed package.
+- [x] Build a downloadable signed local-server candidate and verify isolated installation; keep the separate clean-PC/public endpoint gates open.
+- [x] Correct all 26 Mandara1st NPC placements in the owned XLSX, regenerate client/server data and reject NewMandara for this map.
+- [x] Separate all data tools into TantraDataTools; remove Tools from Server Manager.
+- [x] Export server TantraParam_sv.tpa and deploy it under the native server basename TantraParam.tpa.
+- [x] Restore missing exact-path native assets from the approved Global client; preserve existing resources and packed HPKs.
+- [x] Restore source party/Ashram layouts with server TP and member metadata; verify native rendering, tab routing, scrolling and resize.
+
+These are bounded follow-ups, not additional full-MMO/public-beta gate closures.
+Automatic party loot distribution remains unavailable. Source/evidence:
+[local beta and tools](../_server_cpp/docs/BETA_LOCAL_PACKAGE.md).
+
 ## Connected beta continuation - completed 5 November 2026
 
 - [x] Freeze supported skills, quests, services and Zone01-Zone05 with shared C++/BGFX restrictions.

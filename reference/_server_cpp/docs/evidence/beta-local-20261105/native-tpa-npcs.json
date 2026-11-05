@@ -1,0 +1,112 @@
+{
+  "source": "C:\\_GitHub\\TantraSrc\\_client_bgfx\\system\\TantraParam.tpa",
+  "sha256": "a2721dcbfa7bcd792dfb84f66a6ad8e3f89128d36e6ce1b08cc667da94ba78c4",
+  "schema_source": "C:\\_GitHub\\TantraSrc\\Tantra\\HTlauncher\\HTClientParamMgr.h",
+  "schema_sha256": "f62d8bd0c93b522f78d4ed6606b58e2722bd9bf063d8130c59ceae377251605b",
+  "scope": "bounded native client load order through NPC; remaining sections not decoded",
+  "sections": [
+    {
+      "struct": "HTMonsterParam",
+      "record_size": 54,
+      "counts": [
+        1087
+      ],
+      "records_offset": 4
+    },
+    {
+      "struct": "HTMonsterSkillParam",
+      "record_size": 8,
+      "counts": [
+        0
+      ],
+      "records_offset": 63054
+    },
+    {
+      "struct": "HTMonsterParam",
+      "record_size": 54,
+      "counts": [
+        0
+      ],
+      "records_offset": 63058
+    },
+    {
+      "struct": "HTMonsterSkillParam",
+      "record_size": 8,
+      "counts": [
+        1110
+      ],
+      "records_offset": 63062
+    },
+    {
+      "struct": "HTPCSkillParam",
+      "record_size": 200,
+      "counts": [
+        223,
+        200,
+        200,
+        144,
+        144,
+        56,
+        56,
+        56,
+        56,
+        56
+      ],
+      "records_offset": 76422
+    },
+    {
+      "struct": "HTItemParam",
+      "record_size": 272,
+      "counts": [
+        2759
+      ],
+      "records_offset": 319390
+    },
+    {
+      "struct": "HTNPCParam",
+      "record_size": 260,
+      "counts": [
+        372
+      ],
+      "records_offset": 1080878
+    }
+  ],
+  "next_section_offset": 1179086,
+  "trailing_bytes": 107356,
+  "item_layout": {
+    "header_size": 272,
+    "file_record_size": 272,
+    "unparsed_tail_bytes": 0
+  },
+  "npc_count": 372,
+  "selected_npcs": {
+    "1104": {
+      "name": "Priest Vananta",
+      "zone": 1,
+      "cell": [
+        668,
+        174
+      ],
+      "size": 1
+    },
+    "1105": {
+      "name": "Tradesman Buvan",
+      "zone": 1,
+      "cell": [
+        412,
+        116
+      ],
+      "size": 1
+    },
+    "1120": {
+      "name": "Memory Maiden",
+      "zone": 1,
+      "cell": [
+        491,
+        176
+      ],
+      "size": 1
+    }
+  },
+  "position_differences": []
+}

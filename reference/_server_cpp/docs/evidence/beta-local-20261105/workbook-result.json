@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "changed_cells": 38,
+  "canonical_npcs": 26,
+  "sha256": "f08be205b76736b08414ee9b919deb56d6b18dd4487cfd1d8a62703cb324436f",
+  "copies_match": true,
+  "other_worksheets_and_styles_byte_identical": true,
+  "artifact_tool_authored": true,
+  "rendered_range": "NPC!B7:N14"
+}

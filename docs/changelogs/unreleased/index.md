@@ -1,5 +1,19 @@
 # Unreleased
 
+## 1.0.26 - 2026-11-05 (Tantra-B only)
+
+Changed: standalone Data Tools,owned Mandara1st NPC workbook corrections,native
+server export/deployment naming,approved missing assets and original social UI.
+Verified: extracted two-client fresh journey,stopped SQL/fresh return,native signed
+profile/tamper rejection,isolated package hashes,eight converter dialogs and
+focused Release party/Ashram rendering plus MSGSRV TP presence.
+Failed: earlier fixture/portrait errors were corrected; historical evidence is
+retained. No Debug,full performance rerun or separate physical-PC acceptance.
+Remaining: reachable public endpoint,clean player PC,public cap/abuse/operations
+and automatic party loot distribution. Tantra-O remains unchanged.
+
+
+
 ## 1.0.25 - 2026-11-05 (Tantra-B only)
 
 Changed: frozen beta content, protected Manager account controls, additive schema9
@@ -392,6 +406,6 @@ Remaining: real browser layout acceptance.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 173/254 named tasks checked (68%); 6/10 gates recorded. Latest: Frozen beta, operator account controls and beginner progression. Freeze Zone01-Zone05,210 enabled skill IDs,22 story flags and three task quests through shared compiled client/server policy; reject unlisted actions and unfinished quiz34. Server Manager adds timed block/unblock,password reset and all-world session/grant/ticket revocation through protected operator RPC. Schema9 preserves deployed MariaDB account and character data with pre/post backups. Restore first-entry tutorial message1051,native accept0/reject1 and ordinary tutorial confirmations. A fresh unboosted authority journey completes five tutorials,equipment,repair,first class,death/revival and saved return; two real network accounts verify SDL choices,equipment and reconnect. Focused Release checks pass and matching runtime files are staged. No Debug or broad FX/performance rerun. Combined fresh-account party/trade,clean-PC delivery,measured public cap,abuse checks and release operations remain open. Task coverage stays173/254 (68%),6/10 gates; public beta remains unaccepted. Preserve Tantra-O. Remaining native skill/FX and complete map/game acceptance stay open.
+- **Tantra-B**: 173/254 named tasks checked (68%); 6/10 gates recorded. Latest: Local beta package, Mandara1st, standalone tools and native social UI. The extracted signed ZIP passes an unboosted two-client level-one journey: tutorial choices,equipment,party,native trade drag/review,merchant sale,warehouse item/currency round-trip,save and two fresh-process returns. Fix owner-specific equipment names,network collision-grid safety and authoritative occupied-cell echoes. Correct26 Mandara1st NPCs through38 numeric cells in the owned Dotum XLSX; matching native TPA and both online populations have zero position differences. Reject NewMandara. Separate fourteen data-tool actions into TantraDataTools and remove Tools from Server Manager; native server export is TantraParam_sv.tpa,installed as data/TantraParam.tpa with paired C++ rules and rollback. Restore1515 missing exact-path native resources from the approved Global client without overwriting files or extracting HPKs. Restore original party229/Ashram217,218 layouts with server TP and tribe/level/rank/status metadata; focused Release GPU component and MSGSRV presence checks pass. The earlier real-network journey and latest UI component evidence are distinct. The current download verifies native signature/tamper rejection and isolated hashes,while its profile remains localhost. Separate clean-PC,public endpoint/cap/abuse/operations gates remain open; automatic party loot distribution is unavailable. Named coverage remains173/254 (68%),6/10 gates. Historical C08 benchmark and Tantra-O remain unchanged. Remaining native skill/FX and complete map/game acceptance stay open.
 
 These are separate source checklists, not release-completion percentages.

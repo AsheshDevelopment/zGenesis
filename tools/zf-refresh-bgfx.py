@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.25"
+VERSION = "1.0.26"
 
 
 def sha(body):
@@ -115,8 +115,8 @@ def refresh(source):
         "Historical pre-C08 baseline: 7,200 measured native scene frames, CPU/GPU/loading timings and hardware/input hashes"
     ]
     project["next"] = [
-        "Finish the combined fresh-account party/trade/services/saved-return journey; frozen beginner content and account controls are complete",
-        "Verify the final download and signed server configuration on a clean player PC",
+        "Export a reachable public hostname and matching signed TLS profile; the verified download currently targets localhost",
+        "Verify installation on a separate clean Windows player PC; isolated local installation and fresh two-client journey pass",
         "Set an initial public player cap from sustained mixed gameplay, persistence and restart measurements",
         "Finish public-entry abuse rejection, enrollment, monitoring, backup/rollback and tester support gates",
         "Continue additional native quest/combat families and Zone06 separately; do not invent missing source content"
@@ -165,6 +165,10 @@ def refresh(source):
     project["foundations"].insert(0,"Zone05 MandaraCave3rd: original resources, two-client600-Rupiah entry/free return, environment/audio and fresh-process saved state; missing3905 skipped")
     latest.insert(0, {"date": "2026-11-05", "title": "Frozen beta, operator account controls and beginner progression", "text": "Freeze Zone01-Zone05,210 enabled skill IDs,22 story flags and three task quests through shared compiled client/server policy; reject unlisted actions and unfinished quiz34. Server Manager adds timed block/unblock,password reset and all-world session/grant/ticket revocation through protected operator RPC. Schema9 preserves deployed MariaDB account and character data with pre/post backups. Restore first-entry tutorial message1051,native accept0/reject1 and ordinary tutorial confirmations. A fresh unboosted authority journey completes five tutorials,equipment,repair,first class,death/revival and saved return; two real network accounts verify SDL choices,equipment and reconnect. Focused Release checks pass and matching runtime files are staged. No Debug or broad FX/performance rerun. Combined fresh-account party/trade,clean-PC delivery,measured public cap,abuse checks and release operations remain open. Task coverage stays173/254 (68%),6/10 gates; public beta remains unaccepted. Preserve Tantra-O."})
     project["foundations"].insert(0,"Frozen five-zone beta policy, protected native account controls and schema9; fresh tutorial/first-class/equipment/death/saved-return progression verified")
+    latest.insert(0, {"date": "2026-11-05", "title": "Local beta package, Mandara1st, standalone tools and native social UI", "text": "The extracted signed ZIP passes an unboosted two-client level-one journey: tutorial choices,equipment,party,native trade drag/review,merchant sale,warehouse item/currency round-trip,save and two fresh-process returns. Fix owner-specific equipment names,network collision-grid safety and authoritative occupied-cell echoes. Correct26 Mandara1st NPCs through38 numeric cells in the owned Dotum XLSX; matching native TPA and both online populations have zero position differences. Reject NewMandara. Separate fourteen data-tool actions into TantraDataTools and remove Tools from Server Manager; native server export is TantraParam_sv.tpa,installed as data/TantraParam.tpa with paired C++ rules and rollback. Restore1515 missing exact-path native resources from the approved Global client without overwriting files or extracting HPKs. Restore original party229/Ashram217,218 layouts with server TP and tribe/level/rank/status metadata; focused Release GPU component and MSGSRV presence checks pass. The earlier real-network journey and latest UI component evidence are distinct. The current download verifies native signature/tamper rejection and isolated hashes,while its profile remains localhost. Separate clean-PC,public endpoint/cap/abuse/operations gates remain open; automatic party loot distribution is unavailable. Named coverage remains173/254 (68%),6/10 gates. Historical C08 benchmark and Tantra-O remain unchanged."})
+    project["foundations"].insert(0,"Isolated signed beta ZIP and fresh two-client party/trade/services/saved return; public endpoint and separate clean-PC acceptance remain open")
+    project["foundations"].insert(0,"Owned XLSX Mandara1st placements,standalone Data Tools,server _sv export/native deployment and1515 qualified missing-asset restores")
+    project["foundations"].insert(0,"Original party/Ashram information/member layouts with server TP,tribe/rank/status fields,native images,scrolling and widescreen resize")
     titles = {change["title"] for change in latest}
     project["changes"] = latest + [change for change in project["changes"] if change["title"] not in titles]
     # OGRE data and all bundled OGRE documentation remain byte-identical.
@@ -183,10 +187,16 @@ def refresh(source):
         target.write_bytes((source / "docs" / relative).read_bytes())
     server_docs = source.parent / "_server_cpp/docs"
     server_reference = ROOT / "reference/_server_cpp/docs"
-    for relative in ("BETA_CONTENT.md", "BETA_ACCOUNTS_BEGINNER.md", "evidence/beta-accounts-beginner-20261105.json", "GUILD_QUESTS_ZONE05.md", "evidence/guild-quests-zone05-20261105.json", "evidence/zone05-acceptance-20261105.json", "evidence/zone05-travel-persistence-20261105.json", "evidence/guild-quest-persistence-20261105.json", "evidence/original-sql-reference-20261105.json", "FOUR_ZONE_ACCEPTANCE.md", "evidence/four-zone-acceptance-20261105.json", "evidence/four-zone-native-inputs-20261105.json", "PROJECTILE_CAVE_RECOVERY.md", "evidence/projectile-cave-recovery-20261102.json", "evidence/c08-release-benchmark-20261102.json", "evidence/c08-release-raw-20261102.zip", "ADVANCED_NPC_SERVICES.md", "AUTOMATIC_BACKUPS.md", "MANDARA2ND.md", "evidence/npc-map-backups-20261102.json", "SIMULATION_CHECKPOINTS.md", "evidence/tick-profile-20261101.json", "evidence/checkpoints-20261101.json", "evidence/scaling-gui-20261101.json", "evidence/mariadb-deployment-20261101.json", "evidence/two-client-simulation-20261101.json"):
+    for relative in ("BETA_LOCAL_PACKAGE.md", "PROJECT_DATA.md", "evidence/beta-local-package-20261105.json", "evidence/global-asset-fallback-20261105.json", "evidence/mandara1st-npc-reference-20261105.json", "BETA_CONTENT.md", "BETA_ACCOUNTS_BEGINNER.md", "evidence/beta-accounts-beginner-20261105.json", "GUILD_QUESTS_ZONE05.md", "evidence/guild-quests-zone05-20261105.json", "evidence/zone05-acceptance-20261105.json", "evidence/zone05-travel-persistence-20261105.json", "evidence/guild-quest-persistence-20261105.json", "evidence/original-sql-reference-20261105.json", "FOUR_ZONE_ACCEPTANCE.md", "evidence/four-zone-acceptance-20261105.json", "evidence/four-zone-native-inputs-20261105.json", "PROJECTILE_CAVE_RECOVERY.md", "evidence/projectile-cave-recovery-20261102.json", "evidence/c08-release-benchmark-20261102.json", "evidence/c08-release-raw-20261102.zip", "ADVANCED_NPC_SERVICES.md", "AUTOMATIC_BACKUPS.md", "MANDARA2ND.md", "evidence/npc-map-backups-20261102.json", "SIMULATION_CHECKPOINTS.md", "evidence/tick-profile-20261101.json", "evidence/checkpoints-20261101.json", "evidence/scaling-gui-20261101.json", "evidence/mariadb-deployment-20261101.json", "evidence/two-client-simulation-20261101.json"):
         target = server_reference / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes((server_docs / relative).read_bytes())
+
+    for evidence in (server_docs / "evidence/beta-local-20261105").glob("*"):
+        if evidence.is_file() and evidence.suffix in (".json", ".png"):
+            target = server_reference / "evidence/beta-local-20261105" / evidence.name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(evidence.read_bytes())
 
     server_sql = server_reference.parent / "sql"
     server_sql.mkdir(parents=True, exist_ok=True)
@@ -217,15 +227,17 @@ def refresh(source):
         elif "## " + VERSION not in content:
             entry = """# Unreleased
 
-## 1.0.25 - 2026-11-05 (Tantra-B only)
+## 1.0.26 - 2026-11-05 (Tantra-B only)
 
-Changed: frozen beta content, protected Manager account controls, additive schema9
-and original beginner tutorial/quest decisions.
-Verified: focused Release authority, operator RPC, preserved MariaDB migration,
-fresh beginner progression and two-account SDL entry/equipment/reconnect.
-Failed: corrected fixture attempts remain recorded; no Debug or broad benchmark rerun.
-Remaining: combined fresh-account party/trade journey, clean-PC package, public
-player cap, abuse rejection and release operations. Tantra-O remains unchanged.
+Changed: standalone Data Tools,owned Mandara1st NPC workbook corrections,native
+server export/deployment naming,approved missing assets and original social UI.
+Verified: extracted two-client fresh journey,stopped SQL/fresh return,native signed
+profile/tamper rejection,isolated package hashes,eight converter dialogs and
+focused Release party/Ashram rendering plus MSGSRV TP presence.
+Failed: earlier fixture/portrait errors were corrected; historical evidence is
+retained. No Debug,full performance rerun or separate physical-PC acceptance.
+Remaining: reachable public endpoint,clean player PC,public cap/abuse/operations
+and automatic party loot distribution. Tantra-O remains unchanged.
 
 
 """

@@ -1,0 +1,96 @@
+{
+  "date": "2026-11-05",
+  "bounded_checkpoint_complete": true,
+  "public_beta_accepted": false,
+  "named_roadmap": {
+    "done": 173,
+    "total": 254,
+    "percent": 68,
+    "accepted_gates": 6
+  },
+  "fresh_two_client_journey": {
+    "passed": true,
+    "real_network": true,
+    "unboosted_level": 1,
+    "granted_currency": 0,
+    "party_trade_services": true,
+    "stopped_sql_and_two_fresh_logins": true,
+    "installed_client_sha256": "6956cdb800c1c0da73d9f005d0d2e45152980b35d0ab522080598e4d8327ec58",
+    "evidence": "beta-local-20261105/RESULT.json",
+    "scope": "Pre-social-layout-fix executable; includes current Mandara1st workbook and owner movement correction"
+  },
+  "current_ui": {
+    "passed": true,
+    "source_panels": [
+      229,
+      217,
+      218
+    ],
+    "source_files": [
+      "Tantra/HTlauncher/HTParty.cpp",
+      "Tantra/HTlauncher/HTGuild.cpp"
+    ],
+    "native_images": true,
+    "party_hp_tp_owner_exclusion": true,
+    "ashram_tribe_name_level_rank_online_scroll": true,
+    "hotkey_g_and_resize": true,
+    "render_only_component_fixture": true,
+    "live_social_session_rerun": false,
+    "updates_only_when_roster_changes": true,
+    "marker": "NATIVE_SOCIAL_UI_GPU_VERIFIED source_party=229 source_ashram=217,218 hp_tp=1 owner_excluded=1 tribe_rank_status=1 scroll=1 resize=1 component_fixture=1 live_authority=0",
+    "msgsrv_tp_scenario": "CROSS_ZONE_PARTY_VERIFIED presence=1 hp=1 chat=1 old_session=fenced\n{\"case\":\"social\",\"output\":\"C:\\\\Users\\\\Ashesh\\\\AppData\\\\Local\\\\Temp\\\\tantra-cpp-store-765d3971822c\",\"passed\":true,\"processes_started\":0}",
+    "automatic_party_loot_distribution": false
+  },
+  "package": {
+    "path": "C:\\_GitHub\\TantraSrc\\_remake_bgfx\\build\\distributions\\beta-20261105-ready.zip",
+    "sha256": "badef3d04ebd3084dbefad4e00ffd3814b78dcd4b4675fb6a762788099dc98c0",
+    "bytes": 697433634,
+    "files": 5225,
+    "native_signed_profile": true,
+    "modified_signed_file_rejected": true,
+    "loopback_only": true,
+    "client_sha256": "21b8da6e4cb7a3ba0b209082daa2f7a49d27052f02a710f365a6393a384c0c8d",
+    "restored_assets_included": 1515,
+    "current_installation": "beta-local-20261105/current-installation.json",
+    "separate_clean_pc": false
+  },
+  "workbook": {
+    "passed": true,
+    "source_workbook_sha256": "f08be205b76736b08414ee9b919deb56d6b18dd4487cfd1d8a62703cb324436f",
+    "npcs": 26,
+    "source": "project XLSX",
+    "new_mandara_used": false,
+    "server_export": "server/TantraParam_sv.tpa",
+    "installed": "_server_final/data/TantraParam.tpa",
+    "server_tpa_sha256": "5c72cd806ddd8b859bbb96de24773f7e63a5113f94c8b341cdfa8a6b27fbc682",
+    "client_tpa_sha256": "a2721dcbfa7bcd792dfb84f66a6ad8e3f89128d36e6ce1b08cc667da94ba78c4",
+    "changed_client_files": [
+      "system/TantraParam.tpa",
+      "system/ConnectionProfile.json"
+    ],
+    "profile_version": 14,
+    "rules_source_mirrored": true
+  },
+  "standalone_tools": {
+    "passed": true,
+    "gui_evidence": "beta-local-20261105/data-tools-result.json",
+    "converters": 8,
+    "buttons": 14,
+    "manager_tools_removed": true
+  },
+  "staged_servers": {
+    "TantraServerManager.exe": "88d4835e2f184e35faae2943866e8e6a6d656aa5e1c881128ee6ac3fa2f67015",
+    "TantraDataTools.exe": "039a0fade5a338e460aa83fcb59058a86a83a603cc4b8acf33a57aba09f2096f",
+    "TantraService.exe": "93686babdc9525bc26e880ded06eec3c89ef75a908bde8f9f6c3f7461e08ce07",
+    "TantraZone.exe": "19a0bd2ffd2d04021f5c6f13796b9a23d9ba2d66d898fcc59ca9b4f28e62aa71"
+  },
+  "historical_c08_benchmark_rerun": false,
+  "debug_build_run": false,
+  "remaining": [
+    "Reachable public signed hostname and TLS configuration",
+    "Separate clean Windows player PC",
+    "Measured initial public cap and public-entry abuse checks",
+    "Operator monitoring, backup/rollback and tester support",
+    "Automatic party loot distribution; wider original MMO parity"
+  ]
+}

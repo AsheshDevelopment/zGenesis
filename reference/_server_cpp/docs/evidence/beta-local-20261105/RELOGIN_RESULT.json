@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "fresh_process": true,
+      "money": 0,
+      "native_fields_preserved": true,
+      "passed": true,
+      "real_network": true,
+      "x": 489,
+      "z": 174,
+      "zone": 1
+    },
+    {
+      "fresh_process": true,
+      "money": 4,
+      "native_fields_preserved": true,
+      "passed": true,
+      "real_network": true,
+      "x": 488,
+      "z": 173,
+      "zone": 1
+    }
+  ]
+}

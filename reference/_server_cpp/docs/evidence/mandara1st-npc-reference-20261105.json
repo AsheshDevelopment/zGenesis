@@ -1,0 +1,198 @@
+{
+  "schema": 1,
+  "profile": "Mandara1st",
+  "server_zone": 1,
+  "client_map": 40001,
+  "configuration": "MAP_Mandara1st.cfg",
+  "source": "C:\\_GitHub\\TantraSrc\\TantraClient\\system\\TantraParam.tpa",
+  "source_sha256": "89bb70532f888044f4e66b25aa75e3e55d1329e392e874b13dd45ae3408d16ea",
+  "placement_table_sha256": "f6b58f2f5939b45fd014c7723a9ac729e43a10010da7eeefeee3a04816fcd429",
+  "source_schema_sha256": "f62d8bd0c93b522f78d4ed6606b58e2722bd9bf063d8130c59ceae377251605b",
+  "scope": "Native matching K3 client Zone01 placements; Global gameplay goods and rules retained; NewMandara excluded",
+  "npcs": [
+    {
+      "ID": 1001,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 482,
+      "sPosZ": 274
+    },
+    {
+      "ID": 1002,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 494,
+      "sPosZ": 276
+    },
+    {
+      "ID": 1003,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 482,
+      "sPosZ": 196
+    },
+    {
+      "ID": 1005,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 502,
+      "sPosZ": 180
+    },
+    {
+      "ID": 1101,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 434,
+      "sPosZ": 203
+    },
+    {
+      "ID": 1102,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 544,
+      "sPosZ": 201
+    },
+    {
+      "ID": 1103,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 558,
+      "sPosZ": 142
+    },
+    {
+      "ID": 1104,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 668,
+      "sPosZ": 174
+    },
+    {
+      "ID": 1105,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 412,
+      "sPosZ": 116
+    },
+    {
+      "ID": 1106,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 544,
+      "sPosZ": 111
+    },
+    {
+      "ID": 1107,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 468,
+      "sPosZ": 194
+    },
+    {
+      "ID": 1108,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 484,
+      "sPosZ": 250
+    },
+    {
+      "ID": 1115,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 241,
+      "sPosZ": 272
+    },
+    {
+      "ID": 1116,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 903,
+      "sPosZ": 197
+    },
+    {
+      "ID": 1117,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 165,
+      "sPosZ": 517
+    },
+    {
+      "ID": 1119,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 734,
+      "sPosZ": 741
+    },
+    {
+      "ID": 1120,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 491,
+      "sPosZ": 176
+    },
+    {
+      "ID": 1124,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 0,
+      "sPosZ": 0
+    },
+    {
+      "ID": 1125,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 0,
+      "sPosZ": 0
+    },
+    {
+      "ID": 1263,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 478,
+      "sPosZ": 178
+    },
+    {
+      "ID": 1342,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 0,
+      "sPosZ": 0
+    },
+    {
+      "ID": 1343,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 0,
+      "sPosZ": 0
+    },
+    {
+      "ID": 1344,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 0,
+      "sPosZ": 0
+    },
+    {
+      "ID": 1345,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 0,
+      "sPosZ": 0
+    },
+    {
+      "ID": 1346,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 0,
+      "sPosZ": 0
+    },
+    {
+      "ID": 1437,
+      "byteSize": 1,
+      "byteZone": 1,
+      "sPosX": 894,
+      "sPosZ": 368
+    }
+  ],
+  "runtime_override": false,
+  "authoritative_workbook": "C:\\_GitHub\\TantraSrc\\_server_final\\bin\\XLSXData\\TantraParam.xlsx"
+}
