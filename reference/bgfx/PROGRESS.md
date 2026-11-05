@@ -1,3 +1,41 @@
+## 6 November 2026: English combat chat and refreshed beta packages
+
+- [x] Verify Global SpeechComment.szPhilippine: all 348 entries are untranslated placeholders. Suppress unavailable utterances before broadcast, including named forms, while preserving native AI timing/RNG and real dialogue.
+- [x] Resolve NPC/monster chat speakers through their Philippine-English parameter names. Render damage, Prana, death and revival messages from the existing English HTMessage templates.
+- [x] Build and stage matching Release client/server binaries; pass focused server speech and 35 native chat/UI checks without repeating the full two-client journey.
+- [x] Generate the current 5,225-payload client ZIP with two-file signed connections and root Patcher.dat, plus a separate 77-file server update. Verify archived payload hashes, signed profile/tamper rejection and private-file exclusion.
+
+Downloads are in `D:\Tantra-Beta\2026-11-06`. The server update applies to an
+existing configured deployment and contains no accounts, credentials or private
+keys. Current signed patch release is 1793900170; connection version is 16.
+Native missing speech remains untranslated rather than being invented. The
+accepted live TLS two-client journey is recorded separately. Public connectivity,
+separate-PC, player-cap/abuse and operations gates remain open. Named coverage
+stays 173/254 (68%), with 6/10 gates; this follow-up adds no phase completion claim.
+See [release notes](../_server_cpp/docs/BETA_REFRESH_20261106.md) and
+[package evidence](docs/evidence/beta-refresh-20261106.json).
+
+## 6 November 2026: two-file client connections and signed root patch configuration
+
+Export only serverlist.bin and system/HTMessage.txl. Preserve the original native
+server-list prefix and append bounded signed metadata/public TLS trust. Verify
+both files, certificate hash, version/expiry and compiled trust; reject altered,
+truncated or stripped data. Retain v1 reads for migration. Update Data Tools,
+paired exports, native resource reading and package selection; retire separate
+ConnectionProfile.json/ServerTLS.cer files after preserving operator backups.
+
+Move public patch configuration from system/Patcher.cfg to signed root
+Patcher.dat. The operator publisher generates it; the launcher displays its
+verified address read-only and retains offline launch. File names are based on
+the supplied examples, which are plain text; no encryption or unused-file claim.
+
+Focused Release format/TLS loopback, signed patch/tamper/recovery and one launcher
+UI/settings session pass. Current URLs/native prefix/TLS trust are unchanged.
+Matching client, Manager and Data Tools are staged. Live endpoints could not be
+checked because game servers were stopped. No SQL/server configuration changes,
+Debug builds, broad gameplay retest or replacement beta ZIP. Named roadmap gates
+remain unchanged. See docs/evidence/two-file-connections-20261105.json.
+
 ## 5 November 2026: verified launch chain and signed XAMPP patch feed
 
 Implement native C++ Tantra.exe -> ZFLauncher.exe. Merge the patcher into the

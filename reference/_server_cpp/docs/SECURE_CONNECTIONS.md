@@ -8,7 +8,11 @@ manager before signing in. Current deployment and evidence:
 
 `HTMessage.txl` remains the source of IDs 301 (status), 302/303 (test/main
 authentication), and the selected locale's world names. `serverlist.bin` retains
-the original 64-byte header and 10 x 54 encoded endpoint records. In the BGFX
+the original 64-byte header and 10 x 54 encoded endpoint records as its prefix.
+A bounded `TBCONN02` trailer now carries signed connection metadata and the
+public TLS trust certificate. The client needs only `serverlist.bin` and
+`system/HTMessage.txl`; separate `ConnectionProfile.json` and `ServerTLS.cer`
+files are retired. This extension is for the remake; the native prefix is retained. In the BGFX
 profile, slot 0 is the roster endpoint and slots 1-50 correspond to map owners.
 ASCII DNS names and IPv4 addresses fit the original 63-byte endpoint payload.
 Online mode ignores an unsigned `serverlist.txt` shadow. Offline play continues
@@ -19,13 +23,17 @@ location, game listen IPv4, URLs, world name, endpoint host/port rows, identity 
 lifetime. Export requires stopped workers, validates the operator key and TLS
 identity, verifies every TLS hostname against the exported root before mutation,
 backs up original files under server `state/connection-backups`, then
-writes the native files and public certificate. `ConnectionProfile.json` is
-published last with ECDSA P-256 signatures and SHA-256 hashes. Unrelated message
+writes HTMessage.txl followed by the self-contained serverlist.bin. Its
+embedded metadata uses ECDSA P-256 signatures, SHA-256 hashes and a distinct
+version-2 signing domain. Export backs up and removes the two old sidecars. Unrelated message
 records, duplicate behavior, parameters and the locale header are preserved.
 
 The executable contains the public signing trust anchor in
-`_shared_cpp/connection/TrustedKeys.h`. The adjacent profile cannot introduce a
-new trusted signing key. Versions and expiry are checked; the user's highest
+`_shared_cpp/connection/TrustedKeys.h`. The embedded profile cannot introduce a
+new trusted signing key. New readers also accept previously signed version-1
+sidecars for migration; new exports contain only the two native-named files. The native prefix, message file and embedded certificate are all authenticated.
+Metadata/certificate length bounds, unknown trailers and truncation are rejected.
+Versions and expiry are checked; the user's highest
 accepted version is saved outside the client. Altered, expired, untrusted or
 rolled-back profiles fail closed. This does not prevent a user from modifying
 their executable; server authority remains the security boundary for gameplay.
@@ -105,3 +113,5 @@ version state outside the client; it is not a clean-machine/full-package claim.
 The distribution builder includes the signed manifest and public certificate.
 Database status/backup/restore checks now use schema 5; compatible schema-4
 backups remain accepted and restored entry grants/tickets are invalidated.
+
+Latest two-file and root-configuration migration evidence: [focused checks](evidence/two-file-connections-20261105.json), completed 6 November 2026. Earlier evidence records the preceding four-file layout. The [live two-client journey](LIVE_RELEASE_VERIFICATION.md) now passes; the [refreshed packages](BETA_REFRESH_20261106.md) also pass HTTPS and all six TLS endpoint checks using the packaged profile.

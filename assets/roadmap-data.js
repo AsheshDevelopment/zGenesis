@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. Named coverage remains 173/254 (68%) with 6/10 accepted gates. C08 and five zones retain their bounded original evidence; the C08 benchmark applies to its frozen executable. The current client uses an original-style combined Tantra.exe launcher, signed LAN patching, shared game settings and corrected continuous online movement. New public packaging, Internet connectivity, clean-PC acceptance and public cap/abuse/operations gates remain open.",
+      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. Named coverage remains 173/254 (68%) with 6/10 accepted gates. Latest live LAN clients pass signed connections, movement, combat, automatic party currency sharing, trade and SQL-verified saved return. English combat chat and fresh client/server update archives are checked. Public hosting, a separate player PC and player-cap/abuse/operations gates remain open. Earlier graphics benchmarks apply to their frozen executables.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -2776,6 +2776,7 @@ window.TANTRA_ROADMAP = {
         }
       ],
       "foundations": [
+        "Live two-client signed TLS/MariaDB journey: movement, combat, automatic party currency, SDL exact-instance trade and SQL-verified fresh return; current client ZIP/server update with manifest hashes",
         "Native online speed/parity decoding, collision-swept continuous owner routing and frame-by-frame monster/peer interpolation; focused Release evidence",
         "Combined original-style Tantra.exe launcher, one-use game handoff and signed recoverable LAN patches; shared game display/quality/audio settings and preference-preserving File Check",
         "Signed172.16.90.12 LAN deployment,hostname-verified TLS,LocalSubnet firewall and preserved shared MariaDB; new-character owner-entry fix and LAN ZIP",
@@ -2821,12 +2822,17 @@ window.TANTRA_ROADMAP = {
       ],
       "next": [
         "Deploy a public hostname/address with matching game TLS and HTTPS patch hosting; current 172.16.90.12 connectivity is LAN-only",
-        "Build the final matching package with Tantra.exe/current movement fixes and public signed files; verify installation, patching and login on a separate clean Windows PC",
-        "Run one final-build two-client beginner/social journey including graphical automatic party loot, trade/services and saved return",
+        "Use the refreshed matching beta package and verify installation, patching and login on a separate clean Windows PC; replace the LAN profile with public signed files when hosting is ready",
+        "Keep the passing live two-client journey as evidence; extend only uncovered beginner/service/skill content and repeat affected flows when relevant code changes",
         "Finish public-entry abuse checks and measure sustained mixed gameplay/save/reconnect behaviour to set the initial player cap",
         "Demonstrate backup/restore and package rollback, monitoring/crash collection, individual beta accounts and tester reporting before the release decision"
       ],
       "changes": [
+        {
+          "date": "2026-11-06",
+          "title": "Live signed-connection journey, English combat chat and fresh beta downloads",
+          "text": "Two Release clients pass normal Tantra.exe launch, version-16 two-file signed connections/TLS, continuous movement, ordinary combat, automatic party currency sharing, exact-instance SDL trade and fresh login with MariaDB comparisons. A 13-Rupiah drop credits six to each member with native remainder one. Fix the correction-15/correction-10 speed-guard bridge without trusting packet speed. Global Philippine AI speech has 348 untranslated Reserved entries; filter them including target-name forms while retaining native RNG/callback ordering, keep real dialogue and resolve English monster/NPC speaker names. Focused server speech and 35 rendered chat/UI checks pass. Generate a new 5,225-payload client ZIP with root Patcher.dat and matching 77-file server update, verify all archived payload hashes, native profile signature and tamper rejection, and exclude accounts/private keys. Publish signed patch release 1793900170. LAN172.16.90.12 only; no separate-PC, public-host, capacity/abuse/operations or new benchmark acceptance. Named coverage remains173/254 (68%),6/10 gates; preserve Tantra-O."
+        },
         {
           "date": "2026-11-05",
           "title": "Original-style Tantra launcher, signed patching and shared game settings",
@@ -3088,11 +3094,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "f1040e5a89b45b5a37dd66b191679af86e0e2f91dbe8db6d1991d3366c356eee"
+      "sha256": "5c6310a2892e8c5f66fb8991e7956a3644a67116fb907e7ef82db1dbec03c980"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "ca06af6c7e70839c43b29ed7f377d2e000a3343f483e99f88fade1cd30702e38"
+      "sha256": "9984a315575bea9a8c517c85748902d99654faed68ad212628713567bbbddf5b"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",

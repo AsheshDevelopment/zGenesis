@@ -1,0 +1,146 @@
+{
+  "date": "2026-11-05",
+  "client_connection_files": [
+    "serverlist.bin",
+    "system/HTMessage.txl"
+  ],
+  "connection_version": 16,
+  "connection_format": 2,
+  "native_prefix_bytes": 34624,
+  "native_prefix_unchanged": true,
+  "urls_and_endpoints_unchanged": true,
+  "tls_public_root_unchanged": true,
+  "retired_client_files": [
+    "system/ConnectionProfile.json",
+    "system/ServerTLS.cer",
+    "system/Patcher.cfg"
+  ],
+  "root_patch_configuration": "Patcher.dat",
+  "configuration_encrypted": false,
+  "configuration_signed": true,
+  "server_side_tls_private_identity_retained": true,
+  "legacy_signed_profile_read_verified": true,
+  "focused_security_checks": {
+    "passed": true,
+    "evidence": "C:\\_GitHub\\TantraSrc\\_server_cpp\\build\\evidence\\two-file-connections-1793894215732991800\\result.json"
+  },
+  "patch_checks": {
+    "passed": true,
+    "cases": [
+      {
+        "case": "modified root Patcher.dat rejected",
+        "exit_code": 2,
+        "expected": 2,
+        "error": ""
+      },
+      {
+        "case": "direct game rejected",
+        "exit_code": 2,
+        "expected": 2,
+        "error": ""
+      },
+      {
+        "case": "verified Tantra-to-game handoff",
+        "exit_code": 0,
+        "expected": 0,
+        "error": ""
+      },
+      {
+        "case": "changed signed metadata rejected",
+        "exit_code": 2,
+        "expected": 2,
+        "error": "Patch signature is invalid"
+      },
+      {
+        "case": "recovery plus changed payload rejected",
+        "exit_code": 2,
+        "expected": 2,
+        "error": "Downloaded patch hash does not match its signed release"
+      },
+      {
+        "case": "valid signed patch applied",
+        "exit_code": 0,
+        "expected": 0,
+        "error": ""
+      },
+      {
+        "case": "unchanged release is idempotent",
+        "exit_code": 0,
+        "expected": 0,
+        "error": ""
+      }
+    ],
+    "fixture": "C:\\_GitHub\\TantraSrc\\_remake_bgfx\\build\\evidence\\patcher-1793894113161029900",
+    "client_data_unchanged": true,
+    "game_login_submitted": false,
+    "source_key_published": false,
+    "player_ui_preferences_preserved": true
+  },
+  "launcher_ui": {
+    "passed": true,
+    "https_required_for_public_hosts": true,
+    "lan_http_status": 200,
+    "version": 1793894175,
+    "start_button_enabled": true,
+    "options_dialog_checked": true,
+    "file_check_disabled_buttons_captured": true,
+    "game_settings_save_reload_cancel": true,
+    "invalid_resolution_rejected": true,
+    "aspect_and_resolution_arrows": true,
+    "borderless_desktop_resolution": true,
+    "shared_graphics_values": {
+      "width": 1600,
+      "height": 1000,
+      "windowMode": 0,
+      "textureQuality": 1,
+      "shadowQuality": 3,
+      "filtering": 1,
+      "drawDistance": 115,
+      "brightness": 120,
+      "fog": 0,
+      "terrainDetail": 1,
+      "vsync": 1,
+      "linearColor": 1
+    },
+    "sound_volumes": [
+      3,
+      7
+    ],
+    "player_preferences_unchanged": true,
+    "game_started": false,
+    "launcher": "Tantra.exe -> ZFLauncher.exe",
+    "screenshot": "C:\\_GitHub\\TantraSrc\\_remake_bgfx\\build\\evidence\\patcher-gui-1793894192703783700\\launcher-ready.png"
+  },
+  "published_feed": {
+    "version": 1793894175,
+    "files": 5215,
+    "bytes": 1449376732,
+    "web_root": "C:\\xampp\\htdocs\\patch",
+    "patch_url": "http://172.16.90.12/patch",
+    "signed": true,
+    "private_key_published": false,
+    "bootstrap": "Tantra.exe (combined launcher/patcher, installed with the client)"
+  },
+  "files": {
+    "serverlist.bin": "9b1f86ab42d6b642d2c1ad166ea05dcbc57099d38e8ceda29da0e33ebf81d845",
+    "system/HTMessage.txl": "92867e95d6bf89c247ba60cf50fa7da597a24e8dea9b8ae7a675440cdbff2e0c",
+    "Patcher.dat": "17b441ffc2e563139b4cd77c465175168e09a3981d56e7a46be175f73030df13",
+    "Tantra.exe": "9c2c3a07c49f20a5b2195d5b6c0367cc3a6fd16e5ff5d176fd3d5f7d2435507d",
+    "ZFLauncher.exe": "08316314e86a7c5c0bc6b4677b260bc723919d9ad684df88a80159e38e8ad528"
+  },
+  "tools": {
+    "TantraDataTools.exe": "2527c4bf94ceae3b2dc48fac03114addd26b0a3234cc38ec39a1e634cd2ea2b9",
+    "TantraServerManager.exe": "107b07dd8189e36ecb0e6b36196958eff1a092b88b2c34bc9e3b8d4a5807fe43"
+  },
+  "original_dat_examples": "Tantra_3120 examples are plain text; used as references only; originals not modified",
+  "live_endpoint_check": {
+    "passed": false,
+    "reason": "No TantraService/TantraZone processes or game/HTTPS listeners were running",
+    "login_submitted": false
+  },
+  "database_changed": false,
+  "server_configuration_changed": false,
+  "existing_beta_zip_updated": false,
+  "corrected_build_issue": "The probe target is secure_connection_probe; the initially requested bgfx_secure_connection_probe target does not exist.",
+  "completed_date": "2026-11-06"
+}

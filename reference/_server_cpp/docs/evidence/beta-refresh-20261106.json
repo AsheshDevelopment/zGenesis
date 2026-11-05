@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-06",
+  "completed_at": "2026-11-06T01:42:31.701220+08:00",
+  "passed": true,
+  "configuration": "Release",
+  "client": {
+    "archive": "D:\\Tantra-Beta\\2026-11-06\\Tantra-B-Client-20261106.zip",
+    "sha256": "a207b1ac262fee7233ac8705d8fc1b19926dddea4f46097a106fab6b151615b3",
+    "zip_bytes": 698309371,
+    "payloads": 5225,
+    "exe_sha256": "713200fc68e7e3a8d64c7eff9caa62ac3e58e0a10577fec463088aaf84bca0bd",
+    "signed_profile_version": 16,
+    "connection_format": 2,
+    "patch_release": 1793900170,
+    "root_patcher_dat": true,
+    "connection_files": [
+      "serverlist.bin",
+      "system/HTMessage.txl"
+    ],
+    "profile_signature_and_tamper_check_passed": true,
+    "passed": true,
+    "zip_payload_hashes_verified": 5225,
+    "current_connection_format": 2,
+    "signed_root_patcher_dat": true,
+    "retired_files_absent": true
+  },
+  "server_update": {
+    "archive": "D:\\Tantra-Beta\\2026-11-06\\Tantra-B-Server-Update-20261106.zip",
+    "sha256": "0263dbf7f484c7a7369a862da218315d1cf14e41de66e07dc4aa17f279023e0b",
+    "files": 77,
+    "bytes": 10289473,
+    "includes_accounts": false,
+    "includes_private_keys": false,
+    "fresh_install": false,
+    "payload_hashes_verified": 77,
+    "zone_exe_sha256": "e2ff76b3665a970ea1174631b3cc8ad1052e211f48316aa51342462bb01fbe48",
+    "existing_configured_deployment_only": true
+  },
+  "messages": {
+    "source": "B:/__TANTRA/TantraDataScripts/Global/HTSSetting-global.xml",
+    "source_sha256": "fb4a4fd6510b3ca8030f1f7d552f893185b13bdf736091a9ac4c20641f5f98dd",
+    "philippine_speech_rows": 348,
+    "untranslated_placeholder_rows": 348,
+    "policy": "Suppress unavailable source utterances, including target-name-formatted variants; preserve real dialogue and native AI RNG/callback ordering. Do not invent translations.",
+    "english_sender_name": "ClientRes/TantraParam Philippine-English Monster/NPC name matched by actor handle",
+    "server_focused_check": "NATIVE_NPC_WORLD_ACTIONS_CPU_VERIFIED speech",
+    "client_focused_check": {
+      "passed": true,
+      "checks": 35,
+      "visible_by_default": true,
+      "source_message_colours": true,
+      "damage_prana_deduplicated": true,
+      "channels": 5,
+      "reply": true,
+      "channel_buttons": true,
+      "history_capacity": 105,
+      "gpu_drag_icon": true,
+      "cursor_hotspot": 16,
+      "external_chat_delivery_tested": false
+    },
+    "new_live_gameplay_session": false
+  },
+  "previous_live_journey": "live-release-20261106.json",
+  "endpoint": "172.16.90.12 (LAN)",
+  "separate_pc_verified": false,
+  "public_beta_accepted": false,
+  "named_task_coverage": "173/254",
+  "accepted_gates": "6/10",
+  "private_account_data_or_keys_in_archives": false,
+  "packaged_profile_live_endpoints": {
+    "passed": true,
+    "signature": true,
+    "https_status": 200,
+    "tls_endpoints": 6,
+    "hostname_verified": true,
+    "login_submitted": false
+  },
+  "servers_left_running": true
+}

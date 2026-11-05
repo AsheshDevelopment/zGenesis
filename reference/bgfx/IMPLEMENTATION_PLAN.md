@@ -1,3 +1,36 @@
+## 6 November 2026: English combat chat and refreshed beta packages
+
+- [x] Verify Global SpeechComment.szPhilippine: all 348 entries are untranslated placeholders. Suppress unavailable utterances before broadcast, including named forms, while preserving native AI timing/RNG and real dialogue.
+- [x] Resolve NPC/monster chat speakers through their Philippine-English parameter names. Render damage, Prana, death and revival messages from the existing English HTMessage templates.
+- [x] Build and stage matching Release client/server binaries; pass focused server speech and 35 native chat/UI checks without repeating the full two-client journey.
+- [x] Generate the current 5,225-payload client ZIP with two-file signed connections and root Patcher.dat, plus a separate 77-file server update. Verify archived payload hashes, signed profile/tamper rejection and private-file exclusion.
+
+Downloads are in `D:\Tantra-Beta\2026-11-06`. The server update applies to an
+existing configured deployment and contains no accounts, credentials or private
+keys. Current signed patch release is 1793900170; connection version is 16.
+Native missing speech remains untranslated rather than being invented. The
+accepted live TLS two-client journey is recorded separately. Public connectivity,
+separate-PC, player-cap/abuse and operations gates remain open. Named coverage
+stays 173/254 (68%), with 6/10 gates; this follow-up adds no phase completion claim.
+See [release notes](../_server_cpp/docs/BETA_REFRESH_20261106.md) and
+[package evidence](docs/evidence/beta-refresh-20261106.json).
+
+## Live two-file connection journey — completed 6 November 2026
+
+- [x] Launch two Release clients through Tantra.exe with signed root Patcher.dat and the current serverlist.bin/HTMessage.txl connection pair, using live TLS servers.
+- [x] Verify normal login, continuous owner/peer movement, ordinary combat, automatic party currency sharing and SDL item drag/review/trade.
+- [x] Log out, sign in again and compare both characters' positions, currency and exact traded item instances with MariaDB.
+- [x] Correct the server movement-unit bridge that rejected legitimate correction-15 routes; retain the native speed guard and excessive-speed rejection.
+- [x] Stage matching Release client/server binaries and publish the updated signed patch feed.
+
+Two isolated controlled characters on this PC; existing player accounts were not
+edited. No fresh progression, save-point NPC, public Internet, separate-PC or
+capacity acceptance is inferred. Named roadmap gates remain unchanged.
+See [live session and evidence](../_server_cpp/docs/LIVE_RELEASE_VERIFICATION.md).
+
+- [x] Consolidate connection verification and public TLS trust into serverlist.bin; ship only it and HTMessage.txl for client connections.
+- [x] Replace system/Patcher.cfg with signed root Patcher.dat; update exporters, reader, packaging and focused checks.
+
 ## Launcher and patch feed follow-up — complete 5 November 2026
 
 - [x] Analyse original K2108 executables and startup checks without executing or modifying them.
@@ -20,7 +53,8 @@ beta ZIP remain separate acceptance work; no named roadmap gate is closed.
 - [x] Export signed LAN connection files with matching TLS identity and listener settings; verify live staged endpoints and enable LocalSubnet-only game firewall rules.
 - [x] Use one preserved MariaDB database for normal development/final servers and expose it as a separate phpMyAdmin server selection.
 - [x] Fix creation/deletion ACK roster caching and authenticated owner identity; stage the checked Release launcher and new signed LAN ZIP.
-- [ ] Verify an actual second PC's LAN connection and live graphical automatic loot; public Internet/capacity/abuse/operations acceptance stays open.
+- [x] Verify live graphical automatic party currency sharing with two local Release clients (6 November evidence above).
+- [ ] Verify an actual second PC's LAN connection; public Internet/capacity/abuse/operations acceptance stays open.
 
 These are bounded follow-ups. Named coverage remains173/254 (68%),6/10 gates.
 See [implementation and evidence](../_server_cpp/docs/PARTY_LOOT_LAN.md). Earlier localhost/UI-only evidence below is historical.

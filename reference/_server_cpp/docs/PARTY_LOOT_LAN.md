@@ -5,6 +5,10 @@ deployment are implemented. The staged Release launcher also fixes the reported
 `Owner inventory identity mismatch` when entering with a newly created character.
 This checkpoint does not accept public Internet deployment or a larger player cap.
 
+**6 November follow-up:** live graphical automatic currency sharing now passes
+with two Release clients using the current signed two-file/TLS connection format.
+See [the session report](LIVE_RELEASE_VERIFICATION.md). The separate-PC gate remains open.
+
 ## Party and Ashram controls
 
 Original rules come from `Tantra/zone/server.cpp` pickup/party handlers,

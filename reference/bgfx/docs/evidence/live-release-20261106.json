@@ -1,0 +1,169 @@
+{
+  "completed_at": "2026-11-06T01:05:52.396398+08:00",
+  "passed": true,
+  "scope": "Two controlled QA characters on one PC; live shared LAN TLS/MariaDB servers. Ordinary attack and currency drop, not full skill/content or fresh progression acceptance.",
+  "database": "tantra_bgfx on MariaDB 127.0.0.1:13306",
+  "endpoint": "172.16.90.12",
+  "launch_chain": "Tantra.exe -> ZFLauncher.exe; signed patch feed; no --legacy-local or offline authority",
+  "connection_format": 2,
+  "connection_version": 16,
+  "connection_files": [
+    "serverlist.bin",
+    "system/HTMessage.txl"
+  ],
+  "root_patch_configuration": "Patcher.dat",
+  "patch_feed_release": 1793897963,
+  "tls_endpoints": {
+    "passed": true,
+    "signature": true,
+    "https_status": 200,
+    "tls_endpoints": 6,
+    "hostname_verified": true,
+    "login_submitted": false
+  },
+  "journey": [
+    {
+      "passed": true,
+      "tls": true,
+      "connection_format": 2,
+      "role": 1,
+      "controlled_fixture": true,
+      "movement_samples": 74,
+      "peer_movement_samples": 28,
+      "normal_combat": true,
+      "automatic_party_loot": true,
+      "drop_money": 13,
+      "loot_share": 6,
+      "native_rounding": 1,
+      "trade_exact_instances": true,
+      "inventory_serial": 9101,
+      "money_after": 1011,
+      "zone": 1,
+      "x": 465,
+      "z": 346,
+      "save_x": 0,
+      "save_z": 0
+    },
+    {
+      "passed": true,
+      "tls": true,
+      "connection_format": 2,
+      "role": 2,
+      "controlled_fixture": true,
+      "movement_samples": 28,
+      "peer_movement_samples": 69,
+      "normal_combat": true,
+      "automatic_party_loot": true,
+      "drop_money": 13,
+      "loot_share": 6,
+      "native_rounding": 1,
+      "trade_exact_instances": true,
+      "inventory_serial": 9102,
+      "money_after": 1011,
+      "zone": 1,
+      "x": 466,
+      "z": 351,
+      "save_x": 0,
+      "save_z": 0
+    }
+  ],
+  "fresh_logins": [
+    {
+      "passed": true,
+      "tls": true,
+      "money": 1011,
+      "inventory_serial": 9101,
+      "x": 465,
+      "z": 346
+    },
+    {
+      "passed": true,
+      "tls": true,
+      "money": 1011,
+      "inventory_serial": 9102,
+      "x": 466,
+      "z": 351
+    }
+  ],
+  "sql_saved_return": {
+    "backend": "mariadb",
+    "characters": [
+      {
+        "character": "Beta7a4f505A",
+        "money": 1011,
+        "role": 1,
+        "save_x": 0,
+        "save_z": 0,
+        "serial": 9101,
+        "x": 465,
+        "z": 346
+      },
+      {
+        "character": "Beta7a4f505B",
+        "money": 1011,
+        "role": 2,
+        "save_x": 0,
+        "save_z": 0,
+        "serial": 9102,
+        "x": 466,
+        "z": 351
+      }
+    ],
+    "existing_accounts_changed": false,
+    "passed": true
+  },
+  "server_after_check": {
+    "operation_failures": 0,
+    "last_operation_error": "",
+    "checkpoint_failures": 0,
+    "release_failures": 0,
+    "connections": 0
+  },
+  "movement_fix": {
+    "file": "_server_cpp/src/zone/movement.cpp",
+    "reason": "Convert authoritative correction-15 client speed to the correction-10 native guard units; stock arithmetic and strike policy retained.",
+    "focused_check": "NATIVE_WORLD_CPU_VERIFIED movement",
+    "original_guard_vectors": 96,
+    "normal_axis_route_accepted": true,
+    "double_speed_rejected": true
+  },
+  "client_sha256": "7f0d2184c84083ced45d829ea226cb1031733660ddf924aaa909cb75f3f02638",
+  "server_zone_sha256": "cdad46f11b6f7f0ece476ab263f7b28715854aa9276e7a32eb95e7df2f8d85e3",
+  "captures_reviewed": [
+    {
+      "path": "_remake_bgfx/docs/evidence/live-release-20261106/role-1-normal-combat.png",
+      "sha256": "e8ee8c659e217853cd0f06d176598087ad43f3d1570003e940bc664e9d5c4e9a",
+      "role": 1
+    },
+    {
+      "path": "_remake_bgfx/docs/evidence/live-release-20261106/role-1-automatic-loot-credited.png",
+      "sha256": "0f402fcf6371a37a365986ea676b01a1804ce1270a9b6596d969022340f04e95",
+      "role": 1
+    },
+    {
+      "path": "_remake_bgfx/docs/evidence/live-release-20261106/role-2-trade-drag.png",
+      "sha256": "d78ba2fa47753c847bd36bc8821f18d8d26114e7c0caf86bbf76078bfa7e2ada",
+      "role": 2
+    },
+    {
+      "path": "_remake_bgfx/docs/evidence/live-release-20261106/role-1-trade-review.png",
+      "sha256": "831e3e290972387d01efa53333ed1ed3acc0b8b643ebc65fadd8a0cc5f35b522",
+      "role": 1
+    },
+    {
+      "path": "_remake_bgfx/docs/evidence/live-release-20261106/role-2-tls-saved-return.png",
+      "sha256": "5149936ea518ee3e653dae399fdc2e665face05283c1211e42fee2cedc058f70",
+      "role": 2
+    }
+  ],
+  "private_evidence": "C:\\_GitHub\\TantraSrc\\_server_cpp\\build\\evidence\\live-release-20261106",
+  "notes": [
+    "Test accounts are ordinary userLevel=0 with controlled level-50 characters and owned trade fixtures; pre-existing accounts were not edited.",
+    "Earlier attempts are retained privately: initial map-channel balancing separated peers; the save-point detour exposed a real movement-unit mismatch, fixed before the accepted run. QA-only rendezvous retained earned currency and inventory.",
+    "The accepted saved-return check is ordinary logout and fresh login with database comparison. It does not exercise save-point NPC or resurrection behavior.",
+    "Automatic party currency sharing happens on a normal pickup request, not unattended ground collection. The accepted 13 Rupiah drop credited 6 to each member and retained native rounding of 1.",
+    "Party mode survives the fresh login and is visible as Automatic in the saved-return capture, but full party recovery behavior was not independently asserted.",
+    "Reserved native system-message placeholders remain visible during combat; complete localized message-content parity is outside this connection journey.",
+    "No separate PC, Internet endpoint, full-zone/content or capacity acceptance. No replacement beta ZIP. Servers remain running; QA clients are closed."
+  ]
+}

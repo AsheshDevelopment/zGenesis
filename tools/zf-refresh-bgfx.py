@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.28"
+VERSION = "1.0.29"
 
 
 def sha(body):
@@ -176,10 +176,13 @@ def refresh(source):
     project["description"] = f"Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. Named coverage remains {project['done']}/{project['total']} ({project['percent']}%) with {project['accepted']}/10 accepted gates. C08 and five zones retain their bounded original evidence; the C08 benchmark applies to its frozen executable. The current client uses an original-style combined Tantra.exe launcher, signed LAN patching, shared game settings and corrected continuous online movement. New public packaging, Internet connectivity, clean-PC acceptance and public cap/abuse/operations gates remain open."
     project["foundations"].insert(0,"Combined original-style Tantra.exe launcher, one-use game handoff and signed recoverable LAN patches; shared game display/quality/audio settings and preference-preserving File Check")
     project["foundations"].insert(0,"Native online speed/parity decoding, collision-swept continuous owner routing and frame-by-frame monster/peer interpolation; focused Release evidence")
+    latest.insert(0, {"date":"2026-11-06", "title":"Live signed-connection journey, English combat chat and fresh beta downloads", "text":"Two Release clients pass normal Tantra.exe launch, version-16 two-file signed connections/TLS, continuous movement, ordinary combat, automatic party currency sharing, exact-instance SDL trade and fresh login with MariaDB comparisons. A 13-Rupiah drop credits six to each member with native remainder one. Fix the correction-15/correction-10 speed-guard bridge without trusting packet speed. Global Philippine AI speech has 348 untranslated Reserved entries; filter them including target-name forms while retaining native RNG/callback ordering, keep real dialogue and resolve English monster/NPC speaker names. Focused server speech and 35 rendered chat/UI checks pass. Generate a new 5,225-payload client ZIP with root Patcher.dat and matching 77-file server update, verify all archived payload hashes, native profile signature and tamper rejection, and exclude accounts/private keys. Publish signed patch release 1793900170. LAN172.16.90.12 only; no separate-PC, public-host, capacity/abuse/operations or new benchmark acceptance. Named coverage remains173/254 (68%),6/10 gates; preserve Tantra-O."})
+    project["foundations"].insert(0,"Live two-client signed TLS/MariaDB journey: movement, combat, automatic party currency, SDL exact-instance trade and SQL-verified fresh return; current client ZIP/server update with manifest hashes")
+    project["description"] = f"Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. Named coverage remains {project['done']}/{project['total']} ({project['percent']}%) with {project['accepted']}/10 accepted gates. Latest live LAN clients pass signed connections, movement, combat, automatic party currency sharing, trade and SQL-verified saved return. English combat chat and fresh client/server update archives are checked. Public hosting, a separate player PC and player-cap/abuse/operations gates remain open. Earlier graphics benchmarks apply to their frozen executables."
     project["next"] = [
         "Deploy a public hostname/address with matching game TLS and HTTPS patch hosting; current 172.16.90.12 connectivity is LAN-only",
-        "Build the final matching package with Tantra.exe/current movement fixes and public signed files; verify installation, patching and login on a separate clean Windows PC",
-        "Run one final-build two-client beginner/social journey including graphical automatic party loot, trade/services and saved return",
+        "Use the refreshed matching beta package and verify installation, patching and login on a separate clean Windows PC; replace the LAN profile with public signed files when hosting is ready",
+        "Keep the passing live two-client journey as evidence; extend only uncovered beginner/service/skill content and repeat affected flows when relevant code changes",
         "Finish public-entry abuse checks and measure sustained mixed gameplay/save/reconnect behaviour to set the initial player cap",
         "Demonstrate backup/restore and package rollback, monitoring/crash collection, individual beta accounts and tester reporting before the release decision"
     ]
@@ -195,7 +198,7 @@ def refresh(source):
     command_doc = ROOT / "reference/bgfx/docs/NATIVE_COMMANDS.md"
     command_doc.parent.mkdir(parents=True, exist_ok=True)
     command_doc.write_bytes((source / "docs/NATIVE_COMMANDS.md").read_bytes())
-    for relative in ("LAUNCHER_PATCHING.md", "evidence/launcher-patcher-20261105.json", "evidence/online-movement-20261105.json", "evidence/any-angle-movement-20261105.json", "PACKAGE_RECOVERY_ACCEPTANCE.md", "evidence/c08-acceptance-20261105.json", "evidence/c08-benchmark-20261105.json", "evidence/c08-graphics-persistence-20261105.json", "evidence/goal-completion-audit-20261105.json"):
+    for relative in ("evidence/beta-refresh-20261106.json", "evidence/live-release-20261106.json", "evidence/two-file-connections-20261105.json", "LAUNCHER_PATCHING.md", "evidence/launcher-patcher-20261105.json", "evidence/online-movement-20261105.json", "evidence/any-angle-movement-20261105.json", "PACKAGE_RECOVERY_ACCEPTANCE.md", "evidence/c08-acceptance-20261105.json", "evidence/c08-benchmark-20261105.json", "evidence/c08-graphics-persistence-20261105.json", "evidence/goal-completion-audit-20261105.json"):
         target = ROOT / "reference/bgfx/docs" / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes((source / "docs" / relative).read_bytes())
@@ -204,7 +207,13 @@ def refresh(source):
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(evidence.read_bytes())
     server_docs = source.parent / "_server_cpp/docs"
+    for folder in ("live-release-20261106", "beta-refresh-20261106"):
+        for evidence in (source/"docs/evidence"/folder).glob("*.png"):
+            target=ROOT/"reference/bgfx/docs/evidence"/folder/evidence.name
+            target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(evidence.read_bytes())
     server_reference = ROOT / "reference/_server_cpp/docs"
+    for relative in ("BETA_REFRESH_20261106.md", "LIVE_RELEASE_VERIFICATION.md", "evidence/beta-refresh-20261106.json", "evidence/live-release-20261106.json", "evidence/two-file-connections-20261105.json"):
+        target=server_reference/relative;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes((server_docs/relative).read_bytes())
     for relative in ("PARTY_LOOT_LAN.md", "SECURE_CONNECTIONS.md", "evidence/party-lan-20261105.json", "BETA_LOCAL_PACKAGE.md", "PROJECT_DATA.md", "evidence/beta-local-package-20261105.json", "evidence/global-asset-fallback-20261105.json", "evidence/mandara1st-npc-reference-20261105.json", "BETA_CONTENT.md", "BETA_ACCOUNTS_BEGINNER.md", "evidence/beta-accounts-beginner-20261105.json", "GUILD_QUESTS_ZONE05.md", "evidence/guild-quests-zone05-20261105.json", "evidence/zone05-acceptance-20261105.json", "evidence/zone05-travel-persistence-20261105.json", "evidence/guild-quest-persistence-20261105.json", "evidence/original-sql-reference-20261105.json", "FOUR_ZONE_ACCEPTANCE.md", "evidence/four-zone-acceptance-20261105.json", "evidence/four-zone-native-inputs-20261105.json", "PROJECTILE_CAVE_RECOVERY.md", "evidence/projectile-cave-recovery-20261102.json", "evidence/c08-release-benchmark-20261102.json", "evidence/c08-release-raw-20261102.zip", "ADVANCED_NPC_SERVICES.md", "AUTOMATIC_BACKUPS.md", "MANDARA2ND.md", "evidence/npc-map-backups-20261102.json", "SIMULATION_CHECKPOINTS.md", "evidence/tick-profile-20261101.json", "evidence/checkpoints-20261101.json", "evidence/scaling-gui-20261101.json", "evidence/mariadb-deployment-20261101.json", "evidence/two-client-simulation-20261101.json"):
         target = server_reference / relative
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -247,20 +256,20 @@ def refresh(source):
         if name == "docs/PROGRESS.md":
             content = re.sub(r"Version: \d+\.\d+\.\d+", "Version: " + VERSION, content)
             content = content.replace("Version: " + VERSION + " Reviewed:", "Version: " + VERSION + ". Reviewed:")
-            content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-11-05.", content)
+            content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-11-06.", content)
         elif "## " + VERSION not in content:
             entry = """# Unreleased
 
-## 1.0.28 - 2026-11-05 (Tantra-B only)
+## 1.0.29 - 2026-11-06 (Tantra-B only)
 
-Changed: original-style combined Tantra.exe launcher, one-use game handoff,
-signed recoverable patch feed, shared game graphics/audio settings and continuous
-online owner/replica movement. Preserve player preferences during File Check.
-Verified: focused Release launch/tamper/recovery/preferences checks and one
-isolated UI/settings save/reload/cancel session. Original resources are unchanged.
-Failed: overlapping disabled captions corrected. No remaining focused failure.
-Remaining: rebuild the public package, Internet host/TLS/HTTPS, separate clean-PC
-acceptance, final graphical party loot and public cap/abuse/operations gates.
+Changed: two-file signed connections, root Patcher.dat, legitimate movement guard
+conversion, untranslated NPC speech filtering and proper English speaker names.
+Verified: live LAN two-client login/movement/combat/automatic loot/trade/saved
+return; focused native speech and35 chat/UI checks; all5,225 client and77 server
+update payload hashes, signed connection/tamper checks and private-file exclusion.
+Downloads: current client and separate server update in D:\\Tantra-Beta\\2026-11-06.
+No new full gameplay/FX benchmark or separate-PC acceptance is claimed.
+Remaining: Internet host/TLS/HTTPS, clean-PC and public cap/abuse/operations gates.
 Named coverage remains 173/254 (68%),6/10 gates. No broad game/FX benchmark rerun.
 Tantra-O remains unchanged.
 

@@ -1,5 +1,20 @@
 # Unreleased
 
+## 1.0.29 - 2026-11-06 (Tantra-B only)
+
+Changed: two-file signed connections, root Patcher.dat, legitimate movement guard
+conversion, untranslated NPC speech filtering and proper English speaker names.
+Verified: live LAN two-client login/movement/combat/automatic loot/trade/saved
+return; focused native speech and35 chat/UI checks; all5,225 client and77 server
+update payload hashes, signed connection/tamper checks and private-file exclusion.
+Downloads: current client and separate server update in D:\Tantra-Beta\2026-11-06.
+No new full gameplay/FX benchmark or separate-PC acceptance is claimed.
+Remaining: Internet host/TLS/HTTPS, clean-PC and public cap/abuse/operations gates.
+Named coverage remains 173/254 (68%),6/10 gates. No broad game/FX benchmark rerun.
+Tantra-O remains unchanged.
+
+
+
 ## 1.0.28 - 2026-11-05 (Tantra-B only)
 
 Changed: original-style combined Tantra.exe launcher, one-use game handoff,
@@ -436,6 +451,6 @@ Remaining: real browser layout acceptance.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 173/254 named tasks checked (68%); 6/10 gates recorded. Latest: Original-style Tantra launcher, signed patching and shared game settings. Combine the native C++ patcher and launcher in Tantra.exe; retire Update.exe and require its inherited one-use handoff before ZFLauncher starts. Preserve offline entry, game restart supervision, package tooling and Manager launches. Publish signed schema-2 Patcher.dat, immutable lists/notices and hashed payloads to the LAN XAMPP feed. Verify tamper rejection, interrupted-install recovery and preference-preserving checks. Reuse original K2108 PE bitmap resources and dialog grouping without modifying the originals. Remove duplicate disabled captions; launcher Options saves the same game Graphics.cfg/Interface.sys formats for resolution/aspect/custom size, window modes, actual graphics quality and separate sound volumes. One isolated launcher session verifies File Check, Apply/reload/Cancel, invalid resolution and borderless controls. Earlier focused Release checks also correct native owner speed, any-angle collision-swept routing and smooth monster/peer interpolation. Current beta ZIPs predate these fixes. No gameplay/FX benchmark rerun or separate-PC/public acceptance is claimed; 173/254 tasks (68%),6/10 gates remain unchanged. Preserve Tantra-O. Remaining native skill/FX and complete map/game acceptance stay open.
+- **Tantra-B**: 173/254 named tasks checked (68%); 6/10 gates recorded. Latest: Live signed-connection journey, English combat chat and fresh beta downloads. Two Release clients pass normal Tantra.exe launch, version-16 two-file signed connections/TLS, continuous movement, ordinary combat, automatic party currency sharing, exact-instance SDL trade and fresh login with MariaDB comparisons. A 13-Rupiah drop credits six to each member with native remainder one. Fix the correction-15/correction-10 speed-guard bridge without trusting packet speed. Global Philippine AI speech has 348 untranslated Reserved entries; filter them including target-name forms while retaining native RNG/callback ordering, keep real dialogue and resolve English monster/NPC speaker names. Focused server speech and 35 rendered chat/UI checks pass. Generate a new 5,225-payload client ZIP with root Patcher.dat and matching 77-file server update, verify all archived payload hashes, native profile signature and tamper rejection, and exclude accounts/private keys. Publish signed patch release 1793900170. LAN172.16.90.12 only; no separate-PC, public-host, capacity/abuse/operations or new benchmark acceptance. Named coverage remains173/254 (68%),6/10 gates; preserve Tantra-O. Remaining native skill/FX and complete map/game acceptance stay open.
 
 These are separate source checklists, not release-completion percentages.

@@ -1,5 +1,9 @@
 # Local beta journey, native UI and data tools — 5 November 2026
 
+**Current download:** [6 November client and server update](BETA_REFRESH_20261106.md)
+uses the latest message/movement fixes, two-file signed connections and root
+Patcher.dat. Earlier ZIP identities below are historical.
+
 The two-client fresh-character journey and isolated local installation pass.
 This is a downloadable local-server candidate, with public beta acceptance
 still open. That earlier signed candidate used localhost. The later [party/LAN checkpoint](PARTY_LOOT_LAN.md)
