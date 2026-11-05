@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "executable_sha256": "ff527164d904ca1562b75e2b9833cfcc35235097a90916fea9dc87a389377c61",
+  "actual_sdl_graphics_checks": 128,
+  "custom_resolution_reloaded": [
+    1280,
+    800
+  ],
+  "custom_input": "Explicit private Graphics.cfg dimensions after the full native UI save/read round-trip",
+  "graphics_file_sha256": "05761ec59bd52770150c9e4e23302a0d784ba80a6fd647435fd965e254062166",
+  "fresh_process_file_unchanged": true,
+  "captures": {
+    "bgfx-entry-native-loading.png": [
+      1280,
+      800
+    ]
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "files": {
+    "resource/object/Monster/Mesh/P_Monster1.tmb": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\Monster\\Mesh\\P_Monster1.tmb",
+      "sha256": "9d68b246b19181fa1c47e7ff308f0d3740f707930edd26b2338765c3ab2ec77a",
+      "bytes": 3622,
+      "hpk_extraction": false
+    },
+    "resource/object/Monster/Mesh/P_Monster2.tmb": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\Monster\\Mesh\\P_Monster2.tmb",
+      "sha256": "3deb155e3e8f0a6490bf8f202e9d4a8af40435e9adb14407330a727f77a9cee4",
+      "bytes": 3622,
+      "hpk_extraction": false
+    },
+    "resource/object/Monster/Mesh/P_Monster3.tmb": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\Monster\\Mesh\\P_Monster3.tmb",
+      "sha256": "45a69878846a8fa4adae2ac6a34848e9033814a230322e43f454187c3acd70b0",
+      "bytes": 3622,
+      "hpk_extraction": false
+    },
+    "resource/object/Monster/Mesh/P_Monster4.tmb": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\Monster\\Mesh\\P_Monster4.tmb",
+      "sha256": "9a988cbba6624f93f7901f029c5d3a2520b6c23003997b5e4c4c52022ba31575",
+      "bytes": 3622,
+      "hpk_extraction": false
+    },
+    "resource/object/Monster/Mesh/P_Monster5.tmb": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\Monster\\Mesh\\P_Monster5.tmb",
+      "sha256": "3447423f320a8f09690e595041ef14d589140bd3451685b821ceaf562909e567",
+      "bytes": 3622,
+      "hpk_extraction": false
+    },
+    "resource/object/Monster/Mesh/P_Monster6.tmb": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\Monster\\Mesh\\P_Monster6.tmb",
+      "sha256": "b5910b06467f75731859d52b23d70aab4a655325d64ac11f9b6144d2b950f132",
+      "bytes": 3622,
+      "hpk_extraction": false
+    },
+    "resource/object/Monster/Mesh/P_Monster7.tmb": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\Monster\\Mesh\\P_Monster7.tmb",
+      "sha256": "eb6a51da7d0a246cf417de27da9830004012a72a51b636b67803299d0c2a2aca",
+      "bytes": 3622,
+      "hpk_extraction": false
+    },
+    "resource/object/Monster/Mesh/P_Monster8.tmb": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\Monster\\Mesh\\P_Monster8.tmb",
+      "sha256": "4410a3dc232c0991d7999b300b489eb2fd7c61e3e9c86d5a905c37e730d05635",
+      "bytes": 3622,
+      "hpk_extraction": false
+    },
+    "resource/object/Monster/Mesh/W_Monster2.tmb": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\Monster\\Mesh\\W_Monster2.tmb",
+      "sha256": "429c0e522c5373f05ba3b2da0196850360e2e2c1cf2e541d7c79c3dae2a2bed8",
+      "bytes": 9836,
+      "hpk_extraction": false
+    },
+    "resource/object/Monster/Mesh/W_Monster3.tmb": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\Monster\\Mesh\\W_Monster3.tmb",
+      "sha256": "d8c90010d347f04d8d066eb3433c47aa3ab97c2e28316cc705251f85a98ea24d",
+      "bytes": 9836,
+      "hpk_extraction": false
+    },
+    "resource/object/Monster/Mesh/W_Monster4.tmb": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\Monster\\Mesh\\W_Monster4.tmb",
+      "sha256": "56ae564335d4d222fa3692ad9137b482fd4b5dbfe67f8f2ffe5d8799ec35fc0e",
+      "bytes": 9836,
+      "hpk_extraction": false
+    },
+    "resource/object/Monster/Mesh/W_Monster5.tmb": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\Monster\\Mesh\\W_Monster5.tmb",
+      "sha256": "0d2bf3171a196ff8f96c553c0107610291acd9a9b64e3414481af6f0da5fc28f",
+      "bytes": 9836,
+      "hpk_extraction": false
+    },
+    "resource/object/NPC/Mesh/NPC_Drunkard_SET.tmb": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\NPC\\Mesh\\NPC_Drunkard_SET.tmb",
+      "sha256": "3081e3d5396236b087a1100209a3b4a7c2c17ba99f1182b0066b49450e0d4394",
+      "bytes": 147400
+    },
+    "resource/object/NPC/Mesh/NPC_mandara_trader_R.tmb": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\NPC\\Mesh\\NPC_mandara_trader_R.tmb",
+      "sha256": "8414e56b12e06eff6535a9b219496755c5e837e4bcb6288f92d5104ca6ac0b0a",
+      "bytes": 126857
+    },
+    "resource/object/NPC/Mesh/NPC_Vharah.tmb": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\NPC\\Mesh\\NPC_Vharah.tmb",
+      "sha256": "b456ecbed75115a4d34bcb5c2e0172472a4ab6c90172a3f352f7aeb1946b8a37",
+      "bytes": 87262
+    },
+    "resource/object/Monster/MonsterTex2.hpk": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\Monster\\MonsterTex2.hpk",
+      "sha256": "1a783f0cf88ba2d9045dbeeec1aa27909d40257dee0f1756a3994ca79874d7b5",
+      "bytes": 19740430,
+      "previous": {
+        "sha256": "b0b7831c0e1b0effd09a0fffd0dfd219cbf29c0acc07e8ae542642587bb291f7",
+        "backup": "C:\\_GitHub\\TantraSrc\\_remake_bgfx\\build\\evidence\\four-zone-complete-assets-20261105\\pack-backups\\resource\\object\\Monster\\MonsterTex2.hpk",
+        "unchanged_entries": 1
+      }
+    },
+    "resource/object/NPC/NPCTex2.hpk": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\NPC\\NPCTex2.hpk",
+      "sha256": "5107edeb7db69fee99fb7b8794d655f7e97c3b87e28609a46e4d08cf1bf14a78",
+      "bytes": 18747828
+    },
+    "resource/object/NPC/Ani/NPC_Drunkard_STD.tab": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\NPC\\Ani\\NPC_Drunkard_STD.tab",
+      "sha256": "622d67f83930a0c4a40d950f79addd5ef41e8d2809578f6d5e45646a35ea8539",
+      "bytes": 117936
+    },
+    "resource/object/NPC/Ani/NPC_Drunkard_IDL.tab": {
+      "source": "B:\\Tantra-Files\\_TantraClients\\TantraOnline-Global\\resource\\object\\NPC\\Ani\\NPC_Drunkard_IDL.tab",
+      "sha256": "f4bccad0ee506546836174bff045332688d78a011033d530a5da0f7f7933bd71",
+      "bytes": 201768
+    }
+  },
+  "all_staged_bytes_match_originals": true,
+  "hpk_extraction": false,
+  "primary_packs_unchanged": true,
+  "existing_secondary_payloads_preserved": true,
+  "known_missing": [
+    "NPC_Vharah_STD.tab",
+    "NPC_Vharah_IDL.tab"
+  ],
+  "source_dataset": "Global gameplay rules and original selected map/regular/Pop resource bindings"
+}

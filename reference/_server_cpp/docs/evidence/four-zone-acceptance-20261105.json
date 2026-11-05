@@ -1,0 +1,377 @@
+{
+  "passed": true,
+  "configuration": "Release",
+  "executable_sha256": "ff527164d904ca1562b75e2b9833cfcc35235097a90916fea9dc87a389377c61",
+  "zones": {
+    "1": {
+      "source": "E:\\Global-server\\Zone01",
+      "dataset_sha256": {
+        "Data/Settings.ini": "f59216b863829baa355a9f66727b0df35af93a4beca1137a2e1d6ca2c43110a6",
+        "Data/WorldSettings.ini": "a8479867b50a89d896a8044708236363d7e08c96820c7e4a554780fa4b0db6b5",
+        "GenerationArea.idx": "67494f868d7b96a335c7cf49a53f6d19a4873da2f941268ab2a1370f8c32f13d",
+        "MapData.tcm": "b82dbade3898f6576014832c607bd628c68d7976704394bf95c021211787b61e",
+        "NPCGener.txt": "0ce999a87789cafd74a0ce3995f1a63f52fd0151599a1cfe79189c38ae7b6da5"
+      },
+      "resource_manifest_sha256": "d96dccf3eed9f28766194c84732d93fa5befd1dfdac7493628f13ed1c5b1d5a2",
+      "resources_passed": true,
+      "reported_missing_map_textures": [
+        "r01_common_cart01.bmp"
+      ]
+    },
+    "2": {
+      "source": "E:\\Global-server\\Zone02",
+      "dataset_sha256": {
+        "Data/Settings.ini": "d9dc23359b5636b41d6bed09379cd3803c948c95965d1de0d5034b98825e3aee",
+        "Data/WorldSettings.ini": "a8479867b50a89d896a8044708236363d7e08c96820c7e4a554780fa4b0db6b5",
+        "GenerationArea.idx": "007d1da7572d7a2363e9ee9dfac02d6ea0bf8936d4d43cfdea71083c707e5b83",
+        "MapData.tcm": "023da638a0942b95ba23049984d366c927acd60a67718cee9e6bfa2e2fe87af6",
+        "NPCGener.txt": "f22355d0a10b11ba315556ad7eba5c5c7a4d9c30d25a61922fd18e5500c1084f"
+      },
+      "resource_manifest_sha256": "eb5aedf49753b9a625dbb0ce9d18e3da53c259e7b726923b5d91b81c6fe72e10",
+      "resources_passed": true,
+      "reported_missing_map_textures": []
+    },
+    "3": {
+      "source": "E:\\Global-server\\Zone03",
+      "dataset_sha256": {
+        "Data/Settings.ini": "bd81e82c55de4df98385632b4aefa771affc52599398467d343ac3a4eaabab13",
+        "Data/WorldSettings.ini": "a8479867b50a89d896a8044708236363d7e08c96820c7e4a554780fa4b0db6b5",
+        "GenerationArea.idx": "153fb5fe593459f70fffb4b09d28108ce2b078fdaa7a738ea91a15da1c67b792",
+        "MapData.tcm": "38d847b072298b85c66333b17d46d3121209cc6c77746cb42c6255be8fb348b7",
+        "NPCGener.txt": "e69ca152a8a8768df224ea986e1e84e7614d2c8d4a1a46d621ef2f0343b12de0"
+      },
+      "resource_manifest_sha256": "61528b8fafb0ce7fe882a263bec825a3e4a2c0ccacfbe769ceacdbd0a4039490",
+      "resources_passed": true,
+      "reported_missing_map_textures": []
+    },
+    "4": {
+      "source": "E:\\Global-server\\Zone04",
+      "dataset_sha256": {
+        "Data/Settings.ini": "5036c7c65ed12641afdf210feadd0df5d0baff20b14fbc148dcc915c20e85a1d",
+        "Data/WorldSettings.ini": "0e66607d0c3ff1fcfd2428b7c4f033932c66c23f7afd17052fa4d9b1cca2f4ba",
+        "GenerationArea.idx": "237e8bb3140ac1061bae9bed3b3372049a560c346e0092805334bcad327c7a7b",
+        "MapData.tcm": "bda9a348046b38d78f27005ee10c00c9366e0c42d7dc40d269a495e7e109bcd0",
+        "NPCGener.txt": "3e5b5d28e7beea959ff93aee7759b3639211a12bc174d6c6d52c7030c4cc8a97"
+      },
+      "resource_manifest_sha256": "9ff7cecf48a4970b7f20315cb64c31354315cfd5b7a10a93c29c33adaef6b7fc",
+      "resources_passed": true,
+      "reported_missing_map_textures": []
+    }
+  },
+  "graphical_cases": [
+    "zone2",
+    "zone3",
+    "zone4"
+  ],
+  "protected_unchanged": true,
+  "default_profile_unchanged": true,
+  "known_content_limits": [
+    "NPC1499 Vharah STD/IDL animations unavailable; presentation skipped at user request",
+    "Zone01 r01_common_cart01.bmp is absent from selected original regular/Pop packs; existing authored diffuse rendering retained, no cross-map substitution",
+    "Zone03 generator3842 has no parameter record and cannot generate an actor",
+    "Zero-coordinate NPC placeholders have no authored world placement",
+    "Mandara2nd MAP_Mandara2nd.tms is unavailable in the selected native inputs; ambient regions are skipped and authored BGM playback passes"
+  ],
+  "scope": "Independent map resources, generated/static actor bindings, native movement/portal UI, coherent authority, return, stopped persistence and fresh-process graphical logins; broader quest/combat fidelity remains separate",
+  "accepted_utc": "2026-11-05T04:12:08.787429+00:00",
+  "inputs": "_server_cpp\\docs\\evidence\\four-zone-native-inputs-20261105.json",
+  "cases": {
+    "zone2": {
+      "root": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-world-route-47a115be4324\\graphical",
+      "records": {
+        "RESULT.json": {
+          "graphical_clients": 2,
+          "passed": true,
+          "results": [
+            {
+              "bidirectional_party_chat": true,
+              "cross_map_party": true,
+              "destination_movement": true,
+              "money_after": 500,
+              "money_before": 1500,
+              "passed": true,
+              "real_network": true,
+              "role": 1,
+              "round_trip": true,
+              "source_movement": true,
+              "world_processes": 2,
+              "x": 516,
+              "z": 940,
+              "zone": 1
+            },
+            {
+              "bidirectional_party_chat": true,
+              "cross_map_party": true,
+              "destination_movement": false,
+              "money_after": 500,
+              "money_before": 1500,
+              "passed": true,
+              "real_network": true,
+              "role": 2,
+              "round_trip": false,
+              "source_movement": true,
+              "world_processes": 2,
+              "x": 73,
+              "z": 937,
+              "zone": 2
+            }
+          ]
+        },
+        "PERSISTENCE_RESULT.json": {
+          "destination_zone": 2,
+          "map_position_reopened": true,
+          "passed": true,
+          "records": [
+            {
+              "money": 500,
+              "name": "WorldHero",
+              "revision": 6,
+              "x": 516,
+              "z": 940,
+              "zone": 1
+            },
+            {
+              "money": 500,
+              "name": "BgfxPeer",
+              "revision": 4,
+              "x": 73,
+              "z": 937,
+              "zone": 2
+            }
+          ]
+        },
+        "RELOGIN_RESULT.json": {
+          "passed": true,
+          "results": [
+            {
+              "fresh_process": true,
+              "money": 500,
+              "native_fields_preserved": true,
+              "passed": true,
+              "real_network": true,
+              "x": 516,
+              "z": 940,
+              "zone": 1
+            },
+            {
+              "fresh_process": true,
+              "money": 500,
+              "native_fields_preserved": true,
+              "passed": true,
+              "real_network": true,
+              "x": 73,
+              "z": 937,
+              "zone": 2
+            }
+          ]
+        }
+      }
+    },
+    "zone3": {
+      "root": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-world-route-d7ec3262a31b\\graphical",
+      "records": {
+        "RESULT.json": {
+          "graphical_clients": 2,
+          "passed": true,
+          "results": [
+            {
+              "bidirectional_party_chat": true,
+              "cross_map_party": true,
+              "destination_movement": true,
+              "money_after": 500,
+              "money_before": 1100,
+              "passed": true,
+              "real_network": true,
+              "role": 1,
+              "round_trip": true,
+              "source_movement": true,
+              "world_processes": 2,
+              "x": 230,
+              "z": 823,
+              "zone": 1
+            },
+            {
+              "bidirectional_party_chat": true,
+              "cross_map_party": true,
+              "destination_movement": false,
+              "money_after": 500,
+              "money_before": 1100,
+              "passed": true,
+              "real_network": true,
+              "role": 2,
+              "round_trip": false,
+              "source_movement": true,
+              "world_processes": 2,
+              "x": 441,
+              "z": 64,
+              "zone": 3
+            }
+          ]
+        },
+        "PERSISTENCE_RESULT.json": {
+          "destination_zone": 3,
+          "map_position_reopened": true,
+          "passed": true,
+          "records": [
+            {
+              "money": 500,
+              "name": "WorldHero",
+              "revision": 6,
+              "x": 230,
+              "z": 823,
+              "zone": 1
+            },
+            {
+              "money": 500,
+              "name": "BgfxPeer",
+              "revision": 5,
+              "x": 441,
+              "z": 64,
+              "zone": 3
+            }
+          ]
+        },
+        "RELOGIN_RESULT.json": {
+          "passed": true,
+          "results": [
+            {
+              "fresh_process": true,
+              "money": 500,
+              "native_fields_preserved": true,
+              "passed": true,
+              "real_network": true,
+              "x": 230,
+              "z": 823,
+              "zone": 1
+            },
+            {
+              "fresh_process": true,
+              "money": 500,
+              "native_fields_preserved": true,
+              "passed": true,
+              "real_network": true,
+              "x": 441,
+              "z": 64,
+              "zone": 3
+            }
+          ]
+        }
+      }
+    },
+    "zone4": {
+      "root": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-world-route-324911304871\\graphical",
+      "records": {
+        "RESULT.json": {
+          "graphical_clients": 2,
+          "passed": true,
+          "results": [
+            {
+              "bidirectional_party_chat": true,
+              "cross_map_party": true,
+              "destination_movement": true,
+              "money_after": 500,
+              "money_before": 500,
+              "passed": true,
+              "real_network": true,
+              "role": 1,
+              "round_trip": true,
+              "source_movement": true,
+              "world_processes": 2,
+              "x": 468,
+              "z": 425,
+              "zone": 3
+            },
+            {
+              "bidirectional_party_chat": true,
+              "cross_map_party": true,
+              "destination_movement": false,
+              "money_after": 500,
+              "money_before": 500,
+              "passed": true,
+              "real_network": true,
+              "role": 2,
+              "round_trip": false,
+              "source_movement": true,
+              "world_processes": 2,
+              "x": 471,
+              "z": 417,
+              "zone": 4
+            }
+          ]
+        },
+        "PERSISTENCE_RESULT.json": {
+          "destination_zone": 4,
+          "map_position_reopened": true,
+          "passed": true,
+          "records": [
+            {
+              "money": 500,
+              "name": "WorldHero",
+              "revision": 6,
+              "x": 468,
+              "z": 425,
+              "zone": 3
+            },
+            {
+              "money": 500,
+              "name": "BgfxPeer",
+              "revision": 4,
+              "x": 471,
+              "z": 417,
+              "zone": 4
+            }
+          ]
+        },
+        "RELOGIN_RESULT.json": {
+          "passed": true,
+          "results": [
+            {
+              "fresh_process": true,
+              "money": 500,
+              "native_fields_preserved": true,
+              "passed": true,
+              "real_network": true,
+              "x": 468,
+              "z": 425,
+              "zone": 3
+            },
+            {
+              "fresh_process": true,
+              "money": 500,
+              "native_fields_preserved": true,
+              "passed": true,
+              "real_network": true,
+              "x": 471,
+              "z": 417,
+              "zone": 4
+            }
+          ]
+        }
+      }
+    }
+  },
+  "staged": {
+    "_server_cpp": {
+      "zone_executable_sha256": "e44b43dd9c79b2fc17dea3878a55cd17a597c7949ff13dc8921bd9112751d987",
+      "native_zones": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "_server_final": {
+      "zone_executable_sha256": "e44b43dd9c79b2fc17dea3878a55cd17a597c7949ff13dc8921bd9112751d987",
+      "native_zones": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "schema_version": 1,
+  "client_catalog_sha256": "8472f8e2524150603cce55c5b679f9cd02b73817b32088f7d5417a7e99e2e5ff",
+  "client_parameters_sha256": "d72c2762ee5177eb91984d6a6bfcb9934315fbf3ef214a75380e054e5549f3f4",
+  "data_release_report_sha256": "a79013395489e039ac17810867ce8cc8dd9e3c46d4cbcc87ce9f686d56e0673d"
+}

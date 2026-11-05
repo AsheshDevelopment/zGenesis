@@ -1,6 +1,6 @@
 # Roadmap website progress
 
-Version: 1.0.22. Reviewed: 2026-11-03.
+Version: 1.0.23. Reviewed: 2026-11-05.
 
 - [x] Replace the former site with Tantra-O and Tantra-B roadmaps.
 - [x] Preserve actual OGRE and bgfx task/progress/acceptance records.
@@ -17,6 +17,6 @@ No game feature is marked complete by exporting this website.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 171/254 named tasks checked (67%); 5/10 gates recorded. Latest: Documentation and remaining workspace changes published. Refresh the source progress notes and preserve the completed 2 November Release checkpoint. Include current saved client UI defaults and IDE preferences; label the older Genesis Server Manager report as a historical review of its original layout. Task and gate completion remain unchanged at 171/254 (67%) and 5/10. Existing runtime evidence is retained; this documentation update adds no game rebuild or new runtime acceptance. Preserve Tantra-O. Remaining native skill/FX and complete map/game acceptance stay open.
+- **Tantra-B**: 171/254 named tasks checked (67%); 6/10 gates recorded. Latest: C08 package/recovery and four native zones accepted. Accept the current C08 Windows/D3D11 scope: eleven component checks in each configuration, rendered parity, eight scene generations/four renderer retries, six-process persistence, two guarded relocated entries, 3709 manifested payloads and twelve matched Release profile trials. Worst GPU p95 16.430 ms. Another 128 native SDL graphics assertions and fresh 1280x800 configuration entry pass. Zone01-Zone04 complete native resource/actor audits, two-client movement/travel, exact fares, party/chat, environment/BGM, stopped storage and six fresh saved-zone logins. Preserve the Global level-85/free Cave2 route, original packs and accounts; record missing content. Full C09 combat/quest/guild and Zone05-Zone10 remain open. Preserve Tantra-O. Remaining native skill/FX and complete map/game acceptance stay open.
 
 These are separate source checklists, not release-completion percentages.

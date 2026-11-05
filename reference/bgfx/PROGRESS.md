@@ -1,3 +1,29 @@
+## 5 November 2026: four zones and C08 accepted
+
+Zone01–Zone04 pass independent resource/actor audits, native movement and portal
+UI, two-client party/chat, exact fares, stopped storage and six fresh-process
+saved-zone logins. MandaraCave2nd uses the original Global level-85, free
+125/126 route. The current zone executable and Zone02–Zone04 native profiles
+are staged in both server roots; existing accounts/databases are preserved.
+See [four-zone implementation and evidence](../_server_cpp/docs/FOUR_ZONE_ACCEPTANCE.md).
+
+Current C08 Debug/Release selections each pass 11 checks, plus rendered skinning,
+instancing and local-light parity. Eight scene generations/four renderer retries,
+six-process configuration/audio/layout/quick-slot persistence, two relocated
+portable entries, app-local CRT resolution, locked-stage preservation and native
+fault diagnostics pass. The portable Release contains 3,709 manifested payload
+files. Twelve matched 60-second CPU/GPU trials pass validation; all six GPU
+trials meet the recorded target, with worst p95 16.430 ms and p99 29.834 ms.
+The collector accepts BG-C08-GATE on the named Windows/D3D11 machine. Another
+128 native SDL graphics checks and a fresh-process 1280x800 configuration load
+pass. Prior passing entry/combat/merchant captures are reused only after
+executable and protected-input hash checks. See the
+[package, recovery and evidence guide](docs/PACKAGE_RECOVERY_ACCEPTANCE.md).
+
+NPC1499's unavailable Vharah animations are skipped and logged at the user's
+request. The recorded cart texture, Mandara2nd TMS ambience and absent generator
+parameter gaps remain explicit. No HPK is extracted or cross-map asset borrowed.
+
 ## 3 November 2026: documentation and remaining workspace changes
 
 Publish the current saved `Interface.sys` UI defaults and IDE preferences with

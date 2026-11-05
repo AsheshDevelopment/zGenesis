@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.22"
+VERSION = "1.0.23"
 
 
 def sha(body):
@@ -80,10 +80,10 @@ def refresh(source):
     project["total"] = sum(group["total"] for group in project["groups"])
     project["percent"] = (200 * project["done"] + project["total"]) // (2 * project["total"])
     project["accepted"] = sum(bool(group["gate"] and group["gate"]["done"]) for group in project["groups"])
-    benchmark = read_json(source.parent / "_server_cpp/docs/evidence/c08-release-benchmark-20261102.json")
+    benchmark = read_json(source / "docs/evidence/c08-benchmark-20261105.json")
     assert benchmark["passed"] and len(benchmark["profiles"]) == 6
     worst_p95 = max(row["gpu_wall_ms"]["p95"] for row in benchmark["profiles"])
-    project["description"] = f"Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. The five-part checkpoint verifies real two-client projectiles, native quest/guild UI, MandaraCave, interrupted travel/trade/cash and the matched Release benchmark at 1024x768 HIGH. All six GPU trials meet the 60 FPS criteria; worst p95 {worst_p95:.3f} ms. Full C08 configuration/package, C09, higher guild ranks and individual map gates remain separate."
+    project["description"] = f"Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. C08 package/recovery is accepted on the named Windows/D3D11 machine, including twelve matched Release CPU/GPU trials with worst GPU p95 {worst_p95:.3f} ms. Zone01-Zone04 pass bounded native resources, two-client travel, NPC/environment/audio and persisted saved-zone entry. Wider combat, quests, guild roles and Zone05-Zone10 remain separate C09 work."
     project["foundations"] = [
         "C08: 128-bone/eight-influence native GPU palette, inverse-transpose normals/shadows, CPU fallback and 36 rendered CPU/GPU comparisons",
         "C08: bounded decode/cache/upload queues, compatible opaque instancing, pooled changing-topology FX and conservative hidden visual work",
@@ -115,9 +115,9 @@ def refresh(source):
         "Historical pre-C08 baseline: 7,200 measured native scene frames, CPU/GPU/loading timings and hardware/input hashes"
     ]
     project["next"] = [
-        "Finish the separate full C08 configuration/package acceptance for the final build",
-        "Continue Cave encounters and the next original map individually; keep full map gates separate",
-        "Complete higher guild ranks, marks and alliances; retain source permissions and persistent authority",
+        "Finish native guild ranks, promotion/demotion, marks and server permissions",
+        "Complete selected source quest chains and combat families in the four accepted zones",
+        "Continue Zone05 MandaraCave3rd resources, NPCs, portals, environment and saved-zone entry",
         "Accept additional source quest chains individually; do not invent the missing premium reset contract",
         "Prepare larger-population and physical multi-machine acceptance separately from the two-client checkpoint"
     ]
@@ -155,8 +155,10 @@ def refresh(source):
     project["description"] += " The 2 November checkpoint verifies visible entry, native priest/class services, Mandara2nd scene and persistence, and Manager automatic backups. Its separate rendered projectile step remains incomplete."
     project["reviewed"] = "2026-11-02"
 
-    latest.insert(0, {"date":"2026-11-02", "title":"Projectiles, quest/guild UI, Cave, recovery and Release performance verified", "text":f"All five requested follow-up requirements pass. Two visible clients verify projectile direction/flight/impact, Cave native NPCs/fog/BGM, paid entry/free return and reopened state. Actual SDL quest/guild workflows preserve native history, rewards, permissions and membership. Real source/destination travel and cash socket interruptions retain one fare/debit/delivery; interrupted trade cancels. Fix smaller maps, static type-4 mineral indices/catalog DDS, original K3 portal arrival bounds, catalog idle startup and eight-weight GPU skinning without truncation. Remove repeated HUD rasterization and unchanged life/refining refresh. Twelve matched Release trials retain the same 1024x768 HIGH quality and actor workloads; six GPU trials meet mean/p95/p99 criteria, worst p95 {worst_p95:.3f} ms. Retain failed baselines and raw evidence. Matching runtime/data are staged, preserving MariaDB identity/accounts. Full C08 package/configuration, C09, higher guild ranks/marks and individual map/quest gates remain open. Preserve Tantra-O."})
+    latest.insert(0, {"date":"2026-11-02", "title":"Projectiles, quest/guild UI, Cave, recovery and Release performance verified", "text":f"All five requested follow-up requirements pass. Two visible clients verify projectile direction/flight/impact, Cave native NPCs/fog/BGM, paid entry/free return and reopened state. Actual SDL quest/guild workflows preserve native history, rewards, permissions and membership. Real source/destination travel and cash socket interruptions retain one fare/debit/delivery; interrupted trade cancels. Fix smaller maps, static type-4 mineral indices/catalog DDS, original K3 portal arrival bounds, catalog idle startup and eight-weight GPU skinning without truncation. Remove repeated HUD rasterization and unchanged life/refining refresh. Twelve matched Release trials retain the same 1024x768 HIGH quality and actor workloads; six GPU trials meet mean/p95/p99 criteria, worst p95 13.610 ms. Retain failed baselines and raw evidence. Matching runtime/data are staged, preserving MariaDB identity/accounts. Full C08 package/configuration, C09, higher guild ranks/marks and individual map/quest gates remain open. Preserve Tantra-O."})
     latest.insert(0, {"date":"2026-11-03", "title":"Documentation and remaining workspace changes published", "text":"Refresh the source progress notes and preserve the completed 2 November Release checkpoint. Include current saved client UI defaults and IDE preferences; label the older Genesis Server Manager report as a historical review of its original layout. Task and gate completion remain unchanged at 171/254 (67%) and 5/10. Existing runtime evidence is retained; this documentation update adds no game rebuild or new runtime acceptance. Preserve Tantra-O."})
+    latest.insert(0, {"date":"2026-11-05", "title":"C08 package/recovery and four native zones accepted", "text":f"Accept the current C08 Windows/D3D11 scope: eleven component checks in each configuration, rendered parity, eight scene generations/four renderer retries, six-process persistence, two guarded relocated entries, 3709 manifested payloads and twelve matched Release profile trials. Worst GPU p95 {worst_p95:.3f} ms. Another 128 native SDL graphics assertions and fresh 1280x800 configuration entry pass. Zone01-Zone04 complete native resource/actor audits, two-client movement/travel, exact fares, party/chat, environment/BGM, stopped storage and six fresh saved-zone logins. Preserve the Global level-85/free Cave2 route, original packs and accounts; record missing content. Full C09 combat/quest/guild and Zone05-Zone10 remain open. Preserve Tantra-O."})
+    project["foundations"].insert(0,"C08 package/recovery accepted; Zone01-Zone04 native resources, two-client travel, environment/audio and saved-zone persistence accepted within documented scope")
     project["foundations"].insert(0,"Original HTMessage quest journal and connected quest/guild SDL workflows; Cave resources/NPCs/portals/environment/audio and exact reopened state; native TCP interruption recovery")
     titles = {change["title"] for change in latest}
     project["changes"] = latest + [change for change in project["changes"] if change["title"] not in titles]
@@ -170,9 +172,13 @@ def refresh(source):
     command_doc = ROOT / "reference/bgfx/docs/NATIVE_COMMANDS.md"
     command_doc.parent.mkdir(parents=True, exist_ok=True)
     command_doc.write_bytes((source / "docs/NATIVE_COMMANDS.md").read_bytes())
+    for relative in ("PACKAGE_RECOVERY_ACCEPTANCE.md", "evidence/c08-acceptance-20261105.json", "evidence/c08-benchmark-20261105.json", "evidence/c08-graphics-persistence-20261105.json", "evidence/goal-completion-audit-20261105.json"):
+        target = ROOT / "reference/bgfx/docs" / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes((source / "docs" / relative).read_bytes())
     server_docs = source.parent / "_server_cpp/docs"
     server_reference = ROOT / "reference/_server_cpp/docs"
-    for relative in ("PROJECTILE_CAVE_RECOVERY.md", "evidence/projectile-cave-recovery-20261102.json", "evidence/c08-release-benchmark-20261102.json", "evidence/c08-release-raw-20261102.zip", "ADVANCED_NPC_SERVICES.md", "AUTOMATIC_BACKUPS.md", "MANDARA2ND.md", "evidence/npc-map-backups-20261102.json", "SIMULATION_CHECKPOINTS.md", "evidence/tick-profile-20261101.json", "evidence/checkpoints-20261101.json", "evidence/scaling-gui-20261101.json", "evidence/mariadb-deployment-20261101.json", "evidence/two-client-simulation-20261101.json"):
+    for relative in ("FOUR_ZONE_ACCEPTANCE.md", "evidence/four-zone-acceptance-20261105.json", "evidence/four-zone-native-inputs-20261105.json", "PROJECTILE_CAVE_RECOVERY.md", "evidence/projectile-cave-recovery-20261102.json", "evidence/c08-release-benchmark-20261102.json", "evidence/c08-release-raw-20261102.zip", "ADVANCED_NPC_SERVICES.md", "AUTOMATIC_BACKUPS.md", "MANDARA2ND.md", "evidence/npc-map-backups-20261102.json", "SIMULATION_CHECKPOINTS.md", "evidence/tick-profile-20261101.json", "evidence/checkpoints-20261101.json", "evidence/scaling-gui-20261101.json", "evidence/mariadb-deployment-20261101.json", "evidence/two-client-simulation-20261101.json"):
         target = server_reference / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes((server_docs / relative).read_bytes())
@@ -196,22 +202,21 @@ def refresh(source):
         if name == "docs/PROGRESS.md":
             content = re.sub(r"Version: \d+\.\d+\.\d+", "Version: " + VERSION, content)
             content = content.replace("Version: " + VERSION + " Reviewed:", "Version: " + VERSION + ". Reviewed:")
-            content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-11-03.", content)
+            content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-11-05.", content)
         elif "## " + VERSION not in content:
             entry = """# Unreleased
 
-## 1.0.22 - 2026-11-03 (Tantra-B only)
+## 1.0.23 - 2026-11-05 (Tantra-B only)
 
-Changed: refresh source progress and publication notes; include saved client UI
-and IDE preferences; distinguish the historical Genesis manager report from
-the current C++ manager. Refresh bundled Tantra-B source documentation.
-Verified: source task/gate counts, source hashes and website content checks.
-Existing 2 November gameplay and Release benchmark evidence is retained.
-Failed: none in the final documentation/site checks; runtime gates retain their
-previous status. No game rebuild or new runtime acceptance is claimed.
-Remaining: full C08 configuration/package, broader quest/guild and individual
-map/game acceptance. Coverage stays 171/254 tasks (67%), five accepted gates.
-Tantra-O data and documentation remain unchanged.
+Changed: publish the native Zone01-Zone04 and C08 package/recovery checkpoint;
+refresh source plans, progress and retained acceptance records.
+Verified: current source/executable acceptance identity; existing Debug/Release
+component, renderer, package/persistence and twelve-trial benchmark records;
+three two-client routes and six fresh saved-zone logins. Website checks pass.
+Failed: original missing content is recorded in the four-zone guide; no invented
+replacement or new full-game claim is made.
+Remaining: guild roles/marks, selected quest/combat families, Zone05-Zone10,
+and broader MMO/capacity acceptance. Tantra-O remains unchanged.
 
 
 """
@@ -230,6 +235,8 @@ Tantra-O data and documentation remain unchanged.
         checks[name] = completed.stdout.strip() or "passed"
     manifest = read_json(ROOT / ".roadmap-files.json")
     manifest["files"][command_doc.relative_to(ROOT).as_posix()] = sha(command_doc.read_bytes())
+    for path in (ROOT / "reference/bgfx/docs").rglob("*"):
+        if path.is_file(): manifest["files"][path.relative_to(ROOT).as_posix()] = sha(path.read_bytes())
     for path in server_reference.rglob("*"):
         if path.is_file(): manifest["files"][path.relative_to(ROOT).as_posix()] = sha(path.read_bytes())
     for name in manifest["files"]:

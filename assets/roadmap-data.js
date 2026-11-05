@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. The five-part checkpoint verifies real two-client projectiles, native quest/guild UI, MandaraCave, interrupted travel/trade/cash and the matched Release benchmark at 1024x768 HIGH. All six GPU trials meet the 60 FPS criteria; worst p95 13.610 ms. Full C08 configuration/package, C09, higher guild ranks and individual map gates remain separate. The 1 November follow-up adds native timing, movement checkpoints, channel metrics/create/drain and preserved-data MariaDB deployment; the revised two-client network acceptance passes. The 2 November checkpoint verifies visible entry, native priest/class services, Mandara2nd scene and persistence, and Manager automatic backups. Its separate rendered projectile step remains incomplete.",
+      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. C08 package/recovery is accepted on the named Windows/D3D11 machine, including twelve matched Release CPU/GPU trials with worst GPU p95 16.430 ms. Zone01-Zone04 pass bounded native resources, two-client travel, NPC/environment/audio and persisted saved-zone entry. Wider combat, quests, guild roles and Zone05-Zone10 remain separate C09 work. The 1 November follow-up adds native timing, movement checkpoints, channel metrics/create/drain and preserved-data MariaDB deployment; the revised two-client network acceptance passes. The 2 November checkpoint verifies visible entry, native priest/class services, Mandara2nd scene and persistence, and Manager automatic backups. Its separate rendered projectile step remains incomplete.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -2435,8 +2435,8 @@ window.TANTRA_ROADMAP = {
           ],
           "gate": {
             "id": "BG-C08-GATE",
-            "done": false,
-            "text": "Named hardware/scene/quality has median/p95/p99, stalls, loading and memory evidence. The Release benchmark passes the recorded sustained 60 FPS criteria. Current Debug/Release, relocation and repeated lifecycle closure remains a separate gate and must preserve assets/saves. C09 claims remain open.",
+            "done": true,
+            "text": "Named hardware/scene/quality has median/p95/p99, stalls, loading and memory evidence. Twelve same-build Release CPU/GPU trials validate; all six GPU trials pass the recorded sustained 60 FPS criteria. Eleven checks in each of Debug/Release, package relocation, configuration persistence and repeated scene/renderer lifecycle closure pass with assets/default saves preserved. Accepted 5 November 2026 for the documented Windows/D3D11 scope; C09 claims remain open.",
             "children": []
           },
           "done": 21,
@@ -2777,6 +2777,7 @@ window.TANTRA_ROADMAP = {
       ],
       "foundations": [
         "Original HTMessage quest journal and connected quest/guild SDL workflows; Cave resources/NPCs/portals/environment/audio and exact reopened state; native TCP interruption recovery",
+        "C08 package/recovery accepted; Zone01-Zone04 native resources, two-client travel, environment/audio and saved-zone persistence accepted within documented scope",
         "Native arena/castle recovery: original death HUD choices, persisted fees/HP/positions, Global arena funding/events, winner/prize; connected SDL HUD-only acceptance",
         "Native C++ shared MMO: real two-client combat/projectiles/trade/cash, service restart recovery, source altar/quests/resurrection and a paid two-zone round trip with party HP/chat",
         "C08: 128-bone/eight-influence native GPU palette, inverse-transpose normals/shadows, CPU fallback and 36 rendered CPU/GPU comparisons",
@@ -2809,13 +2810,18 @@ window.TANTRA_ROADMAP = {
         "Historical pre-C08 baseline: 7,200 measured native scene frames, CPU/GPU/loading timings and hardware/input hashes"
       ],
       "next": [
-        "Finish the separate full C08 configuration/package acceptance for the final build",
-        "Continue Cave encounters and the next original map individually; keep full map gates separate",
-        "Complete higher guild ranks, marks and alliances; retain source permissions and persistent authority",
+        "Finish native guild ranks, promotion/demotion, marks and server permissions",
+        "Complete selected source quest chains and combat families in the four accepted zones",
+        "Continue Zone05 MandaraCave3rd resources, NPCs, portals, environment and saved-zone entry",
         "Accept additional source quest chains individually; do not invent the missing premium reset contract",
         "Prepare larger-population and physical multi-machine acceptance separately from the two-client checkpoint"
       ],
       "changes": [
+        {
+          "date": "2026-11-05",
+          "title": "C08 package/recovery and four native zones accepted",
+          "text": "Accept the current C08 Windows/D3D11 scope: eleven component checks in each configuration, rendered parity, eight scene generations/four renderer retries, six-process persistence, two guarded relocated entries, 3709 manifested payloads and twelve matched Release profile trials. Worst GPU p95 16.430 ms. Another 128 native SDL graphics assertions and fresh 1280x800 configuration entry pass. Zone01-Zone04 complete native resource/actor audits, two-client movement/travel, exact fares, party/chat, environment/BGM, stopped storage and six fresh saved-zone logins. Preserve the Global level-85/free Cave2 route, original packs and accounts; record missing content. Full C09 combat/quest/guild and Zone05-Zone10 remain open. Preserve Tantra-O."
+        },
         {
           "date": "2026-11-03",
           "title": "Documentation and remaining workspace changes published",
@@ -2970,7 +2976,7 @@ window.TANTRA_ROADMAP = {
       "done": 171,
       "total": 254,
       "percent": 67,
-      "accepted": 5,
+      "accepted": 6,
       "reviewed": "2026-11-02"
     }
   ],
@@ -3047,11 +3053,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "b57db0903f12233e75d37196c186fdab623cd892e60dacc3558014722ec46d78"
+      "sha256": "24536d6371a42ef3675d161e86eb950ae77993e97743c3d0d70a73440e467fd1"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "a02fcf29d76770a1343d013772cfad6e7d2a905794c09629491d0b7495e2ae45"
+      "sha256": "d70509aabb0ee832d254a32bc1b1a2a1c90583dbe76135a6febac37551a183e7"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",

@@ -2163,11 +2163,11 @@ Its player on/off/restored images remain exactly reversible.
 
 Refine immutable caches, upload budgets, GPU skinning and pooling against CPU parity. Verify repeated scene retirement, corrupt/missing inputs, renderer recovery, SQLite migration safety and relocatable dependency closure. Modern enhancements never substitute for parity.
 
-**Paused checkpoint:** 19/21 individual tasks verified. P17-13/P17-14 and
-BG-C08-GATE remain open. The warm GPU combat trial revived to town (four
-actors instead of 44); its comparison and aggregate acceptance were rejected.
-The replacement trial was stopped at the user's pause. No overall speedup or
-complete sustained-scene acceptance is claimed.
+**Historical checkpoint:** the October 19/21 pause and rejected combat workload
+are superseded by the matched 2 November Release benchmark and complete
+5 November acceptance. Current Debug/Release, configuration, lifecycle,
+relocation and twelve same-build sustained profiles pass the collector.
+See [package, recovery and evidence](docs/PACKAGE_RECOVERY_ACCEPTANCE.md).
 
 **Owned backlog tasks:**
 
@@ -2187,7 +2187,7 @@ complete sustained-scene acceptance is claimed.
 - [x] **P17-12** Bound GPU/CPU/IO memory, queue depth and resource retirement across repeated transitions.
 - [x] **P17-13** Compare equal-quality builds; do not claim improvement from reduced shadows/visibility/animation/texture quality.
 - [x] **P17-14** Define provisional acceptance of sustained 60 FPS at the agreed test resolution on named hardware, then refine from measured baselines.
-  - Final Release evidence: twelve matched 60-second trials, same initial/median actor counts, 1024x768 HIGH and 2048 shadows. Worst GPU p95 13.610 ms, p99 25.356 ms; [retained benchmark and raw archive](../_server_cpp/docs/evidence/c08-release-benchmark-20261102.json). Full C08 gate remains open.
+  - Current Release evidence: twelve matched 60-second trials, same initial/median actor counts, 1024x768 HIGH and 2048 shadows. All six GPU trials meet the target; worst GPU p95 16.430 ms, p99 29.834 ms. [Current benchmark](docs/evidence/c08-benchmark-20261105.json) and [complete C08 acceptance](docs/evidence/c08-acceptance-20261105.json) supersede the earlier benchmark-only checkpoint.
 - [x] **P17-15** Report median/p95/p99 frame intervals and worst stalls alongside scoped CPU/GPU timings. The six measured native scene trials retain raw samples; no 500-1,000 FPS guarantee or broad performance acceptance is claimed.
 - [x] **P18-03** Exercise repeated resize/minimize/focus loss and renderer-reset paths explicitly.
 - [x] **P18-05** Retire GPU handles only after their use is complete; verify shutdown ordering and leaks.
@@ -2231,7 +2231,7 @@ native fault/dump checks preserve the original client/default profiles. This
 is same-machine relocation; fresh-OS deployment, OS disk-cold coverage, forced
 physical GPU removal and other-map/online/release matrices remain open.
 
-- [ ] **BG-C08-GATE** Named hardware/scene/quality has median/p95/p99, stalls, loading and memory evidence. The Release benchmark passes the recorded sustained 60 FPS criteria. Current Debug/Release, relocation and repeated lifecycle closure remains a separate gate and must preserve assets/saves. C09 claims remain open.
+- [x] **BG-C08-GATE** Named hardware/scene/quality has median/p95/p99, stalls, loading and memory evidence. Twelve same-build Release CPU/GPU trials validate; all six GPU trials pass the recorded sustained 60 FPS criteria. Eleven checks in each of Debug/Release, package relocation, configuration persistence and repeated scene/renderer lifecycle closure pass with assets/default saves preserved. Accepted 5 November 2026 for the documented Windows/D3D11 scope; C09 claims remain open.
 
 ### C09 Remaining systems and repository administration
 
@@ -2345,10 +2345,10 @@ regular/Pop packs and each zone's coherent spawn/grid/collision data together.
 
 | Zone | Client map ID | Native CFG | Original map folder | bgfx accepted |
 | --- | --- | --- | --- | --- |
-| Zone01 | 40001 | `MAP_Mandara1st.cfg` | `resource/map/Mandara1st` | [ ] |
-| Zone02 | 40002 | `Map_Mandara2nd.cfg` | `resource/map/Mandara2nd` | [ ] |
-| Zone03 | 40003 | `MAP_MandaraCave.cfg` | `resource/map/MandaraCave` | [ ] |
-| Zone04 | 40004 | `MAP_MandaraCave2nd.cfg` | `resource/map/MandaraCave2nd` | [ ] |
+| Zone01 | 40001 | `MAP_Mandara1st.cfg` | `resource/map/Mandara1st` | [x] |
+| Zone02 | 40002 | `Map_Mandara2nd.cfg` | `resource/map/Mandara2nd` | [x] |
+| Zone03 | 40003 | `MAP_MandaraCave.cfg` | `resource/map/MandaraCave` | [x] |
+| Zone04 | 40004 | `MAP_MandaraCave2nd.cfg` | `resource/map/MandaraCave2nd` | [x] |
 | Zone05 | 40005 | `MAP_MandaraCave3rd.cfg` | `resource/map/MandaraCave3rd` | [ ] |
 | Zone06 | 40006 | `MAP_MandaraCave4th.cfg` | `resource/map/MandaraCave4th` | [ ] |
 | Zone07 | 40007 | `MAP_Jina1st.cfg` | `resource/map/Jina1st` | [ ] |
@@ -2359,6 +2359,10 @@ regular/Pop packs and each zone's coherent spawn/grid/collision data together.
 Zone10's actual catalog binding is important: do not substitute `MAP_Jina4th.cfg`
 for `MAP_NewKruma.cfg` merely because their folder names look related. Zones 18/19
 are existing separate Mandara aliases and are not extra copies of this initial ten-zone scope.
+
+Zone01–Zone04 acceptance is recorded in [the four-zone guide](../_server_cpp/docs/FOUR_ZONE_ACCEPTANCE.md)
+and its executable-bound evidence. Known missing native content is listed explicitly;
+other feature/quest/combat gates are unchanged.
 
 Record three independent results per zone: client resources, server authority,
 and transition/persistence. Check the combined acceptance only after all three

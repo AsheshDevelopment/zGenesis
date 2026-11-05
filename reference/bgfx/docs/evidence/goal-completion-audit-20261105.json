@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "accepted_utc": "2026-11-05T04:55:28.134268+00:00",
+  "client_executable_sha256": "ff527164d904ca1562b75e2b9833cfcc35235097a90916fea9dc87a389377c61",
+  "implementation_sha256": "e33d9eddf1d7971d6bbe63b14b365b69ddab3e97c7c8b949660f3e89769e31cb",
+  "acceptance_record_sha256": "5af5bf7d42d55068714bc6793f88edd34c8d1e6260906b2365a2c6c8912039bf",
+  "benchmark_record_sha256": "610e6a4657d5badf31a38a0a1ce1b4ddb77e138997384d8e0af3a47056c92045",
+  "package_payloads_verified": 3709,
+  "evidence_hashes_verified": 81,
+  "original_files_verified": 19,
+  "two_client_routes_verified": 3,
+  "fresh_saved_zone_logins_verified": 6,
+  "staged": {
+    "_server_cpp": {
+      "current_zone_binary": true,
+      "native_zones": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "shared_tls_configured": true,
+      "matching_rule_files": 32
+    },
+    "_server_final": {
+      "current_zone_binary": true,
+      "native_zones": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "shared_tls_configured": true,
+      "matching_rule_files": 32
+    }
+  },
+  "graphics_assertions": 128,
+  "scope": "Final static artifact/hash/configuration audit of retained passing runtime evidence; no production services or databases started"
+}

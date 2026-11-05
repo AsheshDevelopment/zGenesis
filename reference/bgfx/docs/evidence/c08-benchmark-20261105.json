@@ -1,0 +1,316 @@
+{
+  "passed": true,
+  "scope": "C08 Release performance benchmark; no new Debug or full-package claim",
+  "executable_sha256": "ff527164d904ca1562b75e2b9833cfcc35235097a90916fea9dc87a389377c61",
+  "implementation_sha256": "e33d9eddf1d7971d6bbe63b14b365b69ddab3e97c7c8b949660f3e89769e31cb",
+  "quality": "1024x768 HIGH, 2048 shadows, VSync off",
+  "profiles": [
+    {
+      "scene": "town-idle",
+      "trial": 1,
+      "native_population": 1718,
+      "initial_actors": 4,
+      "median_actors": 4.0,
+      "actor_histograms": {
+        "cpu": {
+          "4": 6722
+        },
+        "gpu": {
+          "4": 4634
+        }
+      },
+      "cpu_pose_median_ms": 0.9535,
+      "gpu_pose_median_ms": 0.407,
+      "gpu_wall_ms": {
+        "count": 4634,
+        "min": 8.544400334,
+        "median": 12.794350275,
+        "mean": 12.949033555410013,
+        "p95": 15.4551150765,
+        "p99": 16.922042163,
+        "max": 21.32840082
+      },
+      "cpu_wall_ms": {
+        "count": 6722,
+        "min": 8.015899919,
+        "median": 8.786750026,
+        "mean": 8.926407336642963,
+        "p95": 9.95383011155,
+        "p99": 11.345861960799999,
+        "max": 14.49710038
+      },
+      "peak_private_bytes": 1078894592.0
+    },
+    {
+      "scene": "field-idle",
+      "trial": 1,
+      "native_population": 1718,
+      "initial_actors": 43,
+      "median_actors": 43.0,
+      "actor_histograms": {
+        "cpu": {
+          "43": 5524
+        },
+        "gpu": {
+          "43": 5878
+        }
+      },
+      "cpu_pose_median_ms": 4.11755,
+      "gpu_pose_median_ms": 2.8175499999999998,
+      "gpu_wall_ms": {
+        "count": 5878,
+        "min": 8.631899953,
+        "median": 9.9213500505,
+        "mean": 10.20828059213355,
+        "p95": 12.204819637999998,
+        "p99": 14.720912110099981,
+        "max": 20.55940032
+      },
+      "cpu_wall_ms": {
+        "count": 5524,
+        "min": 9.883100167,
+        "median": 10.774599855,
+        "mean": 10.862317696210173,
+        "p95": 11.752230111499998,
+        "p99": 12.655586751699984,
+        "max": 16.61079936
+      },
+      "peak_private_bytes": 1188986880.0
+    },
+    {
+      "scene": "field-combat",
+      "trial": 1,
+      "native_population": 1718,
+      "initial_actors": 38,
+      "median_actors": 44,
+      "actor_histograms": {
+        "cpu": {
+          "38": 184,
+          "39": 14,
+          "40": 552,
+          "41": 11,
+          "42": 6,
+          "43": 73,
+          "44": 4219,
+          "45": 7,
+          "46": 1
+        },
+        "gpu": {
+          "38": 201,
+          "39": 15,
+          "40": 601,
+          "41": 13,
+          "42": 6,
+          "43": 79,
+          "44": 4004,
+          "45": 7,
+          "46": 1
+        }
+      },
+      "cpu_pose_median_ms": 3.5714,
+      "gpu_pose_median_ms": 2.5507,
+      "gpu_wall_ms": {
+        "count": 4927,
+        "min": 8.734099567,
+        "median": 11.11259963,
+        "mean": 12.179451580044043,
+        "p95": 16.430089991000003,
+        "p99": 29.834439683399932,
+        "max": 87.04190701
+      },
+      "cpu_wall_ms": {
+        "count": 5067,
+        "min": 9.653899819,
+        "median": 11.04690041,
+        "mean": 11.843213246373397,
+        "p95": 15.287370142999999,
+        "p99": 26.9568457416,
+        "max": 91.19150043
+      },
+      "peak_private_bytes": 1227612160.0
+    },
+    {
+      "scene": "town-idle",
+      "trial": 2,
+      "native_population": 1718,
+      "initial_actors": 4,
+      "median_actors": 4,
+      "actor_histograms": {
+        "cpu": {
+          "4": 5717
+        },
+        "gpu": {
+          "4": 6580
+        }
+      },
+      "cpu_pose_median_ms": 0.9947,
+      "gpu_pose_median_ms": 0.3205,
+      "gpu_wall_ms": {
+        "count": 6580,
+        "min": 7.922000252,
+        "median": 8.945800364,
+        "mean": 9.11867301559088,
+        "p95": 10.501215095999997,
+        "p99": 11.670351670799999,
+        "max": 15.8607997
+      },
+      "cpu_wall_ms": {
+        "count": 5717,
+        "min": 7.722300012,
+        "median": 9.489100426,
+        "mean": 10.495676222079238,
+        "p95": 15.39373975,
+        "p99": 23.78538831920001,
+        "max": 109.4827056
+      },
+      "peak_private_bytes": 1070170112.0
+    },
+    {
+      "scene": "field-idle",
+      "trial": 2,
+      "native_population": 1718,
+      "initial_actors": 43,
+      "median_actors": 43,
+      "actor_histograms": {
+        "cpu": {
+          "43": 3539
+        },
+        "gpu": {
+          "43": 5802
+        }
+      },
+      "cpu_pose_median_ms": 5.6719,
+      "gpu_pose_median_ms": 2.8609,
+      "gpu_wall_ms": {
+        "count": 5802,
+        "min": 8.915499784,
+        "median": 10.1660504,
+        "mean": 10.341348621076698,
+        "p95": 11.876229991,
+        "p99": 13.333378356799997,
+        "max": 17.49650016
+      },
+      "cpu_wall_ms": {
+        "count": 3539,
+        "min": 10.96819993,
+        "median": 16.70799963,
+        "mean": 16.954170012071206,
+        "p95": 22.864330375999998,
+        "p99": 25.682571973599995,
+        "max": 97.37599641
+      },
+      "peak_private_bytes": 1207619584.0
+    },
+    {
+      "scene": "field-combat",
+      "trial": 2,
+      "native_population": 1718,
+      "initial_actors": 38,
+      "median_actors": 44.0,
+      "actor_histograms": {
+        "cpu": {
+          "38": 98,
+          "39": 7,
+          "40": 342,
+          "41": 7,
+          "42": 3,
+          "43": 43,
+          "44": 2626,
+          "45": 3,
+          "46": 1
+        },
+        "gpu": {
+          "38": 182,
+          "39": 13,
+          "40": 555,
+          "41": 12,
+          "42": 5,
+          "43": 74,
+          "44": 4256,
+          "45": 7,
+          "46": 1
+        }
+      },
+      "cpu_pose_median_ms": 4.9988,
+      "gpu_pose_median_ms": 2.5451,
+      "gpu_wall_ms": {
+        "count": 5105,
+        "min": 9.385099635,
+        "median": 10.99179965,
+        "mean": 11.758419004079725,
+        "p95": 15.348719810000004,
+        "p99": 27.4121676388,
+        "max": 108.2201973
+      },
+      "cpu_wall_ms": {
+        "count": 3130,
+        "min": 11.62519958,
+        "median": 17.78719947,
+        "mean": 19.171869275696487,
+        "p95": 28.778930285999973,
+        "p99": 44.41084075890001,
+        "max": 155.5614024
+      },
+      "peak_private_bytes": 1231048704.0
+    }
+  ],
+  "evidence_sha256": {
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\WORLD_PROFILE_MATRIX.json": "d31800e5cd021267fdc5f692279974d5dd7cb0222d7855a5e517e845db1578a0",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\HARDWARE.json": "8ef71a778cc57bd76150ea77792295f5d3f488a1d73d7b6905686e0b22e3e8ec",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\WORLD_PROFILE_MATRIX.json": "c8d47cf6aa82140589d9dc8dd0cd9aa3408ae1f3d9ada027592eafa48af66f2c",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\HARDWARE.json": "8ef71a778cc57bd76150ea77792295f5d3f488a1d73d7b6905686e0b22e3e8ec",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\town-idle-1\\profile\\QA_FIXTURE.json": "56c06117100acb200bbd0a96a48d828fd404976e63b5e662aa852463d7dd78bd",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\town-idle-1\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\town-idle-1\\WORLD_PROFILE_RESULT.json": "523766e896df0a2a765b85ae0e2089126c6f25439c70877f94b6bc4e6676c99f",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\town-idle-1\\FRAME_PROFILE.csv": "8ef8162b611d9af580a4d99c709fa65fc1c653a464403537516fc3072744354f",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\town-idle-1\\profile\\QA_FIXTURE.json": "56c06117100acb200bbd0a96a48d828fd404976e63b5e662aa852463d7dd78bd",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\town-idle-1\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\town-idle-1\\WORLD_PROFILE_RESULT.json": "540c820f89560897b8b26229689688c9822638d8a8aae9e787adbec6942779d2",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\town-idle-1\\FRAME_PROFILE.csv": "deefb20d46e2246481821a9db2ba925044a6bf35782aa4506dfc0cb910a2e519",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\field-idle-1\\profile\\QA_FIXTURE.json": "8fa941e095dc630480f6042268199849bcc24feb9ac3540f31b6ac140af7dcc7",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\field-idle-1\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\field-idle-1\\WORLD_PROFILE_RESULT.json": "88fdba0696a5b5e06b3eae21f059832b15715836e9ad58a8e841b419fa0fba51",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\field-idle-1\\FRAME_PROFILE.csv": "f4de803c19809539cef0ddd93c9abacacf27dc5ec0898a23946905a79ef5378e",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\field-idle-1\\profile\\QA_FIXTURE.json": "8fa941e095dc630480f6042268199849bcc24feb9ac3540f31b6ac140af7dcc7",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\field-idle-1\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\field-idle-1\\WORLD_PROFILE_RESULT.json": "15fb1183af9f1e78093b338b0b3b67f79a6fd3a8d6978e7ea0f7c5353535cd61",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\field-idle-1\\FRAME_PROFILE.csv": "b52c1334974a64473b1eda4a434100d6728ae1e49750c672f124a53618701af9",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\field-combat-1\\profile\\QA_FIXTURE.json": "f9614f2b5c66376d83f648e5ef5a8c0ba2e01dd6f7f610597b55ac8abafda97b",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\field-combat-1\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\field-combat-1\\WORLD_PROFILE_RESULT.json": "15bec28c04fac62cb41d673565c8f76e93449c3e212cdb038acd19a1bb7b71dc",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\field-combat-1\\FRAME_PROFILE.csv": "29c8862a81eceecfab9d0074484709e750cfe70b555aed084e4e906af242147f",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\field-combat-1\\profile\\QA_FIXTURE.json": "f9614f2b5c66376d83f648e5ef5a8c0ba2e01dd6f7f610597b55ac8abafda97b",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\field-combat-1\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\field-combat-1\\WORLD_PROFILE_RESULT.json": "aec7d4bfa1ec64e388bc6438fcf00bae92d849714adffeaa7245223458573498",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\field-combat-1\\FRAME_PROFILE.csv": "2b015a4437e055fbb898db66021962c92d68c3d36f49d8435d9e7c22604f56df",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\town-idle-2\\profile\\QA_FIXTURE.json": "56c06117100acb200bbd0a96a48d828fd404976e63b5e662aa852463d7dd78bd",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\town-idle-2\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\town-idle-2\\WORLD_PROFILE_RESULT.json": "e3ad888da3035133ecb52402202dc1952d0622ce2b6f1b6a3806a24780ebd560",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\town-idle-2\\FRAME_PROFILE.csv": "f21f6bc14705822cb9a1ad949c07f2280ffdc4ff4829abf770ed6239ad6cede8",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\town-idle-2\\profile\\QA_FIXTURE.json": "56c06117100acb200bbd0a96a48d828fd404976e63b5e662aa852463d7dd78bd",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\town-idle-2\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\town-idle-2\\WORLD_PROFILE_RESULT.json": "0faae8d3ff7424367bac411bbfb52571eec56650f2f5ffea0f7f3eef33cd3231",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\town-idle-2\\FRAME_PROFILE.csv": "c36a7187dc1077dee5f643520d1d2fff69c781c948e43a0a020148a0d096cafd",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\field-idle-2\\profile\\QA_FIXTURE.json": "8fa941e095dc630480f6042268199849bcc24feb9ac3540f31b6ac140af7dcc7",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\field-idle-2\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\field-idle-2\\WORLD_PROFILE_RESULT.json": "b87f9a2a5258c1d2abd8565cc215c0d7108929768915b2422087cfea09bba149",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\field-idle-2\\FRAME_PROFILE.csv": "dcbb705fc2ea8753e9a01e1fef2f0427c6f46f19b098d7c1c22c7dcbfa4411df",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\field-idle-2\\profile\\QA_FIXTURE.json": "8fa941e095dc630480f6042268199849bcc24feb9ac3540f31b6ac140af7dcc7",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\field-idle-2\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\field-idle-2\\WORLD_PROFILE_RESULT.json": "80208a846083f0285310afc87b1518e907efdd501942feffb680f847c14fd589",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\field-idle-2\\FRAME_PROFILE.csv": "dd9dd1e01ad33d2e7e6cc77a98a09d723a8c94a934e27e6953e9bbf8ab294228",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\field-combat-2\\profile\\QA_FIXTURE.json": "f9614f2b5c66376d83f648e5ef5a8c0ba2e01dd6f7f610597b55ac8abafda97b",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\field-combat-2\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\field-combat-2\\WORLD_PROFILE_RESULT.json": "a552ea6381c507ee7b9c13d6bd626d97b635e84d795d5c69d7f4f1bc149704b2",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-cpu\\field-combat-2\\FRAME_PROFILE.csv": "2960968c721daeae6e66cb47ab590055e5a739acc1031e0dc5cd1a6521974563",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\field-combat-2\\profile\\QA_FIXTURE.json": "f9614f2b5c66376d83f648e5ef5a8c0ba2e01dd6f7f610597b55ac8abafda97b",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\field-combat-2\\SETTINGS.json": "a5f13731121a6128be28beb5eba72574e6d2e24b6000e06a3f09972ee1086a2f",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\field-combat-2\\WORLD_PROFILE_RESULT.json": "dfe879b89136144f0235e61a2535c4cb842a34068227d6c65701a7a064e15824",
+    "build\\evidence\\c08-final2-acceptance-20261105\\profile-gpu\\field-combat-2\\FRAME_PROFILE.csv": "d4cbd68e62f0e855dddaf830352530ed89c2ad212c9ef060d0cdd5f736c53c97"
+  },
+  "limits": [
+    "Live native AI can vary instantaneous actor counts; initial and median counts must match and all raw histograms are retained",
+    "Application cache cold/warm; OS disk cache uncontrolled",
+    "Named local hardware only; no capacity or other-map claim"
+  ]
+}

@@ -12,11 +12,11 @@
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "b57db0903f12233e75d37196c186fdab623cd892e60dacc3558014722ec46d78"
+      "sha256": "24536d6371a42ef3675d161e86eb950ae77993e97743c3d0d70a73440e467fd1"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "a02fcf29d76770a1343d013772cfad6e7d2a905794c09629491d0b7495e2ae45"
+      "sha256": "d70509aabb0ee832d254a32bc1b1a2a1c90583dbe76135a6febac37551a183e7"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",
@@ -41,7 +41,7 @@
       "done": 171,
       "total": 254,
       "percent": 67,
-      "accepted": 5
+      "accepted": 6
     }
   ]
 }
