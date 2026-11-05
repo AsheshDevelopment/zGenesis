@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.23"
+VERSION = "1.0.24"
 
 
 def sha(body):
@@ -83,7 +83,7 @@ def refresh(source):
     benchmark = read_json(source / "docs/evidence/c08-benchmark-20261105.json")
     assert benchmark["passed"] and len(benchmark["profiles"]) == 6
     worst_p95 = max(row["gpu_wall_ms"]["p95"] for row in benchmark["profiles"])
-    project["description"] = f"Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. C08 package/recovery is accepted on the named Windows/D3D11 machine, including twelve matched Release CPU/GPU trials with worst GPU p95 {worst_p95:.3f} ms. Zone01-Zone04 pass bounded native resources, two-client travel, NPC/environment/audio and persisted saved-zone entry. Wider combat, quests, guild roles and Zone05-Zone10 remain separate C09 work."
+    project["description"] = f"Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. C08 package/recovery is accepted on the named Windows/D3D11 machine, including twelve matched Release CPU/GPU trials with worst GPU p95 {worst_p95:.3f} ms. Zone01-Zone05 pass bounded native resources, two-client travel, NPC/environment/audio and persisted saved-zone entry. Native guild roles/paid marks and selected quest/combat families pass focused Release checks. Wider C09, Zone06-Zone10 and public-beta release gates remain open; the earlier C08 benchmark applies to its frozen executable."
     project["foundations"] = [
         "C08: 128-bone/eight-influence native GPU palette, inverse-transpose normals/shadows, CPU fallback and 36 rendered CPU/GPU comparisons",
         "C08: bounded decode/cache/upload queues, compatible opaque instancing, pooled changing-topology FX and conservative hidden visual work",
@@ -115,11 +115,11 @@ def refresh(source):
         "Historical pre-C08 baseline: 7,200 measured native scene frames, CPU/GPU/loading timings and hardware/input hashes"
     ]
     project["next"] = [
-        "Finish native guild ranks, promotion/demotion, marks and server permissions",
-        "Complete selected source quest chains and combat families in the four accepted zones",
-        "Continue Zone05 MandaraCave3rd resources, NPCs, portals, environment and saved-zone entry",
-        "Accept additional source quest chains individually; do not invent the missing premium reset contract",
-        "Prepare larger-population and physical multi-machine acceptance separately from the two-client checkpoint"
+        "Freeze limited-beta zones, skills, quests and known content; finish a fresh-account progression journey",
+        "Verify the final download and signed server configuration on a clean player PC",
+        "Set an initial public player cap from sustained mixed gameplay, persistence and restart measurements",
+        "Finish public-entry abuse rejection, enrollment, monitoring, backup/rollback and tester support gates",
+        "Continue additional native quest/combat families and Zone06 separately; do not invent missing source content"
     ]
 
     latest = [
@@ -160,6 +160,9 @@ def refresh(source):
     latest.insert(0, {"date":"2026-11-05", "title":"C08 package/recovery and four native zones accepted", "text":f"Accept the current C08 Windows/D3D11 scope: eleven component checks in each configuration, rendered parity, eight scene generations/four renderer retries, six-process persistence, two guarded relocated entries, 3709 manifested payloads and twelve matched Release profile trials. Worst GPU p95 {worst_p95:.3f} ms. Another 128 native SDL graphics assertions and fresh 1280x800 configuration entry pass. Zone01-Zone04 complete native resource/actor audits, two-client movement/travel, exact fares, party/chat, environment/BGM, stopped storage and six fresh saved-zone logins. Preserve the Global level-85/free Cave2 route, original packs and accounts; record missing content. Full C09 combat/quest/guild and Zone05-Zone10 remain open. Preserve Tantra-O."})
     project["foundations"].insert(0,"C08 package/recovery accepted; Zone01-Zone04 native resources, two-client travel, environment/audio and saved-zone persistence accepted within documented scope")
     project["foundations"].insert(0,"Original HTMessage quest journal and connected quest/guild SDL workflows; Cave resources/NPCs/portals/environment/audio and exact reopened state; native TCP interruption recovery")
+    latest.insert(0, {"date":"2026-11-05", "title":"Native guild ranks, selected progression and MandaraCave3rd", "text":"Complete the requested bounded continuation: native ranks10/9/8/7/0, promotion/demotion, server restrictions, paid packed-DDS marks, owner/peer guild names and master succession. Two real accounts pass SDL guild workflows; fresh MariaDB and the deployed schema8 migration preserve durable records with native backups. Audit original Tantra/Database account blobs, GameInfo summaries and billing exports without changing them. Selected story21 and material tasks10006/10013/10057 verify source dialogue, kill/item objectives, party rewards, replay and reopen. Dash3014/3114, multiple3012 and ordinary families901/911/915 in Zones02/03/04 pass bounded combat/death/reward/loot/respawn/resurrection. Zone05 passes native resources/actors, two-client paid entry/free return, party/chat, environment/BGM and two fresh saved-state logins. Record absent3905 and zero-position NPCs. Stage matching Release runtime files. P16-01/P16-07 close:173/254 (68%),6/10 gates. Earlier fixture failures remain recorded; no Debug or broad benchmark rerun. The previous C08 benchmark is historical for its frozen binary. Public beta remains unaccepted with explicit release gates. Preserve Tantra-O."})
+    project["foundations"].insert(0,"Native guild ranks/permissions/paid marks, selected quest21/material tasks and Dash/multiple-strike authority; additive schema8 preserves deployed accounts")
+    project["foundations"].insert(0,"Zone05 MandaraCave3rd: original resources, two-client600-Rupiah entry/free return, environment/audio and fresh-process saved state; missing3905 skipped")
     titles = {change["title"] for change in latest}
     project["changes"] = latest + [change for change in project["changes"] if change["title"] not in titles]
     # OGRE data and all bundled OGRE documentation remain byte-identical.
@@ -178,10 +181,16 @@ def refresh(source):
         target.write_bytes((source / "docs" / relative).read_bytes())
     server_docs = source.parent / "_server_cpp/docs"
     server_reference = ROOT / "reference/_server_cpp/docs"
-    for relative in ("FOUR_ZONE_ACCEPTANCE.md", "evidence/four-zone-acceptance-20261105.json", "evidence/four-zone-native-inputs-20261105.json", "PROJECTILE_CAVE_RECOVERY.md", "evidence/projectile-cave-recovery-20261102.json", "evidence/c08-release-benchmark-20261102.json", "evidence/c08-release-raw-20261102.zip", "ADVANCED_NPC_SERVICES.md", "AUTOMATIC_BACKUPS.md", "MANDARA2ND.md", "evidence/npc-map-backups-20261102.json", "SIMULATION_CHECKPOINTS.md", "evidence/tick-profile-20261101.json", "evidence/checkpoints-20261101.json", "evidence/scaling-gui-20261101.json", "evidence/mariadb-deployment-20261101.json", "evidence/two-client-simulation-20261101.json"):
+    for relative in ("GUILD_QUESTS_ZONE05.md", "evidence/guild-quests-zone05-20261105.json", "evidence/zone05-acceptance-20261105.json", "evidence/zone05-travel-persistence-20261105.json", "evidence/guild-quest-persistence-20261105.json", "evidence/original-sql-reference-20261105.json", "FOUR_ZONE_ACCEPTANCE.md", "evidence/four-zone-acceptance-20261105.json", "evidence/four-zone-native-inputs-20261105.json", "PROJECTILE_CAVE_RECOVERY.md", "evidence/projectile-cave-recovery-20261102.json", "evidence/c08-release-benchmark-20261102.json", "evidence/c08-release-raw-20261102.zip", "ADVANCED_NPC_SERVICES.md", "AUTOMATIC_BACKUPS.md", "MANDARA2ND.md", "evidence/npc-map-backups-20261102.json", "SIMULATION_CHECKPOINTS.md", "evidence/tick-profile-20261101.json", "evidence/checkpoints-20261101.json", "evidence/scaling-gui-20261101.json", "evidence/mariadb-deployment-20261101.json", "evidence/two-client-simulation-20261101.json"):
         target = server_reference / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes((server_docs / relative).read_bytes())
+
+    server_sql = server_reference.parent / "sql"
+    server_sql.mkdir(parents=True, exist_ok=True)
+    sql_readme = (server_docs.parent / "sql/README.md").read_text(encoding="utf-8")
+    sql_readme = sql_readme.replace("../../Tantra/Database", "https://github.com/AsheshPlays/Tantra-Src/tree/main/Tantra/Database")
+    (server_sql / "README.md").write_text(sql_readme, encoding="utf-8", newline="\n")
 
     for source_image in (server_docs / "evidence/projectile-cave-recovery-20261102").iterdir():
         target = server_reference / source_image.relative_to(server_docs)
@@ -206,17 +215,16 @@ def refresh(source):
         elif "## " + VERSION not in content:
             entry = """# Unreleased
 
-## 1.0.23 - 2026-11-05 (Tantra-B only)
+## 1.0.24 - 2026-11-05 (Tantra-B only)
 
-Changed: publish the native Zone01-Zone04 and C08 package/recovery checkpoint;
-refresh source plans, progress and retained acceptance records.
-Verified: current source/executable acceptance identity; existing Debug/Release
-component, renderer, package/persistence and twelve-trial benchmark records;
-three two-client routes and six fresh saved-zone logins. Website checks pass.
-Failed: original missing content is recorded in the four-zone guide; no invented
-replacement or new full-game claim is made.
-Remaining: guild roles/marks, selected quest/combat families, Zone05-Zone10,
-and broader MMO/capacity acceptance. Tantra-O remains unchanged.
+Changed: native guild ranks/marks, selected quest/combat families, schema8,
+original SQL provenance and bounded Zone05 acceptance; publish beta release gates.
+Verified: focused Release authority/persistence checks, two-account guild SDL,
+two graphical Zone05 clients and fresh saved-state logins; website checks pass.
+Failed: earlier fixture attempts are retained and corrected; absent3905 and
+zero-position NPCs are recorded/skipped. No new broad C08 benchmark is claimed.
+Remaining: individual quest/combat completeness, Zone06-Zone10, sustained player
+capacity and public-beta release gates. Tantra-O remains unchanged.
 
 
 """
@@ -237,7 +245,7 @@ and broader MMO/capacity acceptance. Tantra-O remains unchanged.
     manifest["files"][command_doc.relative_to(ROOT).as_posix()] = sha(command_doc.read_bytes())
     for path in (ROOT / "reference/bgfx/docs").rglob("*"):
         if path.is_file(): manifest["files"][path.relative_to(ROOT).as_posix()] = sha(path.read_bytes())
-    for path in server_reference.rglob("*"):
+    for path in server_reference.parent.rglob("*"):
         if path.is_file(): manifest["files"][path.relative_to(ROOT).as_posix()] = sha(path.read_bytes())
     for name in manifest["files"]:
         manifest["files"][name] = sha((ROOT / name).read_bytes())

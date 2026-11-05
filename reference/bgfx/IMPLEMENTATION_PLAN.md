@@ -1,3 +1,14 @@
+## Limited public beta target - 5 November 2026
+
+The client and C++ shared server are playable foundations. Public beta is **not
+accepted**. The release gates are maintained in
+[the C++ server plan](../_server_cpp/IMPLEMENTATION_PLAN.md#public-beta-release-gates---requested-5-november-2026):
+complete player journeys, a clean player installation, signed connection files,
+a measured player cap, public-entry rejection, reliable saves/recovery and
+operator rollback/support. Prioritize source-based ports in playable batches;
+record missing assets and keep checks focused on changed behavior. Every original
+quest, skill and map is not required for a clearly scoped limited beta.
+
 ## Completed follow-up - 2 November 2026
 
 Projectile, native journal/implemented guild UI, MandaraCave travel/environment
@@ -2288,7 +2299,7 @@ Retain full skills/periodic combat/AI/loot, quests/refinement, travel/revival, o
 - [x] **P15-08** Remove Zone01-only authority restrictions only after the destination's server logic/data are ready.
 - [ ] **P15-09** Use the same per-zone checks: entry, movement, NPCs, environment, audio, return and saved-zone persistence.
 - [x] **P15-10** Keep all ten acceptance toggles unchecked until their individual evidence exists.
-- [ ] **P16-01** Audit native quest state, dialogue conditions, kill/item objectives and rewards.
+- [x] **P16-01** Audit native quest state, dialogue conditions, kill/item objectives and rewards. Selected chain21 and material tasks10006/10013/10057, party rewards and persistence pass; individual graphical quest acceptance remains separate.
   - [x] Connect original event/dialogue/kill callbacks and all sixteen later task bindings; check native solo/leader/member reward distribution. Individual quest graphical acceptance remains open.
 - [ ] **P16-02** Implement advanced NPC callbacks, class/religion changes and refinement workflows.
   - [x] Connect original priest selection, offerings and god changes with committed costs, replay protection and save-point rules; verify actual SDL choices and persistence.
@@ -2297,8 +2308,8 @@ Retain full skills/periodic combat/AI/loot, quests/refinement, travel/revival, o
 - [ ] **P16-04** Add portals/transport, return items and remaining resurrection paths/penalties.
 - [x] **P16-05** Implement chat channels/whispers, parties and authoritative membership state.
 - [x] **P16-06** Implement trade offer/confirm/cancel/disconnect behavior and atomic item/money persistence.
-- [ ] **P16-07** Implement guild state, member names/marks and permissions before enabling dependent UI.
-  - [x] Existing master/member UI: actual SDL create/invite/accept/announcement, rejected member actions, confirmed leave/kick/disband, reconnect and reopened membership/announcement. Higher ranks, marks and alliances remain open.
+- [x] **P16-07** Implement guild state, member names/marks and permissions before enabling dependent UI.
+  - [x] Existing master/member UI: actual SDL create/invite/accept/announcement, rejected member actions, confirmed leave/kick/disband, reconnect and reopened membership/announcement. Native ranks, paid marks, promotion/demotion, succession and nearby peer presentation now pass the 5 November continuation. Alliances remain under P16-08.
 - [ ] **P16-08** Audit PvP, duels, events, siege/competitive modes and their native restrictions.
 - [x] **P16-09** Mark unsupported online commands visibly and avoid sending guessed legacy packets.
 - [x] **P16-10** Require explicit server implementation/evidence for each feature, not just client buttons.
@@ -2349,7 +2360,7 @@ regular/Pop packs and each zone's coherent spawn/grid/collision data together.
 | Zone02 | 40002 | `Map_Mandara2nd.cfg` | `resource/map/Mandara2nd` | [x] |
 | Zone03 | 40003 | `MAP_MandaraCave.cfg` | `resource/map/MandaraCave` | [x] |
 | Zone04 | 40004 | `MAP_MandaraCave2nd.cfg` | `resource/map/MandaraCave2nd` | [x] |
-| Zone05 | 40005 | `MAP_MandaraCave3rd.cfg` | `resource/map/MandaraCave3rd` | [ ] |
+| Zone05 | 40005 | `MAP_MandaraCave3rd.cfg` | `resource/map/MandaraCave3rd` | [x] |
 | Zone06 | 40006 | `MAP_MandaraCave4th.cfg` | `resource/map/MandaraCave4th` | [ ] |
 | Zone07 | 40007 | `MAP_Jina1st.cfg` | `resource/map/Jina1st` | [ ] |
 | Zone08 | 40008 | `MAP_Jina2nd.cfg` | `resource/map/Jina2nd` | [ ] |

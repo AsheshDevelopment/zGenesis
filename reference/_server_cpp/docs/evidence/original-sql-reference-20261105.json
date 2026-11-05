@@ -1,0 +1,22 @@
+{
+  "reference_only": true,
+  "reference_files_unchanged": true,
+  "sources": [
+    {
+      "source": "Tantra/Database/billcrux_phil.sql",
+      "sha256": "34eaa3ce05e026eef0c6e3e0109e5e512619b40f78bb22b32dd17dde8b0b40e0"
+    },
+    {
+      "source": "Tantra/Database/Tantra.sql",
+      "sha256": "78664de25ac72d37123a45ea8029058be8f114dcbd04fd7c4f6ac96d168004bb"
+    },
+    {
+      "source": "Tantra/Database/UserLogin.sql",
+      "sha256": "0e8559510456a83dad2e6709a4dd1e31d1c0fc1968ea145adc643777f9fcfc5d"
+    }
+  ],
+  "original_account_column": "Tantra.Account.Account binary(7124)",
+  "original_game_summary_tables": "GameInfo00-GameInfo05",
+  "remake_schema": 8,
+  "sql_server_import_adapter_accepted": false
+}

@@ -1,0 +1,22 @@
+{
+  "announcement": "Saved native announcement",
+  "passed": true,
+  "records": [
+    {
+      "guild": 2,
+      "money": 400200,
+      "name": "WorldHero",
+      "quest1": 255,
+      "quest2": 1,
+      "revision": 8
+    },
+    {
+      "guild": 2,
+      "money": 0,
+      "name": "BgfxPeer",
+      "quest1": 0,
+      "quest2": 0,
+      "revision": 7
+    }
+  ]
+}

@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. C08 package/recovery is accepted on the named Windows/D3D11 machine, including twelve matched Release CPU/GPU trials with worst GPU p95 16.430 ms. Zone01-Zone04 pass bounded native resources, two-client travel, NPC/environment/audio and persisted saved-zone entry. Wider combat, quests, guild roles and Zone05-Zone10 remain separate C09 work. The 1 November follow-up adds native timing, movement checkpoints, channel metrics/create/drain and preserved-data MariaDB deployment; the revised two-client network acceptance passes. The 2 November checkpoint verifies visible entry, native priest/class services, Mandara2nd scene and persistence, and Manager automatic backups. Its separate rendered projectile step remains incomplete.",
+      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. C08 package/recovery is accepted on the named Windows/D3D11 machine, including twelve matched Release CPU/GPU trials with worst GPU p95 16.430 ms. Zone01-Zone05 pass bounded native resources, two-client travel, NPC/environment/audio and persisted saved-zone entry. Native guild roles/paid marks and selected quest/combat families pass focused Release checks. Wider C09, Zone06-Zone10 and public-beta release gates remain open; the earlier C08 benchmark applies to its frozen executable. The 1 November follow-up adds native timing, movement checkpoints, channel metrics/create/drain and preserved-data MariaDB deployment; the revised two-client network acceptance passes. The 2 November checkpoint verifies visible entry, native priest/class services, Mandara2nd scene and persistence, and Manager automatic backups. Its separate rendered projectile step remains incomplete.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -2647,8 +2647,8 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P16-01",
-              "done": false,
-              "text": "Audit native quest state, dialogue conditions, kill/item objectives and rewards.",
+              "done": true,
+              "text": "Audit native quest state, dialogue conditions, kill/item objectives and rewards. Selected chain21 and material tasks10006/10013/10057, party rewards and persistence pass; individual graphical quest acceptance remains separate.",
               "children": [
                 {
                   "done": true,
@@ -2697,12 +2697,12 @@ window.TANTRA_ROADMAP = {
             },
             {
               "id": "P16-07",
-              "done": false,
+              "done": true,
               "text": "Implement guild state, member names/marks and permissions before enabling dependent UI.",
               "children": [
                 {
                   "done": true,
-                  "text": "Existing master/member UI: actual SDL create/invite/accept/announcement, rejected member actions, confirmed leave/kick/disband, reconnect and reopened membership/announcement. Higher ranks, marks and alliances remain open."
+                  "text": "Existing master/member UI: actual SDL create/invite/accept/announcement, rejected member actions, confirmed leave/kick/disband, reconnect and reopened membership/announcement. Native ranks, paid marks, promotion/demotion, succession and nearby peer presentation now pass the 5 November continuation. Alliances remain under P16-08."
                 }
               ]
             },
@@ -2770,12 +2770,14 @@ window.TANTRA_ROADMAP = {
             "text": "Every claimed feature has source/authority/CPU/runtime evidence. Single-client transport differs from multiplayer acceptance. Each zone separately passes resources, authority and transition/persistence; profiles alone never pass.",
             "children": []
           },
-          "done": 20,
+          "done": 22,
           "total": 46,
-          "percent": 43
+          "percent": 48
         }
       ],
       "foundations": [
+        "Zone05 MandaraCave3rd: original resources, two-client600-Rupiah entry/free return, environment/audio and fresh-process saved state; missing3905 skipped",
+        "Native guild ranks/permissions/paid marks, selected quest21/material tasks and Dash/multiple-strike authority; additive schema8 preserves deployed accounts",
         "Original HTMessage quest journal and connected quest/guild SDL workflows; Cave resources/NPCs/portals/environment/audio and exact reopened state; native TCP interruption recovery",
         "C08 package/recovery accepted; Zone01-Zone04 native resources, two-client travel, environment/audio and saved-zone persistence accepted within documented scope",
         "Native arena/castle recovery: original death HUD choices, persisted fees/HP/positions, Global arena funding/events, winner/prize; connected SDL HUD-only acceptance",
@@ -2810,13 +2812,18 @@ window.TANTRA_ROADMAP = {
         "Historical pre-C08 baseline: 7,200 measured native scene frames, CPU/GPU/loading timings and hardware/input hashes"
       ],
       "next": [
-        "Finish native guild ranks, promotion/demotion, marks and server permissions",
-        "Complete selected source quest chains and combat families in the four accepted zones",
-        "Continue Zone05 MandaraCave3rd resources, NPCs, portals, environment and saved-zone entry",
-        "Accept additional source quest chains individually; do not invent the missing premium reset contract",
-        "Prepare larger-population and physical multi-machine acceptance separately from the two-client checkpoint"
+        "Freeze limited-beta zones, skills, quests and known content; finish a fresh-account progression journey",
+        "Verify the final download and signed server configuration on a clean player PC",
+        "Set an initial public player cap from sustained mixed gameplay, persistence and restart measurements",
+        "Finish public-entry abuse rejection, enrollment, monitoring, backup/rollback and tester support gates",
+        "Continue additional native quest/combat families and Zone06 separately; do not invent missing source content"
       ],
       "changes": [
+        {
+          "date": "2026-11-05",
+          "title": "Native guild ranks, selected progression and MandaraCave3rd",
+          "text": "Complete the requested bounded continuation: native ranks10/9/8/7/0, promotion/demotion, server restrictions, paid packed-DDS marks, owner/peer guild names and master succession. Two real accounts pass SDL guild workflows; fresh MariaDB and the deployed schema8 migration preserve durable records with native backups. Audit original Tantra/Database account blobs, GameInfo summaries and billing exports without changing them. Selected story21 and material tasks10006/10013/10057 verify source dialogue, kill/item objectives, party rewards, replay and reopen. Dash3014/3114, multiple3012 and ordinary families901/911/915 in Zones02/03/04 pass bounded combat/death/reward/loot/respawn/resurrection. Zone05 passes native resources/actors, two-client paid entry/free return, party/chat, environment/BGM and two fresh saved-state logins. Record absent3905 and zero-position NPCs. Stage matching Release runtime files. P16-01/P16-07 close:173/254 (68%),6/10 gates. Earlier fixture failures remain recorded; no Debug or broad benchmark rerun. The previous C08 benchmark is historical for its frozen binary. Public beta remains unaccepted with explicit release gates. Preserve Tantra-O."
+        },
         {
           "date": "2026-11-05",
           "title": "C08 package/recovery and four native zones accepted",
@@ -2973,9 +2980,9 @@ window.TANTRA_ROADMAP = {
           "text": "ZFLauncher uses its dedicated client/profile. OGRE runtime results are not transferred to bgfx acceptance."
         }
       ],
-      "done": 171,
+      "done": 173,
       "total": 254,
-      "percent": 67,
+      "percent": 68,
       "accepted": 6,
       "reviewed": "2026-11-02"
     }
@@ -3053,11 +3060,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "24536d6371a42ef3675d161e86eb950ae77993e97743c3d0d70a73440e467fd1"
+      "sha256": "be7b7785221a8017a3b9c6f1771d9dd5ff8bc8d9f2ca088de4307fb83e563ba7"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "d70509aabb0ee832d254a32bc1b1a2a1c90583dbe76135a6febac37551a183e7"
+      "sha256": "8da07106257d03d5f3b09261771726a4fd850b00e135e9ac6c3e5e1e8d738629"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",

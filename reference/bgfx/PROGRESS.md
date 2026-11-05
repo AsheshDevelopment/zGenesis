@@ -1,3 +1,25 @@
+## 5 November 2026: guild roles, selected progression and Zone05
+
+Native guild ranks/permissions, promotion/demotion, master succession and paid
+marks now pass authority, persistence and actual SDL two-account checks. Use
+original packed DDS mark components for owner/nearby-peer nameplates. Schema8
+migrates the dedicated MariaDB safely; before/after native backups preserve
+existing account/character/warehouse/guild rows. Original SQL in `Tantra/Database`
+is documented as read-only reference, including account binary and summary tables.
+
+Selected story21 and tasks10006/10013/10057 pass dialogue, kill/item objectives,
+source party rewards, replay rejection and reopen. Dash3014/3114, multiple3012
+and ordinary families901/911/915 in Zones02/03/04 pass their bounded authority,
+death/rewards/loot/respawn/resurrection checks. Zone05 MandaraCave3rd passes
+native resources/actors, two-client paid travel/free return, environment/BGM,
+party/chat and two fresh-process saved-state logins. Missing3905 and zero-position
+NPCs are recorded/skipped. Matching Release runtime files are staged.
+
+P16-01 and P16-07 close:173/254 named tasks (68%),6/10 gates. The complete C09,
+Zones06..10 and public beta remain open. This batch uses focused Release checks;
+the prior C08 full benchmark is retained without claiming a rerun for this binary.
+See [implementation, exact scope and evidence](../_server_cpp/docs/GUILD_QUESTS_ZONE05.md).
+
 ## 5 November 2026: four zones and C08 accepted
 
 Zone01–Zone04 pass independent resource/actor audits, native movement and portal

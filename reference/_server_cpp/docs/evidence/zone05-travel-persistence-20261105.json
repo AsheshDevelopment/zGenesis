@@ -1,0 +1,91 @@
+{
+  "root": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-world-route-09c6ef6d945b\\graphical",
+  "records": {
+    "RESULT.json": {
+      "graphical_clients": 2,
+      "passed": true,
+      "results": [
+        {
+          "bidirectional_party_chat": true,
+          "cross_map_party": true,
+          "destination_movement": true,
+          "money_after": 900,
+          "money_before": 1500,
+          "passed": true,
+          "real_network": true,
+          "role": 1,
+          "round_trip": true,
+          "source_movement": true,
+          "world_processes": 2,
+          "x": 521,
+          "z": 106,
+          "zone": 2
+        },
+        {
+          "bidirectional_party_chat": true,
+          "cross_map_party": true,
+          "destination_movement": false,
+          "money_after": 900,
+          "money_before": 1500,
+          "passed": true,
+          "real_network": true,
+          "role": 2,
+          "round_trip": false,
+          "source_movement": true,
+          "world_processes": 2,
+          "x": 57,
+          "z": 432,
+          "zone": 5
+        }
+      ]
+    },
+    "PERSISTENCE_RESULT.json": {
+      "destination_zone": 5,
+      "map_position_reopened": true,
+      "passed": true,
+      "records": [
+        {
+          "money": 900,
+          "name": "WorldHero",
+          "revision": 6,
+          "x": 521,
+          "z": 106,
+          "zone": 2
+        },
+        {
+          "money": 900,
+          "name": "BgfxPeer",
+          "revision": 4,
+          "x": 57,
+          "z": 432,
+          "zone": 5
+        }
+      ]
+    },
+    "RELOGIN_RESULT.json": {
+      "passed": true,
+      "results": [
+        {
+          "fresh_process": true,
+          "money": 900,
+          "native_fields_preserved": true,
+          "passed": true,
+          "real_network": true,
+          "x": 521,
+          "z": 106,
+          "zone": 2
+        },
+        {
+          "fresh_process": true,
+          "money": 900,
+          "native_fields_preserved": true,
+          "passed": true,
+          "real_network": true,
+          "x": 57,
+          "z": 432,
+          "zone": 5
+        }
+      ]
+    }
+  }
+}

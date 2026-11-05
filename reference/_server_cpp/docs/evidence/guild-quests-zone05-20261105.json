@@ -1,0 +1,200 @@
+{
+  "date": "2026-11-05",
+  "configuration": "Release",
+  "passed": true,
+  "scope": "Guild ranks/marks, selected native quests/combat and bounded Zone05 acceptance; public beta remains unaccepted",
+  "cpu_checks": [
+    {
+      "name": "store-roles",
+      "passed": true,
+      "log": "store-roles.log",
+      "sha256": "2a3d5338bcc6cef9dff88a47effd9714630f7342fb5084a2820958355ecadd72"
+    },
+    {
+      "name": "store-migration",
+      "passed": true,
+      "log": "store-migration.log",
+      "sha256": "79db5fcc83ce3a0e281a1ba4a5ca37a0cd3009e7d5d11843d9f3bfe0b8ed733c"
+    },
+    {
+      "name": "quest-chains",
+      "passed": true,
+      "log": "quest-chains.log",
+      "sha256": "8a1130e9e3bf129c69cf8214f3d46eb9f09b2f4b7087ed0b549dc5dc327e5b11"
+    },
+    {
+      "name": "dash",
+      "passed": true,
+      "log": "dash.log",
+      "sha256": "3251f0aeb3b44ade5d4162ca4fae52956afebedd0113cd0c1f22d7ef3cd53cf6"
+    },
+    {
+      "name": "multiple",
+      "passed": true,
+      "log": "multiple.log",
+      "sha256": "a541280c0e0053069b8d8b5f034497b811ac98e4ee30e8902b6cd317b53b44f3"
+    },
+    {
+      "name": "death-recovery",
+      "passed": true,
+      "log": "death-recovery.log",
+      "sha256": "d84d93f46a2370f0e35c0fe3454a442868179783db304486afb72a9912bb3168"
+    },
+    {
+      "name": "combat-families",
+      "passed": true,
+      "cases": 3,
+      "logs": [
+        "combat-families-final.log",
+        "combat-cave2-equipped-arrows.log"
+      ]
+    }
+  ],
+  "combat_families": [
+    {
+      "attack": true,
+      "death": true,
+      "duplicate_nonce_rejected": true,
+      "ground_loot": true,
+      "pickup": true,
+      "pranas": true,
+      "respawn": true,
+      "resurrection": true,
+      "root": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-player-damage-30d7e1d907088008b587bc4bdeed65876e1f16d23d227df25a2d493c4d364389",
+      "weapon_animation": 901,
+      "zone": 2
+    },
+    {
+      "attack": true,
+      "death": true,
+      "duplicate_nonce_rejected": true,
+      "ground_loot": true,
+      "pickup": true,
+      "pranas": true,
+      "respawn": true,
+      "resurrection": true,
+      "root": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-player-damage-8c0031bfabbd4c8efba79214cae86615405bba0434aa69b86c0c9d4396321ee6",
+      "weapon_animation": 911,
+      "zone": 3
+    },
+    {
+      "attack": true,
+      "death": true,
+      "duplicate_nonce_rejected": true,
+      "ground_loot": true,
+      "pickup": true,
+      "pranas": true,
+      "respawn": true,
+      "resurrection": true,
+      "root": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-player-damage-6da222d928fc3e8ed478a9f1adbdf5cd18803a0eb3d05402791cd943d4139b18",
+      "weapon_animation": 915,
+      "zone": 4
+    }
+  ],
+  "guild_ui": {
+    "passed": true,
+    "clients": 2,
+    "real_network": true,
+    "actual_sdl": true,
+    "hud_only": true,
+    "quest_journal": true,
+    "native_quest_rewards": true,
+    "guild_permissions": true,
+    "guild_invite_accept": true,
+    "destructive_confirmations": true,
+    "guild_reconnect": true,
+    "guild": 2,
+    "quest_reward_money": 200
+  },
+  "native_mark_components": {
+    "passed": true,
+    "renderer": "BGFX Direct3D11",
+    "windows": 6,
+    "native_mainui_assets": true,
+    "state": "controlled replica fixtures",
+    "gameplay_authority": false
+  },
+  "fresh_mariadb": {
+    "account": "Bgfx61af9d35",
+    "backend": "mariadb",
+    "backup_restore": true,
+    "checks": 15,
+    "native_mob_bytes": 1688,
+    "passed": true
+  },
+  "deployed_schema_migration": {
+    "passed": true,
+    "schema": 8,
+    "backend": "mariadb",
+    "legacy_handoff_key_repaired": true,
+    "pre_migration_backup": "1793857898-c0a16b8a8227.sql",
+    "post_migration_backup": "1793859975-e1bc02348d58.sql",
+    "existing_accounts_characters_cargo_guild_rows_unchanged": true,
+    "new_backup_sha256": "a3e40e2e783ea24d1a446a27f3a0dd54ce7775295f86da9155aa9d6b19d39140"
+  },
+  "quest_ids": [
+    21,
+    10006,
+    10013,
+    10057
+  ],
+  "new_skills": [
+    3014,
+    3114,
+    3012
+  ],
+  "zone05": "zone05-acceptance-20261105.json",
+  "original_sql_reference": "original-sql-reference-20261105.json",
+  "no_debug_build": true,
+  "broad_fx_and_c08_benchmark_not_repeated": true,
+  "public_beta_accepted": false,
+  "known_limits": [
+    "Other individual quest/weapon/skill/monster families remain unaccepted",
+    "Guild alliances and competitive contracts remain separate",
+    "Zone05 generator3905 absent; zero-coordinate NPCs unplaced; Zone06 destination unaccepted",
+    "Native source billing adapters use the local ledger; no live payment provider",
+    "C08 performance acceptance belongs to the frozen earlier executable; this batch has focused checks only"
+  ],
+  "retained_attempts": "_server_cpp/build/evidence/progression-20261105 and earlier zone05 acceptance attempts",
+  "staged_binaries": [
+    {
+      "path": "_server_cpp\\bin\\TantraServerManager.exe",
+      "sha256": "e1f24f016459a7e95596e3dddb1b5f8974f6e61bbf64b527d2b4fba743eedbba",
+      "bytes": 3629056
+    },
+    {
+      "path": "_server_cpp\\bin\\TantraService.exe",
+      "sha256": "9618348e7c44110a1d24e7eca0241010efc1595101deada3ec5b289c85a854dd",
+      "bytes": 3186688
+    },
+    {
+      "path": "_server_cpp\\bin\\TantraZone.exe",
+      "sha256": "ec17d0f6a184902925ce2b2655ce5b6b2b369ca92fa5237a7bf91103f9b2a3fe",
+      "bytes": 4581376
+    },
+    {
+      "path": "_server_final\\bin\\TantraServerManager.exe",
+      "sha256": "e1f24f016459a7e95596e3dddb1b5f8974f6e61bbf64b527d2b4fba743eedbba",
+      "bytes": 3629056
+    },
+    {
+      "path": "_server_final\\bin\\TantraService.exe",
+      "sha256": "9618348e7c44110a1d24e7eca0241010efc1595101deada3ec5b289c85a854dd",
+      "bytes": 3186688
+    },
+    {
+      "path": "_server_final\\bin\\TantraZone.exe",
+      "sha256": "ec17d0f6a184902925ce2b2655ce5b6b2b369ca92fa5237a7bf91103f9b2a3fe",
+      "bytes": 4581376
+    }
+  ],
+  "staged_client": {
+    "path": "_client_bgfx/ZFLauncher.exe",
+    "sha256": "4120ef5fff88f6354345339a6f90f3447ee2ad6fe123f1fe5fad6412b53c19c9"
+  },
+  "runtime_manifest": {
+    "path": "_server_final/package.json",
+    "files": 331,
+    "sha256": "702fa510ed0c9433d57c4b2c0a94b357f54c7620f09c9ffbd33dd76931462d54"
+  }
+}

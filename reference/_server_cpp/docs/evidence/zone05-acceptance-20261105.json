@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "configuration": "Release",
+  "executable_sha256": "4120ef5fff88f6354345339a6f90f3447ee2ad6fe123f1fe5fad6412b53c19c9",
+  "zones": {
+    "5": {
+      "source": "E:\\Global-server\\Zone05",
+      "dataset_sha256": {
+        "Data/Settings.ini": "28c978629580df57a4acf7af8e238db229075a80b5ba309dc739872cf8593c60",
+        "Data/WorldSettings.ini": "8c9c2a6542b95a0a78c518922a01cbe6c83e1c8b3a605df864818629d87c3e28",
+        "GenerationArea.idx": "703237fae8db44aefbbf1c8ca9268f38b5be2246cb0f87b0f3e667042899da98",
+        "MapData.tcm": "6624e91dbf8926508eb707acd1cac32796760b2e0d08121c91a34b9f22267378",
+        "NPCGener.txt": "d9eb0e67f3e3d3c4cadfbcf55ff7ceb1c14ba9ee2f0d95bef653d57c762fe611"
+      },
+      "resource_manifest_sha256": "b1833e4a45e453787409d5fb4ae784fd008ef89eea120950bb3bfda67b493861",
+      "resources_passed": true,
+      "reported_missing_map_textures": []
+    }
+  },
+  "graphical_cases": [
+    "zone5"
+  ],
+  "protected_unchanged": true,
+  "default_profile_unchanged": true,
+  "known_content_limits": [
+    "NPC1499 Vharah STD/IDL animations unavailable; presentation skipped at user request",
+    "Zone01 r01_common_cart01.bmp is absent from selected original regular/Pop packs; existing authored diffuse rendering retained, no cross-map substitution",
+    "Zone03 generator3842 has no parameter record and cannot generate an actor",
+    "Zero-coordinate NPC placeholders have no authored world placement",
+    "Zone05 generator3905 has no parameter record and cannot generate an actor",
+    "Zone05 portal129 leads to unaccepted Zone06; that destination is outside this acceptance"
+  ],
+  "scope": "Independent map resources, generated/static actor bindings, native movement/portal UI, coherent authority, return, stopped persistence and fresh-process graphical logins; broader quest/combat fidelity remains separate"
+}
