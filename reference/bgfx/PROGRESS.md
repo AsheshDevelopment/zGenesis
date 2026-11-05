@@ -1,3 +1,26 @@
+## 5 November 2026: beta content, account controls and beginner path
+
+All three requested implementation areas are complete. Freeze the connected
+beta to Zone01-Zone05,210 enabled skill paths,22 story flags and three tasks;
+reject unlisted actions and unfinished quiz34 without changing durable state.
+Preserve native passive skills and expose unavailable skill feedback in the UI.
+
+Server Manager Accounts adds timed Block/Unblock, Reset password and Revoke
+sessions. Only the operator endpoint accepts controls; game-service RPC rejects
+them. Reset replaces both verifier paths and retires all-world sessions, grants,
+tickets and handoffs. Native dates, characters and userLevel are preserved.
+Dedicated MariaDB upgrades to schema9 with matching pre/post backup rows.
+
+Restore original first-entry message1051, native0/1 quest decisions and local
+ordinary tutorial confirmations. Real-network SDL mouse/Escape choices,
+starter equipment and reconnect match stopped SQL. The full fresh authority
+journey earns92 kills and completes five tutorials, first class, repair,
+equipment, death/revival and saved return without restored checkpoints.
+Matching Release client/server files are staged. Only new focused checks were
+run; no Debug build or broad FX/performance rerun. Public-beta release gates
+remain open; the global named roadmap remains173/254 (68%),6/10 gates.
+See [source rules, exact evidence and remaining scope](../_server_cpp/docs/BETA_ACCOUNTS_BEGINNER.md).
+
 ## 5 November 2026: guild roles, selected progression and Zone05
 
 Native guild ranks/permissions, promotion/demotion, master succession and paid

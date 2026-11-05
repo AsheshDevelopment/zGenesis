@@ -1,3 +1,12 @@
+## Connected beta continuation - completed 5 November 2026
+
+- [x] Freeze supported skills, quests, services and Zone01-Zone05 with shared C++/BGFX restrictions.
+- [x] Add native-reference account block/unblock, password reset and all-world revocation through Server Manager, preserving existing data and administrator roles.
+- [x] Restore first-entry tutorial and correct quest-choice semantics; complete fresh creation, five tutorials, first class, equipment/repair, death/revival and saved return.
+
+[Implementation and evidence](../_server_cpp/docs/BETA_ACCOUNTS_BEGINNER.md).
+Public-beta release acceptance remains separate and open.
+
 ## Limited public beta target - 5 November 2026
 
 The client and C++ shared server are playable foundations. Public beta is **not

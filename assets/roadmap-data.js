@@ -2776,6 +2776,7 @@ window.TANTRA_ROADMAP = {
         }
       ],
       "foundations": [
+        "Frozen five-zone beta policy, protected native account controls and schema9; fresh tutorial/first-class/equipment/death/saved-return progression verified",
         "Zone05 MandaraCave3rd: original resources, two-client600-Rupiah entry/free return, environment/audio and fresh-process saved state; missing3905 skipped",
         "Native guild ranks/permissions/paid marks, selected quest21/material tasks and Dash/multiple-strike authority; additive schema8 preserves deployed accounts",
         "Original HTMessage quest journal and connected quest/guild SDL workflows; Cave resources/NPCs/portals/environment/audio and exact reopened state; native TCP interruption recovery",
@@ -2812,13 +2813,18 @@ window.TANTRA_ROADMAP = {
         "Historical pre-C08 baseline: 7,200 measured native scene frames, CPU/GPU/loading timings and hardware/input hashes"
       ],
       "next": [
-        "Freeze limited-beta zones, skills, quests and known content; finish a fresh-account progression journey",
+        "Finish the combined fresh-account party/trade/services/saved-return journey; frozen beginner content and account controls are complete",
         "Verify the final download and signed server configuration on a clean player PC",
         "Set an initial public player cap from sustained mixed gameplay, persistence and restart measurements",
         "Finish public-entry abuse rejection, enrollment, monitoring, backup/rollback and tester support gates",
         "Continue additional native quest/combat families and Zone06 separately; do not invent missing source content"
       ],
       "changes": [
+        {
+          "date": "2026-11-05",
+          "title": "Frozen beta, operator account controls and beginner progression",
+          "text": "Freeze Zone01-Zone05,210 enabled skill IDs,22 story flags and three task quests through shared compiled client/server policy; reject unlisted actions and unfinished quiz34. Server Manager adds timed block/unblock,password reset and all-world session/grant/ticket revocation through protected operator RPC. Schema9 preserves deployed MariaDB account and character data with pre/post backups. Restore first-entry tutorial message1051,native accept0/reject1 and ordinary tutorial confirmations. A fresh unboosted authority journey completes five tutorials,equipment,repair,first class,death/revival and saved return; two real network accounts verify SDL choices,equipment and reconnect. Focused Release checks pass and matching runtime files are staged. No Debug or broad FX/performance rerun. Combined fresh-account party/trade,clean-PC delivery,measured public cap,abuse checks and release operations remain open. Task coverage stays173/254 (68%),6/10 gates; public beta remains unaccepted. Preserve Tantra-O."
+        },
         {
           "date": "2026-11-05",
           "title": "Native guild ranks, selected progression and MandaraCave3rd",
@@ -3060,11 +3066,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "be7b7785221a8017a3b9c6f1771d9dd5ff8bc8d9f2ca088de4307fb83e563ba7"
+      "sha256": "35d5666d82e9ac83b4e884fd5475ddda19758b4d8337a5a0bf9948d8d0b957b1"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "8da07106257d03d5f3b09261771726a4fd850b00e135e9ac6c3e5e1e8d738629"
+      "sha256": "ea8240d6ce5fb3f53154ce38803e8cd9dffa262670ce751d5fbf838034d92505"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",

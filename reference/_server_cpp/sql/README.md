@@ -1,7 +1,7 @@
 # Tantra BGFX game databases
 
 These definitions match the C++ server, not the historical SQL Server schema.
-SQLDMN schema **8** supports SQLite (the packaged default) or MariaDB 10.11+.
+SQLDMN schema **9** supports SQLite (the packaged default) or MariaDB 10.11+.
 ITMSRV cash and worker run history remain separate SQLite databases on either backend.
 
 | Database | Packaged location / selection | Definition |
@@ -10,7 +10,7 @@ ITMSRV cash and worker run history remain separate SQLite databases on either ba
 | Cash balances and delivery journal | `services/ITMSRV/state/cash.sqlite3` | `sqlite/002_cash_schema.sql` |
 | Worker start/stop history | Each `services/*/state/operations.sqlite3` and `zones/*/state/operations.sqlite3` | `sqlite/003_operations_schema.sql` |
 
-The game database has 13 game tables (plus MariaDB's `storage_meta` identity table).
+The game database has 14 game tables (plus MariaDB's `storage_meta` identity table).
 Characters use the original **1688-byte MOB snapshot**;
 inventory, equipment, skills, quests, level, HP/TP, currency and guild membership are
 inside that snapshot. Guild ranks below master and guild marks use the additive
@@ -39,6 +39,15 @@ migrations. Native original tables and registration procedures remain reference
 material; copying historical website/payment tables does not implement their
 server behavior. `userLevel DEFAULT 0` and the exact administrator test
 `userLevel = 1` are explicit remake requirements.
+
+## Account controls
+
+Schema9 adds `account_controls` with original block/date semantics. Use Server
+Manager Accounts for block/unblock, timed blocks, reset and all-world revocation.
+Only the protected operator administration endpoint accepts these operations;
+game-service RPC rejects them. Reset writes both Argon2id verifiers and retires
+sessions, grants, tickets and handoffs without changing characters or `userLevel`.
+See [account controls and beginner implementation](../docs/BETA_ACCOUNTS_BEGINNER.md).
 
 ## Opening or creating the database
 

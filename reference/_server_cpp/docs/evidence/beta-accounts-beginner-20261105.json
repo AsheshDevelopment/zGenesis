@@ -1,0 +1,213 @@
+{
+  "date": "2026-11-05",
+  "configuration": "Release",
+  "passed": true,
+  "requirements": {
+    "content_freeze": {
+      "passed": true,
+      "revision": "beta-20261105-1",
+      "manifest": "_shared_cpp/beta/Content.json",
+      "manifest_sha256": "4d40e980d742f475a1041eef9fb46b626e74577f9ac5ff79fdc6accbb9764027",
+      "enabled_skills": 210,
+      "disabled_skills": 13,
+      "maps": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "story_flags": 22,
+      "tasks": 3,
+      "forged_cast_learn_task_rejected": true,
+      "unchanged_state_after_rejection": true,
+      "map6_denied": true,
+      "unfinished_quiz34_denied": true
+    },
+    "account_controls": {
+      "passed": true,
+      "block_unblock": true,
+      "timed_expiry": true,
+      "password_reset_both_verifiers": true,
+      "all_world_sessions_grants_tickets_revoked": true,
+      "operator_rpc_accepted": true,
+      "service_rpc_denied": true,
+      "character_and_admin_role_preserved": true,
+      "deployed_mariadb": {
+        "passed": true,
+        "schema": 9,
+        "backend": "mariadb",
+        "migration": "Native SQLDMN startup",
+        "pre_backup_name": "1793865264-f97246ba7e39.sql",
+        "post_backup_name": "1793865555-a09ac60e01df.sql",
+        "pre_sha256": "a3e40e2e783ea24d1a446a27f3a0dd54ce7775295f86da9155aa9d6b19d39140",
+        "post_sha256": "96f6e281e2522339cb435cbd16e1d623cb0bda06bb05f1cad7c7d98548f321c4",
+        "durable_tables": {
+          "accounts": {
+            "unchanged": true,
+            "insert_statements": 1
+          },
+          "characters": {
+            "unchanged": true,
+            "insert_statements": 0
+          },
+          "account_cargo": {
+            "unchanged": true,
+            "insert_statements": 0
+          },
+          "guilds": {
+            "unchanged": true,
+            "insert_statements": 0
+          },
+          "guild_roles": {
+            "unchanged": true,
+            "insert_statements": 0
+          },
+          "guild_marks": {
+            "unchanged": true,
+            "insert_statements": 0
+          },
+          "deletion_backups": {
+            "unchanged": true,
+            "insert_statements": 0
+          },
+          "world_receipts": {
+            "unchanged": true,
+            "insert_statements": 0
+          }
+        },
+        "new_account_controls_default_empty": true,
+        "existing_credentials_and_profiles_preserved": true
+      }
+    },
+    "beginner_path": {
+      "passed": true,
+      "fresh_authority": {
+        "combat_revivals": 54,
+        "death_revival": true,
+        "earned_kills": 92,
+        "equipment": true,
+        "first_class": true,
+        "fresh_native_character": true,
+        "passed": true,
+        "repair": true,
+        "resumed_earned_checkpoint": false,
+        "root": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-beta-beginner-bc7e702a1d91",
+        "save_return_reopen": true,
+        "tutorials": 5
+      },
+      "real_network_ui": {
+        "bgfx_result": {
+          "actual_sdl": true,
+          "disabled_skills": true,
+          "fresh_level": 1,
+          "hud_only": true,
+          "passed": true,
+          "real_network": true,
+          "reconnect": true,
+          "starter_equipment": true,
+          "tutorial_accept_decline": true
+        },
+        "database_backend": "sqlite",
+        "passed": true,
+        "root": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-world-route-62dc9986df8b"
+      },
+      "stopped_ui_persistence": {
+        "passed": true,
+        "records": [
+          {
+            "level": 1,
+            "name": "WorldHero",
+            "revision": 4,
+            "tutorial": 255
+          },
+          {
+            "level": 1,
+            "name": "BgfxPeer",
+            "revision": 3,
+            "tutorial": 0
+          }
+        ]
+      },
+      "native_question_message": 1051,
+      "accept_value": 0,
+      "reject_value": 1,
+      "mouse_and_escape": true,
+      "tutorial_confirmations_do_not_reset_state": true
+    }
+  },
+  "staged_server_binaries": [
+    {
+      "path": "_server_cpp\\bin\\TantraServerManager.exe",
+      "sha256": "a01eab085a941ccb3333d2a011e88b645f708d85165dadf25a358cc20f21d65e",
+      "bytes": 3641344
+    },
+    {
+      "path": "_server_cpp\\bin\\TantraService.exe",
+      "sha256": "23d91151c7a7d61da37c4332e852b916522428151b5534cfe46fe6b46f6f8ec4",
+      "bytes": 3201024
+    },
+    {
+      "path": "_server_cpp\\bin\\TantraZone.exe",
+      "sha256": "4a8dc95ce7e8ccb4f3258c06fcab5b805a43708cdb7a2c14a4832d1381822049",
+      "bytes": 4602368
+    },
+    {
+      "path": "_server_final\\bin\\TantraServerManager.exe",
+      "sha256": "a01eab085a941ccb3333d2a011e88b645f708d85165dadf25a358cc20f21d65e",
+      "bytes": 3641344
+    },
+    {
+      "path": "_server_final\\bin\\TantraService.exe",
+      "sha256": "23d91151c7a7d61da37c4332e852b916522428151b5534cfe46fe6b46f6f8ec4",
+      "bytes": 3201024
+    },
+    {
+      "path": "_server_final\\bin\\TantraZone.exe",
+      "sha256": "4a8dc95ce7e8ccb4f3258c06fcab5b805a43708cdb7a2c14a4832d1381822049",
+      "bytes": 4602368
+    }
+  ],
+  "staged_client": {
+    "path": "_client_bgfx/ZFLauncher.exe",
+    "sha256": "54c7b5de5b4b7ec02055ec7f7667b7e87d970b07c875e2e126a722f3ce6c10ef"
+  },
+  "logs": {
+    "account-controls.log": {
+      "path": "_server_cpp/build/evidence/beta-20261105/account-controls.log",
+      "sha256": "27f5cd501063b841b28285720cc25cffeb8bd8376c2209d037fb858e65854512"
+    },
+    "account-rpc.log": {
+      "path": "_server_cpp/build/evidence/beta-20261105/account-rpc.log",
+      "sha256": "4c9ec88eb1b1341a80c672bdffbd3136a23fc939822b2985836e10aafb99a17a"
+    },
+    "content-gates-final.log": {
+      "path": "_server_cpp/build/evidence/beta-20261105/content-gates-final.log",
+      "sha256": "d18050fe3cb01ae7ee9c229ca487652650adfc4c5fb3a4c7b1f7b61b6e6ea711"
+    },
+    "beginner-complete-fresh.log": {
+      "path": "_server_cpp/build/evidence/beta-20261105/beginner-complete-fresh.log",
+      "sha256": "eb139cdda42092d290711114e13f98b5f3088107dbd934ace9618416c633ce2c"
+    },
+    "beginner-ui-keyboard.log": {
+      "path": "_server_cpp/build/evidence/beta-20261105/beginner-ui-keyboard.log",
+      "sha256": "d38a15f9a63ecb5fee3ed984ee3c95f972fc51bbbfaa00e141bd954693f7afd9"
+    }
+  },
+  "screenshots": [
+    "beta-20261105/tutorial-question.png",
+    "beta-20261105/starter-equipment.png"
+  ],
+  "original_sql_unchanged": true,
+  "tests_use_owned_temp_roots": true,
+  "no_debug_build": true,
+  "broad_fx_and_benchmark_not_repeated": true,
+  "public_beta_accepted": false,
+  "retained_fixture_failures": "build/evidence/beta-20261105",
+  "remaining_release_scope": [
+    "clean player PC/package verification",
+    "fresh-account party/trade and complete release journey",
+    "sustained mixed-player capacity limit",
+    "public-entry abuse and release operations gates"
+  ]
+}
