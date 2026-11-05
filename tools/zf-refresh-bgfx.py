@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.27"
+VERSION = "1.0.28"
 
 
 def sha(body):
@@ -172,6 +172,17 @@ def refresh(source):
     latest.insert(0, {"date":"2026-11-05", "title":"Native party controls, signed LAN deployment and new-character entry fix", "text":"Implement source-based automatic party loot with nearby living recipients,native currency rounding,stack/overflow behavior and random equipment fallback. SQL recipient commits are atomic and receipt/revision protected; MSGSRV persists leader-owned loot mode. Native sender/expiry invitations and party/Ashram leave/kick/disband prompts use original images. Focused Release SQL/social and GPU component checks pass. Export signed profile15 with matching172.16.90.12 TLS identity and game listeners; actual staged HTTPS status200 and six hostname-verified TLS endpoints pass. Enable executable-specific LocalSubnet firewall rules while SQL/RPC remain loopback. Development/final servers share preserved MariaDB13306/tantra_bgfx schema9; local phpMyAdmin separately selects it alongside XAMPP3306. Fix newly created character entry by synchronizing channel roster slots after create/delete ACKs; a focused native-channel regression preserves appearance and reconnect while rejecting foreign owner inventory. Stage the Release launcher and build a signed LAN ZIP with tamper rejection. Earlier two-client graphical journey evidence is separate; another PC,live graphical automatic loot,Internet/public-capacity/abuse/operations acceptance remain open. No Debug or broad FX/performance rerun. Coverage stays173/254 (68%),6/10 gates. Preserve Tantra-O."})
     project["foundations"].insert(0,"Native atomic automatic party loot,persisted leader mode,one-use invitations and original party/Ashram confirmations")
     project["foundations"].insert(0,"Signed172.16.90.12 LAN deployment,hostname-verified TLS,LocalSubnet firewall and preserved shared MariaDB; new-character owner-entry fix and LAN ZIP")
+    latest.insert(0, {"date": "2026-11-05", "title": "Original-style Tantra launcher, signed patching and shared game settings", "text": "Combine the native C++ patcher and launcher in Tantra.exe; retire Update.exe and require its inherited one-use handoff before ZFLauncher starts. Preserve offline entry, game restart supervision, package tooling and Manager launches. Publish signed schema-2 Patcher.dat, immutable lists/notices and hashed payloads to the LAN XAMPP feed. Verify tamper rejection, interrupted-install recovery and preference-preserving checks. Reuse original K2108 PE bitmap resources and dialog grouping without modifying the originals. Remove duplicate disabled captions; launcher Options saves the same game Graphics.cfg/Interface.sys formats for resolution/aspect/custom size, window modes, actual graphics quality and separate sound volumes. One isolated launcher session verifies File Check, Apply/reload/Cancel, invalid resolution and borderless controls. Earlier focused Release checks also correct native owner speed, any-angle collision-swept routing and smooth monster/peer interpolation. Current beta ZIPs predate these fixes. No gameplay/FX benchmark rerun or separate-PC/public acceptance is claimed; 173/254 tasks (68%),6/10 gates remain unchanged. Preserve Tantra-O."})
+    project["description"] = f"Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. Named coverage remains {project['done']}/{project['total']} ({project['percent']}%) with {project['accepted']}/10 accepted gates. C08 and five zones retain their bounded original evidence; the C08 benchmark applies to its frozen executable. The current client uses an original-style combined Tantra.exe launcher, signed LAN patching, shared game settings and corrected continuous online movement. New public packaging, Internet connectivity, clean-PC acceptance and public cap/abuse/operations gates remain open."
+    project["foundations"].insert(0,"Combined original-style Tantra.exe launcher, one-use game handoff and signed recoverable LAN patches; shared game display/quality/audio settings and preference-preserving File Check")
+    project["foundations"].insert(0,"Native online speed/parity decoding, collision-swept continuous owner routing and frame-by-frame monster/peer interpolation; focused Release evidence")
+    project["next"] = [
+        "Deploy a public hostname/address with matching game TLS and HTTPS patch hosting; current 172.16.90.12 connectivity is LAN-only",
+        "Build the final matching package with Tantra.exe/current movement fixes and public signed files; verify installation, patching and login on a separate clean Windows PC",
+        "Run one final-build two-client beginner/social journey including graphical automatic party loot, trade/services and saved return",
+        "Finish public-entry abuse checks and measure sustained mixed gameplay/save/reconnect behaviour to set the initial player cap",
+        "Demonstrate backup/restore and package rollback, monitoring/crash collection, individual beta accounts and tester reporting before the release decision"
+    ]
     titles = {change["title"] for change in latest}
     project["changes"] = latest + [change for change in project["changes"] if change["title"] not in titles]
     # OGRE data and all bundled OGRE documentation remain byte-identical.
@@ -184,10 +195,14 @@ def refresh(source):
     command_doc = ROOT / "reference/bgfx/docs/NATIVE_COMMANDS.md"
     command_doc.parent.mkdir(parents=True, exist_ok=True)
     command_doc.write_bytes((source / "docs/NATIVE_COMMANDS.md").read_bytes())
-    for relative in ("PACKAGE_RECOVERY_ACCEPTANCE.md", "evidence/c08-acceptance-20261105.json", "evidence/c08-benchmark-20261105.json", "evidence/c08-graphics-persistence-20261105.json", "evidence/goal-completion-audit-20261105.json"):
+    for relative in ("LAUNCHER_PATCHING.md", "evidence/launcher-patcher-20261105.json", "evidence/online-movement-20261105.json", "evidence/any-angle-movement-20261105.json", "PACKAGE_RECOVERY_ACCEPTANCE.md", "evidence/c08-acceptance-20261105.json", "evidence/c08-benchmark-20261105.json", "evidence/c08-graphics-persistence-20261105.json", "evidence/goal-completion-audit-20261105.json"):
         target = ROOT / "reference/bgfx/docs" / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes((source / "docs" / relative).read_bytes())
+    for evidence in (source / "docs/evidence/launcher-patcher-20261105").glob("*.png"):
+        target = ROOT / "reference/bgfx/docs/evidence/launcher-patcher-20261105" / evidence.name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(evidence.read_bytes())
     server_docs = source.parent / "_server_cpp/docs"
     server_reference = ROOT / "reference/_server_cpp/docs"
     for relative in ("PARTY_LOOT_LAN.md", "SECURE_CONNECTIONS.md", "evidence/party-lan-20261105.json", "BETA_LOCAL_PACKAGE.md", "PROJECT_DATA.md", "evidence/beta-local-package-20261105.json", "evidence/global-asset-fallback-20261105.json", "evidence/mandara1st-npc-reference-20261105.json", "BETA_CONTENT.md", "BETA_ACCOUNTS_BEGINNER.md", "evidence/beta-accounts-beginner-20261105.json", "GUILD_QUESTS_ZONE05.md", "evidence/guild-quests-zone05-20261105.json", "evidence/zone05-acceptance-20261105.json", "evidence/zone05-travel-persistence-20261105.json", "evidence/guild-quest-persistence-20261105.json", "evidence/original-sql-reference-20261105.json", "FOUR_ZONE_ACCEPTANCE.md", "evidence/four-zone-acceptance-20261105.json", "evidence/four-zone-native-inputs-20261105.json", "PROJECTILE_CAVE_RECOVERY.md", "evidence/projectile-cave-recovery-20261102.json", "evidence/c08-release-benchmark-20261102.json", "evidence/c08-release-raw-20261102.zip", "ADVANCED_NPC_SERVICES.md", "AUTOMATIC_BACKUPS.md", "MANDARA2ND.md", "evidence/npc-map-backups-20261102.json", "SIMULATION_CHECKPOINTS.md", "evidence/tick-profile-20261101.json", "evidence/checkpoints-20261101.json", "evidence/scaling-gui-20261101.json", "evidence/mariadb-deployment-20261101.json", "evidence/two-client-simulation-20261101.json"):
@@ -236,18 +251,18 @@ def refresh(source):
         elif "## " + VERSION not in content:
             entry = """# Unreleased
 
-## 1.0.27 - 2026-11-05 (Tantra-B only)
+## 1.0.28 - 2026-11-05 (Tantra-B only)
 
-Changed: native automatic party loot,leader-owned persisted mode,original
-party/Ashram invitations and confirmations,signed LAN profile15,shared MariaDB
-and new-character entry roster caching. Stage matching Release files and LAN ZIP.
-Verified: focused atomic SQL/social checks,native GPU dialogs,actual HTTPS/TLS
-endpoints,LocalSubnet firewall,database login and creation/reconnect owner checks.
-Failed: reported owner-inventory mismatch corrected; initial probe include-path
-issue corrected. No remaining failure in the focused checks.
-Remaining: another PC's LAN connection,live graphical automatic loot,Internet
-connectivity and public cap/abuse/operations acceptance. No broad FX/performance
-rerun or new gate closure. Tantra-O remains unchanged.
+Changed: original-style combined Tantra.exe launcher, one-use game handoff,
+signed recoverable patch feed, shared game graphics/audio settings and continuous
+online owner/replica movement. Preserve player preferences during File Check.
+Verified: focused Release launch/tamper/recovery/preferences checks and one
+isolated UI/settings save/reload/cancel session. Original resources are unchanged.
+Failed: overlapping disabled captions corrected. No remaining focused failure.
+Remaining: rebuild the public package, Internet host/TLS/HTTPS, separate clean-PC
+acceptance, final graphical party loot and public cap/abuse/operations gates.
+Named coverage remains 173/254 (68%),6/10 gates. No broad game/FX benchmark rerun.
+Tantra-O remains unchanged.
 
 
 """

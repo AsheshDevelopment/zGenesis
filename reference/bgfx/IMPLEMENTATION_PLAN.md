@@ -1,3 +1,18 @@
+## Launcher and patch feed follow-up — complete 5 November 2026
+
+- [x] Analyse original K2108 executables and startup checks without executing or modifying them.
+- [x] Combine the C++ patcher/launcher in Tantra.exe and require its verified handoff before ZFLauncher starts.
+- [x] Reuse the K2108 bitmap skin/buttons and retire the owned Update.exe from the client, build, package and patch feed.
+- [x] Route offline startup, restarts, package staging, verifier and Manager launches through the chain.
+- [x] Publish signed Patcher.dat, UpdateList.dat and NotifyMsg.dat with native payloads in XAMPP's patch folder.
+- [x] Verify direct-entry rejection, signed updates, tamper rejection, rollback/recovery and installed original-style Tantra launcher UI.
+- [x] Remove duplicate disabled captions and verify original bitmap buttons during File Check.
+- [x] Implement original-style launcher graphics/sound options using the game's existing settings files; verify Apply/reload, Cancel and invalid values.
+- [x] Preserve player Interface.sys/MainUISave.sys preferences during checking and omit them from patch updates.
+
+[Operation and evidence](docs/LAUNCHER_PATCHING.md). Another PC and a replacement
+beta ZIP remain separate acceptance work; no named roadmap gate is closed.
+
 ## Party controls and LAN follow-up — completed 5 November 2026
 
 - [x] Implement native automatic party loot with atomic SQL recipients, overflow/stack handling, persisted leader mode and replay protection.

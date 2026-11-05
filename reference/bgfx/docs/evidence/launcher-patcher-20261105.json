@@ -1,0 +1,150 @@
+{
+  "date": "2026-11-05",
+  "implemented": true,
+  "legacy_static_analysis": {
+    "files": {
+      "Tantra.exe": "61c63ed495aad60dbbb8b11b905c731326e8dce07299e253700139ceeebe3e0e",
+      "Update.exe": "732bae41d439c7d64ffc56082aa23101e7dd0bd5d60cc462795d1844c73f9e05",
+      "HTLauncher.exe": "a82bf1b07c8f2834375dfc6429b90a3022a811cb134b2fe338c79d1884bc40d3"
+    },
+    "unchanged": true,
+    "executed": false,
+    "gate": "startup arguments and version, not parent filename"
+  },
+  "staged_files": {
+    "Tantra.exe": "45d76288320816975e9303d123737eb2d77b1512297a6ae66e7fd718debaba54",
+    "ZFLauncher.exe": "76acaea0f5d19c1f0bd6a18aa7e478ad89699a3a98d44558c03df4ad4eed9787",
+    "Start-Offline.cmd": "9e44cc013da052bc86a8ded1b84bea537d47ddd4ab49cc5245c92f0f54aa4276",
+    "system/Patcher.cfg": "d95405da4e3f0107515374222334dfbbdcec82a397d077ebf1b844176797461c"
+  },
+  "focused_checks": {
+    "passed": true,
+    "cases": [
+      {
+        "case": "direct game rejected",
+        "exit_code": 2,
+        "expected": 2,
+        "error": ""
+      },
+      {
+        "case": "verified Tantra-to-game handoff",
+        "exit_code": 0,
+        "expected": 0,
+        "error": ""
+      },
+      {
+        "case": "changed signed metadata rejected",
+        "exit_code": 2,
+        "expected": 2,
+        "error": "Patch signature is invalid"
+      },
+      {
+        "case": "recovery plus changed payload rejected",
+        "exit_code": 2,
+        "expected": 2,
+        "error": "Downloaded patch hash does not match its signed release"
+      },
+      {
+        "case": "valid signed patch applied",
+        "exit_code": 0,
+        "expected": 0,
+        "error": ""
+      },
+      {
+        "case": "unchanged release is idempotent",
+        "exit_code": 0,
+        "expected": 0,
+        "error": ""
+      }
+    ],
+    "fixture": "C:\\_GitHub\\TantraSrc\\_remake_bgfx\\build\\evidence\\patcher-1793890292076760400",
+    "client_data_unchanged": true,
+    "game_login_submitted": false,
+    "source_key_published": false,
+    "player_ui_preferences_preserved": true
+  },
+  "installed_feed_gui": {
+    "passed": true,
+    "https_required_for_public_hosts": true,
+    "lan_http_status": 200,
+    "version": 1793890298,
+    "start_button_enabled": true,
+    "options_dialog_checked": true,
+    "file_check_disabled_buttons_captured": true,
+    "game_settings_save_reload_cancel": true,
+    "invalid_resolution_rejected": true,
+    "aspect_and_resolution_arrows": true,
+    "borderless_desktop_resolution": true,
+    "shared_graphics_values": {
+      "width": 1600,
+      "height": 1000,
+      "windowMode": 0,
+      "textureQuality": 1,
+      "shadowQuality": 3,
+      "filtering": 1,
+      "drawDistance": 115,
+      "brightness": 120,
+      "fog": 0,
+      "terrainDetail": 1,
+      "vsync": 1,
+      "linearColor": 1
+    },
+    "sound_volumes": [
+      3,
+      7
+    ],
+    "player_preferences_unchanged": true,
+    "game_started": false,
+    "launcher": "Tantra.exe -> ZFLauncher.exe",
+    "screenshot": "launcher-patcher-20261105/launcher-ready.png",
+    "file_check_screenshot": "launcher-patcher-20261105/launcher-file-check.png",
+    "options_screenshot": "launcher-patcher-20261105/launcher-options.png"
+  },
+  "published_feed": {
+    "version": 1793890298,
+    "files": 5217,
+    "bytes": 1449372189,
+    "web_root": "C:\\xampp\\htdocs\\patch",
+    "patch_url": "http://172.16.90.12/patch",
+    "signed": true,
+    "private_key_published": false,
+    "bootstrap": "Tantra.exe (combined launcher/patcher, installed with the client)"
+  },
+  "manager_launcher_updated": true,
+  "manager_sha256": "f331b8ed874c44504ed7ce5116805e6ac5dcab8d1eeb5998b2172095de831ba7",
+  "existing_beta_zip_updated": false,
+  "other_pc_verified": false,
+  "broad_game_regressions_rerun": false,
+  "latest_installed_feed_check": {
+    "passed": true,
+    "version": 1793890298,
+    "method": "Installed launcher GUI completed initial signed apply and explicit File Check"
+  },
+  "installation_lock": true,
+  "multiple_profiles_allowed_when_no_files_change": true,
+  "launch_chain": [
+    "Tantra.exe",
+    "ZFLauncher.exe"
+  ],
+  "retired_client_updater": true,
+  "original_style": {
+    "bitmap_source": "assets/patcher/provenance.json",
+    "dimensions": [
+      600,
+      332
+    ],
+    "buttons": [
+      "Start Game",
+      "File Check",
+      "Web",
+      "Options",
+      "Exit"
+    ],
+    "graphics_settings": "Original RT_DIALOG 129 grouping, backed by shared game GraphicsOptions and ClientOptions: display, quality, effects, sound and names."
+  },
+  "disabled_caption_overlay_removed": true,
+  "preferences_preserved_by_file_check": [
+    "resource/UI/Interface.sys",
+    "resource/UI/MainUISave.sys"
+  ]
+}

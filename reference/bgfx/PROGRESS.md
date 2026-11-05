@@ -1,3 +1,78 @@
+## 5 November 2026: verified launch chain and signed XAMPP patch feed
+
+Implement native C++ Tantra.exe -> ZFLauncher.exe. Merge the patcher into the
+original-style Tantra launcher and retire Update.exe. Reject direct game launches;
+inherited one-use handoffs verify actual parent identity and installation paths. Offline startup, restarts, verification tools and Manager
+launches use this chain. Keep client saves and patch recovery data external.
+
+Use original dialog grouping for shared graphics/audio settings. Apply and
+Cancel use the game's existing Graphics.cfg/Interface.sys formats. File Check
+preserves player UI preferences; disabled bitmap buttons no longer redraw
+captions. One isolated launcher session verifies the reported recheck state and
+settings save/reload/cancel without launching gameplay.
+
+Publish signed Patcher.dat, UpdateList.dat, NotifyMsg.dat and content-addressed
+native client/runtime payloads to C:/xampp/htdocs/patch, served at
+http://172.16.90.12/patch. Validate signatures, hashes, versions and target paths;
+stage downloads and journal replacements for rollback/recovery. Native archives,
+TFX, MP3, cursors and shader-cache fingerprints are included. Private keys, SQL,
+source code and player data stay outside the web feed.
+
+Focused Release handoff/tamper/recovery/install checks and the installed launcher
+GUI pass with the full 5,217-file LAN feed. Matching client/Manager binaries are
+staged. K2108 executables were inspected statically and their hashes are unchanged.
+No Debug, broad game/FX, game login, separate-PC acceptance or replacement beta ZIP
+was run. Named roadmap tasks/gates remain unchanged. See [operation and evidence](docs/LAUNCHER_PATCHING.md).
+
+## 5 November 2026: continuous online routing and keyboard heading
+
+The previous speed/interpolation fix still used raw four-neighbor MapTcc A*
+waypoints for online owner movement. It made the visible character follow cell
+axes. The original HTMainCharacterMove interpolates toward a world target with
+a continuous heading. Use the existing collision-swept world navigator for
+straight visible segments and safe obstacle detours; preserve the requested
+world destination and native L1 timing. Keyboard W follows its precise heading
+and stops at collision instead of invoking A* around an obstacle.
+
+Publish physical cell crossings during movement, independently of smoothed
+waypoint completion, so server position, combat and saving keep receiving
+updates along long clear segments. Server authority and explicit correction
+handling remain in place. The shared navigator's local far variable collided
+with the Win32 macro in the network translation unit; rename it to lastVisible.
+
+A focused Release check passes arbitrary-angle open routes, swept wall detours,
+blocked goals, real Mandara unquantized movement, exact destination, in-segment
+cell publication and the prior speed/replica/owner-identity cases. Ashesh's saved
+native speed remains5. The matching Release launcher is staged; no server rebuild,
+SQL change, Debug build, broad FX check or graphical acceptance rerun. Existing
+beta ZIPs predate this fix. Named roadmap coverage/gates remain unchanged.
+See [routing evidence](docs/evidence/any-angle-movement-20261105.json).
+
+## 5 November 2026: native online movement speed and smooth replicas
+
+Correct UPDATE_UI speed decoding: Ashesh's saved level-one Naga stats produce
+native speed5, encoded as byteSpeed1=105 plus the other protected bytes. The
+online client incorrectly used105 directly. Restore all four byte operations
+and native parity validation; plain status-update speed remains unchanged.
+Owner ground routes now use native L1 distance/correction15, keyboard forward
+uses Euclidean/correction12, walking uses integer speed/2 and route frames retain
+unused travel budget. Replanning skips the character's current cell.
+
+Network monsters previously snapped to each movement target. Advance their
+visible position every frame using original HTMoveMonster speed*11; other PCs
+use HTOtherCharacterMove speed*14. Retarget from the visible position, update
+floor height, stop movement on arrival/death/attack and clear old respawn routes.
+Authoritative warps/corrections retain their immediate position semantics.
+
+One focused Release channel/map check passes protected speed, owner/walk/keyboard
+travel, idle-owner monster interpolation, retarget/arrival/death/respawn, peer
+movement and existing owner-identity checks. The initial probe's lightweight map
+omitted floors; the corrected full map fixture passes. Ashesh's saved snapshot
+was read without changing SQL. The matching Release launcher is staged. No
+server rebuild, Debug build, broad FX check or live graphical acceptance rerun.
+The previously built LAN ZIP predates this fix. Named roadmap coverage/gates
+are unchanged. See [evidence](docs/evidence/online-movement-20261105.json).
+
 ## 5 November 2026: party controls, shared LAN database and entry fix
 
 Automatic party loot follows the native pickup rules with atomic SQL recipient

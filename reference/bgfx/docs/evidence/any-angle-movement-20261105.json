@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-05",
+  "cause": "Online movement rendered every raw four-neighbor MapTcc A* cell as a waypoint",
+  "original_reference": [
+    "Tantra/HTlauncher/HTMainCharacterMove.cpp:116-149 and 205-214 continuous target interpolation",
+    "Tantra/HTlauncher/HTMainCharacter.cpp:2029-2053 movement target setup"
+  ],
+  "changes": [
+    "Use the shared collision-swept world routing with clear straight segments and obstacle detours",
+    "Retain precise world destination and continuous atan2 facing",
+    "Keep native movement speed/parity and walk/run timing",
+    "Report physical cell changes during long segments",
+    "Keyboard forward keeps heading and clips at static collision"
+  ],
+  "checks": {
+    "focused_release_probe_passed": true,
+    "open_arbitrary_heading": true,
+    "wall_detour_sweeps": true,
+    "blocked_destination_rejected": true,
+    "native_map_unquantized_heading": true,
+    "server_cell_updates_before_waypoint_completion": true,
+    "precise_same_cell_destination": true,
+    "prior_speed_replica_entry_cases": true,
+    "saved_Ashesh_native_speed": 5,
+    "server_rebuild": false,
+    "sql_modified": false,
+    "live_graphical_session_rerun": false
+  },
+  "corrected_build_issue": "The existing WorldNavigation local variable far conflicted with the Win32 far macro; rename it to lastVisible.",
+  "release_staged": true,
+  "client_sha256": "0e9a620de198823e3576cd06a6620f8ac070ac13bb382b2cfaff8c6aa9785d4b",
+  "older_beta_zip_predates_fix": true
+}

@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. C08 package/recovery is accepted on the named Windows/D3D11 machine, including twelve matched Release CPU/GPU trials with worst GPU p95 16.430 ms. Zone01-Zone05 pass bounded native resources, two-client travel, NPC/environment/audio and persisted saved-zone entry. Native guild roles/paid marks and selected quest/combat families pass focused Release checks. Wider C09, Zone06-Zone10 and public-beta release gates remain open; the earlier C08 benchmark applies to its frozen executable. The 1 November follow-up adds native timing, movement checkpoints, channel metrics/create/drain and preserved-data MariaDB deployment; the revised two-client network acceptance passes. The 2 November checkpoint verifies visible entry, native priest/class services, Mandara2nd scene and persistence, and Manager automatic backups. Its separate rendered projectile step remains incomplete.",
+      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. Named coverage remains 173/254 (68%) with 6/10 accepted gates. C08 and five zones retain their bounded original evidence; the C08 benchmark applies to its frozen executable. The current client uses an original-style combined Tantra.exe launcher, signed LAN patching, shared game settings and corrected continuous online movement. New public packaging, Internet connectivity, clean-PC acceptance and public cap/abuse/operations gates remain open.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -2776,6 +2776,8 @@ window.TANTRA_ROADMAP = {
         }
       ],
       "foundations": [
+        "Native online speed/parity decoding, collision-swept continuous owner routing and frame-by-frame monster/peer interpolation; focused Release evidence",
+        "Combined original-style Tantra.exe launcher, one-use game handoff and signed recoverable LAN patches; shared game display/quality/audio settings and preference-preserving File Check",
         "Signed172.16.90.12 LAN deployment,hostname-verified TLS,LocalSubnet firewall and preserved shared MariaDB; new-character owner-entry fix and LAN ZIP",
         "Native atomic automatic party loot,persisted leader mode,one-use invitations and original party/Ashram confirmations",
         "Original party/Ashram information/member layouts with server TP,tribe/rank/status fields,native images,scrolling and widescreen resize",
@@ -2818,13 +2820,18 @@ window.TANTRA_ROADMAP = {
         "Historical pre-C08 baseline: 7,200 measured native scene frames, CPU/GPU/loading timings and hardware/input hashes"
       ],
       "next": [
-        "Export a reachable public hostname and matching signed TLS profile; the verified download currently targets localhost",
-        "Verify installation on a separate clean Windows player PC; isolated local installation and fresh two-client journey pass",
-        "Set an initial public player cap from sustained mixed gameplay, persistence and restart measurements",
-        "Finish public-entry abuse rejection, enrollment, monitoring, backup/rollback and tester support gates",
-        "Continue additional native quest/combat families and Zone06 separately; do not invent missing source content"
+        "Deploy a public hostname/address with matching game TLS and HTTPS patch hosting; current 172.16.90.12 connectivity is LAN-only",
+        "Build the final matching package with Tantra.exe/current movement fixes and public signed files; verify installation, patching and login on a separate clean Windows PC",
+        "Run one final-build two-client beginner/social journey including graphical automatic party loot, trade/services and saved return",
+        "Finish public-entry abuse checks and measure sustained mixed gameplay/save/reconnect behaviour to set the initial player cap",
+        "Demonstrate backup/restore and package rollback, monitoring/crash collection, individual beta accounts and tester reporting before the release decision"
       ],
       "changes": [
+        {
+          "date": "2026-11-05",
+          "title": "Original-style Tantra launcher, signed patching and shared game settings",
+          "text": "Combine the native C++ patcher and launcher in Tantra.exe; retire Update.exe and require its inherited one-use handoff before ZFLauncher starts. Preserve offline entry, game restart supervision, package tooling and Manager launches. Publish signed schema-2 Patcher.dat, immutable lists/notices and hashed payloads to the LAN XAMPP feed. Verify tamper rejection, interrupted-install recovery and preference-preserving checks. Reuse original K2108 PE bitmap resources and dialog grouping without modifying the originals. Remove duplicate disabled captions; launcher Options saves the same game Graphics.cfg/Interface.sys formats for resolution/aspect/custom size, window modes, actual graphics quality and separate sound volumes. One isolated launcher session verifies File Check, Apply/reload/Cancel, invalid resolution and borderless controls. Earlier focused Release checks also correct native owner speed, any-angle collision-swept routing and smooth monster/peer interpolation. Current beta ZIPs predate these fixes. No gameplay/FX benchmark rerun or separate-PC/public acceptance is claimed; 173/254 tasks (68%),6/10 gates remain unchanged. Preserve Tantra-O."
+        },
         {
           "date": "2026-11-05",
           "title": "Native party controls, signed LAN deployment and new-character entry fix",
@@ -3081,11 +3088,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "0520c5a6cdf4c5df6aceba5819f20de37636523ba1c55768c5b091b6922b76f9"
+      "sha256": "f1040e5a89b45b5a37dd66b191679af86e0e2f91dbe8db6d1991d3366c356eee"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "c8b23a162d241fb5d7d0dbe51d3ea51295967c30691bc694e531f3d294bcce2f"
+      "sha256": "ca06af6c7e70839c43b29ed7f377d2e000a3343f483e99f88fade1cd30702e38"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",

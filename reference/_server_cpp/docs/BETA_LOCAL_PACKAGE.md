@@ -6,6 +6,36 @@ still open. That earlier signed candidate used localhost. The later [party/LAN c
 adds a new172.16.90.12 candidate with matching TLS, shared MariaDB and an entry fix.
 No second Windows installation or physical player PC was available.
 
+## Latest launcher and public-beta priorities
+
+The staged client now starts through `Tantra.exe -> ZFLauncher.exe`; the separate
+Update.exe is retired. Signed native-resource patches, original launcher skin,
+shared graphics/audio settings and preference-preserving File Check pass focused
+Release checks. Owner speed, continuous routing and replica interpolation also
+have focused source/component evidence. These changes are newer than the last
+beta ZIP; that ZIP is not the final public download. See
+[launcher implementation and evidence](../../_remake_bgfx/docs/LAUNCHER_PATCHING.md).
+
+Next release gates, in order:
+
+1. Provide an Internet-reachable host/domain, matching game TLS identity and
+   HTTPS patch endpoint; export new signed client connection files. The current
+   172.16.90.12 address and LocalSubnet firewall rules only serve the LAN.
+2. Build one matching Release client/runtime package with the combined launcher,
+   current movement fixes and public profile. Verify installation, signed patching,
+   login and retained settings on a separate clean Windows player PC.
+3. Run one short final-build two-client beginner/social journey, including live
+   automatic party loot, trade/services and reconnect/saved return. The earlier
+   successful beginner and packaged-social sessions retain their separate scopes.
+4. Complete the public-entry rejection checks and measure sustained mixed
+   gameplay/save/reconnect behaviour before choosing the initial player cap.
+5. Demonstrate a matching backup/restore and package rollback, enable operator
+   monitoring/crash collection, provision individual beta accounts, and publish
+   supported content/known issues with a tester reporting path.
+
+Full original-game parity and thousand-player capacity are separate milestones.
+Public beta is still unaccepted; these launcher fixes do not close a release gate.
+
 ## What was verified
 
 Two visible BGFX/D3D11 clients ran from an extracted ZIP, with a stripped PATH,
@@ -29,8 +59,9 @@ HP/TP scale, owner exclusion, tribe/rank/status columns, scrolling, G routing an
 widescreen resizing. The former generic lists remain supplemental management
 controls. Roster TP and guild tribe/level/online metadata come from the server.
 This component check is not another live guild/party network acceptance run.
-Automatic party loot distribution is not implemented; its control reports that
-limitation. Alliance/fortress services retain their existing scope.
+Automatic party loot was unavailable in that earlier candidate; the later
+[party/LAN checkpoint](PARTY_LOOT_LAN.md) implements the authority and controls.
+Live graphical automatic-loot acceptance remains open. Alliance/fortress services retain their existing scope.
 
 Evidence is in [beta-local-20261105](evidence/beta-local-20261105).
 `PERSISTENCE_RESULT.json` retains the original harness's unused destination 2

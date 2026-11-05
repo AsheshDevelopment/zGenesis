@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-05",
+  "character": "Ashesh",
+  "saved_snapshot_read_only": true,
+  "tribe": 8,
+  "level": 1,
+  "source_native_move_speed": 5,
+  "source_encoded_ui_speed1": 105,
+  "fixes": [
+    "Decode all native UI speed bytes and verify parity",
+    "Owner click movement uses native L1 distance *15; keyboard Euclidean *12",
+    "Walk uses integer speed/2; consume remaining per-frame movement budget",
+    "Skip current start cell when replanning an in-progress route",
+    "Interpolate monster speed*11 and other-character speed*14 every frame",
+    "Retarget from visible position; finish at target and clear death/respawn routes"
+  ],
+  "focused_release_check_passed": true,
+  "initial_probe_issue_corrected": "The lightweight map load omitted collision/floors; use full native map input in the probe. No launcher change was needed for this fixture correction.",
+  "release_binary_staged": true,
+  "client_sha256": "c7f380281e046109d0da589c9899442b49c283308155b852eddd18148e6ce36e",
+  "server_rebuild_required": false,
+  "sql_modified": false,
+  "live_graphical_acceptance_rerun": false,
+  "broad_fx_tests_rerun": false,
+  "existing_beta_zip_predates_this_fix": true
+}
