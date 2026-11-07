@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "Source-based bgfx/SDL3/miniaudio client and native C++ shared MMO services. Named coverage remains 173/254 (68%) with 6/10 accepted gates. Latest live LAN clients pass signed connections, movement, combat, automatic party currency sharing, trade and SQL-verified saved return. English combat chat and fresh client/server update archives are checked. Public hosting, a separate player PC and player-cap/abuse/operations gates remain open. Earlier graphics benchmarks apply to their frozen executables.",
+      "description": "Source-based bgfx/SDL3/miniaudio client and C++ shared MMO services. Named task coverage is 173/254 (68%); 6/10 phase gates. Latest focused delivery covers K3 Taras, audio recovery and native Z11 authority/travel. Normal war entrance and full Z11 graphical acceptance remain separate.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -2247,7 +2247,12 @@ window.TANTRA_ROADMAP = {
               "id": "P13-09",
               "done": false,
               "text": "Handle audio device failure as recoverable; prevent duplicate music on transition/retry.",
-              "children": []
+              "children": [
+                {
+                  "done": true,
+                  "text": "Accept actual-miniaudio BGM 30008/30007/30011 selection, stopped same-ID music restart, delayed effects initialization, sample-service shutdown/reinitialization restoring ambience, music disable/re-enable, native fade and retained gains. OS audio-device loss/reset and connected graphical travel remain unverified; see 7 November evidence."
+                }
+              ]
             },
             {
               "id": "P13-10",
@@ -2776,6 +2781,7 @@ window.TANTRA_ROADMAP = {
         }
       ],
       "foundations": [
+        "K3 Taras and audio reset recovery; native Z11 startup/king-room/trap controls and private saved portal handoff",
         "Live two-client signed TLS/MariaDB journey: movement, combat, automatic party currency, SDL exact-instance trade and SQL-verified fresh return; current client ZIP/server update with manifest hashes",
         "Native online speed/parity decoding, collision-swept continuous owner routing and frame-by-frame monster/peer interpolation; focused Release evidence",
         "Combined original-style Tantra.exe launcher, one-use game handoff and signed recoverable LAN patches; shared game display/quality/audio settings and preference-preserving File Check",
@@ -2821,13 +2827,18 @@ window.TANTRA_ROADMAP = {
         "Historical pre-C08 baseline: 7,200 measured native scene frames, CPU/GPU/loading timings and hardware/input hashes"
       ],
       "next": [
-        "Deploy a public hostname/address with matching game TLS and HTTPS patch hosting; current 172.16.90.12 connectivity is LAN-only",
-        "Use the refreshed matching beta package and verify installation, patching and login on a separate clean Windows PC; replace the LAN profile with public signed files when hosting is ready",
-        "Keep the passing live two-client journey as evidence; extend only uncovered beginner/service/skill content and repeat affected flows when relevant code changes",
-        "Finish public-entry abuse checks and measure sustained mixed gameplay/save/reconnect behaviour to set the initial player cap",
-        "Demonstrate backup/restore and package rollback, monitoring/crash collection, individual beta accounts and tester reporting before the release decision"
+        "Verify and finish normal war-triggered Z11 gate spawning, god ownership, removal and actual client UI entry",
+        "Complete one K3 projectile skill family through animation, flight, impact timing and audio",
+        "Finish one remaining original quest chain through dialogue, objectives, rewards and saved progress",
+        "Refresh the downloadable beta package after the implementation batch",
+        "Retain separate-PC/public connectivity and release-readiness gates"
       ],
       "changes": [
+        {
+          "date": "2026-11-07",
+          "title": "K3 Taras, audio recovery and native Chaturanga",
+          "text": "Complete the focused Taras3121 K3 animation/wing lifecycle and ten rank bindings; projectiles/trails are not applicable to this self buff. Restore TFX loop voices after miniaudio reset without resetting graphs or replaying finite cues. Implement native Z11 God-zone startup, reserved kings, room return, trap-cell death and saved-zone logout. Private authority checks accept177/174/146 travel, live same-god gate approval and exact saved return; original packed Z11 assets load with two missing textures recorded. Normal war-triggered2946 spawning and real client entrance remain the next gate. Stage the client/zone Release binaries and signed patch1794044192. Retain accepted NPC and Quest26 work; no new full-scene Z11, public-host, separate-PC or benchmark acceptance."
+        },
         {
           "date": "2026-11-06",
           "title": "Live signed-connection journey, English combat chat and fresh beta downloads",
@@ -3094,15 +3105,15 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "5c6310a2892e8c5f66fb8991e7956a3644a67116fb907e7ef82db1dbec03c980"
+      "sha256": "0f0a1d539ca444803ed13e4bb42d2e85bf6564549c49d4c9d7793d2bd63ff90f"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "9984a315575bea9a8c517c85748902d99654faed68ad212628713567bbbddf5b"
+      "sha256": "cb0a51792b82e5b91c710fe6892bcd563707abe559c1adf33b5d6aab15f7a438"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",
-      "sha256": "173011ea4aa956c84a45df563caf5adca8fbbea782f30a0b1d79c8155a2a1673"
+      "sha256": "3517775ddac9aae1aeaaa2f8733d764530f34cf0bb3a6b23b618b7a5893e4130"
     }
   },
   "reference": {

@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, copy, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.29"
+VERSION = "1.0.30"
 
 
 def sha(body):
@@ -186,6 +186,10 @@ def refresh(source):
         "Finish public-entry abuse checks and measure sustained mixed gameplay/save/reconnect behaviour to set the initial player cap",
         "Demonstrate backup/restore and package rollback, monitoring/crash collection, individual beta accounts and tester reporting before the release decision"
     ]
+    latest.insert(0, {"date":"2026-11-07", "title":"K3 Taras, audio recovery and native Chaturanga", "text":"Complete the focused Taras3121 K3 animation/wing lifecycle and ten rank bindings; projectiles/trails are not applicable to this self buff. Restore TFX loop voices after miniaudio reset without resetting graphs or replaying finite cues. Implement native Z11 God-zone startup, reserved kings, room return, trap-cell death and saved-zone logout. Private authority checks accept177/174/146 travel, live same-god gate approval and exact saved return; original packed Z11 assets load with two missing textures recorded. Normal war-triggered2946 spawning and real client entrance remain the next gate. Stage the client/zone Release binaries and signed patch1794044192. Retain accepted NPC and Quest26 work; no new full-scene Z11, public-host, separate-PC or benchmark acceptance."})
+    project["foundations"].insert(0,"K3 Taras and audio reset recovery; native Z11 startup/king-room/trap controls and private saved portal handoff")
+    project["description"] = f"Source-based bgfx/SDL3/miniaudio client and C++ shared MMO services. Named task coverage is {project['done']}/{project['total']} ({project['percent']}%); {project['accepted']}/10 phase gates. Latest focused delivery covers K3 Taras, audio recovery and native Z11 authority/travel. Normal war entrance and full Z11 graphical acceptance remain separate."
+    project["next"] = ["Verify and finish normal war-triggered Z11 gate spawning, god ownership, removal and actual client UI entry", "Complete one K3 projectile skill family through animation, flight, impact timing and audio", "Finish one remaining original quest chain through dialogue, objectives, rewards and saved progress", "Refresh the downloadable beta package after the implementation batch", "Retain separate-PC/public connectivity and release-readiness gates"]
     titles = {change["title"] for change in latest}
     project["changes"] = latest + [change for change in project["changes"] if change["title"] not in titles]
     # OGRE data and all bundled OGRE documentation remain byte-identical.
@@ -198,7 +202,7 @@ def refresh(source):
     command_doc = ROOT / "reference/bgfx/docs/NATIVE_COMMANDS.md"
     command_doc.parent.mkdir(parents=True, exist_ok=True)
     command_doc.write_bytes((source / "docs/NATIVE_COMMANDS.md").read_bytes())
-    for relative in ("evidence/beta-refresh-20261106.json", "evidence/live-release-20261106.json", "evidence/two-file-connections-20261105.json", "LAUNCHER_PATCHING.md", "evidence/launcher-patcher-20261105.json", "evidence/online-movement-20261105.json", "evidence/any-angle-movement-20261105.json", "PACKAGE_RECOVERY_ACCEPTANCE.md", "evidence/c08-acceptance-20261105.json", "evidence/c08-benchmark-20261105.json", "evidence/c08-graphics-persistence-20261105.json", "evidence/goal-completion-audit-20261105.json"):
+    for relative in ("evidence/focused-taras-audio-chaturanga-20261107.json", "evidence/focused-npc-quest26-20261107.json", "evidence/beta-refresh-20261106.json", "evidence/live-release-20261106.json", "evidence/two-file-connections-20261105.json", "LAUNCHER_PATCHING.md", "evidence/launcher-patcher-20261105.json", "evidence/online-movement-20261105.json", "evidence/any-angle-movement-20261105.json", "PACKAGE_RECOVERY_ACCEPTANCE.md", "evidence/c08-acceptance-20261105.json", "evidence/c08-benchmark-20261105.json", "evidence/c08-graphics-persistence-20261105.json", "evidence/goal-completion-audit-20261105.json"):
         target = ROOT / "reference/bgfx/docs" / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes((source / "docs" / relative).read_bytes())
@@ -256,23 +260,19 @@ def refresh(source):
         if name == "docs/PROGRESS.md":
             content = re.sub(r"Version: \d+\.\d+\.\d+", "Version: " + VERSION, content)
             content = content.replace("Version: " + VERSION + " Reviewed:", "Version: " + VERSION + ". Reviewed:")
-            content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-11-06.", content)
+            content = re.sub(r"Reviewed: \d{4}-\d{2}-\d{2}\.", "Reviewed: 2026-11-07.", content)
         elif "## " + VERSION not in content:
             entry = """# Unreleased
 
-## 1.0.29 - 2026-11-06 (Tantra-B only)
+## 1.0.30 - 2026-11-07 (Tantra-B only)
 
-Changed: two-file signed connections, root Patcher.dat, legitimate movement guard
-conversion, untranslated NPC speech filtering and proper English speaker names.
-Verified: live LAN two-client login/movement/combat/automatic loot/trade/saved
-return; focused native speech and35 chat/UI checks; all5,225 client and77 server
-update payload hashes, signed connection/tamper checks and private-file exclusion.
-Downloads: current client and separate server update in D:\\Tantra-Beta\\2026-11-06.
-No new full gameplay/FX benchmark or separate-PC acceptance is claimed.
-Remaining: Internet host/TLS/HTTPS, clean-PC and public cap/abuse/operations gates.
-Named coverage remains 173/254 (68%),6/10 gates. No broad game/FX benchmark rerun.
-Tantra-O remains unchanged.
-
+Changed: K3 Taras wing selection and animation lifecycle, looping TFX audio
+recovery, Z11 native startup, kings, traps, original portal selection and saving.
+Verified: focused rendered Taras ranks/attachments; real miniaudio reset recovery;
+private Z11 authority and portal/save contracts; original packed map resources.
+Normal war-triggered entrance/client UI acceptance remains open. Two missing
+source textures are recorded. Signed patch1794044192 is staged. Preserve Tantra-O.
+No new full-game, public-host, separate-PC or benchmark acceptance is claimed.
 
 """
             content = content.replace("# Unreleased\n", entry)

@@ -6,6 +6,33 @@ external XML picker. Global is the gameplay baseline. `ClientRes.xlsx` retains
 K3 MainUI/IntroUI bindings and the current client's eight loading bindings;
 Global-only UI entries and all other resource values remain available.
 
+## K3 Monster skill bindings
+
+The canonical `TantraParam.xlsx` keeps Global Monster rows and base stats.
+K3 owns `idSkill0` through `idSkill7` and `byteSkillPattern0` through
+`byteSkillPattern3` for matching Monster IDs. In the current workbook, ID is
+column J and these twelve binding fields occupy BI:BT. The patterns select
+native skill-pattern tables; they are not monster levels or free-form weights.
+Skill definitions, animation bindings and FX also remain K3.
+
+Use the narrow canonical migration from the repository root:
+
+```powershell
+$k3BindingWork = Join-Path $env:TEMP ('tantra-k3-bindings-' + [guid]::NewGuid().ToString('N'))
+python _server_cpp/tools/adopt-k3-skills.py --k3-xml GenesisK3-XMLs --output $k3BindingWork --monster-bindings-only
+node _server_cpp/tools/author-k3-skill-sheets.mjs $k3BindingWork
+python _server_cpp/tools/adopt-k3-skills.py --output $k3BindingWork --install-workbooks
+```
+
+The authoring command uses the project's `@oai/artifact-tool` environment.
+`SOURCE.json` contains only ID plus the twelve binding columns. Installation
+checks source/workbook hashes, backs up the original workbook and patches only
+changed matching cells while retaining their styles and every unrelated part.
+The adjacent provenance JSON records source hashes, matched IDs, column policy
+and change counts. Generate a paired data package afterward; exports consume
+the resulting canonical XLSX, with no runtime or hidden XML overlay. These
+commands describe the workflow and do not constitute installation acceptance.
+
 The Global-baseline TantraParam workbook has documented map compatibility
 overrides: Mandara1st NPC placement matches the original K3 map, and portal 131 uses the original K3 Mandara arrival bounds. The original
 Global rectangle has no valid landing cell on this client's terrain. All other

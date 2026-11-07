@@ -13,10 +13,53 @@ A bounded `TBCONN02` trailer now carries signed connection metadata and the
 public TLS trust certificate. The client needs only `serverlist.bin` and
 `system/HTMessage.txl`; separate `ConnectionProfile.json` and `ServerTLS.cer`
 files are retired. This extension is for the remake; the native prefix is retained. In the BGFX
-profile, slot 0 is the roster endpoint and slots 1-50 correspond to map owners.
+profile, slot0 is the roster endpoint and slots1–50 are positional endpoint/channel
+slots. Their wire capacity is independent of the current native map ID scope01–34.
 ASCII DNS names and IPv4 addresses fit the original 63-byte endpoint payload.
 Online mode ignores an unsigned `serverlist.txt` shadow. Offline play continues
 through `Start-Offline.cmd` and its separate SQLite profile.
+
+## Administrator commands — 6 November 2026
+
+Type `/erichgwapo` to open the searchable English command panel. Execution requires
+the exact, case-sensitive whisper receiver `ASHESHDEV` and authenticated account
+`userLevel == 1`. Online authority reads SQLDMN authorization on every request,
+including cached replays; demotion denies further execution. Character/account
+names, native GM clans, client flags and levels2–255 confer no administrator rights.
+Native public chat/whisper packets reject slash execution, and the old secret
+receivers are not accepted by the command parser.
+
+The dedicated little-endian request is `0x7f42`, with a 240-byte body: operation(u32)
+at 0, nonce(u32) at 4, expected character revision(u64) at 8, receiver[20] at 16 and
+command[204] at 36. Operation 0 queries privilege and requires an empty command;
+operation 1 executes. Nonce must be positive. Text is printable ASCII, NUL-terminated
+with zero padding; commands are at most 200 bytes.
+
+Reply `0xff42` has a 256-byte body: operation at 0, nonce at 4, result at 8,
+authenticated userLevel at 12, committed revision(u64) at 16, privilege flags at 24
+and NUL-terminated message[228] at 28. The other numeric fields are u32. Result 0 is
+success, 1 denied, 2 invalid, 3 unsupported and 4 failed. Privilege bit 0 means the
+authenticated account level equals 1; unavailable authorization reports
+userLevel `UINT32_MAX`. Offsets exclude the 12-byte native frame header.
+
+The implemented online subset covers self status/IDs/equipment inspection,
+same-map warp, money/prana/level/HP/karma, whisper preference, class/Trimurti and
+stat/skill resets. Targets use the actual current server handle; they cannot edit
+other players. Mutations use native status calculation and owned, revision-checked
+persistence; replay cannot repeat a committed command. Other source-registry
+entries, including ground-item creation online, return explicit unsupported
+feedback. The full inventory is not a claim that every source service is ported.
+See [commands and examples](../../_remake_bgfx/docs/NATIVE_COMMANDS.md).
+
+Offline SQLite schema 5 adds the integer `accounts.userLevel` field with default 0
+and range 0–255. Its authority checks the authenticated local session and exact
+value 1 for each command. Existing/new accounts remain ordinary unless explicitly
+provisioned separately; migration never promotes them. This offline schema is
+separate from the online server database schema. Focused server authorization and
+persistence plus the isolated Release SDL panel component pass. Full live online
+administration and quickbar drag/row-button integration remain open. See
+[accepted component evidence](../../_remake_bgfx/docs/CLIENT_FEATURE_EXPANSION.md#administrator-authorization-and-independent-quickbars);
+older connection test results below do not verify the full command journey.
 
 Standalone **TantraDataTools > BGFX online connections / export** edits client
 location, game listen IPv4, URLs, world name, endpoint host/port rows, identity paths and profile

@@ -1,5 +1,16 @@
 # Unreleased
 
+## 1.0.30 - 2026-11-07 (Tantra-B only)
+
+Changed: K3 Taras wing selection and animation lifecycle, looping TFX audio
+recovery, Z11 native startup, kings, traps, original portal selection and saving.
+Verified: focused rendered Taras ranks/attachments; real miniaudio reset recovery;
+private Z11 authority and portal/save contracts; original packed map resources.
+Normal war-triggered entrance/client UI acceptance remains open. Two missing
+source textures are recorded. Signed patch1794044192 is staged. Preserve Tantra-O.
+No new full-game, public-host, separate-PC or benchmark acceptance is claimed.
+
+
 ## 1.0.29 - 2026-11-06 (Tantra-B only)
 
 Changed: two-file signed connections, root Patcher.dat, legitimate movement guard
@@ -451,6 +462,6 @@ Remaining: real browser layout acceptance.
 ## Latest source checkpoints
 
 - **Tantra-O**: 46/102 named tasks checked; 0/14 gates recorded. Latest: Focused saved-roster route prepared. Saved-field SDL route, framing/movement traces and persisted-state auditor are implemented and CPU-checked. Both clients are rebuilt; the broader goal is paused and launch authorization remains unanswered. No new runtime acceptance is claimed.
-- **Tantra-B**: 173/254 named tasks checked (68%); 6/10 gates recorded. Latest: Live signed-connection journey, English combat chat and fresh beta downloads. Two Release clients pass normal Tantra.exe launch, version-16 two-file signed connections/TLS, continuous movement, ordinary combat, automatic party currency sharing, exact-instance SDL trade and fresh login with MariaDB comparisons. A 13-Rupiah drop credits six to each member with native remainder one. Fix the correction-15/correction-10 speed-guard bridge without trusting packet speed. Global Philippine AI speech has 348 untranslated Reserved entries; filter them including target-name forms while retaining native RNG/callback ordering, keep real dialogue and resolve English monster/NPC speaker names. Focused server speech and 35 rendered chat/UI checks pass. Generate a new 5,225-payload client ZIP with root Patcher.dat and matching 77-file server update, verify all archived payload hashes, native profile signature and tamper rejection, and exclude accounts/private keys. Publish signed patch release 1793900170. LAN172.16.90.12 only; no separate-PC, public-host, capacity/abuse/operations or new benchmark acceptance. Named coverage remains173/254 (68%),6/10 gates; preserve Tantra-O. Remaining native skill/FX and complete map/game acceptance stay open.
+- **Tantra-B**: 173/254 named tasks checked (68%); 6/10 gates recorded. Latest: K3 Taras, audio recovery and native Chaturanga. Complete the focused Taras3121 K3 animation/wing lifecycle and ten rank bindings; projectiles/trails are not applicable to this self buff. Restore TFX loop voices after miniaudio reset without resetting graphs or replaying finite cues. Implement native Z11 God-zone startup, reserved kings, room return, trap-cell death and saved-zone logout. Private authority checks accept177/174/146 travel, live same-god gate approval and exact saved return; original packed Z11 assets load with two missing textures recorded. Normal war-triggered2946 spawning and real client entrance remain the next gate. Stage the client/zone Release binaries and signed patch1794044192. Retain accepted NPC and Quest26 work; no new full-scene Z11, public-host, separate-PC or benchmark acceptance. Remaining native skill/FX and complete map/game acceptance stay open.
 
 These are separate source checklists, not release-completion percentages.

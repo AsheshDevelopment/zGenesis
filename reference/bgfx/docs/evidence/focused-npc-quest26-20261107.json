@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-07",
+  "goal": "Finish pending NPC-handler batch and Quest26 online dialogue/objectives/reward feedback/saved progress",
+  "goal_complete": true,
+  "npc_batch": {
+    "evidence": "native-npc-encounters-20261107.json",
+    "focused_check_passed": true,
+    "staged_in_both_server_roots": true,
+    "normal_workers_restarted": false
+  },
+  "quest26": {
+    "passed": true,
+    "normal_data_changed": false,
+    "seeded_materials": 10,
+    "qa_map_relocations": true,
+    "hud_only": true,
+    "combat_repeated": false,
+    "first_exchange_repeated": false,
+    "leg0_reconciled": {
+      "native_accept_and_material_exchange": true,
+      "objective_9_and_10_format_checks_passed_before_final_assertion": true,
+      "saved_letters": true,
+      "old_failure": "The probe incorrectly demanded a generic type60 chat message; original Scenario2E emits quest-history flags instead.",
+      "counter_capture_limitation": "The journal capture selected another active quest; counter format/code were checked, but that image does not display the selected26 counter."
+    },
+    "legs": [
+      {
+        "leg": 0,
+        "quest26": 4,
+        "materials7119": 0,
+        "letters8021": 1,
+        "letters8022": 1
+      },
+      {
+        "leg": 1,
+        "zone": 1,
+        "npc": 1102,
+        "client": {
+          "passed": true,
+          "leg": 1,
+          "real_network": true,
+          "native_dialogue": true,
+          "quest_history": true,
+          "actual_sdl_accept": false,
+          "objective_counter": false,
+          "exact_rewards_and_feedback": false,
+          "hud_only": true,
+          "full_scene": false,
+          "seeded_materials": 10,
+          "combat_repeated": false
+        },
+        "saved_exact_beyond_vitals": true,
+        "initial_reopened_exact_beyond_vitals": true,
+        "quest26": 5
+      },
+      {
+        "leg": 2,
+        "zone": 2,
+        "npc": 1110,
+        "client": {
+          "passed": true,
+          "leg": 2,
+          "real_network": true,
+          "native_dialogue": true,
+          "quest_history": true,
+          "actual_sdl_accept": false,
+          "objective_counter": false,
+          "exact_rewards_and_feedback": true,
+          "hud_only": true,
+          "full_scene": false,
+          "seeded_materials": 10,
+          "combat_repeated": false
+        },
+        "saved_exact_beyond_vitals": true,
+        "initial_reopened_exact_beyond_vitals": true,
+        "quest26": 255
+      }
+    ]
+  },
+  "requirements_audit": {
+    "online_dialogue": "Original Saranew narrative and SDL Accept, material exchange, Girika exchange, Saranew reward executed through real native TCP requests; first leg reconciled from pre-failure assertions, captured dialogue and persisted letters.",
+    "objectives": "Native7119 item count updates the Quest26 journal independently of quest-flag changes. Its9/10 and10/10 view checks executed before the first-leg final assertion. Original Basedef MAX_INVEN48 is used; reserved inventory metadata is excluded. The capture selected another active quest, so no selected-counter image acceptance is claimed.",
+    "reward_feedback": "Online final leg checks exact100000 Prana,50000 Rupiah, correct tribe item and retained8045, plus original1106/1065/2017 chat text. Prana totals include crossed native level thresholds.",
+    "saved_progress": "Girika and final Saranew sessions reopen the preceding native flags/items/rewards exactly beyond allowed HP/TP recovery. Each final client MOB matches stopped SQL beyond HP/TP. Final26=255 and27=1.",
+    "staging": "Server destinations match the accepted NPC build; staged ZFLauncher matches the accepted Release production build; one signed patch is published."
+  },
+  "original_source": {
+    "Tantra/zone/Quest.cpp": "ee6b4ad74aacf155ea69cd248440ad4eecb8440fa3c02c4f155e46f1404c90b7",
+    "Tantra/zone/Basedef.h": "06d0028f615afcc34c0f8aa18d9dfe8af5c9a748ca5144b01dff8d8d0941ed22",
+    "Tantra/HTlauncher/HTInterface.cpp": "ec0c0942971f74bcc50f3ad3d79ec17a4dfac28b79ce5cdebde112bc9cf43844"
+  },
+  "changed_source": {
+    "_remake_bgfx/src/resources/NativeQuestJournal.h": "3cd1e210dc83489d8b97d68c4b23e8af4f794d49f5c35c9635d4ec471729a084",
+    "_remake_bgfx/src/rendering/HtRenderFacade/MainHudQuest.inc": "436765acab8abd79f791dc68e27c77fbea49fffa168800e71b37ec91f4f281f6",
+    "_remake_bgfx/src/rendering/HtRenderFacade/MainHudPresentation.h": "7b70ab15e5a6f9e9ffcacdd965d6fb60b2cbbf07b1667a5d7d44a07f7c3d16ca",
+    "_remake_bgfx/src/rendering/HtRenderFacade/MainHudPresentation.cpp": "9af13a6fcb57b5675bdacef6d5ac0e12362880d48731a77654ef7497f45da776",
+    "_remake_bgfx/src/client/OfflineWorldGameplay.h": "5b898447f6406f00990280c66f167b0fffb55de0e9fd1bf53f9ce29a3ab01e49",
+    "_remake_bgfx/src/app/WorldChatHistory.h": "d964fb2a2a3a27e0ea886a644b4f0011f7addfeb896bbd3d35ec77b6e9ff1a73",
+    "_remake_bgfx/src/tools/quest26_ui_probe.inc": "7c69a28a0aacfc43f4c8603c8feb6e3466fc06c88425594953d7a3761134a8c8",
+    "_remake_bgfx/src/tools/cpp_server_client_probe.cpp": "f79cce1b93895b138c135d54c018d06a699c704c43f18040098667fdfee6fcdd",
+    "_remake_bgfx/src/tools/task_exchange_ui_probe.inc": "e559020627bbcec78803bd0fd9c0ed486f28096f6164319293ebf1619dd63c8a"
+  },
+  "verification": {
+    "client_production_release_batches": 1,
+    "quest_probe_only_corrections": 2,
+    "server_production_rebuilds_during_this_goal": 0,
+    "npc_probe_only_resume_corrections": 2,
+    "debug_builds": 0,
+    "native_quest_kills_repeated": 0,
+    "first_online_attempt": "session-01 retained: check expected one click but original narrative precedes Accept.",
+    "second_first_leg": "session-02 retained: native acceptance/objectives/material exchange succeeded; an extra generic quest-chat requirement contradicted source. Source-reviewed reconciliation retained separately; do not relabel the failed automatic RESULT.",
+    "resumed_legs": "session-02/RESUMED_RESULT.json passes Girika and final Saranew without repeating the first exchange.",
+    "earlier_authority": "native-events-quest26-20261107.json: actual ten2019 kills/pickups, decline/retry, native country rewards, replay rejection and saved reopening reused."
+  },
+  "images_inspected": {
+    "leg-0/objective-10-of-10.png": "65db5f4c7aa256d0a24f7a8262b9f88db29192f1d6dd65334295608e74abbde5",
+    "leg-0/saranew-letters.png": "248d8574231f859ec6bffda84c62c38d361edd0e7796a7d7203f7d60c294d9ae",
+    "leg-1/girika-exchange.png": "6bde8543b056047b778dbc5e5ac938d137bab17b11df04d0b41defdacf9312a5",
+    "leg-2/completed-feedback.png": "7c8ede0c1ea673271c364e2dc33e8fed008210c958972c10f368cb4fa826358e"
+  },
+  "client_sha256": "19f58783ce1010eaffe2349274f1eecb886a5193445f336f23288b4c392341a5",
+  "probe_sha256": "00f79f76bcf0526abf5cf38930f8b4429a9a75e4248cd56f115aabe4f301a314",
+  "patch": {
+    "version": 1794039246,
+    "files": 5313,
+    "bytes": 1635605085,
+    "web_root": "C:\\xampp\\htdocs\\patch",
+    "patch_url": "http://172.16.90.12/patch",
+    "signed": true,
+    "private_key_published": false,
+    "bootstrap": "Tantra.exe (combined launcher/patcher, installed with the client)"
+  },
+  "limits": [
+    "Online verification used ten seeded materials and stopped private-map relocations between NPCs; it does not repeat or claim fresh kill/travel/balance acceptance.",
+    "Original source checkpoint and normal player data were unchanged.",
+    "HUD/dialogue rendering is checked; a new full3D quest journey is not claimed.",
+    "The older broad six-part expansion remains incomplete; this completion applies only to the new two-item goal."
+  ]
+}

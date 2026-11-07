@@ -1,3 +1,841 @@
+## Focused Taras, audio and Chaturanga goal - 7 November 2026
+
+- [x] Taras3121: K3 READY/ACTIVATE animation, ten rank bindings and three FX
+  bands, Wing-marker attachment, persistent loop and equipment/removal/death/
+  expiry cleanup. Prefer K3 PFX_MSP over Global PFX_MSP2. The native self buff
+  does not use projectiles or weapon attack trails.
+- [x] Restore one owner-bound looping TFX sound after miniaudio reset. Retain
+  once-only cues. The focused real backend check passes reset, spatial/mute
+  preservation, duplicate prevention and stop using an original packed sample.
+- [x] Z11 native startup, king-room controls, trap cell dispatch and saved return.
+  Add original2946 portal picking and god-specific177 routes with live server
+  approval. Enabled online profiles control formerly closed11/20 travel; retain
+  the original Z11 logout return to the saved zone and offline defaults.
+
+Release client and zone server are staged; Z11 is enabled for the next server
+start. Signed client patch1794044192 is published. Reuse passed startup/trap
+assertions and rerun only the failed route after its admission correction.
+No normal workers restarted or normal player data changed. Original war/event
+rules own entrance-gate creation; the check supplies a private original Siva gate.
+Z11 assets load with two recorded missing source textures: c2_jina6_TGA.dds and
+c1_jina6_TGA.dds. No new full-scene/two-client Z11 graphical journey is claimed.
+See [focused evidence](docs/evidence/focused-taras-audio-chaturanga-20261107.json).
+
+## Deferred graphics API selection — requested 6 November 2026
+
+Recorded for later implementation; this checklist does not change the current
+renderer.
+
+- [ ] Add a **Graphics API** selector to settings with **OpenGL, DirectX 11,
+  DirectX 12 and Vulkan** through BGFX. Detect backend availability on the
+  player's system, clearly indicate unavailable choices, and save the selected
+  API. Keep launcher and in-game settings consistent; explain when applying a
+  renderer change requires restarting the client.
+
+## Deferred UI switcher — requested 6 November 2026
+
+- [ ] Add an in-game **UI Switcher** between the current **K3 UI** (default)
+  and **K2 UI**. Use `B:\Tantra-Files\_TantraClients\K2108\HTLauncher.exe`
+  as the original K2 behavior reference, with these exact UI definitions:
+  - `B:\Tantra-Files\_TantraClients\K2108\resource\UI\IntroUIInfo.sys`
+  - `B:\Tantra-Files\_TantraClients\K2108\resource\UI\MainUIInfo.sys`
+  - `B:\Tantra-Files\_TantraClients\K2108\resource\UI\LoadingUI.sys`
+- [ ] Verify each K2 layout's native resource IDs, textures, hit regions and
+  controls before adapting it. Resolve matching resources from the K2 client,
+  preserve packed archives, and record missing assets. Keep current gameplay
+  controls available in both layouts, save the UI selection, and apply it
+  consistently to INTRO, MainUI and loading screens.
+
+This is recorded for later implementation; the current K3 UI remains active.
+
+## Deferred language selection — requested 6 November 2026
+
+- [ ] Add an in-game language selector with these requested choices:
+  **ENGLISH (default), MEXICO, KOREA, CHINESE, INDONESIA, TAIWAN and JAPANESE**.
+  Save the selection and apply it consistently to names, descriptions, system
+  messages and UI text. Keep the established `philippine_` headers as the
+  default English source for TantraParam and HTMessage.
+- [ ] Verify each choice's actual source language columns, text resources,
+  encodings and font coverage before implementation. Record missing
+  translations and use the English fallback rather than inventing text.
+
+This is recorded for later implementation.
+
+## Active feature expansion — 6 November 2026
+
+## Native arena dispatch - 7 November 2026
+
+Correct original actions20180/20190 to open/close the3540-cell duel field;
+only20310 checks the winner through original event159. The focused private
+World check accepts field changes, no premature result and exact saved return.
+One Release production batch, one test-only fixture correction; no client build
+or repeated graphical journey. Stage matching apps in both server roots.
+Zone16 stays disabled and broader arena/stronghold acceptance remains open.
+See [evidence](docs/evidence/native-arena-dispatch-20261107.json).
+
+## Connected familiars and combat feedback - 7 November 2026
+
+Accept one isolated two-client session for rank1 K3 skills3115/3331/3332:
+all three native familiar models attack, both clients show six READY/ACTIVATE
+clips and three FX families, replacement/removal clears cast loops, and stopped
+SQL matches both final native character records beyond HP/TP. No missing assets
+in this session. Use ordinary QA accounts with overallocated attributes and160
+private generator substitutions; keep source tables and normal data unchanged.
+This accepts presentation/lifecycle, not balance, all ranks or public TLS.
+
+Image review exposed a Reserved skill-name damage message. Match original
+HTMainCharacter feedback1108/1107, retaining intentional zero-result feedback;
+ignore support as damage and separate death acknowledgements from hit glyphs/FX.
+Request the native monster death cue once per life. The15-check focused feedback
+check passes after a probe-only include correction. Stage the Release client and
+signed patch1794035849. Do not repeat the successful graphical session. Wider
+combat, quests, graphics/audio and special zones remain open. See
+[evidence](docs/evidence/live-familiar-feedback-20261107.json).
+
+## Native death shadows — 7 November 2026
+
+Restore original monster/other-player shadow suppression at death while
+keeping corpse geometry and animation visible; restore on positive HP/new life.
+Retain the PC root flag through equipment/head replacement and all socket
+shadows. Preserve the distinct original main-character death behavior.
+
+The focused D3D11 component passes all eight original PC bodies/sockets,
+replacement pose/clocks, revival and production monster2001 death/respawn.
+Correct one frame-zero sampling assertion with a probe-only rebuild; retain its
+failed attempt. One production Release batch, no Debug/server build or repeated
+journey. Stage client and signed patch1794033565. Actual remote-HP rendering,
+special blended Lord masks and full scene parity remain open. See [evidence](docs/evidence/native-death-shadows-20261107.json).
+
+## Mandara area effects — 7 November 2026
+
+Implement2100/2101 using original Mandara tasks54/55: living PCs, current GM
+exemption, normalized half-open area, self-owned Hold2/300000ms and native status
+broadcast/removal. Compile original TurnOffAffection, including its visual-bit
+guard; preserve ordinary AddEffect/RemoveEffect defaults in both source copies.
+One Release batch and one first-attempt focused World check cover six players,
+both maximum edges, GM/dead exclusions, effect snapshots/removal and exact saved
+reopening. Stage matching apps in both server roots. No client/Debug rebuild or
+repeated journey. Full arena/TCP/graphical and six-part acceptance remain open.
+See [evidence](docs/evidence/native-area-affection-20261107.json).
+
+## Native zone reward corrections — 7 November 2026
+
+Correct reward loading to `Data/Settings.ini [Correct]`, matching original
+`LoadZoneSettings`. Implement1185/1186 Prana/Gold extras, additive bonuses,
+base-relative native Percent rounding, subtraction/clamping and native1180's
+intentional no-op. Preserve Braman/item extras and expose current rates in
+zone status; ordinary death rewards and item-rate initialization use the rates.
+
+One focused private World check passes scheduled addition/restoration/clamping,
+wrong-INI rejection, actual monster death, corrected Prana/Gold, a guaranteed
+potion from the doubled base drop rate, ordinary pickups and exact saved
+reopening. Preserve the selected source's existing solo-Prana customization.
+All four shipping apps build in one Release batch; correct a missing verifier
+include with one verifier-only rebuild. The focused check passes first attempt.
+Install matching apps in both server roots. No client/Debug build or repeated
+journey. Wider zones and the six-part goal remain open. See
+[evidence](docs/evidence/native-reward-rates-20261107.json).
+
+## Native event conditions and timers — 7 November 2026
+
+Implement1030 CheckItemOnly,1080 SetClan,1100 SetAvailableTime and1120
+CheckQuest. Preserve partial positive item counts without consumption, exact
+quest-byte comparison, effective player clans and the original system/NPC clan
+bypass. Complete1090/preflight duration behavior: inclusive end, expiry switches
+off and clears the deadline, original error order and unsigned clock arithmetic.
+Allow source target0 and retain process-local event overrides.
+
+One focused component passes14 boundary/count cases and four private World
+callbacks, including actual calendar execution, expiry/off behavior, conditional
+versus sequential continuation, cached replay and exact saved reopening. Fix one
+verifier login/calendar clock mismatch; preserve the failed attempt. One
+production Release batch and one verifier-only rebuild, no client/Debug build
+or repeated journey. Install matching server apps in both roots. Chaturanga,
+Nar Durga and their remaining services/combat/travel remain open. See
+[evidence](docs/evidence/native-event-controls-20261107.json).
+
+## Native event item drops — 7 November 2026
+
+Implement original action1060 through the authoritative loot path: one item at
+maximum durability, native serial RNG, no pickup priority, and the separate
+item-grid search. Keep task coordinates relocated for subsequent invocations;
+ignore CreateItem failure as the original event does. Record/skip missing item
+bindings. Share the source lookup with GoldBomb and retain known unimplemented
+action guards (the historical unmatched-action verifier now uses1040).
+
+The focused component passes five cell-search cases and a private post-commit
+World callback: three invocations of the same task relocate distinctly, skip
+invalid/missing4082, stack three atomic pickups, reject callback/pickup replay
+and reopen exact saved state. Correct two verifier mask mistakes; retain both
+failed attempts. One production Release batch, two verifier-only rebuilds,
+no client/Debug build or replayed journey. Install matching server apps in both
+roots. Native Nar Durga gameplay/services, TCP/graphics and broader loot
+lifecycle remain open. See
+[evidence](docs/evidence/native-event-items-20261107.json).
+
+## Single quickbar — 7 November 2026
+
+Apply the revised user request: one quickbar, one row by default, expandable to
+four rows. Keep five pages and use `1..0`, `F1..F10`, `Ctrl+1..0`, then the
+approved `Shift+1..0`. Retire the second panel and Alt-digit activation. Import
+old two-bar profiles at one visible row, preserve all300 bindings in the binary
+payload and back up the old format outside the client. Only40 cells per page
+are active; old cells40–59 remain saved.
+
+One Release batch and two focused checks pass: model migration/persistence and
+the192-check SDL/D3D11 component with actual row buttons,1/4-row limits,40 key
+labels and four bound icons. Stage the client and signed patch1794028917. This
+build also compiles the pending QA-only Karya quit fix, without rerunning that
+journey. See [evidence](docs/evidence/single-quickbar-20261107.json).
+
+## Owner revisions and Karya13/15 travel — 7 November 2026
+
+Publish each committed owner revision after native status/recovery/effect
+updates, preserving strict operation guards. Deduplicate identical owner
+snapshots while forcing explicit refresh replies. Install the matching Release
+server apps and client patch1794027816.
+
+Accept low13 and high15 paid gate entry, rendered arrival, scheduled closing
+return and peer departure/return from two preserved private sessions. Native
+fees total300,000 Rupiah, four handoffs are claimed and unrelated native fields
+survive. Resume only the unfinished high leg at its actual minimum98. Keep both
+wrapper failures: the first high fixture used75; the resumed clients completed
+but QA omitted its quit signal. The stopped-SQL audit accepts the completed
+journeys without relabeling either wrapper as passed. Fix QA exit in source for
+the next scheduled build; no further rebuild/rerun.
+
+Enable native-world13/15 profiles in both server roots. Retain Zone14's actual
+level55 denial without charge: original menu46–61 conflicts with table minimum68.
+No normal worker restart, database/workbook change or TLS acceptance. Broader
+Karya combat/services and offline scheduled gates remain open. Existing signed
+client endpoints include3013/3015; the observed LAN firewall still needs the
+administrator helper rerun for other PCs. See
+[evidence](docs/evidence/native-owner-revisions-karya-20261107.json).
+
+## Karya connected checkpoint — 7 November 2026
+
+Use a nonzero native scheduler clock and load map calendars before players
+connect. Match original `HideAllMesh` for single-mesh actors whose mesh ID is
+zero: preserve bounds, sockets and picking, suppress geometry/shadows, and do
+not bind texture ID0. Install the matching Release client/server binaries and
+signed patch1794026462.
+
+Three isolated Karya attempts remain failed, with their evidence retained. The
+last attempt opens the original2202 gate and renders past the earlier texture
+abort, but waits for its destination menu until the deadline. No Karya travel,
+fees, closing return or admission is accepted. All normal13–15 profiles remain
+disabled. Do not increase completion or repeat earlier accepted journeys. See
+[the current evidence](docs/evidence/karya-connected-20261107.json).
+
+Earlier checkpoint, 7 November: load native map calendars independently of
+Karya gate actors, matching Server.cpp1234 and TNScheduler::Load. Import supplied
+Data/Schedule.txt and Language.txt with the five required native files. Manager
+review can complete missing optional files on a stopped matching map, under its
+worker lock and source-hash checks; preserve existing files and configuration.
+Restore both original files for Karya13-15 in both server roots, keeping all six
+profiles disabled and their native tables unchanged.
+
+The focused private-World component passes all3 original24-entry calendars,
+exact English warning109 once across consecutive scheduler checks, and saved
+reopening. Manager completion checks cover running/locked maps, preservation and
+conflicting files. Correct one production hash-comparison compile error and one
+verifier subscription omission; no Debug/client build or replayed journey.
+Install matching Release server apps. Full Karya travel/encounter/graphical
+acceptance and the six-part goal remain open. See [evidence](docs/evidence/native-map-calendars-20261107.json).
+
+Earlier checkpoint, 7 November: match original TriggerEvent fallthrough for
+unmatched action IDs. Generate its112 active cases from Server.cpp/Basedef.h;
+record IDs without a source handler and perform no invented action. Keep known
+native actions behind their existing backend/zone guards. This supersedes the
+false missing-handler block for Karya23100 and Biryu3020/3050/3060/3070/3080/3110;
+it does not implement newer-version behavior or admit those maps.
+
+One focused private-World check passes unmatched0/23100/3020, following-task
+execution, recorded IDs, cached replay and exact saved reopening. Known native
+DropItem1060 remains rejected before quest state changes. One Release batch and
+one check, no retries, client rebuild or repeated gameplay journey. Install the
+matching server binaries in both server roots. Full connected map/gameplay
+acceptance remains open. See [evidence](docs/evidence/native-unmatched-actions-20261107.json).
+
+Earlier checkpoint, 7 November: implement native quest-event reset actions1130,
+1140 and1150 using the original CMOB.CPP methods. Chakra/skill resets rebuild
+status; class reset preserves skills and live effects, clears promotion quests
+31-35, and is a no-op before second class. Save before publishing owner/class
+updates. Original Mandara tasks41-43 have no EventList links; keep that data
+unchanged rather than inventing dialogue.
+
+The focused component passes24 native cases across8 tribes and one private
+quest callback with cached replay and exact saved reopening. Promoted class
+reset is checked at native-status level; graphical service acceptance is open.
+Install one Release production batch in both server roots; two verifier-only
+corrections, no production retry, client rebuild or replayed gameplay journey.
+The full goal remains open. See [evidence](docs/evidence/native-story-resets-20261107.json).
+
+Earlier checkpoint, 7 November: fix native PC combat voices and peer death loops.
+Use table order NAG/YAK/ASU/DEV/KIM/GAN/RAK/GAR for attack voices, rather
+than indexing directly by client tribe ID. Add peer hit/idle-owner hit voices
+and once-per-life death voices, including status-only deaths and revived peers.
+Nearby-player death, hit and posture clips play once; idle/movement/sitting
+retain their loops. Record missing voice bindings instead of stopping gameplay.
+
+One isolated component passes56 voice cases across all8 tribes,41 decoded
+original samples through muted miniaudio, and8 authored GPU death clips reaching
+their final pose once. Presentation events are injected; this is not a live
+network encounter or full scene acceptance. Two original voice IDs31141/31142
+are unbound and stay recorded without substitutes. One production Release
+client batch and one small verifier-only correction; no server rebuild or
+replayed gameplay journey. Stage the client and signed patch1794018496.
+Full combat/quest/graphics/zone acceptance remains open. See [evidence](docs/evidence/pc-voices-death-loops-20261107.json).
+
+Earlier checkpoint, 7 November: implement native event-map closure20120.
+Return every playing character, including GMs, then request closure for every
+connection, including idle/pre-world connections. Flush queued handoff frames
+before transport closure. Explicit same-map/current-channel returns pin the
+existing live worker while retaining durable ownership and single-use tickets.
+Preserve a validated client handoff after source-socket EOF and stop old-world
+traffic while it is pending; ordinary EOF still reports connection loss.
+
+The focused scheduled-World/private-SQL check passes remote and same-instance
+secure handoff, GM return, pre-world close requests, replay rejection and saved
+reopening. The separate client TCP handoff/EOF component passes. Transport
+flush is compiled/source-reviewed; no production-listener/TLS or graphical
+Karya journey is claimed. One production Release batch per project; one small
+fixture-only correction per verifier. Stage matching client/server binaries
+and signed patch1794017500, without replaying accepted journeys or rebuilding
+ZIPs. Karya and the full expansion remain open. See [evidence](docs/evidence/native-map-close-return-20261107.json).
+
+Earlier checkpoint, 7 November: connect native saved-zone return task20121.
+Return non-GM players through the existing durable handoff, preserve the source
+GM-clan exemption, and commit invalid-save fallback fields with a local warp.
+One focused scheduled-World/private-SQL component passes remote ownership
+transfer and saved reopening, GM exemption, and local fallback reopening.
+Its calendar/event routing is QA; no live Biryu/Karya or graphical acceptance
+is inferred. Install one Release Zone batch; no client rebuild or prior journey
+replay. A malformed QA TSV append required one verifier-only correction.
+
+The separate task20120 remains gated: its original second pass closes every
+connection, including GM/pre-world connections. It is not equivalent to20121.
+See [evidence](docs/evidence/native-map-saved-return-20261107.json).
+
+Earlier checkpoint, 7 November: implement native PopMonster4/6 tasks103/105.
+Inherited summons retain both classes, clan, cell and native target memory;
+counted summons use authored count, birth type, class/clan and lifetime. Preserve
+literal class0 from the source tables. Existing callers still default to Basic
+subclass; native allocation, positioning and spawn publication are reused.
+
+- [x] Pass the focused population check: one inherited child, ten counted
+  children, published subclass/initial birth flag, native target memory,
+  class0/clan0,1800-second expiry timestamp, zero-count RNG, unchanged generator
+  pools and retired-actor cleanup. QA subtype/birth variants are explicit.
+- [x] Install one production Release Zone batch. Correct the verifier to inspect
+  the initial spawn packet rather than the intentionally cleared cached birth
+  flag; retain failed/diagnostic logs. Two small verifier-only rebuilds, no
+  production rebuild retry, client rebuild or repeated gameplay journey.
+
+Live Jina/arena event acceptance and the full goal remain open. See
+[evidence](docs/evidence/native-task-summons-20261107.json).
+
+Earlier checkpoint, 7 November: connect native map Speak150, Help160, Link170
+and Flee180 tasks to the existing AI speech, threat/group and escape routines.
+Speech's recipient is temporary, Help/Link use native codes10/20, and Flee uses
+the NPC's current target. Add source clan cleanup130 with NPC/Event exemptions.
+
+- [x] Pass one focused original-population adapter check for150/160/170/180:
+  speech RNG/filtering, unchanged combat target, group/flee control agreement and
+  invalid player-caller rejection. This does not accept a live map event journey.
+- [x] Build/install one Release Zone/verifier batch with no retries, client
+  rebuild, completed-journey replay or redundant client patch publication.
+
+Clan cleanup is source-reviewed/compiled; its encounter verification and the
+full goal remain open. See
+[evidence](docs/evidence/native-map-npc-tasks-20261107.json).
+
+Earlier checkpoint, 7 November: implement original Karya soldier-count guards
+20130/20140/20150. Living current-clan5/6/7 mobs stop event progression; corpses
+do not. Preserve the existing native proceed-type behavior. No new wave encounter
+is claimed; Global action23100 remains an unmatched source-data reference.
+
+- [x] Replace the resurrection destination allowlist with canonical enabled
+  native profiles. Retain native recovery plans, statues, grid validation,
+  profile availability and durable handoff checks.
+- [x] Pass one private World/SQLite recovery check on original Mudha21 and
+  Ruins24: actual death, normal saved revival, money/equipment/usable inventory
+  preservation and saved reopening. This is not TCP/graphical acceptance.
+- [x] Install the Release Zone worker. Correct only the verifier's unsupported
+  item-equality comparison after its first compile; no production rebuild retry,
+  client rebuild, repeated gameplay journey or redundant client patch publishing.
+
+The full goal remains open. See
+[evidence](docs/evidence/karya-counts-later-recovery-20261107.json).
+
+Earlier checkpoint, 7 November: dual-wield skills use the original right-hand
+Item type rather than combined basic-attack row916. Apply this to online owner/
+peer and offline casting, skill FX, body animation, server authored timing and
+projectile binding selection. Ordinary dual attacks retain916; an empty right
+hand does not force a server dual attack. Native skill/timing data is unchanged.
+
+- [x] Match twelve male/female901/902 cases to original K3 phase/apron fields;
+  decode eight TAB clips and retain unarmed behavior. Correct the probe's initial
+  requirement for hit markers on ready/cast clips; retain that failed log.
+- [x] Build/install the client and Zone worker in one production Release batch,
+  with one additional probe-only correction. Publish patch1794013241. No repeated
+  production rebuild or completed encounter replay.
+
+This is binding/clip evidence, not a live authoritative or graphical dual-skill
+encounter. The full goal remains open. See
+[evidence](docs/evidence/dual-skill-weapon-20261107.json).
+
+Earlier checkpoint, 7 November: restore Mudha's exact missing object bindings
+from the supplied Global client's Kathana3Obj.txl. Append454 original rows while
+preserving all327 existing rows byte-for-byte. Existing names/camera flags have
+zero semantic conflicts; unused padding on18072 is retained.
+
+- [x] Accept one original Zone21/portal233 D3D11 arrival component:385 models,
+  503 placements,627 referenced payloads and zero skipped object definitions.
+  Inspect the capture; retain two missing texture references without substitution.
+- [x] Add explicit `--object-tables` imports to the existing asset-staging tool.
+  Preserve current rows/conflicts, external backups and packed HPKs. No skill
+  tables are eligible through this option.
+- [x] Enable the prepared source/deployed Zone21 profiles for Manager startup,
+  retaining the original level80 entry rule and native data. Reuse its passed
+  authority startup evidence; no C++ rebuild, server start or journey replay.
+- [ ] Accept live Zone21 travel, native events/services and saved reentry.
+
+Signed patch1794012493 is published. The full goal remains open. See
+[evidence](docs/evidence/mudha-original-object-table-20261107.json).
+
+Earlier checkpoint, 7 November: native0xb570 castle state now reaches Biryu's
+music controller, including packets received before world loading. One focused
+TCP/miniaudio check passes original village30013, field30014 and battle30015
+selection through runtime siege changes and castle-boundary movement. The output
+was muted; this does not accept a live siege encounter. One Release batch is
+staged and published as patch1794012069, with no server rebuild or journey replay.
+See [evidence](docs/evidence/castle-music-20261107.json). The full goal stays open.
+
+Earlier checkpoint, 7 November: NPC double-click/reopen no longer replaces an
+outstanding story request. Dialogue open/choice waits for the current story,
+task or service reply, and task dispatch retains a queued story decision until
+that reply completes. Native quest costs, objectives and rewards are unchanged.
+
+- [x] Pass one focused production-channel TCP check with original NPC1107:
+  three ordered queries, unchanged conversation during a blocked double-click,
+  choice waiting and stale-reply rejection.
+- [x] Build/stage one Release batch and publish signed patch1794011733. No
+  server rebuild or completed kill/reward journey replay.
+
+This checks request ordering with injected native replies, not a new World
+reward or graphical quest journey. The full goal remains open. See
+[current evidence](docs/evidence/quest-request-order-20261107.json).
+
+Earlier checkpoint, 7 November: restore the original placed-object loader's
+continue behavior for missing table bindings, empty filenames and absent model
+payloads. Record each resource and affected placement count, skip its visual
+geometry in budgeted BGFX uploads and retain original terrain/TCC data.
+Malformed data and unsafe paths still fail. No asset search or substitution.
+
+- [x] Build/stage one Release client batch and publish signed patch1794011240.
+- [x] Replace Mudha's first unresolved-object abort with an explicit missing
+  resource report:385 definitions affect503 placements. Resource loading, GPU
+  geometry initialization and four frames now complete.
+- [x] Close the earlier missing-object render gate with the original Global
+  table:385 models/503 placements render. Preserve the failed old check; current
+  Zone21 profiles are enabled, while live travel/events remain unaccepted.
+- [x] Record the already-passed native miniaudio map-fade/recovery evidence;
+  do not rerun it or the accepted quest/combat journeys. No server rebuild.
+
+The full goal remains open. See
+[current evidence](docs/evidence/map-missing-object-skip-20261107.json).
+
+Latest checkpoint, 7 November: nearby PCs now resolve their own native attack
+variant instead of borrowing the local player's swing counter. Their TAB hit
+markers scale to the authoritative duration, matching the rendered action.
+Online owner/peer basic-hit events also retain the native weapon-animation and
+item metadata, restoring the impact-sound row consumed by combat presentation.
+
+- [x] Match peer attack clips, variants and marker timing to their own server
+  sequence/duration, preserving the owner's action sequence and offline default.
+- [x] Carry the native impact/audio row on online owner and peer basic hits.
+- [x] Pass one production-channel TCP matrix:156 eligible tribe/weapon/variant
+  cases,78 male/78 female,13 weapon families and36 native clips;150 cases have
+  authored impact sounds. No missing clips; no live World/GPU/audio-playback
+  acceptance is claimed by this protocol check.
+- [x] Stage one Release client batch and signed patch1794010299; retain the K3
+  English FX table unchanged. No server rebuild or accepted-journey replays.
+
+Broader skill-family and graphical/audio acceptance remain open. See
+[current evidence](docs/evidence/peer-attack-timing-20261107.json).
+
+Earlier checkpoint, 7 November: all228 nonzero K3 skill labels now use the original
+Philippine English text, including **RARAMA3306** and its authored description.
+The native FX converter selects `philippine_szName` and `philippine_Desc` before
+Windows-1252 encoding. The editable fxPC workbook matches the exact nine K3
+sheets with typed values and Dotum; previous Global files are retained externally.
+All non-text animation, FX, sound and UI bindings compare unchanged.
+
+- [x] Correct K3 skill names/descriptions for skill UI, tooltips, learning feedback
+  and combat messages. Keep future Data Tools exports consistent with K3.
+- [x] Build/stage Data Tools only and publish the corrected client FX table;
+  no client/gameplay-worker rebuild or repeat of accepted FX encounters.
+- [x] Close Zone06 fresh saved return from the existing successful two-client
+  `boss-preserved-fresh-relogin/RESULT.json`: native state, items, money, Prana
+  and saved/rendered positions match. Reconnect already has accepted evidence.
+
+Zone06's requested implementation is complete. Broader combat/quest, graphics/
+audio, balance and other-zone work remain open. See
+[current evidence](docs/evidence/k3-skill-english-20261107.json).
+
+Earlier checkpoint, 7 November: **Z20 Anaka Kruma is enabled** after a live
+two-client session on its original map. A real R attack, K3 skill3306 projectile
+on both clients, server-owned damage/death, the native one-Rupiah drop, saved
+recovery and durable Prana/position pass. Disposable level50/chakra fixtures
+exercise the original 30–59 entry range; this is not balance acceptance.
+
+- [x] Accept the Z20 player-combat path and enable its project/deployed profile.
+- [x] Preserve the original Z20 run; audit its saved database after the QA
+  wrapper timed out only on exit. Both clients had already written successful
+  results. Fix the QA exit handoff without replaying the accepted encounter.
+- [x] Fix missing player names in damage/death messages by indexing native peer
+  names alongside NPC/monster names. Stage the Release client and signed patch.
+- [x] Inspect Z25 startup failure once and record the exact original-data gap.
+- [ ] Accept Z25 live combat: the supplied MapData.tcm declares1,048,576 cells
+  but contains107,378 complete cells and one partial record. Original/deployed
+  SHA256 match; no replacement exists in the other supplied server folder.
+  Keep Z25 disabled; do not invent collision data or repeat the check.
+- [x] Resolve K3 skill3306 from its original Philippine text, RARAMA, without
+  changing K3 bindings or inventing a translation.
+
+The source only overrides statue recovery in **Z10**. Z20/25 use native
+saved/town/present rules. The newer QA path clicks the actual death dialog and
+frames both players during flight; Z25 failed before clients started, so those
+QA refinements and the peer-name fix are compiled, not newly graphically accepted.
+No server rebuild, normal database change or replay of earlier journeys.
+See [current evidence](docs/evidence/god-pvp-live-20261107.json).
+
+Earlier checkpoint, 7 November: connected player targeting now reaches the
+existing Z20/25 combat authority. Native peer clan metadata and authoritative
+party updates determine hostile selection; R, repeated clicks and offensive
+skills accept opposing players and approach them through the existing native
+navigation. Departure, death and changed allegiance cancel the approach/attack.
+Peer revival restores the standing animation. E includes visible hostile PCs,
+and native target/attack FX bind to the selected peer's character owner.
+
+- [x] Implement the client PC-targeting path for the existing Z20/25 authority,
+  preserving server ownership of costs, hit timing, HP, death and rewards.
+- [x] Run one focused real-TCP component check on the original Zone20 map:
+  basic attack, enabled K3 skill3114, party/faction refresh, distant approach,
+  departure cancellation and peer death/revival pass; no local HP mutation.
+- [x] Stage the Release client and signed patch1794006957; preserve offline play.
+- [ ] Accept live two-client Z20/25 combat and graphical/audio presentation.
+  Profiles remain disabled until this gate passes. Field PK, challenge/siege
+  services and Z10's card/Kala/BP contracts are not enabled by this client change.
+
+See [current evidence](docs/evidence/player-targeting-20261107.json). No server
+rebuild or repeat of accepted respawn, saved-return, quest or boss journeys.
+
+Earlier checkpoint, 7 November: immediate movement after resurrection is fixed.
+Like the original client, UPDATE_STATUS now updates vitals/karma/affections and
+preserves speed from UPDATE_UI. Death/revival clears obsolete routes, dash,
+cast and posture locks, including both health transitions in the same poll.
+Offline revival also clears posture; `Start-Offline.cmd` remains supported.
+
+- [x] Verify the first online movement tick after batched death/revival, with
+  no subsequent speed packet; retain the existing native movement rates.
+- [x] Verify offline revival releases a pending posture and accepts movement.
+- [x] Verify shared K3 projectiles continue while the viewer is dead and clear
+  only on the matching removal, using real client TCP and production BGFX.
+  This is a component replay, not a full multiplayer encounter.
+- [x] Fresh-login both earned Zone06 characters once; preserve native state,
+  inventory/equipment, money and Prana and match saved/rendered positions.
+  The original private checkpoint is unchanged; the boss fight is not repeated.
+- [x] Stage Release files, signed patch1794006239 and the85-file Respawn-Recovery
+  server update. Record the bounded God-PvP policy/atomic settlement checks.
+- [ ] Complete live PvP and connected graphical acceptance for Z20/25;
+  those profiles remain disabled. Z10's source card/Kala/BP contracts remain open.
+
+Use batched Release builds and one check of each changed behavior. Repeat only
+after a failure/fix; do not expand subtasks or repeat accepted journeys.
+Normal servers remain stopped. No normal database migration or commit/push.
+See [current evidence](docs/evidence/respawn-recovery-20261107.json).
+
+Earlier checkpoint, 7 November: quest26's earned authority continuation passes
+from the preserved25 result: ten actual2019 kills/pickups, native decline/retry,
+both letter exchanges, exact100,000 Prana/50,000 Rupiah/tribe reward, replay
+rejection and partial/final saved return. Its first failure exposed native
+inventory70 death-loss metadata being mistaken for an empty economic item.
+Accounting now preserves the complete source quest-time/death-loss record per
+owner, while packing respects the48 usable slots of the72-record serialization.
+Focused inventory and atomic transaction checks pass. QA attributes are inherited;
+full TCP/graphics and balance are not established by this authority journey.
+
+Source Mudha decks and five event services now compile and pass isolated World
+startup/population. Z21 stays disabled: current client resources lack sky texture
+`c2_jina6_TGA.dds` and object definition18301. Missing sky layers are recorded and
+omitted without replacements; malformed data still fails. Online projectiles
+also retain shared flights when this viewer dies, awaiting server removal.
+Add Zone rejects datasets exceeding actual native IDX/grid limits. Matching
+Release files, signed patch1794003546 and the85-file NativeEvents-Quest26 update
+are installed; normal servers remain stopped. See [the current evidence](docs/evidence/native-events-quest26-20261107.json).
+
+- [x] Preserve native inventory70 quest timestamp/Prana-loss metadata through
+  pickup, cargo/services, trade and cash accounting; reject economic tampering.
+- [x] Complete the earned quest26 authority continuation without repeating11–25.
+- [x] Port source Mudha deck setup/reset and actions1200/2081/3210/10000/21100;
+  retain Forge's recorded source/data gaps and exact English language input.
+- [x] Keep online shared projectiles visible after local death and omit recorded
+  missing sky layers without manufacturing replacement assets.
+- [ ] Accept the changed projectile/sky paths in a connected graphical session
+  and the new map-event encounters. Keep Z21 disabled while its object definition
+  is unavailable; do not count its server-only component as a complete map.
+
+Previous checkpoint, 7 November: one data-driven batch enables ordinary native
+zones **18,24,26,28,31,32** in the project and deployed profiles. The same World
+authority loads each coherent source dataset and completes160 population ticks
+in isolated databases; all30 required native files match the deployed copies.
+Z31/32 retain their original empty generators. Missing K3 NPC skills and AI rows
+remain explicit diagnostics. No new per-map runtime branches or invented portal
+links are added. Connected arrival, full services/combat and graphical acceptance
+remain open; these maps have no direct inbound link from the verified inventory.
+
+The compact Type3 rigid reader now retains all four original Ruin Cart2
+subobjects (235 triangles, previously163), with native WORD groups/indices,
+interleaved vertices and per-record/global bounds. Its combined real Type1/Type3
+component passes; named Type3 LOD coverage is unverified. Full Ruins resource
+preparation passes545 payloads with zero missing textures, recording the original
+corrupt four-triangle gate material as skipped while retaining collision.
+
+Eight original Tomb actions and quest26 are compiled into matching installed
+Release files. Their new encounter/earned-journey acceptance remains open.
+Signed patch1794001568 and the82-file OrdinaryMaps-Tomb server update are current;
+the latter excludes operator-owned zone profiles. The normal servers were left
+stopped. See [the batch evidence](docs/evidence/ordinary-maps-tomb-type3-20261107.json).
+
+- [x] Enable the six validated ordinary profiles through the shared native loader;
+  pass one isolated authority/population batch and preserve original datasets.
+- [x] Decode every counted compact Type3 subobject, preserving source material
+  ranges, metadata and bounds; retain the actual Type1 LOD/trail component.
+- [x] Implement source Tomb actions1035/1160/2060/2070/2080/2085/20330/22000,
+  including native proceed/cooldown rules, room bounds and status refresh.
+- [ ] Accept the new Tomb actions through actual encounters and verify connected
+  travel/services for the newly enabled ordinary maps. Missing NPC speech200 is
+  recorded; no replacement utterance is invented.
+
+Previous checkpoint, 7 November: **Add Zone** now selects a folder, analyzes the
+five required native files off the UI thread, and presents the detected identity,
+file checks and actionable errors before adding or reusing a zone. Valid ordinary
+maps use the generic authority and inherit the world server addresses. The
+compiled per-map admission whitelist is replaced by native IDs01–34 plus enabled
+profiles, validated data and live accepting ownership. New special maps register
+disabled; their original gameplay services remain separate work. The focused
+12-profile import check passes ordinary/special mode selection, inherited LAN
+addresses, discovery, duplicate-port and malformed-dataset rejection.
+
+The native rigid reader now loads all four authored item4089 LODs, preserving
+its two trail markers separately and applying its table texture before upload.
+Online monster FX consume the actual packet skill without requiring offline
+population tables. A human-assisted two-client Zone06 boss encounter shows all
+four attack animations, five FX graphs, three summons, death and Prana collection.
+Saved SQL and four native loot receipts confirm BgfxPeer collected51,825 Rupiah
+and items5750/5550/6154. The user confirmed playing that peer; the automated
+owner-only pickup assertion remains failed, rather than being rewritten as a pass.
+Fresh graphical relogin, displayed-position agreement and balance are unverified.
+
+Matching Release files are installed in `_client_bgfx` and `_server_final`.
+Manager PID37352 observes11 native worlds plus the separate administrator stub
+ready. Signed patch1793993819 contains5,313 files /1,635,519,119 bytes; the fresh
+82-file server update is `Global-Tantra-Server-Update-20261107-ZoneImporter-Boss.zip`
+(SHA256 `b5737d9e97f588ab47e66c85f042c90d45ae043a5ce65c05c160ac8ac4bb86c7`).
+See [the current evidence](docs/evidence/boss-tomb-native-content-20261107.json). Full six-part gameplay parity remains open.
+
+Earlier 7 November checkpoint: native quests11–20 pass an earned58-kill,
+40-pickup journey from original creation/Dialog0, with partial saved return,
+exact rewards/replay and earned21 offer/acceptance. No quest/counter/material
+seed is used; QA level100/attributes leave balance and TCP/graphics unaccepted.
+The2202 contact and original one-tier portal214 selector pass separate actual
+World/security and client TCP/SDL replay components, retaining owner/session/
+revision/cell fences. Karya13–15 admission, live TLS/full scene and the source
+46–61 versus Global68 minimum conflict remain open. Final Manager Release/GUI
+capture and fresh11-world/admin-stub readiness pass. The Blend0.5 shadow policy
+is fixed, but its runtime path remains unchecked because the default passing
+ordinary-shadow fixture contains no Blend materials. Signed patch1793982733,
+the82-file server ZIP and the component boundaries are recorded in the
+[current checkpoint](docs/evidence/native-gate-story-shadow-manager-20261107.json).
+The full six-part expansion remains open.
+
+Previous scoped checkpoint, 7 November: source skill weapon sheathing/FIST clips,
+actual miniaudio playback recovery and Tomb ordinary-logout persistence pass
+their focused components. Matching project/runtime artifacts are deployed;
+the normal 11 native worlds and separate administrator stub report ready. The
+dead-entry correction is installed, and actual Tomb World entry from HP 0 now
+asserts `CHAR_INIT.dead=false`; its 39 logout boundary/guard cases, once-only
+save and fresh-roster reopening pass. See
+[skill/audio/Tomb evidence](docs/evidence/skill-audio-tomb-story-20261107.json).
+Quests 22–25 now pass their preserved-run native World journey. These results
+do not accept full TCP/graphical parity, fresh-character balance or the broader
+expansion phases.
+
+That checkpoint installed Release files in `_client_bgfx` and `_server_final`; its
+Manager PID 30088 observes the 11 native worlds plus one administrator stub.
+Signed patch 1793985972 contains 5,313 files / 1,635,487,375 bytes. The matching
+`D:\Tantra-Beta\Global-Tantra-Server-Update-20261107-SkillsAudio-Recovery.zip`
+contains 82 files / 11,981,911 bytes; SHA-256
+`bee936eb381653537ac20946d6decb2de26d20fe11c242e62b5d270dc3e6724c`.
+
+The game name is **Global Tantra**. The user's latest source policy makes
+**K3 the source for PC/monster skill definitions, skill animation bindings and
+skill FX**. Keep the other Global gameplay tables and the established K3 UI.
+Canonical editable workbooks stay in `_server_final/bin/XLSXData`. Missing K3
+resources are recorded and skipped; Global skill graphs are not substitutes.
+
+Keep all six requested deliveries open until their actual behavior is accepted.
+"All other zones" means native IDs01–34, beyond the earlier ten-zone roadmap.
+Zone36 and higher are excluded from future implementation. The Zone33 folder
+declaring45 remains excluded identity-conflict evidence. Special-map rules and
+missing catalog/resource records need separate handling and cannot be replaced
+by ordinary-zone admission.
+
+- [x] Route administrator commands only through exact `ASHESHDEV` and authenticated account `userLevel == 1`. Add the searchable `/erichgwapo` panel with English descriptions, examples and separate online/offline support. Offline schema5 defaults every migrated/new account to0; there is no promotion by account name, character name or native GM clan.
+- [x] Pass administrator protocol decoder and focused server authorization/persistence checks; the deployed server reports 11 native worlds ready. The online subset is self-only status/IDs/equipment, same-map warp, money/prana/level/HP/karma, class/Trimurti and resets; other registry entries retain explicit unsupported feedback. See [command guide](docs/NATIVE_COMMANDS.md) and [server protocol](../_server_cpp/docs/SECURE_CONNECTIONS.md#administrator-commands--6-november-2026).
+- [x] Accept the isolated Release SDL administrator panel component: search, example selection, argument editing/execution, role0/2 denial, exact role1 permission, retired-receiver denial and money persistence after reopening. The 140-check result and accepted modal capture are recorded in [the checkpoint](docs/CLIENT_FEATURE_EXPANSION.md#administrator-authorization-and-independent-quickbars).
+- [x] Retain the user's exact `Z##` Server Manager labels and identify extra channels explicitly. Organize the sidebar/header, global toolbar, server table, selected actions and settings; disable selected actions without a visible selection. The footer measures only the Manager process, rows show each server process's CPU/RAM, and `Server update time` explains its 95/99-of-100 bounds. The old whole-PC capture remains historical; see the [current Manager guide](../_server_cpp/docs/SERVER_MANAGER_GUIDE.md#manager-layout-and-process-counters--7-november-2026).
+- [x] Stage the four shipping Release binaries and matching generated data; observe the normal 11 native worlds plus the separate administrator stub ready.
+- [x] Complete the canonical K3 Monster binding migration for `idSkill0..7` and `byteSkillPattern0..3`: 795 matching IDs, 163 changed cells and 1087 Global rows preserved, including unrelated stats/styles/parts. Retain reproducible import/provenance and canonical XLSX export authority.
+- [ ] Accept a full live online administrator command journey through the client/server endpoint and saved reentry; isolated SDL and server authority checks do not complete that gate.
+
+- [x] Implement the revised single quickbar with one default row and at most four rows,40 active slots per page and five preserved source pages. Rows use `1..0`, `F1..F10`, `Ctrl+1..0`, then approved `Shift+1..0`. Retire the second panel and Alt-digit activation; supersede the earlier two-bar request.
+- [x] Reuse native controls90/91 for row collapse/expansion and show a1–4 row count. Save layout/bindings/position, import all50 legacy bindings and preserve all300 previous bindings in version2's2424-byte payload, with retired cells40–59 inactive. Back up version1 profiles outside the client and reset their visible layout to one row.
+- [x] Accept the single-bar render component:40 cells,40 key labels and four bound-row icons clear of menus/chat. Pass the focused migration/persistence model and192 SDL/D3D11 checks, including actual row controls, min/max limits and reload. Earlier two-bar screenshots/checks remain historical.
+- [ ] Accept actual quickbar binding drag, gameplay activation and restored rows/bindings/positions after relogin. SDL row-button/persistence components are accepted; they do not complete the remaining online integration gate.
+
+- [x] Read original PSD authoring references through the existing native DDS translation; prepare all Zone28 map resources and inspect portal271's rendered arrival without extracting HPKs.
+- [x] Share immutable map geometry across its material sections, preserving native textures and index ranges in color/shadow submission. Remove Forge's4096-index-buffer loading failure:254 buffer pairs cover5078 material sections. Verify Naga's image remains unchanged.
+- [x] Inspect original Marana31/32 portal276/277 arrival renders. These are map/renderer components; server admission, native rule coverage and connected journeys remain open.
+- [x] Correct the Forge preview to use native TCM/GetEmptyMobGrid landing selection. Blocked450/124 caused the clipped capture; valid447/121 renders correctly with the existing camera and authored portal bounds.
+- [x] Record and skip an absent optional map FX catalog while keeping required K3 player FX available. Skip missing field placements; retain failure for malformed existing tables. Verify Marana FX initialization and its global click graph.
+- [x] Enforce native saved-character entry minimums Z10>=60, Z21>=80 and Z22>=100 without a GM exemption, plus the saved-Zone11 fallback. Persist the authenticated owner's native Zone01 fallback and release its lease without publishing an actor or successful entry. Accept focused helper/entry-boundary checks and show the exact server rejection reason through the client entry path; the client loopback check passes.
+- [x] Add partial Forge source handlers104/1020/1055/3200/3205 for NPC summons, required-item removal, party teleport and native event decks/RNG. Preserve partial five-stack removal and native failure/cooldown behavior. Implement generic item-drop1060 plus item/quest conditions1030/1120, clan assignment1080 and availability1100; complete native duration1090 expiry and clan/time preflight. Accept private World/calendar/pickup/replay/saved-reopening components. These primitives do not complete Forge, Chaturanga or Nar Durga services and connected journeys.
+- [ ] Finish Forge's remaining rules, actors, services and travel before admission. Keep native deck 11 empty with zero RNG draws; authored 1000-card deck 2 remains an invalid index. Retain task 60/Monster1460's family mismatch and active 2748/2749's missing K3 skills 41783/41784 without inventing data or substituting Global skills. Retain actual missing/invalid source resource reports for the other zones.
+- [x] Restore Karya's source gate policy: process-local default closed, native GM clan10 bypass, ordinary-entry Chakra sums <=282 for Z13 and <=378 for Z14, and no invented Z15 cap. Add original2202 startup gates in Zone01/Zone10, action2050's flag-before-three-warps order, original Data/Schedule.txt and English Language.txt notices. Accept focused helpers and actual isolated World scheduled44/45 opening/closing with exact positions and observer visibility.
+- [x] Restore the source template blocked-cell mask for native NPC Teleport; accept the actual scheduled gate arrival at490,369 on its original0x10 cell. Preserve source startup PopFallDown while leaving its hidden first-publication wire visibility unclaimed.
+- [x] Implement normal-disconnect saved return for Z11/Z13/Z14/Z15, changing only current zone/X/Z to the actual saved fields when the zones differ, without a GM exemption or invented default. Commit the owned logout state before departure, skip handoffs/uncertain transactions and avoid publishing a leaving actor at saved-map coordinates. Exact-field helper checks pass; end-to-end Karya logout remains unverified.
+- [x] Implement2202's special contact route and source one-tier portal214 selector with owner/session/revision/cell correlation. Accept separate actual World/security and client TCP/SDL replay components; preserve nEventNo=0 and the original special interaction.
+- [ ] Complete remaining Karya services/combat and full-zone journeys. Native13/15 profiles are enabled after accepted paid gate entry, rendered arrival and scheduled saved return. Zone14 remains disabled: preserve original menu46–61 versus Global minimum68 and the actual no-charge/no-transfer denial. The private connected components do not establish live TLS or full encounter acceptance.
+- [x] Restore Tomb 12's source ordinary-disconnect return: living characters in its six inclusive boss-room rectangles return through the current map's god/common generation areas and shared native counter/RNG. Exclude handoffs and uncertain transactions, save once before removing ownership, and preserve other fields. Accept 39 boundary/guard cases plus actual World close and fresh-roster reopening. Correct common-area fallback to rotate all authored common rows. Connected Tomb services/combat and graphical parity remain open.
+
+1. [ ] Finish supported combat/skill presentation across weapons and tribes.
+   - [x] Honor native action `IsWeaponBack` and active/buff unarming before selecting FIST skill clips. Keep the stance override through READY/CAST/ACTIVATE and character/equipment replacement, restore the requested ordinary/safety stance afterward and suppress sheathed trails. Accept actual GPU Frosana 3023 clips 50751/50752, native back-socket/no-trail checks and stance restoration; preserve missing-resource skips and K3 definitions.
+   - [x] Regenerate source-selected skill combat timings with Data Tools from the canonical XLSX snapshot: zero generation errors, 662 changed K rows across 31 skill IDs, previously 0/0 and now authored duration/marker. Total row count stays 12,466 and all non-K records are unchanged; retain 32 pre-existing missing-clip skips. Deploy matching timing artifacts/provenance without workbook or native parameter/FX changes; observe 11 native worlds and the administrator stub ready.
+   - [x] Restore the original dead-entry initialization order in both native status copies: set HP/TP to 1 before Init, matching server.cpp 12093–12097, rather than restoring half HP after Init while retaining Dead FSM. Accept the existing 534-check native entry-effects component and 32 resumed native kills without an injected Stand action. Actual Tomb World entry from HP 0 asserts `CHAR_INIT.dead=false`; 39 logout boundary/guard cases, once-only save and fresh-roster reopening pass. Install final matching Release client/server; full live TCP/graphical parity remains open.
+   - [x] Restore K3 Terror3029, Pull3013 and party Friend Summon3337 through their original recipient services. Pass focused NPC flee/displacement, immunity/range/blocked-grid, party-recipient, cost/cooldown and saved-state checks.
+   - [x] Implement familiar3115/3331/3332 with all11 native level templates, growth/decks/RNG, fixed-target attacks, owner credit, cost/cooldown, replacement, expiry and owner cleanup. Enable the three families in the shared223-skill K3 policy. Accept rank1 owner/peer models, attacks, six phase clips, three FX families, replacement/removal and saved-state checks in one connected session; higher-rank and wider skill presentation remain open.
+   - [x] Accept the original-resource actor-spawn GPU component: 2068/2069/2070, native pop motion types 1/2/3 and familiar resource/texture replacement from 2807 to 2804 using the same handle. Rank1 familiar network presentation is accepted in the 7 November connected checkpoint; higher ranks and other families remain open.
+   - [x] Accept READY/CAST/ACTIVATE presentation across all eight native bodies and24 phase selections. Record and skip an absent action clip without aborting presentation or resetting the live animation clock. This component check does not complete multiplayer skill acceptance.
+   - [x] Restore successful-unit AffectSelf timing for K3 taunts3023/3028: pay the cast without granting the caster effect, apply it after a successful hit with native caster ownership, retain eight-second expiry and publish its active-effect snapshot. Preserve CastInstant3 before recipient affections. Pass the focused hit/miss/lifetime and area-impact authority check; wider graphical acceptance remains open.
+   - [x] Restore original faction-based friendly targets instead of requiring a party for every support skill. Recognize K3 FriendNParty, retain explicit corpse selections, preserve the original skill3337 party restriction, snapshot recipient identities and recheck range/liveness at impact. Accept focused two-owner authority checks for K3 heal3211, selected-friend buff3204, saved HP/TP and living-corpse rejection. Broader party/AoE graphics and competitive-zone death/rewards remain open.
+   - [x] Make the canonical PC/monster skill sheets, PC FX tables and skill animation IDs use K3; stage matching packed K3 resources and regenerate matching client/server data. Keep non-skill tables on their existing Global baseline.
+   - [x] Resolve authoritative monster animation markers and projectile bindings from each current map rather than only Mandara1st; retain explicit missing-clip skips.
+   - [x] Build/stage Global Tantra Release client/server, admit214 K3 skill rule paths, prepare615 referenced graphs and record144 missing authored resources. No full K3 graphical/animation acceptance is inferred.
+   - [x] Prevent a second online monster flight after the server's projectile impact; preserve native critical/dodge values. Accept a focused authoritative skill3306 event check and an actual K3 monster41400 follow/impact render with depth/cleanup checks. Broader multiplayer skill rendering remains open.
+   - [x] Share native READY/CAST/ACTIVATE animation playback between owner and peers: CAST repeats the authored clip at native speed; READY and ACTIVATE play once. Restore once-only attack READY FX and looping active-buff READY FX. Accept one focused K3 male/female phase and GPU FX lifecycle check; live multiplayer skill acceptance remains open.
+   - [x] Preserve peer appearance/status affection masks, source READY/CAST/ACTIVATE phases and apron bindings.
+   - [x] Present remote PC skill/weapon FX and distinct attack audio; apply the existing trail options to peers.
+   - [x] Use each peer's server-selected normal-attack variant and scaled native TAB marker; retain native weapon-impact/audio metadata on owner/peer hits. Accept the156-case TCP matrix without replaying earlier graphical encounters.
+   - [x] Resolve peer render bodies after equipment replacement and transfer attached effects without resetting their clocks.
+   - [x] Restore the exact Global `PFX_MSP2` graph and missing packed FX resources while preserving existing payloads; recognize its wing model 2000350.
+   - [x] Build/stage Release and pass the focused peer cast/buff/equipment lifecycle rendering check.
+   - [x] Implement original radial particle mode3; pass focused math and render its layers for skill3335's three impact bindings. Record missing model2010051 separately; complete graph parity remains open.
+   - [x] Apply the original model-height-plus3 anchor to other-player names; verify it and numeric target-HP suppression in the live two-client capture.
+   - [x] Deliver native timed-effect snapshots for owner, peers and monsters on changes and visibility entry/retry; correlate state loops with native effect IDs/start times and clear cached snapshots on disconnect. Publish newly committed owner revisions after recovery/native status/effects; deduplicate identical full snapshots and force explicit refresh replies, preserving operation revision guards.
+   - [x] Preserve the monster affection mask from initial appearance packets, matching the existing peer path.
+   - [ ] Finish remaining weapon/tribe/skill family gaps and actual multiplayer buff/skill visual acceptance.
+2. [ ] Complete the selected Zone01–Zone05 quest chains, branches, objectives, reward feedback and persistence.
+   - [x] Accept tasks10006/10013/10057 with five earned native cave kills/pickups, original remote and local portal routes, exact material consumption/rewards, replay rejection and intermediate/final saved reopening. Correct the missing local116→117 step in the fixture, then fix the server's actual local-warp occupancy/visibility publication gap. No collision, generator, drop-table or canonical workbook changes; QA stats are overallocated. This direct authority journey does not complete live TCP/graphical or fresh-character progression acceptance.
+   - [x] Keep combat-only PranaBonus out of source quest rewards. Accept the focused quest21 authority journey with30+15 actual native kills, decline/retry, partial saved reentry and exact20,000 Prana/30,000 Rupiah/20x7008 turn-in under native charm5805's5% combat bonus; reject repeated rewards and reopen final state exactly. Prerequisite quest20 and QA stats are seeded; full TCP/graphical and the other selected chains remain open.
+   - [x] Accept quests 22–25 through actual World authority across preserved runs: source 22/23 letters/rewards, 30 Heruka for 24 (18 previously earned plus 12 resumed), 20 Ananga for 25, proof 8042 earned on the 20th kill, native proof 8019, exact letter/proof consumption and source rewards, replay rejection and partial/final saved reopening. The duplicate QA fixture inherits a quest 20 seed and uses class 1/Heart 2000; no new quest flags, counters, materials or rewards are seeded. Full TCP/graphics and fresh-character balance remain open.
+   - [x] Enable original quest26 (Scenario2E) through the existing native callbacks and shipped NPC scripts: level35 Saranew1110, ten7119→8021/8022, Girika1102→8023/8045, and1110 consuming8023 for50,000 Rupiah/100,000 Prana plus tribe-specific5275–5278. Shared policy and generator now admit26 for server authority and client dialogue; native country extras, inventory requirements and issued-offer/revision/replay gates remain. Native27=1 may be saved, but27 stays unavailable; K3 skills are unchanged.
+   - [x] Accept the earned quest26 World-authority continuation from saved25 through ten actual2019 kills/7119 pickups, decline/retry, original1110→1102→1110 travel/letter exchanges, exact100,000 Prana/50,000 Rupiah/tribe reward, replay rejection and partial/final saved return. Preserve the inherited QA/quest20 provenance and native8045 result. The original post-death pickup failure is retained alongside the production metadata fix.
+   - [ ] Accept Quest26 full-scene travel and fresh-character balance. The focused7 November TCP/HUD dialogue, material counter, exact reward feedback and saved-progress check is complete with seeded materials/private map relocations; the prior earned authority journey is retained.
+   - [x] Restore native task-family selection offsets and current-page success/failure reply branches. Accept original NPC1107/1110 menu paths for10006/10013/10057 and six rendered reply captures. These component inputs inject replies; they do not commit rewards or accept a connected quest journey.
+   - [x] Route matching task results to localized Quest history60 even after dialogue closes. Correlate task/NPC/nonce, suppress stale/duplicate replies and require the committed owner snapshot before success feedback; retain the existing item/Rupiah snapshot observer. Accept the real TCP/SDL10006/10013/10057 menu/retry/reward-feedback and saved-reopening component. Materials are seeded; full earned-objective/map journeys remain open.
+   - [x] Restore quest34's original twenty-question class trial, authored failure/success pages, twenty-Ananga retry and proof-token exchange. Submit actual answers for authority validation, preserve durable rewards/replay fences, and correct native dialogue success/failure states255/254 and error-flag adaptation. Accept the original UI render and the earned native-authority journey from zero quest state through 20 actual Ananga kills, original quiz failure/retry, proof exchange and saved return/reopening. Full promotion, live TCP and graphical acceptance remain open.
+   - [x] Restore nearby server-issued NPC quest notifications when dialogue is closed, including kill/cross-NPC notifications whose reply header has NPC0. Keep native range/death/trade/beta gates; cache full quest-stage identity and restore conversation state on failed navigation.
+   - [x] Remember server-issued dialogue offers by native NPC identity and consume accepted offers after durable success. Preserve unsolicited-request, revision and replay rejection; accept the focused native Shambala quest21 dialogue render and authority reward/reopen check. Full selected-chain journeys remain open.
+   - [x] Commit the initiating quest snapshot and affected party rewards together, with owner/revision fences and replay receipts; pass the focused second-member SQL failure, retry and saved-reopen check.
+   - [x] Restore original English quest-dialog messages and Quest history routing, unread Quest-button notification and completion FX1010025; accept focused UI/message and actual GPU completion/expiry checks without replaying saved history.
+   - [x] Verify the selected Shambala quest21 accept/decline and30+15 objectives under the actual beta gate, plus once-only rewards, selected material exchanges10006/10013/10057, party rewards and exact saved reopening.
+   - [ ] Accept the remaining selected dialogue/objective/reward journeys against the updated server deployment.
+3. [x] Improve disconnect/reconnect explanations, INTRO return, scene/audio cleanup and fresh inventory/social state after login.
+   - [x] Implement the original disconnect message-box identity and OK restart route, with modal input and death-dialog precedence.
+   - [x] Cancel loading/input and release the old channel, actors, FX, labels, map overlays and audio before returning through the verified launcher; preserve online/offline restart mode.
+   - [x] Build Release and accept the focused native dialog rendering/input and restart-argument checks.
+   - [x] Route pre-world/portal connection failures through the native recovery modal and cancel the loading overlay.
+   - [x] Accept an actual private TCP interruption, native disconnect dialog, character/FX/audio/channel cleanup, real Tantra.exe restart through INTRO, fresh authoritative owner snapshot, cancelled interrupted trade and restored party presence.
+   - [x] Discard cached refinement quotes/pending commits when disconnecting and use player-facing connection-error wording. The final wording change is checked separately from the earlier successful graphical build.
+4. [ ] Finish model LOD, shadow tuning, remaining native FX behavior and music/audio transition/recovery.
+   - [x] Apply original nonzero Monster RGB to diffuse and emissive materials while inheriting character ambient; RGB zero inherits normal material. Apply to world/INTRO gate actors and shared CPU/GPU fragment shading, including inherited diffuse for ordinary point lights. Accept the isolated native2008 emissive/zero-inheritance/replacement/animation-clock GPU component; full scene comparison remains open.
+   - [x] Use each original Obj.TXL camera-collision flag and actual mesh intersections instead of treating whole object boxes as solid camera barriers. Accept the focused doorway/pillar check and the corrected live Zone09 arrival view.
+   - [x] Add opaque-mesh visibility protection inside maps without sky geometry, including camera-disabled Tomb room walls; retain outdoor CamCollide behavior and actual texture-alpha classification. Accept all9 sampled portal191 arrival rays and inspect the default/edge GPU views. This component result does not replace full map services/combat acceptance.
+   - [x] Apply native three-dimensional camera-distance LOD to world NPCs, monsters and peer bodies/attachments; hide TooFar models and their labels without resetting animation clocks.
+   - [x] Accept the focused Release GPU check on actor2008's four original detail meshes, including vertical distance, TooFar and return.
+   - [x] Restore source rigid LOD and authored-detail fallback separately from character LOD. Use actual TML Public0/SM1/Grass2 metadata, exclusive SMObjArea/GrassArea cutoffs and the native grass alpha band. Accept profile checks across LOW/MED/HIGH and actual Mandara SM/grass boundary/fade/cull/restore components with unchanged shared geometry. Full scene comparison remains open.
+   - [x] Accept stopped music/effects on live disconnect and map-audio restoration after the fresh login; retain broader graphics and map-transition parity work.
+   - [x] Accept the existing native miniaudio same-ID stream recovery, delayed/reset ambient voices, music disable/re-enable, original .5-per-second map fade and independent gains. Evidence: skill-audio-tomb-story-20261107.json; no repeated audio run or OS-device-loss claim.
+5. [x] Add playable Zone06/MandaraCave4th authority, portals, environment and saved return.
+   - [x] Read the coherent original dataset and pass map/placed-resource plus generated/static actor binding checks.
+   - [x] Deploy native Zone06 authority; accept original paid/free portal travel, environment, cross-map party/chat and durable saves.
+   - [x] Fix the modern roster/Zone06 route collision and accept fresh login into the saved Zone06 character; extend shared admission through Zone06.
+   - [x] Restore boss 2072's original skills 41030/41412/41411/41489, SummonOld class 12 templates 2068/2069/2070 and CheckCondition/Help1 on even combat ticks with native counts/order. Publish orphan HP0; source reaction 1113 performs optional logging only, with no gameplay effect.
+   - [x] Accept the focused native-authority boss encounter: 33 attacks, all four skills, positive player/boss hits, death/prana once, loot replay rejection, orphan cleanup after 49 ticks and saved reentry. Preserve original generator/collision; overallocated QA attributes/loadout do not prove balance.
+   - [x] Accept the human-assisted live TCP boss2072 encounter and graphical presentation: both clients capture all four source attack clips, five FX graphs, three summoned models and death; WorldHero also captures native Prana collection. Original Global Monster2072 and generator/TCM hashes match.
+   - [x] Reconcile the saved SQL checkpoint and four atomic loot receipts: the user-controlled BgfxPeer legitimately collected51,825 Rupiah plus5750/5550/6154×1. Retain the automated run's failure because its owner-only pickup assertion expected WorldHero to collect them; this manual acceptance does not rewrite automation as passed.
+   - [x] Verify fresh graphical relogin and displayed-position agreement with persisted SQL after this encounter. Both clients preserve native state/items/Prana and match saved gameplay/rendered positions. Evidence: external `boss-preserved-fresh-relogin/RESULT.json` plus the original manual encounter; balance and the full expansion remain open.
+6. [ ] Add the other original zones within01–34 with independent resources, native rules, authority and travel/persistence.
+   - [x] Skip only malformed map material groups with4/6 affected triangles in the supplied Biryu/Ruin/Kathana4 models. Keep full geometry/collision and later material offsets; retain strict validation for other asset paths.
+   - [x] Accept the Biryu portal220 arrival component:303 models,3307 placements,786 referenced payloads, no missing map textures and an actual D3D11 native-camera render. Pass focused authored-portal, instant-scheduler, clan-restoration and original-population authority checks. Zone17 admission and full-zone acceptance remain open.
+   - [x] Implement private Biryu startup99/21060, class17 handling, fixed actors, native calendar loading and schema10 castle/legacy-identity persistence. Verify private authority restart and native Yut deck/prize-file persistence; retain the shared beta zone list unchanged.
+   - [ ] Accept Biryu's full calendar/Yut timer, siege, service UI, connected travel and saved reentry before Zone17 admission.
+   - [x] Stage98 absent original files for Mudha, Forge, Ruin, VediKruma, Kathana4, Kathana4Cave, Marana and Paroksya; retain packed HPKs and omit297 identical packed/loose duplicates. Preserve existing files and K3 skill FX.
+   - [x] Read type3 compact geometry with interleaved vertices and WORD material counts/indices; retain unused empty object-table rows and optional moonfile=0. Forge and Marana31/32 resource preparation now pass; Vedi25 also passes after staging. Other invalid/missing source references remain recorded.
+   - [x] Permit original zero-generator files on client/server, matching CNPCGenerator; pass the focused server parser and Marana31/32 population preflights. Deploy matching Release binaries with all11 existing native worlds ready. These checks do not admit or complete those later zones.
+   - [x] Audit the 29 additional Global source folders and import coherent new datasets into disabled development profiles.
+   - [x] Record source identity mismatches, existing data drift and missing client resources instead of substituting another map.
+   - [x] Load coherent configured native maps generically and use source Zone.Type for ordinary channels. The earlier IDs1–50 loader and22-dataset staging checkpoint are historical; the current loader/import scope is01–34, with disabled36/37/38/45 datasets retained only in the external scope backup.
+   - [x] Replace compiled per-map admission with native IDs01–34 and actual enabled profiles, validated files and live accepting worker registration. Keep the verified-map inventory separate; adding an ordinary map requires no C++ edits or rebuild.
+   - [x] Add Manager folder analysis/review for the five native files, detected identity, data/port conflicts, matching-dataset reuse, enable and optional start. Preserve existing data/special profiles; pass the existing focused12-import mode/address/validation check and install Release. Interactive dialog capture is not claimed.
+   - [x] Read each map's original NPC-script binding and reload it on online/offline entry; retain the source's empty/0 sentinel and reject path traversal.
+   - [x] Record and skip absent NPC catalog/model/animation bindings while retaining server authority, rather than aborting the map.
+   - [x] Extend shared admission to Zones01–09 and12; deploy native Zones07/08/09/12 on the configured host without changing their native datasets or Zone08's existing WorldSettings.
+   - [x] Accept Zone02 -> Zone07 -> Zone02 with two Release clients: movement, native paid/free menu slots, cross-map party/chat, stopped saves and fresh logins.
+   - [x] Support the Global Zone12 ten-follower group and route native NPC map events through transaction-aware world tasks; observe two processed events and no pending events after a full generator cycle.
+   - [x] Implement route-end phase-out without rewards, native remove reason3 and authored respawn timing; accept a focused original guard-route lifecycle and observe phase-out on the normal managed server.
+   - [x] Accept two-client Zone07/08, Zone08/09 and Zone08/12 paid/free portal journeys, movement, cross-map party/chat, durable saves and fresh-process logins. Retain native fees, landing bounds and country-specific map music. Subsequently accept Karya13/15's native gate menus, paid entry, rendered arrivals, scheduled saved returns, peer visibility and four claimed transfers across preserved private runs; enable their native-world profiles. Keep the failed wrappers and successful stopped-SQL audit distinct; no repeated low-tier journey or live TLS claim.
+   - [ ] Accept remaining Zone08/09/12/13/15 services/combat; successful portal journeys and scoped camera checks do not complete those gates. Zone14 stays disabled: original menu46–61 conflicts with minimum68, with an actual no-charge/no-transfer denial retained.
+   - [ ] Complete the catalog/resource gaps, ordinary and special-map behaviors, server ownership, portal graph and saved return for each destination within01–34.
+
+The verified-zone inventory remains Zones01–09 and12. Native13/15 profiles are
+also enabled after scoped local connected travel/saved-return acceptance;
+broader combat/services and live TLS acceptance stay open. A resource-only pass
+does not accept a new playable zone. See the
+[implementation checkpoint](docs/CLIENT_FEATURE_EXPANSION.md).
+The current familiar/connected-task/private-Biryu batch is recorded in
+[its scoped checkpoint](docs/evidence/native-familiar-castle-20261106.json).
+The previous [native entry/Forge/material checkpoint](docs/evidence/native-entry-forge-material-20261106.json) records focused helper, entry, client loopback and earned-material results, retaining the earlier route/publication failures. That deployment used local patch ID1793975834; its readiness is recorded in that evidence. Forge admission, services and connected travel remain incomplete.
+The historical [Karya/class/LOD checkpoint](docs/evidence/native-karya-class-lod-20261106.json) records policy helpers, actual scheduled World44/45 closure, the earned class34 authority journey and native rigid/SM/grass rendering components. Its contact/UI gap is superseded by the7 November components above; Karya services/admission, full promotion, full scene parity and connected graphical journeys remain open.
+Use the [verified zone/portal reference](../_server_cpp/docs/ZONE_PORTAL_REFERENCE.md)
+to distinguish player-facing names, internal assets and revision-specific portal
+IDs. Preserve the owned workbook's links when the proposed list differs.
+
+## 6 November 2026: beta installation and operations follow-up
+
+- [x] Prepare the external tester installation/patch/login/saved-return check and redacted bug reports; create eight individual ordinary accounts.
+- [x] Complete focused entry/replay protection, isolated restore, patch rollback, crash capture and local health alerts.
+- [x] Measure one completed 16-client mixed native TLS workload and stage the corrected server operations package.
+- [ ] Close the measured simulation-budget gap before approving public capacity: worst sampled tick p95 63.119 ms versus 50 ms.
+- [ ] Receive a successful separate-PC result and finish public hosting. The current deployment remains LAN only and no second PC is available.
+
+See [operator runbook](../_server_cpp/docs/BETA_OPERATIONS_20261106.md) for the
+exact artifacts, evidence and remaining gates. No additional phase percentage
+or full original-game parity is claimed by these operational checks.
+
 ## 6 November 2026: English combat chat and refreshed beta packages
 
 - [x] Verify Global SpeechComment.szPhilippine: all 348 entries are untranslated placeholders. Suppress unavailable utterances before broadcast, including named forms, while preserving native AI timing/RNG and real dialogue.
@@ -2210,6 +3048,7 @@ name layer and are historical; current same-quality performance remains open.
 - [ ] **P13-07** Route map music and safe/hostile-area changes from original tables/source logic.
 - [x] **P13-08** Apply live effects/music gains to existing and future voices and persist native option values. Independent miniaudio category gains and restored live playback pass options and six-process persistence checks.
 - [ ] **P13-09** Handle audio device failure as recoverable; prevent duplicate music on transition/retry.
+  - [x] Accept actual-miniaudio BGM 30008/30007/30011 selection, stopped same-ID music restart, delayed effects initialization, sample-service shutdown/reinitialization restoring ambience, music disable/re-enable, native fade and retained gains. OS audio-device loss/reset and connected graphical travel remain unverified; see [7 November evidence](docs/evidence/skill-audio-tomb-story-20261107.json).
 - [ ] **P13-10** Record unsupported FX node semantics instead of silently skipping visible content.
 - [x] **P13-02b** Bind the 55 authored Mandara field FX placements and accept representative native portals, altar and water graphs independently in bgfx.
 - [x] **P13-03b** Present native selected-target and terrain-conforming ground indicators with preserved UVs and sampled terrain/object-floor heights.

@@ -1,7 +1,9 @@
 # Tantra BGFX game databases
 
 These definitions match the C++ server, not the historical SQL Server schema.
-SQLDMN schema **9** supports SQLite (the packaged default) or MariaDB 10.11+.
+SQLDMN schema **10** supports SQLite or MariaDB 10.11+. The active deployment
+uses MariaDB. Schema10 adds durable native castle state and reservations for
+imported legacy guild identities; existing accounts and characters are retained.
 ITMSRV cash and worker run history remain separate SQLite databases on either backend.
 
 | Database | Packaged location / selection | Definition |

@@ -1,3 +1,448 @@
+## 7 November 2026: K3 Taras, audio recovery and native Chaturanga
+
+- [x] Verify Taras3121 K3 animations, all ten rank bindings, three FX bands,
+  authored Wing attachment, persistent state and cleanup; prefer K3 PFX_MSP.
+  Projectiles and weapon trails are not part of this native self buff.
+- [x] Restore looping TFX audio after miniaudio reset without duplicate voices
+  or once-only cue replay; preserve spatial position, mute gain and owner stop.
+- [x] Implement Z11 God-zone startup, native king handles/room return, trap cells
+  and saved-zone logout. Bind original2946 gate picking to the player's god and
+  a live server quote. Accept the private177/174/146 handoff and exact saving.
+- [x] Stage Release client/zone server, enable native Z11 profiles and publish
+  signed patch1794044192. No normal data changed or normal workers restarted.
+- [ ] Verify normal war-triggered gate creation/removal and actual client entry;
+  the accepted route uses a private gate. Two source textures remain missing.
+
+Earlier accepted NPC handlers and Quest26 exchanges are retained. This checkpoint
+adds no complete-game, public-beta, new benchmark or separate-PC acceptance.
+Evidence: [focused delivery](docs/evidence/focused-taras-audio-chaturanga-20261107.json).
+
+## 7 November 2026: skill stance, audio, earned quests and recovered entry
+
+- [x] Honor K3 IsWeaponBack and active-skill unarming through READY/CAST/ACTIVATE, equipment refresh and normal stance restoration. Accept the source Frosana GPU/socket component and restore662 authored timing rows across31 skill IDs through Data Tools; preserve all non-K timing rows and canonical data/assets.
+- [x] Recover unchanged map music and ambient voices after stopped streams, delayed initialization or miniaudio reset. Pass the original-asset audio component with independent gains, native fade and inert map cleanup.
+- [x] Complete the scoped earned quest22–25 authority continuation across preserved runs:30 Heruka and20 Ananga kills, native letters/proofs, exact rewards, replay rejection and saved returns. Prior45 quest21 kills were not repeated. QA class/Heart changes and inherited quest20 seed remain explicit; full fresh-player/balance/TCP/graphics acceptance is open.
+- [x] Fix revived entry in both native status copies: source temporary HP/TP before Init, then half-vitals, living combat state and consistent CHAR_INIT flag. Accept the entry component and32 actual resumed kills without a manual Stand.
+- [x] Restore source Zone12 alive boss-room logout return and complete common generation-area fallback. Accept39 boundaries plus actual recovered entry, save once and fresh roster reopening.
+- [x] Install matching Release client/server and timing data; confirm11 native worlds plus the administration stub ready. Publish signed patch1793985972 and the82-file existing-server update.
+- [ ] Complete the full expansion scope, including broader skill graphics, connected Zone06 boss and the remaining original zones through34.
+
+Evidence: [current checkpoint](docs/evidence/skill-audio-tomb-story-20261107.json).
+
+## 7 November 2026: Manager process metrics and source-based journeys
+
+- [x] Replace whole-PC footer metrics with Server Manager CPU and working-set RAM; add per-worker CPU/RAM columns and explain **Server update time** in plain language. Install the organized sidebar/table/actions/settings layout, channel suffixes and selection guards. Release build and isolated GUI capture pass.
+- [x] Verify the earned quest11–20 authority journey:58 kills,40 material pickups, partial saved return and earned quest21 acceptance. No quest progress/materials were injected; QA attributes remain overallocated, so balance and graphical acceptance remain open.
+- [x] Bind Karya2202 contact/selection to its actor, owner/session, revision and cell; verify source selector214 through the actual client TCP/SDL replay component separately from actual World authority. Live TLS/full-scene acceptance and destination admission remain open.
+- [x] Restore the0.5 alpha mask policy for blended creature shadow casters. Ordinary shadow regression passes; the default fixture has no eligible blended part, so that new runtime coverage remains open.
+- [x] Stage matching Release binaries, publish signed patch1793982733, verify schema10 backup and confirm11 native worlds plus the administration stub ready. The82-file server update excludes accounts and private keys.
+- [ ] Complete the remaining full expansion scope; this checkpoint does not close the goal.
+
+Evidence: [current checkpoint](docs/evidence/native-gate-story-shadow-manager-20261107.json).
+
+## 6 November 2026: optional map FX and native landing previews
+
+- [x] Record and skip a missing optional map FX catalog without failing FX initialization. Keep K3 player FX mandatory and available, skip absent field placements, and reject malformed existing tables. The Marana check passes initialization and its global click graph.
+- [x] Use native TCM/GetEmptyMobGrid landing selection in the Forge preview. Center450/124 is blocked; valid447/121 renders correctly with the existing camera. Preserve production camera code, portal bounds and server data.
+- [ ] Finish online admission, native rules and journeys for the later zones.
+
+Evidence: `_remake_bgfx/docs/evidence/optional-map-fx-20261106.json`.
+
+## 6 November 2026: later-map materials and geometry buffers
+
+- [x] Accept the native PSD authoring suffix and use its existing DDS payload; Zone28 prepares57 models/1505 placements/176 payloads without missing map textures. Inspect its original portal271 arrival render.
+- [x] Resolve Forge's4096-index-buffer upload failure with one shared immutable vertex/index pair per static mesh and original material draw ranges. Upload254 model buffer pairs for5078 material sections; retain the original triangle counts and texture bindings.
+- [x] Verify Naga's rendered image remains byte-identical after sharing geometry. Inspect the original Marana31/32 arrival renders. Keep dynamic character/effect buffers on their existing paths.
+- [x] Correct the source staging helper to compare installed exact HPKs and support explicit relative resource files. Record and remove the newly copied Biryu override that retains the same invalid source material; no archive extraction or replacement texture is introduced.
+- [x] Correct the earlier Forge camera diagnosis: its preview bypassed native blocked-cell rejection. The valid landing renders correctly with the existing camera.
+- [ ] Accept online entry/rules, actors and travel for the remaining maps. The component renders do not enable new zones or complete the expansion.
+
+Evidence: `_remake_bgfx/docs/evidence/later-ordinary-zones-20261106.json`.
+
+## 6 November 2026: original class trial and quest dialogue
+
+Quest34 now uses the original twenty-question class trial and Global NPC
+scripts. Correct the native dialogue state values255/254 and the error-flag
+adaptation so success/failure pages select correctly. Check all twenty question
+transitions, render and inspect the first question and distinct terminal pages,
+and verify confirmation behavior.
+
+The C++ authority checks answer transcripts before granting proof8071, preserves
+the twenty-Ananga retry and NPC1132's Zone07 exchange for8068, and commits native
+quest/item state through the existing atomic save. The focused Release check
+passes unoffered/forged/incomplete/replay rejection and exact saved reopening.
+Its first turn-in fixture used Zone01 incorrectly; fix the fixture from the
+Global NPC table, retaining production locations.
+
+Matching Release binaries are staged; all11 native worlds and the admin stub
+are ready. Broader quest journeys, skills, boss acceptance and remaining zones
+stay open. Evidence: `_remake_bgfx/docs/evidence/native-class-trial-20261106.json`.
+
+## 6 November 2026: K3 successful caster-affection timing
+
+The active K3 records3023/3028 use AffectSelf. Native CastSkill adds the caster
+effect after each successful unit; the server previously granted it while
+paying for a cast, before knowing whether it hit. Move the implicit affection
+to the successful-hit phase, retain the caster as owner and skip duplicate
+target-impact presentation. Explicit self-target skills retain their existing
+cast path. Preserve native CastInstant3 before recipient OnAffect/AffectSelf.
+
+One focused Release authority run passes a real hit and miss for3023, native
+inner-affection state, eight-second lifetime/expiry, caster ownership and3028
+area impacts on multiple recipients. The area fixture later reaches native
+player death; this accepts skill phase/impact behavior, not encounter survival,
+boss combat or full graphics. The existing monster selector already consumes
+the caster's inner-affection state; its scoring rules remain unchanged.
+
+The matching Release server correction is deployed; all11 native worlds and
+the admin stub are ready. Client patch **1793936845**,
+K3 tables/FX, native datasets and the beta allowlist remain current. Evidence:
+`D:\Tantra-Beta\Expansion-20261106\k3-successful-self`.
+
+## 6 November 2026: Tomb interior camera visibility
+
+The original Tomb room `C07_room3_4_1_02.tmb` disables CamCollide, leaving its
+opaque wall between the camera and player at6 of9 sampled portal191 arrival
+positions. Retain authored camera flags outdoors and add an opaque-triangle
+visibility fallback inside maps without sky geometry. Preserve the original
+camera pose, zoom, portal bounds, player positions and native map files.
+
+Classify camera/sky geometry with the actual DDS alpha plane, matching the
+renderer, instead of dropping every material whose name contains `_TGA`.
+Correct object-texture roots to the archive-backed client paths rather than a
+derived cache directory. Open doorways and transparent foliage retain their
+existing behavior.
+
+Release passes all9 sampled Tomb arrival rays and the outdoor doorway/pillar,
+source-flag and sky-occlusion check. Inspect both actual default and edge GPU
+captures: the character is visible. This is a component acceptance; the prior
+two-client travel was not repeated and remaining map services/combat stay open.
+
+Publish signed client patch **1793936845**. Server binaries, datasets, accounts,
+workbooks and K3 skill resources are unchanged. Evidence:
+`D:\Tantra-Beta\Expansion-20261106\interior-camera`.
+
+## 6 November 2026: original K3 friendly skill targeting
+
+Friendly support skills now preserve a selected player outside the party. The
+server applies the original faction matrices, redirects hostile Friend and
+FriendNParty selections to self, and keeps FriendCorpse explicit. FriendNParty
+self-selection uses the native party list and40-cell limit; a selected friend
+receives a single-target cast. Preserve Party's separate clan-table exception
+and skill3337's original party-only restriction. Snapshot recipient identities
+and recheck their membership, faction, liveness, range and sight at impact.
+
+Release client/server builds and the focused two-owner K3 authority check pass:
+heal3211, selected-friend buff3204, active-effect delivery, saved HP/TP costs and
+rejection of resurrection on a living target. The first fixture was corrected
+to use a valid second class after native initialization rejected its learned
+resurrection skill; the original safeguard remains intact. Full multiplayer
+party/AoE graphics and competitive-zone kills/rewards are still open.
+
+Evidence: `D:\Tantra-Beta\Expansion-20261106\native-friendly-skills`.
+
+Signed client patch **1793935443** and the matching existing-server update are
+published. All11 native worlds and the admin stub return ready. No skill
+workbooks, account records, native map datasets or zone admission were changed.
+
+## 6 November 2026: native quest notification activation
+
+Restore HTNPCSystem's nearby quest notification activation. The BGFX client
+previously ignored a notification unless its conversation was already open and
+matched the reply-header NPC. Kill/cross-NPC replies can use header NPC0.
+Process each notified NPC, retain the native six-cell range and existing
+death/trade/beta gates, and open its original conversation when appropriate.
+
+Keep every server-issued offer by normalized NPC identity, consume accepted
+offers after durable success, and preserve revision/nonce/range checks. Cache
+quest index/level/sequence with the native service step. Restore complete
+conversation state on a failed branch instead of leaving a changed sequence,
+task or choice behind.
+
+The focused native Shambala/Amar quest21 HUD check passes, including closed
+activation and distant/dead/excluded/malformed notification handling. The
+authority check passes unsolicited rejection, rewards, replay and exact saved
+reopening. These component checks do not complete the selected quest journeys.
+Deploy matching Release binaries; all11 native worlds and the admin stub are
+ready. Publish signed patch **1793933681** and the existing-server update.
+Evidence: `D:\Tantra-Beta\Expansion-20261106\quest-notifications`.
+
+## 6 November 2026: original later-map resources and compact meshes
+
+Stage98 missing original files for eight later map families from the supplied
+Global client. Keep HPKs packed, omit297 identical loose files already covered
+by their exact sibling archives, and preserve existing files. Skill definitions
+and skill FX remain K3. No source dataset or workbook changes.
+
+Fix type3 TMB support: WORD indices/material counts and interleaved vertices,
+as shown by the original Forge/Ruin meshes. Retain unused empty object-table
+rows and the optional moonfile=0 setting. Forge22 and Marana31/32 now pass full
+resource preparation; Vedi25 also passes with its staged original resources.
+Record the remaining missing Mudha texture and invalid original texture names
+in Ruin/Kathana4/Kathana4Cave without substitutions. GPU/authority/travel gates
+for these later zones remain open.
+
+Match CNPCGenerator's acceptance of zero generator sections on client/server.
+The server parser and Marana31/32 population preflights pass. Correct an
+unnecessary expected-handle assertion in the first check; retain both logs.
+Deploy matching Release binaries during zero-player maintenance; all11 native
+worlds and the admin stub return ready. Publish client patch **1793931717** and
+the existing-server update. Zone admission remains unchanged. Evidence:
+`D:\Tantra-Beta\Expansion-20261106\ordinary-map-assets`.
+
+## 6 November 2026: native K3 skill phases
+
+Correct two source differences: nearby-player CAST animations must loop, and
+ordinary attack READY FX must play once. Active-buff READY FX retain their
+original loop. Owner and peers now share skill animation playback; CAST
+repeats the authored clip at its native speed rather than stretching one cycle
+over the whole casting time. READY and ACTIVATE remain once-only animations.
+
+One Release build and one focused D3D11 check pass: six male/female animation
+phases, repeated native-speed CAST cycles, and actual K3 READY/CAST/ACTIVATE FX
+lifecycles for skills3306/3159. No account, server or workbook is changed.
+Stage the Release client and publish signed patch **1793930289**. This component check
+does not replace live multiplayer skill acceptance or complete every family.
+Evidence: `D:\Tantra-Beta\Expansion-20261106\k3-skill-phases`.
+
+## 6 November 2026: Jina-region travel and native camera collision
+
+Two Release clients pass the original Zone07/08, Zone08/09 and Zone08/12
+paid/free portal journeys, movement, cross-map party/chat, durable saves and
+fresh-process logins. Keep the authored fees and country-specific map music.
+The Tomb check now reads the same Philippines country setting as the client;
+its earlier music failure was an incorrect probe expectation.
+
+Use Obj.TXL's camera-collision flag and actual placed mesh triangles, matching
+the original camera code. Whole-object bounding boxes no longer retract the
+camera inside a character merely because a doorway's box covers empty space.
+The focused doorway/pillar check and corrected Zone09 arrival capture pass.
+Zone12 travel passes, but its default interior camera view is still obstructed;
+services, combat and full graphical parity remain open.
+
+Stage the matching Release client and publish signed patch **1793929451**. The normal
+server binaries, native datasets, accounts and canonical workbooks are unchanged
+by this checkpoint. Keep K3 as the skill/FX source and **Global Tantra** as the
+game name. Evidence: `D:\Tantra-Beta\Expansion-20261106\jina-region-travel`.
+
+## 6 November 2026: one online monster projectile per shot
+
+The server now tags impacts whose projectile has already flown. Preserve the
+native critical/dodge value in that hit word. The BGFX client consumes the
+authoritative follow/impact handoff without starting another local monster
+flight after damage arrives. Offline monster flights retain their original
+path. The original reference is HTAttackManager's FOLLOW then IMPACT sequence.
+
+The focused skill3306 authority check passes. A real D3D11 K3 monster2004 /
+skill41400 capture shows one follow and one impact with no delayed duplicate;
+depth and scene cleanup pass. These are component checks, not a new two-client
+session or acceptance of every skill family.
+
+Build/stage matching Release binaries and publish signed patch **1793926490**.
+All11 native worlds and the separate admin stub are ready. K3 resources and
+canonical workbooks are unchanged. The full six-part goal remains active.
+Evidence: `D:\Tantra-Beta\Expansion-20261106\k3-projectile-handoff`.
+
+## 6 November 2026: Global Tantra and K3 skills
+
+Use **Global Tantra** for the game/launcher name. K3 now supplies PC and monster
+skill definitions, PC skill FX and their animation IDs in the canonical XLSX
+workbooks. Preserve unrelated workbook parts and Global gameplay data. Stage
+the exact K3 FX packs, keep HPKs packed, and generate matching client/server
+parameter files and runtime support through Data Tools.
+
+Fix the timing exporter that previously read only Mandara1st monster skills.
+The authority now selects markers and projectile bindings by current map.
+Build/stage Release client/server and publish signed patch **1793925488**.
+Eleven native worlds and the separate admin stub are ready; Zone06 generates
+boss2072. The ordinary native combat/reward/respawn/resurrection check passes.
+The separate boss encounter check still hits a native casting-state restriction
+and remains open.
+
+The shared K3 beta policy enables214 skill rule paths. A preparation audit of
+10,836 binding combinations prepares615 graphs, records144 missing authored
+resources and finds no unsupported graph types. This is not full graphical or
+animation acceptance. Record missing resources and move on as requested.
+See [source policy](docs/K3_SKILL_SOURCES.md) and the active implementation plan.
+
+## 6 November 2026: live disconnect and fresh-login recovery
+
+Two Release clients pass an actual interruption of one private game stream.
+The native dialog appears after the old player model, FX, audio and channel
+are released. Tantra.exe performs the real restart through INTRO; the fresh
+login receives its authoritative owner snapshot and preserves the saved
+inventory split. The peer observes offline/online presence and cancellation of
+the unconfirmed trade; both inventories remain correct. Party and map audio
+return. Normal profiles/client resources remain unchanged, and the normal
+server is not stopped.
+
+Clear cached refinement quotes and pending commits on disconnect. Publish
+signed patch **1793923029**, including clearer connection-error wording.
+The successful graphical build precedes that five-string wording-only change;
+retain both hashes and avoid repeating the passed journey. Other combat,
+quest, graphics and zone work keeps the full six-part goal open. See
+[checkpoint and evidence](docs/CLIENT_FEATURE_EXPANSION.md).
+
+## 6 November 2026: Jina region authority and map-specific NPC scripts
+
+Enable native Zones07 (Jina Village),08 (Pamir Plains),09 (Village of the
+Outcast) and12 (Entrance Hall of Emperor's Tomb) on the configured server.
+All eleven native worlds, including Zone01 channel2, report entry/listener
+readiness. Preserve their native data and Zone08's existing WorldSettings.
+
+Load NPC conversations from each Map record, matching HTEngineHandler. Record
+and skip absent NPC models/bindings without dropping server authority. Two
+Release clients pass the original Shambala/Jina paid/free portal journey,
+movement, cross-map party/chat, durable saves and fresh saved-character logins.
+
+Fix Zone12's ten-follower group using bounded internal NPC storage; player
+parties retain their original limits. Connect native AI events to existing map
+task handlers on both tick paths, with managed transaction locks. Zone12 passes
+a full generator cycle with two processed events and none pending.
+
+Complete route-end phase-out using original remove reason3 without rewards,
+then respawn from the original template and delay. The focused four-guard
+fixture passes removal and respawn on a simulated clock, preserving its
+authored2–3 hour delay. The normal managed world also records phase-outs
+without stopping. Earlier failed attempts remain retained separately.
+
+Publish signed client patch **1793919494** and the matching server update.
+Zone08/09/12 graphical routes, services and broader combat remain open, along
+with the rest of the six-part goal. See
+[checkpoint and evidence](docs/CLIENT_FEATURE_EXPANSION.md).
+
+## 6 November 2026: native quest notifications and completion FX
+
+Restore the original quest-dialog mapping to English HTMessage1053–1057 and
+Quest history type60. Remove duplicate generic server notices. Flash the existing
+Quest-button images on new history and clear the notification when read. Play
+original completion FX1010025 once on a completed transition; saved/repeated
+history stays quiet. The Release UI/message and isolated real GPU FX checks pass.
+
+The selected Shambala quest21 chain now passes with the actual beta gate enabled,
+including accept/decline,30+15 kills, once-only rewards and native next unlock.
+Three material exchanges, party outcomes, replay protection and saved reopening
+also pass. These remain bounded checks; other selected graphical journeys stay
+open. Deploy matching Release binaries and signed patch **1793917740**. All seven
+native worlds are ready; no schema or existing player data edits. The full
+six-part goal remains active. See
+[checkpoint and evidence](docs/CLIENT_FEATURE_EXPANSION.md).
+
+## 6 November 2026: authoritative active-effect presentation
+
+Add read-only snapshots of native active-effect IDs/start/expiry slots for the
+owner, peers and monsters. Send current slots on visibility entry/retry and
+changed or empty replacements on removal; retain them through NPC spawn,
+summoning, replacement and movement. The owner receives its snapshot even on a
+shared cell. State FX now retire when the authority removes/replaces their
+native effect. Preserve initial monster affection masks and clear cached
+snapshots on disconnect.
+
+Focused Release server Actors delivery and controlled TCP client-reader checks
+pass. Deploy matching binaries during a zero-player controlled restart; all
+seven native worlds are ready. Stage the client and publish signed patch
+**1793916635**. No schema or existing player data edits. The actual
+multiplayer buff cast/cancellation rendering and forced-disconnect journey
+remain separate acceptance work. The complete six-part goal remains active.
+See [checkpoint and evidence](docs/CLIENT_FEATURE_EXPANSION.md).
+
+## 6 November 2026: native radial skill particles
+
+Implement original particle mode3 for skill3335 impact bindings1001996–1001998.
+Preserve its two signed draws, ordered unnormalized plane basis and outward
+velocity. Focused Release math passes; the scoped renderer samples153 frames
+without runtime failures. Each graph still lacks model2010051 at node4, so its
+complete visual remains unaccepted. Record that missing binding and move on.
+The unrelated full particle fixture stops at optional INTRO fire resources;
+the radial-only result is the accepted math check.
+
+Build and stage the Release client and publish signed patch **1793915504**.
+Use `Tantra.exe` to update. Canonical XLSX and K3 UI data remain unchanged.
+The full six-part goal remains active. See
+[implementation and evidence](docs/CLIENT_FEATURE_EXPANSION.md).
+
+## 6 November 2026: player labels, private target HP and Zone06
+
+Match the original other-player name anchor (current model height plus3) and
+hide numeric HP when selecting another player, retaining their health bar.
+The live two-client capture accepts both changes. Publish matching Release
+client patch **1793914743**; use `Tantra.exe` to update the installed client.
+
+Deploy matching Release server binaries and enable native Zone06. Accept the
+original paid/free Zone05–06 portals, movement, environment, cross-map party/chat
+and saved positions/currency. Fix the modern roster-slot/Zone06 collision and
+accept fresh login into the saved Zone06 character in a focused second stage.
+These are two-stage results; boss2072 combat remains open. Shared beta admission
+now covers Zones01–06. The normal listener passes verified TLS at172.16.90.12:3006;
+the firewall readback still lacks3006 and the updated administrator helper has
+been requested again. Another PC's access is unverified.
+
+Load coherent configured native IDs1–50 generically, preserving special Zone.Type
+rules. Stage22 additional original datasets as disabled server profiles without
+repeating their resource audits. Missing assets and identity conflicts remain
+recorded. The six-part goal and named public-beta gates remain open.
+
+See [checkpoint and evidence](docs/CLIENT_FEATURE_EXPANSION.md).
+
+## 6 November 2026: world detail and atomic party quest saves
+
+Apply the native HTMapSystem three-dimensional camera-distance detail bands to
+world NPCs, monsters and peer PCs/attachments. Hide TooFar models and their
+labels without recreating actors or restarting animation clocks. The focused
+Release GPU check passes on actor2008's four authored detail meshes, including
+vertical distance and hide/return. Stage the matching client and signed patch
+release **1793910740**. The focused native dash phase-bounds check also passes.
+
+Party quest rewards now save all affected owned snapshots and a replay receipt
+in one SQL transaction. The focused Release store check passes forced
+second-member rollback, retry, replay, ownership/revision rejection and reopening.
+The matching server update is prepared externally; the running deployment and
+production database are unchanged. Remaining selected quest journeys still need
+live acceptance after a controlled update. Preserve the user-provided zone names
+and conflicting later-version portal IDs in the reconciled reference.
+
+The complete six-part goal remains active. See
+[checkpoint and evidence](docs/CLIENT_FEATURE_EXPANSION.md) and
+[zone/portal reference](../_server_cpp/docs/ZONE_PORTAL_REFERENCE.md).
+
+## 6 November 2026: first combat-presentation and zone-expansion batch
+
+Release peer presentation now retains native affection masks from appearance and
+status packets, advances READY/CAST/ACTIVATE with body/apron bindings, presents
+peer skill/weapon effects, and uses distinct attack sound owners and weapon
+trails. Current render-body resolution keeps attachments and hit feedback valid
+after equipment replacement. The focused real-renderer cast/buff lifecycle check
+passes, including graph age preservation across replacement. This is component
+acceptance; fresh multiplayer skill/FX visual acceptance remains open.
+
+The selected FX table referenced absent `PFX_MSP2`. Append the exact authored
+Global graph and extend the original texture/model/animation HPKs with absent
+reference entries. Every existing entry stays byte-identical; conflicting
+reference models preserve the selected client's existing payloads. No HPK is
+extracted. The graph's wing model 2000350 now uses the dedicated Wing attachment.
+Stage the matching Release client and signed patch release **1793906672**.
+
+MandaraCave4th's resources and actor bindings pass. Audit the other 29 original
+Global zone folders and create disabled development profiles for coherent new
+datasets. Keep Zone08's existing WorldSettings drift and source identity errors
+(Zone19 declares 18; Zone33 declares 45) explicit. New zones are not yet admitted
+by the shared beta policy. The complete six-part goal remains active.
+
+See [checkpoint and evidence](docs/CLIENT_FEATURE_EXPANSION.md).
+
+## 6 November 2026: tester installation and beta operations
+
+The external tester kit and eight individual ordinary accounts are ready.
+Focused entry/replay protection, isolated database restore, patch rollback,
+crash capture and local health alerts pass. A 16-client mixed TLS workload
+completes with 480 committed saves and four saved reconnects; no client,
+checkpoint or release failures remain after the bounded snapshot-conflict retry
+fix. Worst sampled tick p95 is 63.119 ms against a 50 ms target, so public player
+capacity is not approved. The separate-PC gate remains open by the user's choice;
+current connectivity is LAN only. No client rebuild is required for these server
+and external tool changes. See the
+[runbook](../_server_cpp/docs/BETA_OPERATIONS_20261106.md).
+
 ## 6 November 2026: English combat chat and refreshed beta packages
 
 - [x] Verify Global SpeechComment.szPhilippine: all 348 entries are untranslated placeholders. Suppress unavailable utterances before broadcast, including named forms, while preserving native AI timing/RNG and real dialogue.

@@ -1,15 +1,35 @@
 # Frozen beta content
 
-Revision `beta-20261105-1`. Both C++ authority and BGFX UI compile the same
+Revision `beta-20261107-profile-zones-z34`. Both C++ authority and BGFX UI compile the same
 `_shared_cpp/beta/BetaContent.h`; `Content.json` is the exact readable inventory.
-Unknown IDs are rejected rather than enabled implicitly. Native level/class,
+Zone eligibility covers native IDs1..34; the compiled verified inventory is not
+an admission allowlist. Actual availability requires an enabled
+`cpp-native-world` profile, a validated native dataset and a live accepting
+authority lease. Disabled profiles stay unavailable. Native level/class,
 weapon, item, target and resource requirements still apply. Enabled rule paths
 are distinct from individual graphical acceptance.
 
-Maps: Zone01 Mandara1st, Zone02 Mandara2nd, Zone03 MandaraCave, Zone04 MandaraCave2nd, Zone05 MandaraCave3rd.
+Verified journeys, not an admission allowlist: Zone01 Mandara1st, Zone02 Mandara2nd, Zone03 MandaraCave, Zone04 MandaraCave2nd, Zone05 MandaraCave3rd, Zone06 MandaraCave4th, Zone07 Jina1st, Zone08 Jina2nd, Zone09 Jina3rd, Zone12 Jina7thCave.
 
-Story flags: 0, 1, 2, 3, 4, 5, 6, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 31, 32, 33, 35. Flag0 is the original tutorial choice; flags1-5 are the tutorials,6 is the first class,11-21 the selected Mandara story progression,31/32/33/35 the implemented second-class rule paths. The unfinished quiz34 is excluded.
+Story flags: 0, 1, 2, 3, 4, 5, 6, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 31, 32, 33, 34, 35. Flag0 is the original tutorial choice; flags1-5 are the tutorials,6 is the first class,11-25 the selected Mandara/Shambala story progression,31/32/33/34/35 the implemented second-class rule paths. Quest34 uses the original twenty-question trial, with authority-checked answers and the twenty-Ananga retry.
 Task IDs: 10006, 10013, 10057.
+
+The7 November addition admits only original quests22–25: native letter
+handoffs,30 Heruka2014 kills and20 Ananga2016 kills earning proof8042.
+The [quest guide](GUILD_QUESTS_ZONE05.md)
+records exact routes/rewards and the accepted native-authority continuation
+across preserved checkpoints. Completed22/23 and18 earned Heruka kills are
+retained; the final run passes12 remaining Heruka plus20 Ananga kills, earns8042,
+consumes both quest25 proofs and saves exact rewards with replay rejection.
+The inherited quest21 checkpoint has a seeded historical quest20 prerequisite
+and QA attributes. The final duplicate uses explicit QA Heart2000 after native
+death, retaining its level49/penalty; new22–25 flags, counters, materials and
+rewards are not seeded. This exposed and verified a source-backed recovery fix:
+initialize revived entries as living before restoring half HP/TP, including the
+CHAR_INIT state, without a harness Stand action. This does not establish a
+fresh11–25 journey, balance, live TCP or graphical acceptance. Quest26, other
+maps and all existing skill policy stay unchanged. See the
+[matching batch record](../../_remake_bgfx/docs/evidence/skill-audio-tomb-story-20261107.json).
 
 Services:
 
@@ -17,7 +37,7 @@ Services:
 - inventory/equipment/stack/split/pickup
 - ordinary attacks, enabled skills, death/revival and recovery
 - merchant buying/selling, repair and warehouse
-- save points and ordinary portals within Zones01-05
+- save points and source portals between enabled registered native zones
 - altar main/sub refining
 - priest selection/offerings and source class promotions
 - frozen story/task quests
@@ -27,9 +47,9 @@ Services:
 
 Unavailable:
 
-- Zones06 onward and competitive admission
+- Disabled/unregistered zone profiles and unfinished competitive services
 - PvP, duels, siege, guild alliances and event betting
-- premium class reset and the unfinished second-class quiz (quest34)
+- premium class reset
 - live billing/provider payments
 - story/task IDs absent from this inventory
 
@@ -51,7 +71,7 @@ Available English names come from the original FX-PC resource catalog. Missing/i
 | 3010 | Skill 3010 | passive | Yes |  |
 | 3011 | Skill 3011 | active | Yes |  |
 | 3012 | Skill 3012 | active | Yes |  |
-| 3013 | Skill 3013 | active | No | instant recipient world service |
+| 3013 | Skill 3013 | active | Yes |  |
 | 3014 | Skill 3014 | active | Yes |  |
 | 3015 | Skill 3015 | passive | Yes |  |
 | 3016 | Skill 3016 | passive | Yes |  |
@@ -65,7 +85,7 @@ Available English names come from the original FX-PC resource catalog. Missing/i
 | 3026 | Skill 3026 | active | Yes |  |
 | 3027 | Skill 3027 | active | Yes |  |
 | 3028 | Skill 3028 | active | Yes |  |
-| 3029 | Skill 3029 | active | No | instant recipient world service |
+| 3029 | Skill 3029 | active | Yes |  |
 | 3030 | Skill 3030 | active | Yes |  |
 | 3031 | Skill 3031 | active | Yes |  |
 | 3032 | Skill 3032 | active | Yes |  |
@@ -107,7 +127,7 @@ Available English names come from the original FX-PC resource catalog. Missing/i
 | 3112 | Skill 3112 | active | Yes |  |
 | 3113 | Skill 3113 | active | Yes |  |
 | 3114 | Skill 3114 | active | Yes |  |
-| 3115 | Skill 3115 | active | No | unfinished start action |
+| 3115 | Skill 3115 | active | Yes |  |
 | 3116 | Skill 3116 | active | Yes |  |
 | 3117 | Skill 3117 | active | Yes |  |
 | 3118 | Skill 3118 | active | Yes |  |
@@ -125,8 +145,8 @@ Available English names come from the original FX-PC resource catalog. Missing/i
 | 3142 | Skill 3142 | active | Yes |  |
 | 3143 | Skill 3143 | active | Yes |  |
 | 3144 | Skill 3144 | active | Yes |  |
-| 3145 | Skill 3145 | active | No | authored attack binding absent |
-| 3146 | Skill 3146 | active | No | authored attack binding absent |
+| 3145 | Skill 3145 | active | Yes |  |
+| 3146 | Skill 3146 | active | Yes |  |
 | 3159 | Skill 3159 | active | Yes |  |
 | 3160 | Skill 3160 | active | Yes |  |
 | 3161 | Skill 3161 | active | Yes |  |
@@ -156,7 +176,7 @@ Available English names come from the original FX-PC resource catalog. Missing/i
 | 3210 | Skill 3210 | active | Yes |  |
 | 3211 | Skill 3211 | active | Yes |  |
 | 3212 | Skill 3212 | active | Yes |  |
-| 3213 | Skill 3213 | active | No | instant recipient world service |
+| 3213 | Skill 3213 | active | Yes |  |
 | 3214 | Skill 3214 | active | Yes |  |
 | 3215 | Skill 3215 | active | Yes |  |
 | 3217 | Skill 3217 | active | Yes |  |
@@ -187,7 +207,7 @@ Available English names come from the original FX-PC resource catalog. Missing/i
 | 3260 | Skill 3260 | active | Yes |  |
 | 3261 | Skill 3261 | active | Yes |  |
 | 3262 | Skill 3262 | active | Yes |  |
-| 3263 | Skill 3263 | active | No | instant recipient world service |
+| 3263 | Skill 3263 | active | Yes |  |
 | 3264 | Skill 3264 | active | Yes |  |
 | 3266 | Skill 3266 | passive | Yes |  |
 | 3267 | Skill 3267 | passive | Yes |  |
@@ -216,7 +236,7 @@ Available English names come from the original FX-PC resource catalog. Missing/i
 | 3310 | Skill 3310 | passive | Yes |  |
 | 3311 | Skill 3311 | passive | Yes |  |
 | 3312 | Skill 3312 | active | Yes |  |
-| 3313 | Skill 3313 | active | No | authored attack binding absent |
+| 3313 | Skill 3313 | active | Yes |  |
 | 3314 | Skill 3314 | active | Yes |  |
 | 3315 | Skill 3315 | active | Yes |  |
 | 3316 | Skill 3316 | active | Yes |  |
@@ -233,17 +253,17 @@ Available English names come from the original FX-PC resource catalog. Missing/i
 | 3328 | Skill 3328 | active | Yes |  |
 | 3329 | Skill 3329 | active | Yes |  |
 | 3330 | Skill 3330 | active | Yes |  |
-| 3331 | Skill 3331 | active | No | unfinished start action |
-| 3332 | Skill 3332 | active | No | unfinished start action |
+| 3331 | Skill 3331 | active | Yes |  |
+| 3332 | Skill 3332 | active | Yes |  |
 | 3333 | Skill 3333 | active | Yes |  |
 | 3334 | Skill 3334 | active | Yes |  |
 | 3335 | Skill 3335 | active | Yes |  |
 | 3336 | Skill 3336 | passive | Yes |  |
-| 3337 | Skill 3337 | active | No | instant recipient world service |
-| 3338 | Skill 3338 | active | No | authored attack binding absent |
+| 3337 | Skill 3337 | active | Yes |  |
+| 3338 | Skill 3338 | active | Yes |  |
 | 3341 | Skill 3341 | active | Yes |  |
 | 3343 | Skill 3343 | active | Yes |  |
-| 3357 | Skill 3357 | active | No | instant recipient world service |
+| 3357 | Skill 3357 | active | Yes |  |
 | 3359 | Skill 3359 | active | Yes |  |
 | 3360 | Skill 3360 | passive | Yes |  |
 | 3361 | Skill 3361 | active | Yes |  |

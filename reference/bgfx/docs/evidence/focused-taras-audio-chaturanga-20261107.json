@@ -1,0 +1,185 @@
+{
+  "date": "2026-11-07",
+  "goal_complete": true,
+  "requirements": {
+    "beta_skill_family": {
+      "skill": 3121,
+      "name": "Taras",
+      "source": "K3",
+      "result": {
+        "passed": true,
+        "checks": 1610,
+        "skill": 3121,
+        "persistent_fx": 1010053,
+        "persistent_loop": true,
+        "equipment_rebind": true,
+        "removal_death_expiry": true
+      },
+      "bindings": {
+        "skill": 3121,
+        "phase_mask": 5,
+        "sound_binding": 0,
+        "observed_voices": 1,
+        "projectile": "source_not_applicable",
+        "weapon_trail": "source_not_applicable"
+      },
+      "ranks_resolved": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "distinct_fx_bands_prepared": [
+        1,
+        6,
+        9
+      ],
+      "source_phases_rendered": [
+        "READY",
+        "ACTIVATE"
+      ],
+      "native_zero_cast_phase_retained": true,
+      "visual_review": [
+        "taras-02/taras-150.png",
+        "taras-02/taras-turned.png"
+      ],
+      "prior_all_tribe_marker_checks_reused": true
+    },
+    "graphics_audio_issue": {
+      "issue": "Live TFX looping sound owner lost on miniaudio service reset",
+      "implemented": "HtSampleAudioService.ensureLoop3D, used only for looping TFX sound nodes",
+      "backend_result": "LOOP_RECOVERY passed reset=restored duplicate=none spatial=preserved muted=preserved owner_stop=verified",
+      "checked": [
+        "one owner voice",
+        "spatial position update",
+        "service shutdown/reset recovery",
+        "muted category gain retained",
+        "no duplicate voice",
+        "owner stop"
+      ],
+      "graph_wiring": "Source inspection: graph age and particles are untouched, finite cue branch remains once-only",
+      "actual_environmental_loop_fixture": "No looping sound node in selected Mandara catalog; backend check uses original packed MONSound_K1/tiger_att.wav without extraction"
+    },
+    "chaturanga": {
+      "zone": 11,
+      "startup_and_trap_contracts": {
+        "accepted": true,
+        "evidence_log": "D:\\Tantra-Beta\\Focused-20261107\\taras-chaturanga\\logs\\goal-chaturanga-check-04.log",
+        "basis": "The full command completed the preceding startup, king-room and trap assertions, then failed at the subsequent portal reservation assertion. Preserve that failed overall run; reuse its passed preceding contracts.",
+        "source_check": "_server_cpp/tests/player_chaturanga.inc",
+        "startup": [
+          "God zone",
+          "four safety flags cleared only at runtime",
+          "source map unchanged"
+        ],
+        "king_room": [
+          "queen1000 and king1001 reserved handles",
+          "native event20",
+          "event22 removes both kings without kill rewards",
+          "half-open room return through saved-zone ownership",
+          "exact saved reopening"
+        ],
+        "trap": [
+          "original event100 cell movement dispatch",
+          "original trap2936",
+          "owner Action6 with legacy target expression",
+          "native2020 death",
+          "exact saved death and original logout return to saved zone"
+        ]
+      },
+      "travel_result": {
+        "contracts": [
+          {
+            "case": "gate_travel_saved_return",
+            "fixture": "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-player-damage-a46daf89b9c42ecd1f0320fc2c5fa83550880fa18133ff62b56f37cd7b61bba3",
+            "missing_quote_rejected": true,
+            "native_route": [
+              177,
+              174,
+              146
+            ],
+            "passed": true,
+            "private_war_gate": true,
+            "replay_cached": true,
+            "saved_reopen_exact": true,
+            "wrong_god_rejected": true,
+            "z11_logout_returns_to_saved_zone": true,
+            "zones": [
+              10,
+              11,
+              20
+            ]
+          }
+        ],
+        "graphical_acceptance": false,
+        "live_tcp": false,
+        "passed": true,
+        "source_tcm_unchanged": true,
+        "zone": 11
+      },
+      "original_npc_2946_click": {
+        "client_implemented": true,
+        "same_god_required": true,
+        "destinations": {
+          "Brahma": 173,
+          "Vishnu": 175,
+          "Siva": 174
+        },
+        "server_approval_bound_to_live_actor": true
+      },
+      "admission": "Enabled online native worker profile overrides the old closed11/20 default; offline default remains unchanged",
+      "source_gate_availability": "Original High Kruma war/event authority owns gate creation. Private check supplies the original Siva gate; no unconditional entrance is invented.",
+      "resources": [
+        "NATIVE_MAP_ASSETS zone=11 map=40011 terrain=513x513 sections=16 placements=2875 models=102 referenced_payloads=262 missing_source_textures=2 partial_visual_coverage=1 skipped_material_groups=0 regular_pop_precedence=retained",
+        "NATIVE_MAP_MISSING_SOURCE_TEXTURE c2_jina6_TGA.dds",
+        "NATIVE_MAP_MISSING_SOURCE_TEXTURE c1_jina6_TGA.dds"
+      ],
+      "missing_source_textures": [
+        "c2_jina6_TGA.dds",
+        "c1_jina6_TGA.dds"
+      ],
+      "full_scene_graphical_journey": false
+    }
+  },
+  "delivery": {
+    "patch_version": 1794044192,
+    "signed": true,
+    "client": {
+      "path": "C:\\_GitHub\\TantraSrc\\_client_bgfx\\ZFLauncher.exe",
+      "sha256": "5de2269c47dec1cf167eca21e0508a2666077540bcc131495b48877b253a1978"
+    },
+    "server_staging": [
+      {
+        "path": "C:\\_GitHub\\TantraSrc\\_server_cpp\\bin\\TantraZone.exe",
+        "sha256": "ec30852193e93156bdcbfde9d87bca0c21dfee29c7ff113b4eec3b3b2c8b3d9e",
+        "previous": "D:\\Tantra-Beta\\Focused-20261107\\taras-chaturanga\\staging\\_server_cpp\\TantraZone.exe"
+      },
+      {
+        "path": "C:\\_GitHub\\TantraSrc\\_server_final\\bin\\TantraZone.exe",
+        "sha256": "ec30852193e93156bdcbfde9d87bca0c21dfee29c7ff113b4eec3b3b2c8b3d9e",
+        "previous": "D:\\Tantra-Beta\\Focused-20261107\\taras-chaturanga\\staging\\_server_final\\TantraZone.exe"
+      },
+      {
+        "path": "C:\\_GitHub\\TantraSrc\\_server_cpp\\zones\\Zone11\\zone.toml",
+        "sha256": "c2261646adb4703fde69460fe35d97e664891962eec4756464c373573e985f19",
+        "previous": "D:\\Tantra-Beta\\Focused-20261107\\taras-chaturanga\\staging\\_server_cpp\\Zone11-zone.toml"
+      },
+      {
+        "path": "C:\\_GitHub\\TantraSrc\\_server_final\\zones\\Zone11\\zone.toml",
+        "sha256": "3b4e84886670e9c01cba7cd39b080d8e9cc4c44a95400fe1d55a3089a40b47f0",
+        "previous": "D:\\Tantra-Beta\\Focused-20261107\\taras-chaturanga\\staging\\_server_final\\Zone11-zone.toml"
+      }
+    ],
+    "normal_workers_restarted": false,
+    "normal_player_data_modified": false,
+    "debug_builds": false,
+    "repeated_accepted_two_client_journeys": false
+  },
+  "external_evidence": "D:\\Tantra-Beta\\Focused-20261107\\taras-chaturanga"
+}
