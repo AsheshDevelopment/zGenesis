@@ -1,8 +1,18 @@
 # Local beta journey, native UI and data tools — 5 November 2026
 
-**Current download:** [6 November client and server update](BETA_REFRESH_20261106.md)
-uses the latest message/movement fixes, two-file signed connections and root
-Patcher.dat. Earlier ZIP identities below are historical.
+**Current download - 7 November 2026:**
+`D:\Tantra-Beta\2026-11-07\Global-Tantra-Z11-Frosana-Nara27.zip`
+(799786071 bytes; SHA-256
+`6cfdabdd3edde295727d79dcca381b10acaf7342ca21116e2058752b0a12c9a0`).
+Includes the latest Release client/runtime, signed connection files, root
+Patcher.dat and patch1794056066. Matching91-file existing-server update:
+`Global-Tantra-Z11-Frosana-Nara27-Server-Update.zip` in the same folder,
+SHA-256 `9fb54d889f1ab2270458a76e8aab569a4fd12d1cdb2fbe097957e4c2d2bf101a`.
+The archive's executables/connection files/Patcher.dat match current staged files;
+native signed-profile and modified-file rejection checks pass. LAN172.16.90.12;
+no separate-PC or public-beta acceptance. Offline Start-Offline.cmd is retained.
+See [delivery evidence](../../_remake_bgfx/docs/evidence/normal-z11-frosana-nara27-20261107.json).
+Earlier ZIP identities below are historical.
 
 The two-client fresh-character journey and isolated local installation pass.
 This is a downloadable local-server candidate, with public beta acceptance
@@ -16,8 +26,8 @@ The staged client now starts through `Tantra.exe -> ZFLauncher.exe`; the separat
 Update.exe is retired. Signed native-resource patches, original launcher skin,
 shared graphics/audio settings and preference-preserving File Check pass focused
 Release checks. Owner speed, continuous routing and replica interpolation also
-have focused source/component evidence. These changes are newer than the last
-beta ZIP; that ZIP is not the final public download. See
+have focused source/component evidence. The current download above includes these changes;
+a public profile and separate-PC acceptance remain open. See
 [launcher implementation and evidence](../../_remake_bgfx/docs/LAUNCHER_PATCHING.md).
 
 Next release gates, in order:

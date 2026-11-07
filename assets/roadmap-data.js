@@ -1056,7 +1056,7 @@ window.TANTRA_ROADMAP = {
       "launcher": "ZFLauncher.exe",
       "stage": "Runnable offline development client",
       "lead": "The same native Tantra foundation, rebuilt through the bgfx renderer.",
-      "description": "Source-based bgfx/SDL3/miniaudio client and C++ shared MMO services. Named task coverage is 173/254 (68%); 6/10 phase gates. Latest focused delivery covers K3 Taras, audio recovery and native Z11 authority/travel. Normal war entrance and full Z11 graphical acceptance remain separate.",
+      "description": "Source-based bgfx/SDL3/miniaudio client and C++ shared MMO services. Named task coverage is 173/254 (68%); 6/10 phase gates. Latest delivery covers the normal Chaturanga contribution entrance, five K3 Frosana ranks, Nara27 and matching beta downloads. Full-game and public-release acceptance remain separate.",
       "plan": "reference/bgfx/IMPLEMENTATION_PLAN.md",
       "progress": "reference/bgfx/PROGRESS.md",
       "groups": [
@@ -2782,6 +2782,7 @@ window.TANTRA_ROADMAP = {
       ],
       "foundations": [
         "K3 Taras and audio reset recovery; native Z11 startup/king-room/trap controls and private saved portal handoff",
+        "Native contribution-owned Chaturanga entrance; five K3 Frosana ranks; Nara27 dialogue/rewards/saving; matching signed beta download",
         "Live two-client signed TLS/MariaDB journey: movement, combat, automatic party currency, SDL exact-instance trade and SQL-verified fresh return; current client ZIP/server update with manifest hashes",
         "Native online speed/parity decoding, collision-swept continuous owner routing and frame-by-frame monster/peer interpolation; focused Release evidence",
         "Combined original-style Tantra.exe launcher, one-use game handoff and signed recoverable LAN patches; shared game display/quality/audio settings and preference-preserving File Check",
@@ -2827,17 +2828,22 @@ window.TANTRA_ROADMAP = {
         "Historical pre-C08 baseline: 7,200 measured native scene frames, CPU/GPU/loading timings and hardware/input hashes"
       ],
       "next": [
-        "Verify and finish normal war-triggered Z11 gate spawning, god ownership, removal and actual client UI entry",
-        "Complete one K3 projectile skill family through animation, flight, impact timing and audio",
-        "Finish one remaining original quest chain through dialogue, objectives, rewards and saved progress",
-        "Refresh the downloadable beta package after the implementation batch",
-        "Retain separate-PC/public connectivity and release-readiness gates"
+        "Extend original quest progression beyond the accepted Nara27 exchange",
+        "Complete the next K3 weapon/projectile or monster family without repeating accepted checks",
+        "Finish special-zone gameplay beyond normal Z11 entry and retain recorded missing assets",
+        "Implement separately scoped deferred settings/gameplay rules when prioritised",
+        "Retain separate-PC, public connectivity and release-readiness gates"
       ],
       "changes": [
         {
           "date": "2026-11-07",
+          "title": "Normal Chaturanga entrance, Frosana and Nara27",
+          "text": "Verify the native gate trigger is contributions, not a war victory. Implement original Rupiah offering227,450 Rupiah/point,10000-point2946 spawn, god ownership and ten global32-second expiry ticks. Two ordinary QA clients fund/select the gate through SDL, reject foreign-god entry, render Z11 and return to the saved village. Accept all five supplied K3 Frosana3306 ranks through production animations, pursuit flight, authored impact/damage, original sound and cleanup with no unresolved FX. Enable Nara27 native dialogue/material exchange,10000-Rupiah cost,6222 reward,50000 Prana, next flag28, replay rejection and partial/final saving. Resume only its unfinished UI leg; prerequisites/materials and QA level/Chakra remain seeded. Stage matching Release client/Zone/Service, publish signed patch1794056066 and generate a5312-file client ZIP plus91-file existing-server update; native signatures/tamper rejection and archived current binaries pass. Two missing Z11 textures and general item offerings remain separate; no public-host, separate-PC, balance, complete-game or new benchmark acceptance."
+        },
+        {
+          "date": "2026-11-07",
           "title": "K3 Taras, audio recovery and native Chaturanga",
-          "text": "Complete the focused Taras3121 K3 animation/wing lifecycle and ten rank bindings; projectiles/trails are not applicable to this self buff. Restore TFX loop voices after miniaudio reset without resetting graphs or replaying finite cues. Implement native Z11 God-zone startup, reserved kings, room return, trap-cell death and saved-zone logout. Private authority checks accept177/174/146 travel, live same-god gate approval and exact saved return; original packed Z11 assets load with two missing textures recorded. Normal war-triggered2946 spawning and real client entrance remain the next gate. Stage the client/zone Release binaries and signed patch1794044192. Retain accepted NPC and Quest26 work; no new full-scene Z11, public-host, separate-PC or benchmark acceptance."
+          "text": "Complete the focused Taras3121 K3 animation/wing lifecycle and ten rank bindings; projectiles/trails are not applicable to this self buff. Restore TFX loop voices after miniaudio reset without resetting graphs or replaying finite cues. Implement native Z11 God-zone startup, reserved kings, room return, trap-cell death and saved-zone logout. Private authority checks accept177/174/146 travel, live same-god gate approval and exact saved return; original packed Z11 assets load with two missing textures recorded. At that checkpoint normal contribution-triggered2946 spawning and real client entrance remained open. Stage the client/zone Release binaries and signed patch1794044192. Retain accepted NPC and Quest26 work; no new full-scene Z11, public-host, separate-PC or benchmark acceptance."
         },
         {
           "date": "2026-11-06",
@@ -3105,11 +3111,11 @@ window.TANTRA_ROADMAP = {
     },
     "bgfx_plan": {
       "path": "reference/bgfx/IMPLEMENTATION_PLAN.md",
-      "sha256": "0f0a1d539ca444803ed13e4bb42d2e85bf6564549c49d4c9d7793d2bd63ff90f"
+      "sha256": "a4107dfd9557896f53610f9b0b347f5219f6297bd972ba3425cc3f223b56010b"
     },
     "bgfx_progress": {
       "path": "reference/bgfx/PROGRESS.md",
-      "sha256": "cb0a51792b82e5b91c710fe6892bcd563707abe559c1adf33b5d6aab15f7a438"
+      "sha256": "7578f6c865b128b08cffb58573bf06dca9173e5543f2fc17cb9a99e296873001"
     },
     "bgfx_commands": {
       "path": "reference/bgfx/docs/NATIVE_COMMANDS.md",

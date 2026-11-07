@@ -11,7 +11,13 @@ are distinct from individual graphical acceptance.
 
 Verified journeys, not an admission allowlist: Zone01 Mandara1st, Zone02 Mandara2nd, Zone03 MandaraCave, Zone04 MandaraCave2nd, Zone05 MandaraCave3rd, Zone06 MandaraCave4th, Zone07 Jina1st, Zone08 Jina2nd, Zone09 Jina3rd, Zone12 Jina7thCave.
 
-Story flags: 0, 1, 2, 3, 4, 5, 6, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 31, 32, 33, 34, 35. Flag0 is the original tutorial choice; flags1-5 are the tutorials,6 is the first class,11-25 the selected Mandara/Shambala story progression,31/32/33/34/35 the implemented second-class rule paths. Quest34 uses the original twenty-question trial, with authority-checked answers and the twenty-Ananga retry.
+The current focused addition enables original Nara27 after Quest26: ten7118,
+letter8045 and10000 Rupiah exchange for6222 and50000 Prana. Native next flag28
+is retained but that later quest remains unavailable. Authority/replay/saving and
+original dialogue render pass; materials/prerequisites are seeded in QA. See
+[focused evidence](../../_remake_bgfx/docs/evidence/normal-z11-frosana-nara27-20261107.json).
+
+Story flags: 0, 1, 2, 3, 4, 5, 6, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 31, 32, 33, 34, 35. Flag0 is the original tutorial choice; flags1-5 are the tutorials,6 is the first class,11-27 the selected Mandara/Shambala story progression,31/32/33/34/35 the implemented second-class rule paths. Quest34 uses the original twenty-question trial, with authority-checked answers and the twenty-Ananga retry.
 Task IDs: 10006, 10013, 10057.
 
 The7 November addition admits only original quests22–25: native letter

@@ -1,3 +1,16 @@
+## Normal Z11 entrance, Frosana and Nara27 - 7 November 2026
+
+- [x] Publish starting checkpoint: source `6d798b2`, Tantra-B `e3f0775`.
+- [x] Native contribution gate2946: ownership, expiry and original client UI entry.
+- [x] K3 Frosana3306: all five supplied ranks, animation, flight, impact and audio.
+- [x] Nara27: dialogue/material exchange, exact rewards, replay rejection and saving.
+- [x] Stage Release client/Zone/Service and publish signed patch1794056066.
+- [x] Build the matching client beta ZIP and91-file existing-server update;
+  verify signed connections/tamper rejection and current archived binaries.
+
+See [progress and limitations](PROGRESS.md) and
+[focused evidence](docs/evidence/normal-z11-frosana-nara27-20261107.json).
+
 ## Focused Taras, audio and Chaturanga goal - 7 November 2026
 
 - [x] Taras3121: K3 READY/ACTIVATE animation, ten rank bindings and three FX
@@ -15,8 +28,8 @@
 Release client and zone server are staged; Z11 is enabled for the next server
 start. Signed client patch1794044192 is published. Reuse passed startup/trap
 assertions and rerun only the failed route after its admission correction.
-No normal workers restarted or normal player data changed. Original war/event
-rules own entrance-gate creation; the check supplies a private original Siva gate.
+No normal workers restarted or normal player data changed. At that earlier checkpoint the check supplies a private original Siva gate;
+the later normal entrance check above verifies the native contribution trigger.
 Z11 assets load with two recorded missing source textures: c2_jina6_TGA.dds and
 c1_jina6_TGA.dds. No new full-scene/two-client Z11 graphical journey is claimed.
 See [focused evidence](docs/evidence/focused-taras-audio-chaturanga-20261107.json).

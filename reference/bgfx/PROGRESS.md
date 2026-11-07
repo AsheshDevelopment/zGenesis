@@ -1,3 +1,26 @@
+## Normal Z11 entrance, Frosana and Nara27 - 7 November 2026
+
+- [x] Publish the starting checkpoint: source `6d798b2`, Tantra-B `e3f0775`.
+- [x] Implement the original contribution-triggered2946 gate, not a war-victory
+  trigger:450 Rupiah/point,10000 points, god ownership, ten32-second ticks and
+  removal. Original charity227 amount/confirmation and214 portal choice pass
+  the two-client SDL journey; the foreign god is rejected and Z11 renders.
+- [x] Complete the supplied five K3 Frosana3306 ranks: production animations,
+  moving pursuit FX, authored release/arrival damage, impact, audio and cleanup.
+  All five render with no unresolved FX; original sound plays through miniaudio.
+- [x] Enable Nara's Quest27 continuation: original dialogue, ten7118 plus8045,
+ 10000 Rupiah, reward6222 and50000 Prana, next flag28, partial/final saving and
+  replay rejection. Resume only the unfinished dialogue after accepted Z11 entry.
+- [x] Stage matching Release client/Zone/Service; publish signed patch1794056066.
+- [x] Build the matching client beta ZIP and91-file existing-server update;
+  verify signed connections/tamper rejection and current archived binaries.
+
+QA levels/Chakra, quest prerequisites and materials are seeded; this is not an
+earned-farming or balance result. General item offerings, later quests, other
+skills, two missing Z11 textures and public/separate-PC gates remain separate.
+No normal workers were restarted or normal player records changed.
+See [focused evidence](docs/evidence/normal-z11-frosana-nara27-20261107.json).
+
 ## 7 November 2026: K3 Taras, audio recovery and native Chaturanga
 
 - [x] Verify Taras3121 K3 animations, all ten rank bindings, three FX bands,
@@ -10,8 +33,8 @@
   a live server quote. Accept the private177/174/146 handoff and exact saving.
 - [x] Stage Release client/zone server, enable native Z11 profiles and publish
   signed patch1794044192. No normal data changed or normal workers restarted.
-- [ ] Verify normal war-triggered gate creation/removal and actual client entry;
-  the accepted route uses a private gate. Two source textures remain missing.
+- [x] Accept normal contribution gate creation/removal and actual client UI entry
+  in the later focused checkpoint above. Two source textures remain missing.
 
 Earlier accepted NPC handlers and Quest26 exchanges are retained. This checkpoint
 adds no complete-game, public-beta, new benchmark or separate-PC acceptance.

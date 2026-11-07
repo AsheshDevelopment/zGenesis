@@ -1,0 +1,295 @@
+{
+  "date": "2026-11-07",
+  "scope": "Normal Z11 contribution entrance, one complete supplied K3 projectile family, Nara quest27 and refreshed beta downloads",
+  "checkpoint_published": {
+    "source": "6d798b2e170f487a4af7d21b91a849fd135c81da",
+    "roadmap": "e3f0775b137c0808c8a30ed3f8e8c9b90f305ebf"
+  },
+  "original_gate_source": {
+    "handler": "Tantra/zone/server.cpp _MSG_ItemContribution",
+    "trigger": "Contributions, not a war victory",
+    "rupiah_per_point": 450,
+    "threshold": 10000,
+    "npc": 2946,
+    "lifetime": "10 global 32-second ticks",
+    "active_native_coordinates": {
+      "Brahma": [
+        934,
+        389
+      ],
+      "Vishnu": [
+        386,
+        936
+      ],
+      "Siva": [
+        203,
+        169
+      ]
+    },
+    "implemented_path": "Positive Rupiah offering through original charity227; general item offerings remain separate"
+  },
+  "normal_gate_authority": {
+    "expired_rejected": true,
+    "gold": 4500000,
+    "passed": true,
+    "period_ms": 32000,
+    "replay_cached": true,
+    "same_god_menu": 173,
+    "saved_reopen_exact": true,
+    "scale": 10000,
+    "source_coordinate": [
+      934,
+      389
+    ],
+    "source_gate": 2946,
+    "ticks": 10,
+    "trigger": "Rupiah contribution, not victory",
+    "world": {
+      "handles": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ticks": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "quest27_authority": {
+    "duplicate_rejected": true,
+    "missing_material_no_charge": true,
+    "next_quest": 28,
+    "npc": 1111,
+    "partial_saved": true,
+    "passed": true,
+    "prana": 50000,
+    "quest": 27,
+    "reward": 6222,
+    "rupiah_cost": 10000,
+    "saved_reopen_exact": true,
+    "seeded_materials_and_prerequisites": true
+  },
+  "graphical_journey": {
+    "root": "D:\\Tantra-Beta\\Focused-20261107\\normal-gate-projectile-quest\\online-ui",
+    "clients": [
+      {
+        "passed": true,
+        "role": 1,
+        "native_contribution": 4500000,
+        "gate": 2946,
+        "god": 1,
+        "sdl_offering_and_portal_menu": true,
+        "destination": 11
+      },
+      {
+        "passed": true,
+        "role": 2,
+        "foreign_god_rejected": true
+      }
+    ],
+    "nara_resume": "D:\\Tantra-Beta\\Focused-20261107\\normal-gate-projectile-quest\\nara-final",
+    "nara": {
+      "passed": true,
+      "quest": 27,
+      "npc": 1111,
+      "real_network": true,
+      "seeded_materials_and_prerequisites": true,
+      "prana": 50000,
+      "rupiah_cost": 10000,
+      "reward": 6222
+    },
+    "claimed_handoffs": 1,
+    "final_sql_matches_capture_beyond_live_vitals": true,
+    "protected_sources_unchanged": true,
+    "entry_scope": "Production statue/gate APIs plus real SDL amount, confirmation and original portal-menu selection; world model mouse-picking is not automated",
+    "images_reviewed": [
+      "normal-chaturanga-arrival.png",
+      "chaturanga-native-portal-menu.png",
+      "nara-completed.png"
+    ]
+  },
+  "frosana": {
+    "skill": 3306,
+    "source": "K3",
+    "supported_ranks": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "result": {
+      "cases": [
+        {
+          "name": "pursuit-skill-3306-rank1",
+          "weapon_type": 905,
+          "item": 0,
+          "skill": 3306,
+          "dt": 0.01,
+          "marker_seconds": 0.538384,
+          "action_at": 2,
+          "release_at": 2.53,
+          "impact_at": 3.23,
+          "damage": 538,
+          "target": 1017,
+          "flight": true,
+          "rendered": true,
+          "unresolved_fx": 0
+        },
+        {
+          "name": "pursuit-skill-3306-rank2",
+          "weapon_type": 905,
+          "item": 0,
+          "skill": 3306,
+          "dt": 0.01,
+          "marker_seconds": 0.538384,
+          "action_at": 2,
+          "release_at": 2.53,
+          "impact_at": 3.23,
+          "damage": 620,
+          "target": 1017,
+          "flight": true,
+          "rendered": true,
+          "unresolved_fx": 0
+        },
+        {
+          "name": "pursuit-skill-3306-rank3",
+          "weapon_type": 905,
+          "item": 0,
+          "skill": 3306,
+          "dt": 0.01,
+          "marker_seconds": 0.538384,
+          "action_at": 2,
+          "release_at": 2.53,
+          "impact_at": 3.23,
+          "damage": 791,
+          "target": 1017,
+          "flight": true,
+          "rendered": true,
+          "unresolved_fx": 0
+        },
+        {
+          "name": "pursuit-skill-3306-rank4",
+          "weapon_type": 905,
+          "item": 0,
+          "skill": 3306,
+          "dt": 0.01,
+          "marker_seconds": 0.538384,
+          "action_at": 2,
+          "release_at": 2.53,
+          "impact_at": 3.23,
+          "damage": 911,
+          "target": 1017,
+          "flight": true,
+          "rendered": true,
+          "unresolved_fx": 0
+        },
+        {
+          "name": "pursuit-skill-3306-rank5",
+          "weapon_type": 905,
+          "item": 0,
+          "skill": 3306,
+          "dt": 0.01,
+          "marker_seconds": 0.538384,
+          "action_at": 2,
+          "release_at": 2.53,
+          "impact_at": 3.23,
+          "damage": 1126,
+          "target": 1017,
+          "flight": true,
+          "rendered": true,
+          "unresolved_fx": 0
+        }
+      ],
+      "positive_damage_cases": 5,
+      "lifecycle_checks": 0,
+      "weapon_impact_cases": 0,
+      "rendered_cases": 5,
+      "simulation_passed": true,
+      "unresolved_fx": 0,
+      "missing_recorded_and_skipped": 0,
+      "unsupported_fx": 0,
+      "authored_assets_complete": true,
+      "passed": true
+    },
+    "audio_voices": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "root": "D:\\Tantra-Beta\\Focused-20261107\\normal-gate-projectile-quest\\frosana-complete",
+    "render_scope": "Isolated production character/actor/FX component; terrain omitted; rank5 flight/impact images reviewed"
+  },
+  "builds": {
+    "configuration": "Release",
+    "server_log": "_server_cpp/build/goal-normal-gate-release.log",
+    "client_final_log": "_remake_bgfx/build/goal-nara-index-correction.log",
+    "probe_log": "_remake_bgfx/build/goal-frosana-correction.log",
+    "corrections": "One QA Prana member-call compile fix, source OK=0 fixture fix, valid Frosana ranks1-5, private port arithmetic and asynchronous/one-based UI sequencing. Only affected targets/unfinished legs repeated."
+  },
+  "patch": {
+    "version": 1794056066,
+    "files": 5313,
+    "bytes": 1635633757,
+    "signed": true,
+    "url": "http://172.16.90.12/patch"
+  },
+  "staged_binaries": {
+    "_client_bgfx\\ZFLauncher.exe": "39a70aaa7c5a19436368d328966690272f64a501e72f6c9dd564cd00c05ee2fa",
+    "_server_final\\bin\\TantraZone.exe": "f50484d96cfb1f9f4cdf2fdc3e30fd80f944d0bc5ce4e77bf4c022a1b98d4825",
+    "_server_final\\bin\\TantraService.exe": "3ab44e5859ded2d82193749899e19fae48aa9965cd7ffb5a3ef3e9f960353b45"
+  },
+  "limits": [
+    "Private ordinary accounts use seeded level85/280 Chakra; Nara prerequisites and materials are seeded. This is not earned farming or balance acceptance.",
+    "Two Z11 source textures remain missing and recorded.",
+    "Current connection and patch URL are LAN172.16.90.12. No new public-host, separate-PC, capacity, full-game or benchmark acceptance.",
+    "Normal workers were not restarted; normal player data was not changed."
+  ],
+  "raw_sources": {
+    "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-player-damage-74207af92988cbcc8104ca1b31b11cdee9341e398dd965fb14f6f0a191f04958\\NORMAL_GATE_RESULT.json": "44fdd1cfdd825d4fa52c2d0ffd5d90eb34b7dfd53ff1340574bdf5db1e6478fe",
+    "C:\\Users\\Ashesh\\AppData\\Local\\Temp\\tantra-cpp-player-damage-3418c2a5f6bbd180dc19b33ec50aff67dba770ca8c187a62fc2aa6a061107c39\\QUEST27_RESULT.json": "dd2b4fafe5a69e3221e15711103dd38b5820f79dfa61f0d6247391aba2aac377",
+    "D:\\Tantra-Beta\\Focused-20261107\\normal-gate-projectile-quest\\nara-final\\RESULT.json": "bf7d2a16fddf01197c1e8007f16604d9fb56d3760320c3a8a4e279d3be3b4c24",
+    "D:\\Tantra-Beta\\Focused-20261107\\normal-gate-projectile-quest\\frosana-complete\\PROJECTILE_PIPELINE_RESULT.json": "25f6316c89ca5c42bf19a20945d3ad99c2e1f2e7d10f587ec598de6cf482ca2a"
+  },
+  "packages": {
+    "client": {
+      "archive": "D:\\Tantra-Beta\\2026-11-07\\Global-Tantra-Z11-Frosana-Nara27.zip",
+      "sha256": "6cfdabdd3edde295727d79dcca381b10acaf7342ca21116e2058752b0a12c9a0",
+      "bytes": 799786071,
+      "files": 5312,
+      "signed_profile_verified": true,
+      "modified_file_rejected": true,
+      "latest_exe_patcher_and_connections_match_archive": true,
+      "clean_player_pc_verified": false
+    },
+    "server": {
+      "archive": "D:\\Tantra-Beta\\2026-11-07\\Global-Tantra-Z11-Frosana-Nara27-Server-Update.zip",
+      "sha256": "9fb54d889f1ab2270458a76e8aab569a4fd12d1cdb2fbe097957e4c2d2bf101a",
+      "files": 91,
+      "bytes": 12142641,
+      "includes_accounts": false,
+      "includes_private_keys": false,
+      "fresh_install": false
+    },
+    "patch": 1794056066,
+    "hosts": [
+      "172.16.90.12"
+    ],
+    "offline_shortcut_included": true
+  }
+}
